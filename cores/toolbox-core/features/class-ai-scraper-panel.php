@@ -102,10 +102,20 @@ class RawWire_AI_Scraper_Panel {
             'archives'   => __('Archives (Historical)', 'raw-wire-dashboard'),
         ];
         ?>
-        <div class="wrap rawwire-wrap">
-            <h1><?php _e('AI-Powered Semantic Scraper', 'raw-wire-dashboard'); ?></h1>
+        <div class="wrap rawwire-dashboard">
+            <div class="rawwire-hero">
+                <div class="rawwire-hero-content">
+                    <span class="eyebrow"><?php _e('Data Collection', 'raw-wire-dashboard'); ?></span>
+                    <h1>
+                        <span class="dashicons dashicons-search"></span>
+                        <?php _e('AI-Powered Semantic Scraper', 'raw-wire-dashboard'); ?>
+                    </h1>
+                    <p class="lede"><?php _e('Intelligent content discovery using AI to analyze abstract concepts like "shocking", "controversial", or "high impact".', 'raw-wire-dashboard'); ?></p>
+                </div>
+                <div class="rawwire-hero-actions"></div>
+            </div>
             
-            <div class="rawwire-notice rawwire-notice-info">
+            <div class="rawwire-alert rawwire-alert-info">
                 <p>
                     <strong><?php _e('Intelligent Content Discovery', 'raw-wire-dashboard'); ?></strong><br>
                     <?php _e('This scraper uses AI to analyze content for abstract concepts like "shocking", "controversial", or "high impact" — even when those exact words don\'t appear in the text.', 'raw-wire-dashboard'); ?>

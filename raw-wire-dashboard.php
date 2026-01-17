@@ -290,8 +290,18 @@ class RawWire_Dashboard {
 
         $template_json = $template ? json_encode($template, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) : '';
         ?>
-        <div class="wrap">
-            <h1><?php _e('Edit Active Template', 'raw-wire-dashboard'); ?></h1>
+        <div class="wrap rawwire-dashboard">
+            <div class="rawwire-hero">
+                <div class="rawwire-hero-content">
+                    <span class="eyebrow"><?php _e('Configuration', 'raw-wire-dashboard'); ?></span>
+                    <h1>
+                        <span class="dashicons dashicons-edit"></span>
+                        <?php _e('Edit Active Template', 'raw-wire-dashboard'); ?>
+                    </h1>
+                    <p class="lede"><?php _e('Customize features, pages, and source types for your active template.', 'raw-wire-dashboard'); ?></p>
+                </div>
+                <div class="rawwire-hero-actions"></div>
+            </div>
 
             <form id="rawwire-template-editor" method="post" action="<?php echo admin_url('admin-ajax.php'); ?>">
                 <?php wp_nonce_field('rawwire_template_builder', 'nonce'); ?>
@@ -507,11 +517,21 @@ class RawWire_Dashboard {
     public function enqueue_admin_assets($hook) {
         error_log("RawWire: enqueue_admin_assets called with hook: " . $hook);
         
-        if ('toplevel_page_raw-wire-dashboard' !== $hook && 
-            'raw-wire_page_raw-wire-settings' !== $hook && 
-            'raw-wire_page_raw-wire-approvals' !== $hook &&
-            'raw-wire_page_raw-wire-templates' !== $hook &&
-            'raw-wire_page_raw-wire-release' !== $hook) {
+        // Allow all RawWire admin pages
+        $allowed_hooks = array(
+            'toplevel_page_raw-wire-dashboard',
+            'raw-wire_page_raw-wire-settings',
+            'raw-wire_page_raw-wire-approvals',
+            'raw-wire_page_raw-wire-templates',
+            'raw-wire_page_raw-wire-release',
+            'raw-wire_page_raw-wire-edit-template',
+            'raw-wire_page_rawwire-ai-scraper',
+            'raw-wire_page_rawwire-ai-settings',
+            'raw-wire_page_rawwire-workflow-db',
+            'raw-wire_page_rawwire-scraper-settings',
+        );
+        
+        if (!in_array($hook, $allowed_hooks)) {
             error_log("RawWire: Hook '" . $hook . "' not in allowed list, returning early");
             return;
         }

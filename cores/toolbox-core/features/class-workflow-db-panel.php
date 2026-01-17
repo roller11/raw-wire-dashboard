@@ -179,10 +179,20 @@ class RawWire_Workflow_DB_Panel {
         $current_page = isset($_GET['paged']) ? max(1, intval($_GET['paged'])) : 1;
         
         ?>
-        <div class="wrap rawwire-workflow-db">
-            <h1><?php _e('Workflow Database', 'raw-wire-dashboard'); ?></h1>
+        <div class="wrap rawwire-dashboard rawwire-workflow-db">
+            <div class="rawwire-hero">
+                <div class="rawwire-hero-content">
+                    <span class="eyebrow"><?php _e('Database', 'raw-wire-dashboard'); ?></span>
+                    <h1>
+                        <span class="dashicons dashicons-database"></span>
+                        <?php _e('Workflow Database', 'raw-wire-dashboard'); ?>
+                    </h1>
+                    <p class="lede"><?php _e('View and manage workflow tables: candidates, approvals, content, releases, and archives.', 'raw-wire-dashboard'); ?></p>
+                </div>
+                <div class="rawwire-hero-actions"></div>
+            </div>
             
-            <nav class="nav-tab-wrapper">
+            <nav class="nav-tab-wrapper rawwire-tabs">
                 <a href="<?php echo admin_url('admin.php?page=rawwire-workflow-db&tab=overview'); ?>" 
                    class="nav-tab <?php echo $current_tab === 'overview' ? 'nav-tab-active' : ''; ?>">
                     <?php _e('Overview', 'raw-wire-dashboard'); ?>

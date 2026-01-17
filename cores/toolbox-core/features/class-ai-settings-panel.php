@@ -84,7 +84,13 @@ class RawWire_AI_Settings_Panel {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
         
-        echo '<div class="wrap rawwire-wrap">';
+        echo '<div class="wrap rawwire-dashboard">';
+        echo '<div class="rawwire-hero">';
+        echo '<div class="rawwire-hero-content">';
+        echo '<span class="eyebrow">' . esc_html__('Configuration', 'raw-wire-dashboard') . '</span>';
+        echo '<h1><span class="dashicons dashicons-admin-generic"></span> ' . esc_html__('AI Settings', 'raw-wire-dashboard') . '</h1>';
+        echo '<p class="lede">' . esc_html__('Configure AI Engine integration, environments, and MCP server options.', 'raw-wire-dashboard') . '</p>';
+        echo '</div><div class="rawwire-hero-actions"></div></div>';
         $this->render();
         echo '</div>';
     }
