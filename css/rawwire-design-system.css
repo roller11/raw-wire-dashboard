@@ -99,7 +99,7 @@
     --rw-fg-muted: #64748b;
     --rw-fg-subtle: #94a3b8;
     --rw-fg-on-accent: #ffffff;
-    --rw-fg-on-gold: #1e293b;
+    --rw-fg-on-gold: #1a1a1a;
     
     /* Border Colors */
     --rw-border-default: #e2e8f0;
@@ -557,9 +557,10 @@
 .rawwire-dashboard .rawwire-btn-gold,
 .rawwire-dashboard .button-gold {
     background: var(--rw-gradient-gold);
-    color: var(--rw-fg-on-gold) !important;
+    color: #1a1a1a !important;
     border-color: var(--rw-brand-gold);
     box-shadow: var(--rw-shadow-sm);
+    font-weight: var(--rw-font-semibold);
 }
 
 .rawwire-dashboard .rawwire-btn-gold:hover,

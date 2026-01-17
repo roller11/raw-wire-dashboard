@@ -3,8 +3,13 @@ if (!defined('ABSPATH')) { exit; }
 
 class RawWire_Approvals_Page {
     public function render() {
-        echo '<div class="wrap rawwire-approvals">';
-        echo '<h1>' . esc_html__('Content Approvals', 'raw-wire-dashboard') . '</h1>';
+        echo '<div class="wrap rawwire-dashboard rawwire-approvals">';
+        echo '<div class="rawwire-hero">';
+        echo '<div class="rawwire-hero-content">';
+        echo '<span class="eyebrow">' . esc_html__('Workflow', 'raw-wire-dashboard') . '</span>';
+        echo '<h1><span class="dashicons dashicons-yes-alt"></span> ' . esc_html__('Content Approvals', 'raw-wire-dashboard') . '</h1>';
+        echo '<p class="lede">' . esc_html__('Review and approve AI-generated content before publishing.', 'raw-wire-dashboard') . '</p>';
+        echo '</div><div class="rawwire-hero-actions"></div></div>';
 
         // Attempt to render module-provided approvals panels
         $panels = array();

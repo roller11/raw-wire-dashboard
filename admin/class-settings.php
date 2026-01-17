@@ -3,8 +3,13 @@ if (!defined('ABSPATH')) { exit; }
 
 class RawWire_Settings_Page {
     public function render() {
-        echo '<div class="wrap rawwire-settings">';
-        echo '<h1>' . esc_html__('Raw-Wire Settings', 'raw-wire-dashboard') . '</h1>';
+        echo '<div class="wrap rawwire-dashboard rawwire-settings">';
+        echo '<div class="rawwire-hero">';
+        echo '<div class="rawwire-hero-content">';
+        echo '<span class="eyebrow">' . esc_html__('Configuration', 'raw-wire-dashboard') . '</span>';
+        echo '<h1><span class="dashicons dashicons-admin-generic"></span> ' . esc_html__('Raw-Wire Settings', 'raw-wire-dashboard') . '</h1>';
+        echo '<p class="lede">' . esc_html__('Configure your automation preferences and integrations.', 'raw-wire-dashboard') . '</p>';
+        echo '</div><div class="rawwire-hero-actions"></div></div>';
 
         // Fetch module-provided panels (prefer core)
         $panels = array();

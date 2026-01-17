@@ -24,11 +24,18 @@ class RawWire_Templates_Page {
         $available_templates = $this->get_available_templates();
         
         ?>
-        <div class="wrap rawwire-templates-page">
-            <h1 class="rawwire-page-title">
-                <span class="dashicons dashicons-admin-appearance"></span>
-                <?php _e('Template Management', 'raw-wire-dashboard'); ?>
-            </h1>
+        <div class="wrap rawwire-dashboard rawwire-templates-page">
+            <div class="rawwire-hero">
+                <div class="rawwire-hero-content">
+                    <span class="eyebrow"><?php _e('Configuration', 'raw-wire-dashboard'); ?></span>
+                    <h1>
+                        <span class="dashicons dashicons-admin-appearance"></span>
+                        <?php _e('Template Management', 'raw-wire-dashboard'); ?>
+                    </h1>
+                    <p class="lede"><?php _e('Create, edit, and manage dashboard templates for your automation workflows.', 'raw-wire-dashboard'); ?></p>
+                </div>
+                <div class="rawwire-hero-actions"></div>
+            </div>
 
             <!-- Tab Navigation -->
             <nav class="nav-tab-wrapper rawwire-nav-tabs">
