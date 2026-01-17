@@ -178,24 +178,24 @@
 
 /* Explicit dark mode via data attribute */
 .rawwire-dashboard[data-theme="dark"] {
-    /* Background Colors */
-    --rw-bg-base: #0f172a;
-    --rw-bg-surface: #1e293b;
-    --rw-bg-elevated: #334155;
-    --rw-bg-muted: #1e293b;
-    --rw-bg-subtle: #334155;
+    /* Background Colors - Very dark with minimal saturation (5%) */
+    --rw-bg-base: #101114;
+    --rw-bg-surface: #18191c;
+    --rw-bg-elevated: #1f2023;
+    --rw-bg-muted: #18191c;
+    --rw-bg-subtle: #1f2023;
     
     /* Foreground Colors */
     --rw-fg-default: #f1f5f9;
     --rw-fg-muted: #94a3b8;
     --rw-fg-subtle: #64748b;
     --rw-fg-on-accent: #ffffff;
-    --rw-fg-on-gold: #1e293b;
+    --rw-fg-on-gold: #1a1a1a;
     
-    /* Border Colors */
-    --rw-border-default: #334155;
-    --rw-border-muted: #1e293b;
-    --rw-border-strong: #475569;
+    /* Border Colors - subtle hint of color */
+    --rw-border-default: #2a2b2f;
+    --rw-border-muted: #1f2023;
+    --rw-border-strong: #38393e;
     --rw-border-accent: var(--rw-brand-gold);
     
     /* Semantic Colors (darker variants) */
@@ -244,38 +244,38 @@
         0 24px 48px hsl(var(--rw-shadow-color) / 0.4);
     
     /* Glassmorphism */
-    --rw-glass-bg: rgba(30, 41, 59, 0.8);
-    --rw-glass-border: rgba(71, 85, 105, 0.5);
+    --rw-glass-bg: rgba(24, 25, 28, 0.85);
+    --rw-glass-border: rgba(42, 43, 47, 0.6);
     --rw-glass-blur: blur(16px);
     
-    /* Accent gradients */
+    /* Accent gradients - very dark with hint of blue */
     --rw-gradient-hero: linear-gradient(135deg, 
-        hsl(222 47% 14%) 0%, 
-        hsl(222 47% 18%) 50%, 
-        hsl(215 50% 20%) 100%);
+        hsl(220 5% 7%) 0%, 
+        hsl(220 5% 9%) 50%, 
+        hsl(220 5% 11%) 100%);
 }
 
 /* System preference dark mode (when no explicit theme set) */
 @media (prefers-color-scheme: dark) {
     .rawwire-dashboard:not([data-theme="light"]):not([data-theme="dark"]) {
-        /* Background Colors */
-        --rw-bg-base: #0f172a;
-        --rw-bg-surface: #1e293b;
-        --rw-bg-elevated: #334155;
-        --rw-bg-muted: #1e293b;
-        --rw-bg-subtle: #334155;
+        /* Background Colors - Very dark with minimal saturation (5%) */
+        --rw-bg-base: #101114;
+        --rw-bg-surface: #18191c;
+        --rw-bg-elevated: #1f2023;
+        --rw-bg-muted: #18191c;
+        --rw-bg-subtle: #1f2023;
         
         /* Foreground Colors */
         --rw-fg-default: #f1f5f9;
         --rw-fg-muted: #94a3b8;
         --rw-fg-subtle: #64748b;
         --rw-fg-on-accent: #ffffff;
-        --rw-fg-on-gold: #1e293b;
+        --rw-fg-on-gold: #1a1a1a;
         
-        /* Border Colors */
-        --rw-border-default: #334155;
-        --rw-border-muted: #1e293b;
-        --rw-border-strong: #475569;
+        /* Border Colors - subtle hint of color */
+        --rw-border-default: #2a2b2f;
+        --rw-border-muted: #1f2023;
+        --rw-border-strong: #38393e;
         --rw-border-accent: var(--rw-brand-gold);
         
         /* Semantic Colors (darker variants) */
@@ -293,7 +293,7 @@
         --rw-info-border: rgba(59, 130, 246, 0.3);
         
         /* Shadow Colors */
-        --rw-shadow-color: 220 50% 3%;
+        --rw-shadow-color: 220 5% 3%;
         
         /* Shadows - darker, more dramatic */
         --rw-shadow-xs: 
@@ -324,15 +324,15 @@
             0 24px 48px hsl(var(--rw-shadow-color) / 0.4);
         
         /* Glassmorphism */
-        --rw-glass-bg: rgba(30, 41, 59, 0.8);
-        --rw-glass-border: rgba(71, 85, 105, 0.5);
+        --rw-glass-bg: rgba(24, 25, 28, 0.85);
+        --rw-glass-border: rgba(42, 43, 47, 0.6);
         --rw-glass-blur: blur(16px);
         
-        /* Accent gradients */
+        /* Accent gradients - very dark with hint of blue */
         --rw-gradient-hero: linear-gradient(135deg, 
-            hsl(222 47% 14%) 0%, 
-            hsl(222 47% 18%) 50%, 
-            hsl(215 50% 20%) 100%);
+            hsl(220 5% 7%) 0%, 
+            hsl(220 5% 9%) 50%, 
+            hsl(220 5% 11%) 100%);
     }
 }
 
@@ -1062,16 +1062,19 @@
    NAVIGATION & TABS
    ========================================================================== */
 
-.rawwire-dashboard .rawwire-tabs {
+.rawwire-dashboard .rawwire-tabs,
+.rawwire-dashboard .nav-tab-wrapper {
     display: flex;
     gap: var(--rw-space-1);
     background: var(--rw-bg-muted);
     padding: var(--rw-space-1);
     border-radius: var(--rw-radius-lg);
     margin-bottom: var(--rw-space-6);
+    border-bottom: none;
 }
 
-.rawwire-dashboard .rawwire-tab {
+.rawwire-dashboard .rawwire-tab,
+.rawwire-dashboard .nav-tab-wrapper .nav-tab {
     flex: 1;
     padding: var(--rw-space-3) var(--rw-space-4);
     font-size: var(--rw-text-sm);
@@ -1079,20 +1082,27 @@
     color: var(--rw-fg-muted);
     background: transparent;
     border: none;
-    border-radius: var(--rw-radius-md);
+    border-radius: var(--rw-radius-md) var(--rw-radius-md) 0 0;
     cursor: pointer;
     transition: all var(--rw-transition-base);
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
 }
 
-.rawwire-dashboard .rawwire-tab:hover {
+.rawwire-dashboard .rawwire-tab:hover,
+.rawwire-dashboard .nav-tab-wrapper .nav-tab:hover {
     color: var(--rw-fg-default);
     background: var(--rw-bg-surface);
+    text-decoration: none;
 }
 
-.rawwire-dashboard .rawwire-tab.active {
+.rawwire-dashboard .rawwire-tab.active,
+.rawwire-dashboard .nav-tab-wrapper .nav-tab-active {
     color: var(--rw-fg-default);
     background: var(--rw-bg-surface);
     box-shadow: var(--rw-shadow-sm);
+    border-bottom: none;
 }
 
 /* Sub-navigation */
