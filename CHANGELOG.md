@@ -1,5 +1,51 @@
 # Changelog
 
+## [1.0.25] - 2026-01-17
+
+### Added - Professional UI Redesign
+
+**New Design System**
+- Complete CSS design system with 1200+ lines of modern, professional styling
+- Light/Dark mode support with automatic system preference detection
+- Deep Blue (#1e3a5f) and Bright Gold (#f4b41a) brand accent colors
+- Smooth transitions and micro-interactions throughout
+- 3D card shadows with hover lift effects
+- Glassmorphism touches for premium feel
+
+**Theme Controller**
+- New `js/theme-controller.js` for light/dark mode management
+- Three-way toggle: Light / System / Dark
+- Persistent user preference in localStorage
+- Automatic theme application on page load
+- Custom events for theme-aware components
+
+**Design Tokens**
+- CSS custom properties for all colors, spacing, typography
+- Semantic color naming (success, warning, danger, info)
+- Responsive typography scale
+- Consistent border-radius and shadow system
+- Spacing scale following 4px base unit
+
+**Enhanced Components**
+- Hero section with gradient backgrounds and decorative orbs
+- Stat cards with accent bar animations
+- Refined button styles with shine effects
+- Modern form controls with focus states
+- Improved pills and badges with semantic colors
+- Professional panel headers with brand accent bars
+
+**Brand Integration**
+- Deep blue primary actions (light mode)
+- Bright gold primary actions (dark mode)
+- Brand-colored accents on headers and focus states
+- Consistent iconography with Dashicons
+
+### Changed
+
+- dashboard.css: Complete rewrite to use design system variables
+- page-renderer.php: Hero section with description support
+- raw-wire-dashboard.php: Added design system CSS and theme controller enqueue
+
 ## [1.0.24] - 2026-01-17
 
 ### Added - Workflow Pipeline & API Integration

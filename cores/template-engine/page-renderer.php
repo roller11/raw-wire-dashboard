@@ -75,7 +75,7 @@ if (!class_exists('RawWire_Page_Renderer')) {
         }
 
         /**
-         * Render page header
+         * Render page header - now uses rawwire-hero design
          */
         protected static function render_page_header($page, $template_meta) {
             $title = $page['title'] ?? 'Dashboard';
@@ -83,15 +83,19 @@ if (!class_exists('RawWire_Page_Renderer')) {
             $template_name = $template_meta['name'] ?? 'Unknown Template';
             $variant = RawWire_Template_Engine::get_variant();
             $variants = $template_meta['variants'] ?? array('default');
+            $description = $page['description'] ?? 'Your command center for content automation and AI-powered workflows.';
             ?>
-            <div class="rawwire-page-header">
-                <div class="rawwire-header-title">
-                    <span class="dashicons <?php echo esc_attr($icon); ?>"></span>
-                    <h1><?php echo esc_html($title); ?></h1>
-                    <span class="rawwire-template-badge"><?php echo esc_html($template_name); ?></span>
+            <div class="rawwire-hero">
+                <div class="rawwire-hero-content">
+                    <span class="eyebrow"><?php echo esc_html($template_name); ?></span>
+                    <h1>
+                        <span class="dashicons <?php echo esc_attr($icon); ?>"></span>
+                        <?php echo esc_html($title); ?>
+                    </h1>
+                    <p class="lede"><?php echo esc_html($description); ?></p>
                 </div>
 
-                <div class="rawwire-header-controls">
+                <div class="rawwire-hero-actions">
                     <?php if (count($variants) > 1): ?>
                         <select id="rawwire-variant-selector" class="rawwire-variant-select">
                             <?php foreach ($variants as $v): ?>

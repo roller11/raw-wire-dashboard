@@ -75,7 +75,7 @@ class RawWire_Dashboard {
     /**
      * Plugin version
      */
-    const VERSION = '1.0.24';
+    const VERSION = '1.0.25';
 
     /**
      * Get single instance of the plugin
@@ -534,6 +534,14 @@ class RawWire_Dashboard {
             self::VERSION
         );
 
+        // RawWire Design System - Professional UI with light/dark modes
+        wp_enqueue_style(
+            'rawwire-design-system',
+            plugin_dir_url(__FILE__) . 'css/rawwire-design-system.css',
+            array('rawwire-admin', 'rawwire-template-system'),
+            self::VERSION
+        );
+
         // Template-generated dynamic CSS
         if (class_exists('RawWire_Template_Engine')) {
             $template_css = RawWire_Template_Engine::generate_css();
@@ -554,6 +562,15 @@ class RawWire_Dashboard {
             'rawwire-template-system',
             plugin_dir_url(__FILE__) . 'js/template-system.js',
             array('jquery', 'rawwire-admin'),
+            self::VERSION,
+            true
+        );
+
+        // Theme controller for light/dark mode
+        wp_enqueue_script(
+            'rawwire-theme-controller',
+            plugin_dir_url(__FILE__) . 'js/theme-controller.js',
+            array(),
             self::VERSION,
             true
         );
