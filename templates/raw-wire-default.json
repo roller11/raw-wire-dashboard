@@ -1,0 +1,44 @@
+{
+  "name": "raw-wire-default",
+  "description": "Default Raw-Wire dashboard view optimized for research findings and AI-ready curation.",
+  "theme": {
+    "accent": "#0d9488",
+    "accentBold": "#0f766e",
+    "surface": "#0b1724",
+    "card": "#0f1f33",
+    "muted": "#8aa0b7"
+  },
+  "columns": [
+    { "key": "rank", "label": "Rank", "width": "64px" },
+    { "key": "title", "label": "Finding" },
+    { "key": "source", "label": "Source", "width": "120px" },
+    { "key": "category", "label": "Category", "width": "140px" },
+    { "key": "score", "label": "Score", "width": "90px" },
+    { "key": "freshness", "label": "Freshness", "width": "120px" },
+    { "key": "status", "label": "Status", "width": "110px" }
+  ],
+  "badges": {
+    "status": {
+      "approved": { "label": "Approved", "tone": "success" },
+      "pending": { "label": "Pending", "tone": "warning" },
+      "rejected": { "label": "Rejected", "tone": "danger" },
+      "processing": { "label": "Processing", "tone": "info" }
+    },
+    "source": {
+      "github": { "label": "GitHub", "tone": "info" },
+      "sec": { "label": "SEC Filings", "tone": "warning" },
+      "news": { "label": "News", "tone": "neutral" }
+    },
+    "category": {
+      "regulatory": { "label": "Regulatory", "tone": "warning" },
+      "market": { "label": "Market", "tone": "success" },
+      "technical": { "label": "Technical", "tone": "info" },
+      "risk": { "label": "Risk", "tone": "danger" }
+    }
+  },
+  "filters": {
+    "sources": ["github", "sec", "news"],
+    "statuses": ["pending", "approved", "processing"],
+    "categories": ["regulatory", "market", "technical", "risk"]
+  }
+}

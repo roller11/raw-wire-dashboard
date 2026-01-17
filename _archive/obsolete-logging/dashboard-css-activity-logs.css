@@ -1,0 +1,323 @@
+/**
+ * ARCHIVED: Activity Logs CSS from dashboard.css
+ * 
+ * This code was extracted from dashboard.css during cleanup on 2026-01-14.
+ * It styled one of several duplicate implementations of the logging UI.
+ * 
+ * Location in original file: Lines 252-550 (approximately)
+ */
+
+/* === ACTIVITY LOGS - THREE TAB SYSTEM === */
+.activity-logs-section {
+	background: var(--rw-surface);
+	border: 1px solid var(--rw-border);
+	border-radius: var(--rw-radius-md);
+	padding: 16px;
+	margin-top: 16px;
+	box-shadow: var(--rw-shadow);
+	color: var(--rw-fg-on-dark);
+}
+
+.activity-logs-tabs {
+	display: flex;
+	gap: 4px;
+	border-bottom: 2px solid var(--rw-border);
+	margin-bottom: 16px;
+}
+
+.activity-logs-tab {
+	padding: 10px 16px;
+	background: transparent;
+	border: none;
+	border-bottom: 3px solid transparent;
+	color: var(--rw-muted);
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 14px;
+	transition: all 0.2s;
+	position: relative;
+	top: 2px;
+}
+
+.activity-logs-tab:hover {
+	color: var(--rw-accent);
+	background: rgba(20, 184, 166, 0.05);
+}
+
+.activity-logs-tab.active {
+	color: var(--rw-accent);
+	border-bottom-color: var(--rw-accent);
+	font-weight: 600;
+}
+
+.activity-logs-controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+}
+
+.logs-pane {
+	display: none;
+}
+
+.logs-pane.active {
+	display: block;
+}
+
+.logs-container {
+	min-height: 200px;
+}
+
+.logs-loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	color: var(--rw-muted);
+	gap: 8px;
+}
+
+.logs-error {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	color: var(--rw-danger);
+	gap: 8px;
+}
+
+.logs-empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	color: var(--rw-muted);
+	gap: 8px;
+	font-style: italic;
+}
+
+.logs-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: var(--rw-card);
+	border-radius: var(--rw-radius-sm);
+	overflow: hidden;
+}
+
+.logs-table thead {
+	background: var(--rw-card-2);
+	border-bottom: 2px solid var(--rw-border);
+}
+
+.logs-table th {
+	padding: 12px 14px;
+	text-align: left;
+	color: var(--rw-fg-on-dark);
+	font-weight: 600;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.logs-table td {
+	padding: 10px 14px;
+	border-bottom: 1px solid var(--rw-border);
+	color: var(--rw-fg-on-dark);
+	font-size: 13px;
+}
+
+.logs-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.logs-table tbody tr:hover {
+	background: rgba(20, 184, 166, 0.05);
+}
+
+.log-row.severity-debug {
+	opacity: 0.8;
+}
+
+.log-row.severity-error,
+.log-row.severity-critical {
+	background: rgba(248, 113, 113, 0.08);
+}
+
+.log-row.severity-warning {
+	background: rgba(251, 191, 36, 0.08);
+}
+
+.log-severity {
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: 6px;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.log-severity.severity-debug {
+	background: rgba(203, 213, 225, 0.2);
+	color: var(--rw-muted);
+}
+
+.log-severity.severity-info {
+	background: rgba(20, 184, 166, 0.2);
+	color: var(--rw-accent);
+}
+
+.log-severity.severity-warning {
+	background: rgba(251, 191, 36, 0.2);
+	color: var(--rw-warning);
+}
+
+.log-severity.severity-error {
+	background: rgba(248, 113, 113, 0.2);
+	color: var(--rw-danger);
+}
+
+.log-severity.severity-critical {
+	background: var(--rw-danger);
+	color: #ffffff;
+}
+
+.log-type {
+	display: inline-block;
+	padding: 4px 8px;
+	border-radius: 6px;
+	font-size: 11px;
+	font-weight: 500;
+	background: rgba(255, 255, 255, 0.1);
+	border: 1px solid var(--rw-border);
+}
+
+.log-time {
+	color: var(--rw-muted);
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.log-message {
+	color: var(--rw-fg-on-dark);
+	line-height: 1.4;
+}
+
+.view-details-btn {
+	font-size: 11px !important;
+	padding: 4px 8px !important;
+	height: auto !important;
+	line-height: 1 !important;
+}
+
+/* === LOG DETAILS MODAL === */
+.logs-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10000;
+	padding: 20px;
+}
+
+.logs-modal-content {
+	background: var(--rw-surface);
+	border: 1px solid var(--rw-border);
+	border-radius: var(--rw-radius-md);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+	max-width: 700px;
+	width: 100%;
+	max-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	color: var(--rw-fg-on-dark);
+}
+
+.logs-modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 20px;
+	border-bottom: 1px solid var(--rw-border);
+}
+
+.logs-modal-header h3 {
+	margin: 0;
+	color: var(--rw-fg-on-dark);
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.logs-modal-close {
+	background: transparent;
+	border: none;
+	color: var(--rw-muted);
+	font-size: 28px;
+	cursor: pointer;
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	transition: all 0.2s;
+}
+
+.logs-modal-close:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: var(--rw-fg-on-dark);
+}
+
+.logs-modal-body {
+	padding: 20px;
+	overflow-y: auto;
+	flex: 1;
+}
+
+.logs-modal-body pre {
+	background: var(--rw-card);
+	border: 1px solid var(--rw-border);
+	border-radius: var(--rw-radius-sm);
+	padding: 16px;
+	color: var(--rw-fg-on-dark);
+	font-size: 13px;
+	line-height: 1.6;
+	overflow-x: auto;
+	margin: 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.logs-modal-footer {
+	padding: 16px 20px;
+	border-top: 1px solid var(--rw-border);
+	display: flex;
+	justify-content: flex-end;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+	.activity-logs-tabs {
+		overflow-x: auto;
+	}
+	
+	.logs-table {
+		font-size: 12px;
+	}
+	
+	.logs-table th,
+	.logs-table td {
+		padding: 8px 10px;
+	}
+	
+	.logs-modal-content {
+		max-width: 100%;
+		max-height: 90vh;
+	}
+}

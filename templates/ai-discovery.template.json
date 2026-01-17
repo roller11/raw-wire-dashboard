@@ -1,0 +1,433 @@
+{
+  "id": "ai-discovery-engine",
+  "name": "AI Discovery Engine",
+  "description": "AI-powered system for discovering shocking and unbelievable facts from across the internet",
+  "version": "1.0.0",
+  "author": "RawWire Dashboard",
+  "category": "discovery",
+  "enabled": true,
+  "sources": {
+    "items": [
+      {
+        "id": "sec_edgar",
+        "type": "sec_api",
+        "label": "SEC EDGAR Filings",
+        "enabled": true,
+        "category": "finance",
+        "config": {
+          "api_url": "https://www.sec.gov/edgar/searchedgar/currentevents.htm",
+          "forms": ["8-K", "10-K", "10-Q", "13D", "13G"],
+          "companies": ["major", "penny-stocks"],
+          "keywords": ["scandal", "investigation", "lawsuit", "fraud"]
+        }
+      },
+      {
+        "id": "federal_register",
+        "type": "federal_register_api",
+        "label": "Federal Register Notices",
+        "enabled": true,
+        "category": "government",
+        "config": {
+          "api_url": "https://www.federalregister.gov/api/v1/documents",
+          "agencies": ["EPA", "FDA", "Treasury", "DOJ", "SEC"],
+          "document_types": ["Proposed Rule", "Final Rule", "Notice"],
+          "keywords": ["emergency", "violation", "penalty", "investigation"]
+        }
+      },
+      {
+        "id": "pacer_free",
+        "type": "pacer_api",
+        "label": "PACER Court Filings (Free)",
+        "enabled": true,
+        "category": "legal",
+        "config": {
+          "courts": ["uscourts.gov", "state_courts"],
+          "case_types": ["criminal", "civil", "bankruptcy"],
+          "keywords": ["corruption", "fraud", "scandal", "bribery"]
+        }
+      },
+      {
+        "id": "fda_warnings",
+        "type": "fda_api",
+        "label": "FDA Warning Letters & Recalls",
+        "enabled": true,
+        "category": "health",
+        "config": {
+          "api_url": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts",
+          "warning_types": ["warning-letters", "recalls", "safety-alerts"],
+          "severity": ["Class I", "Class II", "Class III"]
+        }
+      },
+      {
+        "id": "epa_violations",
+        "type": "epa_api",
+        "label": "EPA Enforcement Actions",
+        "enabled": true,
+        "category": "environment",
+        "config": {
+          "api_url": "https://www.epa.gov/enforcement/enforcement",
+          "violation_types": ["Clean Air Act", "Clean Water Act", "RCRA"],
+          "penalty_range": ["major", "significant"]
+        }
+      },
+      {
+        "id": "treasury_sanctions",
+        "type": "treasury_api",
+        "label": "Treasury Sanctions & OFAC",
+        "enabled": true,
+        "category": "finance",
+        "config": {
+          "api_url": "https://www.treasury.gov/ofac/downloads",
+          "sanction_types": ["SDN", "SSI", "NS-ISA"],
+          "update_frequency": "daily"
+        }
+      },
+      {
+        "id": "congress_legislation",
+        "type": "congress_api",
+        "label": "Congress Legislation & Bills",
+        "enabled": true,
+        "category": "government",
+        "config": {
+          "api_url": "https://api.congress.gov/v3",
+          "congress": "118",
+          "bill_types": ["hr", "s", "hjres", "sjres"],
+          "keywords": ["emergency", "oversight", "investigation", "scandal"]
+        }
+      },
+      {
+        "id": "uspto_patents",
+        "type": "uspto_api",
+        "label": "USPTO Patent Applications",
+        "enabled": true,
+        "category": "technology",
+        "config": {
+          "api_url": "https://developer.uspto.gov/ibd-api/v1",
+          "patent_types": ["utility", "design", "plant"],
+          "status": ["published", "granted"]
+        }
+      },
+      {
+        "id": "census_data",
+        "type": "census_api",
+        "label": "US Census Bureau Data",
+        "enabled": true,
+        "category": "demographics",
+        "config": {
+          "api_url": "https://api.census.gov/data",
+          "datasets": ["acs5", "acs1", "decennial"],
+          "geography": ["national", "state", "county"]
+        }
+      },
+      {
+        "id": "noaa_weather",
+        "type": "noaa_api",
+        "label": "NOAA Weather & Climate Data",
+        "enabled": true,
+        "category": "environment",
+        "config": {
+          "api_url": "https://www.ncdc.noaa.gov/cdo-web/api/v2",
+          "data_types": ["precipitation", "temperature", "storms"],
+          "severity_threshold": "severe"
+        }
+      },
+      {
+        "id": "nasa_data",
+        "type": "nasa_api",
+        "label": "NASA Scientific Data",
+        "enabled": true,
+        "category": "science",
+        "config": {
+          "api_url": "https://api.nasa.gov",
+          "datasets": ["earth", "planetary", "space"],
+          "mission_types": ["earth-observation", "planetary-exploration"]
+        }
+      },
+      {
+        "id": "bls_economy",
+        "type": "bls_api",
+        "label": "Bureau of Labor Statistics",
+        "enabled": true,
+        "category": "economy",
+        "config": {
+          "api_url": "https://api.bls.gov/publicAPI/v2",
+          "series_ids": ["CES0000000001", "LNS14000000"],
+          "industries": ["manufacturing", "technology", "finance"]
+        }
+      },
+      {
+        "id": "github_discovery",
+        "type": "github_api",
+        "label": "GitHub Trending Repositories",
+        "enabled": false,
+        "category": "tech",
+        "config": {
+          "queries": [
+            "topic:conspiracy-theories",
+            "topic:unbelievable-facts",
+            "topic:shocking-discoveries",
+            "topic:controversial-research",
+            "topic:mind-blowing-science"
+          ],
+          "max_results": 10,
+          "min_stars": 10
+        }
+      },
+      {
+        "id": "reddit_discovery",
+        "type": "reddit_api",
+        "label": "Reddit Controversial",
+        "enabled": false,
+        "category": "social",
+        "config": {
+          "subreddits": ["conspiracy", "Unbelievable", "mindblowing", "shocking", "controversial"],
+          "sort": "hot",
+          "limit": 10
+        }
+      },
+      {
+        "id": "news_api_discovery",
+        "type": "api",
+        "label": "NewsAPI Shocking News",
+        "enabled": false,
+        "category": "news",
+        "config": {
+          "url": "https://newsapi.org/v2/everything",
+          "params": {
+            "q": "shocking OR unbelievable OR mind-blowing OR controversial",
+            "sortBy": "relevancy",
+            "pageSize": 20
+          },
+          "headers": {
+            "X-API-Key": "${NEWSAPI_KEY}"
+          }
+        }
+      },
+      {
+        "id": "custom_source_1",
+        "type": "custom",
+        "label": "Custom Source 1",
+        "enabled": false,
+        "category": "custom",
+        "config": {
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "params": {},
+          "parser": "json",
+          "auth_type": "none",
+          "is_public_domain": true,
+          "copyright_info": {
+            "license": "",
+            "attribution": "",
+            "source_name": "",
+            "license_url": "",
+            "citation_format": "APA"
+          }
+        }
+      }
+    ],
+    "custom_sources_count": 1
+  },
+  "workflow": {
+    "stages": [
+      {
+        "id": "discover",
+        "name": "AI Discovery",
+        "description": "Use AI to actively search for shocking facts",
+        "handler": "run_ai_discovery",
+        "config": {
+          "ai_model": "gpt-4",
+          "min_shock_score": 70,
+          "max_daily_discoveries": 50
+        }
+      },
+      {
+        "id": "analyze",
+        "name": "AI Analysis",
+        "description": "Deep AI analysis for shock value and credibility",
+        "handler": "run_ai_analysis",
+        "config": {
+          "analysis_prompt": "Analyze this content for shock value, credibility, and newsworthiness. Rate on a scale of 1-100 for each category.",
+          "credibility_check": true,
+          "fact_verification": true
+        }
+      },
+      {
+        "id": "score",
+        "name": "Advanced Scoring",
+        "description": "Calculate comprehensive score using AI analysis",
+        "handler": "calculate_advanced_score",
+        "config": {
+          "weights": {
+            "shock_value": 0.4,
+            "credibility": 0.3,
+            "timeliness": 0.2,
+            "uniqueness": 0.1
+          },
+          "auto_approve_threshold": 85
+        }
+      },
+      {
+        "id": "review",
+        "name": "Human Review",
+        "description": "Manual review for borderline content",
+        "handler": "run_manual_review",
+        "config": {
+          "review_required_score": 60,
+          "auto_approve_above": 85
+        }
+      },
+      {
+        "id": "generate",
+        "name": "AI Content Generation",
+        "description": "Generate engaging article from discovered facts",
+        "handler": "run_content_generation",
+        "config": {
+          "prompt_template": "Write an engaging article about this shocking discovery: {title}. Include context, implications, and why this matters. Make it compelling and shareable.",
+          "word_count": 800,
+          "tone": "sensational"
+        }
+      },
+      {
+        "id": "images",
+        "name": "AI Image Generation",
+        "description": "Generate eye-catching cover images",
+        "handler": "run_image_generation",
+        "config": {
+          "prompt_template": "Create a dramatic, eye-catching image representing: {title}. Make it shocking and attention-grabbing.",
+          "style": "dramatic",
+          "size": "1200x630"
+        }
+      },
+      {
+        "id": "publish",
+        "name": "Automated Publishing",
+        "description": "Publish to WordPress and social media",
+        "handler": "run_automated_publishing",
+        "config": {
+          "wordpress_publish": true,
+          "social_media": ["twitter", "facebook", "linkedin"],
+          "schedule_delay": 300
+        }
+      }
+    ]
+  },
+  "toolbox": {
+    "ai_discovery": {
+      "enabled": true,
+      "config": {
+        "cron_schedule": "hourly",
+        "max_concurrent_discoveries": 5,
+        "rate_limiting": {
+          "github": 1000,
+          "reddit": 600,
+          "newsapi": 100
+        }
+      }
+    },
+    "ai_analysis": {
+      "enabled": true,
+      "config": {
+        "model": "gpt-4",
+        "temperature": 0.3,
+        "max_tokens": 1000
+      }
+    },
+    "content_generation": {
+      "enabled": true,
+      "config": {
+        "model": "gpt-4",
+        "temperature": 0.7,
+        "max_tokens": 2000,
+        "style_guide": "sensational, engaging, shareable"
+      }
+    },
+    "image_generation": {
+      "enabled": true,
+      "config": {
+        "provider": "dall-e-3",
+        "style": "dramatic",
+        "quality": "hd"
+      }
+    },
+    "social_publishing": {
+      "enabled": true,
+      "config": {
+        "platforms": {
+          "twitter": {
+            "enabled": true,
+            "api_key": "${TWITTER_API_KEY}",
+            "hashtags": ["Shocking", "Unbelievable", "MindBlowing"]
+          },
+          "facebook": {
+            "enabled": true,
+            "page_id": "${FACEBOOK_PAGE_ID}",
+            "auto_post": true
+          },
+          "linkedin": {
+            "enabled": true,
+            "organization_id": "${LINKEDIN_ORG_ID}",
+            "auto_share": true
+          }
+        },
+        "posting_schedule": "immediate",
+        "engagement_tracking": true
+      }
+    }
+  },
+  "data": {
+    "tables": {
+      "findings": {
+        "schema": {
+          "id": "bigint:primary",
+          "source_id": "varchar(50):index",
+          "title": "varchar(500)",
+          "excerpt": "text",
+          "content": "longtext",
+          "url": "varchar(2000)",
+          "thumbnail": "varchar(2000)",
+          "score": "decimal(5,2):index",
+          "status": "varchar(20):index:default=pending",
+          "is_public_domain": "int:default=1",
+          "copyright_info": "text",
+          "generated_headline": "varchar(500)",
+          "generated_content": "longtext",
+          "selected_outlets": "text",
+          "published_at": "datetime",
+          "created_at": "datetime:default=CURRENT_TIMESTAMP",
+          "updated_at": "datetime"
+        }
+      },
+      "queue": {
+        "schema": {
+          "id": "bigint:primary",
+          "finding_id": "bigint:index",
+          "stage": "varchar(50):index",
+          "status": "varchar(20):index:default=pending",
+          "priority": "int:default=0",
+          "payload": "longtext",
+          "result": "longtext",
+          "error": "text",
+          "attempts": "int:default=0",
+          "created_at": "datetime:default=CURRENT_TIMESTAMP",
+          "processed_at": "datetime"
+        }
+      }
+    },
+    "downloadable": true,
+    "exportFormats": ["json", "csv"]
+  },
+  "settings": {
+    "auto_discovery": true,
+    "min_score_threshold": 70,
+    "max_daily_content": 20,
+    "content_categories": ["science", "history", "technology", "conspiracy", "health"],
+    "excluded_sources": [],
+    "quality_filters": {
+      "min_word_count": 100,
+      "max_age_days": 7,
+      "require_images": false
+    }
+  }
+}

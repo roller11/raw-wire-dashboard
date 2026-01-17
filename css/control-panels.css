@@ -1,0 +1,89 @@
+/**
+ * Control Panels Styles - Modern Gray Design
+ * Styles for scraper and AI configuration panels
+ * 
+ * @package RawWire_Dashboard
+ * @since 1.1.0
+ */
+
+/* Control Panel Container */
+.rawwire-control-panel {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rawwire-control-panel .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 2px solid #f8f9fa;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    cursor: pointer;
+}
+
+.rawwire-control-panel .panel-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529 !important;
+}
+
+.rawwire-control-panel .panel-body {
+    padding: 24px;
+    background: #ffffff;
+}
+
+/* Modern styles for all control elements */
+.control-section {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.control-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #212529 !important;
+}
+
+/* Dark Mode Overrides for Control Panels */
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel {
+    background: #16181c;
+    border-color: #2a2d33;
+}
+
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-header {
+    background: linear-gradient(135deg, #0a0c0e 0%, #0f1114 100%);
+    border-bottom-color: #22252a;
+}
+
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-header h3 {
+    color: #e9ecef !important;
+}
+
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-body {
+    background: #16181c;
+}
+
+.wrap.rawwire-dashboard.dark-mode .control-section {
+    border-bottom-color: #22252a;
+}
+
+.wrap.rawwire-dashboard.dark-mode .control-section h4 {
+    color: #e9ecef !important;
+}
+
+.wrap.rawwire-dashboard.dark-mode .control-section .description {
+    color: #adb5bd !important;
+}
+
+.wrap.rawwire-dashboard.dark-mode .control-section .hint {
+    color: #adb5bd !important;
+}
+
+/* Add all other modern styles... */

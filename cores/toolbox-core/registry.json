@@ -1,0 +1,214 @@
+{
+  "version": "1.0.0",
+  "categories": {
+    "scraper": {
+      "label": "Data Collector",
+      "description": "Tools for scraping and ingesting data from external sources",
+      "icon": "dashicons-download",
+      "adapters": {
+        "github_api": {
+          "label": "GitHub API (Free)",
+          "tier": "free",
+          "description": "Access GitHub's REST API v3. Free tier: 60 req/hr unauthenticated, 5000 req/hr with token.",
+          "class": "RawWire_Adapter_Scraper_GitHub",
+          "config_fields": [
+            { "key": "token", "label": "Personal Access Token (Optional)", "type": "password", "required": false, "placeholder": "ghp_xxxxxxxxxxxx" }
+          ],
+          "capabilities": ["api_access", "authenticated", "rate_limited", "json_response"],
+          "limitations": ["rate_limited", "no_scraping_protection_bypass"],
+          "docs_url": "https://docs.github.com/en/rest"
+        },
+        "native_dom": {
+          "label": "Native PHP (Free)",
+          "tier": "free",
+          "description": "Uses WordPress HTTP API and PHP DOMDocument. Zero cost, no external dependencies.",
+          "class": "RawWire_Adapter_Scraper_Native",
+          "config_fields": [],
+          "capabilities": ["html_parse", "basic_http"],
+          "limitations": ["no_javascript", "no_captcha", "rate_limited"]
+        },
+        "scraper_api": {
+          "label": "ScraperAPI (Value)",
+          "tier": "value",
+          "description": "Handles proxy rotation and captchas. Cost-effective for moderate volume.",
+          "class": "RawWire_Adapter_Scraper_API",
+          "config_fields": [
+            { "key": "api_key", "label": "API Key", "type": "password", "required": true, "placeholder": "Enter your ScraperAPI key" },
+            { "key": "render_js", "label": "Render JavaScript", "type": "checkbox", "required": false, "default": false },
+            { "key": "country_code", "label": "Country Code", "type": "text", "required": false, "placeholder": "us" }
+          ],
+          "capabilities": ["html_parse", "proxy_rotation", "captcha_bypass", "javascript_render"],
+          "limitations": ["api_cost"],
+          "docs_url": "https://www.scraperapi.com/documentation/"
+        },
+        "brightdata": {
+          "label": "BrightData (Flagship)",
+          "tier": "flagship",
+          "description": "Enterprise-grade scraping with residential IPs and browser automation.",
+          "class": "RawWire_Adapter_Scraper_BrightData",
+          "config_fields": [
+            { "key": "customer_id", "label": "Customer ID", "type": "text", "required": true },
+            { "key": "zone_username", "label": "Zone Username", "type": "text", "required": true },
+            { "key": "zone_password", "label": "Zone Password", "type": "password", "required": true },
+            { "key": "datacenter", "label": "Datacenter Zone", "type": "select", "required": false, "options": ["dc", "residential", "mobile"], "default": "dc" }
+          ],
+          "capabilities": ["html_parse", "proxy_rotation", "captcha_bypass", "javascript_render", "residential_ips", "browser_automation"],
+          "limitations": ["higher_cost"],
+          "docs_url": "https://brightdata.com/products/scraping-browser"
+        }
+      }
+    },
+    "workflow": {
+      "label": "Workflow Orchestrator",
+      "description": "Tools for processing data through multi-step pipelines",
+      "icon": "dashicons-randomize",
+      "adapters": {
+        "internal_pipeline": {
+          "label": "Internal Pipeline (Free)",
+          "tier": "free",
+          "description": "WP Cron-based PHP steps defined in template. Self-contained, no external dependencies.",
+          "class": "RawWire_Adapter_Workflow_Internal",
+          "config_fields": [
+            { "key": "max_execution_time", "label": "Max Execution Time (seconds)", "type": "number", "required": false, "default": 30 },
+            { "key": "retry_attempts", "label": "Retry Attempts", "type": "number", "required": false, "default": 3 }
+          ],
+          "capabilities": ["sequential_steps", "error_recovery", "logging"],
+          "limitations": ["server_resources", "no_visual_editor"]
+        },
+        "n8n_webhook": {
+          "label": "n8n Webhook (Value)",
+          "tier": "value",
+          "description": "Sends payloads to self-hosted or cloud n8n instance. Visual workflow builder.",
+          "class": "RawWire_Adapter_Workflow_N8n",
+          "config_fields": [
+            { "key": "webhook_url", "label": "Webhook URL", "type": "url", "required": true, "placeholder": "https://your-n8n.com/webhook/..." },
+            { "key": "auth_header", "label": "Authorization Header", "type": "password", "required": false, "placeholder": "Bearer token or API key" },
+            { "key": "timeout", "label": "Timeout (seconds)", "type": "number", "required": false, "default": 30 }
+          ],
+          "capabilities": ["visual_workflow", "integrations", "error_handling", "webhooks"],
+          "limitations": ["self_hosted_cost"],
+          "docs_url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook/"
+        },
+        "make_scenario": {
+          "label": "Make.com (Flagship)",
+          "tier": "flagship",
+          "description": "Enterprise integration platform with massive app library and high reliability.",
+          "class": "RawWire_Adapter_Workflow_Make",
+          "config_fields": [
+            { "key": "api_key", "label": "API Key", "type": "password", "required": true },
+            { "key": "team_id", "label": "Team ID", "type": "text", "required": true },
+            { "key": "scenario_id", "label": "Scenario ID", "type": "text", "required": true },
+            { "key": "webhook_url", "label": "Webhook URL (optional)", "type": "url", "required": false }
+          ],
+          "capabilities": ["visual_workflow", "1500_integrations", "error_handling", "scheduling", "data_stores"],
+          "limitations": ["subscription_cost"],
+          "docs_url": "https://www.make.com/en/api-documentation"
+        }
+      }
+    },
+    "generator": {
+      "label": "Content Generator",
+      "description": "AI-powered content generation and transformation",
+      "icon": "dashicons-edit",
+      "adapters": {
+        "mock_generator": {
+          "label": "Mock Generator (Free/Dev)",
+          "tier": "free",
+          "description": "Returns template-based patterns. Perfect for testing without API costs.",
+          "class": "RawWire_Adapter_Generator_Mock",
+          "config_fields": [
+            { "key": "response_delay", "label": "Simulated Delay (ms)", "type": "number", "required": false, "default": 500 },
+            { "key": "mock_mode", "label": "Mock Mode", "type": "select", "required": false, "options": ["echo", "lorem", "structured"], "default": "structured" }
+          ],
+          "capabilities": ["testing", "development", "no_cost"],
+          "limitations": ["not_intelligent"]
+        },
+        "openai_standard": {
+          "label": "OpenAI GPT-4o-mini (Value)",
+          "tier": "value",
+          "description": "Cost-effective OpenAI model. Good balance of quality and price.",
+          "class": "RawWire_Adapter_Generator_OpenAI",
+          "config_fields": [
+            { "key": "api_key", "label": "OpenAI API Key", "type": "password", "required": true },
+            { "key": "model", "label": "Model", "type": "select", "required": false, "options": ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo"], "default": "gpt-4o-mini" },
+            { "key": "max_tokens", "label": "Max Tokens", "type": "number", "required": false, "default": 2000 },
+            { "key": "temperature", "label": "Temperature", "type": "number", "required": false, "default": 0.7, "min": 0, "max": 2, "step": 0.1 },
+            { "key": "organization_id", "label": "Organization ID (optional)", "type": "text", "required": false }
+          ],
+          "capabilities": ["text_generation", "summarization", "analysis", "function_calling"],
+          "limitations": ["api_cost", "rate_limits"],
+          "docs_url": "https://platform.openai.com/docs/api-reference"
+        },
+        "anthropic_claude": {
+          "label": "Anthropic Claude (Flagship)",
+          "tier": "flagship",
+          "description": "High-context reasoning model. Best for complex analysis and long documents.",
+          "class": "RawWire_Adapter_Generator_Anthropic",
+          "config_fields": [
+            { "key": "api_key", "label": "Anthropic API Key", "type": "password", "required": true },
+            { "key": "model", "label": "Model", "type": "select", "required": false, "options": ["claude-3-5-sonnet-20241022", "claude-3-opus-20240229", "claude-3-haiku-20240307"], "default": "claude-3-5-sonnet-20241022" },
+            { "key": "max_tokens", "label": "Max Tokens", "type": "number", "required": false, "default": 4096 },
+            { "key": "temperature", "label": "Temperature", "type": "number", "required": false, "default": 0.7, "min": 0, "max": 1, "step": 0.1 }
+          ],
+          "capabilities": ["text_generation", "long_context", "reasoning", "analysis", "coding"],
+          "limitations": ["higher_api_cost"],
+          "docs_url": "https://docs.anthropic.com/en/api/getting-started"
+        }
+      }
+    },
+    "poster": {
+      "label": "Content Publisher",
+      "description": "Tools for publishing and distributing content",
+      "icon": "dashicons-share",
+      "adapters": {
+        "wordpress_rest": {
+          "label": "WordPress REST (Free)",
+          "tier": "free",
+          "description": "Post to any WordPress site via REST API. Native integration, no external dependencies.",
+          "class": "RawWire_Poster_WordPress",
+          "config_fields": [
+            { "key": "remote_site", "label": "Post to Remote Site", "type": "checkbox", "required": false, "default": false },
+            { "key": "site_url", "label": "Site URL", "type": "url", "required": false, "placeholder": "https://example.com", "condition": "remote_site" },
+            { "key": "username", "label": "Username", "type": "text", "required": false, "condition": "remote_site" },
+            { "key": "app_password", "label": "Application Password", "type": "password", "required": false, "condition": "remote_site" },
+            { "key": "post_type", "label": "Default Post Type", "type": "text", "required": false, "default": "post" },
+            { "key": "default_status", "label": "Default Post Status", "type": "select", "required": false, "options": ["draft", "publish", "pending"], "default": "draft" }
+          ],
+          "capabilities": ["posts", "pages", "media", "custom_post_types", "taxonomies", "custom_fields", "scheduling"],
+          "limitations": ["wordpress_only"],
+          "docs_url": "https://developer.wordpress.org/rest-api/"
+        },
+        "twitter_api": {
+          "label": "Twitter/X API (Value)",
+          "tier": "value",
+          "description": "Post tweets with media, threads, and polls via Twitter API v2.",
+          "class": "RawWire_Poster_Twitter",
+          "config_fields": [
+            { "key": "api_key", "label": "API Key (Consumer Key)", "type": "password", "required": true },
+            { "key": "api_secret", "label": "API Secret (Consumer Secret)", "type": "password", "required": true },
+            { "key": "access_token", "label": "Access Token", "type": "password", "required": true },
+            { "key": "access_secret", "label": "Access Token Secret", "type": "password", "required": true }
+          ],
+          "capabilities": ["tweets", "threads", "media", "polls", "scheduling", "delete"],
+          "limitations": ["api_tier_limits", "280_char_limit"],
+          "docs_url": "https://developer.twitter.com/en/docs/twitter-api"
+        },
+        "discord_webhook": {
+          "label": "Discord Webhook (Flagship)",
+          "tier": "flagship",
+          "description": "Rich embeds, file attachments, and notifications to Discord channels.",
+          "class": "RawWire_Poster_Discord",
+          "config_fields": [
+            { "key": "webhook_url", "label": "Webhook URL", "type": "url", "required": true, "placeholder": "https://discord.com/api/webhooks/..." },
+            { "key": "default_username", "label": "Bot Display Name", "type": "text", "required": false, "default": "RawWire Bot" },
+            { "key": "default_avatar", "label": "Avatar URL", "type": "url", "required": false },
+            { "key": "suppress_mentions", "label": "Suppress All Mentions", "type": "checkbox", "required": false, "default": false }
+          ],
+          "capabilities": ["messages", "embeds", "files", "mentions", "threads", "edit", "delete"],
+          "limitations": ["discord_only", "webhook_rate_limits"],
+          "docs_url": "https://discord.com/developers/docs/resources/webhook"
+        }
+      }
+    }
+  }
+}

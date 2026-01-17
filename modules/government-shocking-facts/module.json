@@ -1,0 +1,323 @@
+{
+  "meta": {
+    "name": "government-shocking-facts",
+    "version": "1.0.0",
+    "title": "Government Shocking Facts",
+    "description": "Aggregates and scores government findings for social media virality based on shock value, rarity, and public interest.",
+    "author": "Raw-Wire DAO",
+    "industries": ["government", "regulatory", "public-interest"],
+    "supported_sources": ["federal_register", "court_ruling", "sec_filing", "press_release"]
+  },
+
+  "hero": {
+    "site_name": "Raw-Wire",
+    "subtitle": "Findings Control",
+    "tagline": "Signal-driven curation for raw-wire.com",
+    "description": "Top 20 findings per source, ranked, scored, and ready for human approval. UI is template-driven so new industries and use cases plug in with minimal code changes."
+  },
+
+  "stats": {
+    "cards": [
+      {
+        "id": "total",
+        "enabled": true,
+        "label": "Total Findings",
+        "field": "total",
+        "subtitle": "Across all sources",
+        "order": 1
+      },
+      {
+        "id": "pending",
+        "enabled": true,
+        "label": "Pending Review",
+        "field": "pending",
+        "subtitle": "Awaiting human judgment",
+        "order": 2
+      },
+      {
+        "id": "approved",
+        "enabled": true,
+        "label": "Approved",
+        "field": "approved",
+        "subtitle": "Ready for distribution",
+        "order": 3
+      },
+      {
+        "id": "fresh",
+        "enabled": true,
+        "label": "Fresh (24h)",
+        "field": "fresh_24h",
+        "subtitle": "Recent, higher-signal items",
+        "order": 4,
+        "timeframe_hours": 24
+      },
+      {
+        "id": "avg_score",
+        "enabled": true,
+        "label": "Avg Score",
+        "field": "avg_score",
+        "subtitle": "Viral potential (0-100)",
+        "order": 5,
+        "highlight": true
+      }
+    ]
+  },
+
+  "filters": {
+    "sources": [
+      {"value": "all", "label": "All Sources"},
+      {"value": "federal_register", "label": "Federal Register"},
+      {"value": "sec", "label": "SEC Filings"},
+      {"value": "courts", "label": "Court Rulings"},
+      {"value": "doj", "label": "DOJ Press Releases"},
+      {"value": "ftc", "label": "FTC"},
+      {"value": "epa", "label": "EPA"}
+    ],
+    "categories": [
+      {"value": "all", "label": "All Categories"},
+      {"value": "rule", "label": "Final Rules"},
+      {"value": "proposed-rule", "label": "Proposed Rules"},
+      {"value": "notice", "label": "Notices"},
+      {"value": "presidential", "label": "Presidential Documents"},
+      {"value": "enforcement", "label": "Enforcement Actions"}
+    ],
+    "quick_filters": [
+      {
+        "id": "high_score",
+        "label": "High Impact",
+        "icon": "fire",
+        "condition": "relevance >= 70",
+        "enabled": true
+      },
+      {
+        "id": "fresh",
+        "label": "Fresh (24h)",
+        "icon": "clock",
+        "condition": "hours_old < 24",
+        "enabled": true
+      },
+      {
+        "id": "pending",
+        "label": "Needs Review",
+        "icon": "visibility",
+        "condition": "status = pending",
+        "enabled": true
+      }
+    ],
+    "score_threshold": {
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "step": 5,
+      "label": "Min Score"
+    }
+  },
+
+  "card_display": {
+    "show_source": true,
+    "show_date": true,
+    "show_category": true,
+    "show_agency": true,
+    "show_relevance_badge": true,
+    "show_freshness_badge": true,
+    "badges": {
+      "high_relevance": {
+        "threshold": 70,
+        "label": "High Impact",
+        "color": "#dc2626"
+      },
+      "medium_relevance": {
+        "threshold": 50,
+        "label": "Medium Impact",
+        "color": "#f59e0b"
+      },
+      "fresh": {
+        "hours": 24,
+        "label": "Fresh",
+        "color": "#10b981"
+      }
+    }
+  },
+
+  "detail_view": {
+    "parameters": [
+      "novelty",
+      "regulatory-impact",
+      "market-sentiment",
+      "technical-signal",
+      "risk-profile"
+    ],
+    "parameter_labels": {
+      "novelty": "Novelty",
+      "regulatory-impact": "Regulatory Impact",
+      "market-sentiment": "Market Sentiment",
+      "technical-signal": "Technical Signal",
+      "risk-profile": "Risk Profile"
+    },
+    "show_rationale": true,
+    "show_raw_data": true
+  },
+
+  "scoring": {
+    "total_max": 100,
+    "components": {
+      "shock": {
+        "max": 30,
+        "description": "Shocking, unprecedented, or highly unusual content"
+      },
+      "rarity": {
+        "max": 25,
+        "description": "First-time events, precedent-breaking decisions"
+      },
+      "recency": {
+        "max": 15,
+        "description": "Breaking news vs older content"
+      },
+      "authority": {
+        "max": 15,
+        "description": "Source credibility and institutional weight"
+      },
+      "public_interest": {
+        "max": 15,
+        "description": "Consumer, taxpayer, privacy impact"
+      }
+    },
+    "shock_keywords": {
+      "unprecedented": 12,
+      "shocking": 12,
+      "unexpected": 10,
+      "reversal": 10,
+      "overturned": 10,
+      "scandal": 10,
+      "fraud": 10,
+      "penalty": 8,
+      "violation": 8,
+      "emergency": 8,
+      "crisis": 8,
+      "historic": 7,
+      "landmark": 7,
+      "massive": 6
+    },
+    "rarity_keywords": {
+      "first time": 15,
+      "never before": 15,
+      "unprecedented": 15,
+      "rare": 12,
+      "unusual": 10,
+      "historic": 10,
+      "unique": 8
+    },
+    "authority_sources": {
+      "supreme court": 15,
+      "federal reserve": 13,
+      "securities and exchange": 12,
+      "department of justice": 12,
+      "fbi": 12,
+      "federal trade commission": 11,
+      "epa": 10,
+      "fda": 10
+    },
+    "public_interest_keywords": {
+      "consumer": 10,
+      "taxpayer": 10,
+      "privacy": 9,
+      "healthcare": 9,
+      "data breach": 9,
+      "security": 8,
+      "jobs": 8,
+      "wages": 8,
+      "employment": 7
+    },
+    "monetary_thresholds": {
+      "trillion": 30,
+      "billion": {
+        "10": 25,
+        "5": 22,
+        "1": 20
+      },
+      "million": {
+        "500": 15,
+        "100": 10
+      }
+    },
+    "recency_weights": {
+      "hours_6": 15,
+      "hours_24": 12,
+      "hours_72": 8,
+      "hours_168": 4
+    },
+    "category_bonuses": {
+      "rule": 5,
+      "final rule": 5,
+      "proposed rule": 3,
+      "proposed": 3
+    }
+  },
+
+  "field_mappings": {
+    "title": ["title", "name", "headline"],
+    "summary": ["summary", "abstract", "description", "body"],
+    "source": ["source", "source_type", "origin"],
+    "source_name": ["source_name", "agency", "organization"],
+    "url": ["html_url", "url", "link", "permalink"],
+    "published_at": ["publication_date", "published_at", "date", "created_at"],
+    "category": ["type", "category", "document_type"],
+    "document_number": ["document_number", "id", "reference_number"],
+    "agency": ["agency", "agencies", "organization"]
+  },
+
+  "simulator": {
+    "enabled": true,
+    "source_types": {
+      "federal_register": {
+        "weight": 40,
+        "generator": "generate_federal_register_item",
+        "agencies": [
+          "Securities and Exchange Commission",
+          "Federal Trade Commission",
+          "Department of Justice",
+          "Environmental Protection Agency",
+          "Food and Drug Administration",
+          "Federal Reserve System",
+          "Department of Labor",
+          "Federal Communications Commission"
+        ],
+        "document_types": ["Rule", "Proposed Rule", "Notice", "Presidential Document"]
+      },
+      "court_ruling": {
+        "weight": 25,
+        "generator": "generate_court_ruling",
+        "courts": [
+          "Supreme Court of the United States",
+          "U.S. Court of Appeals for the D.C. Circuit",
+          "U.S. District Court for the Southern District of New York",
+          "U.S. District Court for the Northern District of California"
+        ]
+      },
+      "sec_filing": {
+        "weight": 20,
+        "generator": "generate_sec_filing",
+        "filing_types": ["Form 8-K", "Form 10-Q", "Form 10-K"]
+      },
+      "press_release": {
+        "weight": 15,
+        "generator": "generate_press_release",
+        "agencies": [
+          "Department of Justice",
+          "Federal Trade Commission",
+          "FBI",
+          "Department of Homeland Security",
+          "Centers for Disease Control"
+        ]
+      }
+    }
+  },
+
+  "theme": {
+    "accent": "#0d9488",
+    "accentBold": "#0f766e",
+    "surface": "#0b1724",
+    "card": "#0f1f33",
+    "muted": "#8aa0b7"
+  }
+}

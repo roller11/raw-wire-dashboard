@@ -1,0 +1,343 @@
+/**
+ * Activity Logs CSS
+ *
+ * Styles for the activity logs tabbed interface
+ *
+ * @package    RawWire_Dashboard
+ * @subpackage RawWire_Dashboard/css
+ * @since      1.0.11
+ */
+
+/* Activity Logs Container */
+.rawwire-activity-logs {
+    margin-top: 20px;
+}
+
+/* Tab Navigation */
+.activity-logs-tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 3px 3px 0 0;
+    transition: background-color 0.2s ease;
+}
+
+.tab-button:hover {
+    background: #e8e8e8;
+}
+
+.tab-button.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+    font-weight: bold;
+}
+
+/* Tab Content */
+.tab-pane {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Controls */
+.logs-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logs-controls .button {
+    margin: 0;
+}
+
+.logs-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.stat-item .dashicons {
+    font-size: 16px;
+}
+
+/* Logs Container */
+.logs-container {
+    min-height: 200px;
+}
+
+/* Loading State */
+.logs-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #666;
+}
+
+.logs-loading .spinner {
+    float: none;
+    margin-right: 10px;
+}
+
+/* Empty State */
+.log-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.log-empty .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Log Entries */
+.log-entries {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.log-entry {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.log-entry:hover {
+    background: #f9f9f9;
+}
+
+.log-entry:last-child {
+    border-bottom: none;
+}
+
+/* Log Entry Components */
+.log-time {
+    flex: 0 0 140px;
+    font-size: 12px;
+    color: #666;
+    font-family: monospace;
+    margin-right: 15px;
+}
+
+.log-type {
+    flex: 0 0 100px;
+    margin-right: 15px;
+}
+
+.log-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.log-badge.info {
+    background: #007cba;
+    color: #fff;
+}
+
+.log-badge.error {
+    background: #dc3232;
+    color: #fff;
+}
+
+.log-badge.warning {
+    background: #ffb900;
+    color: #000;
+}
+
+.log-badge.success {
+    background: #46b450;
+    color: #fff;
+}
+
+.log-message {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.log-message small {
+    color: #666;
+    font-weight: normal;
+}
+
+/* Log Details */
+.log-details {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #f8f8f8;
+    border-left: 3px solid #007cba;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.log-details strong {
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .activity-logs-tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        margin-right: 0;
+        margin-bottom: 5px;
+        border-radius: 3px;
+    }
+
+    .tab-button.active {
+        margin-bottom: -1px;
+    }
+
+    .logs-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logs-stats {
+        justify-content: center;
+    }
+
+    .log-entry {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .log-time,
+    .log-type {
+        flex: none;
+        margin-right: 0;
+    }
+
+    .log-time {
+        order: -1;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tab-pane {
+        padding: 15px 10px;
+    }
+
+    .log-entry {
+        padding: 10px 12px;
+    }
+
+    .log-message {
+        font-size: 13px;
+    }
+
+    .log-details {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* Dark Mode Support (if WordPress admin uses dark mode) */
+@media (prefers-color-scheme: dark) {
+    .tab-button {
+        background: #2c3338;
+        border-color: #40464d;
+        color: #fff;
+    }
+
+    .tab-button:hover {
+        background: #363b3f;
+    }
+
+    .tab-button.active {
+        background: #32373c;
+        border-color: #40464d;
+    }
+
+    .tab-pane {
+        background: #32373c;
+        border-color: #40464d;
+    }
+
+    .log-entry {
+        background: #32373c;
+        border-color: #40464d;
+    }
+
+    .log-entry:hover {
+        background: #363b3f;
+    }
+
+    .log-details {
+        background: #2c3338;
+        border-color: #007cba;
+    }
+
+    .log-empty {
+        color: #c3c4c7;
+    }
+
+    .log-empty .dashicons {
+        color: #646970;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .activity-logs-tabs,
+    .logs-controls {
+        display: none;
+    }
+
+    .tab-pane {
+        border: none;
+        padding: 0;
+    }
+
+    .log-entry {
+        break-inside: avoid;
+        border: 1px solid #000;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+    }
+}

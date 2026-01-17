@@ -1,0 +1,12 @@
+{
+  "name": "raw-wire/raw-wire-dashboard",
+  "require-dev": {
+    "phpunit/phpunit": "^9.6",
+    "yoast/phpunit-polyfills": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "RawWire\\Dashboard\\": "includes/"
+    }
+  }
+}

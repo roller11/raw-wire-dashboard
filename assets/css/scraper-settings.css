@@ -1,0 +1,869 @@
+/**
+ * Scraper Settings Panel - Horizontal Form Layout
+ * Dark theme styling for public domain content scraper
+ */
+
+/* =====================================================
+   CSS Variables
+   ===================================================== */
+:root {
+    --scraper-bg: #1a1a2e;
+    --scraper-surface: #16213e;
+    --scraper-surface-hover: #1f3460;
+    --scraper-border: #2d4a7c;
+    --scraper-text: #e8e8e8;
+    --scraper-text-muted: #8892a0;
+    --scraper-primary: #4a9eff;
+    --scraper-primary-hover: #6ab4ff;
+    --scraper-success: #10b981;
+    --scraper-success-hover: #34d399;
+    --scraper-danger: #ef4444;
+    --scraper-danger-hover: #f87171;
+    --scraper-warning: #f59e0b;
+    --scraper-purple: #8b5cf6;
+    --scraper-cyan: #06b6d4;
+    --scraper-input-bg: #0d1117;
+    --scraper-radius: 8px;
+    --scraper-radius-sm: 4px;
+}
+
+/* =====================================================
+   Main Container
+   ===================================================== */
+.rawwire-scraper-settings {
+    background: var(--scraper-bg);
+    border-radius: var(--scraper-radius);
+    padding: 0;
+    color: var(--scraper-text);
+    font-size: 13px;
+}
+
+/* =====================================================
+   Header with Toggle
+   ===================================================== */
+.rawwire-scraper-header {
+    background: linear-gradient(135deg, var(--scraper-surface) 0%, var(--scraper-bg) 100%);
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--scraper-border);
+    border-radius: var(--scraper-radius) var(--scraper-radius) 0 0;
+}
+
+.rawwire-enable-toggle {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.rawwire-toggle-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rawwire-toggle-info strong {
+    font-size: 18px;
+    color: var(--scraper-text);
+}
+
+.rawwire-status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rawwire-status-badge.active {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--scraper-success);
+    border: 1px solid var(--scraper-success);
+}
+
+.rawwire-status-badge.inactive {
+    background: rgba(136, 146, 160, 0.2);
+    color: var(--scraper-text-muted);
+    border: 1px solid var(--scraper-text-muted);
+}
+
+.rawwire-description {
+    color: var(--scraper-text-muted);
+    margin: 0;
+    font-size: 13px;
+}
+
+/* =====================================================
+   Toggle Switch
+   ===================================================== */
+.rawwire-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.rawwire-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.rawwire-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4a5568;
+    transition: 0.3s;
+    border-radius: 28px;
+}
+
+.rawwire-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.rawwire-switch input:checked + .rawwire-switch-slider {
+    background: linear-gradient(135deg, var(--scraper-primary) 0%, var(--scraper-success) 100%);
+}
+
+.rawwire-switch input:checked + .rawwire-switch-slider:before {
+    transform: translateX(24px);
+}
+
+/* =====================================================
+   Mini Toggle for Table Rows
+   ===================================================== */
+.rawwire-mini-switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+}
+
+.rawwire-mini-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.rawwire-mini-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4a5568;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.rawwire-mini-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.rawwire-mini-switch input:checked + .slider {
+    background: var(--scraper-success);
+}
+
+.rawwire-mini-switch input:checked + .slider:before {
+    transform: translateX(16px);
+}
+
+/* =====================================================
+   Sections
+   ===================================================== */
+.rawwire-section {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--scraper-border);
+}
+
+.rawwire-section:last-child {
+    border-bottom: none;
+}
+
+.rawwire-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.rawwire-section-header h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--scraper-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rawwire-section-header h3 .dashicons {
+    color: var(--scraper-primary);
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.rawwire-count {
+    background: var(--scraper-primary);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =====================================================
+   Preset Buttons
+   ===================================================== */
+.rawwire-preset-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.rawwire-preset-btn {
+    background: var(--scraper-surface);
+    border: 1px solid var(--scraper-border);
+    color: var(--scraper-text);
+    padding: 8px 14px;
+    border-radius: var(--scraper-radius-sm);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rawwire-preset-btn:hover {
+    background: var(--scraper-surface-hover);
+    border-color: var(--scraper-primary);
+    color: var(--scraper-primary);
+}
+
+.rawwire-preset-btn .rawwire-key-icon {
+    font-size: 10px;
+}
+
+/* =====================================================
+   Horizontal Form Layout
+   ===================================================== */
+.rawwire-source-form {
+    background: var(--scraper-surface);
+    border: 1px solid var(--scraper-border);
+    border-radius: var(--scraper-radius);
+    padding: 16px;
+}
+
+.rawwire-form-row {
+    margin-bottom: 16px;
+}
+
+.rawwire-form-row:last-child {
+    margin-bottom: 0;
+}
+
+.rawwire-form-row-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.rawwire-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 120px;
+}
+
+.rawwire-field label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--scraper-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rawwire-field label .required {
+    color: var(--scraper-danger);
+}
+
+.rawwire-field input,
+.rawwire-field select {
+    background: var(--scraper-input-bg);
+    border: 1px solid var(--scraper-border);
+    color: var(--scraper-text);
+    padding: 8px 12px;
+    border-radius: var(--scraper-radius-sm);
+    font-size: 13px;
+    transition: border-color 0.2s;
+}
+
+.rawwire-field input:focus,
+.rawwire-field select:focus {
+    outline: none;
+    border-color: var(--scraper-primary);
+    box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+}
+
+.rawwire-field input::placeholder {
+    color: var(--scraper-text-muted);
+    opacity: 0.6;
+}
+
+/* Field sizes */
+.rawwire-field-name { flex: 1; min-width: 180px; }
+.rawwire-field-type { flex: 0 0 140px; }
+.rawwire-field-address-type { flex: 0 0 160px; }
+.rawwire-field-address { flex: 2; min-width: 280px; }
+.rawwire-field-auth { flex: 0 0 160px; }
+.rawwire-field-auth-key { flex: 1; min-width: 180px; }
+.rawwire-field-auth-user { flex: 0 0 140px; }
+.rawwire-field-auth-pass { flex: 0 0 140px; }
+.rawwire-field-records { flex: 0 0 120px; }
+.rawwire-field-copyright { flex: 0 0 140px; }
+.rawwire-field-table { flex: 0 0 280px; }
+.rawwire-field-columns { flex: 2; min-width: 350px; }
+.rawwire-field-action { flex: 0 0 auto; }
+
+/* =====================================================
+   Toggle Group (URL/API)
+   ===================================================== */
+.rawwire-toggle-group {
+    display: flex;
+    background: var(--scraper-input-bg);
+    border: 1px solid var(--scraper-border);
+    border-radius: var(--scraper-radius-sm);
+    overflow: hidden;
+}
+
+.rawwire-radio-btn {
+    flex: 1;
+    padding: 8px 12px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-right: 1px solid var(--scraper-border);
+    margin: 0 !important;
+}
+
+.rawwire-radio-btn:last-child {
+    border-right: none;
+}
+
+.rawwire-radio-btn input {
+    display: none;
+}
+
+.rawwire-radio-btn.active {
+    background: var(--scraper-primary);
+    color: white;
+}
+
+.rawwire-radio-btn:not(.active):hover {
+    background: var(--scraper-surface-hover);
+}
+
+/* =====================================================
+   Input with Prefix
+   ===================================================== */
+.rawwire-input-prefix {
+    display: flex;
+    align-items: stretch;
+}
+
+.rawwire-prefix {
+    background: var(--scraper-surface-hover);
+    border: 1px solid var(--scraper-border);
+    border-right: none;
+    padding: 8px 10px;
+    color: var(--scraper-text-muted);
+    font-size: 12px;
+    border-radius: var(--scraper-radius-sm) 0 0 var(--scraper-radius-sm);
+    white-space: nowrap;
+}
+
+.rawwire-input-prefix input {
+    border-radius: 0 var(--scraper-radius-sm) var(--scraper-radius-sm) 0 !important;
+    flex: 1;
+}
+
+/* =====================================================
+   Hint Text
+   ===================================================== */
+.rawwire-hint {
+    font-size: 10px;
+    color: var(--scraper-text-muted);
+    margin: 4px 0 0 0;
+    opacity: 0.8;
+}
+
+/* =====================================================
+   Buttons
+   ===================================================== */
+.rawwire-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: var(--scraper-radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    white-space: nowrap;
+}
+
+.rawwire-btn .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.rawwire-btn-primary {
+    background: linear-gradient(135deg, var(--scraper-primary) 0%, #3a8aef 100%);
+    color: white;
+}
+
+.rawwire-btn-primary:hover {
+    background: linear-gradient(135deg, var(--scraper-primary-hover) 0%, var(--scraper-primary) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 158, 255, 0.3);
+}
+
+.rawwire-btn-secondary {
+    background: var(--scraper-surface);
+    color: var(--scraper-text);
+    border: 1px solid var(--scraper-border);
+}
+
+.rawwire-btn-secondary:hover {
+    background: var(--scraper-surface-hover);
+    border-color: var(--scraper-primary);
+}
+
+.rawwire-btn-success {
+    background: linear-gradient(135deg, var(--scraper-success) 0%, #0d9668 100%);
+    color: white;
+}
+
+.rawwire-btn-success:hover {
+    background: linear-gradient(135deg, var(--scraper-success-hover) 0%, var(--scraper-success) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.rawwire-btn-danger {
+    background: transparent;
+    color: var(--scraper-danger);
+    border: 1px solid var(--scraper-danger);
+}
+
+.rawwire-btn-danger:hover {
+    background: var(--scraper-danger);
+    color: white;
+}
+
+/* =====================================================
+   Icon Buttons
+   ===================================================== */
+.rawwire-icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--scraper-text-muted);
+    padding: 6px;
+    border-radius: var(--scraper-radius-sm);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.rawwire-icon-btn:hover {
+    background: var(--scraper-surface-hover);
+    color: var(--scraper-primary);
+}
+
+.rawwire-icon-btn.delete-source:hover {
+    color: var(--scraper-danger);
+}
+
+.rawwire-icon-btn .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.rawwire-action-btns {
+    display: flex;
+    gap: 4px;
+}
+
+/* =====================================================
+   Advanced Options
+   ===================================================== */
+.rawwire-advanced {
+    margin-top: 16px;
+    border-top: 1px solid var(--scraper-border);
+    padding-top: 16px;
+}
+
+.rawwire-advanced summary {
+    cursor: pointer;
+    color: var(--scraper-text-muted);
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+}
+
+.rawwire-advanced summary:hover {
+    color: var(--scraper-primary);
+}
+
+.rawwire-advanced summary .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.rawwire-advanced[open] > summary {
+    margin-bottom: 12px;
+}
+
+/* =====================================================
+   Sources Table
+   ===================================================== */
+.rawwire-sources-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+.rawwire-sources-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.rawwire-sources-table thead {
+    background: var(--scraper-surface);
+}
+
+.rawwire-sources-table th {
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--scraper-text-muted);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--scraper-border);
+    white-space: nowrap;
+}
+
+.rawwire-sources-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--scraper-border);
+    vertical-align: middle;
+}
+
+.rawwire-sources-table tbody tr:hover {
+    background: var(--scraper-surface);
+}
+
+/* Column widths */
+.col-enabled { width: 50px; }
+.col-name { min-width: 140px; }
+.col-type { width: 100px; }
+.col-address { min-width: 150px; max-width: 200px; }
+.col-auth { width: 100px; }
+.col-records { width: 70px; text-align: center; }
+.col-table { width: 120px; }
+.col-columns { width: 80px; }
+.col-copyright { width: 100px; }
+.col-actions { width: 100px; }
+
+/* =====================================================
+   Table Cell Badges
+   ===================================================== */
+.rawwire-type-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.rawwire-type-badge.type-rest_api { background: rgba(74, 158, 255, 0.2); color: var(--scraper-primary); }
+.rawwire-type-badge.type-graphql { background: rgba(139, 92, 246, 0.2); color: var(--scraper-purple); }
+.rawwire-type-badge.type-rss_feed { background: rgba(245, 158, 11, 0.2); color: var(--scraper-warning); }
+.rawwire-type-badge.type-html_scrape { background: rgba(16, 185, 129, 0.2); color: var(--scraper-success); }
+.rawwire-type-badge.type-xml_sitemap { background: rgba(6, 182, 212, 0.2); color: var(--scraper-cyan); }
+.rawwire-type-badge.type-json_file { background: rgba(74, 158, 255, 0.2); color: var(--scraper-primary); }
+.rawwire-type-badge.type-csv_file { background: rgba(16, 185, 129, 0.2); color: var(--scraper-success); }
+.rawwire-type-badge.type-database { background: rgba(139, 92, 246, 0.2); color: var(--scraper-purple); }
+
+.rawwire-auth-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--scraper-warning);
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.rawwire-auth-badge .dashicons {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+.rawwire-auth-none {
+    color: var(--scraper-text-muted);
+    font-size: 11px;
+}
+
+.rawwire-address {
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--scraper-text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    max-width: 180px;
+}
+
+.rawwire-records {
+    font-weight: 600;
+    color: var(--scraper-primary);
+}
+
+.rawwire-columns {
+    color: var(--scraper-text-muted);
+    font-size: 11px;
+}
+
+/* Copyright badges */
+.rawwire-copyright-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.rawwire-copyright-badge.copyright-public_domain {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--scraper-success);
+}
+
+.rawwire-copyright-badge.copyright-open_access {
+    background: rgba(6, 182, 212, 0.2);
+    color: var(--scraper-cyan);
+}
+
+.rawwire-copyright-badge.copyright-creative_commons {
+    background: rgba(74, 158, 255, 0.2);
+    color: var(--scraper-primary);
+}
+
+.rawwire-copyright-badge.copyright-open_source {
+    background: rgba(139, 92, 246, 0.2);
+    color: var(--scraper-purple);
+}
+
+.rawwire-copyright-badge.copyright-fair_use {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--scraper-warning);
+}
+
+.rawwire-copyright-badge.copyright-unknown {
+    background: rgba(136, 146, 160, 0.2);
+    color: var(--scraper-text-muted);
+}
+
+/* Code styling */
+.rawwire-sources-table code {
+    background: var(--scraper-input-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    color: var(--scraper-cyan);
+}
+
+/* =====================================================
+   Empty State
+   ===================================================== */
+.rawwire-empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--scraper-text-muted);
+}
+
+.rawwire-empty-state .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    opacity: 0.5;
+}
+
+.rawwire-empty-state p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* =====================================================
+   Bulk Actions
+   ===================================================== */
+.rawwire-bulk-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* =====================================================
+   Form Actions
+   ===================================================== */
+.rawwire-form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--scraper-border);
+}
+
+/* =====================================================
+   Checkbox Fields
+   ===================================================== */
+.rawwire-field-checkbox {
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+.rawwire-field-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--scraper-text);
+    cursor: pointer;
+}
+
+.rawwire-field-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* =====================================================
+   Responsive Adjustments
+   ===================================================== */
+@media (max-width: 1400px) {
+    .rawwire-form-row-inline {
+        flex-wrap: wrap;
+    }
+    
+    .rawwire-field-address {
+        flex: 1 1 100%;
+    }
+    
+    .rawwire-field-columns {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .rawwire-field {
+        flex: 1 1 calc(50% - 12px);
+    }
+    
+    .rawwire-field-action {
+        flex: 1 1 100%;
+    }
+    
+    .rawwire-field-action .rawwire-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =====================================================
+   Loading States
+   ===================================================== */
+.rawwire-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.rawwire-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid var(--scraper-border);
+    border-top-color: var(--scraper-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* =====================================================
+   Success/Error States
+   ===================================================== */
+.rawwire-success-flash {
+    animation: successFlash 0.5s ease;
+}
+
+@keyframes successFlash {
+    0% { background-color: rgba(16, 185, 129, 0.3); }
+    100% { background-color: transparent; }
+}
+
+.rawwire-error-flash {
+    animation: errorFlash 0.5s ease;
+}
+
+@keyframes errorFlash {
+    0% { background-color: rgba(239, 68, 68, 0.3); }
+    100% { background-color: transparent; }
+}

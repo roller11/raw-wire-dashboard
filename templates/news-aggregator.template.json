@@ -1,0 +1,1543 @@
+{
+    "$schema": "./template.schema.json",
+    "meta": {
+        "id": "news-aggregator",
+        "name": "News Aggregator & Publisher",
+        "version": "1.0.0",
+        "description": "Aggregate news from multiple sources, review top findings, generate AI content, and publish to multiple outlets",
+        "author": "Raw-Wire DAO LLC",
+        "icon": "dashicons-rss",
+        "variants": [
+            "default",
+            "dark",
+            "minimal"
+        ]
+    },
+    "css": {
+        "global": {
+            "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "1.5",
+            "colors": {
+                "primary": "#3b82f6",
+                "primaryHover": "#2563eb",
+                "secondary": "#6b7280",
+                "success": "#10b981",
+                "warning": "#f59e0b",
+                "danger": "#ef4444",
+                "background": "#0b1724",
+                "surface": "#0f1f33",
+                "card": "#162a44",
+                "border": "#1e3a5f",
+                "text": "#e5e7eb",
+                "textMuted": "#9ca3af",
+                "accent": "#0ea5e9"
+            },
+            "spacing": {
+                "xs": "4px",
+                "sm": "8px",
+                "md": "16px",
+                "lg": "24px",
+                "xl": "32px"
+            },
+            "borderRadius": {
+                "sm": "4px",
+                "md": "8px",
+                "lg": "12px",
+                "full": "9999px"
+            },
+            "shadows": {
+                "sm": "0 1px 2px rgba(0, 0, 0, 0.3)",
+                "md": "0 4px 6px rgba(0, 0, 0, 0.4)",
+                "lg": "0 10px 15px rgba(0, 0, 0, 0.5)"
+            }
+        },
+        "variants": {
+            "dark": {
+                "colors": {
+                    "background": "#030712",
+                    "surface": "#0f172a",
+                    "card": "#1e293b"
+                }
+            },
+            "minimal": {
+                "colors": {
+                    "background": "#ffffff",
+                    "surface": "#f8fafc",
+                    "card": "#ffffff",
+                    "text": "#1f2937",
+                    "textMuted": "#6b7280",
+                    "border": "#e5e7eb"
+                }
+            }
+        }
+    },
+    "toolbox": {
+        "scraper": {
+            "id": "data_source",
+            "label": "News Source Scraper",
+            "description": "Configure how news is fetched from RSS feeds and APIs",
+            "defaultAdapter": "native_dom",
+            "required": true
+        },
+        "generator": {
+            "id": "content_generator",
+            "label": "AI Content Generator",
+            "description": "Generate headlines, summaries, and full articles",
+            "defaultAdapter": "mock_generator",
+            "required": true,
+            "prompts": {
+                "summarize": {
+                    "label": "Summarize Article",
+                    "template": "Summarize the following news article in 2-3 sentences, focusing on the key facts:\n\n{{content}}",
+                    "maxTokens": 500
+                },
+                "rewrite": {
+                    "label": "Rewrite for Audience",
+                    "template": "Rewrite the following news article for a {{audience}} audience. Maintain factual accuracy:\n\n{{content}}",
+                    "variables": {
+                        "audience": {
+                            "type": "select",
+                            "options": [
+                                "general",
+                                "technical",
+                                "business",
+                                "casual"
+                            ],
+                            "default": "general"
+                        }
+                    },
+                    "maxTokens": 2000
+                },
+                "generate_headline": {
+                    "label": "Generate Headlines",
+                    "template": "Generate 5 engaging headlines for the following article. Return as JSON array:\n\n{{content}}",
+                    "maxTokens": 300
+                },
+                "expand": {
+                    "label": "Expand Article",
+                    "template": "Expand the following news summary into a full article with {{wordCount}} words. Add context and background:\n\n{{content}}",
+                    "variables": {
+                        "wordCount": {
+                            "type": "number",
+                            "default": 500,
+                            "min": 200,
+                            "max": 2000
+                        }
+                    },
+                    "maxTokens": 4000
+                }
+            }
+        },
+        "poster": {
+            "id": "publisher",
+            "label": "Content Publisher",
+            "description": "Where to publish approved content",
+            "defaultAdapter": "wordpress_rest",
+            "required": false,
+            "outlets": [
+                {
+                    "id": "wordpress",
+                    "label": "WordPress Blog",
+                    "adapter": "wordpress_rest",
+                    "enabled": true
+                },
+                {
+                    "id": "twitter",
+                    "label": "Twitter/X",
+                    "adapter": "twitter_api",
+                    "enabled": false
+                },
+                {
+                    "id": "discord",
+                    "label": "Discord Channel",
+                    "adapter": "discord_webhook",
+                    "enabled": false
+                }
+            ]
+        },
+        "workflow": {
+            "id": "automation",
+            "label": "Workflow Automation",
+            "description": "Optional external workflow orchestration",
+            "defaultAdapter": "internal_pipeline",
+            "required": false
+        }
+    },
+    "sourceTypes": {
+        "github": {
+            "label": "GitHub Issues",
+            "description": "Discover and track GitHub repository issues",
+            "type": "api",
+            "enabled": false,
+            "adapter": "github_rest_api",
+            "config": {
+                "authType": "token",
+                "authHeader": "Authorization",
+                "rateLimit": 5000
+            },
+            "icon": "dashicons-admin-site"
+        },
+        "federal_register": {
+            "label": "Federal Register (Public Domain)",
+            "description": "US government regulations and notices",
+            "type": "api",
+            "enabled": true,
+            "adapter": "federal_register_api",
+            "config": {
+                "endpoint": "https://www.federalregister.gov/api/v1/documents",
+                "publicDomain": true
+            },
+            "icon": "dashicons-media-document"
+        },
+        "rss_feeds": {
+            "label": "RSS Feeds",
+            "description": "Generic RSS/Atom feed scraper",
+            "type": "rss",
+            "enabled": true,
+            "adapter": "native_dom",
+            "config": [],
+            "icon": "dashicons-rss"
+        },
+        "newsapi": {
+            "label": "NewsAPI",
+            "description": "News aggregation API",
+            "type": "api",
+            "enabled": false,
+            "adapter": "newsapi_rest",
+            "config": {
+                "authType": "apiKey",
+                "authHeader": "X-Api-Key",
+                "endpoint": "https://newsapi.org/v2/top-headlines"
+            },
+            "icon": "dashicons-admin-site-alt3"
+        },
+        "custom_sources": {
+            "label": "Custom Sources (Dynamic)",
+            "description": "User-defined sources with copyright toggle",
+            "type": "custom",
+            "enabled": true,
+            "adapter": "custom_handler",
+            "config": {
+                "allowCopyrightedContent": true,
+                "requireLicenseInfo": true
+            },
+            "icon": "dashicons-plus-alt"
+        },
+        "twitter": {
+            "label": "Twitter/X",
+            "description": "Social media feed",
+            "type": "api",
+            "enabled": false,
+            "adapter": "twitter_api",
+            "config": {
+                "authType": "oauth"
+            },
+            "icon": "dashicons-twitter"
+        },
+        "reddit": {
+            "label": "Reddit",
+            "description": "Reddit posts and comments",
+            "type": "api",
+            "enabled": false,
+            "adapter": "reddit_api",
+            "config": [],
+            "icon": "dashicons-format-chat"
+        }
+    },
+    "sources": [
+        {
+            "id": "federal_register_rules",
+            "type": "rest_api",
+            "label": "Federal Register - Rules",
+            "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=RULE&per_page=20",
+            "enabled": true,
+            "category": "government",
+            "copyright": "public_domain",
+            "attribution": "U.S. Government Publishing Office"
+        },
+        {
+            "id": "federal_register_notices",
+            "type": "rest_api",
+            "label": "Federal Register - Notices",
+            "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[type][]=NOTICE&per_page=20",
+            "enabled": true,
+            "category": "government",
+            "copyright": "public_domain",
+            "attribution": "U.S. Government Publishing Office"
+        },
+        {
+            "id": "whitehouse_briefings",
+            "type": "rss_feed",
+            "label": "White House Press Briefings",
+            "url": "https://www.whitehouse.gov/briefing-room/press-briefings/feed/",
+            "enabled": true,
+            "category": "government",
+            "copyright": "public_domain",
+            "attribution": "The White House"
+        },
+        {
+            "id": "arxiv_cs",
+            "type": "rest_api",
+            "label": "arXiv - Computer Science",
+            "url": "http://export.arxiv.org/api/query?search_query=cat:cs.AI&max_results=20",
+            "enabled": false,
+            "category": "academic",
+            "copyright": "open_access",
+            "attribution": "arXiv.org"
+        }
+    ],
+    "pages": {
+        "dashboard": {
+            "id": "dashboard",
+            "title": "Dashboard",
+            "slug": "raw-wire-dashboard",
+            "icon": "dashicons-chart-line",
+            "isMain": true,
+            "layout": "grid-3col",
+            "panels": [
+                "stats",
+                "workflow_control",
+                "sources",
+                "queue",
+                "recent_candidates",
+                "activity_log"
+            ]
+        },
+        "approvals": {
+            "id": "approvals",
+            "title": "Review Queue",
+            "slug": "raw-wire-approvals",
+            "icon": "dashicons-yes-alt",
+            "layout": "list",
+            "panels": [
+                "approval_queue"
+            ],
+            "actions": {
+                "approve": {
+                    "label": "Approve & Generate",
+                    "icon": "dashicons-yes",
+                    "action": "send_to_generator",
+                    "style": "primary"
+                },
+                "reject": {
+                    "label": "Reject",
+                    "icon": "dashicons-no",
+                    "action": "reject_item",
+                    "style": "danger"
+                },
+                "skip": {
+                    "label": "Skip",
+                    "icon": "dashicons-redo",
+                    "action": "skip_item",
+                    "style": "secondary"
+                }
+            }
+        },
+        "release": {
+            "id": "release",
+            "title": "Release Queue",
+            "slug": "raw-wire-release",
+            "icon": "dashicons-upload",
+            "layout": "list",
+            "panels": [
+                "release_queue"
+            ],
+            "actions": {
+                "publish": {
+                    "label": "Publish",
+                    "icon": "dashicons-share",
+                    "action": "publish_item",
+                    "style": "success"
+                },
+                "edit": {
+                    "label": "Edit",
+                    "icon": "dashicons-edit",
+                    "action": "edit_item",
+                    "style": "secondary"
+                },
+                "back_to_review": {
+                    "label": "Back to Review",
+                    "icon": "dashicons-undo",
+                    "action": "return_to_approvals",
+                    "style": "secondary"
+                }
+            }
+        },
+        "archives": {
+            "id": "archives",
+            "title": "Archives",
+            "slug": "raw-wire-archives",
+            "icon": "dashicons-archive",
+            "layout": "list",
+            "panels": [
+                "archives_list"
+            ]
+        },
+        "settings": {
+            "id": "settings",
+            "title": "Settings",
+            "slug": "raw-wire-settings",
+            "icon": "dashicons-admin-generic",
+            "layout": "tabs",
+            "panels": [
+                "scraper_settings",
+                "publishing_config",
+                "features_config"
+            ]
+        }
+    },
+    "panels": {
+        "stats": {
+            "id": "stats",
+            "type": "status",
+            "title": "Workflow Tables",
+            "icon": "dashicons-database",
+            "layout": "horizontal",
+            "refreshInterval": 5,
+            "css": {
+                "gridColumn": "span 5"
+            },
+            "metrics": [
+                {
+                    "id": "candidates_count",
+                    "label": "candidates",
+                    "source": "db:candidates:count",
+                    "format": "number",
+                    "icon": "dashicons-download"
+                },
+                {
+                    "id": "approvals_count",
+                    "label": "approvals",
+                    "source": "db:approvals:count",
+                    "format": "number",
+                    "icon": "dashicons-filter"
+                },
+                {
+                    "id": "content_count",
+                    "label": "content",
+                    "source": "db:content:count",
+                    "format": "number",
+                    "icon": "dashicons-edit"
+                },
+                {
+                    "id": "releases_count",
+                    "label": "releases",
+                    "source": "db:releases:count",
+                    "format": "number",
+                    "icon": "dashicons-upload"
+                },
+                {
+                    "id": "published_count",
+                    "label": "published",
+                    "source": "db:published:count",
+                    "format": "number",
+                    "icon": "dashicons-yes-alt",
+                    "highlight": "success"
+                },
+                {
+                    "id": "archives_count",
+                    "label": "archives",
+                    "source": "db:archives:count",
+                    "format": "number",
+                    "icon": "dashicons-archive"
+                }
+            ],
+            "actions": [
+                {
+                    "id": "clear_all",
+                    "type": "button",
+                    "label": "Clear All Tables",
+                    "icon": "dashicons-trash",
+                    "action": "clear_workflow_tables",
+                    "style": "danger",
+                    "confirm": "This will permanently delete ALL records from all 6 workflow tables. Are you sure?"
+                }
+            ]
+        },
+        "workflow_control": {
+            "id": "workflow_control",
+            "type": "control",
+            "title": "Content Pipeline Controls",
+            "description": "Control the news-aggregator workflow: scrape → score → approve → publish",
+            "icon": "dashicons-controls-play",
+            "css": {
+                "gridColumn": "span 3"
+            },
+            "controls": [
+                {
+                    "id": "scraper_select",
+                    "type": "select",
+                    "label": "Scraper Engine",
+                    "binding": "workflow:scraper",
+                    "options": [
+                        {"value": "ai", "label": "AI Scraper (Groq/OpenAI)"},
+                        {"value": "basic", "label": "Basic HTTP Scraper"},
+                        {"value": "toolkit", "label": "Toolkit Sources (Settings)"},
+                        {"value": "github", "label": "GitHub API"},
+                        {"value": "brightdata", "label": "Bright Data (Premium)"}
+                    ],
+                    "default": "ai",
+                    "help": "AI Scraper uses configured AI to intelligently extract content. Toolkit Sources uses sources from Settings → Scraper Toolkit."
+                },
+                {
+                    "id": "scorer_select",
+                    "type": "select",
+                    "label": "Scorer",
+                    "binding": "workflow:scorer",
+                    "options": [
+                        {"value": "keyword", "label": "Keyword Match (Free)"},
+                        {"value": "ai_relevance", "label": "AI Relevance (Llama)"},
+                        {"value": "", "label": "None (Skip Scoring)"}
+                    ],
+                    "default": "keyword"
+                },
+                {
+                    "id": "max_records",
+                    "type": "slider",
+                    "label": "Max Records (per source)",
+                    "binding": "workflow:max_records",
+                    "min": 1,
+                    "max": 50,
+                    "step": 1,
+                    "default": 10,
+                    "showValue": true,
+                    "help": "Maximum items to collect from EACH enabled source"
+                },
+                {
+                    "id": "auto_approve",
+                    "type": "slider",
+                    "label": "Auto-Approve Threshold",
+                    "binding": "workflow:auto_approve",
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "default": 0,
+                    "showValue": true,
+                    "help": "Items scoring above this threshold auto-move to approvals (0=disabled)"
+                },
+                {
+                    "id": "target_table",
+                    "type": "select",
+                    "label": "Target Table",
+                    "binding": "workflow:target_table",
+                    "options": [
+                        {"value": "candidates", "label": "1. Candidates"},
+                        {"value": "approvals", "label": "2. Approvals"},
+                        {"value": "content", "label": "3. Content"},
+                        {"value": "releases", "label": "4. Releases"},
+                        {"value": "published", "label": "5. Published"}
+                    ],
+                    "default": "candidates"
+                },
+                {
+                    "id": "sources_info",
+                    "type": "info",
+                    "label": "Sources",
+                    "content": "Using sources from Configured Sources panel below. Add/manage sources in Settings → Scraper Toolkit."
+                },
+                {
+                    "id": "start_workflow",
+                    "type": "button",
+                    "label": "Start Workflow",
+                    "icon": "dashicons-controls-play",
+                    "action": "start_workflow",
+                    "style": "success",
+                    "primary": true
+                }
+            ]
+        },
+        "sources": {
+            "id": "sources",
+            "type": "data",
+            "title": "Configured Sources",
+            "icon": "dashicons-admin-site",
+            "description": "Enable/disable sources here. Add sources in Settings → Scraper Toolkit.",
+            "css": {
+                "gridColumn": "span 2"
+            },
+            "dataSource": "scraper:sources",
+            "layout": "table",
+            "emptyMessage": "No sources configured. Go to Settings → Scraper Toolkit to add sources.",
+            "columns": [
+                {
+                    "field": "label",
+                    "label": "Source",
+                    "width": "40%"
+                },
+                {
+                    "field": "type",
+                    "label": "Type",
+                    "width": "20%",
+                    "render": "badge"
+                },
+                {
+                    "field": "enabled",
+                    "label": "Enabled",
+                    "width": "15%",
+                    "render": "boolean"
+                },
+                {
+                    "field": "actions",
+                    "label": "",
+                    "width": "25%"
+                }
+            ],
+            "itemActions": [
+                {
+                    "id": "toggle_enabled",
+                    "label": "Toggle",
+                    "icon": "dashicons-visibility",
+                    "action": "toggle_scraper_source"
+                },
+                {
+                    "id": "test_source",
+                    "label": "Test",
+                    "icon": "dashicons-controls-play",
+                    "action": "test_scraper_source"
+                }
+            ]
+        },
+        "queue": {
+            "id": "queue",
+            "type": "data",
+            "title": "Candidates Queue",
+            "icon": "dashicons-clock",
+            "description": "Items awaiting scoring/review",
+            "css": {
+                "gridColumn": "span 1"
+            },
+            "dataSource": "db:candidates",
+            "columns": [
+                {
+                    "field": "title",
+                    "label": "Title",
+                    "width": "60%"
+                },
+                {
+                    "field": "status",
+                    "label": "Status",
+                    "width": "20%",
+                    "render": "badge"
+                },
+                {
+                    "field": "created_at",
+                    "label": "Added",
+                    "width": "20%",
+                    "render": "relative_time"
+                }
+            ],
+            "emptyMessage": "No items in queue",
+            "maxItems": 10
+        },
+        "recent_candidates": {
+            "id": "recent_candidates",
+            "type": "data",
+            "title": "Recent Candidates",
+            "icon": "dashicons-list-view",
+            "description": "Latest items scraped from sources",
+            "css": {
+                "gridColumn": "span 3"
+            },
+            "dataSource": "db:candidates:recent:limit=10",
+            "columns": [
+                {
+                    "field": "source",
+                    "label": "Source",
+                    "width": "15%",
+                    "render": "badge"
+                },
+                {
+                    "field": "title",
+                    "label": "Title",
+                    "width": "50%"
+                },
+                {
+                    "field": "score",
+                    "label": "Score",
+                    "width": "10%",
+                    "render": "score_bar"
+                },
+                {
+                    "field": "status",
+                    "label": "Status",
+                    "width": "15%",
+                    "render": "badge"
+                },
+                {
+                    "field": "actions",
+                    "label": "",
+                    "width": "10%",
+                    "render": "actions"
+                }
+            ],
+            "itemActions": [
+                {
+                    "id": "view",
+                    "icon": "dashicons-visibility",
+                    "action": "view_item"
+                },
+                {
+                    "id": "approve",
+                    "icon": "dashicons-yes",
+                    "action": "quick_approve"
+                }
+            ]
+        },
+        "activity_log": {
+            "id": "activity_log",
+            "type": "log",
+            "title": "Activity & Error Log",
+            "icon": "dashicons-admin-tools",
+            "description": "System activity and error logs from workflow operations",
+            "css": {
+                "gridColumn": "span 5"
+            },
+            "maxEntries": 30,
+            "refreshInterval": 30
+        },
+        "approval_queue": {
+            "id": "approval_queue",
+            "type": "data",
+            "title": "Items Pending Review",
+            "icon": "dashicons-editor-help",
+            "layout": "cards",
+            "dataSource": "db:approvals:status=pending",
+            "cardTemplate": {
+                "header": "{{source}} - {{category}}",
+                "title": "{{title}}",
+                "body": "{{excerpt}}",
+                "footer": "Score: {{score}} | {{relative_time}}",
+                "image": "{{thumbnail}}",
+                "expandable": true,
+                "expandedContent": "{{full_content}}"
+            },
+            "bulkActions": [
+                "approve_all",
+                "reject_all"
+            ],
+            "sortOptions": [
+                {
+                    "field": "score",
+                    "label": "Score (High to Low)",
+                    "direction": "desc"
+                },
+                {
+                    "field": "created_at",
+                    "label": "Newest First",
+                    "direction": "desc"
+                },
+                {
+                    "field": "source",
+                    "label": "By Source",
+                    "direction": "asc"
+                }
+            ],
+            "filterOptions": [
+                {
+                    "field": "source",
+                    "label": "Source",
+                    "type": "select",
+                    "options": "scraper:sources"
+                },
+                {
+                    "field": "category",
+                    "label": "Category",
+                    "type": "select",
+                    "options": [
+                        "tech",
+                        "business",
+                        "general"
+                    ]
+                }
+            ]
+        },
+        "release_queue": {
+            "id": "release_queue",
+            "type": "data",
+            "title": "Ready for Release",
+            "icon": "dashicons-upload",
+            "layout": "cards",
+            "dataSource": "db:releases:status=ready",
+            "cardTemplate": {
+                "header": "{{generated_headline}}",
+                "title": "Original: {{title}}",
+                "body": "{{generated_content}}",
+                "footer": "Generated {{relative_time}} | Outlets: {{selected_outlets}}",
+                "expandable": true
+            },
+            "publishingOptions": {
+                "outlets": "template:toolbox.poster.outlets",
+                "schedule": {
+                    "enabled": true,
+                    "options": [
+                        "now",
+                        "1h",
+                        "3h",
+                        "6h",
+                        "12h",
+                        "24h",
+                        "custom"
+                    ]
+                }
+            }
+        },
+        "archives_list": {
+            "id": "archives_list",
+            "type": "data",
+            "title": "Archived Items",
+            "icon": "dashicons-archive",
+            "description": "Items that did not make it to approvals (lower-scoring items per source)",
+            "layout": "table",
+            "dataSource": "db:archives:recent:limit=50",
+            "columns": [
+                {
+                    "field": "source",
+                    "label": "Source",
+                    "width": "15%",
+                    "render": "badge"
+                },
+                {
+                    "field": "title",
+                    "label": "Title",
+                    "width": "40%"
+                },
+                {
+                    "field": "score",
+                    "label": "Score",
+                    "width": "10%",
+                    "render": "score_bar"
+                },
+                {
+                    "field": "reasoning",
+                    "label": "Reason",
+                    "width": "25%"
+                },
+                {
+                    "field": "created_at",
+                    "label": "Archived",
+                    "width": "10%",
+                    "render": "relative_time"
+                }
+            ],
+            "emptyMessage": "No archived items yet. Run a workflow to see items here.",
+            "sortOptions": [
+                {
+                    "field": "score",
+                    "label": "Score (High to Low)",
+                    "direction": "desc"
+                },
+                {
+                    "field": "created_at",
+                    "label": "Newest First",
+                    "direction": "desc"
+                },
+                {
+                    "field": "source",
+                    "label": "By Source",
+                    "direction": "asc"
+                }
+            ]
+        },
+        "toolkit_config": {
+            "id": "toolkit_config",
+            "type": "settings",
+            "title": "Toolkit Configuration",
+            "icon": "dashicons-admin-tools",
+            "sections": [
+                {
+                    "id": "scraper_section",
+                    "title": "Data Source",
+                    "binding": "toolbox:scraper"
+                },
+                {
+                    "id": "generator_section",
+                    "title": "AI Generator",
+                    "binding": "toolbox:generator"
+                },
+                {
+                    "id": "poster_section",
+                    "title": "Publisher",
+                    "binding": "toolbox:poster"
+                }
+            ]
+        },
+        "scraper_settings": {
+            "id": "scraper_settings",
+            "type": "custom",
+            "title": "Scraper Toolkit",
+            "icon": "dashicons-download",
+            "renderer": "RawWire_Scraper_Settings_Panel::render",
+            "description": "Configure data sources, collection parameters, and field selection for public domain content",
+            "priority": 1
+        },
+        "sources_config": {
+            "id": "sources_config",
+            "type": "settings",
+            "title": "Source Configuration",
+            "icon": "dashicons-admin-site",
+            "binding": "scraper:sources",
+            "allowAdd": true,
+            "allowRemove": true,
+            "itemForm": {
+                "fields": [
+                    {
+                        "key": "label",
+                        "label": "Source Name",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "key": "type",
+                        "label": "Type",
+                        "type": "select",
+                        "options": [
+                            "rss",
+                            "api",
+                            "scrape"
+                        ],
+                        "required": true
+                    },
+                    {
+                        "key": "url",
+                        "label": "URL/Endpoint",
+                        "type": "url",
+                        "required": true
+                    },
+                    {
+                        "key": "category",
+                        "label": "Category",
+                        "type": "text"
+                    },
+                    {
+                        "key": "enabled",
+                        "label": "Enabled",
+                        "type": "checkbox",
+                        "default": true
+                    }
+                ]
+            }
+        },
+        "publishing_config": {
+            "id": "publishing_config",
+            "type": "settings",
+            "title": "Publishing Options",
+            "icon": "dashicons-share",
+            "fields": [
+                {
+                    "key": "default_post_status",
+                    "label": "Default Post Status",
+                    "type": "select",
+                    "options": [
+                        "draft",
+                        "pending",
+                        "publish"
+                    ],
+                    "default": "draft"
+                },
+                {
+                    "key": "auto_publish",
+                    "label": "Auto-Publish on Approval",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "add_source_attribution",
+                    "label": "Add Source Attribution",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "featured_image",
+                    "label": "Auto-Set Featured Image",
+                    "type": "checkbox",
+                    "default": true
+                }
+            ]
+        },
+        "features_config": {
+            "id": "features_config",
+            "type": "settings",
+            "title": "Feature Toggles",
+            "icon": "dashicons-admin-generic",
+            "description": "Enable or disable system features",
+            "fields": [
+                {
+                    "key": "features.discovery",
+                    "label": "Content Discovery",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.scoring",
+                    "label": "Content Scoring & Ranking",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.approval_workflow",
+                    "label": "Human Approval Workflow",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.ai_generation",
+                    "label": "AI Content Generation",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.publishing",
+                    "label": "Content Publishing",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.activity_logs",
+                    "label": "Activity & Error Logs",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.queue_snapshotting",
+                    "label": "Queue Payload Snapshotting",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.citation_appending",
+                    "label": "Append Citations on Generate/Publish",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.public_domain_toggle",
+                    "label": "Public Domain Toggle for Sources",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.custom_sources",
+                    "label": "Custom Sources (dynamic)",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.server_side_validation",
+                    "label": "Server-side Copyright Validation",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "features.ai_analysis_persistence",
+                    "label": "Persist AI Analysis",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "features.publishing_provenance_meta",
+                    "label": "Persist Publishing Provenance",
+                    "type": "checkbox",
+                    "default": true
+                }
+            ]
+        },
+        "source_types_config": {
+            "id": "source_types_config",
+            "type": "settings",
+            "title": "Source Type Management",
+            "icon": "dashicons-admin-site",
+            "description": "Enable or disable source types globally",
+            "fields": [
+                {
+                    "key": "sourceTypes.github.enabled",
+                    "label": "GitHub Issues",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "sourceTypes.federal_register.enabled",
+                    "label": "Federal Register (Public Domain)",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "sourceTypes.rss_feeds.enabled",
+                    "label": "RSS Feeds",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "sourceTypes.newsapi.enabled",
+                    "label": "NewsAPI",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "sourceTypes.custom_sources.enabled",
+                    "label": "Custom Sources",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "sourceTypes.twitter.enabled",
+                    "label": "Twitter/X",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "sourceTypes.reddit.enabled",
+                    "label": "Reddit",
+                    "type": "checkbox",
+                    "default": false
+                }
+            ]
+        },
+        "page_management": {
+            "id": "page_management",
+            "type": "settings",
+            "title": "Page Management",
+            "icon": "dashicons-admin-page",
+            "description": "Enable or disable submenu pages",
+            "fields": [
+                {
+                    "key": "pageDefinitions.approvals.enabled",
+                    "label": "Review Queue",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "pageDefinitions.release.enabled",
+                    "label": "Release Queue",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "pageDefinitions.settings.enabled",
+                    "label": "Settings",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
+                    "key": "pageDefinitions.analytics.enabled",
+                    "label": "Analytics",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "pageDefinitions.templates.enabled",
+                    "label": "Templates",
+                    "type": "checkbox",
+                    "default": false
+                }
+            ],
+            "actions": [
+                {
+                    "id": "add_page",
+                    "label": "Add New Page",
+                    "icon": "dashicons-plus",
+                    "action": "add_custom_page",
+                    "style": "primary"
+                }
+            ]
+        },
+        "fallback_panel": {
+            "id": "fallback_panel",
+            "type": "custom",
+            "title": "Feature Not Yet Activated",
+            "icon": "dashicons-info",
+            "description": "This page will display content once linked to an activated function in the template.",
+            "content": "<div style='text-align:center; padding:40px;'><span class='dashicons dashicons-welcome-view-site' style='font-size:64px;opacity:0.3;'></span><h3>Page Ready</h3><p>This page is waiting for a feature to be activated and linked in the template configuration.</p></div>"
+        },
+        "template_editor": {
+            "id": "template_editor",
+            "type": "custom",
+            "title": "Template Configuration Editor",
+            "icon": "dashicons-admin-generic",
+            "description": "Visual editor for all template options",
+            "sections": [
+                {
+                    "id": "source_types",
+                    "title": "Source Types",
+                    "description": "Enable/disable source type adapters",
+                    "binding": "sourceTypes"
+                },
+                {
+                    "id": "features",
+                    "title": "Features",
+                    "description": "Enable/disable system features",
+                    "binding": "features"
+                },
+                {
+                    "id": "page_definitions",
+                    "title": "Pages",
+                    "description": "Manage submenu pages",
+                    "binding": "pageDefinitions"
+                },
+                {
+                    "id": "toolkit",
+                    "title": "Toolkit",
+                    "description": "Configure scraper, generator, poster",
+                    "binding": "toolbox"
+                }
+            ]
+        },
+        "custom_panel": {
+            "id": "custom_panel",
+            "type": "custom",
+            "title": "Custom Script Panel",
+            "icon": "dashicons-editor-code",
+            "description": "Execute custom scripts for advanced functionality",
+            "script": {
+                "type": "inline",
+                "language": "javascript",
+                "code": "// Custom panel initialization\nconsole.log('Custom panel loaded');\n// Add your custom logic here"
+            },
+            "css": {
+                "minHeight": "200px",
+                "padding": "16px"
+            }
+        }
+    },
+    "workflow": {
+        "stages": [
+            {
+                "id": "fetch",
+                "name": "Fetch Content",
+                "description": "Scrape content from configured sources",
+                "toolbox": "scraper",
+                "output": "raw_content"
+            },
+            {
+                "id": "score",
+                "name": "Score & Rank",
+                "description": "Score content relevance and rank by importance",
+                "processor": "internal",
+                "input": "raw_content",
+                "output": "scored_content"
+            },
+            {
+                "id": "review",
+                "name": "Human Review",
+                "description": "Manual approval of top findings",
+                "page": "approvals",
+                "input": "scored_content",
+                "output": "approved_content",
+                "requiresApproval": true
+            },
+            {
+                "id": "generate",
+                "name": "AI Generate",
+                "description": "Generate content using AI based on approved items",
+                "toolbox": "generator",
+                "prompt": "rewrite",
+                "input": "approved_content",
+                "output": "generated_content"
+            },
+            {
+                "id": "release",
+                "name": "Final Review",
+                "description": "Review generated content before publishing",
+                "page": "release",
+                "input": "generated_content",
+                "output": "release_content",
+                "requiresApproval": true
+            },
+            {
+                "id": "publish",
+                "name": "Publish",
+                "description": "Publish to configured outlets",
+                "toolbox": "poster",
+                "input": "release_content",
+                "output": "published"
+            }
+        ],
+        "automations": [
+            {
+                "id": "auto_fetch",
+                "trigger": "schedule",
+                "schedule": "hourly",
+                "stages": [
+                    "fetch",
+                    "score"
+                ],
+                "enabled": true
+            },
+            {
+                "id": "notification_on_new",
+                "trigger": "stage_complete",
+                "stage": "score",
+                "action": "notify",
+                "message": "New findings available for review"
+            }
+        ]
+    },
+    "data": {
+        "tables": {
+            "findings": {
+                "schema": {
+                    "id": "bigint:primary",
+                    "source_id": "varchar(50):index",
+                    "title": "varchar(500)",
+                    "excerpt": "text",
+                    "content": "longtext",
+                    "url": "varchar(2000)",
+                    "thumbnail": "varchar(2000)",
+                    "score": "decimal(5,2):index",
+                    "status": "varchar(20):index:default=pending",
+                    "is_public_domain": "int:default=1",
+                    "copyright_info": "text",
+                    "ai_analysis": "longtext",
+                    "source_metadata": "longtext",
+                    "generated_headline": "varchar(500)",
+                    "generated_content": "longtext",
+                    "selected_outlets": "text",
+                    "published_at": "datetime",
+                    "created_at": "datetime:default=CURRENT_TIMESTAMP",
+                    "updated_at": "datetime"
+                }
+            },
+            "queue": {
+                "schema": {
+                    "id": "bigint:primary",
+                    "finding_id": "bigint:index",
+                    "stage": "varchar(50):index",
+                    "status": "varchar(20):index:default=pending",
+                    "priority": "int:default=0",
+                    "payload": "longtext",
+                    "result": "longtext",
+                    "error": "text",
+                    "attempts": "int:default=0",
+                    "created_at": "datetime:default=CURRENT_TIMESTAMP",
+                    "processed_at": "datetime"
+                }
+            }
+        },
+        "downloadable": true,
+        "exportFormats": [
+            "json",
+            "csv"
+        ]
+    },
+    "features": {
+        "discovery": {
+            "label": "Content Discovery",
+            "description": "Fetch and discover content from sources",
+            "type": "checkbox",
+            "default": true,
+            "handler": "ai-discovery/ai-discovery.php",
+            "enabled": true
+        },
+        "scoring": {
+            "label": "Content Scoring & Ranking",
+            "description": "Score and rank discovered content by relevance",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php::score_content",
+            "enabled": true
+        },
+        "approval_workflow": {
+            "label": "Human Approval Workflow",
+            "description": "Manual review and approval of findings",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php::ajax_workflow_update",
+            "enabled": true
+        },
+        "ai_generation": {
+            "label": "AI Content Generation",
+            "description": "Generate AI-powered content from approved findings",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php::run_content_generation",
+            "enabled": false
+        },
+        "publishing": {
+            "label": "Content Publishing",
+            "description": "Publish approved content to WordPress",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php::publish_to_wordpress",
+            "enabled": true
+        },
+        "activity_logs": {
+            "label": "Activity & Error Logs",
+            "description": "Always show activity and error logs on the dashboard.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "includes/class-activity-logs.php",
+            "enabled": true
+        },
+        "queue_snapshotting": {
+            "label": "Queue Payload Snapshotting",
+            "description": "Persist a JSON payload of findings into the processing queue so metadata follows items.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php::ajax_workflow_update",
+            "enabled": true
+        },
+        "citation_appending": {
+            "label": "Append Citations on Generate/Publish",
+            "description": "Automatically append generated/source citations to AI-generated content and published posts.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "ai-discovery/ai-discovery.php::generate_citation",
+            "enabled": true
+        },
+        "public_domain_toggle": {
+            "label": "Public Domain Toggle for Sources",
+            "description": "Expose a public-domain flag and copyright fields on custom sources.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "ai-discovery/ai-discovery.php::discover_from_custom",
+            "enabled": true
+        },
+        "custom_sources": {
+            "label": "Custom Sources (dynamic)",
+            "description": "Allow adding dynamic custom sources via UI inputs.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "ai-discovery/ai-discovery.php",
+            "enabled": true
+        },
+        "server_side_validation": {
+            "label": "Server-side Copyright Validation",
+            "description": "Require copyright info for non-public custom sources.",
+            "type": "checkbox",
+            "default": false,
+            "handler": "template-engine/workflow-handlers.php::validate_custom_source",
+            "enabled": false
+        },
+        "ai_analysis_persistence": {
+            "label": "Persist AI Analysis",
+            "description": "Store AI analysis metadata on findings records.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "ai-discovery/ai-discovery.php::process_discovered_facts",
+            "enabled": true
+        },
+        "publishing_provenance_meta": {
+            "label": "Persist Publishing Provenance",
+            "description": "Save provenance metadata on published WordPress posts.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php::publish_to_wordpress",
+            "enabled": true
+        },
+        "fallback_hardcoded_panels": {
+            "label": "Fallback Hardcoded Panels",
+            "description": "Use hardcoded fallback UI where template segments are missing.",
+            "type": "checkbox",
+            "default": true,
+            "handler": "includes/bootstrap.php",
+            "enabled": true
+        },
+        "filters": {
+            "label": "Dashboard Filters",
+            "description": "Source, category, status, and score filters on dashboard",
+            "type": "checkbox",
+            "default": true,
+            "handler": "dashboard.js",
+            "enabled": true
+        },
+        "drawer": {
+            "label": "Finding Detail Drawer",
+            "description": "Slide-out panel for detailed finding view",
+            "type": "checkbox",
+            "default": true,
+            "handler": "dashboard.js",
+            "enabled": true
+        },
+        "bulk_actions": {
+            "label": "Bulk Actions",
+            "description": "Approve/reject multiple findings at once",
+            "type": "checkbox",
+            "default": false,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
+        },
+        "sync_automation": {
+            "label": "Automated Sync",
+            "description": "Hourly automated content sync from sources",
+            "type": "checkbox",
+            "default": false,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
+        }
+    },
+    "pageDefinitions": {
+        "approvals": {
+            "label": "Review Queue",
+            "slug": "raw-wire-approvals",
+            "icon": "dashicons-yes-alt",
+            "enabled": true,
+            "description": "Manual review and approval of pending findings",
+            "panels": [
+                "approval_queue"
+            ],
+            "requiredFeatures": [
+                "approval_workflow"
+            ]
+        },
+        "release": {
+            "label": "Release Queue",
+            "slug": "raw-wire-release",
+            "icon": "dashicons-upload",
+            "enabled": true,
+            "description": "Review generated content before publishing",
+            "panels": [
+                "release_queue"
+            ],
+            "requiredFeatures": [
+                "ai_generation",
+                "publishing"
+            ]
+        },
+        "settings": {
+            "label": "Settings",
+            "slug": "raw-wire-settings",
+            "icon": "dashicons-admin-generic",
+            "enabled": true,
+            "description": "Configure scraper toolkit, publishing options, and feature toggles",
+            "panels": [
+                "scraper_settings",
+                "publishing_config",
+                "features_config"
+            ],
+            "requiredFeatures": []
+        },
+        "analytics": {
+            "label": "Analytics",
+            "slug": "raw-wire-analytics",
+            "icon": "dashicons-chart-bar",
+            "enabled": false,
+            "description": "View performance metrics and content analytics",
+            "panels": [
+                "fallback_panel"
+            ],
+            "requiredFeatures": []
+        },
+        "templates": {
+            "label": "Templates",
+            "slug": "raw-wire-templates",
+            "icon": "dashicons-editor-table",
+            "enabled": false,
+            "description": "Manage and switch between templates",
+            "panels": [
+                "fallback_panel"
+            ],
+            "requiredFeatures": []
+        },
+        "edit_template": {
+            "label": "Edit Template",
+            "slug": "raw-wire-edit-template",
+            "icon": "dashicons-admin-generic",
+            "enabled": true,
+            "description": "Visual editor for template configuration - all features, sources, pages, and options",
+            "panels": [
+                "template_editor"
+            ],
+            "requiredFeatures": []
+        }
+    }
+}

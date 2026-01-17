@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "name": "Sample Module",
+    "slug": "sample",
+    "version": "0.2.0",
+    "description": "Example module demonstrating panels, MPC connector, and toolkit requirements"
+  },
+  "ui": {
+    "panels": [
+      {"id": "sample-settings-panel", "role": "settings"},
+      {"id": "sample-approvals-panel", "role": "approvals"},
+      {"id": "sample-toolkit-panel", "role": "toolkit"}
+    ],
+    "template": {
+      "name": "sample-template",
+      "theme": {
+        "accent": "#0d9488",
+        "accentBold": "#0f766e",
+        "surface": "#0b1724",
+        "card": "#0f1f33",
+        "muted": "#8aa0b7"
+      }
+    }
+  },
+  "requirements": {
+    "data_source": {
+      "type": "scraper",
+      "label": "Data Source",
+      "description": "Configure how the module fetches external data",
+      "required": true
+    },
+    "content_generator": {
+      "type": "generator",
+      "label": "Content Generator",
+      "description": "AI service for generating and transforming content",
+      "required": false,
+      "validate_on_load": false
+    },
+    "publisher": {
+      "type": "poster",
+      "label": "Content Publisher",
+      "description": "Where to publish the generated content",
+      "required": false
+    }
+  },
+  "defaults": {
+    "data_source": "native_dom",
+    "content_generator": "mock_generator",
+    "publisher": "wordpress_rest"
+  }
+}
