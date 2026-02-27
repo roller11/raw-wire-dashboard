@@ -2376,7 +2376,7 @@ class RawWire_Soothsayer_V2
         $settings = get_option('rawwire_party_investigator_settings', array());
         $base_url = $settings['openclaw_base_url'] ?? 'http://172.17.76.22:18789/v1';
         $auth_token = $settings['openclaw_auth_token'] ?? 'rawwire-local-dev-2025';
-        $model = $settings['openclaw_model'] ?? 'venice/grok-41-fast';
+        $model = $settings['openclaw_model'] ?? 'venice/olafangensan-glm-4.7-flash-heretic';
 
         $response = wp_remote_post(rtrim($base_url, '/') . '/chat/completions', array(
             'headers' => array(

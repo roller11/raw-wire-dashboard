@@ -526,7 +526,7 @@ PROMPT;
         }
 
         // Build command WITHOUT web search (never use Venice web search/scraping)
-        // Use configured model (default: grok-41-fast which is proven to work well)
+        // Use configured model (default: olafangensan-glm-4.7-flash-heretic)
         $model = $this->model;
         $cmd = sprintf(
             'VENICE_API_KEY=%s python3 %s chat %s --model %s --strip-thinking 2>&1',
