@@ -1154,9 +1154,19 @@ PROMPT;
             }
         }
 
-        // Create directory tree
-        @mkdir($agent_dir, 0755, true);
-        @mkdir($config_dir . '/browser', 0755, true);
+        // Create directory tree — use 0777 so www-data can always write,
+        // even if /tmp/openclaw-home was initially created by another user.
+        // PHP's mkdir respects umask, so explicitly chmod after creation.
+        $dirs_to_create = [$home_dir, $config_dir, $agent_dir, $config_dir . '/browser'];
+        foreach ($dirs_to_create as $dir) {
+            if (!is_dir($dir)) {
+                if (!@mkdir($dir, 0777, true)) {
+                    rawwire_log('openclaw', 'Failed to mkdir: ' . $dir, 'error');
+                }
+            }
+            // Ensure directory is world-writable regardless of who created it
+            @chmod($dir, 0777);
+        }
 
         // === openclaw.json — main config ===
         // NOTE: Do NOT include custom meta keys (source, generatedAt) — OpenClaw
@@ -1220,7 +1230,12 @@ PROMPT;
             ],
         ];
 
-        file_put_contents($config_file, json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+        $wrote = file_put_contents($config_file, json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+        if ($wrote === false) {
+            rawwire_log('openclaw', 'FAILED to write openclaw.json at ' . $config_file . ' — check permissions', 'error');
+        } else {
+            rawwire_log('openclaw', sprintf('Wrote openclaw.json (%d bytes) at %s', $wrote, $config_file), 'debug');
+        }
 
         // === .env — API keys as environment variables ===
         $env_content = "OPENAI_API_KEY={$api_key}\n";
@@ -1254,17 +1269,31 @@ PROMPT;
         // Write config hash for cache validation
         file_put_contents($hash_file, $config_hash);
 
-        // Clear any workspace personality files (AGENTS.md, SOUL.md, etc.)
-        // that OpenClaw may have cached from prior runs — we want the agent
-        // to focus solely on the investigation prompt, not adopt a persona
-        $workspace_dir = $config_dir . '/workspace';
-        if (is_dir($workspace_dir)) {
-            $personality_files = ['AGENTS.md', 'SOUL.md', 'TOOLS.md', 'IDENTITY.md', 'USER.md', 'HEARTBEAT.md', 'BOOTSTRAP.md', 'MEMORY.md'];
-            foreach ($personality_files as $pf) {
-                $pf_path = $workspace_dir . '/' . $pf;
-                if (is_file($pf_path)) {
-                    @unlink($pf_path);
+        // Nuke workspace, identity, and sessions dirs that OpenClaw creates.
+        // - workspace/ gets personality files (AGENTS.md, SOUL.md, etc.) that
+        //   bloat context and distract the agent from the investigation prompt.
+        // - agents/main/sessions/ caches prior session data including stale model
+        //   selections that override our config.
+        // - identity/ has device fingerprints that can cause issues.
+        $dirs_to_nuke = [
+            $config_dir . '/workspace',
+            $config_dir . '/identity',
+            $agent_dir . '/../sessions',  // agents/main/sessions/
+        ];
+        foreach ($dirs_to_nuke as $nuke_dir) {
+            $nuke_dir = realpath($nuke_dir) ?: $nuke_dir;
+            if (is_dir($nuke_dir)) {
+                // Recursive delete
+                $it = new \RecursiveDirectoryIterator($nuke_dir, \RecursiveDirectoryIterator::SKIP_DOTS);
+                $files = new \RecursiveIteratorIterator($it, \RecursiveIteratorIterator::CHILD_FIRST);
+                foreach ($files as $file) {
+                    if ($file->isDir()) {
+                        @rmdir($file->getRealPath());
+                    } else {
+                        @unlink($file->getRealPath());
+                    }
                 }
+                @rmdir($nuke_dir);
             }
         }
 
@@ -1331,6 +1360,9 @@ PROMPT;
         rawwire_log('openclaw', sprintf('agent_chat: Executing CLI: %s', $cmd), 'debug');
 
         // Execute with timeout
+        // IMPORTANT: Set cwd to the provisioned HOME so OpenClaw doesn't read
+        // personality files (AGENTS.md, SOUL.md, etc.) from the plugin directory.
+        // This keeps the agent focused on the investigation prompt.
         $timeout_sec = (int) ceil($timeout_ms / 1000);
         $descriptors = [
             0 => ['pipe', 'r'],
@@ -1338,7 +1370,7 @@ PROMPT;
             2 => ['pipe', 'w'],
         ];
 
-        $process = proc_open($cmd, $descriptors, $pipes);
+        $process = proc_open($cmd, $descriptors, $pipes, $openclaw_home);
 
         if (!is_resource($process)) {
             rawwire_log('openclaw', 'agent_chat: Failed to spawn process', 'error');
