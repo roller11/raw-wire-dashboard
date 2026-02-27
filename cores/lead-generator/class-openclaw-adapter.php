@@ -1159,11 +1159,10 @@ PROMPT;
         @mkdir($config_dir . '/browser', 0755, true);
 
         // === openclaw.json — main config ===
+        // NOTE: Do NOT include custom meta keys (source, generatedAt) — OpenClaw
+        // validates config strictly and rejects unrecognized keys, causing the
+        // agent to output error messages instead of investigation data.
         $config = [
-            'meta' => [
-                'source' => 'rawwire-dashboard-auto-provisioned',
-                'generatedAt' => gmdate('c'),
-            ],
             'browser' => [
                 'enabled' => true,
                 'executablePath' => '/usr/bin/chromium-browser',
