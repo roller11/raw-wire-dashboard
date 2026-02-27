@@ -4,7 +4,7 @@
  * Plugin Name: RawWire Dashboard
  * Plugin URI: https://github.com/raw-wire-dao-llc/raw-wire-core
  * Description: Production-ready control panel for Raw-Wire automation with GitHub API integration, modular search logic, and comprehensive data management
- * Version: 1.0.24
+ * Version: 1.0.29
  * Author: Raw-Wire DAO LLC
  * Author URI: https://github.com/raw-wire-dao-llc
  * Text Domain: raw-wire-dashboard
@@ -13,6 +13,51 @@
  * Requires PHP: 7.4
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * 
+ * ╔═══════════════════════════════════════════════════════════════════════════╗
+ * ║  STOP! MAIN PLUGIN FILE - SUBSYSTEM #1: BOOTSTRAP & LIFECYCLE             ║
+ * ╠═══════════════════════════════════════════════════════════════════════════╣
+ * ║                                                                           ║
+ * ║  📚 Full Documentation: docs/SUBSYSTEM_AUDIT.md (Section 1)              ║
+ * ║                                                                           ║
+ * ║  ARCHITECTURE OVERVIEW:                                                   ║
+ * ║                                                                           ║
+ * ║  ┌─────────────────────────────────────────────────────────────────────┐  ║
+ * ║  │ KEY FILES AND THEIR RESPONSIBILITIES                                │  ║
+ * ║  ├─────────────────────────────────────────────────────────────────────┤  ║
+ * ║  │ raw-wire-dashboard.php (THIS FILE)                                  │  ║
+ * ║  │   • Plugin header and activation hooks                              │  ║
+ * ║  │   • Loads bootstrap.php on 'plugins_loaded'                         │  ║
+ * ║  │   • DO NOT add menu registration here (deprecated)                  │  ║
+ * ║  ├─────────────────────────────────────────────────────────────────────┤  ║
+ * ║  │ includes/bootstrap.php                                              │  ║
+ * ║  │   • REST API initialization                                         │  ║
+ * ║  │   • Asset (CSS/JS) enqueueing                                       │  ║
+ * ║  │   • Loads Menu Manager                                              │  ║
+ * ║  ├─────────────────────────────────────────────────────────────────────┤  ║
+ * ║  │ includes/class-menu-manager.php                                     │  ║
+ * ║  │   • ALL menu/submenu registration                                   │  ║
+ * ║  │   • Hardwired menu: Dashboard, Templates, Tools, Workflows, Settings│  ║
+ * ║  │   • Tools register TABS via register_tool_tab()                     │  ║
+ * ║  │   • Workflows register TABS via register_workflow_tab()             │  ║
+ * ║  ├─────────────────────────────────────────────────────────────────────┤  ║
+ * ║  │ modules/core/module.php                                             │  ║
+ * ║  │   • Panel Registry (all panel definitions)                          │  ║
+ * ║  │   • Panel Renderers (all rendering logic)                           │  ║
+ * ║  │   • Self-sufficient without any template                            │  ║
+ * ║  └─────────────────────────────────────────────────────────────────────┘  ║
+ * ║                                                                           ║
+ * ║  MENU STRUCTURE (Managed by RawWire_Menu_Manager):                        ║
+ * ║                                                                           ║
+ * ║    Raw Wire (Dashboard)     ← Main menu, always visible                   ║
+ * ║    ├── Templates            ← Always visible                              ║
+ * ║    ├── Tools                ← Multi-tab page (tabs from activated tools)  ║
+ * ║    ├── Workflows            ← Multi-tab page (tabs from template)         ║
+ * ║    └── Settings             ← General + Developer Tools                   ║
+ * ║                                                                           ║
+ * ║  DO NOT add add_submenu_page() calls here - they are deprecated!          ║
+ * ║  See the add_admin_menu() method which is now a no-op.                    ║
+ * ╚═══════════════════════════════════════════════════════════════════════════╝
  */
 
 if (!defined('ABSPATH')) {
@@ -29,7 +74,8 @@ if (!defined('ABSPATH')) {
  * @see _archive/obsolete-logging/
  */
 if (!class_exists('RawWire_Logger')) {
-    class RawWire_Logger {
+    class RawWire_Logger
+    {
         const EMERGENCY = 'emergency';
         const ALERT     = 'alert';
         const CRITICAL  = 'critical';
@@ -39,21 +85,62 @@ if (!class_exists('RawWire_Logger')) {
         const INFO      = 'info';
         const DEBUG     = 'debug';
 
-        public static function log($message, $level = self::INFO, $context = array()) {
+        public static function log($message, $level = self::INFO, $context = array())
+        {
             if (defined('WP_DEBUG') && WP_DEBUG) {
                 $ctx = !empty($context) ? ' | ' . wp_json_encode($context) : '';
                 error_log("RawWire [{$level}]: {$message}{$ctx}");
             }
         }
-        public static function info($message, $context = array()) { self::log($message, self::INFO, $context); }
-        public static function error($message, $context = array()) { self::log($message, self::ERROR, $context); }
-        public static function warning($message, $context = array()) { self::log($message, self::WARNING, $context); }
-        public static function debug($message, $context = array()) { self::log($message, self::DEBUG, $context); }
-        public static function log_activity($message, $type = 'activity', $details = array(), $severity = 'info') {
+        public static function info($message, $context = array())
+        {
+            self::log($message, self::INFO, $context);
+        }
+        public static function error($message, $context = array())
+        {
+            self::log($message, self::ERROR, $context);
+        }
+        public static function warning($message, $context = array())
+        {
+            self::log($message, self::WARNING, $context);
+        }
+        public static function debug($message, $context = array())
+        {
+            self::log($message, self::DEBUG, $context);
+        }
+        public static function log_activity($message, $type = 'activity', $details = array(), $severity = 'info')
+        {
             self::log($message, $severity, array_merge($details, array('type' => $type)));
         }
-        public static function log_error($message, $details = array(), $severity = 'error') {
+        public static function log_error($message, $details = array(), $severity = 'error')
+        {
             self::log($message, $severity, $details);
+        }
+
+        /**
+         * Get recent log entries.
+         * Stub returns empty array — full implementation in archived class-logger.php.
+         *
+         * @param int    $limit Max entries to return.
+         * @param string $level Optional level filter.
+         * @return array
+         */
+        public static function get_recent_logs($limit = 20, $level = '')
+        {
+            // Stub: return empty array until full logger is restored
+            return array();
+        }
+
+        /**
+         * Clear old log entries.
+         * Stub no-op — full implementation in archived class-logger.php.
+         *
+         * @param int $days_old Remove entries older than this many days.
+         * @return int Number of entries removed (always 0 in stub).
+         */
+        public static function clear_old_logs($days_old = 30)
+        {
+            return 0;
         }
     }
 }
@@ -63,7 +150,8 @@ if (!class_exists('RawWire_Logger')) {
  *
  * @since 1.0.18
  */
-class RawWire_Dashboard {
+class RawWire_Dashboard
+{
 
     /**
      * Single instance of the plugin
@@ -75,7 +163,7 @@ class RawWire_Dashboard {
     /**
      * Plugin version
      */
-    const VERSION = '1.0.25';
+    const VERSION = '1.0.29';
 
     /**
      * Get single instance of the plugin
@@ -87,7 +175,8 @@ class RawWire_Dashboard {
      *
      * @return RawWire_Dashboard
      */
-    public static function get_instance() {
+    public static function get_instance()
+    {
         if (null === self::$instance) {
             self::$instance = new self();
         }
@@ -97,7 +186,8 @@ class RawWire_Dashboard {
     /**
      * Constructor
      */
-    private function __construct() {
+    private function __construct()
+    {
         $this->init_hooks();
         $this->includes();
     }
@@ -105,10 +195,11 @@ class RawWire_Dashboard {
     /**
      * Initialize WordPress hooks
      */
-    private function init_hooks() {
+    private function init_hooks()
+    {
         add_action('init', array($this, 'init'));
-        add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_assets'));
+        add_action('admin_init', array($this, 'limit_admin_notices_to_dashboard'));
         add_action('rest_api_init', array($this, 'register_rest_routes'));
         add_action('wp_ajax_rawwire_save_template', array($this, 'ajax_save_template'));
         register_activation_hook(__FILE__, array($this, 'activate'));
@@ -116,19 +207,56 @@ class RawWire_Dashboard {
     }
 
     /**
+     * Limit admin notices to the WordPress dashboard only
+     * Keeps backend clean for custom interfaces
+     */
+    public function limit_admin_notices_to_dashboard()
+    {
+        if (!is_admin() || wp_doing_ajax()) {
+            return;
+        }
+
+        $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+        if ($screen && $screen->id === 'dashboard') {
+            return;
+        }
+
+        remove_all_actions('admin_notices');
+        remove_all_actions('all_admin_notices');
+        remove_all_actions('user_admin_notices');
+    }
+
+    /**
      * Include required files
      */
-    private function includes() {
+    private function includes()
+    {
         // Core classes
         // NOTE: class-logger.php archived - will be rebuilt from scratch
         require_once plugin_dir_path(__FILE__) . 'rest-api.php';
         require_once plugin_dir_path(__FILE__) . 'includes/class-admin.php';
 
-        // Integrations (AI Engine extensions)
+        // Animated SVG components
+        require_once plugin_dir_path(__FILE__) . 'assets/svg/class-animated-svg.php';
+
+        // Integrations (AI Engine extensions - durable via filter hooks)
         require_once plugin_dir_path(__FILE__) . 'includes/integrations/class-groq-engine.php';
+        require_once plugin_dir_path(__FILE__) . 'includes/integrations/class-ollama-engine.php';
 
         // Centralized Key Manager (must load early, before adapters need keys)
         require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/class-key-manager.php';
+
+        // Access Control & Tool Toggle Manager (must load early for permission checks)
+        require_once plugin_dir_path(__FILE__) . 'cores/dashboard-core/class-access-control.php';
+        require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/class-tool-toggle-manager.php';
+
+        // Initialize access control first
+        RawWire_Access_Control::get_instance();
+        RawWire_Tool_Toggle_Manager::get_instance();
+
+        // Dashboard Controller (mode switch, workflow launch, dynamic stats)
+        require_once plugin_dir_path(__FILE__) . 'includes/class-dashboard-controller.php';
+        RawWire_Dashboard_Controller::get_instance();
 
         // Scraper and AI classes
         require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/adapters/scrapers/class-scraper-github.php';
@@ -151,15 +279,66 @@ class RawWire_Dashboard {
         require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-ai-settings-panel.php';
         require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-ai-scraper-panel.php';
         require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-chatbot-context.php';
+        require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-ai-memory.php';
         require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-workflow-db-panel.php';
-        
+        require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-venice-chat-handler.php';
+        require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-dashboard-chat-panel.php';
+        require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-ai-engine-injector.php';
+
+        // DreamPilot Orchestrator (Resident AI Agent)
+        require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/dreampilot/class-dreampilot-orchestrator.php';
+
+        // Start injector watchdog early
+        RawWire_AI_Engine_Injector::get_instance()->boot_start();
+
         // Initialize scraper settings toolkit
+        // Gate feature instantiation behind toggle manager
+        $tools = rawwire_tools();
+
         RawWire_Scraper_Settings::get_instance();
-        RawWire_Scraper_Settings_Panel::get_instance();
-        RawWire_AI_Settings_Panel::get_instance();
-        RawWire_AI_Scraper_Panel::get_instance();
-        RawWire_Chatbot_Context::get_instance();
-        RawWire_Workflow_DB_Panel::get_instance();
+
+        if ($tools->is_tool_enabled('scraper_rss') || $tools->is_tool_enabled('scraper_api') || $tools->is_tool_enabled('scraper_html') || $tools->is_tool_enabled('scraper_brightdata')) {
+            RawWire_Scraper_Settings_Panel::get_instance();
+        }
+
+        if ($tools->is_tool_enabled('ai_scoring') || $tools->is_tool_enabled('ai_generation') || $tools->is_tool_enabled('ai_summarization')) {
+            RawWire_AI_Settings_Panel::get_instance();
+        }
+
+        if ($tools->is_tool_enabled('ai_scoring')) {
+            RawWire_AI_Scraper_Panel::get_instance();
+        }
+
+        if ($tools->is_tool_enabled('ai_chat')) {
+            RawWire_Chatbot_Context::get_instance();
+        }
+
+        if ($tools->is_tool_enabled('workflow_engine')) {
+            RawWire_Workflow_DB_Panel::get_instance();
+        }
+
+        if ($tools->is_tool_enabled('ai_chat')) {
+            RawWire_AI_Memory::get_instance();
+            RawWire_Dashboard_Chat_Panel::get_instance();
+        }
+
+        DreamPilot_Orchestrator::get_instance();
+
+        // Lead Generator — permit pipeline (toggleable via Tools page)
+        if ($tools->is_tool_enabled('lead_generator')) {
+            require_once plugin_dir_path(__FILE__) . 'cores/lead-generator/class-lead-generator.php';
+            require_once plugin_dir_path(__FILE__) . 'cores/lead-generator/class-lead-generator-panels.php';
+            // DEPRECATED: LADBS scraper enrichment — superseded by Party Investigator + OpenClaw
+            // require_once plugin_dir_path(__FILE__) . 'cores/lead-generator/class-contractor-enrichment.php';
+            require_once plugin_dir_path(__FILE__) . 'cores/lead-generator/class-permit-pipeline.php';
+            rawwire_leads();
+            rawwire_permit_pipeline(); // Initialize permit automation pipeline
+
+            // Load WP-CLI commands
+            if (defined('WP_CLI') && WP_CLI) {
+                require_once plugin_dir_path(__FILE__) . 'cli/class-pipeline-cli.php';
+            }
+        }
 
         // Bootstrap (menu registration, template-driven pages)
         require_once plugin_dir_path(__FILE__) . 'includes/bootstrap.php';
@@ -168,30 +347,27 @@ class RawWire_Dashboard {
         // Module core system
         require_once plugin_dir_path(__FILE__) . 'cores/module-core/module-core.php';
 
-        // Template engine system
-        require_once plugin_dir_path(__FILE__) . 'cores/template-engine/template-engine.php';
-        require_once plugin_dir_path(__FILE__) . 'cores/template-engine/panel-renderer.php';
-        require_once plugin_dir_path(__FILE__) . 'cores/template-engine/page-renderer.php';
-        require_once plugin_dir_path(__FILE__) . 'cores/template-engine/workflow-handlers.php';
-        require_once plugin_dir_path(__FILE__) . 'cores/ai-discovery/ai-discovery.php';
+        // Template engine system (new loader includes all components)
+        define('RAWWIRE_DASHBOARD_VERSION', self::VERSION);
+        require_once plugin_dir_path(__FILE__) . 'cores/template-engine/loader.php';
 
         // Initialize module core to discover modules
         RawWire_Module_Core::init();
 
-        // Initialize template engine
-        RawWire_Template_Engine::init();
-
-        // Initialize AI Discovery
-        RawWire_AI_Discovery::init();
+        // Template engine initializes via loader.php on plugins_loaded hook
 
         // Instantiate admin class to register AJAX handlers
         new RawWire_Admin();
+
+        // Mark init complete for injector
+        RawWire_AI_Engine_Injector::get_instance()->boot_complete();
     }
 
     /**
      * Plugin initialization
      */
-    public function init() {
+    public function init()
+    {
         // Load text domain
         load_plugin_textdomain('raw-wire-dashboard', false, dirname(plugin_basename(__FILE__)) . '/languages');
 
@@ -211,73 +387,84 @@ class RawWire_Dashboard {
         if (get_option('rawwire_auto_approve_threshold') === false) {
             add_option('rawwire_auto_approve_threshold', 0);
         }
+
+        // Configure AI Engine with Ollama if available
+        $this->setup_ai_engine_ollama();
+    }
+
+    /**
+     * Setup AI Engine with Ollama integration
+     * 
+     * Note: The engine class and filter hooks are now in 
+     * includes/integrations/class-ollama-engine.php for durability.
+     * This method only handles initial environment creation.
+     */
+    private function setup_ai_engine_ollama()
+    {
+        // Only run if AI Engine is active
+        if (!class_exists('Meow_MWAI_Core')) {
+            return;
+        }
+
+        // Check if extension is enabled
+        $engine_settings = get_option('rawwire_engine_extensions', []);
+        if (isset($engine_settings['ollama_enabled']) && !$engine_settings['ollama_enabled']) {
+            return;
+        }
+
+        // Check if we already configured Ollama environment
+        if (get_option('rawwire_ollama_ai_engine_configured')) {
+            return;
+        }
+
+        // Get AI Engine options
+        $mwai_options = get_option('mwai_options', []);
+        if (empty($mwai_options) || !isset($mwai_options['ai_envs'])) {
+            return;
+        }
+
+        // Check if Ollama environment already exists
+        $has_ollama = false;
+        foreach ($mwai_options['ai_envs'] as $env) {
+            if (isset($env['type']) && $env['type'] === 'ollama') {
+                $has_ollama = true;
+                break;
+            }
+        }
+
+        // Add Ollama environment if not present
+        if (!$has_ollama) {
+            $endpoint = $engine_settings['ollama_endpoint'] ?? 'http://ollama:11434';
+            $mwai_options['ai_envs'][] = [
+                'id' => 'ollama-' . wp_generate_uuid4(),
+                'name' => 'Ollama (Local)',
+                'type' => 'ollama',
+                'apikey' => 'ollama',
+                'endpoint' => $endpoint,
+                'dynamicModels' => true,
+            ];
+
+            update_option('mwai_options', $mwai_options);
+            error_log('RawWire: Added Ollama environment to AI Engine');
+        }
+
+        // Mark as configured
+        update_option('rawwire_ollama_ai_engine_configured', true);
     }
 
     /**
      * Initialize database
      */
-    private function init_database() {
+    private function init_database()
+    {
         // Database initialization will be handled here
-    }
-
-    /**
-     * Add admin menu
-     */
-    public function add_admin_menu() {
-        // NOTE: Main menu page is already registered by RawWire_Bootstrap::register_menu()
-        // Only register submenu pages here to avoid duplication
-
-        // Add direct Edit Template GUI page
-        add_submenu_page(
-            'raw-wire-dashboard',
-            __('Edit Template', 'raw-wire-dashboard'),
-            __('Edit Template', 'raw-wire-dashboard'),
-            'manage_options',
-            'raw-wire-edit-template',
-            array($this, 'admin_edit_template_page')
-        );
-        // Add submenus: Settings and Approvals
-        add_submenu_page(
-            'raw-wire-dashboard',
-            __('Settings', 'raw-wire-dashboard'),
-            __('Settings', 'raw-wire-dashboard'),
-            'manage_options',
-            'raw-wire-settings',
-            array($this, 'admin_settings_page')
-        );
-
-        add_submenu_page(
-            'raw-wire-dashboard',
-            __('Approvals', 'raw-wire-dashboard'),
-            __('Approvals', 'raw-wire-dashboard'),
-            'manage_options',
-            'raw-wire-approvals',
-            array($this, 'admin_approvals_page')
-        );
-
-        add_submenu_page(
-            'raw-wire-dashboard',
-            __('Release', 'raw-wire-dashboard'),
-            __('Release', 'raw-wire-dashboard'),
-            'manage_options',
-            'raw-wire-release',
-            array($this, 'admin_release_page')
-        );
-
-        add_submenu_page(
-            'raw-wire-dashboard',
-            __('Templates', 'raw-wire-dashboard'),
-            __('Templates', 'raw-wire-dashboard'),
-            'manage_options',
-            'raw-wire-templates',
-            array($this, 'admin_templates_page')
-        );
     }
 
     /**
      * Admin callback for the Edit Template GUI page
      */
-    public function admin_edit_template_page() {
+    public function admin_edit_template_page()
+    {
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
@@ -289,7 +476,7 @@ class RawWire_Dashboard {
         }
 
         $template_json = $template ? json_encode($template, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) : '';
-        ?>
+?>
         <div class="wrap rawwire-dashboard">
             <div class="rawwire-hero">
                 <div class="rawwire-hero-content">
@@ -313,7 +500,8 @@ class RawWire_Dashboard {
                             <h2><?php _e('Features', 'raw-wire-dashboard'); ?></h2>
                             <div id="rawwire-features-list">
                                 <?php foreach ($template['features'] ?? array() as $fid => $fmeta): ?>
-                                    <?php $fid_attr = esc_attr($fid); $checked = !empty($fmeta['default']) ? 'checked' : ''; ?>
+                                    <?php $fid_attr = esc_attr($fid);
+                                    $checked = !empty($fmeta['default']) ? 'checked' : ''; ?>
                                     <label style="display:block;margin-bottom:6px;">
                                         <input type="checkbox" data-feature-id="<?php echo $fid_attr; ?>" <?php echo $checked; ?> />
                                         <?php echo esc_html($fmeta['label'] ?? $fid); ?>
@@ -326,7 +514,8 @@ class RawWire_Dashboard {
                             <h2><?php _e('Pages', 'raw-wire-dashboard'); ?></h2>
                             <div id="rawwire-pages-list">
                                 <?php foreach ($template['pageDefinitions'] ?? array() as $pid => $pmeta): ?>
-                                    <?php $pid_attr = esc_attr($pid); $pchecked = !empty($pmeta['enabled']) ? 'checked' : ''; ?>
+                                    <?php $pid_attr = esc_attr($pid);
+                                    $pchecked = !empty($pmeta['enabled']) ? 'checked' : ''; ?>
                                     <label style="display:block;margin-bottom:6px;">
                                         <input type="checkbox" data-page-id="<?php echo $pid_attr; ?>" <?php echo $pchecked; ?> />
                                         <?php echo esc_html($pmeta['label'] ?? $pid); ?>
@@ -339,7 +528,8 @@ class RawWire_Dashboard {
                             <h2><?php _e('Source Types', 'raw-wire-dashboard'); ?></h2>
                             <div id="rawwire-sources-list">
                                 <?php foreach ($template['sourceTypes'] ?? array() as $sid => $smeta): ?>
-                                    <?php $sid_attr = esc_attr($sid); $schecked = !empty($smeta['enabled']) ? 'checked' : ''; ?>
+                                    <?php $sid_attr = esc_attr($sid);
+                                    $schecked = !empty($smeta['enabled']) ? 'checked' : ''; ?>
                                     <label style="display:block;margin-bottom:6px;">
                                         <input type="checkbox" data-source-id="<?php echo $sid_attr; ?>" <?php echo $schecked; ?> />
                                         <?php echo esc_html($smeta['label'] ?? $sid); ?>
@@ -351,7 +541,7 @@ class RawWire_Dashboard {
 
                     <p style="margin-top:16px;">
                         <button id="rawwire-save-gui" type="button" class="button button-primary"><?php _e('Save Template (GUI)', 'raw-wire-dashboard'); ?></button>
-                        <a href="<?php echo admin_url('admin.php?page=raw-wire-templates'); ?>" class="button button-secondary"><?php _e('Back to Templates', 'raw-wire-dashboard'); ?></a>
+                        <a href="<?php echo admin_url('admin.php?page=rawwire-templates'); ?>" class="button button-secondary"><?php _e('Back to Templates', 'raw-wire-dashboard'); ?></a>
                     </p>
 
                     <h3 style="margin-top:18px;">Advanced / Raw JSON</h3>
@@ -364,12 +554,14 @@ class RawWire_Dashboard {
             </form>
 
             <script>
-                (function(){
+                (function() {
                     const templateObj = <?php echo $template ? json_encode($template, JSON_UNESCAPED_SLASHES) : 'null'; ?>;
-                    if (!templateObj) { return; }
+                    if (!templateObj) {
+                        return;
+                    }
 
                     // Initialize UI state from template defaults
-                    document.querySelectorAll('[data-feature-id]').forEach(function(ck){
+                    document.querySelectorAll('[data-feature-id]').forEach(function(ck) {
                         const id = ck.getAttribute('data-feature-id');
                         const def = (templateObj.features && templateObj.features[id] && templateObj.features[id].default) ? true : false;
                         // If template has explicit enabled flag stored, prefer it (backwards compat)
@@ -380,36 +572,36 @@ class RawWire_Dashboard {
                         }
                     });
 
-                    document.querySelectorAll('[data-page-id]').forEach(function(ck){
+                    document.querySelectorAll('[data-page-id]').forEach(function(ck) {
                         const id = ck.getAttribute('data-page-id');
                         ck.checked = !!(templateObj.pageDefinitions && templateObj.pageDefinitions[id] && templateObj.pageDefinitions[id].enabled);
                     });
 
-                    document.querySelectorAll('[data-source-id]').forEach(function(ck){
+                    document.querySelectorAll('[data-source-id]').forEach(function(ck) {
                         const id = ck.getAttribute('data-source-id');
                         ck.checked = !!(templateObj.sourceTypes && templateObj.sourceTypes[id] && templateObj.sourceTypes[id].enabled);
                     });
 
                     // Save handler: merge UI back into template JSON and submit via AJAX
-                    document.getElementById('rawwire-save-gui').addEventListener('click', function(e){
+                    document.getElementById('rawwire-save-gui').addEventListener('click', function(e) {
                         e.preventDefault();
-                        
+
                         // Update features
-                        document.querySelectorAll('[data-feature-id]').forEach(function(ck){
+                        document.querySelectorAll('[data-feature-id]').forEach(function(ck) {
                             const id = ck.getAttribute('data-feature-id');
                             if (!templateObj.features) templateObj.features = {};
                             if (!templateObj.features[id]) templateObj.features[id] = {};
                             templateObj.features[id].enabled = !!ck.checked;
                         });
                         // Update pages
-                        document.querySelectorAll('[data-page-id]').forEach(function(ck){
+                        document.querySelectorAll('[data-page-id]').forEach(function(ck) {
                             const id = ck.getAttribute('data-page-id');
                             if (!templateObj.pageDefinitions) templateObj.pageDefinitions = {};
                             if (!templateObj.pageDefinitions[id]) templateObj.pageDefinitions[id] = {};
                             templateObj.pageDefinitions[id].enabled = !!ck.checked;
                         });
                         // Update sources
-                        document.querySelectorAll('[data-source-id]').forEach(function(ck){
+                        document.querySelectorAll('[data-source-id]').forEach(function(ck) {
                             const id = ck.getAttribute('data-source-id');
                             if (!templateObj.sourceTypes) templateObj.sourceTypes = {};
                             if (!templateObj.sourceTypes[id]) templateObj.sourceTypes[id] = {};
@@ -418,38 +610,43 @@ class RawWire_Dashboard {
 
                         const jsonStr = JSON.stringify(templateObj, null, 2);
                         fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                            body: new URLSearchParams({
-                                action: 'rawwire_save_template',
-                                nonce: document.querySelector('[name="nonce"]').value,
-                                template: jsonStr
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/x-www-form-urlencoded'
+                                },
+                                body: new URLSearchParams({
+                                    action: 'rawwire_save_template',
+                                    nonce: document.querySelector('[name="nonce"]').value,
+                                    template: jsonStr
+                                })
                             })
-                        })
-                        .then(function(res) { return res.json(); })
-                        .then(function(data) {
-                            if (data.success) {
-                                alert('Template saved successfully!');
-                                window.location.reload();
-                            } else {
-                                alert('Error: ' + (data.data ? data.data.message : 'Unknown error'));
-                            }
-                        })
-                        .catch(function(err) {
-                            console.error('AJAX error:', err);
-                            alert('Error saving template: ' + err);
-                        });
+                            .then(function(res) {
+                                return res.json();
+                            })
+                            .then(function(data) {
+                                if (data.success) {
+                                    alert('Template saved successfully!');
+                                    window.location.reload();
+                                } else {
+                                    alert('Error: ' + (data.data ? data.data.message : 'Unknown error'));
+                                }
+                            })
+                            .catch(function(err) {
+                                console.error('AJAX error:', err);
+                                alert('Error saving template: ' + err);
+                            });
                     });
                 })();
             </script>
         </div>
-        <?php
+<?php
     }
 
     /**
      * Settings page callback
      */
-    public function admin_settings_page() {
+    public function admin_settings_page()
+    {
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
@@ -467,7 +664,8 @@ class RawWire_Dashboard {
     /**
      * Approvals page callback
      */
-    public function admin_approvals_page() {
+    public function admin_approvals_page()
+    {
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
@@ -485,7 +683,8 @@ class RawWire_Dashboard {
     /**
      * Release page callback
      */
-    public function admin_release_page() {
+    public function admin_release_page()
+    {
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
@@ -501,7 +700,8 @@ class RawWire_Dashboard {
     /**
      * Templates page callback
      */
-    public function admin_templates_page() {
+    public function admin_templates_page()
+    {
         if (!current_user_can('manage_options')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
@@ -514,29 +714,22 @@ class RawWire_Dashboard {
     /**
      * Enqueue admin assets
      */
-    public function enqueue_admin_assets($hook) {
+    public function enqueue_admin_assets($hook)
+    {
         error_log("RawWire: enqueue_admin_assets called with hook: " . $hook);
-        
-        // Allow all RawWire admin pages
-        $allowed_hooks = array(
-            'toplevel_page_raw-wire-dashboard',
-            'raw-wire_page_raw-wire-settings',
-            'raw-wire_page_raw-wire-approvals',
-            'raw-wire_page_raw-wire-templates',
-            'raw-wire_page_raw-wire-release',
-            'raw-wire_page_raw-wire-edit-template',
-            'raw-wire_page_rawwire-ai-scraper',
-            'raw-wire_page_rawwire-ai-settings',
-            'raw-wire_page_rawwire-workflow-db',
-            'raw-wire_page_rawwire-scraper-settings',
+
+        // Allow all RawWire admin pages - match any page with raw-wire or rawwire in the hook
+        $is_rawwire_page = (
+            strpos($hook, 'raw-wire') !== false ||
+            strpos($hook, 'rawwire') !== false
         );
-        
-        if (!in_array($hook, $allowed_hooks)) {
-            error_log("RawWire: Hook '" . $hook . "' not in allowed list, returning early");
+
+        if (!$is_rawwire_page) {
+            error_log("RawWire: Hook '" . $hook . "' is not a RawWire page, skipping");
             return;
         }
 
-        error_log("RawWire: Hook '" . $hook . "' is allowed, continuing with enqueue");
+        error_log("RawWire: Hook '" . $hook . "' is a RawWire page, loading styles");
 
         // Original admin styles
         wp_enqueue_style(
@@ -602,6 +795,7 @@ class RawWire_Dashboard {
 
         wp_localize_script('rawwire-template-system', 'rawwire_admin', array(
             'nonce' => wp_create_nonce('rawwire_template_nonce'),
+            'adminNonce' => wp_create_nonce('rawwire_admin_nonce'),
             'edit_url' => admin_url('admin.php?page=raw-wire-edit'),
         ));
 
@@ -628,7 +822,7 @@ class RawWire_Dashboard {
             wp_localize_script('rawwire-template-builder', 'rawwireTemplateBuilder', array(
                 'nonce' => wp_create_nonce('rawwire_template_builder'),
                 'ajaxurl' => admin_url('admin-ajax.php'),
-                'templatesUrl' => admin_url('admin.php?page=raw-wire-templates')
+                'templatesUrl' => admin_url('admin.php?page=rawwire-templates')
             ));
         }
 
@@ -653,7 +847,8 @@ class RawWire_Dashboard {
     /**
      * Register REST API routes
      */
-    public function register_rest_routes() {
+    public function register_rest_routes()
+    {
         // Initialize the singleton - it will register routes via rest_api_init action
         RawWire_REST_API::get_instance();
     }
@@ -661,7 +856,8 @@ class RawWire_Dashboard {
     /**
      * Plugin activation
      */
-    public function activate() {
+    public function activate()
+    {
         // Create legacy tables (for backwards compatibility)
         $this->create_tables();
 
@@ -673,6 +869,12 @@ class RawWire_Dashboard {
         add_option('rawwire_version', self::VERSION);
         add_option('rawwire_last_sync', __('Never', 'raw-wire-dashboard'));
 
+        // Apply AI Engine patches (toolkit injector)
+        if (!class_exists('RawWire_AI_Engine_Injector')) {
+            require_once plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-ai-engine-injector.php';
+        }
+        RawWire_AI_Engine_Injector::get_instance()->activate();
+
         // Flush rewrite rules
         flush_rewrite_rules();
     }
@@ -680,9 +882,21 @@ class RawWire_Dashboard {
     /**
      * Plugin deactivation
      */
-    public function deactivate() {
+    public function deactivate()
+    {
         // Clear scheduled events
         wp_clear_scheduled_hook('rawwire_sync_data');
+
+        // Roll back AI Engine patches (toolkit injector)
+        if (class_exists('RawWire_AI_Engine_Injector')) {
+            RawWire_AI_Engine_Injector::get_instance()->deactivate();
+        } else {
+            $injector_path = plugin_dir_path(__FILE__) . 'cores/toolbox-core/features/class-ai-engine-injector.php';
+            if (file_exists($injector_path)) {
+                require_once $injector_path;
+                RawWire_AI_Engine_Injector::get_instance()->deactivate();
+            }
+        }
 
         // Flush rewrite rules
         flush_rewrite_rules();
@@ -697,9 +911,10 @@ class RawWire_Dashboard {
      * 
      * @return array Status and results
      */
-    public function fetch_github_data() {
+    public function fetch_github_data()
+    {
         global $wpdb;
-        
+
         // Track stats
         $stats = array(
             'success' => false,
@@ -712,7 +927,7 @@ class RawWire_Dashboard {
         try {
             // Initialize scrapers
             $native_scraper = new RawWire_Adapter_Scraper_Native(array());
-            
+
             // Configure multiple data sources (not scrapers)
             // TODO: Load from database or configuration
             $data_sources = array(
@@ -771,7 +986,9 @@ class RawWire_Dashboard {
                         if (!empty($items)) {
                             $stats['total_scraped'] += count($items);
                             // Tag with source name
-                            foreach ($items as &$it) { $it['source'] = $source['name']; }
+                            foreach ($items as &$it) {
+                                $it['source'] = $source['name'];
+                            }
                             $all_items_by_source[$source['name']] = $items;
                             RawWire_Logger::info("Scraped " . count($items) . " items from {$source['name']}");
                         } else {
@@ -797,13 +1014,13 @@ class RawWire_Dashboard {
                             RawWire_Logger::warning('Ollama not reachable, using fallback scoring', array('message' => $health['message'] ?? 'unknown'));
                         }
                     }
-                    
+
                     // Load keyword filter settings
                     $filter_settings = get_option('rawwire_filter_settings', array(
                         'keywords' => '',
                         'enabled' => false
                     ));
-                    
+
                     foreach ($all_items_by_source as $source_name => $items) {
                         // Initialize source stats
                         $source_stats = array(
@@ -813,7 +1030,7 @@ class RawWire_Dashboard {
                             'scores' => array(),
                             'top5_scores' => array()
                         );
-                        
+
                         // Apply keyword filter if enabled
                         $items_to_analyze = $items;
                         if (!empty($filter_settings['enabled']) && !empty($filter_settings['keywords'])) {
@@ -821,16 +1038,16 @@ class RawWire_Dashboard {
                             $items_to_analyze = $analyzer->quick_filter($items, $keywords);
                             RawWire_Logger::info("Filtered {$source_name} from " . count($items) . " to " . count($items_to_analyze) . " items using keywords");
                         }
-                        
+
                         // AI analyzes ALL items from this source (or filtered subset)
                         $analyzed = $analyzer->analyze_batch($items_to_analyze, 5); // Returns top 5
-                        
+
                         // Calculate average score of all analyzed
                         foreach ($analyzed as $analyzed_item) {
                             $source_stats['scores'][] = $analyzed_item['score'];
                             $source_stats['top5_scores'][] = $analyzed_item['score'];
                         }
-                        
+
                         // Store only top 5 from this source
                         // Check optional columns once per source
                         $table = $wpdb->prefix . 'rawwire_content';
@@ -839,19 +1056,19 @@ class RawWire_Dashboard {
 
                         foreach ($analyzed as $analyzed_item) {
                             $item = $analyzed_item['original'];
-                            
+
                             // Deduplication: Check if title already exists
                             $existing = $wpdb->get_var($wpdb->prepare(
                                 "SELECT id FROM {$table} WHERE title = %s",
                                 $item['title']
                             ));
-                            
+
                             if ($existing) {
                                 $source_stats['duplicates']++;
                                 RawWire_Logger::debug("Skipping duplicate: {$item['title']}");
                                 continue;
                             }
-                            
+
                             // Build insert dynamically based on schema
                             $data = array(
                                 'title' => sanitize_text_field($item['title'] ?? 'Untitled'),
@@ -861,16 +1078,22 @@ class RawWire_Dashboard {
                                 'created_at' => current_time('mysql'),
                                 'updated_at' => current_time('mysql')
                             );
-                            $format = array('%s','%s','%s','%s','%s','%s');
-                            if ($has_url) { $data['url'] = esc_url_raw($item['link'] ?? ''); $format[] = '%s'; }
-                            if ($has_relevance) { $data['relevance'] = floatval($analyzed_item['score'] ?? 0); $format[] = '%f'; }
+                            $format = array('%s', '%s', '%s', '%s', '%s', '%s');
+                            if ($has_url) {
+                                $data['url'] = esc_url_raw($item['link'] ?? '');
+                                $format[] = '%s';
+                            }
+                            if ($has_relevance) {
+                                $data['relevance'] = floatval($analyzed_item['score'] ?? 0);
+                                $format[] = '%f';
+                            }
 
                             $inserted = $wpdb->insert($table, $data, $format);
-                            
+
                             if ($inserted) {
                                 $source_stats['stored']++;
                                 $stats['total_stored']++;
-                                
+
                                 // Log the AI score for reference
                                 RawWire_Logger::info("Stored item with score {$analyzed_item['score']}", array(
                                     'item_id' => $wpdb->insert_id,
@@ -881,19 +1104,19 @@ class RawWire_Dashboard {
                                 ));
                             }
                         }
-                        
+
                         // Calculate averages
-                        $source_stats['avg_score'] = !empty($source_stats['scores']) 
+                        $source_stats['avg_score'] = !empty($source_stats['scores'])
                             ? round(array_sum($source_stats['scores']) / count($source_stats['scores']), 1)
                             : 0;
                         $source_stats['avg_top5_score'] = !empty($source_stats['top5_scores'])
                             ? round(array_sum($source_stats['top5_scores']) / count($source_stats['top5_scores']), 1)
                             : 0;
-                        
+
                         // Store detailed stats in option for dashboard display
                         $option_key = 'rawwire_source_stats_' . sanitize_title($source_name);
                         update_option($option_key, $source_stats);
-                        
+
                         // Track per-source stats in response
                         $stats['sources'][$source_name] = $source_stats;
                     }
@@ -915,7 +1138,6 @@ class RawWire_Dashboard {
             } catch (Exception $e) {
                 RawWire_Logger::warning('Batch scoring failed: ' . $e->getMessage());
             }
-
         } catch (Exception $e) {
             $stats['success'] = false;
             $stats['message'] = 'Sync failed: ' . $e->getMessage();
@@ -937,7 +1159,8 @@ class RawWire_Dashboard {
     /**
      * Minimal generic HTML parser to extract items (title, content preview, link)
      */
-    private static function extract_items_from_html(string $html, string $base_url) : array {
+    private static function extract_items_from_html(string $html, string $base_url): array
+    {
         $items = array();
         if (empty($html)) return $items;
 
@@ -949,7 +1172,8 @@ class RawWire_Dashboard {
             $xp = new DOMXPath($dom);
 
             $queries = array(
-                '//h2//a[@href]','//h3//a[@href]',
+                '//h2//a[@href]',
+                '//h3//a[@href]',
                 "//*[@class and contains(concat(' ', normalize-space(@class), ' '), ' entry-title ')]//a[@href]",
                 "//a[contains(@href,'federalregister.gov/documents')]",
                 "//a[@href]"
@@ -970,7 +1194,9 @@ class RawWire_Dashboard {
 
                     $summary = '';
                     $p = self::find_nearby_paragraph($a);
-                    if ($p) { $summary = trim($p->textContent); }
+                    if ($p) {
+                        $summary = trim($p->textContent);
+                    }
 
                     $items[] = array(
                         'title' => self::clean_text($title),
@@ -1007,7 +1233,8 @@ class RawWire_Dashboard {
         return $items;
     }
 
-    private static function to_absolute_url(string $href, string $base) : string {
+    private static function to_absolute_url(string $href, string $base): string
+    {
         if (parse_url($href, PHP_URL_SCHEME)) return $href;
         // Handle protocol-relative
         if (strpos($href, '//') === 0) {
@@ -1025,11 +1252,12 @@ class RawWire_Dashboard {
         return $scheme . '://' . $host . ($path ? $path . '/' : '/') . $href;
     }
 
-    private static function find_nearby_paragraph($a = null) {
+    private static function find_nearby_paragraph($a = null)
+    {
         if (!$a) return null;
         // Next siblings
         $n = $a->parentNode;
-        for ($i=0; $n && $i<6; $i++) {
+        for ($i = 0; $n && $i < 6; $i++) {
             $n = $n->nextSibling;
             if ($n && strtolower($n->nodeName) === 'p' && trim($n->textContent) !== '') return $n;
         }
@@ -1037,7 +1265,7 @@ class RawWire_Dashboard {
         $p = $a->parentNode ? $a->parentNode->parentNode : null;
         if ($p) {
             $n = $p->nextSibling;
-            for ($i=0; $n && $i<4; $i++) {
+            for ($i = 0; $n && $i < 4; $i++) {
                 if ($n && strtolower($n->nodeName) === 'p' && trim($n->textContent) !== '') return $n;
                 $n = $n->nextSibling;
             }
@@ -1045,12 +1273,16 @@ class RawWire_Dashboard {
         return null;
     }
 
-    private static function clean_text(string $t) : string { return trim(preg_replace('/\s+/',' ', $t)); }
+    private static function clean_text(string $t): string
+    {
+        return trim(preg_replace('/\s+/', ' ', $t));
+    }
 
     /**
      * Create database tables
      */
-    private function create_tables() {
+    private function create_tables()
+    {
         global $wpdb;
 
         $charset_collate = $wpdb->get_charset_collate();
@@ -1110,7 +1342,8 @@ class RawWire_Dashboard {
      * - Updates content rows with `ai_score` and `ai_analysis`
      * - Inserts top results into `rawwire_approvals` for the approvals page
      */
-    public function process_scoring_batch() {
+    public function process_scoring_batch()
+    {
         global $wpdb;
 
         $table = $wpdb->prefix . 'rawwire_content';
@@ -1118,7 +1351,9 @@ class RawWire_Dashboard {
 
         // Ensure columns exist (add if missing)
         $cols = $wpdb->get_results("SHOW COLUMNS FROM {$table}", ARRAY_A);
-        $col_names = array_map(function($c){ return $c['Field']; }, $cols);
+        $col_names = array_map(function ($c) {
+            return $c['Field'];
+        }, $cols);
         if (!in_array('ai_score', $col_names)) {
             $wpdb->query("ALTER TABLE {$table} ADD COLUMN ai_score DECIMAL(5,2) NULL");
         }
@@ -1141,7 +1376,7 @@ class RawWire_Dashboard {
         if (empty($rows)) return false;
 
         // Prepare items for analyzer
-        $items = array_map(function($r){
+        $items = array_map(function ($r) {
             return array('title' => $r['title'], 'content' => $r['content'], 'source' => $r['source'], 'id' => $r['id']);
         }, $rows);
 
@@ -1167,7 +1402,7 @@ class RawWire_Dashboard {
                 'ai_score' => $score,
                 'ai_analysis' => wp_json_encode(array('scores' => $s['scores'], 'reasoning' => $s['reasoning'] ?? '', 'highlights' => $s['highlights'] ?? [])),
                 'ai_discovered' => 1
-            ), array('id' => $content_id), array('%f','%s','%d'), array('%d'));
+            ), array('id' => $content_id), array('%f', '%s', '%d'), array('%d'));
 
             // Insert into approvals table for approval queue
             $inserted = $wpdb->insert($approvals_table, array(
@@ -1180,7 +1415,7 @@ class RawWire_Dashboard {
                 'status' => 'pending',
                 'category' => 'ai_scored',
                 'metadata' => wp_json_encode(array(
-                    'scores' => $s['scores'], 
+                    'scores' => $s['scores'],
                     'reasoning' => $s['reasoning'] ?? '',
                     'content_id' => $content_id,
                     'is_public_domain' => 1
@@ -1211,7 +1446,7 @@ class RawWire_Dashboard {
                     $score = floatval($scored[$idx]['score'] ?? 0);
                     if ($score >= $threshold) {
                         // Mark approval as approved
-                        $wpdb->update($approvals_table, array('status' => 'approved', 'updated_at' => current_time('mysql')), array('id' => $aid), array('%s','%s'), array('%d'));
+                        $wpdb->update($approvals_table, array('status' => 'approved', 'updated_at' => current_time('mysql')), array('id' => $aid), array('%s', '%s'), array('%d'));
 
                         // Move to content table for generation
                         $approval = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$approvals_table} WHERE id = %d", $aid), ARRAY_A);
@@ -1250,7 +1485,8 @@ class RawWire_Dashboard {
     /**
      * AJAX handler for saving templates
      */
-    public function ajax_save_template() {
+    public function ajax_save_template()
+    {
         check_ajax_referer('rawwire_template_builder', 'nonce');
 
         if (!current_user_can('manage_options')) {
@@ -1258,13 +1494,13 @@ class RawWire_Dashboard {
         }
 
         $template_json = isset($_POST['template']) ? $_POST['template'] : '';
-        
+
         if (empty($template_json)) {
             wp_send_json_error(array('message' => 'No template data provided'));
         }
 
         $template = json_decode(stripslashes($template_json), true);
-        
+
         if (json_last_error() !== JSON_ERROR_NONE) {
             wp_send_json_error(array('message' => 'Invalid JSON: ' . json_last_error_msg()));
         }
@@ -1303,7 +1539,8 @@ class RawWire_Dashboard {
 /**
  * Initialize the plugin
  */
-function rawwire_dashboard() {
+function rawwire_dashboard()
+{
     return RawWire_Dashboard::get_instance();
 }
 
