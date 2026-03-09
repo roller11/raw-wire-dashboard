@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Workflow AJAX Handlers
  * Path: cores/template-engine/workflow-handlers.php
@@ -17,12 +18,14 @@ if (!defined('ABSPATH')) {
 /**
  * RawWire Workflow Handlers Class
  */
-class RawWire_Workflow_Handlers {
+class RawWire_Workflow_Handlers
+{
 
     /**
      * Initialize handlers
      */
-    public static function init() {
+    public static function init()
+    {
         // Workflow status updates
         add_action('wp_ajax_rawwire_workflow_update', array(__CLASS__, 'ajax_workflow_update'));
         add_action('wp_ajax_rawwire_bulk_action', array(__CLASS__, 'ajax_bulk_action'));
@@ -58,7 +61,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Verify nonce for template actions
      */
-    protected static function verify_nonce() {
+    protected static function verify_nonce()
+    {
         if (!check_ajax_referer('rawwire_template_nonce', 'nonce', false)) {
             wp_send_json_error(array('message' => 'Security check failed'));
             exit;
@@ -75,7 +79,8 @@ class RawWire_Workflow_Handlers {
      * Returns array with all 6-stage workflow table names plus legacy tables
      * @return array Table names keyed by stage name
      */
-    protected static function get_workflow_tables() {
+    protected static function get_workflow_tables()
+    {
         global $wpdb;
         return array(
             'candidates' => $wpdb->prefix . 'rawwire_candidates',
@@ -93,7 +98,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Update workflow item status
      */
-    public static function ajax_workflow_update() {
+    public static function ajax_workflow_update()
+    {
         self::verify_nonce();
 
         $item_id = intval($_POST['item_id'] ?? 0);
@@ -106,10 +112,10 @@ class RawWire_Workflow_Handlers {
 
         global $wpdb;
         $tables = self::get_workflow_tables();
-        
+
         // Use the specified table or default to approvals
-        $table_key = in_array($source_table, array('candidates', 'approvals', 'content', 'releases', 'published', 'archives')) 
-            ? $source_table 
+        $table_key = in_array($source_table, array('candidates', 'approvals', 'content', 'releases', 'published', 'archives'))
+            ? $source_table
             : 'approvals';
         $source_table_name = $tables[$table_key];
 
@@ -140,13 +146,13 @@ class RawWire_Workflow_Handlers {
                 // Determine next stage based on current table
                 $stage_order = array('candidates', 'approvals', 'content', 'releases', 'published');
                 $current_index = array_search($table_key, $stage_order);
-                $next_stage = ($current_index !== false && isset($stage_order[$current_index + 1])) 
-                    ? $stage_order[$current_index + 1] 
+                $next_stage = ($current_index !== false && isset($stage_order[$current_index + 1]))
+                    ? $stage_order[$current_index + 1]
                     : null;
 
                 if ($next_stage) {
                     $next_table = $tables[$next_stage];
-                    
+
                     // Copy item to next stage
                     $insert_data = array(
                         'title' => $item['title'] ?? '',
@@ -180,7 +186,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Handle bulk actions
      */
-    public static function ajax_bulk_action() {
+    public static function ajax_bulk_action()
+    {
         self::verify_nonce();
 
         $bulk_action = sanitize_text_field($_POST['bulk_action'] ?? '');
@@ -193,18 +200,16 @@ class RawWire_Workflow_Handlers {
 
         global $wpdb;
         $tables = self::get_workflow_tables();
-        
+
         // Use the specified workflow table or default to approvals
-        $table_key = in_array($source_table, array('candidates', 'approvals', 'content', 'releases', 'published', 'archives')) 
-            ? $source_table 
+        $table_key = in_array($source_table, array('candidates', 'approvals', 'content', 'releases', 'published', 'archives'))
+            ? $source_table
             : 'approvals';
         $table_name = $tables[$table_key];
         $success_count = 0;
 
         foreach ($item_ids as $item_id) {
-            $status = ($bulk_action === 'approve') ? 'approved' : 
-                      (($bulk_action === 'reject') ? 'rejected' : 
-                      (($bulk_action === 'publish') ? 'published' : 'deleted'));
+            $status = ($bulk_action === 'approve') ? 'approved' : (($bulk_action === 'reject') ? 'rejected' : (($bulk_action === 'publish') ? 'published' : 'deleted'));
 
             if ($bulk_action === 'delete') {
                 $result = $wpdb->delete($table_name, array('id' => $item_id), array('%d'));
@@ -230,7 +235,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Get item details - searches across all workflow tables
      */
-    public static function ajax_item_detail() {
+    public static function ajax_item_detail()
+    {
         self::verify_nonce();
 
         $item_id = intval($_POST['item_id'] ?? 0);
@@ -307,7 +313,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Update item field
      */
-    public static function ajax_item_update() {
+    public static function ajax_item_update()
+    {
         self::verify_nonce();
 
         $item_id = intval($_POST['item_id'] ?? 0);
@@ -347,7 +354,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Refresh a panel
      */
-    public static function ajax_panel_refresh() {
+    public static function ajax_panel_refresh()
+    {
         self::verify_nonce();
 
         $panel_id = sanitize_text_field($_POST['panel_id'] ?? '');
@@ -374,7 +382,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Return the last batch marker so front-end can detect new approvals
      */
-    public static function ajax_get_last_batch() {
+    public static function ajax_get_last_batch()
+    {
         self::verify_nonce();
 
         $time = get_option('rawwire_last_batch_time', 0);
@@ -386,7 +395,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Run a toolbox operation
      */
-    public static function ajax_toolbox_run() {
+    public static function ajax_toolbox_run()
+    {
         self::verify_nonce();
 
         $toolbox = sanitize_text_field($_POST['toolbox'] ?? '');
@@ -424,7 +434,8 @@ class RawWire_Workflow_Handlers {
      * Run the scraper
      * @deprecated Use workflow orchestrator instead. This method writes to candidates table for backwards compatibility.
      */
-    protected static function run_scraper() {
+    protected static function run_scraper()
+    {
         if (!class_exists('RawWire_Template_Engine')) {
             return array('success' => false, 'message' => 'Template engine not available');
         }
@@ -502,7 +513,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Fetch items from a source
      */
-    protected static function fetch_source($source) {
+    protected static function fetch_source($source)
+    {
         $items = array();
 
         switch ($source['type'] ?? 'rss') {
@@ -522,7 +534,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Fetch RSS feed
      */
-    protected static function fetch_rss($url) {
+    protected static function fetch_rss($url)
+    {
         include_once(ABSPATH . WPINC . '/feed.php');
 
         $rss = fetch_feed($url);
@@ -551,7 +564,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Fetch API endpoint
      */
-    protected static function fetch_api($url, $source) {
+    protected static function fetch_api($url, $source)
+    {
         $response = wp_remote_get($url, array(
             'timeout' => 30,
             'headers' => $source['headers'] ?? array()
@@ -583,7 +597,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Calculate relevance score
      */
-    protected static function calculate_score($item) {
+    protected static function calculate_score($item)
+    {
         $score = 50; // Base score
 
         // Boost for keywords (simple implementation)
@@ -607,7 +622,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Run the AI generator
      */
-    protected static function run_generator() {
+    protected static function run_generator()
+    {
         $mode = sanitize_text_field($_POST['mode'] ?? 'rewrite');
         $input = wp_kses_post($_POST['input'] ?? '');
         $options = json_decode(stripslashes($_POST['options'] ?? '{}'), true);
@@ -638,7 +654,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Mock AI generation for testing
      */
-    protected static function mock_generate($input, $mode, $options) {
+    protected static function mock_generate($input, $mode, $options)
+    {
         $prefix = '';
         switch ($mode) {
             case 'rewrite':
@@ -651,10 +668,10 @@ class RawWire_Workflow_Handlers {
                 break;
             case 'generate_headline':
                 return "1. Breaking: " . wp_trim_words($input, 8) . "\n" .
-                       "2. " . ucfirst(wp_trim_words($input, 6)) . " Revealed\n" .
-                       "3. What You Need to Know About " . wp_trim_words($input, 5) . "\n" .
-                       "4. The Latest on " . wp_trim_words($input, 5) . "\n" .
-                       "5. " . wp_trim_words($input, 7) . " - Here's Why It Matters";
+                    "2. " . ucfirst(wp_trim_words($input, 6)) . " Revealed\n" .
+                    "3. What You Need to Know About " . wp_trim_words($input, 5) . "\n" .
+                    "4. The Latest on " . wp_trim_words($input, 5) . "\n" .
+                    "5. " . wp_trim_words($input, 7) . " - Here's Why It Matters";
             case 'expand':
                 $prefix = "[Expanded Article]\n\n";
                 break;
@@ -666,7 +683,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Call AI API (OpenAI/Anthropic)
      */
-    protected static function call_ai_api($input, $mode, $options, $api_key, $model) {
+    protected static function call_ai_api($input, $mode, $options, $api_key, $model)
+    {
         if (!class_exists('RawWire_Template_Engine')) {
             return self::mock_generate($input, $mode, $options);
         }
@@ -691,7 +709,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Call OpenAI API
      */
-    protected static function call_openai($prompt, $api_key, $model) {
+    protected static function call_openai($prompt, $api_key, $model)
+    {
         $response = wp_remote_post('https://api.openai.com/v1/chat/completions', array(
             'headers' => array(
                 'Authorization' => 'Bearer ' . $api_key,
@@ -724,7 +743,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Call Anthropic API
      */
-    protected static function call_anthropic($prompt, $api_key, $model) {
+    protected static function call_anthropic($prompt, $api_key, $model)
+    {
         $response = wp_remote_post('https://api.anthropic.com/v1/messages', array(
             'headers' => array(
                 'x-api-key' => $api_key,
@@ -757,7 +777,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Run the poster
      */
-    protected static function run_poster() {
+    protected static function run_poster()
+    {
         $item_id = intval($_POST['item_id'] ?? 0);
         $outlets = json_decode(stripslashes($_POST['outlets'] ?? '[]'), true);
         $schedule = sanitize_text_field($_POST['schedule'] ?? 'now');
@@ -803,8 +824,8 @@ class RawWire_Workflow_Handlers {
 
         return array(
             'success' => true,
-            'message' => ($schedule === 'now') ? 
-                'Published to ' . count($published_to) . ' outlet(s)' : 
+            'message' => ($schedule === 'now') ?
+                'Published to ' . count($published_to) . ' outlet(s)' :
                 'Scheduled for ' . count($published_to) . ' outlet(s)'
         );
     }
@@ -812,7 +833,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Publish to a specific outlet
      */
-    protected static function publish_to_outlet($item, $outlet_id, $schedule, $schedule_time) {
+    protected static function publish_to_outlet($item, $outlet_id, $schedule, $schedule_time)
+    {
         switch ($outlet_id) {
             case 'wordpress':
                 return self::publish_to_wordpress($item, $schedule, $schedule_time);
@@ -828,7 +850,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Publish to WordPress
      */
-    protected static function publish_to_wordpress($item, $schedule, $schedule_time) {
+    protected static function publish_to_wordpress($item, $schedule, $schedule_time)
+    {
         $default_status = get_option('rawwire_publish_default_status', 'draft');
 
         $post_data = array(
@@ -885,31 +908,32 @@ class RawWire_Workflow_Handlers {
     }
 
     /**
-     * Publish to Twitter (placeholder)
+     * Publish to Twitter (not yet integrated)
      */
-    protected static function publish_to_twitter($item) {
-        // In production, this would use Twitter API
+    protected static function publish_to_twitter($item)
+    {
         if (class_exists('RawWire_Logger')) {
-            RawWire_Logger::log("Would publish to Twitter: " . $item['title'], 'info');
+            RawWire_Logger::log("Twitter publishing not configured — skipped: " . $item['title'], 'warning');
         }
-        return true; // Mock success
+        return false; // Not implemented
     }
 
     /**
-     * Publish to LinkedIn (placeholder)
+     * Publish to LinkedIn (not yet integrated)
      */
-    protected static function publish_to_linkedin($item) {
-        // In production, this would use LinkedIn API
+    protected static function publish_to_linkedin($item)
+    {
         if (class_exists('RawWire_Logger')) {
-            RawWire_Logger::log("Would publish to LinkedIn: " . $item['title'], 'info');
+            RawWire_Logger::log("LinkedIn publishing not configured — skipped: " . $item['title'], 'warning');
         }
-        return true; // Mock success
+        return false; // Not implemented
     }
 
     /**
      * Calculate schedule time from preset
      */
-    protected static function calculate_schedule_time($schedule, $custom_time) {
+    protected static function calculate_schedule_time($schedule, $custom_time)
+    {
         if ($schedule === 'custom' && !empty($custom_time)) {
             return $custom_time;
         }
@@ -932,7 +956,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Run scraper AJAX handler
      */
-    public static function ajax_run_scraper() {
+    public static function ajax_run_scraper()
+    {
         self::verify_nonce();
         $result = self::run_scraper();
 
@@ -946,7 +971,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Get configured outlets
      */
-    public static function ajax_get_outlets() {
+    public static function ajax_get_outlets()
+    {
         self::verify_nonce();
 
         if (!class_exists('RawWire_Template_Engine')) {
@@ -962,7 +988,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Save a single setting
      */
-    public static function ajax_save_setting() {
+    public static function ajax_save_setting()
+    {
         self::verify_nonce();
 
         $key = sanitize_text_field($_POST['key'] ?? '');
@@ -980,7 +1007,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Save multiple settings
      */
-    public static function ajax_save_settings() {
+    public static function ajax_save_settings()
+    {
         self::verify_nonce();
 
         $settings = $_POST;
@@ -998,7 +1026,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Test a source
      */
-    public static function ajax_test_source() {
+    public static function ajax_test_source()
+    {
         self::verify_nonce();
 
         $url = esc_url_raw($_POST['new_source_url'] ?? '');
@@ -1028,7 +1057,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Add a new source
      */
-    public static function ajax_add_source() {
+    public static function ajax_add_source()
+    {
         self::verify_nonce();
 
         $name = sanitize_text_field($_POST['new_source_name'] ?? '');
@@ -1070,35 +1100,38 @@ class RawWire_Workflow_Handlers {
     /**
      * Toggle template source enabled/disabled
      */
-    public static function ajax_toggle_template_source() {
+    public static function ajax_toggle_template_source()
+    {
         // Accept multiple nonce types
-        if (!wp_verify_nonce($_POST['nonce'] ?? '', 'rawwire_template_nonce') &&
-            !wp_verify_nonce($_POST['nonce'] ?? '', 'rawwire_ajax_nonce')) {
+        if (
+            !wp_verify_nonce($_POST['nonce'] ?? '', 'rawwire_template_nonce') &&
+            !wp_verify_nonce($_POST['nonce'] ?? '', 'rawwire_ajax_nonce')
+        ) {
             wp_send_json_error(array('message' => 'Invalid nonce'));
             return;
         }
-        
+
         if (!current_user_can('manage_options')) {
             wp_send_json_error(array('message' => 'Permission denied'));
             return;
         }
-        
+
         $source_id = sanitize_key($_POST['source_id'] ?? '');
         $enabled = filter_var($_POST['enabled'] ?? false, FILTER_VALIDATE_BOOLEAN);
-        
+
         if (empty($source_id)) {
             wp_send_json_error(array('message' => 'Source ID required'));
             return;
         }
-        
+
         // Get active template and update source
         $template = RawWire_Template_Engine::get_active_template();
-        
+
         if (!isset($template['sources']) || !is_array($template['sources'])) {
             wp_send_json_error(array('message' => 'No template sources found'));
             return;
         }
-        
+
         $updated = false;
         foreach ($template['sources'] as &$source) {
             if (isset($source['id']) && $source['id'] === $source_id) {
@@ -1107,16 +1140,16 @@ class RawWire_Workflow_Handlers {
                 break;
             }
         }
-        
+
         if (!$updated) {
             wp_send_json_error(array('message' => 'Source not found'));
             return;
         }
-        
+
         // Save updated template
-        $template_id = get_option('rawwire_active_template', 'news-aggregator');
+        $template_id = get_option('rawwire_active_template', 'default');
         update_option('rawwire_template_' . $template_id . '_sources', $template['sources']);
-        
+
         wp_send_json_success(array(
             'message' => 'Source ' . ($enabled ? 'enabled' : 'disabled'),
             'source_id' => $source_id,
@@ -1127,7 +1160,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Run AI Discovery
      */
-    protected static function run_ai_discovery() {
+    protected static function run_ai_discovery()
+    {
         if (!class_exists('RawWire_AI_Discovery')) {
             return array('success' => false, 'message' => 'AI Discovery engine not available');
         }
@@ -1144,7 +1178,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Run AI Analysis on content
      */
-    protected static function run_ai_analysis($content, $title = '') {
+    protected static function run_ai_analysis($content, $title = '')
+    {
         $api_key = get_option('rawwire_generator_api_key', '');
         $model = get_option('rawwire_generator_model', 'gpt-4');
 
@@ -1178,7 +1213,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Calculate advanced AI-powered score
      */
-    protected static function calculate_advanced_score($item) {
+    protected static function calculate_advanced_score($item)
+    {
         if (!class_exists('RawWire_Template_Engine')) {
             return self::calculate_score($item);
         }
@@ -1196,9 +1232,9 @@ class RawWire_Workflow_Handlers {
 
         // Calculate weighted score
         $score = ($analysis['shock_value'] * $weights['shock_value']) +
-                 ($analysis['credibility'] * $weights['credibility']) +
-                 ($analysis['timeliness'] * $weights['timeliness']) +
-                 ($analysis['uniqueness'] * $weights['uniqueness']);
+            ($analysis['credibility'] * $weights['credibility']) +
+            ($analysis['timeliness'] * $weights['timeliness']) +
+            ($analysis['uniqueness'] * $weights['uniqueness']);
 
         return round(min(100, max(0, $score)));
     }
@@ -1206,7 +1242,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Run content generation with AI
      */
-    protected static function run_content_generation($item) {
+    protected static function run_content_generation($item)
+    {
         $api_key = get_option('rawwire_generator_api_key', '');
         $model = get_option('rawwire_generator_model', 'gpt-4');
 
@@ -1270,22 +1307,25 @@ class RawWire_Workflow_Handlers {
     }
 
     /**
-     * Run image generation
+     * Run image generation (not yet integrated)
      */
-    protected static function run_image_generation($title) {
-        // Placeholder for DALL-E or similar API integration
+    protected static function run_image_generation($title)
+    {
+        // Image generation requires DALL-E / Stable Diffusion integration
         return array(
-            'success' => true,
-            'image_url' => 'https://via.placeholder.com/1200x630/FF6B6B/FFFFFF?text=' . urlencode(substr($title, 0, 50)),
+            'success' => false,
+            'image_url' => '',
             'alt_text' => $title,
-            'generated' => true
+            'generated' => false,
+            'message' => 'Image generation not configured — no AI image provider connected',
         );
     }
 
     /**
      * Run automated publishing
      */
-    protected static function run_automated_publishing($item, $generated_content, $image_data = null) {
+    protected static function run_automated_publishing($item, $generated_content, $image_data = null)
+    {
         $results = array();
 
         // Publish to WordPress
@@ -1312,10 +1352,10 @@ class RawWire_Workflow_Handlers {
             }
         }
 
-        // Social media publishing (placeholder)
+        // Social media publishing (not yet integrated)
         $social_platforms = get_option('rawwire_social_platforms', array());
         foreach ($social_platforms as $platform) {
-            $results[$platform] = array('success' => true, 'posted' => true); // Mock success
+            $results[$platform] = array('success' => false, 'message' => $platform . ' integration not configured');
         }
 
         return $results;
@@ -1324,7 +1364,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Download image to WordPress media library
      */
-    protected static function download_image_to_media($image_url, $post_id) {
+    protected static function download_image_to_media($image_url, $post_id)
+    {
         require_once(ABSPATH . 'wp-admin/includes/media.php');
         require_once(ABSPATH . 'wp-admin/includes/file.php');
         require_once(ABSPATH . 'wp-admin/includes/image.php');
@@ -1351,11 +1392,12 @@ class RawWire_Workflow_Handlers {
     /**
      * Save a template setting
      */
-    public static function ajax_save_template_setting() {
+    public static function ajax_save_template_setting()
+    {
         self::verify_nonce();
 
         $setting = sanitize_text_field($_POST['setting'] ?? '');
-        $value = $_POST['value'] ?? '';
+        $value = sanitize_text_field(wp_unslash($_POST['value'] ?? ''));
 
         if (empty($setting)) {
             wp_send_json_error(array('message' => 'Invalid setting'));
@@ -1396,7 +1438,8 @@ class RawWire_Workflow_Handlers {
     /**
      * Update custom sources in template
      */
-    public static function ajax_update_custom_sources() {
+    public static function ajax_update_custom_sources()
+    {
         self::verify_nonce();
 
         $custom_sources = json_decode(stripslashes($_POST['sources'] ?? '[]'), true);
@@ -1409,13 +1452,16 @@ class RawWire_Workflow_Handlers {
         $template = RawWire_Template_Engine::get_active_template();
 
         // Remove existing custom sources
-        $template['sources']['items'] = array_filter($template['sources']['items'] ?? [], function($source) {
+        $template['sources']['items'] = array_filter($template['sources']['items'] ?? [], function ($source) {
             return $source['type'] !== 'custom';
         });
 
-        // Add new custom sources
+        // Add new custom sources (sanitize each entry)
         foreach ($custom_sources as $source) {
-            $template['sources']['items'][] = $source;
+            if (!is_array($source)) {
+                continue;
+            }
+            $template['sources']['items'][] = map_deep($source, 'sanitize_text_field');
         }
 
         // Update custom sources count

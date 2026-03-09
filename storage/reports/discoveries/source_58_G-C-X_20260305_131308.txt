@@ -1,0 +1,10 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 58
+Party: G C X
+License: 1045286-B
+Permit: 25016-10000-35692
+Generated: 2026-03-05 13:13:08
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+INVESTIGATION_FAILED: Browsing tools need a Brave Search API key, which is not currently set up. Please configure the necessary API key to proceed with the search for G C X LLC and related networking opportunities.

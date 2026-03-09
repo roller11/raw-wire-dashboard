@@ -1,0 +1,922 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 52
+Party: Clune Construction Co
+License: 732107-B
+Permit: 25016-10000-30254
+Generated: 2026-03-09 18:17:50
+Method: perplexity_direct
+Provider: Perplexity
+Model: openai/gpt-5.1
+==================================================
+
+1. TARGET SUMMARY
+- **Target:** Clune Construction Company, L.P. (often branded “Clune Construction”) – national, employee‑owned general contractor with a major Los Angeles office focused heavily on commercial interiors.  
+  - LA office: 725 S. Figueroa Street, Suite 300, Los Angeles, CA 90017; phone 213.723.1881; CA License 732107 (General Building).  
+  - The LA office is led by **Randy Starbird** (President, West Region; Executive Managing Director) and **Peter Bahruth** (Executive Managing Director; Executive Safety Director).  
+  - Clune has managed projects in Southern California for 25+ years.  
+  - Source: Clune LA office page – https://www.clunegc.com/location/los-angeles/
+
+- **Scale and position in LA market:**  
+  - Ranked **#23 General Contractor** in the LA Times Top CRE firms list for Southern California.  
+  - 2024 revenue (Southern California): **$165,954,330**; 2023: **$127,423,159**.  
+  - Local employees: 136; 1 Southern California office, 8 offices firm‑wide; year established 1997; HQ Chicago.  
+  - Top local executives listed: **Randy Starbird (Managing Director, General Manager); Peter Bahruth (Managing Director, General Manager); Adam Beck (General Manager, Senior Vice President)**.  
+  - Property types: data center, hospitality, medical, office, retail; also airport lounges, lobbies, life sciences, studios.  
+  - Source: LA Times ranking – https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction
+
+- **Licensing & permits (LA focus):**  
+  - **California Contractors License:** #732107, classification “General Building”; status active (verified via BuildZoom and BBB referencing CSLB).  
+  - Bond: $15,000 with Travelers Casualty & Surety Company of America.  
+  - Workers’ comp provider: National Union Fire Insurance Company of Pittsburgh, PA.  
+  - 837 building permits recorded across projects (statewide, not just LA).  
+  - Source: BuildZoom – https://www.buildzoom.com/contractor/clune-construction-ca  
+  - BBB SF profile confirms License 732107 with expiration 2/28/2027 – https://www.bbb.org/us/ca/san-francisco/profile/general-contractor/clune-construction-company-lp-1116-879091  
+
+- **Permit #: 25016-10000-30254 context:**  
+  - Public construction‑data aggregators confirm Clune has extensive LA permit activity, but in available public summaries, **permit 25016‑10000‑30254 could not be specifically matched** to a named project. You will likely need direct LADBS search or detailed permit history via CSLB/BuildZoom for the exact project and owner.
+
+- **Primary decision‑making cluster for LA interiors:**  
+  - **Regional operations & client leadership:** Randy Starbird, Peter Bahruth, Adam Beck.  
+  - **Strategic board‑level influence in LA/interiors:** Mike Clune (Chairman), Pam Light FIIDA (Board member, Los Angeles), Bob Dahlstrom (Board member, Los Angeles).  
+  - **Corporate leadership:** CEO (variously listed as Bill Abromitis and R. David (Dave) Hall in different sources; see Company section).
+
+---
+
+2. PEOPLE (Decision‑maker drill‑down)
+
+### 2.1. Randy Starbird – West Region President / LA Leader
+- **Role / title:**  
+  - President, West Region; Executive Managing Director (Clune West Region includes LA & SF).  
+  - Listed as top local executive: Managing Director, General Manager (Southern California) in LA Times ranking.  
+  - Sources:  
+    - Clune LA office page – https://www.clunegc.com/location/los-angeles/  
+    - Clune press release on regional presidents – https://www.clunegc.com/clune-construction-announces-executive-promotions-in-two-regions/  
+    - LA Times ranking – https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction
+
+- **Contact routes (public):**  
+  - LA office main: 213.723.1881 (general line for his office).  
+    - Source: https://www.clunegc.com/location/los-angeles/  
+  - Company domain: **@clunegc.com** (individual email not publicly listed, but domain is consistent across references).  
+  - Likely reachable via LinkedIn (LinkedIn links referenced on Clune “About” leadership pages and external people‑search aggregators, but profiles themselves are not fully visible without login).
+
+- **Authority & influence (why he matters for interior design work):**  
+  - As **President of the West Region**, he has significant authority over:  
+    - Which kinds of projects Clune pursues in Southern California (corporate interiors, mission‑critical, studios, etc.).  
+    - High‑level client relationships with major tenants/owners (Ford EV Center; confidential Century City financial client; major broadcasting studios).  
+    - Approval of key project teams, major subcontractors and design collaborations.  
+  - He is explicitly credited with helping grow the West Region by “building strong relationships with clients and industry partners” and by leading Clune to “#1 Best Place to Work” in LA Business Journal rankings.  
+    - Source: promotion release – https://www.clunegc.com/clune-construction-announces-executive-promotions-in-two-regions/  
+  - For interior design, Starbird is the **top gatekeeper for which designers, architects, and specialty vendors Clune is willing to put in front of large corporate clients** on major LA interiors.
+
+- **Best access routes:**  
+  - **Association / civic:** Clune LA is a member of the **LAX Coastal Chamber of Commerce**, which lists Clune Construction as a member firm; Starbird is a plausible attendee or sponsor representative at Chamber events.  
+    - Source: https://business.laxcoastal.com/list/member/clune-construction-6543  
+  - **Thought‑leadership media:** Starbird is quoted in the LA Business Journal on “open‑book” construction management, indicating he participates in industry media and likely in their events or panels.  
+    - Source: LA Business Journal custom content – “Transparency In Construction Management: An Open Book Methodology” – https://labusinessjournal.com/custom-content/transparency-in-construction-management-an-open-book-methodology/  
+  - **Client‑side networks:** West Region projects highlighted in LA Times (Ford Advanced EV Center; confidential broadcast / finance clients) indicate he interfaces directly with **corporate real estate heads, studios, and tech/auto clients**, often alongside their architects and designers.
+
+- **Potential meeting opportunities:**  
+  - **LAX Coastal Chamber events** – breakfasts, panels, and networking evenings where Clune may send senior reps.  
+    - Membership listing: https://business.laxcoastal.com/list/member/clune-construction-6543  
+  - **LA Business Journal events** – industry roundtables or awards programs (Clune has been recognized as a top contractor & best place to work, making them visible to LABJ).  
+  - **Joint client/architect sessions** – Ford Advanced EV Center (Long Beach), Century City financial tenant improvements, Culver City broadcast studios – design and engineering coordination meetings where Clune’s regional leadership may appear for major milestones.  
+    - Projects: https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+
+---
+
+### 2.2. Peter Bahruth – Executive Managing Director & Executive Safety Director
+- **Role / title:**  
+  - **Executive Managing Director; Executive Safety Director; Co‑manager of the West Region**, including LA.  
+  - Clune LA office page notes: “The Clune Los Angeles office is led by **Randy Starbird… and by Peter Bahruth, who serves as Executive Managing Director and Executive Safety Director.**”  
+  - Source: https://www.clunegc.com/location/los-angeles/  
+  - Clune press release notes that he “oversees all safety programs for Clune nationally and is a member of Clune’s Executive Management Committee.”  
+    - Source: https://www.clunegc.com/clune-construction-announces-executive-promotions-in-two-regions/
+
+- **Contact routes (public):**  
+  - LA office phone: 213.723.1881 – https://www.clunegc.com/location/los-angeles/  
+  - Corporate email domain: @clunegc.com (individual email not fully exposed publicly).  
+  - People‑search tools list a Clune email pattern for him and a phone number, but full details are behind paywalls; high‑level confirmation only.  
+    - Source: https://www.signalhire.com/profiles/peter-bahruth's-email/27298094  
+
+- **Authority & influence for interior design work:**  
+  - As **Executive Managing Director and co‑leader of the West Region**, Bahruth has direct say in:  
+    - Project execution strategy and which subs/designers are considered “safe bets” from a performance and safety standpoint.  
+    - Implementation of Clune’s safety‑first culture on high‑end interiors (studio, life sciences, mission‑critical, law firm offices).  
+  - As **Executive Safety Director**, he can **veto or favor specific subcontractors and vendors based on their safety records**, which is crucial in prequalification. Interior designers able to bring subs with strong safety credentials can position themselves well with him.
+
+- **Best access routes:**  
+  - **Prequalification / risk channels:** Bahruth’s national safety role means the **prequalification process** (see CMiC/Clune FAQ) is tightly aligned with his standards. Building a relationship through strong safety documentation and responsiveness during prequal can put you on his radar.  
+    - FAQ & prequal portal reference: https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf  
+  - **Safety / risk conferences and local construction safety events**, where Clune may present its safety program. Bahruth is a natural candidate speaker for such events.
+
+- **Potential meeting opportunities:**  
+  - **Prequalification review calls** – difficult to force, but for significant, complex interiors, Clune may arrange clarification calls about safety plans, EMR, and project logistics; Bahruth or his safety team may join.  
+  - **Executive‑level safety walk‑throughs** on high‑risk projects (mission‑critical spaces, major law firm fit‑outs).
+
+---
+
+### 2.3. Adam Beck – General Manager, Senior Vice President (Southern California)
+- **Role / title:**  
+  - Listed by LA Times as **General Manager, Senior Vice President**, and one of the “Top Local Executives” in Southern California.  
+    - Source: https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+
+- **Contact routes:**  
+  - Via LA office: 213.723.1881 – https://www.clunegc.com/location/los-angeles/  
+  - Email via @clunegc.com domain; personal details not public.  
+  - Likely has LinkedIn profile; not accessible without login.
+
+- **Authority & influence:**  
+  - As **GM/SVP**, Beck is likely responsible for **day‑to‑day operations across major LA projects**, including:  
+    - Assigning project executives and managers to jobs.  
+    - Approving budgets and schedules on interiors.  
+    - Coordinating with clients’ project management / corporate real estate leaders.  
+  - On many projects, **he is closer to the project selection and staffing process than the board or CEO**, making him a critical decision‑maker for which designers get opportunities.
+
+- **Best access routes:**  
+  - **Project‑specific coordination** – meeting Beck via active work is realistic if you are:  
+    - Brought in by an owner / architect already working with Clune.  
+    - A prequalified designer/sub invited during RFP or value‑engineering phases.  
+  - **Regional industry lists/events:** his inclusion as a “Top Local Executive” suggests he appears on LA‑focused industry panels and lists, particularly for topics like interiors, studios, and mission‑critical projects.
+
+- **Potential meeting opportunities:**  
+  - **Client‑side events with Ford, law firms, and financial institutions** whose projects he oversees.  
+  - **Chamber or CRE association events** where Clune sends operations leadership to network with tenants and brokers.
+
+---
+
+### 2.4. Mike Clune – Founder, Chairman of the Board
+- **Role / title:**  
+  - Founder (1997) and **Chairman of the Board** of Clune Construction.  
+  - Board listing on “About” page: “Mike Clune – Chairman of the Board – Chicago.”  
+    - Source: https://www.clunegc.com/about/  
+  - Third‑party analysis confirms he founded the company and continues as Chairman.  
+    - Source: https://portersfiveforce.com/blogs/owners/clunegc  
+
+- **Contact routes:**  
+  - Based in Chicago HQ; no direct contact published.  
+  - Reachable via corporate channels and the board structure on the Clune website.  
+
+- **Authority & influence (re interiors):**  
+  - Sets **overall strategic direction and culture**, including the long‑standing focus on **commercial interiors and mission‑critical work**.  
+  - Acts as a high‑level connector to legacy clients (financial institutions, law firms, technology companies) that have multiple offices including LA.
+
+- **Best access routes & potential meetings:**  
+  - **National‑level charity and foundation work:** Clune established the **Clune Cares Foundation** (501(c)(3)), donating a portion of profits to >100 organizations annually – often via events and galas where he or other board members appear.  
+    - Source: https://www.clunegc.com/about/  
+  - **National client summits** – where big clients bring executives and Clune’s board participates.
+
+---
+
+### 2.5. Pam Light, FIIDA – Board Member (Los Angeles) – Design‑side Power Connector
+- **Role / title:**  
+  - Board of Directors member listed on Clune “About” page as **“Pam Light, FIIDA – Board of Directors – Los Angeles.”**  
+    - Source: https://www.clunegc.com/about/  
+
+- **Contact routes:**  
+  - LinkedIn link appears next to her name on the Clune site (profile itself gated).  
+  - Likely reachable through her primary design firm/employer and professional associations (FIIDA designation suggests senior IIDA involvement).
+
+- **Authority & influence (for interior designers):**  
+  - As a **Los Angeles‑based design leader embedded on Clune’s Board**, Pam is **arguably the single most valuable bridge between Clune and the interior design community**:  
+    - FIIDA indicates a **Fellow of the International Interior Design Association** – typically awarded to highly influential designers who are deeply involved in IIDA events, awards (e.g., Calibre Design Awards), and committees.  
+    - Her board role suggests she advises Clune on **design partnerships, client experience, and interior environments**, especially in LA.
+
+- **Best access routes:**  
+  - **IIDA SoCal & design‑industry events:** Her FIIDA status and LA base strongly imply regular presence at IIDA Southern California events (Calibre Design Awards, forums, panels). These events naturally convene **interior designers, architects, and client CRE leaders – and Clune’s leadership.**  
+  - **Joint Clune–designer case studies and panels:** She may appear as a speaker or panelist in case studies of major interior projects (law firms, studios, tech offices).
+
+- **Potential meeting opportunities:**  
+  - **IIDA SoCal Calibre Design Awards and related events**, where Clune and key design partners (e.g., Gensler, as referenced in project photography credits) often intersect.  
+    - Example IIDA SoCal nominating documents (not specifically naming Clune but within the same ecosystem):  
+      - 2019 Calibre nominees – https://iida-socal.org/wp-content/uploads/2019/03/CA2019_Nominees.pdf  
+  - **Design‑association leadership roundtables** focusing on contractor–designer collaboration.
+
+---
+
+### 2.6. Bob Dahlstrom – Board Member (Los Angeles)
+- **Role / title:**  
+  - Listed on Clune About page: **“Bob Dahlstrom – Board of Directors – Los Angeles.”**  
+    - Source: https://www.clunegc.com/about/  
+
+- **Contact routes:**  
+  - No direct details provided; reachable via Clune’s board structure.
+
+- **Authority & influence:**  
+  - As an LA‑based board member, he likely represents **owner/developer or building‑operations interests**.  
+  - From an interior design perspective, he is a potential **conduit into property owner/operator circles** where Clune is trusted.
+
+- **Best access routes & meeting opportunities:**  
+  - **Local CRE events** (BOMA, NAIOP, CoreNet‑style gatherings) where building operations and ownership leaders congregate – he is the likely board member representing that constituency to Clune.
+
+---
+
+### 2.7. Corporate Executives (non‑LA but relevant)
+
+- **CEO – Bill Abromitis / R. David (Dave) Hall (conflicting public references)**  
+  - **BBB Los Angeles profile** lists **Bill Abromitis as CEO** in “Business Management”.  
+    - Source: https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021  
+  - **Porter’s Five Forces analysis** identifies **R. David Hall as CEO** in describing Clune’s leadership structure.  
+    - Source: https://portersfiveforce.com/blogs/owners/clunegc  
+  - This discrepancy suggests a **leadership transition** or lagging updates in one source. For LA‑specific networking, the regional leaders (Starbird/Bahruth/Beck) are more critical day‑to‑day than the CEO, but the CEO will be visible at high‑profile national events and board‑level client summits.
+
+- **Denise M. Duffy – Senior Vice President**  
+  - Listed in BBB profiles as **Senior Vice President / business management contact**.  
+    - LA BBB: https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021  
+    - Phoenix BBB also lists her as “Senior Vice President” – https://www.bbb.org/us/az/phoenix/profile/commercial-contractors/clune-construction-1126-1000114744  
+  - Operationally important but less central to LA‑specific interiors unless you are engaging at **national vendor or client framework‑agreement level**.
+
+---
+
+3. COMPANY
+
+- **Legal identity & type:**  
+  - Legal name: **Clune Construction Company, L.P.** (various BBB & registry listings).  
+  - Type: National **general contractor** (GC) providing construction management services; employee‑owned.  
+  - Entity form: Partnership (per BBB).  
+  - Sources:  
+    - BBB LA profile – https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021  
+    - BuildZoom – https://www.buildzoom.com/contractor/clune-construction-ca  
+
+- **Headquarters & offices:**  
+  - HQ: Chicago, IL.  
+  - Offices in: Chicago, Los Angeles, New York, San Francisco, Washington DC, plus other locations such as Phoenix (confirmed by Clune’s own site).  
+  - LA Times: “Total number of offices firmwide: 8.”  
+  - Sources:  
+    - LA Times – https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+    - Clune home – https://www.clunegc.com/  
+    - Phoenix office page – https://www.clunegc.com/location/phoenix/
+
+- **Specialties / markets:**  
+  - Commercial interiors (corporate offices, law firms, financial firms).  
+  - Mission‑critical / data centers.  
+  - Medical, hospitality, retail, industrial, studios.  
+  - LA Times lists: data center, hospitality, medical, office, retail; plus airport lounges, lobbies, life sciences, studios.  
+  - About page and testimonials cite clients such as **CyrusOne (data centers), Deltek, Tecovas, retail/flagship stores**.  
+    - Sources:  
+      - LA Times – https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+      - Clune “Who We Are” testimonials – https://www.clunegc.com/about/  
+
+- **Scale & financials:**  
+  - Nationally: Clune states it manages **over $1 billion** in construction annually (BuildZoom summary) and **$3.5B** in recent Clune marketing (home page).  
+    - BuildZoom: https://www.buildzoom.com/contractor/clune-construction-ca  
+    - Clune home: https://www.clunegc.com/  
+  - Southern California revenue (2024): $165.95M (LA Times).  
+
+- **Licensing, bonding, insurance:**  
+  - CA Contractors License: **732107 – General Building, status Active**; bond $15,000; workers’ comp with National Union Fire Insurance Co.  
+  - Permits: **837 building permits** on record (statewide), heavily weighted to commercial renovations.  
+  - Project sizes: BuildZoom shows significant share of permits in $100k–$1M and $1M+ bands for LA; typical job cost range on Houzz is $5,000–$2M for TIs, confirming broad interior TI spectrum.  
+    - BuildZoom: https://www.buildzoom.com/contractor/clune-construction-ca  
+    - Houzz: https://www.houzz.com/professionals/general-contractors/clune-construction-company-pfvwus-pf~1200538520  
+
+- **Delivery methods & tools:**  
+  - Uses **Procore** for project management – Procore Construction Network profile:  
+    - Joined Procore in May 2024; 1 active Procore project; average Procore project size $150,000 (for LA profile).  
+    - Market sector: Commercial; company type: General Contractor.  
+    - Phone on profile: +1 213‑215‑0949.  
+    - Source: https://pcn.procore.com/p/clune-construction-company-los-angeles  
+  - Uses **CMiC**‑based **self‑service prequalification portal** for subcontractors and vendors, including interiors subs.  
+    - Source: FAQ PDF – https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf  
+
+- **Ownership structure:**  
+  - National general contractor; **employee‑owned** per BuildZoom and Clune marketing.  
+  - Founder Michael (Mike) Clune remains Chairman; third‑party analysis notes **over 800 employee‑owners** and multi‑billion annual portfolio.  
+    - Source: https://portersfiveforce.com/blogs/owners/clunegc  
+
+---
+
+4. NETWORKING OPPORTUNITIES
+
+- **Chambers & civic groups:**  
+  - **LAX Coastal Chamber of Commerce**  
+    - Clune Construction listed as a member. This provides regular access to:  
+      - Luncheons, breakfast meetings, and networking mixers with **LA‑adjacent corporate tenants, landlords, brokers, and service providers**.  
+      - Sponsorship opportunities where Clune may host or co‑host tables.  
+    - Source: https://business.laxcoastal.com/list/member/clune-construction-6543  
+
+- **Design & interiors ecosystem:**  
+  - **Board member Pam Light, FIIDA** – strong IIDA ties, implying:  
+    - Frequent presence at **International Interior Design Association (IIDA) Southern California** events (Calibre Awards, forums).  
+    - Robust networks with senior interior designers and design principals in LA.  
+    - Clune board membership means interior design decisions and partners are actively represented at board level.  
+    - Source: https://www.clunegc.com/about/  
+  - Project photography credit on the About page includes **Gensler / Ryan Gobuty**, indicating Clune collaborates with **Gensler**, a global design firm, on interior and workplace projects – a key shared network for designers.  
+    - Source: https://www.clunegc.com/about/  
+
+- **Trade / technology platforms:**  
+  - **Procore Construction Network** – Clune LA profile shows their use of Procore for project coordination. For vendors and designers already operating in Procore, this is a native channel to request collaboration and demonstrate familiarity with Clune’s workflows.  
+    - Source: https://pcn.procore.com/p/clune-construction-company-los-angeles  
+  - **CMiC prequalification portal** – the main gatekeeper for subs and vendors; offers a structured channel to be “Approved Subcontractor” across Clune’s markets, including interiors.  
+    - New applicants start via https://www.clunegc.com/subcontractor-qualification/ (referenced in the FAQ).  
+    - Source: https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf  
+
+- **Media & thought leadership:**  
+  - **LA Business Journal** – Clune has been featured/quoted on construction management transparency (Starbird). This suggests participation in **LABJ panels, awards (Best Places to Work, CRE awards)**.  
+    - Source: https://labusinessjournal.com/custom-content/transparency-in-construction-management-an-open-book-methodology/  
+
+- **Philanthropy & charity:**  
+  - **Clune Cares Foundation** (501(c)(3)) – Clune donates part of its profits to **100+ organizations annually**, including local charities in regions where it operates.  
+    - These donations often manifest via **galas, golf tournaments, walks, and volunteer days** – natural in‑person opportunities to meet leadership.  
+    - Source: https://www.clunegc.com/about/  
+
+- **Golf & client entertaining:**  
+  - An earlier long‑term partnership with pro golfer **Pádraig Harrington** included him wearing the Clune Construction logo and conducting company days, indicating Clune’s historic use of **golf days and tournaments as client relationship tools**.  
+    - Source: Irish Golf Desk – https://www.irishgolfdesk.com/news-files/2013/2/12/harrington-signs-long-term-partnership-with-clune.html  
+
+---
+
+5. DISCOVERED PROJECTS (LA / SoCal focus)
+
+- **Ford – Advanced EV Center, Long Beach**  
+  - Size: 130,000 SF.  
+  - Type: Advanced electric vehicle facility – likely a mix of lab/technical space and corporate environment.  
+  - Status: Listed as “Top active local project” (Southern California).  
+  - Why it matters:  
+    - High‑profile, tech/auto‑driven project – ideal for **innovation‑focused interior designers**.  
+    - Strong presence of Ford corporate real estate, engineering, and branding teams – opportunity to meet owner‑side decision‑makers alongside Clune.  
+  - Source: LA Times ranking – https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+
+- **Confidential Financial Client – Century City**  
+  - Size: 130,000 SF.  
+  - Type: Likely multi‑floor office interior for a major financial institution.  
+  - Status: Top active local project (Southern California).  
+  - Why it matters:  
+    - Century City is dense with **law firms, PE funds, studios, and financial institutions** – this likely involves high‑end workplace design (reception, conference centers, executive floors).  
+    - Excellent opportunity area for **law‑firm/finance interior specialists** to piggyback on or replicate.  
+  - Source: https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+
+- **Confidential Broadcasting Studio – Culver City**  
+  - Size: 41,000 SF.  
+  - Type: Broadcast studio / content‑production facility.  
+  - Status: Top active local project.  
+  - Why it matters:  
+    - Broadcast studios involve complex interior coordination (acoustics, control rooms, branded environments).  
+    - Networking with Clune here can connect you to studio and streaming clients in Culver City.  
+  - Source: https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+
+- **Manatt, Phelps & Phillips LLP – Century City, Los Angeles**  
+  - Case‑study client: high‑end, multi‑floor corporate interior build‑out in Century City.  
+  - Clune identified as the builder for the law firm’s high‑end interior (case study details Clune’s role in building out multi‑floor office space).  
+  - Why it matters:  
+    - Validates Clune’s **deep experience with major law‑firm interiors**.  
+    - Manatt, Phelps & Phillips LLP and their architect/design firm are valuable **network nodes** for your client.  
+  - Source: Build Lease Sell case study – https://buildleasesell.com/case-studies/clune-construction/  
+
+- **General LA permit activity**  
+  - BuildZoom shows **65+ projects per year** attributed to Clune in recent years in CA, heavily weighted to **commercial renovations**, confirming a robust pipeline of TI work where interior designers could be involved.  
+  - Example stats: 65 projects (2023), 54 projects (2024), 15 projects (2025 YTD).  
+  - Source: https://www.buildzoom.com/contractor/clune-construction-ca  
+
+- **Permit 25016‑10000‑30254:**  
+  - Not individually identified in publicly accessible summaries; likely one of the hundreds of LA commercial permits under Clune’s license. Direct LADBS lookup is required for owner, address, and project scope.
+
+---
+
+6. DISCOVERED ENTITIES (Network nodes)
+
+- **Clients / owners:**  
+  - **Ford Motor Company** – owner for Ford Advanced EV Center (Long Beach).  
+    - Source: LA Times – https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+  - **Manatt, Phelps & Phillips LLP** – law firm client, multi‑floor TI in Century City.  
+    - Source: https://buildleasesell.com/case-studies/clune-construction/  
+  - **Confidential financial client** (Century City) – large corporate tenant.  
+  - **Confidential broadcasting studio** (Culver City).  
+  - Additional national clients (testimonials on About page): **CyrusOne (data centers), Deltek, Tecovas (retail), national retailers.**  
+    - Source: https://www.clunegc.com/about/  
+
+- **Architects / designers (inferred from sources):**  
+  - **Gensler** – credited for photography on Clune’s About page (Gensler / Ryan Gobuty), suggesting recurring collaboration on interiors.  
+    - Source: https://www.clunegc.com/about/  
+  - Board member **Pam Light, FIIDA** – likely a senior interior designer/architect; effectively a **bridge entity** between Clune and the LA design community.  
+
+- **Insurers & surety:**  
+  - **Travelers Casualty & Surety Company of America** – bond provider.  
+  - **National Union Fire Insurance Company of Pittsburgh, PA** – workers’ comp provider.  
+  - Source: BuildZoom – https://www.buildzoom.com/contractor/clune-construction-ca  
+
+- **Technology / platforms:**  
+  - **Procore** – project management platform, with Clune LA profile.  
+    - Source: https://pcn.procore.com/p/clune-construction-company-los-angeles  
+  - **CMiC** – backbone for Clune’s subcontractor prequalification portal.  
+    - Source: https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf  
+
+- **Registries / vendor lists:**  
+  - **GovCB (SAM)** – Clune Construction Company, L.P. is registered as a U.S. federal vendor for construction services.  
+    - Source: https://www.govcb.com/government-vendors/profile-SAM00000000001396809-clune-construction-company-Chicago-IL.htm  
+
+- **Third‑party rating / info sites:**  
+  - **BuildZoom** – high BuildZoom score (121, top 1% of CA contractors) and extensive permit record.  
+  - **BBB** – A+ accreditation since 2017.  
+  - **Houzz** – LA profile with typical job cost $5k–$2M for commercial TI.  
+  - Sources:  
+    - BuildZoom – https://www.buildzoom.com/contractor/clune-construction-ca  
+    - BBB LA – https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021  
+    - Houzz – https://www.houzz.com/professionals/general-contractors/clune-construction-company-pfvwus-pf~1200538520  
+
+---
+
+7. ENTRY POINTS (Actionable)
+
+- **1) Subcontractor / vendor prequalification – primary gate**  
+  - New subs/vendors (including interior‑focused firms) go through Clune’s **Self Service Applicant portal**:  
+    - Instruction: “New applicants will visit Clune’s website (https://www.clunegc.com/subcontractor-qualification/) to access the portal. Enter the firm’s Tax ID number as the User ID and a password you create.”  
+    - They require: financials, GC references, trade codes, MBE/WBE/DBE certificates, and uploaded attachments.  
+    - Questions about trade codes or portal problems go to **prequal@clunegc.com**.  
+    - Source: https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf  
+  - **Tactic:**  
+    - Position your client as a **specialist interior design / interiors GC partner** with clean safety record and strong references; ensure their subs can satisfy Clune’s Exhibit G safety and insurance standards.  
+    - Use the **reference section** to list GCs and owners that Clune respects; this increases odds of approval and future bid invitations.
+
+- **2) LA office contact – leadership path**  
+  - **Address:** 725 S. Figueroa St, Suite 300, Los Angeles, CA 90017.  
+  - **Phone:** 213.723.1881.  
+  - Source: https://www.clunegc.com/location/los-angeles/  
+  - **Tactic:**  
+    - Request a brief meeting with **Business Development or a Project Executive** focusing on how your client can support high‑end interiors (law firms, studios, mission‑critical spaces).  
+    - Use knowledge of active projects (Ford EV, Century City law/finance, Culver City studios) to demonstrate targeted interest.
+
+- **3) Procore Construction Network – digital introduction**  
+  - Clune LA has a **Procore Construction Network listing** with phone +1 213‑215‑0949 and “Project Management & Coordination” as primary service.  
+  - Source: https://pcn.procore.com/p/clune-construction-company-los-angeles  
+  - **Tactic:**  
+    - If your client already uses Procore, connect via **Procore Network**: request collaboration on upcoming LA interiors, highlighting prior Procore projects and ability to integrate with Clune’s workflows.  
+
+- **4) LAX Coastal Chamber – in‑person networking**  
+  - Attend or sponsor LAX Coastal Chamber events where Clune is a member.  
+  - **Tactic:**  
+    - Target breakfasts and mixers near Downtown/Westside; look for event sponsors/attendees lists where Clune appears.  
+    - Introduce your client as an **interiors specialist interested in supporting Chamber members’ workplace and hospitality projects.**  
+  - Source: https://business.laxcoastal.com/list/member/clune-construction-6543  
+
+- **5) Design‑association route via Pam Light, FIIDA**  
+  - **Tactic:**  
+    - Engage with **IIDA SoCal** (Calibre Awards, forums) and seek panels/committees involving Pam Light or other Clune‑connected designers.  
+    - This path is more **subtle but powerful**: by becoming a known quantity in the same design circles as a Clune board member, your client increases the chances of being top‑of‑mind when Clune seeks design collaborators in LA.  
+
+- **6) Track and target owner‑side decision‑makers on active projects**  
+  - **Ford Advanced EV Center (Long Beach):** identify Ford’s real estate & design leads; offer specialized interior support (labs, offices).  
+  - **Manatt, Phelps & Phillips LLP (Century City):** approach Manatt’s real estate/administration about **future phases, satellite offices, or refreshes**, referencing Clune’s successful build‑out.  
+  - **Confidential broadcast/finance clients:** by identifying likely tenant names via local CRE press or broker reports, you can approach them with case‑study‑backed interiors expertise and mention familiarity with Clune’s processes.  
+
+---
+
+8. RED FLAGS
+
+- **Regulatory / licensing:**  
+  - CA License 732107 is actively listed and referenced as valid through Feb 2027 (via BBB and BuildZoom referencing CSLB).  
+  - No public CSLB accusations specifically targeting Clune Construction Company, L.P. were surfaced in accessible documents; PDFs reviewed with accusation text were for other contractors.  
+  - Source:  
+    - BBB SF profile – license info – https://www.bbb.org/us/ca/san-francisco/profile/general-contractor/clune-construction-company-lp-1116-879091  
+    - BuildZoom – https://www.buildzoom.com/contractor/clune-construction-ca  
+
+- **Reputation & performance:**  
+  - High **BuildZoom score (121, top 1% of CA contractors)** and A+ BBB accreditation with no highlighted pattern of complaints.  
+  - Active across hundreds of permits with significant repeat work for major clients (CyrusOne, law firms, etc.), which usually indicates **operational stability**.  
+  - Sources:  
+    - BuildZoom – https://www.buildzoom.com/contractor/clune-construction-ca  
+    - BBB LA – https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021  
+
+- **Leadership naming discrepancy (CEO):**  
+  - BBB lists **Bill Abromitis** as CEO; PortersFiveForce blog names **R. David Hall** as CEO. This inconsistency is not a red flag by itself, but indicates **leadership transitions** or lagging updates. Confirm CEO name directly if it matters for outreach.  
+
+Overall, no public evidence of systemic legal, safety, or financial issues emerged in accessible sources; Clune appears to carry a **strong reputation**.
+
+---
+
+9. SOURCES (deduplicated key URLs)
+
+- Clune official:
+  - LA office: https://www.clunegc.com/location/los-angeles/  
+  - About / Board / culture: https://www.clunegc.com/about/  
+  - Projects overview: https://www.clunegc.com/projects/  
+
+- Licensing / registry / rating:
+  - CSLB check portal: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+  - BuildZoom CA license & permits: https://www.buildzoom.com/contractor/clune-construction-ca  
+  - BBB LA: https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021  
+  - BBB SF (license details): https://www.bbb.org/us/ca/san-francisco/profile/general-contractor/clune-construction-company-lp-1116-879091  
+  - Houzz LA profile: https://www.houzz.com/professionals/general-contractors/clune-construction-company-pfvwus-pf~1200538520  
+  - GovCB vendor listing: https://www.govcb.com/government-vendors/profile-SAM00000000001396809-clune-construction-company-Chicago-IL.htm  
+
+- Market position & projects:
+  - LA Times Top CRE firms (Clune profile): https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+  - Build Lease Sell case study – Manatt, Phelps & Phillips LLP: https://buildleasesell.com/case-studies/clune-construction/  
+  - Procore Construction Network – LA: https://pcn.procore.com/p/clune-construction-company-los-angeles  
+
+- Procurement / prequalification:
+  - CMiC Self Service Applicant FAQ: https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf  
+
+- Ownership / corporate analysis:
+  - Ownership & CEO analysis: https://portersfiveforce.com/blogs/owners/clunegc  
+
+- Networking / associations / media:
+  - LAX Coastal Chamber listing: https://business.laxcoastal.com/list/member/clune-construction-6543  
+  - LA Business Journal custom content (Starbird quote): https://labusinessjournal.com/custom-content/transparency-in-construction-management-an-open-book-methodology/  
+  - Irish Golf Desk – Harrington partnership: https://www.irishgolfdesk.com/news-files/2013/2/12/harrington-signs-long-term-partnership-with-clune.html  
+
+- People aggregators (limited use, mainly for confirmation of roles):
+  - SignalHire – Peter Bahruth info: https://www.signalhire.com/profiles/peter-bahruth's-email/27298094  
+
+---
+
+10. SEARCH LEDGER (queries used)
+
+1. `CSLB license 732107 Clune Construction`  
+2. `"Clune Construction" Los Angeles construction`  
+3. `"25016-10000-30254" permit`  
+4. `"Clune Construction Company" Los Angeles office`  
+5. `"Clune Construction" subcontractor prequalification`  
+6. `"Clune Construction" bid opportunities`  
+7. `"Clune Construction" leadership team`  
+8. `"Clune Construction" president southwest`  
+9. `"Clune Construction" Los Angeles LinkedIn`  
+10. `"License # 732107" "Clune Construction"`  
+11. `"732107" "Clune Construction" site:cslb.ca.gov`  
+12. `"Clune Construction" "Randy Starbird"`  
+13. `"Clune Construction" "Peter Bahruth"`  
+14. `"Clune Construction" "Adam Beck"`  
+15. `"Clune Construction" Los Angeles IIDA`  
+16. `"Clune Construction" Los Angeles NAIOP`  
+17. `"Clune Construction" golf tournament Los Angeles`  
+
+---
+
+11. EVIDENCE LOG
+
+1. **Query:** `CSLB license 732107 Clune Construction`  
+   - **URL:** https://www.buildzoom.com/contractor/clune-construction-ca  
+   - **Facts extracted:** License #732107; status Active; classification General Building; LA address 725 S Figueroa St; bond with Travelers; workers’ comp with National Union Fire; 837 permits; project and pricing distribution.
+
+2. **Query:** `CSLB license 732107 Clune Construction`  
+   - **URL:** https://www.bbb.org/us/ca/san-francisco/profile/general-contractor/clune-construction-company-lp-1116-879091  
+   - **Facts extracted:** Confirms license #732107 issued by CSLB; expiration 2/28/2027; Clune Construction is national GC; multiple offices.
+
+3. **Query:** `"Clune Construction" Los Angeles construction`  
+   - **URL:** https://www.clunegc.com/location/los-angeles/  
+   - **Facts extracted:** LA office address 725 S Figueroa St, Suite 300, Los Angeles, CA 90017; phone 213.723.1881; CA License 732107; LA office led by Randy Starbird (President West Region & Executive Managing Director) and Peter Bahruth (Executive Managing Director & Executive Safety Director); over 25 years of SoCal projects.
+
+4. **Query:** `"Clune Construction" leadership team`  
+   - **URL:** https://www.clunegc.com/about/  
+   - **Facts extracted:** Founder quote; description of core values; creation of Clune Cares Foundation; board of directors including Mike Clune (Chairman, Chicago), Susan Gallagher (Chicago), Pam Light FIIDA (Los Angeles), Paul Hensel (Chicago), Bob Dahlstrom (Los Angeles); project photography credit including Gensler / Ryan Gobuty; client testimonials (CyrusOne, Deltek, Tecovas, etc.).
+
+5. **Query:** `"Clune Construction" "Randy Starbird"`  
+   - **URL:** https://www.clunegc.com/clune-construction-announces-executive-promotions-in-two-regions/  
+   - **Facts extracted:** Announcement of Randy Starbird as President of the West Region (LA & SF) and Tony Giachinta as DC President; Randy’s 25‑year tenure, starting as intern; his role in growing the region and building client relationships; note that he and Executive Managing Director Peter Bahruth co‑manage the West Region; Bahruth is Executive Safety Director and member of Executive Management Committee.
+
+6. **Query:** `"Clune Construction" "Randy Starbird"`  
+   - **URL:** https://labusinessjournal.com/custom-content/transparency-in-construction-management-an-open-book-methodology/  
+   - **Facts extracted:** Starbird quoted explaining open‑book construction management, emphasizing scope reviews, transparency, and early risk mitigation – evidence of his public visibility and leadership style.
+
+7. **Query:** `"Clune Construction" "Peter Bahruth"`  
+   - **URL:** https://www.clunegc.com/location/los-angeles/  
+   - **Facts extracted:** Confirms Bahruth’s role as Executive Managing Director and Executive Safety Director, co‑leader of LA office.
+
+8. **Query:** `"Clune Construction" "Peter Bahruth"`  
+   - **URL:** https://www.signalhire.com/profiles/peter-bahruth's-email/27298094  
+   - **Facts extracted:** Confirms his title as Executive Managing Director – West Region at Clune; indicates email pattern @clunegc.com and phone (details partially masked); confirms 25 years’ tenure and LA metro location.
+
+9. **Query:** `"Clune Construction" "Adam Beck"`  
+   - **URL:** https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction  
+   - **Facts extracted:** Lists Clune as #23 GC; 2024/2023 revenue; 136 employees; 8 offices; top local executives: Randy Starbird (Managing Director, General Manager), Peter Bahruth (Managing Director, General Manager), Adam Beck (General Manager, Senior Vice President); lists active projects (Ford Advanced EV Center – Long Beach; Confidential Financial Client – Century City; Confidential Broadcasting Studio – Culver City); enumerates property types.
+
+10. **Query:** `"Clune Construction" subcontractor prequalification`  
+    - **URL:** https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf  
+    - **Facts extracted:** CMiC “Self Service Applicant FAQ” for Clune’s Annual Prequalification & new applicants; instructions to access portal via https://www.clunegc.com/subcontractor-qualification/; requirement to use Tax ID as User ID; explanation of required fields, references (no personal references; GC references only), uploading MBE/WBE/DBE certificates and financials; contact email prequal@clunegc.com for help; emphasis on trade codes and Exhibit G (insurance/safety).
+
+11. **Query:** `"Clune Construction Company" Los Angeles office`  
+    - **URL:** https://pcn.procore.com/p/clune-construction-company-los-angeles  
+    - **Facts extracted:** Procore Construction Network profile for Clune Construction Company in Los Angeles; phone +1 213‑215‑0949; company type General Contractor; market sector Commercial; trades/services: Project Management and Coordination; joined Procore May 2024; one active Procore project; average project size $150,000.
+
+12. **Query:** `"Clune Construction Company" Los Angeles office`  
+    - **URL:** https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021  
+    - **Facts extracted:** FAQ and profile showing Clune as national GC with offices in several cities; LA address 725 S Figueroa St Ste 1300; A+ accreditation since 2017; years in business 28; business management including Denise M. Duffy (Senior Vice President), Mike Clune (Chairperson), Bill Abromitis (CEO); confirms additional contact email via “Email this Business.”
+
+13. **Query:** `"Clune Construction" Los Angeles IIDA`  
+    - **URL:** https://www.clunegc.com/about/  
+    - **Facts extracted:** Board listing again confirms **Pam Light, FIIDA, Board of Directors, Los Angeles**, verifying direct tie between Clune and a high‑level interior design professional.
+
+14. **Query:** `"Clune Construction" golf tournament Los Angeles`  
+    - **URL:** https://www.irishgolfdesk.com/news-files/2013/2/12/harrington-signs-long-term-partnership-with-clune.html  
+    - **Facts extracted:** Article noting Pádraig Harrington’s long‑term partnership with Clune Construction, including wearing the company’s logo and conducting company days; shows historical use of golf as a relationship‑building mechanism.
+
+15. **Query:** `"Clune Construction" Los Angeles construction`  
+    - **URL:** https://www.buildzoom.com/contractor/clune-construction-ca  
+    - **Facts extracted:** Confirms Clune’s identity as national employee‑owned GC; outlines services, annual volume; shows permit counts, types of work (commercial renovation focus), and pricing bands, supporting strong LA interiors pipeline.
+
+16. **Query:** `"Clune Construction" Los Angeles construction`  
+    - **URL:** https://www.houzz.com/professionals/general-contractors/clune-construction-company-pfvwus-pf~1200538520  
+    - **Facts extracted:** Houzz profile noting Clune’s services in commercial TI; LA address; phone; typical job cost range ($5k–$2M), confirming viability for a broad band of interiors.
+
+17. **Query:** `"Clune Construction Company" Los Angeles office`  
+    - **URL:** https://buildleasesell.com/case-studies/clune-construction/  
+    - **Facts extracted:** Case study of **Manatt, Phelps & Phillips LLP** interior build‑out in Century City, LA; identifies Clune as GC for a high‑end, multi‑floor corporate interior project in one of LA’s most prestigious business districts.
+
+---
+
+12. REQUIRED TODO CHECKLIST
+
+- [x] **TODO 1: Confirm target identity (name, license, permit/address match)**  
+  - Clune Construction Company, L.P. confirmed via Clune website, BBB, and BuildZoom; CA Contractors License #732107 (General Building) confirmed active; LA address and phone validated via Clune site and third‑party listings.
+
+- [x] **TODO 2: Visit LADBS/CSLB/registry sources relevant to target**  
+  - CSLB online license check page identified; license status, classification, and expiration verified indirectly via registry sources (BuildZoom and BBB referencing CSLB). Additional registry sources (BuildZoom, BBB, GovCB, Houzz) consulted. Direct LADBS permit‑level details for permit 25016‑10000‑30254 were not accessible in summarized data.
+
+- [x] **TODO 3: Identify at least 2 potential decision makers**  
+  - Multiple decision makers identified and profiled: Randy Starbird, Peter Bahruth, Adam Beck, Mike Clune, Pam Light, Bob Dahlstrom, plus corporate-level names.
+
+- [x] **TODO 4: Capture at least 3 concrete source URLs**  
+  - Numerous concrete URLs captured and cited throughout (Clune’s own pages, LA Times, BuildZoom, BBB, Procore, CMiC FAQ, case studies).
+
+- [x] **TODO 5: Produce EVIDENCE LOG entries tied to findings**  
+  - Evidence Log section created with query–URL–fact mapping for 17+ key entries.
+
+- [x] **TODO 6: Summarize best entry points to reach decision makers**  
+  - Entry Points section details vendor prequalification portal, LA office contacts, Procore Network, Chamber events, design association path, and owner‑side targeting.
+
+- [x] **TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)**  
+  - Edge‑signal “diamonds” identified include:  
+    - CMiC‑based subcontractor prequalification portal (with prequal@clunegc.com) – key procurement gate.  
+    - Procore Construction Network profile – evidence of their tech stack and a direct collaboration path.  
+    - LAX Coastal Chamber membership – civic networking access.  
+    - Board‑level designer (Pam Light FIIDA) and Gensler collaboration – deep interior‑design ecosystem link.  
+    - Named active projects (Ford EV Center, Century City financial client, Culver City broadcast studio) – concrete project‑side access points.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/location/phoenix/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/location/los-angeles/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/clune-construction-continues-culture-of-promoting-from-within-as-six-are-promoted-in-chicago/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://portersfiveforce.com/blogs/owners/clunegc
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/az/phoenix/profile/commercial-contractors/clune-construction-1126-1000114744
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://business.laxcoastal.com/list/member/clune-construction-6543
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.constructionowners.com/press-release/clune-construction-announces-new-executive-leadership-in-new-york
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.enr.com/articles/58866-enr-2024-midwest-contractor-of-the-year-adaptive-nimble-strategies-spark-strong-growth-at-clune
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://jobsearcher.com/c/Clune%20Construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://theorg.com/org/clune-construction-company-l-p/teams/leadership-team
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cluneconstructions.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bidcentral.ca
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/more-than-the-bottom-line-the-importance-of-subcontractor-selection/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bidamerica.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/subcontractor-prequalification
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://projects.constructconnect.com/companies/1393096-clune-construction-los-angeles&find_loc=CA-90025
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/clune-construction-company-352868306
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.consensusdocs.org/resources/prequalification-and-subcontractor-default-prevention-resource-center/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/careers/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/clune-construction-ca
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.autodesk.com/blogs/construction/subcontractor-prequalification-best-practices/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cluneelectric.com/bid-results/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mdcourts.gov/sites/default/files/court-forms/dnr.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/clune-construction-company-638792469
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://sftpbspomppprod01.blob.core.windows.net/applicationfiles/25e165f3-d880-ed11-81ad-002248922d75_PA2202004%20-%20Permit.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ca/san-francisco/profile/general-contractor/clune-construction-company-lp-1116-879091
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permitsonoma.org/permitservices/permittools/documentsearch
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.houzz.com/professionals/general-contractors/clune-construction-company-pfvwus-pf~1200538520
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permitsearch.mybuildingpermit.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.phmsa.dot.gov/approvals-and-permits/hazmat/special-permits-search
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://abcsocal.org/events/golf-tournament/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.nawicla.org/events/wicweekday4-2025
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://iida-socal.org/wp-content/uploads/2021/04/2021CalibreDesignAwards_Nominees_040121_v2.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://projects.constructconnect.com/companies/1735368-clune-construction-los-angeles&find_loc=CA-90071
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.irishgolfdesk.com/news-files/2013/2/12/harrington-signs-long-term-partnership-with-clune.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://iida-socal.org/wp-content/uploads/2019/03/CA2019_Nominees.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://pcn.procore.com/p/clune-construction-company-los-angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.usga.org/content/usga/home-page/course-care/green-section-record/61/issue-10/a-classic-comeback-story-at-lacc.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://buildleasesell.com/case-studies/clune-construction/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.tinyputtersgolf.com/los-angeles-schedule
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www2.cslb.ca.gov/CompletedPDF/Accusations/N2017-118/N2017-118-20180717-Accusation.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www2.cslb.ca.gov/CompletedPDF/Accusations/N2015-411/N2015-411-20161109-Accusation.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/CompletedPDF/Accusations/N2019-203/N2019-203-20200316-Accusation.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/clune-construction-company/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/Resources/CSLB/PL250818.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/clune-construction-co-lp
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/Resources/CSLB/PL250811.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/md/edgewater/profile/construction-services/clune-construction-inc-0011-90208353
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/Resources/VPOS/Duty_Statements/622-163I.PDF
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.govcb.com/government-vendors/profile-SAM00000000001396809-clune-construction-company-Chicago-IL.htm
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/About_Us/library/Revoked/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/projects/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit-voluptatem-18/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.signalhire.com/profiles/peter-bahruth's-email/27298094
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.clunegc.com/clune-construction-announces-executive-promotions-in-two-regions/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.leadgibbon.com/clunegc.com-email-format
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://aurin.org.au/nimble-chat-digital-twin-adam-beck/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://labusinessjournal.com/custom-content/transparency-in-construction-management-an-open-book-methodology/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://leadswift.com/public/lists/detail/36998741-clune-construction-company
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.beckcg.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.enr.com/articles/56970-enr-2023-california-and-northwest-top-contractors-despite-headwinds-west-coast-builders-remain-optimistic
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://beck-construction-inc.locable.com/profile/
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.clunegc.com/about/
+- https://www.clunegc.com/location/phoenix/
+- https://www.clunegc.com/location/los-angeles/
+- https://www.clunegc.com/clune-construction-continues-culture-of-promoting-from-within-as-six-are-promoted-in-chicago/
+- https://www.clunegc.com
+- https://www.bbb.org/us/ca/los-angeles/profile/commercial-contractors/clune-construction-company-lp-1216-13174021
+- https://portersfiveforce.com/blogs/owners/clunegc
+- https://www.bbb.org/us/az/phoenix/profile/commercial-contractors/clune-construction-1126-1000114744
+- https://business.laxcoastal.com/list/member/clune-construction-6543
+- https://www.constructionowners.com/press-release/clune-construction-announces-new-executive-leadership-in-new-york
+- https://www.enr.com/articles/58866-enr-2024-midwest-contractor-of-the-year-adaptive-nimble-strategies-spark-strong-growth-at-clune
+- https://jobsearcher.com/c/Clune%20Construction
+- https://theorg.com/org/clune-construction-company-l-p/teams/leadership-team
+- https://www.latimes.com/b2b/industry-lists/top-cre-firms/clune-construction
+- https://cluneconstructions.com
+- https://cmicr12.clunegc.com/cmiclaunch/exhibits/faq.pdf
+- https://www.bidcentral.ca
+- https://www.clunegc.com/more-than-the-bottom-line-the-importance-of-subcontractor-selection/
+- https://www.bidamerica.com
+- https://www.procore.com/library/subcontractor-prequalification
+- https://projects.constructconnect.com/companies/1393096-clune-construction-los-angeles&find_loc=CA-90025
+- https://www.mapquest.com/us/california/clune-construction-company-352868306
+- https://www.consensusdocs.org/resources/prequalification-and-subcontractor-default-prevention-resource-center/
+- https://www.clunegc.com/careers/
+- https://www.buildzoom.com/contractor/clune-construction-ca
+- https://www.autodesk.com/blogs/construction/subcontractor-prequalification-best-practices/
+- https://cluneelectric.com/bid-results/
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.mdcourts.gov/sites/default/files/court-forms/dnr.pdf
+- https://www.mapquest.com/us/california/clune-construction-company-638792469
+- https://sftpbspomppprod01.blob.core.windows.net/applicationfiles/25e165f3-d880-ed11-81ad-002248922d75_PA2202004%20-%20Permit.pdf
+- https://www.bbb.org/us/ca/san-francisco/profile/general-contractor/clune-construction-company-lp-1116-879091
+- https://permitsonoma.org/permitservices/permittools/documentsearch
+- https://www.cslb.ca.gov/onlineservices/dataportal/
+- https://www.houzz.com/professionals/general-contractors/clune-construction-company-pfvwus-pf~1200538520
+- https://permitsearch.mybuildingpermit.com
+- https://www.phmsa.dot.gov/approvals-and-permits/hazmat/special-permits-search
+- https://abcsocal.org/events/golf-tournament/
+- http://www.nawicla.org/events/wicweekday4-2025
+- https://iida-socal.org/wp-content/uploads/2021/04/2021CalibreDesignAwards_Nominees_040121_v2.pdf
+- https://projects.constructconnect.com/companies/1735368-clune-construction-los-angeles&find_loc=CA-90071
+- https://www.irishgolfdesk.com/news-files/2013/2/12/harrington-signs-long-term-partnership-with-clune.html
+- https://iida-socal.org/wp-content/uploads/2019/03/CA2019_Nominees.pdf
+- https://pcn.procore.com/p/clune-construction-company-los-angeles
+- https://www.usga.org/content/usga/home-page/course-care/green-section-record/61/issue-10/a-classic-comeback-story-at-lacc.html
+- https://buildleasesell.com/case-studies/clune-construction/
+- https://www.tinyputtersgolf.com/los-angeles-schedule
+- https://www2.cslb.ca.gov/CompletedPDF/Accusations/N2017-118/N2017-118-20180717-Accusation.pdf
+- https://www2.cslb.ca.gov/CompletedPDF/Accusations/N2015-411/N2015-411-20161109-Accusation.pdf
+- https://www.cslb.ca.gov/CompletedPDF/Accusations/N2019-203/N2019-203-20200316-Accusation.pdf
+- https://www.levelset.com/contractors/clune-construction-company/about/
+- https://www.cslb.ca.gov/Resources/CSLB/PL250818.pdf
+- https://www.buildzoom.com/contractor/clune-construction-co-lp
+- https://www.cslb.ca.gov/Resources/CSLB/PL250811.pdf
+- https://www.bbb.org/us/md/edgewater/profile/construction-services/clune-construction-inc-0011-90208353
+- https://www.cslb.ca.gov/Resources/VPOS/Duty_Statements/622-163I.PDF
+- https://www.govcb.com/government-vendors/profile-SAM00000000001396809-clune-construction-company-Chicago-IL.htm
+- https://www.cslb.ca.gov/About_Us/library/Revoked/
+- https://www.clunegc.com/projects/
+- https://www.clunegc.com/sed-ut-perspiciatis-unde-omnis-iste-natus-error-sit-voluptatem-18/
+- https://www.signalhire.com/profiles/peter-bahruth's-email/27298094
+- https://www.clunegc.com/clune-construction-announces-executive-promotions-in-two-regions/
+- https://www.leadgibbon.com/clunegc.com-email-format
+- https://aurin.org.au/nimble-chat-digital-twin-adam-beck/
+- https://labusinessjournal.com/custom-content/transparency-in-construction-management-an-open-book-methodology/
+- https://leadswift.com/public/lists/detail/36998741-clune-construction-company
+- http://www.beckcg.com
+- https://www.enr.com/articles/56970-enr-2023-california-and-northwest-top-contractors-despite-headwinds-west-coast-builders-remain-optimistic
+- https://beck-construction-inc.locable.com/profile/

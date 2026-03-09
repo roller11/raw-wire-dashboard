@@ -1,0 +1,684 @@
+<?php
+
+/**
+ * Soothsayer - Intelligence War Room
+ *
+ * High-tech dashboard for intelligence collection and decision support.
+ * Features animated workflow visualization and real-time data streaming.
+ *
+ * @package RawWire_Dashboard
+ * @since 1.0.30
+ */
+
+defined('ABSPATH') || exit;
+
+/**
+ * Class RawWire_Soothsayer
+ *
+ * Renders the intelligence war room interface with:
+ * - Animated workflow pipeline visualization
+ * - Real-time intelligence data stream
+ * - Decision maker action buttons
+ * - Investigation status overview
+ */
+class RawWire_Soothsayer
+{
+
+    /**
+     * Instance
+     *
+     * @var RawWire_Soothsayer
+     */
+    private static $instance = null;
+
+    /**
+     * Get singleton instance
+     *
+     * @return RawWire_Soothsayer
+     */
+    public static function get_instance()
+    {
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    /**
+     * Constructor
+     */
+    private function __construct()
+    {
+        add_action('wp_ajax_rawwire_launch_workflow', array($this, 'ajax_launch_workflow'));
+        add_action('wp_ajax_rawwire_get_intel_stream', array($this, 'ajax_get_intel_stream'));
+        add_action('wp_ajax_rawwire_executive_action', array($this, 'ajax_executive_action'));
+    }
+
+    /**
+     * Render the soothsayer page
+     */
+    public function render()
+    {
+        $this->enqueue_assets();
+        $investigations = $this->get_recent_investigations();
+        $stats = $this->get_intelligence_stats();
+?>
+        <div class="rawwire-dashboard rawwire-soothsayer">
+            <?php $this->render_hero(); ?>
+            <?php $this->render_workflow_pipeline(); ?>
+
+            <div class="rawwire-soothsayer-grid">
+                <div class="rawwire-soothsayer-main">
+                    <?php $this->render_intel_stream(); ?>
+                    <?php $this->render_decision_matrix($investigations); ?>
+                </div>
+                <div class="rawwire-soothsayer-sidebar">
+                    <?php $this->render_quick_stats($stats); ?>
+                    <?php $this->render_action_hub(); ?>
+                </div>
+            </div>
+        </div>
+    <?php
+    }
+
+    /**
+     * Enqueue page assets
+     */
+    private function enqueue_assets()
+    {
+        $plugin_url = plugin_dir_url(__FILE__) . '../';
+        $version = defined('RAWWIRE_DASHBOARD_VERSION') ? RAWWIRE_DASHBOARD_VERSION : '1.0.30';
+
+        wp_enqueue_style(
+            'rawwire-soothsayer',
+            $plugin_url . 'css/soothsayer.css',
+            array(),
+            $version
+        );
+
+        wp_enqueue_script(
+            'rawwire-soothsayer',
+            $plugin_url . 'js/soothsayer.js',
+            array('jquery'),
+            $version,
+            true
+        );
+
+        wp_localize_script('rawwire-soothsayer', 'soothsayerData', array(
+            'ajaxUrl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('rawwire_soothsayer'),
+            'streamEndpoint' => rest_url('rawwire/v1/intel-stream'),
+        ));
+    }
+
+    /**
+     * Render hero section
+     */
+    private function render_hero()
+    {
+    ?>
+        <div class="rawwire-hero rawwire-hero--soothsayer">
+            <div class="rawwire-hero-content">
+                <div class="rawwire-hero-icon soothsayer-icon">
+                    <span class="dashicons dashicons-visibility"></span>
+                    <div class="soothsayer-icon-pulse"></div>
+                </div>
+                <h1>SOOTHSAYER</h1>
+                <p class="rawwire-hero-subtitle">Intelligence War Room</p>
+            </div>
+            <div class="rawwire-hero-actions">
+                <button type="button" class="button-hero" id="launch-workflow-btn">
+                    <span class="dashicons dashicons-superhero-alt"></span>
+                    Launch Intelligence Sweep
+                </button>
+            </div>
+            <div class="soothsayer-hero-particles" aria-hidden="true">
+                <?php for ($i = 0; $i < 20; $i++): ?>
+                    <div class="particle particle-<?php echo $i; ?>"></div>
+                <?php endfor; ?>
+            </div>
+        </div>
+    <?php
+    }
+
+    /**
+     * Render workflow pipeline visualization
+     */
+    private function render_workflow_pipeline()
+    {
+        $stages = array(
+            array(
+                'id' => 'scan',
+                'name' => 'SCAN',
+                'label' => 'Signal Detection',
+                'icon' => 'dashicons-search',
+                'desc' => 'Market Signals'
+            ),
+            array(
+                'id' => 'harvest',
+                'name' => 'HARVEST',
+                'label' => 'Data Collection',
+                'icon' => 'dashicons-download',
+                'desc' => 'Intel Gathering'
+            ),
+            array(
+                'id' => 'process',
+                'name' => 'PROCESS',
+                'label' => 'AI Analysis',
+                'icon' => 'dashicons-admin-generic',
+                'desc' => 'Pattern Recognition'
+            ),
+            array(
+                'id' => 'classify',
+                'name' => 'CLASSIFY',
+                'label' => 'Target Scoring',
+                'icon' => 'dashicons-chart-bar',
+                'desc' => 'Priority Matrix'
+            ),
+            array(
+                'id' => 'deploy',
+                'name' => 'DEPLOY',
+                'label' => 'Action Dispatch',
+                'icon' => 'dashicons-megaphone',
+                'desc' => 'Engagement Ready'
+            ),
+        );
+    ?>
+        <div class="soothsayer-pipeline">
+            <div class="pipeline-track">
+                <div class="pipeline-progress" id="pipeline-progress"></div>
+            </div>
+            <div class="pipeline-stages">
+                <?php foreach ($stages as $index => $stage): ?>
+                    <div class="pipeline-stage" data-stage="<?php echo esc_attr($stage['id']); ?>" data-index="<?php echo $index; ?>">
+                        <div class="stage-node">
+                            <div class="stage-icon-ring">
+                                <span class="dashicons <?php echo esc_attr($stage['icon']); ?>"></span>
+                            </div>
+                            <div class="stage-pulse"></div>
+                        </div>
+                        <div class="stage-info">
+                            <span class="stage-name"><?php echo esc_html($stage['name']); ?></span>
+                            <span class="stage-label"><?php echo esc_html($stage['label']); ?></span>
+                        </div>
+                        <div class="stage-status">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Standby</span>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    <?php
+    }
+
+    /**
+     * Render intel data stream
+     */
+    private function render_intel_stream()
+    {
+    ?>
+        <div class="soothsayer-card soothsayer-stream">
+            <div class="soothsayer-card-header">
+                <div class="card-header-left">
+                    <span class="dashicons dashicons-rss"></span>
+                    <h2>Live Intelligence Feed</h2>
+                </div>
+                <div class="card-header-right">
+                    <span class="stream-indicator">
+                        <span class="stream-dot"></span>
+                        MONITORING
+                    </span>
+                </div>
+            </div>
+            <div class="soothsayer-stream-viewport" id="intel-stream">
+                <div class="stream-content">
+                    <div class="stream-placeholder">
+                        <span class="dashicons dashicons-visibility"></span>
+                        <p>Intelligence systems on standby</p>
+                        <small>Launch workflow to begin data collection</small>
+                    </div>
+                </div>
+            </div>
+            <div class="stream-footer">
+                <div class="stream-stats">
+                    <span class="stat">
+                        <strong id="stream-entries">0</strong> entries
+                    </span>
+                    <span class="stat">
+                        <strong id="stream-rate">0</strong> /min
+                    </span>
+                </div>
+                <button type="button" class="button button-secondary" id="clear-stream-btn">
+                    <span class="dashicons dashicons-dismiss"></span>
+                    Clear Feed
+                </button>
+            </div>
+        </div>
+    <?php
+    }
+
+    /**
+     * Render decision matrix table
+     */
+    private function render_decision_matrix($investigations)
+    {
+    ?>
+        <div class="soothsayer-card soothsayer-matrix">
+            <div class="soothsayer-card-header">
+                <div class="card-header-left">
+                    <span class="dashicons dashicons-networking"></span>
+                    <h2>Decision Matrix</h2>
+                </div>
+                <div class="card-header-right">
+                    <select id="matrix-filter" class="matrix-filter">
+                        <option value="all">All Targets</option>
+                        <option value="hot">Hot Leads</option>
+                        <option value="new">New Projects</option>
+                        <option value="follow">Follow Up</option>
+                    </select>
+                </div>
+            </div>
+            <div class="matrix-table-wrapper">
+                <table class="soothsayer-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Target</th>
+                            <th>Project</th>
+                            <th>Value</th>
+                            <th>Score</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matrix-tbody">
+                        <?php if (empty($investigations)): ?>
+                            <tr class="matrix-empty">
+                                <td colspan="5">
+                                    <div class="empty-state">
+                                        <span class="dashicons dashicons-chart-line"></span>
+                                        <p>No active targets</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php else: ?>
+                            <?php foreach ($investigations as $item): ?>
+                                <tr class="matrix-row" data-id="<?php echo esc_attr($item['id']); ?>">
+                                    <td class="matrix-target">
+                                        <strong><?php echo esc_html($item['company']); ?></strong>
+                                        <small><?php echo esc_html($item['type']); ?></small>
+                                    </td>
+                                    <td class="matrix-project"><?php echo esc_html($item['project']); ?></td>
+                                    <td class="matrix-value">$<?php echo esc_html(number_format($item['value'])); ?></td>
+                                    <td class="matrix-score">
+                                        <div class="score-bar">
+                                            <div class="score-fill" style="width: <?php echo esc_attr($item['score']); ?>%"></div>
+                                            <span><?php echo esc_html($item['score']); ?></span>
+                                        </div>
+                                    </td>
+                                    <td class="matrix-actions">
+                                        <button type="button" class="action-btn action-email" title="Send Outreach">
+                                            <span class="dashicons dashicons-email"></span>
+                                        </button>
+                                        <button type="button" class="action-btn action-calendar" title="Schedule Call">
+                                            <span class="dashicons dashicons-calendar-alt"></span>
+                                        </button>
+                                        <button type="button" class="action-btn action-expand" title="View Details">
+                                            <span class="dashicons dashicons-visibility"></span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <?php
+    }
+
+    /**
+     * Render quick stats sidebar
+     */
+    private function render_quick_stats($stats)
+    {
+    ?>
+        <div class="soothsayer-card soothsayer-stats">
+            <div class="soothsayer-card-header">
+                <span class="dashicons dashicons-chart-pie"></span>
+                <h2>Intel Summary</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-block stat-projects">
+                    <div class="stat-icon">
+                        <span class="dashicons dashicons-building"></span>
+                    </div>
+                    <div class="stat-data">
+                        <span class="stat-value"><?php echo number_format($stats['total_projects']); ?></span>
+                        <span class="stat-label">Active Projects</span>
+                    </div>
+                </div>
+                <div class="stat-block stat-companies">
+                    <div class="stat-icon">
+                        <span class="dashicons dashicons-groups"></span>
+                    </div>
+                    <div class="stat-data">
+                        <span class="stat-value"><?php echo number_format($stats['total_companies']); ?></span>
+                        <span class="stat-label">Companies Tracked</span>
+                    </div>
+                </div>
+                <div class="stat-block stat-pipeline">
+                    <div class="stat-icon">
+                        <span class="dashicons dashicons-money-alt"></span>
+                    </div>
+                    <div class="stat-data">
+                        <span class="stat-value">$<?php echo $this->format_currency($stats['total_value']); ?></span>
+                        <span class="stat-label">Pipeline Value</span>
+                    </div>
+                </div>
+                <div class="stat-block stat-hot">
+                    <div class="stat-icon">
+                        <span class="dashicons dashicons-star-filled"></span>
+                    </div>
+                    <div class="stat-data">
+                        <span class="stat-value"><?php echo number_format($stats['hot_leads']); ?></span>
+                        <span class="stat-label">Hot Leads</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php
+    }
+
+    /**
+     * Render action hub
+     */
+    private function render_action_hub()
+    {
+    ?>
+        <div class="soothsayer-card soothsayer-actions">
+            <div class="soothsayer-card-header">
+                <span class="dashicons dashicons-admin-tools"></span>
+                <h2>Command Center</h2>
+            </div>
+            <div class="action-grid">
+                <button type="button" class="exec-action-btn" data-action="targeted_email">
+                    <span class="action-icon">
+                        <span class="dashicons dashicons-email-alt"></span>
+                    </span>
+                    <span class="action-text">
+                        <strong>Targeted Outreach</strong>
+                        <small>Email campaign to hot leads</small>
+                    </span>
+                </button>
+
+                <button type="button" class="exec-action-btn" data-action="industry_report">
+                    <span class="action-icon">
+                        <span class="dashicons dashicons-analytics"></span>
+                    </span>
+                    <span class="action-text">
+                        <strong>Industry Report</strong>
+                        <small>Generate market analysis</small>
+                    </span>
+                </button>
+
+                <button type="button" class="exec-action-btn" data-action="corporate_intel">
+                    <span class="action-icon">
+                        <span class="dashicons dashicons-admin-site-alt3"></span>
+                    </span>
+                    <span class="action-text">
+                        <strong>Corporate Intel</strong>
+                        <small>Deep dive on target company</small>
+                    </span>
+                </button>
+
+                <button type="button" class="exec-action-btn" data-action="project_tracker">
+                    <span class="action-icon">
+                        <span class="dashicons dashicons-location"></span>
+                    </span>
+                    <span class="action-text">
+                        <strong>Project Tracker</strong>
+                        <small>Monitor active bids</small>
+                    </span>
+                </button>
+
+                <button type="button" class="exec-action-btn" data-action="contact_finder">
+                    <span class="action-icon">
+                        <span class="dashicons dashicons-businessperson"></span>
+                    </span>
+                    <span class="action-text">
+                        <strong>Contact Finder</strong>
+                        <small>Identify decision makers</small>
+                    </span>
+                </button>
+
+                <button type="button" class="exec-action-btn" data-action="schedule_followup">
+                    <span class="action-icon">
+                        <span class="dashicons dashicons-calendar"></span>
+                    </span>
+                    <span class="action-text">
+                        <strong>Schedule Follow-ups</strong>
+                        <small>Bulk calendar actions</small>
+                    </span>
+                </button>
+            </div>
+        </div>
+<?php
+    }
+
+    /**
+     * Get recent investigations
+     *
+     * @return array
+     */
+    private function get_recent_investigations()
+    {
+        global $wpdb;
+
+        $table_name = $wpdb->prefix . 'rawwire_investigations';
+
+        // Check if table exists
+        if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") !== $table_name) {
+            return $this->get_sample_investigations();
+        }
+
+        $results = $wpdb->get_results(
+            "SELECT * FROM $table_name ORDER BY created_at DESC LIMIT 10",
+            ARRAY_A
+        );
+
+        if (empty($results)) {
+            return $this->get_sample_investigations();
+        }
+
+        return array_map(function ($row) {
+            return array(
+                'id' => $row['id'],
+                'company' => $row['company_name'] ?? 'Unknown',
+                'type' => $row['company_type'] ?? 'General Contractor',
+                'project' => $row['project_name'] ?? 'Active Project',
+                'value' => $row['project_value'] ?? 0,
+                'score' => $row['lead_score'] ?? rand(40, 95),
+            );
+        }, $results);
+    }
+
+    /**
+     * Get sample investigations for display
+     *
+     * @return array
+     */
+    private function get_sample_investigations()
+    {
+        return array(
+            array('id' => 1, 'company' => 'Turner Construction', 'type' => 'General Contractor', 'project' => 'Bay Area Tech Campus', 'value' => 450000000, 'score' => 92),
+            array('id' => 2, 'company' => 'Webcor Builders', 'type' => 'General Contractor', 'project' => 'SF Medical Center', 'value' => 280000000, 'score' => 87),
+            array('id' => 3, 'company' => 'DPR Construction', 'type' => 'General Contractor', 'project' => 'Data Center Expansion', 'value' => 175000000, 'score' => 84),
+            array('id' => 4, 'company' => 'Swinerton', 'type' => 'General Contractor', 'project' => 'Mixed-Use Development', 'value' => 120000000, 'score' => 78),
+            array('id' => 5, 'company' => 'Clark Construction', 'type' => 'General Contractor', 'project' => 'Government Complex', 'value' => 320000000, 'score' => 75),
+        );
+    }
+
+    /**
+     * Get intelligence stats
+     *
+     * @return array
+     */
+    private function get_intelligence_stats()
+    {
+        global $wpdb;
+
+        // Try to get real stats, fallback to demo
+        $table_name = $wpdb->prefix . 'rawwire_investigations';
+
+        if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") !== $table_name) {
+            return array(
+                'total_projects' => 47,
+                'total_companies' => 23,
+                'total_value' => 2450000000,
+                'hot_leads' => 8,
+            );
+        }
+
+        return array(
+            'total_projects' => (int) $wpdb->get_var("SELECT COUNT(*) FROM $table_name"),
+            'total_companies' => (int) $wpdb->get_var("SELECT COUNT(DISTINCT company_name) FROM $table_name"),
+            'total_value' => (float) $wpdb->get_var("SELECT SUM(project_value) FROM $table_name") ?: 0,
+            'hot_leads' => (int) $wpdb->get_var("SELECT COUNT(*) FROM $table_name WHERE lead_score >= 80"),
+        );
+    }
+
+    /**
+     * Format currency for display
+     *
+     * @param float $value
+     * @return string
+     */
+    private function format_currency($value)
+    {
+        if ($value >= 1000000000) {
+            return round($value / 1000000000, 1) . 'B';
+        }
+        if ($value >= 1000000) {
+            return round($value / 1000000, 1) . 'M';
+        }
+        if ($value >= 1000) {
+            return round($value / 1000, 1) . 'K';
+        }
+        return number_format($value);
+    }
+
+    /**
+     * AJAX: Launch workflow
+     */
+    public function ajax_launch_workflow()
+    {
+        check_ajax_referer('rawwire_soothsayer', 'nonce');
+
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error('Insufficient permissions');
+        }
+
+        // Simulate workflow launch
+        $stages = array('scan', 'harvest', 'process', 'classify', 'deploy');
+
+        wp_send_json_success(array(
+            'message' => 'Intelligence sweep initiated',
+            'stages' => $stages,
+            'estimated_time' => 45,
+        ));
+    }
+
+    /**
+     * AJAX: Get intel stream data
+     */
+    public function ajax_get_intel_stream()
+    {
+        check_ajax_referer('rawwire_soothsayer', 'nonce');
+
+        $stream_data = $this->generate_stream_entries();
+
+        wp_send_json_success(array(
+            'entries' => $stream_data,
+            'total' => count($stream_data),
+        ));
+    }
+
+    /**
+     * AJAX: Executive action dispatch
+     */
+    public function ajax_executive_action()
+    {
+        check_ajax_referer('rawwire_soothsayer', 'nonce');
+
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error('Insufficient permissions');
+        }
+
+        $action = sanitize_text_field($_POST['exec_action'] ?? '');
+        $target_id = intval($_POST['target_id'] ?? 0);
+
+        $actions = array(
+            'targeted_email' => 'Email campaign queued',
+            'industry_report' => 'Report generation started',
+            'corporate_intel' => 'Deep analysis initiated',
+            'project_tracker' => 'Tracker updated',
+            'contact_finder' => 'Contact search started',
+            'schedule_followup' => 'Follow-ups scheduled',
+        );
+
+        if (!isset($actions[$action])) {
+            wp_send_json_error('Unknown action');
+        }
+
+        wp_send_json_success(array(
+            'message' => $actions[$action],
+            'action' => $action,
+            'timestamp' => current_time('mysql'),
+        ));
+    }
+
+    /**
+     * Generate stream entries for demo
+     *
+     * @return array
+     */
+    private function generate_stream_entries()
+    {
+        $types = array(
+            array('type' => 'scan', 'icon' => 'search', 'messages' => array(
+                'Detected new permit filing',
+                'Construction signal identified',
+                'Project announcement captured',
+            )),
+            array('type' => 'harvest', 'icon' => 'download', 'messages' => array(
+                'Company profile extracted',
+                'Project details collected',
+                'Contact information gathered',
+            )),
+            array('type' => 'process', 'icon' => 'admin-generic', 'messages' => array(
+                'AI analysis complete',
+                'Pattern match identified',
+                'Industry correlation found',
+            )),
+            array('type' => 'classify', 'icon' => 'chart-bar', 'messages' => array(
+                'Lead scored: HIGH priority',
+                'Target classified: ACTIVE',
+                'Opportunity rating: EXCELLENT',
+            )),
+        );
+
+        $entries = array();
+        for ($i = 0; $i < 5; $i++) {
+            $category = $types[array_rand($types)];
+            $entries[] = array(
+                'id' => uniqid(),
+                'type' => $category['type'],
+                'icon' => $category['icon'],
+                'message' => $category['messages'][array_rand($category['messages'])],
+                'timestamp' => date('H:i:s', strtotime("-{$i} minutes")),
+            );
+        }
+
+        return $entries;
+    }
+}

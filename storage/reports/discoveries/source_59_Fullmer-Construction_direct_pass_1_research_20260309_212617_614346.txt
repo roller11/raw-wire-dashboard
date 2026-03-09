@@ -1,0 +1,971 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 59
+Party: Fullmer Construction
+License: 301814-B
+Permit: 24010-10000-03793
+Generated: 2026-03-09 21:26:17
+Stage: direct_pass_1_research
+Method: perplexity_direct
+Provider: Perplexity
+Model: openai/gpt-5.1
+==================================================
+
+1. TARGET SUMMARY
+------------------
+
+- **Subject:** Fullmer Construction / Fullmer Concrete Construction (same address, same CSLB license 301814; “Fullmer Concrete Construction” appears to be the legal/CSLB/BuildZoom name; “Fullmer Construction” the market-facing brand).  
+  - Address: **1725 S Grove Ave, Ontario, CA 91761** (HQ, approx. 45–60 minutes from downtown Los Angeles, serving the broader LA metro logistics/industrial market).  
+    - (source: Blue Book ProView locations: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/locations-contacts/)  
+  - Main office phone: **(909) 947‑9467** (recorded as “Business Phone” for CSLB Contractor 301814 in San Diego County permit system).  
+    - (source: San Diego County Accela Citizen Access licensed professional detail: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD)
+- **License:**  
+  - CSLB License **#301814**, California, classification **B – General Building**, status **Active** (per BuildZoom verification).  
+  - Business type: Corporation.  
+    - (source: https://www.buildzoom.com/contractor/fullmer-concrete-construction)  
+  - Levelset also lists license #301814 with bond details and address.  
+    - (source: https://www.levelset.com/contractors/fullmer-construction/about/)
+- **Markets & specialties:**  
+  - Industrial warehouses, logistics/distribution centers (incl. very large speculative shells), tilt-up buildings, business parks, medical office buildings, office/stand-alone office, retail centers, tenant improvements (TI), and infrastructure.  
+    - (sources: Fullmer company site: https://www.fullmerco.com; Blue Book ProView profile: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/)  
+- **Geographic focus (relevant to Los Angeles):**  
+  - One of the pioneers of industrial/warehouse construction in **Southern California**, with extensive work across the Inland Empire and broader LA metro (Chino, Perris, Beaumont, etc.), and active tenant improvements and large industrial shells as of 2022‑2024.  
+    - (sources: BuildZoom permits summary & project list: https://www.buildzoom.com/contractor/fullmer-concrete-construction; Levelset company overview: https://www.levelset.com/contractors/fullmer-construction/)
+- **Scale:**  
+  - Over **2,100 buildings** and **140,000,000+ sq ft** constructed; historically high repeat business (>90% repeat/reference per staff quote).  
+    - (sources: Blue Book ProView: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/; Levelset overview: https://www.levelset.com/contractors/fullmer-construction/)  
+- **Relevance to interior design client:**  
+  - High-volume GC for industrial, office, and TI work in Southern California; a relatively tight, family-controlled leadership team with clearly defined roles in **business development**, **preconstruction/estimating**, and **operations**.  
+  - Work directly with **developers, corporate end-users (Kawasaki, Kerlan‑Jobe, Home Depot, warehousing users)** and handle **tenant improvements**—all prime contexts where interior design services can be integrated.
+
+2. PEOPLE
+---------
+
+### 2.1 Primary Decision Makers (Direct Targets)
+
+Each entry below includes the required decision‑maker drill‑down.
+
+---
+
+**1) Robert A. “Bob” Fullmer – President**
+
+- **Role / Title:** President.  
+  - Leads business development; oversees estimating and subcontracting functions; works across the entire building and bidding process from initial introduction to completed project.  
+  - (source: Fullmer “Our Team” management page: https://www.fullmerco.com/our-team/)
+- **Authority level:** Executive – top corporate decision maker. Controls strategic client relationships, bid strategy, and subcontractor ecosystem.
+- **What he controls (relevant to interiors):**  
+  - Final say on large project pursuits and which architects/consultants are brought into early feasibility; strongly influences **which design partners** (including interior designers) are brought into negotiated projects and TIs.  
+  - Oversees estimating and subcontracting, giving him leverage over **which vendors/subs get invited to bid**.  
+    - (source: https://www.fullmerco.com/our-team/)
+- **Contact route:**  
+  - HQ phone: **(909) 947‑9467** (main line; likely routed via reception/assistant).  
+    - (source: San Diego Accela licensed professional record: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD)  
+  - Corporate contact page: https://www.fullmerco.com/contact/ (form/web route; content not visible in this environment but standard for the domain).
+- **Why he matters for winning interior design work:**  
+  - As President with direct control over business development and estimating, Bob is ultimately the arbiter of preferred partners; a strong relationship here can result in **repeat TI/interior scopes across multiple developer clients**.  
+- **Best access route:**  
+  - **Indirect via Business Development and Executive Assistant gatekeepers**:  
+    - Build trust first with **Paige Fullmer West** (Managing Director, BD) and **Charles Banks** (Director of Client Relations), who manage client relations and external partnerships (see below).  
+    - Use **NAIOP/industrial real estate events and developer-hosted functions** where Fullmer appears alongside developers like Pacific Industrial, Rockefeller Group, Searles Property Group (see Networking Opportunities).  
+  - **Direct route via office:** request an introductory capabilities meeting for interiors/TI with their BD team, explicitly referencing relevant types of projects (e.g., medical office, corporate office, warehouse office pods).  
+- **Potential meeting opportunities:**  
+  - Invite Bob (and his BD team) to a **working session** on interior strategies for large logistics/industrial campuses in LA; frame it as value-add for their developer clientele.  
+  - Target events where **developers they work with** (Pacific Industrial, Rockefeller Group, Searles Property Group) present, then use those developers as warm-intro channels to Fullmer’s leadership.  
+- **Sources for this person:**  
+  - https://www.fullmerco.com/our-team/  
+  - https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/  
+  - https://www.levelset.com/contractors/fullmer-construction/
+
+---
+
+**2) Paige Fullmer West – Managing Director, Business Development**
+
+- **Role / Title:** Managing Director, Business Development.  
+  - Manages client relations and business development; represents Fullmer in various capacities; works closely with clients from initial handshake through feasibility to project follow-up, ensuring partnerships remain strong.  
+    - (source: https://www.fullmerco.com/our-team/)
+- **Authority level:** Executive – primary outward‑facing BD leader.
+- **What she controls (relevant to interiors):**  
+  - Gatekeeper and influencer on **which projects Fullmer pursues**, who gets invited to proposal teams, and which **design consultants** are recommended to clients in early feasibility and TI phases.  
+  - Likely coordinates **client presentations**, RFP responses, and long‑term account strategies.
+- **Contact route:**  
+  - Through HQ main line **(909) 947‑9467** and the corporate contact interface.  
+  - Her name and role are prominently listed on Fullmer’s site, making it appropriate to request her **specifically** when calling.  
+    - (source: https://www.fullmerco.com/our-team/)
+- **Why she matters for winning interior design work:**  
+  - She is the **single most important person** for an interior design firm seeking a relationship: she is entrusted with managing client relationships and project feasibility and is explicitly positioned as the “facilitator” of partnerships.  
+- **Best access route:**  
+  - **Direct BD outreach:**  
+    - Call headquarters, ask for **Paige in Business Development**, frame the call around solving a **specific pain point**: industrial/corporate interiors that need high-speed delivery in tight construction windows.  
+  - **Content & event collaboration:**  
+    - Offer to co-present or provide case studies on **TI and office interior best practices** for logistics and industrial environments, which she can use with their developer/end-user clients.  
+- **Potential meeting opportunities:**  
+  - Developer-centric events where Fullmer appears alongside clients:  
+    - Fullmer’s press releases explicitly reference **Pacific Industrial**, **Rockefeller Group**, and NAIOP’s Development Magazine – these constituencies overlap heavily with **NAIOP SoCal** events (industrial-focused).  
+      - (source for NAIOP magazine linkage: Fullmer press releases page: https://www.fullmerco.com/category/press-releases/)  
+  - On-site celebrations for major project milestones (grand openings of logistics centers and industrial parks), where BD leaders often attend.  
+- **Sources for this person:**  
+  - https://www.fullmerco.com/our-team/  
+  - https://www.fullmerco.com/category/press-releases/
+
+---
+
+**3) Casey R. Jones – Vice President of Construction**
+
+- **Role / Title:** Vice President of Construction.  
+  - Has been with Fullmer since 1994; progressed from concrete foreman to Superintendent to Project Manager; manages large-scale projects (multi‑million square foot facilities, LEED, logistics centers, OSHPD medical offices, sports parks, college buildings).  
+    - (source: https://www.fullmerco.com/our-team/)
+- **Authority level:** Senior operational executive.
+- **What he controls:**  
+  - Execution of major projects, selection and oversight of **project managers and superintendents**; likely has strong input into **which interior-focused subs/designers are acceptable** on complex builds and TIs.  
+- **Contact route:**  
+  - Via HQ main line and through **project-specific PMs** he oversees.  
+- **Why he matters for interior design work:**  
+  - On complicated TI and medical/office programs, Casey’s teams will be the ones actually implementing interior designs. A good relationship here improves chances of being **recommended to owners** when detailed interior scopes are developed.  
+- **Best access route:**  
+  - After initial BD contact (Paige/Bob), request to be introduced to Casey with an emphasis on your **project delivery reliability**, coordination with field staff, and knowledge of **industrial/medical codes**.  
+- **Potential meeting opportunities:**  
+  - **Preconstruction and value‑engineering meetings** with owners and architects, where Casey participates for constructability review (see Services page for their process).  
+    - (source: https://www.fullmerco.com/services/)  
+- **Sources:**  
+  - https://www.fullmerco.com/our-team/  
+
+---
+
+**4) Kevin L. Molle – Senior Preconstruction Services**
+
+- **Role / Title:** Senior Preconstruction Services.  
+  - Joined in 2010; has estimated over 250 million sq ft of office, warehouse, freezer/cooler, retail, and private campus space; works closely with **developers and customers on preliminary budgets and feasibility studies**, producing detailed estimates from conceptual through construction phases.  
+    - (source: https://www.fullmerco.com/our-team/)
+- **Authority level:** Senior preconstruction/estimating decision maker.
+- **What he controls:**  
+  - Controls cost assumptions and feasibility for new industrial/office projects; heavily influences **which interior solutions are considered viable** and which vendors are priced into early budgets.  
+- **Contact route:**  
+  - Via HQ main line and via introduction from Paige/Bob; his title is public, making him an explicit target when asking for “preconstruction.”  
+- **Why he matters for interior design work:**  
+  - Interior design scope lives in **preconstruction budgets**; being known to Kevin adds you to the mental (or actual) list of go-to design resources when developers ask for integrated design‑build or negotiated TI packages.  
+- **Best access route:**  
+  - After BD warm introduction, request a **short working session** on cost‑effective interior build‑outs for large industrial shells, bringing sample budgets and value‑engineering ideas.  
+- **Potential meeting opportunities:**  
+  - Participation in **development meetings** and **planning sessions** described in Fullmer’s services (where principals, project managers, and estimators meet with owners to provide value‑engineering input).  
+    - (source: https://www.fullmerco.com/services/)  
+- **Sources:**  
+  - https://www.fullmerco.com/our-team/  
+
+---
+
+**5) Matthew MacRitchie – Head of Estimating Department**
+
+- **Role / Title:** Head of Estimating Department.  
+  - Established comprehensive estimating procedures; handles projects across distribution, cold storage, industrial, retail, medical, corporate office TI, and midrise office complexes.  
+    - (source: https://www.fullmerco.com/our-team/)
+- **Authority level:** Key preconstruction/estimating executive.
+- **What he controls:**  
+  - Manages **estimating team and processes**; de facto gatekeeper for **which subs and consultants are regularly invited to price work**.  
+- **Contact route:**  
+  - Via HQ main line, requesting estimating department and specifically **Matthew**.  
+- **Why he matters:**  
+  - Directly affects whether your firm is consistently included in **interior‑related bid packages** (TI, corporate office, medical).  
+- **Best access route:**  
+  - Secure BD buy‑in first, then ask to be added to **estimating’s resource list** for interior design, offering sample bid packages, standard deliverables, and references from similar industrial/office projects.  
+- **Sources:**  
+  - https://www.fullmerco.com/our-team/  
+
+---
+
+**6) Charles Banks – Director of Client Relations**
+
+- **Role / Title:** Director of Client Relations (1 year tenure noted).  
+  - (source: staff list on “Our Team”: https://www.fullmerco.com/our-team/)
+- **Authority level:** Client‑facing manager; strong influence for relationship‑oriented work.
+- **What he controls:**  
+  - Ongoing client relationships, likely including **tenant improvement and follow‑on interior work** when existing facilities are upgraded.  
+- **Contact route:**  
+  - Via office phone and BD/marketing side; ask for **Client Relations**.  
+- **Why he matters:**  
+  - Directly handles **repeat projects**, which are a major part of Fullmer’s work; ideal contact to discuss **interior refresh programs** for existing industrial and office clients.  
+- **Best access route:**  
+  - After initial BD contact or via reference from a shared developer/client (e.g., Pacific Industrial, Rockefeller Group, Searles Property Group).  
+- **Sources:**  
+  - https://www.fullmerco.com/our-team/  
+
+---
+
+**7) Gered R. Yetter – Chief Financial Officer**
+
+- **Role / Title:** Chief Financial Officer; oversees accounting, legal, insurance, and office operations.  
+  - (source: https://www.fullmerco.com/our-team/)
+- **Authority level:** Executive – financial and risk oversight.
+- **Relevance to interiors:**  
+  - Controls risk and contract terms; he may not select designers, but his comfort with your firm’s **financial stability and contract structure** can influence acceptance.  
+- **Best access route:**  
+  - Only after strong BD/operations relationship is in place; present your firm as **low‑risk**, with clean insurance and strong financials.  
+
+---
+
+**8) Ashley Syverud Fullmer – VP, Operations & Administration**
+
+- **Role / Title:** VP, Operations & Administration; manages Project Administration Department and is involved with every project in some capacity; works alongside Estimating, PMs, Superintendents, and Subcontractors/Owners.  
+  - (source: https://www.fullmerco.com/our-team/)
+- **Authority level:** Executive operations.
+- **Relevance to interiors:**  
+  - Oversee project administration and documentation across all jobs; influences how easily your firm can **integrate administratively** (contracts, change orders, submittals).  
+- **Best access route:**  
+  - Through project administrators and executive assistant; demonstrate that your interior design workflow aligns with their documentation and schedule needs.  
+
+### 2.2 Gatekeepers and Key Coordinators (Access Control)
+
+---
+
+**A) Angelina Hendershott – Senior Executive Assistant Manager**
+
+- **Role / Title:** Senior Executive Assistant Manager (21 years).  
+  - (source: https://www.fullmerco.com/our-team/)
+- **Who she appears to support:**  
+  - Senior executives/owners; her quotes focus on customer service and long‑term relationships, and her title implies she coordinates access to top leadership.  
+- **Contact route:**  
+  - Via HQ phone **(909) 947‑9467** – likely the person managing executive calendars and **screening incoming requests**.  
+- **Why she matters operationally:**  
+  - She is the **primary gatekeeper** for scheduling meetings with Bob, Paige, and other principals. A respectful, value‑focused pitch to her can unlock face time; a poor interaction will block it.  
+- **Sources:**  
+  - https://www.fullmerco.com/our-team/  
+  - Phone: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD  
+
+---
+
+**B) Gigi Beene – Government Liaison**
+
+- **Role / Title:** Government Liaison (33 years).  
+  - (source: https://www.fullmerco.com/our-team/)
+- **Who she controls access to:**  
+  - Interfaces between Fullmer and government agencies; likely sits between **public owners, permitting staff, and internal executives**.  
+- **Contact route:**  
+  - Via HQ phone, asking for Government Liaison/permits.  
+- **Why she matters:**  
+  - For public or quasi-public projects in **Los Angeles and other jurisdictions**, she is a key gatekeeper for understanding **procurement rules, bid calendars, and who on the owner side makes decisions**.  
+- **Sources:**  
+  - https://www.fullmerco.com/our-team/  
+
+---
+
+**C) Estimating & Preconstruction Coordinators**  
+(Typically control the inbound bid and qualification pipeline.)
+
+- Names & roles (all from the Fullmer “Our Team” page: https://www.fullmerco.com/our-team/):  
+  - **Reuben Vang** – Estimating Coordinator (5 years).  
+  - **Alan Galvez** – Estimating Coordinator (2 years).  
+  - **Michael Mengote** – Estimating Coordinator / Associate Estimator.  
+  - **Charles Ricci** – Associate Estimator.  
+  - **Jeremy West** – Preconstruction Estimator.  
+- **Why they matter:**  
+  - These staff manage **bid documents, subcontractor lists, and preconstruction communication**. If you want your interior design firm to be consistently aware of upcoming TI/interior packages, they are practical contacts to ensure you’re in the loop.  
+
+---
+
+**D) Project Administration & Front Desk**
+
+- **Relevant names** (from https://www.fullmerco.com/our-team/):  
+  - **Lady De La Cruz** – Project Administrator Manager.  
+  - **Lila Pasillas**, **Jennifer Lucero**, **Marlene Robles**, **Sandy Gonzales**, **Staci Smith**, **Sonia Vasquez** – Project Administrators.  
+  - **Gladys Sevilla** – Project Assistant / Front Desk Lead.  
+- **Why they matter:**  
+  - For specific projects in the **Los Angeles area**, these individuals coordinate RFIs, submittals, and day‑to‑day communications. Building rapport here increases stickiness once you’re on a project.  
+
+3. COMPANY
+----------
+
+- **Legal/operating names:**  
+  - “Fullmer Construction Co.” / “Fullmer Construction” (branding).  
+  - “Fullmer Concrete Construction” (BuildZoom legal name tied to license 301814).  
+    - (sources: https://www.fullmerco.com; https://www.buildzoom.com/contractor/fullmer-concrete-construction; https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/)
+- **Type:**  
+  - General Contractor (GC) / General Building Contractor.  
+- **Licensing & Bond:**  
+  - CSLB License #301814 – General Building (B), active, corporation; HQ at 1725 S Grove Ave, Ontario, CA; verified active as of Feb 2025 by BuildZoom.  
+    - (source: https://www.buildzoom.com/contractor/fullmer-concrete-construction)  
+  - Levelset lists contractor’s bond by **Fidelity and Deposit Company of Maryland**, bond amount $15,000, with license #301814.  
+    - (source: https://www.levelset.com/contractors/fullmer-construction/about/)
+- **History & Scale:**  
+  - Founded 1946 by **Leonard Fullmer**; still referenced as consultant (per D&B profile).  
+    - (source: https://www.dnb.com/business-directory/company-profiles.fullmer_construction.6500b74d48be5d6217239fedc40ec4aa.html)  
+  - Milestones:  
+    - 1958 – first tilt-up buildings; pioneer of the tilt-up concept.  
+    - 1963 – shifted to exclusive commercial/industrial construction.  
+    - 1989 – began Tenant Improvement division.  
+    - 1995 – began stand-alone office construction.  
+    - 2009 – completed **Stirling’s Global Access Lot 1**, 1,000,000 sf, described as the largest LEED building in the world at that time.  
+    - 2021 – 75th anniversary.  
+    - (source: https://www.fullmerco.com)
+- **Services (key for how they buy design work):**  
+  - **Pre-Construction:** Estimating, planning, development meetings (principals, PMs, estimators meet with Owner to assist design team with value-engineering and to select design‑build subs), plan review, contract document review; open‑book policy down to subcontractor level.  
+  - **Construction:** Full‑time PM and superintendent, permitting, quality control, project‑specific admin, robust safety program, and detailed close‑out packages.  
+  - They explicitly state they “solicit and select the **design‑build subcontractors** for electrical, mechanical, plumbing, fire protection and landscaping” during development meetings—this is the model your interior design client should mimic (be the “go-to” for interior scope).  
+    - (source: https://www.fullmerco.com/services/)
+- **Markets / Project Types:**  
+  - Industrial / warehouse / logistics centers (incl. speculative shells).  
+  - Medical office buildings (OSHPD).  
+  - Corporate office TI and build‑to‑suit offices.  
+  - Business centers, private campuses, retail centers.  
+  - Tenant improvements and infrastructure.  
+    - (sources: Fullmer site, Blue Book ProView, Levelset overview: https://www.fullmerco.com; https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/; https://www.levelset.com/contractors/fullmer-construction/)
+- **Reputation / Activity:**  
+  - BuildZoom score **119** (top 1% of CA contractors) and at least **257 projects** over the last 3 years with substantial focus on new construction and commercial renovations.  
+    - (source: https://www.buildzoom.com/contractor/fullmer-concrete-construction)  
+  - Levelset notes approx. **187 jobs in the last 12 months** (general contractor role).  
+    - (source: https://www.levelset.com/contractors/fullmer-construction/)
+- **Payment / accounts payable:**  
+  - Levelset provides accounts payable and office address with license and bond details, indicating that upstream financial/administrative information is reasonably transparent.  
+    - (source: https://www.levelset.com/contractors/fullmer-construction/about/)
+- **Political / influence footprint:**  
+  - OpenSecrets lists **Fullmer Construction** as an organization associated with **$57,320** in political contributions (all from individuals), suggesting leadership has political connections but not heavy corporate PAC activity.  
+    - (source: https://www.opensecrets.org/orgs/fullmer-construction/summary?id=D000033917)
+
+4. NETWORKING OPPORTUNITIES
+----------------------------
+
+### 4.1 Press, Associations, and Events (“Edge-Signal Diamonds”)
+
+- **NAIOP Development Magazine (Industrial Real Estate Network):**  
+  - Fullmer’s project **First Park at Ocean Ranch** was featured in the Winter 2016/17 issue of **NAIOP Development Magazine**, noted on Fullmer’s press releases page. This connects them to the NAIOP industrial/developer ecosystem—particularly relevant in Southern California.  
+    - (source: Fullmer press releases: https://www.fullmerco.com/category/press-releases/)  
+  - **Diamond:** NAIOP SoCal events (panels, tours, awards) are likely hubs where Fullmer’s leadership and their core developers (Pacific Industrial, Rockefeller Group, etc.) congregate. Even though membership status isn’t explicitly stated, the magazine coverage ties them to this community.
+- **DDC Journal & Pacific Industrial:**  
+  - Fullmer highlighted that **Pacific Industrial**, a major industrial developer, was profiled in DDC Journal, with Fullmer’s project **Pacific Freeway Center** referenced in the feature.  
+    - (source: https://www.fullmerco.com/category/press-releases/)  
+  - **Diamond:** DDC Journal‑connected events, industrial development panels, and Pacific Industrial-led activities (often NAIOP-linked) are natural places where Fullmer’s BD and principals appear alongside developer clients.
+- **Rockefeller Group’s Optimus Logistics Center (Perris, CA):**  
+  - Fullmer was chosen as **general contractor** for Rockefeller Group’s 1.45M SF **Optimus Logistics Center** in Perris, CA.  
+    - (source: Fullmer press releases: https://www.fullmerco.com/category/press-releases/)  
+  - **Diamond:** Rockefeller Group’s SoCal industrial real estate events, project tours, or tenant marketing events would bring together Rockefeller’s leasing/broker teams, Fulmer BD/operations, and large corporate tenants—high‑value networking environment for interiors.
+- **Project Bootstrap Event with Wolverine Boots:**  
+  - In 2016, Fullmer participated in **“Project Bootstrap”** with Wolverine Boots at a new 720,000 sf distribution facility in Beaumont, CA. This suggests a history of participating in branded, onsite events with major industrial users.  
+    - (source: https://www.fullmerco.com/category/press-releases/)  
+  - **Diamond:** Onsite launch / workforce events at major distribution centers where Fullmer, the end-user, and vendors participate.
+
+### 4.2 Professional / Industry Platforms
+
+- **Blue Book ProView:**  
+  - Lists Fullmer’s capabilities, location, and some key contacts; widely used by subs and vendors to connect with GCs.  
+    - (source: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/)  
+  - **Use:** Maintain a polished profile there as a vendor, and use it as a neutral platform to approach their estimating/BD teams.
+- **Levelset & BuildZoom:**  
+  - Both platforms profile Fullmer, with Levelset focusing on payment and licenses and BuildZoom on permit history. This indicates they are visible to a wide range of subs and service providers—and that they **monitor risk and performance**.  
+    - (sources: https://www.levelset.com/contractors/fullmer-construction/; https://www.buildzoom.com/contractor/fullmer-concrete-construction)
+
+### 4.3 Civic / Political
+
+- **Political Contributions:**  
+  - OpenSecrets data shows contributions linked to Fullmer Construction individuals ($57,320). This indicates some engagement in political and civic contexts, potentially including **fundraisers, city/County engagement, and local business coalitions**.  
+    - (source: https://www.opensecrets.org/orgs/fullmer-construction/summary?id=D000033917)
+
+5. DISCOVERED PROJECTS
+----------------------
+
+*(Emphasis on recent and/or industrial/office projects with potential TI/interior opportunities—many in broader LA metro, including Inland Empire, which is where most LA-area logistics developments sit.)*
+
+### 5.1 Projects from Fullmer Company Materials
+
+- **Stirling’s Global Access Lot 1**  
+  - Type: 1,000,000 sf industrial/warehouse, LEED.  
+  - Role: GC; described as “largest LEED building in the world” at completion.  
+  - Importance: Benchmark project showing their scale in high‑profile sustainable industrial development; likely multiple interior scopes (offices, ancillary spaces).  
+  - Source: https://www.fullmerco.com  
+
+- **Kerlan‑Jobe Center for Sports**  
+  - Type: Sports medicine facility.  
+  - Appears as a testimonial: praises Fullmer’s handling of demanding timelines, creative solutions.  
+  - Importance: Indicates capacity for **specialized medical/office interiors**—good reference segment for your interior design positioning.  
+  - Source: https://www.fullmerco.com  
+
+- **Kawasaki Motors Corp**  
+  - Role: Corporate client; testimonial: “Fullmer Construction’s tag line should read, ‘We Make Miracles Happen!’”  
+  - Importance: Example of corporate HQ or warehouse/office work; potential for repeat interior improvements and branding.  
+  - Source: https://www.fullmerco.com  
+
+- **Pacific Freeway Center (for Pacific Industrial)**  
+  - Type: Industrial project for developer **Pacific Industrial**, highlighted in DDC Journal.  
+  - Importance: Ties Fullmer to one of the more active industrial developers in the LA/Inland Empire corridor, which regularly needs TI and office interior work.  
+  - Source: Fullmer press release: https://www.fullmerco.com/category/press-releases/  
+
+- **First Park at Ocean Ranch**  
+  - Type: Industrial park project featured in NAIOP Development Magazine.  
+  - Importance: Connects Fullmer to NAIOP’s industrial development network; likely includes office/amenity interiors for tenants.  
+  - Source: https://www.fullmerco.com/category/press-releases/  
+
+- **Optimus Logistics Center – Perris, CA (Rockefeller Group)**  
+  - Size: 1.45M sf logistics center.  
+  - Role: GC (Fullmer chosen by Rockefeller Group).  
+  - Importance: Large, high-visibility project; Rockefeller Group tends to host tours and events—opportunities to connect with both Rockefeller and Fullmer teams on site.  
+  - Source: https://www.fullmerco.com/category/press-releases/  
+
+- **720,000 sf Distribution Facility – Beaumont, CA (Wolverine “Project Bootstrap”)**  
+  - Size: 720,000 sf.  
+  - Event: Project Bootstrap with Wolverine Boots.  
+  - Importance: Example of brand‑driven events on Fullmer job sites; good precedent for future similar events where you can embed yourself.  
+  - Source: https://www.fullmerco.com/category/press-releases/  
+
+### 5.2 Projects from BuildZoom (License 301814)
+
+*(Projects include Inland Empire / greater LA logistics region—prime territory for tenant improvement and office interiors.)*
+
+From BuildZoom’s permit record for **Fullmer Concrete Construction** (license #301814, Ontario CA):  
+- Permit categories show extensive activity in **new industrial shells**, **commercial renovations**, and **tenant improvements** in 2022–2024. (source for all below: https://www.buildzoom.com/contractor/fullmer-concrete-construction)
+
+Examples:
+
+- **Tenant Improvement – 8,493 sf (Permit #PMT23‑03227, issued 2024‑08‑15)**  
+  - Description: 8,493 sf tenant improvement including office improvements (new HVLS fans, equipment battery charging area with eyewash station, warehouse lighting, expanded main office and new office).  
+  - Value: $598,400.  
+  - Importance: Active TI-type work—exactly where interior design scope sits.  
+
+- **New 211,326 sf Industrial Building – 12438 East End Ave (Permit #B20‑1103; status final 2023‑12‑20)**  
+  - Type: Spec shell including all MEP, pump house, trash enclosure, steel fencing, etc; TI for mezzanine restrooms, break room, offices, conference room.  
+  - Value: $8,807,480.  
+  - Importance: Large industrial building with embedded office/TI components—opportunities for interior involvement in offices and amenities.  
+
+- **Home Depot Warehouse TI – 125,536 sf (Permit #B21‑3347; status issued 2023‑12‑06)**  
+  - Description: Warehouse tenant improvement for Home Depot, including private office area, mezzanine partitions, new ceiling and partitions, electrical for power and controls, new plumbing for offices/restrooms, mechanical alterations.  
+  - Importance: Major corporate warehouse TI, including significant office and facility interior work.  
+
+- **New Tilt-Wall Industrial Building – 15791 Quality Way (with mezzanine) – 2023‑09‑18**  
+  - Description: New tilt-wall industrial building with spec TI and mezzanine, 49,703 sf, mezzanine 1,741 sf.  
+  - Importance: Fresh shell-plus-TI building in the industrial belt.  
+
+- **New Speculative Warehouse Shell – 130,601 sf (Permit COMBC‑2022‑00079; final 2024‑03‑07)**  
+  - Description: New speculative warehouse shell with pump house, trash enclosure, screen walls, landscaping.  
+  - Value: $6,582,000.  
+  - Importance: Shell expecting TI packages later—prime for early interior design engagement via developers and tenants.  
+
+Collectively, these BuildZoom projects show an **ongoing pipeline** of large industrial facilities with integrated **office and TI scopes**, offering repeated opportunities for interiors.
+
+### 5.3 Los Angeles Permit Context
+
+- The user-specified LADBS permit **24010‑10000‑03793** did not surface with readable detail in this environment. A related LADBS permit (**24010‑10000‑00701**) appears in search, but the content was not visible.  
+  - (search result: https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=24010&id2=10000&id3=00701)  
+- Based on BuildZoom’s record, Fullmer is highly active across Southern California, including multiple jurisdictions, but **direct confirmation tying permit 24010‑10000‑03793 to Fullmer could not be retrieved** from the LADBS system within this environment.
+
+6. DISCOVERED ENTITIES
+-----------------------
+
+*(Organizations and individuals that form the broader network around Fullmer and thus potential lead channels.)*
+
+- **Developers / Owners / Landlords:**  
+  - **Pacific Industrial** – industrial developer; “good friends” per Fullmer, with Pacific’s projects (e.g., Pacific Freeway Center) featured alongside Fullmer in DDC Journal and NAIOP coverage.  
+    - Relationship: **Key repeat client/developer**.  
+    - Source: https://www.fullmerco.com/category/press-releases/  
+  - **Rockefeller Group** – large national developer; selected Fullmer as GC for **Optimus Logistics Center** in Perris, CA.  
+    - Relationship: **Strategic developer client**.  
+    - Source: https://www.fullmerco.com/category/press-releases/  
+  - **Searles Property Group** – developer/owner; provides a testimonial praising Fullmer for “making the impossible possible” for over 35 years.  
+    - Relationship: Long-standing developer client.  
+    - Source: https://www.fullmerco.com  
+  - **Kawasaki Motors Corp** – corporate client; testimonial indicates major corporate or distribution project.  
+    - Relationship: Corporate end-user client.  
+    - Source: https://www.fullmerco.com  
+  - **Kerlan‑Jobe Center for Sports** – sports medicine facility client.  
+    - Relationship: Healthcare/office client.  
+    - Source: https://www.fullmerco.com  
+  - **IPT Otay Logistics Center LP** – owner linked to San Diego County project using Fullmer (retaining walls for two buildings at an Otay Logistics Center).  
+    - Relationship: Logistics center owner; used Fullmer as GC.  
+    - Source: San Diego Accela record for licensed professional #301814: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD  
+  - **Home Depot** – TI client for large warehouse.  
+    - Relationship: National retailer client for logistics TI.  
+    - Source: BuildZoom permit summary: https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+
+- **Vendors / Brands / Partners:**  
+  - **Wolverine Boots** – partner in “Project Bootstrap” workforce event at 720,000 sf distribution facility in Beaumont.  
+    - Relationship: Event partner/brand on a major project.  
+    - Source: https://www.fullmerco.com/category/press-releases/  
+
+- **Platforms / Data and Payment Ecosystem:**  
+  - **Levelset** – payment & risk platform listing Fullmer’s licenses and payment performance.  
+    - Relationship: Third-party transparency platform; potential to monitor Fullmer’s project activity.  
+    - Source: https://www.levelset.com/contractors/fullmer-construction/  
+  - **BuildZoom** – permit data platform tracking hundreds of Fullmer projects, including recent TI and industrial builds.  
+    - Relationship: Public data source; good for **monitoring new shells and TIs** as they appear.  
+    - Source: https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+  - **Blue Book ProView** – construction directory listing Fullmer’s markets and location.  
+    - Relationship: Industry listing; potential connection point for subs/consultants.  
+    - Source: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/
+
+7. ENTRY POINTS
+----------------
+
+*(Concrete, actionable steps for your interior design client to get in front of decision makers.)*
+
+1. **Target Paige Fullmer West (Managing Director, Business Development) as Primary Entry Point**  
+   - Call HQ **(909) 947‑9467**, ask specifically for **“Paige in Business Development”**.  
+   - Frame the outreach around **industrial and logistics campus interiors** plus **office/medical TI**—explicitly referencing project types Fullmer highlights (logistics centers, medical offices, corporate TI).  
+   - Propose a **short capabilities briefing** focused on value-engineering of interior scopes under tight industrial schedules.  
+   - Source for role & authority: https://www.fullmerco.com/our-team/
+
+2. **Secondary Executive Targets: Bob Fullmer (President), Kevin Molle & Matthew MacRitchie (Preconstruction/Estimating)**  
+   - After initial BD conversation, request introduction to **Kevin** and **Matthew** to discuss:  
+     - How interiors can be accurately priced early in **developer feasibility studies**.  
+     - Standardized interior “packages” for warehouse offices, amenity spaces, and medical or corporate tenant spaces.  
+   - Explicitly reference their own language about **development meetings and open-book policy** from the Services page.  
+     - Source: https://www.fullmerco.com/services/
+
+3. **Leverage Gatekeepers – Angelina Hendershott (Senior Executive Assistant Manager)**  
+   - When calling, treat Angelina as a strategic partner: briefly explain your firm’s relevance to **their current industrial/TI pipeline**; ask for her help in scheduling a short introduction with Paige/Bob.  
+   - Highlight familiarity with **complex documentation and schedule constraints**, echoing their emphasis on long-term relationships and high standards.  
+   - Source: https://www.fullmerco.com/our-team/
+
+4. **Build Credibility via Developer Clients (Pacific Industrial, Rockefeller Group, Searles Property Group)**  
+   - Independently cultivate relationships with these developers:  
+     - Identify their **LA-area new shells and park developments** (many are NAIOP‑visible).  
+     - Offer interior planning and design services **directly to the developer**, then position Fullmer as the logical GC partner in those discussions.  
+   - Once engaged with these developers, ask for **warm introductions** to Fullmer’s BD/preconstruction staff for specific projects.  
+   - Source linking developers to Fullmer: https://www.fullmerco.com/category/press-releases/ and testimonials on https://www.fullmerco.com  
+
+5. **Monitor BuildZoom for New Industrial Shells & TIs (Then Approach Fullmer)**  
+   - Use BuildZoom’s permit data for Fullmer (license #301814) to monitor **new LA-area and Inland Empire shells and TI permits** as they appear.  
+   - For each new shell in LA/IE, approach:  
+     - The **developer/owner** (from permit owner name) with interior concept packages.  
+     - Fullmer’s BD/preconstruction team, referencing the specific permit and offering design support for upcoming TI.  
+   - Source: https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+
+6. **Exploit NAIOP and Industrial Real Estate Events (Edge-Signal Diamond)**  
+   - Because Fullmer projects appear in **NAIOP’s Development Magazine** and DDC Journal profiles of Pacific Industrial, it is highly likely Fullmer executives attend **NAIOP SoCal** industrial events and similar conferences.  
+   - Action: Attend NAIOP SoCal industrial events and specifically seek out:  
+     - **Pacific Industrial** and **Rockefeller Group** personnel.  
+     - Ask them who at Fullmer they work with most frequently and request introductions.  
+   - Source for NAIOP link: https://www.fullmerco.com/category/press-releases/  
+
+7. **Position for Ongoing TI and Office Refresh Work**  
+   - Fullmer’s history of long-term client relationships (Searles Property Group, etc.) suggests repeated **interior upgrades** over time.  
+   - Approach **Charles Banks (Director of Client Relations)** with a targeted proposal to handle **multi-site TI refresh programs** for existing corporate/industrial clients, leveraging your design standards and rapid prototyping capabilities.  
+   - Source: https://www.fullmerco.com/our-team/  
+
+8. **Public / Government Work via Government Liaison**  
+   - For any LA-area public or publicly related work (e.g., County/City‑adjacent developments), contact **Gigi Beene (Government Liaison)** to understand procurement routes and whether **design services** can be brought in as part of design-build or CM‑at‑risk packages.  
+   - Source: https://www.fullmerco.com/our-team/  
+
+8. RED FLAGS
+------------
+
+- **License History:**  
+  - BuildZoom notes the main license #301814 as active and verified, with mention of a past inactive/cancelled license entry for a related entity (same license number at a different city and another license #763996 that was cancelled). This suggests some historical restructuring but **no current red flag**, as the active corporate license is in good standing.  
+  - Source: https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+
+- **Project Abandonment (Owner-Side):**  
+  - San Diego County’s permit record for an Otay Logistics Center retaining wall project (with Fullmer as contractor) includes “notice of abandonment” and “letter of abandonment” entries but attributes them to the **project/owner** rather than contractor discipline. No evidence of wrongdoing by Fullmer is indicated.  
+  - Source: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD  
+
+- **Payment / Legal Issues:**  
+  - No specific lawsuits, major safety citations, or chronic payment problems surfaced in the reviewed sources (Levelset, BuildZoom, Blue Book).  
+
+9. SOURCES
+----------
+
+*(Deduplicated key URLs relevant to this dossier)*
+
+- Company & team:  
+  - https://www.fullmerco.com  
+  - https://www.fullmerco.com/our-team/  
+  - https://www.fullmerco.com/team/management/  
+  - https://www.fullmerco.com/services/  
+  - https://www.fullmerco.com/contact/  
+  - https://www.fullmerco.com/category/press-releases/
+
+- Registries & data platforms:  
+  - https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+  - https://www.levelset.com/contractors/fullmer-construction/  
+  - https://www.levelset.com/contractors/fullmer-construction/about/  
+  - https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/  
+  - https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/locations-contacts/  
+  - https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD  
+
+- Political / influence:  
+  - https://www.opensecrets.org/orgs/fullmer-construction/summary?id=D000033917  
+
+- LADBS / LA context:  
+  - https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=24010&id2=10000&id3=00701  
+
+- Company background and third-party profiles:  
+  - https://www.dnb.com/business-directory/company-profiles.fullmer_construction.6500b74d48be5d6217239fedc40ec4aa.html  
+  - https://www.cience.com/company/fullmer-construction/-6078124788577526767  
+  - https://www.mapquest.com/us/california/fullmer-construction-11145665  
+
+10. SEARCH LEDGER
+-----------------
+
+*(Exact search queries used, in chronological order as executed by the tools.)*
+
+1. `CSLB license 301814 Fullmer Construction`  
+2. `"Fullmer Construction" Los Angeles construction`  
+3. `"Fullmer Construction" general contractor`  
+4. `"Fullmer Construction" permit 24010-10000-03793`  
+5. `"Fullmer Construction" subcontractor prequalification`  
+6. `"Fullmer Construction" leadership team`  
+7. `"Fullmer Construction" golf tournament charity`  
+8. `"Fullmer Construction" bid opportunities RFP`  
+9. `"Fullmer Construction" architect developer partner`  
+10. `301814 CSLB Fullmer Construction`  
+11. `"Fullmer Construction Co" license 301814`  
+12. `"Fullmer Construction" 301814 cslb.ca.gov`  
+13. `"Fullmer Construction" Los Angeles permit 24010-10000-03793`  
+14. `"24010-10000-03793"`  
+15. `"Fullmer Construction" Los Angeles tenant improvement`  
+16. `"Fullmer Construction" subcontractors`  
+17. `"Fullmer Construction" prequalification`  
+18. `"Fullmer Construction" bid list`  
+19. `"Fullmer Construction" vendor`  
+20. `"Fullmer Construction" Siteline`  
+21. `"Fullmer Construction" NAIOP`  
+22. `"Fullmer Construction" "golf"`  
+23. `"Fullmer Construction" "charity"`  
+24. `"Fullmer Construction" "association"`  
+25. `"Paige Fullmer West"`  
+26. `"Robert A. Fullmer" Fullmer`  
+27. `"Casey R. Jones" Fullmer Construction`  
+28. `"Kevin L. Molle" Fullmer`  
+29. `"Gered Yetter" Fullmer`  
+
+11. EVIDENCE LOG
+----------------
+
+*(Sampled concrete entries: query → URL → extracted fact.)*
+
+1. **Query:** `301814 CSLB Fullmer Construction`  
+   - **URL:** https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+   - **Fact:** License #301814 (General Building, corporation) is active for **Fullmer Concrete Construction** at 1725 S Grove Ave, Ontario, CA; BuildZoom score 119, top 1% of CA contractors; hundreds of projects including industrial new builds and tenant improvements.
+
+2. **Query:** `"Fullmer Construction" leadership team`  
+   - **URL:** https://www.fullmerco.com/our-team/  
+   - **Fact:** Lists comprehensive management team including **Robert A. Fullmer (President)**, **Paige Fullmer West (Managing Director, Business Development)**, **Gered R. Yetter (CFO)**, **Ashley Syverud Fullmer (VP, Operations & Administration)**, **Gary Fullmer (VP)**, **Casey R. Jones (VP of Construction)**, **Matthew MacRitchie (Head of Estimating)**, **Kevin L. Molle (Senior Preconstruction Services)**, **Angelina Hendershott (Senior Executive Assistant Manager)**, **Gigi Beene (Government Liaison)**, and many others.
+
+3. **Query:** `"Fullmer Construction" Los Angeles construction`  
+   - **URL:** https://www.fullmerco.com  
+   - **Fact:** Corporate site describing Fullmer as a Southern California GC, “Building Relationships Since 1946,” with specialties in industrial, tenant improvement, office, and infrastructure; lists key historical milestones including first tilt‑up buildings and the Tenant Improvement division.
+
+4. **Query:** `"Fullmer Construction" subcontractors`  
+   - **URL:** https://www.fullmerco.com/services/  
+   - **Fact:** Services page states that in development meetings Fullmer’s principals, PMs, and estimators work with owners and “**solicit and select the design‑build subcontractors**” for major trades; emphasizes open-book policy and detailed contract documentation.
+
+5. **Query:** `"Fullmer Construction" "association"`  
+   - **URL:** https://www.fullmerco.com/category/press-releases/  
+   - **Fact:** Press release section notes several key items: (1) Fullmer’s **Pacific Freeway Center** project for Pacific Industrial highlighted in DDC Journal; (2) Fullmer building **Rockefeller Group’s** 1.45M sf **Optimus Logistics Center**; (3) project **First Park at Ocean Ranch** featured in **NAIOP Development Magazine**; (4) participation in **“Project Bootstrap”** event with Wolverine Boots at a 720,000 sf Beaumont distribution facility.
+
+6. **Query:** `"Fullmer Construction" Los Angeles permit 24010-10000-03793`  
+   - **URL:** https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=24010&id2=10000&id3=00701  
+   - **Fact:** Confirmed LADBS permit detail interface is accessible, but the specific permit data was not readable within this environment; therefore no direct attribution of permit #24010‑10000‑03793 to Fullmer could be made.
+
+7. **Query:** `"Fullmer Construction" general contractor`  
+   - **URL:** https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/  
+   - **Fact:** Blue Book ProView describes Fullmer as founded in 1946 by Leonard Fullmer; notes over **2,100 buildings and 140,000,000 sq ft** built; identifies focus on medical office, business centers, private campuses, industrial buildings, retail, and tenant improvements/infrastructure.
+
+8. **Query:** `"Fullmer Construction" subcontractors`  
+   - **URL:** https://www.levelset.com/contractors/fullmer-construction/  
+   - **Fact:** Levelset shows Fullmer as a general contractor with about **187 jobs in the last 12 months**, with detailed license and payment information; notes Fullmer as a pioneer of Southern California construction, confirming their scale and activity.
+
+9. **Query:** `301814 CSLB Fullmer Construction`  
+   - **URL:** https://www.levelset.com/contractors/fullmer-construction/about/  
+   - **Fact:** Levelset “About” page lists **license #301814**, classification B, state California, and bond with **Fidelity and Deposit Company of Maryland** with bond amount $15,000, plus HQ address 1725 S Grove Ave, Ontario, CA.
+
+10. **Query:** `"Fullmer Construction" 301814 cslb.ca.gov`  
+    - **URL:** https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD  
+    - **Fact:** San Diego County Accela highlights a project where the Licensed Professional is “FULLMER CONSTRUCTION,” address 1725 S Grove Ave, Ontario CA 91761, with **CSLB Contractor 301814** and business phone **9099479467**, confirming license‑address‑phone alignment.
+
+11. **Query:** `"Fullmer Construction" "association"`  
+    - **URL:** https://www.opensecrets.org/orgs/fullmer-construction/summary?id=D000033917  
+    - **Fact:** OpenSecrets profile shows **$57,320** in political contributions associated with Fullmer Construction (100% from individuals), indicating some political engagement.
+
+12. REQUIRED TODO CHECKLIST
+---------------------------
+
+- [x] **TODO 1: Confirm target identity (name, license, permit/address match)**  
+  - Confirmed via BuildZoom and Levelset that **Fullmer Concrete Construction / Fullmer Construction** holds **CSLB license #301814**, classification B, with address **1725 S Grove Ave, Ontario, CA 91761**. San Diego Accela ties the license and phone to the same name and address.  
+    - Evidence: https://www.buildzoom.com/contractor/fullmer-concrete-construction; https://www.levelset.com/contractors/fullmer-construction/about/; https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD  
+
+- [x] **TODO 2: Visit LADBS/CSLB/registry sources relevant to target**  
+  - LADBS permit interface accessed (though specific permit data for 24010‑10000‑03793 not readable); CSLB information inferred via BuildZoom & Levelset; county permit registries (San Diego Accela) confirm license details.  
+    - Evidence:  
+      - LADBS: https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=24010&id2=10000&id3=00701  
+      - BuildZoom: https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+      - Levelset: https://www.levelset.com/contractors/fullmer-construction/about/  
+      - San Diego Accela: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD  
+
+- [x] **TODO 3: Identify at least 2 potential decision makers**  
+  - Identified and profiled multiple decision makers: **Robert A. Fullmer (President)**, **Paige Fullmer West (Managing Director, Business Development)**, **Casey R. Jones (VP Construction)**, **Kevin L. Molle (Senior Preconstruction Services)**, **Matthew MacRitchie (Head of Estimating)**, **Charles Banks (Director of Client Relations)**, **Gered Yetter (CFO)**, **Ashley Syverud Fullmer (VP Operations & Administration)**.  
+    - Evidence: https://www.fullmerco.com/our-team/
+
+- [x] **TODO 4: Capture at least 3 concrete source URLs**  
+  - Multiple concrete URLs captured and used, including:  
+    - https://www.fullmerco.com  
+    - https://www.fullmerco.com/our-team/  
+    - https://www.fullmerco.com/services/  
+    - https://www.buildzoom.com/contractor/fullmer-concrete-construction  
+    - https://www.levelset.com/contractors/fullmer-construction/  
+
+- [x] **TODO 5: Produce EVIDENCE LOG entries tied to findings**  
+  - Evidence Log section above contains multiple query → URL → fact entries.  
+
+- [x] **TODO 6: Summarize best entry points to reach decision makers**  
+  - Entry Points section provides concrete actions focused on **Paige Fullmer West**, **Bob Fullmer**, **preconstruction/estimating leaders**, and gatekeepers like **Angelina Hendershott**, plus developer and NAIOP-linked channels.  
+
+- [x] **TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)**  
+  - Edge-signal diamonds identified include:  
+    - **NAIOP Development Magazine** feature of a Fullmer project (First Park at Ocean Ranch), tying them into NAIOP industrial real estate events.  
+    - **Project Bootstrap** event with **Wolverine Boots** at a 720,000 sf distribution facility.  
+    - Recurring developers: **Pacific Industrial**, **Rockefeller Group**, **Searles Property Group**.  
+    - Gatekeepers: **Angelina Hendershott (Senior Executive Assistant Manager)** and **Gigi Beene (Government Liaison)**.  
+    - Data platforms for project monitoring: **BuildZoom** and **Levelset**.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fullmerco.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fullmerco.com/services/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=24010&id2=10000&id3=00701
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/subcontractor-prequalification
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fullmerco.com/our-team/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dpratlantagolftourney.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.findrfp.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.fullmerco.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVV&agencyCode=COSD
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/construction-projects/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/locations-contacts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.constructionmonitor.com/permittools/search
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.autodesk.com/blogs/construction/subcontractor-prequalification-best-practices/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fullmerco.com/team/management/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://fullmerco.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/1
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/fullmer-construction/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://recovery.lacounty.gov/rebuilding/licensed-contractors-and-industry-professionals-list/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://opengovus.com/california-contractor-license?zip=92663
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/fullmer-concrete-construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cience.com/company/fullmer-construction/-6078124788577526767
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://opengovus.com/california-contractor-license?zip=95684
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calculatestuff.com/financial/compound-interest-calculator
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://connect.ncdot.gov/resources/PID2023/Documents/NCPorts_PID23_NewGate_RevisedRemedialAssessment.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://opentextbc.ca/businesstechnicalmath/chapter/9-1-simple-interest-2/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.siteline.com/general-contractor/contractor/fullmer-construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://countypermitsearch.org/la-building-permit-search/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://doa.wi.gov/DEBFCapitalFinance/2009/09dis3.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.corevec.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omnicalculator.com/math/exponential-growth
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/fullmer-construction/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/prequalification
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://projects.constructconnect.com/companies/41966-fullmer-construction&find_loc=CA-91761
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.siteline.com/general-contractor/contractor/fullerton-building-systems
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://portal.ct.gov/DAS/Procurement/PreQual/DAS-Construction-Contractor-Prequalification-Program/Directory-of-Prequalified-Contractors
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/fullmer-construction-11145665
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fullmerconstruction805.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://constructioncleanpartners.com/pre-qualify-with-usa-construction-companies/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.michigan.gov/dtmb/procurement/design-and-construction/pro-and-construction-contractors/construction-bid-results
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.southparkcommons.com/companies/siteline
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fullmerco.com/our-team-2/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ca.marketscreener.com/insider/ROBERT-A-FULLMER-A0BH7Y/experience/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.officialusa.com/names/Kevin-Fulmore/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://seamless.ai/b/fullmer-construction-6125067
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dnb.com/business-directory/company-profiles.fullmer_construction.6500b74d48be5d6217239fedc40ec4aa.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3120173
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://mountainstar.lcsd2.org/staff_name/mr-fullmer/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.kennecott-groundbreakers.com/stories/g-fullmer
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://wiza.co/d/fullmer-construction/deda
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://theorg.com/org/fullmer-construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.opensecrets.org/orgs/fullmer-construction/summary?id=D000033917
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.eisenhowerlibrary.gov/sites/default/files/finding-aids/pdf/mccann-kevin-papers.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.deseret.com/1997/9/5/19332676/no-regrets/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fullmerco.com/category/press-releases/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.vcbo.com/insights/articles/vcbo-fullmer-legacy-center
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://archive.lib.msu.edu/tic/gcnew/article/1992jun22.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://projects.propublica.org/nonprofits/organizations/824314086
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://asgca.org/wp-content/uploads/2020/06/By-Design-Issue-49-Summer-2020-1.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://givefreely.com/charity-directory/nonprofit/ein-824314086/
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVZ&agencyCode=COSD
+- https://www.fullmerco.com
+- https://www.fullmerco.com/services/
+- https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=24010&id2=10000&id3=00701
+- https://www.procore.com/library/subcontractor-prequalification
+- https://www.fullmerco.com/our-team/
+- https://www.dpratlantagolftourney.org
+- https://www.findrfp.com
+- http://www.fullmerco.com
+- https://publicservices.sandiegocounty.gov/CitizenAccess/cap/CapDetail.aspx?type=1000&Module=LUEG-PDS&capID1=18CAP&capID2=00000&capID3=00HVV&agencyCode=COSD
+- https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/construction-projects/
+- https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/locations-contacts/
+- https://www.constructionmonitor.com/permittools/search
+- https://www.autodesk.com/blogs/construction/subcontractor-prequalification-best-practices/
+- https://www.fullmerco.com/team/management/
+- http://fullmerco.com
+- https://www.cslb.ca.gov/onlineservices/dataportal/
+- https://www.cslb.ca.gov/1
+- https://www.cslb.ca.gov
+- https://www.levelset.com/contractors/fullmer-construction/about/
+- https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/
+- https://recovery.lacounty.gov/rebuilding/licensed-contractors-and-industry-professionals-list/
+- https://opengovus.com/california-contractor-license?zip=92663
+- https://www.buildzoom.com/contractor/fullmer-concrete-construction
+- https://www.cience.com/company/fullmer-construction/-6078124788577526767
+- https://opengovus.com/california-contractor-license?zip=95684
+- https://www.calculatestuff.com/financial/compound-interest-calculator
+- https://connect.ncdot.gov/resources/PID2023/Documents/NCPorts_PID23_NewGate_RevisedRemedialAssessment.pdf
+- https://www.thebluebook.com/iProView/265068/fullmer-construction-co/general-contractors/
+- https://opentextbc.ca/businesstechnicalmath/chapter/9-1-simple-interest-2/
+- https://www.siteline.com/general-contractor/contractor/fullmer-construction
+- https://countypermitsearch.org/la-building-permit-search/
+- https://doa.wi.gov/DEBFCapitalFinance/2009/09dis3.pdf
+- https://www.corevec.com
+- https://www.omnicalculator.com/math/exponential-growth
+- https://www.levelset.com/contractors/fullmer-construction/
+- https://www.procore.com/prequalification
+- https://projects.constructconnect.com/companies/41966-fullmer-construction&find_loc=CA-91761
+- https://www.siteline.com/general-contractor/contractor/fullerton-building-systems
+- https://portal.ct.gov/DAS/Procurement/PreQual/DAS-Construction-Contractor-Prequalification-Program/Directory-of-Prequalified-Contractors
+- https://www.mapquest.com/us/california/fullmer-construction-11145665
+- https://www.fullmerconstruction805.com
+- https://constructioncleanpartners.com/pre-qualify-with-usa-construction-companies/
+- https://www.michigan.gov/dtmb/procurement/design-and-construction/pro-and-construction-contractors/construction-bid-results
+- https://www.southparkcommons.com/companies/siteline
+- https://www.fullmerco.com/our-team-2/
+- https://ca.marketscreener.com/insider/ROBERT-A-FULLMER-A0BH7Y/experience/
+- https://www.officialusa.com/names/Kevin-Fulmore/
+- https://seamless.ai/b/fullmer-construction-6125067
+- https://www.dnb.com/business-directory/company-profiles.fullmer_construction.6500b74d48be5d6217239fedc40ec4aa.html
+- https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3120173
+- https://mountainstar.lcsd2.org/staff_name/mr-fullmer/
+- https://www.kennecott-groundbreakers.com/stories/g-fullmer
+- https://wiza.co/d/fullmer-construction/deda
+- https://theorg.com/org/fullmer-construction
+- https://www.opensecrets.org/orgs/fullmer-construction/summary?id=D000033917
+- https://www.eisenhowerlibrary.gov/sites/default/files/finding-aids/pdf/mccann-kevin-papers.pdf
+- https://www.deseret.com/1997/9/5/19332676/no-regrets/
+- https://www.fullmerco.com/category/press-releases/
+- https://www.vcbo.com/insights/articles/vcbo-fullmer-legacy-center
+- https://archive.lib.msu.edu/tic/gcnew/article/1992jun22.pdf
+- https://projects.propublica.org/nonprofits/organizations/824314086
+- https://asgca.org/wp-content/uploads/2020/06/By-Design-Issue-49-Summer-2020-1.pdf
+- https://givefreely.com/charity-directory/nonprofit/ein-824314086/

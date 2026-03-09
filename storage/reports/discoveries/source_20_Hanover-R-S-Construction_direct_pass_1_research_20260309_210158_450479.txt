@@ -1,0 +1,668 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 20
+Party: Hanover R S Construction
+License: 970389-B
+Permit: 21010-10001-06954
+Generated: 2026-03-09 21:01:58
+Stage: direct_pass_1_research
+Method: perplexity_direct
+Provider: Perplexity
+Model: openai/gpt-5.1
+==================================================
+
+1. TARGET SUMMARY
+- Hanover R.S. Construction, LLC is a multi-state general contractor entity tied to Hanover Company, a Houston-based multifamily and mixed‑use developer. Public records show Hanover R.S. Construction, LLC registered in multiple states with principal address 1780 S Post Oak Lane, Houston, TX 77056, managed by Hanover R.S. Limited Partnership, a related Hanover entity.  
+  Sources: North Carolina SOS business record for “Hanover R.S. Construction LLC” (Sosid 1284761) https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066; Florida Sunbiz record for “HANOVER R.S. CONSTRUCTION LLC” https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+- Hanover Company’s own materials state that its Construction Division is fully integrated into all Hanover projects, focused exclusively on multifamily and mixed‑use projects. This strongly indicates that Hanover R.S. Construction, LLC is the in‑house GC delivering Hanover Company developments, including in the Los Angeles area.  
+  Source: Hanover Company “Construction Expertise” page https://www.hanoverco.com/capabilities/construction/  
+- Levelset lists Hanover R.S. Construction, LLC as a “General Contractor” with multiple office addresses (Houston and Boston) and provides an “Accounts Payable” and licensing/compliance contact hub for subcontractors and suppliers.  
+  Source: Levelset AP profile https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+- Levelset payment history and permit data for Hanover R.S. Construction, LLC and Hanover R.S. Limited Partnership show a large, national footprint of multifamily and commercial projects (including Texas, California, Massachusetts, Pennsylvania, Florida), often on Hanover Company–branded projects.  
+  Sources:  
+  – Hanover R.S. Construction, LLC payment history https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/  
+  – Hanover R.S. Limited Partnership permits & new projects https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+- In Los Angeles specifically, Urbanize LA covers “Hanover Hollywood,” a seven‑story, 270‑unit mixed‑use development at 6200 Sunset Blvd by Hanover Company, noting that Hanover has also recently developed similar multifamily projects in Westchester and Warner Center. While the GC is not named, Hanover’s integrated model implies Hanover R.S. Construction, LLC (or a sister Hanover construction entity) as construction decision maker.  
+  Source: Urbanize LA – “Seven-story, 270-unit development topped out at 6200 Sunset Boulevard” https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+Primary targeting implication: Hanover R.S. Construction, LLC is likely the construction decision‑maker for Hanover Company’s LA multifamily developments (e.g., Hanover Hollywood, Westchester, Warner Center). Access will flow through Hanover’s construction management and preconstruction teams, which coordinate via centralized systems like Procore and Levelset, and through LA‑based project collaborators (notably Steinberg Hart and peer developers).
+
+
+2. PEOPLE  (Decision‑maker / gatekeeper drill‑down)
+
+2.1. CORTEZ ALLEN JOSEPH JR
+- Role / Title  
+  - Listed as “Owned by: Cortez Allen Joseph Jr” for Hanover R.S. Limited Partnership on BuildZoom’s contractor profile for the Hollywood, FL office.  
+    Source: BuildZoom – Hanover R.S. Limited Partnership https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+- Authority level  
+  - Executive/ownership level for Hanover R.S. Limited Partnership, which is in turn listed as the manager (MGRM) of Hanover R.S. Construction, LLC in Florida corporate filings. This places him as a high‑level decision maker over the construction entity that manages Hanover projects nationally (including California/LA).  
+    Source: Sunbiz – HANOVER R.S. CONSTRUCTION LLC (manager shown as HANOVER R.S. LIMITED PARTNERSHIP) https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+- Contact info (publicly visible)  
+  - Direct phone or email for Cortez Allen Joseph Jr did not appear in the reviewed public snippets.  
+  - Corporate contact routes for his entity:  
+    - Hanover R.S. Limited Partnership (Hollywood, FL) via BuildZoom profile.  
+      Source: https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+    - Hanover R.S. Construction, LLC corporate addresses and phone via Levelset and Procore (see below).  
+- Why he matters for winning interior design work  
+  - As the listed owner of Hanover R.S. Limited Partnership, and with that LP managing Hanover R.S. Construction, LLC, he sits at the top of Hanover’s construction governance. He would influence:  
+    - Which internal teams handle specific regional projects.  
+    - Overall GC/vendor policy and risk appetite.  
+    - Approval of major consultant categories for large developments (including interior design partners brought in by Hanover Construction).  
+- Best access route  
+  - Corporate‑level relationship building rather than cold outreach to him personally:  
+    - Use Hanover R.S. Construction, LLC’s vendor/payment infrastructure (Levelset AP page) to become a known, vetted vendor, then request introduction to relevant regional construction or preconstruction leaders.  
+      Source: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+    - Engage on an active or upcoming Hanover project where Hanover R.S. Limited Partnership is listed as owner/contractor, positioning your client as an interiors resource—especially for amenity spaces and unit interiors in large multifamily.  
+      Source: Levelset – Hanover R.S. Limited Partnership permits (e.g., $112.4M parking garage project) https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+- Potential meeting opportunities  
+  - Project‑related coordination meetings: once engaged as a vendor or design consultant on a Hanover project (via Procore/Levelset), high‑level reviews or OAC (owner–architect–contractor) sessions can be escalated to ownership/LP level for major decisions.  
+  - Industry conferences and multifamily investment or development forums where Hanover Company participates; specific appearances for Cortez Allen Joseph Jr were not identified in the reviewed public snippets.  
+- Source URLs  
+  - https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+  - https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+  - https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+
+2.2. HOWARD DYER SMITH
+- Role / Title  
+  - Listed on BuildZoom as “Employee: Howard Dyer Smith” associated with Hanover R.S. Construction LLC at 1780 S Post Oak Lane, Houston, TX 77056.  
+    Source: BuildZoom – Hanover Rs Construction LLC (Colorado license profile) https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co  
+- Authority level  
+  - Operational / technical (likely qualifying individual or senior construction manager for licensing purposes in that jurisdiction). BuildZoom typically shows the responsible party for a licensed contractor; in this context, he likely has significant authority over construction operations rather than being a junior staffer.  
+- Contact info (publicly visible)  
+  - Company contact phone on BuildZoom profile: (713) 858‑0824 (Hanover R.S. Construction LLC office).  
+    Source: https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co  
+  - Corporate address: 1780 S Post Oak Lane, Houston, TX 77056 (matches Hanover corporate address).  
+    Sources: BuildZoom (above); Sunbiz record (principal address) https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+- Why he matters for winning interior design work  
+  - As the listed responsible employee for Hanover R.S. Construction LLC’s license in one state, he is likely embedded in Hanover’s construction management structure. People in this position typically:  
+    - Oversee compliance and technical aspects of project delivery.  
+    - Influence selection of key consultants (including interiors) for projects they oversee.  
+    - Have visibility into the pipeline of upcoming projects across markets.  
+- Best access route  
+  - Start via formal channels rather than contacting him directly:  
+    - Register / connect through Procore “Network” listing for Hanover R.S. Construction LLC, which indicates an official bid management contact point: Hanover R.S. Construction LLC, 5847 San Felipe St, Houston, TX, phone +1 713‑952‑2363.  
+      Source: Procore Network – Hanover R.S. Construction LLC https://network.procore.com/p/hanover-rs-construction-llc-houston  
+    - Use Levelset AP page to obtain the latest office‑specific contact email(s) and send a targeted capabilities packet referencing multifamily interior projects, offering design support for upcoming Hanover developments in Los Angeles and other West Coast markets.  
+      Source: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+- Potential meeting opportunities  
+  - Vendor prequalification or bid meetings initiated through Procore bid invitations.  
+  - Kickoff and design coordination meetings on West Coast multifamily projects once engaged as a design consultant.  
+- Source URLs  
+  - https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co  
+  - https://network.procore.com/p/hanover-rs-construction-llc-houston  
+  - https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+
+2.3. ENTITY‑LEVEL “GATEKEEPERS” (STRUCTURAL)
+Concrete named gatekeepers (e.g., coordinators, assistants) did not appear in the snippets reviewed. However, two structural gatekeeping layers emerge:
+
+- Levelset AP / Accounts Payable & Compliance Team  
+  - Function: controls set‑up of vendors and subcontractors for Hanover R.S. Construction, LLC; determines whether your client appears in their system and how invoices and contracts flow.  
+  - Operational importance: no vendor onboarding → no contracts or payments → no meaningful work.  
+  - Access route: web form / emails listed on Levelset profile once accessed directly (not visible in snippet but described as “Find office address, phone number, and email for each office”).  
+  - Source: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+
+- Procore Bid Management Contact  
+  - Function: receives and manages bid invitations and qualifications through Procore; controls who gets visibility to RFPs and bid packages.  
+  - Operational importance: Procore “Network” indicates they actively use Procore for bid management; this is the gate to preconstruction staff.  
+  - Contact route: corporate phone +1 713‑952‑2363 and mailing address via Procore listing.  
+  - Source: https://network.procore.com/p/hanover-rs-construction-llc-houston  
+
+
+3. COMPANY
+
+3.1. Identity & Structure
+- Legal name: HANOVER R.S. CONSTRUCTION LLC  
+  - North Carolina: Hanover R.S. Construction LLC, Sosid 1284761, Limited Liability Company, Status: Current‑Active, Date formed: 10/26/2012.  
+    Source: NC Secretary of State business record https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066  
+  - Florida: Foreign Limited Liability Company, Filing # M13000002997, Principal address 1780 S Post Oak Lane, Houston, TX 77056; manager (MGRM) Hanover R.S. Limited Partnership at the same address; active with recent annual reports (2023–2025).  
+    Source: Florida Sunbiz https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+- Related entity: HANOVER R.S. LIMITED PARTNERSHIP  
+  - Acts as manager of Hanover R.S. Construction LLC (per Sunbiz).  
+  - Licensed contractor with multiple state licenses; BuildZoom lists it as a Certified General Contractor in Florida with 8 other licenses and a strong performance score.  
+    Source: BuildZoom https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+
+3.2. Type, Markets, Specialties
+- Type: General Contractor (GC) aligned with Hanover Company’s development platform.  
+  - Levelset explicitly categorizes Hanover R.S. Construction, LLC as “General Contractor.”  
+    Source: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+- Specialties / Markets:  
+  - Hanover’s own construction division focuses exclusively on multifamily and mixed‑use projects, including high‑rise, mid‑rise, and garden‑style communities, with some industrial space.  
+    Source: Hanover Construction Expertise page https://www.hanoverco.com/capabilities/construction/  
+  - Levelset project history shows projects in:  
+    - Multifamily residential and commercial buildings in CA (San Jose, Burlingame), TX (Houston, Richmond, Dallas), MA (Everett, Charlestown), FL, GA, PA.  
+    Source: Hanover R.S. Construction, LLC payment/project history https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/  
+- Geographic scope: national, with a strong presence in Texas, California, and other growth markets.  
+
+3.3. Scale
+- Project scale:  
+  - Example: Permit 2019‑239104 in Dallas, TX associated with Hanover R.S. Limited Partnership shows a $112,397,000 commercial parking garage project, indicating comfort with nine‑figure construction budgets.  
+    Source: Levelset – Hanover R.S. Limited Partnership permits https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+  - Levelset shows dozens of projects across multiple years; BuildZoom ranks Hanover R.S. Limited Partnership in the top ~16% of Florida contractors by score, which suggests substantial volume and capability.  
+    Source: BuildZoom https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+
+3.4. Licensing
+- California CSLB license #970389‑B is referenced in your brief but did not surface in publicly indexed detail pages during this investigation; CSLB’s general “Check a License” portal was accessed but specific license data for #970389 could not be retrieved in the snippets seen.  
+  Sources:  
+  - CSLB “Check a License” portal https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+  - CSLB main site https://www.cslb.ca.gov  
+- Multiple state registrations (NC, FL) confirm Hanover R.S. Construction, LLC as a compliant multi‑state entity.  
+
+3.5. Known Offices / Addresses (from Levelset and public records)
+- 1780 S Post Oak Lane, Houston, TX 77056 (principal and mailing address for HANOVER R.S. CONSTRUCTION LLC and HANOVER R.S. LIMITED PARTNERSHIP).  
+  Sources: Sunbiz record; BuildZoom contractor profiles:  
+  – https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+  – https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co  
+- 3530 W Dallas St, Houston, TX 77019; 178 Post Oak Blvd, Houston, TX 77027; 1 Marina Park Dr Ste 701, Boston, MA 02210 (offices listed for Hanover R.S. Construction, LLC on Levelset).  
+  Source: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+
+3.6. Reputation
+- BBB profiles for Hanover R S Construction, LLC (Medford, MA) and Hanover Rs Construction LLC (Danville, CA) both show:  
+  - “Not Rated” due to insufficient information.  
+  - Each lists ~3 employees and small local footprints, suggesting some localized use of the Hanover R.S. brand outside Hanover’s core Houston base.  
+  Sources:  
+  - Medford, MA profile https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821  
+  - Danville, CA profile https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493  
+
+
+4. NETWORKING OPPORTUNITIES
+
+4.1. Digital Procurement / Vendor Platforms (Critical “Diamonds”)
+- Procore Network – Hanover R.S. Construction, LLC  
+  - Listing: Hanover R.S. Construction, LLC, 5847 San Felipe St, Houston, TX, phone +1 713‑952‑2363, category “Bid Management.”  
+  - Implication: They actively use Procore as a bid/procurement hub. Getting onto their Procore contact list is a primary path to seeing RFPs and bid invitations, including for interiors packages on LA projects.  
+  - Source: https://network.procore.com/p/hanover-rs-construction-llc-houston  
+
+- Levelset – Hanover R.S. Construction, LLC AP / Vendor Info  
+  - Page is explicitly framed for subcontractors/suppliers: “On this page you can find Hanover R.S. Construction, LLC Accounts Payable information to get paid… Find office address, phone number, and email for each office. Verify construction licenses, bond information, and worker’s compensation information. Working with Hanover R.S. Construction, LLC as a subcontractor or supplier?”  
+  - Implication: This is the operational gateway to set your client up as a vendor and be trusted for payment. It also provides a channel to ask who oversees interior finishes/design procurement.  
+  - Source: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+
+4.2. LA‑Area Ecosystem Touchpoints
+- Hanover Hollywood (6200 Sunset Blvd, Los Angeles)  
+  - Stakeholders:  
+    - Developer: Hanover Company.  
+    - Architect: Steinberg Hart.  
+  - Urbanize LA coverage implies interaction among Hanover’s construction team, Steinberg Hart, and local permitting actors in Hollywood. These parties often surface together at LA development events, panel discussions, and association meetings (NAIOP SoCal, ULI LA, AIA LA, etc.), which are practical venues to meet Hanover‑adjacent decision makers even when Hanover is not explicitly promoted.  
+  - Source: Urbanize LA article https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+4.3. Cross‑Market Networking
+- Because Hanover R.S. Construction is integrated with Hanover Company across markets, networking with Hanover’s design and development collaborators in other regions (Steinberg Hart, Mill Creek Residential as peer, Essex Property Trust as neighboring developer) can produce warm introductions into Hanover’s LA construction leadership.  
+  - Source for adjacent developers: Urbanize LA (mentions Essex Property Trust and Mill Creek Residential’s nearby projects) https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+
+5. DISCOVERED PROJECTS
+
+5.1. Hanover Hollywood – Los Angeles, CA
+- Name / Description  
+  - “Hanover Hollywood,” a seven‑story mixed‑use development at 6200 Sunset Blvd, Hollywood, Los Angeles.  
+- Key facts  
+  - 270 studio, one‑, and two‑bedroom apartments.  
+  - 12,000 sq ft ground‑floor retail; basement parking for 361 vehicles.  
+  - Podium‑type building; amenities include courtyards, roof decks, fitness center.  
+  - Architect: Steinberg Hart.  
+  - Developed by Hanover Company; given Hanover’s integrated construction division, Hanover R.S. Construction, LLC is the likely construction arm involved.  
+- Status / Timeline  
+  - Construction had reached top floor as of 2021; anticipated completion around 2022 (per environmental study cited).  
+- Why it matters  
+  - Proof that Hanover is an active multifamily developer in LA.  
+  - Identifies a concrete local ecosystem (developers, architect, neighbors) and gives your client a project history to reference when approaching Hanover’s construction team about comparable future LA projects.  
+- Source  
+  - Urbanize LA: https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+5.2. Westchester & Warner Center Projects – Los Angeles Region
+- Description  
+  - Urbanize LA notes that “Hanover Company, which is headquartered in Houston, recently developed similar multifamily housing projects in Westchester and Warner Center.” Specific project names are not given in the snippet, but they confirm multiple LA‑area projects.  
+- Why it matters  
+  - Indicates a pipeline of LA projects and the likelihood of future work in those submarkets, with Hanover R.S. Construction as GC.  
+- Source  
+  - Urbanize LA: https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+5.3. Selected California Projects (Non‑LA but useful for credibility)
+- Commercial/Residential projects in CA listed in Hanover R.S. Construction, LLC’s Levelset history:  
+  - 905 N Capitol Ave, San Jose, CA 95133 (Commercial Construction Project).  
+  - 2620 Seely Ave, San Jose, CA 95134 (Commercial Construction Project).  
+  - 1855‑1881 N Rollins Road, Burlingame, CA 94010 (Residential Construction Project).  
+  - 44‑48 Garden St and 337 2ND ST, Everett, MA (example of out‑of‑state multifamily presence).  
+- Why it matters  
+  - Shows Hanover’s comfort working with California building codes and local AHJs, including Bay Area municipalities, which strengthens the case for a continuing pipeline in California (including LA).  
+- Source  
+  - Levelset – Hanover R.S. Construction, LLC payment/project history https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/  
+
+5.4. Large‑Scale Dallas Parking Garage – Hanover R.S. Limited Partnership
+- Project  
+  - Permit 2019‑239104 BP; location Dallas, Texas; value $112,397,000; “Parking Garage,” listed under Hanover R.S. Limited Partnership (with Three D Properties Limited also listed).  
+- Why it matters  
+  - Demonstrates financial and operational scale; also reveals another collaborator (Three D Properties Limited).  
+- Source  
+  - Levelset – Hanover R.S. Limited Partnership permits https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+
+
+6. DISCOVERED ENTITIES (Network Map Seeds)
+
+6.1. Core Hanover Entities
+- Hanover R.S. Construction, LLC – General Contractor, multi‑state; operates as the construction arm for Hanover Company projects.  
+  Sources: Levelset GC profile; NC & FL registries  
+  – https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+  – https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066  
+  – https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+
+- Hanover R.S. Limited Partnership – Owner/manager & licensed contractor  
+  - Role: Manager (MGRM) of Hanover R.S. Construction, LLC (per Sunbiz); owner of licensed GC entity in Florida (per BuildZoom); owner on major permits (Dallas parking garage).  
+  Sources:  
+  – Sunbiz: see above link  
+  – BuildZoom: https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+  – Levelset permits: https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+
+- Hanover Company – Developer/owner  
+  - Role: Real estate developer focusing on high‑quality multifamily and mixed‑use; Hanover’s construction division (inc. Hanover R.S. entities) executes the builds.  
+  - LA presence via Hanover Hollywood, Westchester, and Warner Center projects.  
+  Sources:  
+  – Hanover Co construction capabilities: https://www.hanoverco.com/capabilities/construction/  
+  – Urbanize LA: https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+6.2. LA‑Area & Project‑Level Collaborators / Neighbors
+- Steinberg Hart – Architect for Hanover Hollywood.  
+  - Relationship: Architect of record; key design partner. Often interacts with developer and GC on early‑stage design and interior concepting, making them an excellent relational bridge.  
+  - Source: Urbanize LA (names Steinberg Hart as architect) https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+- Essex Property Trust – Neighboring developer at 6250 Sunset Boulevard.  
+  - Relationship: Peer developer in same corridor; not directly tied to Hanover R.S., but part of the same Hollywood multifamily ecosystem that Hanover operates within.  
+  - Source: Urbanize LA (mentions Essex as developer of a 200‑unit complex nearby) https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+- Mill Creek Residential Trust – Developer of Modera Argyle near Hanover Hollywood.  
+  - Relationship: Peer/competitor developer; operates in same submarket, likely aware of Hanover’s construction practices and could be used as a comparative reference by your client.  
+  - Source: same Urbanize LA article.
+
+6.3. Other Collaborators / Vendors
+- Three D Properties Limited – Listed alongside Hanover R.S. Limited Partnership on the $112M Dallas parking garage permit.  
+  - Relationship: Co‑listed contractor/developer on a large project; potential partner or JV.  
+  - Source: Levelset – Hanover R.S. Limited Partnership permits https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+
+- YKK AP – Appears in Hanover R.S. Construction, LLC Levelset project history as a separate contractor on an Atlanta project where Hanover is also active (285 Mayson Ave NE).  
+  - Relationship: Parallel contractor / supplier context; indicates typical scale of suppliers on Hanover projects.  
+  - Source: Levelset project history https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/  
+
+6.4. Regional Aliases / Local Registrations
+- Hanover R S Construction, LLC – Medford, MA (Home Builders; BBB).  
+  - Relationship: Regional office/registration under same or similar name, indicating small local team in New England.  
+  - Source: https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821  
+
+- Hanover Rs Construction LLC – Danville, CA (Construction Services; BBB).  
+  - Relationship: CA business listing with 3 employees; possible regional office or registration supporting West Coast projects.  
+  - Source: https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493  
+
+- Hanover R S Construction LLC – MapQuest listing in Danville, CA.  
+  - Relationship: confirms CA presence and service area.  
+  - Source: https://www.mapquest.com/us/california/hanover-rs-construction-llc-373945701  
+
+
+7. ENTRY POINTS (Actionable)
+
+- Use Procore as the front door to preconstruction  
+  - Action:  
+    - Create / optimize your client’s Procore profile.  
+    - Reach out via Hanover R.S. Construction, LLC’s Procore Network listing and ask to be added to their vendor/bid lists for interior design and interior finishes in California and specifically LA.  
+  - Justification: Procore listing explicitly identifies Hanover R.S. Construction, LLC as a Bid Management contact, making it a primary conduit to estimators and precon staff.  
+  - Source: https://network.procore.com/p/hanover-rs-construction-llc-houston  
+
+- Register and get recognized via Levelset  
+  - Action:  
+    - Use the Levelset AP page to obtain contact emails and send a concise capabilities package featuring multifamily interiors work, referencing Hanover Hollywood and California projects from Levelset’s own record.  
+    - Ask: “Who on your team leads interiors / finishes procurement for upcoming West Coast multifamily projects?”  
+  - Source: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+
+- Target LA‑centric collaborators as warm‑intro channels  
+  - Action:  
+    - Approach Steinberg Hart’s LA studio with a portfolio tailored to amenity spaces and unit interiors for urban multifamily, specifically referencing Hanover Hollywood.  
+    - Objective: earn a place on project teams where Steinberg Hart is likely to recommend interior designers to Hanover’s construction/development team.  
+  - Source: Urbanize LA noting Steinberg Hart as architect of Hanover Hollywood https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+- Leverage Hanover’s California track record  
+  - Action:  
+    - When in dialog with Hanover R.S. Construction contacts (via Levelset/Procore), explicitly reference their California projects (San Jose, Burlingame) as evidence that your client understands local codes and multifamily standards; then pivot to ask about upcoming LA or SoCal work.  
+  - Source: Levelset project history https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/  
+
+- Corporate‑level relationship building  
+  - Action:  
+    - Use Houston HQ contact info from BuildZoom and Sunbiz to request a structured meeting with Hanover’s construction leadership (or business development/preconstruction team) focused on upcoming LA and West Coast developments.  
+    - Position: interior design partner able to support both unit interiors and amenity programs for large multifamily.  
+  - Sources:  
+    – BuildZoom Hanover R.S. Construction LLC profile (phone & address) https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co  
+    – Sunbiz principal address: https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+
+
+8. RED FLAGS
+
+- Slow payment report  
+  - Levelset’s permit/owner record for Hanover R.S. Limited Partnership mentions: “Slow payment reported (90+ days) for Commercial project in Dallas, Texas Over $10,000 | 5 months ago.”  
+  - Implication: On at least one project, a vendor reported significant payment delays. Your client should clarify payment terms and cash‑flow expectations before deep engagement.  
+  - Source: https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+
+- Limited transparency on individual decision makers  
+  - Public records and construction platforms reveal structure and scale but provide few named executives associated specifically with Hanover R.S. Construction, LLC, which can lengthen the time needed to reach the true LA decision makers. This makes Procore/Levelset and collaborator‑driven introductions even more important.  
+
+- BBB “Not Rated” profiles  
+  - Both the Medford, MA and Danville, CA BBB profiles for Hanover R S Construction show “Not Rated,” not due to complaints but due to lack of information. This is neutral, but it means there is little public consumer‑level visibility if issues arise.  
+  - Sources:  
+    – https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821  
+    – https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493  
+
+
+9. SOURCES (deduplicated key URLs)
+
+- Hanover R.S. Construction, LLC – corporate & registry
+  - NC SOS business record: https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066  
+  - Florida Sunbiz record: https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530  
+  - BuildZoom Hanover R.S. Construction LLC: https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co  
+
+- Hanover R.S. Limited Partnership
+  - BuildZoom: https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+  - Levelset permits: https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+
+- Procurement / vendor platforms
+  - Levelset AP & license info: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+  - Levelset project history: https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/  
+  - Procore Network listing: https://network.procore.com/p/hanover-rs-construction-llc-houston  
+
+- Hanover Company context
+  - Hanover construction capabilities: https://www.hanoverco.com/capabilities/construction/  
+
+- LA‑specific & ecosystem sources
+  - Urbanize LA – Hanover Hollywood article: https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+
+- Reputation
+  - BBB Medford, MA: https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821  
+  - BBB Danville, CA: https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493  
+
+- Licensing infrastructure
+  - CSLB “Check a License”: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+  - CSLB main: https://www.cslb.ca.gov  
+
+
+10. SEARCH LEDGER (queries executed, in order)
+
+1. CSLB license 970389  
+2. "Hanover R S Construction" Los Angeles construction  
+3. "Hanover R S Construction LLC"  
+4. "970389" "Hanover" "Construction"  
+5. "Hanover R S Construction" CSLB  
+6. "970389" "Hanover R.S. Construction"  
+7. "License # 970389"  
+8. "970389" "Contractor's License Detail"  
+9. "21010-10001-06954"  
+
+
+11. EVIDENCE LOG (query → URL → extracted fact)
+
+- Query: "Hanover R S Construction" Los Angeles construction  
+  - URL: https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066  
+    - Fact: Hanover R.S. Construction LLC registered as a North Carolina Limited Liability Company, Sosid 1284761, Status Current‑Active, Date formed 10/26/2012.  
+  - URL: https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction  
+    - Fact: Hanover Company developing a 270‑unit mixed‑use project (“Hanover Hollywood”) at 6200 Sunset Blvd in LA; Steinberg Hart is architect; Hanover has similar projects in Westchester and Warner Center.  
+
+- Query: "Hanover R S Construction LLC"  
+  - URL: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/  
+    - Fact: Hanover R.S. Construction, LLC listed as a General Contractor; page is positioned for subcontractors/suppliers; provides office addresses (3530 W Dallas St, 178 Post Oak Blvd, 1780 S Post Oak Ln in Houston; 1 Marina Park Dr, Boston) and promises AP contact data/licensing details.  
+  - URL: https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/  
+    - Fact: Shows Hanover R.S. Construction, LLC project/payment history across many states, including CA (San Jose, Burlingame), TX, MA, FL, GA; types include “Commercial Construction Project” and “Residential Construction Project” at specific addresses.  
+  - URL: https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821  
+    - Fact: BBB profile for Hanover R S Construction, LLC in Medford, MA; 13 years in business; 3 employees; BBB Rating “Not Rated” due to insufficient information.  
+  - URL: https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493  
+    - Fact: BBB profile for Hanover Rs Construction LLC in Danville, CA; 3 employees; “Not Rated”; address 279 Front St, Danville, CA 94526.  
+  - URL: https://www.mapquest.com/us/california/hanover-rs-construction-llc-373945701  
+    - Fact: Confirms Hanover Rs Construction LLC listing in Danville, CA with construction services description.  
+  - URL: https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co  
+    - Fact: Hanover Rs Construction LLC at 1780 S Post Oak Lane, Houston, TX 77056; phone (713) 858‑0824; lists “Employee: Howard Dyer Smith”; BuildZoom score 99, ranking in top 15% of Colorado contractors; at least 9 projects over past 3 years.  
+  - URL: https://network.procore.com/p/hanover-rs-construction-llc-houston  
+    - Fact: Procore Network page for Hanover R.S. Construction LLC, address 5847 San Felipe St, Houston, TX; phone +1 713‑952‑2363; categorized under “Bid Management.”  
+
+- Query: "970389" "Hanover" "Construction"  
+  - URL: https://www.hanoverco.com/capabilities/construction/  
+    - Fact: Hanover’s Construction Division is involved in all Hanover projects; fully integrated into project planning, design, and decision‑making; exclusive focus on multifamily and mixed‑use; vertically integrated with development & property management.  
+
+- Query: "Hanover R S Construction" CSLB  
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+    - Fact: CSLB check‑a‑license portal accessed; instructions show license numbers do not include letters; no specific public snippet for license #970389 surfaced.  
+
+- Query: "970389" "Hanover R.S. Construction"  
+  - No target‑specific CSLB detail found in visible snippets.  
+
+- Query: "CSLB license 970389"  
+  - URL: https://www.cslb.ca.gov  
+    - Fact: California Contractors State License Board main site; confirms CSLB is the state licensing authority but does not show an immediate detail page for license #970389 in snippet form.  
+
+- Query: "License # 970389"  
+  - No Hanover‑specific CSLB or LADBS detail surfaced in the snippets reviewed.  
+
+- Query: "21010-10001-06954"  
+  - No publicly indexed detail clearly tying this permit number to Hanover R.S. Construction surfaced in the snippets reviewed.  
+
+- Query (implied via search results context): "Hanover R.S. Limited Partnership permits Levelset"  
+  - URL: https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/  
+    - Fact: Lists Hanover R.S. Limited Partnership as owner on multiple permits, including permit 2019‑239104 BP (Dallas parking garage, value $112,397,000); notes a slow payment report (90+ days) on a Dallas commercial project.  
+
+- Query (implied): "Hanover R S Limited Partnership BuildZoom"  
+  - URL: https://www.buildzoom.com/contractor/hanover-rs-limited-partnership  
+    - Fact: Hanover Rs Limited Partnership, 1028 Tyler St, Hollywood, FL, holds Certified General Contractor license + 8 other licenses in Florida; BuildZoom score 98, top 16% of 191,428 Florida contractors; lists “Owned by: Cortez Allen Joseph Jr.”  
+
+
+12. REQUIRED TODO CHECKLIST
+
+- [ ] TODO 1: Confirm target identity (name, license, permit/address match)  
+  - Entity identity and multi‑state registrations are confirmed; however, a direct public mapping between CA CSLB license #970389 or permit #21010-10001-06954 and Hanover R.S. Construction, LLC did not surface in the sources reviewed.
+
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target  
+  - CSLB check‑a‑license portal and multiple state registries (NC SOS, Florida Sunbiz) were reviewed.
+
+- [x] TODO 3: Identify at least 2 potential decision makers  
+  - Identified: Cortez Allen Joseph Jr (owner of Hanover R.S. Limited Partnership) and Howard Dyer Smith (listed employee/qualifier for Hanover R.S. Construction LLC).
+
+- [x] TODO 4: Capture at least 3 concrete source URLs  
+  - Numerous concrete URLs captured (Levelset, BuildZoom, Sunbiz, NC SOS, Urbanize LA, Procore, BBB).
+
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings  
+  - Evidence log above maps queries to URLs and extracted facts.
+
+- [x] TODO 6: Summarize best entry points to reach decision makers  
+  - Entry points summarized in Section 7: Procore, Levelset, LA collaborators (Steinberg Hart), Hanover corporate contacts.
+
+- [x] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)  
+  - Edge signals identified include:  
+    - Procore bid management listing (digital procurement gateway).  
+    - Levelset AP/vendor portal (payments and onboarding gatekeeper).  
+    - Hanover Hollywood / LA multifamily pipeline via Urbanize LA (evidence of ongoing and likely future LA work).
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/hanover-rs-construction-llc-373945701
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://hanoverco.com/capabilities/construction/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanoverco.com/capabilities/construction/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/hanover-rs-limited-partnership
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/georgia/hanover-r-s-construction-llc-420491939
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/massachusetts/r-s-hanover-construction-llc-424193495
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://network.procore.com/p/hanover-rs-construction-llc-houston
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www2.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.lookupcontractor.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://elcr-trk.aspgov.com/eTRAKiT/Search/license2.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://california.uhire.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www2.societyofauthors.org/lsm/cslb-license-lookup
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://opengovus.com/california-contractor-license?zip=95684
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://search.aic.edu/dwd/cslb-license-search
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://vogeinc.com/wp-content/uploads/2024/07/Check-A-License-License-Detail-CSLB-2.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://alameda.graphtek.com/community-development/building/cslb
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanover.com/businesses/industries/construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ma/hanover/category/construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://sites.hanover.com/linec/docs/114-1281.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ncbola.org/resources/corporate-licensee-lookup/hanover-r.s-limited-partnership
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/il/hanover/category/construction-services
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://grconstruction.net
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://pr.mo.gov/licensee-tsearch.asp
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/1
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calculatorsoup.com/calculators/math/math.php
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ginniemae.gov/investors/disclosures_and_reports/ProspectusesLib/2025Feb24-027.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mathportal.org/calculators/numbers-calculators/percentage-calculator.php
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://li-public.fmcsa.dot.gov/lihtml/rptspdf/LI_REGISTER20200109.PDF
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contractorlicenselookup.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omnicalculator.com/math/multiplication
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://madpl.mylicense.com/Verification/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://weblink.cityofdubuque.org/WebLink/DocView.aspx?id=2217176&dbid=0&repo=City-of-DBQ
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://percentagecalculatorshub.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.lsu.edu/trademark/files/1.22-licensee-list-alphabetical.xlsx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cca.hawaii.gov/pvl/boards/contractor/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calculator.net/math-calculator.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066
+- https://www.mapquest.com/us/california/hanover-rs-construction-llc-373945701
+- https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/
+- https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493
+- https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co
+- https://hanoverco.com/capabilities/construction/
+- https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530
+- https://www.hanoverco.com/capabilities/construction/
+- https://www.buildzoom.com/contractor/hanover-rs-limited-partnership
+- https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction
+- https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821
+- https://www.mapquest.com/us/georgia/hanover-r-s-construction-llc-420491939
+- https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/
+- https://www.mapquest.com/us/massachusetts/r-s-hanover-construction-llc-424193495
+- https://network.procore.com/p/hanover-rs-construction-llc-houston
+- https://www2.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.lookupcontractor.com
+- https://elcr-trk.aspgov.com/eTRAKiT/Search/license2.aspx
+- https://california.uhire.com
+- https://www2.societyofauthors.org/lsm/cslb-license-lookup
+- https://opengovus.com/california-contractor-license?zip=95684
+- https://search.aic.edu/dwd/cslb-license-search
+- https://vogeinc.com/wp-content/uploads/2024/07/Check-A-License-License-Detail-CSLB-2.pdf
+- https://alameda.graphtek.com/community-development/building/cslb
+- https://www.hanover.com/businesses/industries/construction
+- https://www.bbb.org/us/ma/hanover/category/construction
+- https://www.cslb.ca.gov
+- https://sites.hanover.com/linec/docs/114-1281.pdf
+- https://www.cslb.ca.gov/onlineservices/dataportal/
+- https://www.levelset.com/property-owners/hanover-r-s-limited-partnership/permits/
+- https://www.ncbola.org/resources/corporate-licensee-lookup/hanover-r.s-limited-partnership
+- https://www.bbb.org/us/il/hanover/category/construction-services
+- https://grconstruction.net
+- https://pr.mo.gov/licensee-tsearch.asp
+- https://www.cslb.ca.gov/1
+- https://www.calculatorsoup.com/calculators/math/math.php
+- https://www.ginniemae.gov/investors/disclosures_and_reports/ProspectusesLib/2025Feb24-027.pdf
+- https://www.mathportal.org/calculators/numbers-calculators/percentage-calculator.php
+- https://li-public.fmcsa.dot.gov/lihtml/rptspdf/LI_REGISTER20200109.PDF
+- https://contractorlicenselookup.com
+- https://www.omnicalculator.com/math/multiplication
+- https://madpl.mylicense.com/Verification/
+- https://weblink.cityofdubuque.org/WebLink/DocView.aspx?id=2217176&dbid=0&repo=City-of-DBQ
+- https://percentagecalculatorshub.com
+- https://www.lsu.edu/trademark/files/1.22-licensee-list-alphabetical.xlsx
+- https://cca.hawaii.gov/pvl/boards/contractor/
+- https://www.calculator.net/math-calculator.html

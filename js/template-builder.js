@@ -3,7 +3,7 @@
  * JavaScript for wizard interface, panel designer, and template management
  */
 
-(function($) {
+(function ($) {
     'use strict';
 
     const TemplateBuilder = {
@@ -35,7 +35,7 @@
             }
         },
 
-        init: function() {
+        init: function () {
             this.setupWizardNavigation();
             this.setupUseCaseSelection();
             this.setupPanelDesigner();
@@ -45,23 +45,24 @@
             this.setupJSONEditor();
             this.setupImportExport();
             this.setupTabNavigation();
+            this.setupTemplateActivation();
         },
 
         // Wizard Step Navigation
-        setupWizardNavigation: function() {
+        setupWizardNavigation: function () {
             const self = this;
 
-            $('.wizard-next').on('click', function() {
+            $('.wizard-next').on('click', function () {
                 if (self.validateCurrentStep()) {
                     self.goToStep(self.currentStep + 1);
                 }
             });
 
-            $('.wizard-prev').on('click', function() {
+            $('.wizard-prev').on('click', function () {
                 self.goToStep(self.currentStep - 1);
             });
 
-            $('.wizard-step-indicator').on('click', function() {
+            $('.wizard-step-indicator').on('click', function () {
                 const step = $(this).data('step');
                 if (step < self.currentStep) {
                     self.goToStep(step);
@@ -69,7 +70,7 @@
             });
         },
 
-        goToStep: function(step) {
+        goToStep: function (step) {
             if (step < 1 || step > this.totalSteps) return;
 
             // Hide current step
@@ -88,7 +89,7 @@
             $('.rawwire-builder-wizard').scrollTop(0);
         },
 
-        updateNavigationButtons: function() {
+        updateNavigationButtons: function () {
             const $prevBtn = $('.wizard-prev');
             const $nextBtn = $('.wizard-next');
 
@@ -107,7 +108,7 @@
             }
         },
 
-        validateCurrentStep: function() {
+        validateCurrentStep: function () {
             switch (this.currentStep) {
                 case 1: // Template Info
                     const name = $('#template-name').val();
@@ -153,17 +154,17 @@
         },
 
         // Template Info Setup
-        setupTemplateInfo: function() {
+        setupTemplateInfo: function () {
             const self = this;
 
-            $('#template-name').on('input', function() {
+            $('#template-name').on('input', function () {
                 const name = $(this).val();
                 const slug = self.slugify(name);
                 $('#template-id').val(slug);
             });
         },
 
-        slugify: function(text) {
+        slugify: function (text) {
             return text
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, '-')
@@ -171,17 +172,17 @@
         },
 
         // Use Case Selection
-        setupUseCaseSelection: function() {
+        setupUseCaseSelection: function () {
             const self = this;
 
-            $('.use-case-card').on('click', function() {
+            $('.use-case-card').on('click', function () {
                 $('.use-case-card').removeClass('selected');
                 $(this).addClass('selected');
                 $(this).find('input[type="radio"]').prop('checked', true);
             });
         },
 
-        applyUseCaseDefaults: function(useCase) {
+        applyUseCaseDefaults: function (useCase) {
             // Apply intelligent defaults based on use case
             const defaults = {
                 'content-aggregation': {
@@ -261,7 +262,7 @@
         },
 
         // Page Management
-        renderPagesList: function() {
+        renderPagesList: function () {
             const $list = $('.pages-list');
             $list.empty();
 
@@ -278,7 +279,7 @@
         },
 
         // Panel Designer
-        setupPanelDesigner: function() {
+        setupPanelDesigner: function () {
             const self = this;
 
             // Make panel types draggable
@@ -291,35 +292,35 @@
             // Make canvas sortable
             $('.panels-canvas').sortable({
                 placeholder: 'panel-placeholder',
-                receive: function(event, ui) {
+                receive: function (event, ui) {
                     const panelType = ui.item.data('type');
                     self.addPanel(panelType);
                     ui.item.remove();
                 },
-                update: function() {
+                update: function () {
                     self.updatePanelOrder();
                 }
             });
 
             // Panel type click to add
-            $('.panel-type').on('click', function() {
+            $('.panel-type').on('click', function () {
                 const type = $(this).data('type');
                 self.addPanel(type);
             });
 
             // Canvas drop zone
-            $('.panels-canvas').on('drop', function(e) {
+            $('.panels-canvas').on('drop', function (e) {
                 e.preventDefault();
                 const panelType = e.originalEvent.dataTransfer.getData('panel-type');
                 if (panelType) {
                     self.addPanel(panelType);
                 }
-            }).on('dragover', function(e) {
+            }).on('dragover', function (e) {
                 e.preventDefault();
             });
         },
 
-        addPanel: function(type) {
+        addPanel: function (type) {
             const panel = {
                 id: this.generatePanelId(),
                 type: type,
@@ -333,11 +334,11 @@
             this.renderPanelsCanvas();
         },
 
-        generatePanelId: function() {
+        generatePanelId: function () {
             return 'panel_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
         },
 
-        getPanelDefaultTitle: function(type) {
+        getPanelDefaultTitle: function (type) {
             const titles = {
                 'stat-card': 'Statistics',
                 'data-table': 'Data Table',
@@ -353,7 +354,7 @@
             return titles[type] || 'Panel';
         },
 
-        renderPanelsCanvas: function() {
+        renderPanelsCanvas: function () {
             const $canvas = $('.panels-canvas');
             $canvas.empty();
 
@@ -382,22 +383,22 @@
             });
 
             // Bind delete actions
-            $('.delete-panel').on('click', function() {
+            $('.delete-panel').on('click', function () {
                 const index = $(this).data('index');
                 TemplateBuilder.deletePanel(index);
             });
         },
 
-        deletePanel: function(index) {
+        deletePanel: function (index) {
             if (confirm('Are you sure you want to delete this panel?')) {
                 this.templateData.panels.splice(index, 1);
                 this.renderPanelsCanvas();
             }
         },
 
-        updatePanelOrder: function() {
+        updatePanelOrder: function () {
             const newOrder = [];
-            $('.panels-canvas .panel-preview').each(function(index) {
+            $('.panels-canvas .panel-preview').each(function (index) {
                 const oldIndex = $(this).data('index');
                 newOrder.push(TemplateBuilder.templateData.panels[oldIndex]);
             });
@@ -406,16 +407,16 @@
         },
 
         // Toolbox Configuration
-        setupToolboxConfig: function() {
+        setupToolboxConfig: function () {
             const self = this;
 
-            $('input[name^="toolbox_"]').on('change', function() {
+            $('input[name^="toolbox_"]').on('change', function () {
                 const feature = $(this).attr('name').replace('toolbox_', '');
                 self.templateData.toolbox[feature] = $(this).is(':checked');
             });
         },
 
-        updateToolboxUI: function() {
+        updateToolboxUI: function () {
             $('input[name="toolbox_scraper"]').prop('checked', this.templateData.toolbox.scraper);
             $('input[name="toolbox_ai_generator"]').prop('checked', this.templateData.toolbox.ai_generator);
             $('input[name="toolbox_publisher"]').prop('checked', this.templateData.toolbox.publisher);
@@ -423,33 +424,33 @@
         },
 
         // Styling
-        setupStyling: function() {
+        setupStyling: function () {
             const self = this;
 
-            $('.color-picker').on('change', function() {
+            $('.color-picker').on('change', function () {
                 const colorKey = $(this).data('color');
                 self.templateData.styling[colorKey] = $(this).val();
             });
         },
 
         // JSON Editor
-        setupJSONEditor: function() {
+        setupJSONEditor: function () {
             const self = this;
 
-            $('.json-validate').on('click', function() {
+            $('.json-validate').on('click', function () {
                 self.validateJSON();
             });
 
-            $('.json-format').on('click', function() {
+            $('.json-format').on('click', function () {
                 self.formatJSON();
             });
 
-            $('.json-save').on('click', function() {
+            $('.json-save').on('click', function () {
                 self.saveJSONChanges();
             });
         },
 
-        validateJSON: function() {
+        validateJSON: function () {
             try {
                 const json = $('#template-json-editor').val();
                 JSON.parse(json);
@@ -459,7 +460,7 @@
             }
         },
 
-        formatJSON: function() {
+        formatJSON: function () {
             try {
                 const json = $('#template-json-editor').val();
                 const formatted = JSON.stringify(JSON.parse(json), null, 2);
@@ -469,7 +470,7 @@
             }
         },
 
-        saveJSONChanges: function() {
+        saveJSONChanges: function () {
             try {
                 const json = $('#template-json-editor').val();
                 this.templateData = JSON.parse(json);
@@ -480,18 +481,18 @@
         },
 
         // Import/Export
-        setupImportExport: function() {
+        setupImportExport: function () {
             const self = this;
 
             // File upload area
-            $('.file-upload-area').on('click', function() {
+            $('.file-upload-area').on('click', function () {
                 $('#template-import-file').click();
-            }).on('dragover', function(e) {
+            }).on('dragover', function (e) {
                 e.preventDefault();
                 $(this).addClass('drag-over');
-            }).on('dragleave', function() {
+            }).on('dragleave', function () {
                 $(this).removeClass('drag-over');
-            }).on('drop', function(e) {
+            }).on('drop', function (e) {
                 e.preventDefault();
                 $(this).removeClass('drag-over');
                 const files = e.originalEvent.dataTransfer.files;
@@ -500,22 +501,22 @@
                 }
             });
 
-            $('#template-import-file').on('change', function() {
+            $('#template-import-file').on('change', function () {
                 if (this.files.length) {
                     self.importTemplateFile(this.files[0]);
                 }
             });
 
-            $('.export-template-btn').on('click', function() {
+            $('.export-template-btn').on('click', function () {
                 self.exportTemplate();
             });
         },
 
-        importTemplateFile: function(file) {
+        importTemplateFile: function (file) {
             const reader = new FileReader();
             const self = this;
 
-            reader.onload = function(e) {
+            reader.onload = function (e) {
                 try {
                     const template = JSON.parse(e.target.result);
                     self.templateData = template;
@@ -529,7 +530,7 @@
             reader.readAsText(file);
         },
 
-        exportTemplate: function() {
+        exportTemplate: function () {
             const json = JSON.stringify(this.templateData, null, 2);
             const blob = new Blob([json], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
@@ -541,25 +542,85 @@
         },
 
         // Tab Navigation
-        setupTabNavigation: function() {
-            $('.rawwire-nav-tab').on('click', function(e) {
+        setupTabNavigation: function () {
+            $('.rawwire-nav-tab').on('click', function (e) {
                 e.preventDefault();
                 const tab = $(this).data('tab');
-                
+
                 $('.rawwire-nav-tab').removeClass('nav-tab-active');
                 $(this).addClass('nav-tab-active');
-                
+
                 $('.rawwire-tab-content').removeClass('active');
                 $('.rawwire-tab-content[data-tab="' + tab + '"]').addClass('active');
             });
         },
 
+        // Template Activation
+        setupTemplateActivation: function () {
+            var self = this;
+
+            $(document).on('click', '.activate-template', function () {
+                var $btn = $(this);
+                var templateId = $btn.data('template');
+
+                if (!templateId) return;
+
+                $btn.prop('disabled', true).text('Activating...');
+
+                $.ajax({
+                    url: rawwireTemplateBuilder.ajaxurl || ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'rawwire_template_switch',
+                        nonce: rawwireTemplateBuilder.nonce,
+                        template_id: templateId,
+                        backup: 'true'
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            window.location.reload();
+                        } else {
+                            alert('Error activating template: ' + (response.data || 'Unknown error'));
+                            $btn.prop('disabled', false).text('Activate');
+                        }
+                    },
+                    error: function () {
+                        alert('Network error — could not activate template');
+                        $btn.prop('disabled', false).text('Activate');
+                    }
+                });
+            });
+
+            // Create Template button (Step 7)
+            $('#create-template-btn').on('click', function () {
+                self.generateTemplate();
+            });
+
+            // Export as JSON button (Step 7)
+            $('#export-json-btn').on('click', function () {
+                self.exportTemplate();
+            });
+
+            // Enable import button when file is selected
+            $('#template-import-file').on('change', function () {
+                $('#import-template-btn').prop('disabled', !this.files.length);
+            });
+
+            // Import button click
+            $('#import-template-btn').on('click', function () {
+                var fileInput = document.getElementById('template-import-file');
+                if (fileInput && fileInput.files.length) {
+                    self.importTemplateFile(fileInput.files[0]);
+                }
+            });
+        },
+
         // Generate Template
-        generateTemplate: function() {
+        generateTemplate: function () {
             const self = this;
 
             // Show loading state
-            $('.wizard-next').prop('disabled', true).text('Generating...');
+            $('#create-template-btn').prop('disabled', true).find('.dashicons').removeClass('dashicons-yes').addClass('dashicons-update spin');
 
             // Send AJAX request to save template
             $.ajax({
@@ -570,25 +631,25 @@
                     nonce: rawwireTemplateBuilder.nonce,
                     template: JSON.stringify(self.templateData)
                 },
-                success: function(response) {
+                success: function (response) {
                     if (response.success) {
                         alert('Template created successfully!');
                         window.location.href = response.data.redirect;
                     } else {
                         alert('Error creating template: ' + response.data.message);
-                        $('.wizard-next').prop('disabled', false).text('Generate Template');
+                        $('#create-template-btn').prop('disabled', false).find('.dashicons').removeClass('dashicons-update spin').addClass('dashicons-yes');
                     }
                 },
-                error: function() {
+                error: function () {
                     alert('Error creating template. Please try again.');
-                    $('.wizard-next').prop('disabled', false).text('Generate Template');
+                    $('#create-template-btn').prop('disabled', false).find('.dashicons').removeClass('dashicons-update spin').addClass('dashicons-yes');
                 }
             });
         }
     };
 
     // Initialize on document ready
-    $(document).ready(function() {
+    $(document).ready(function () {
         if ($('.rawwire-templates-page').length) {
             TemplateBuilder.init();
         }

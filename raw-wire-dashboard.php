@@ -64,6 +64,63 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+if (!function_exists('rawwire_load_local_env_file')) {
+    function rawwire_load_local_env_file($file_path)
+    {
+        if (!is_string($file_path) || $file_path === '' || !is_readable($file_path)) {
+            return;
+        }
+
+        $lines = @file($file_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        if (!is_array($lines)) {
+            return;
+        }
+
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if ($line === '' || strpos($line, '#') === 0) {
+                continue;
+            }
+
+            if (strpos($line, 'export ') === 0) {
+                $line = substr($line, 7);
+            }
+
+            $separator_pos = strpos($line, '=');
+            if ($separator_pos === false) {
+                continue;
+            }
+
+            $name = trim(substr($line, 0, $separator_pos));
+            if ($name === '' || !preg_match('/^[A-Z0-9_]+$/i', $name)) {
+                continue;
+            }
+
+            if (getenv($name) !== false || isset($_ENV[$name]) || isset($_SERVER[$name])) {
+                continue;
+            }
+
+            $value = trim(substr($line, $separator_pos + 1));
+            $length = strlen($value);
+            if ($length >= 2) {
+                $first = $value[0];
+                $last = $value[$length - 1];
+                if (($first === '"' && $last === '"') || ($first === "'" && $last === "'")) {
+                    $value = substr($value, 1, -1);
+                }
+            }
+
+            $value = str_replace(["\\n", "\\r", "\\t"], ["\n", "\r", "\t"], $value);
+
+            putenv($name . '=' . $value);
+            $_ENV[$name] = $value;
+            $_SERVER[$name] = $value;
+        }
+    }
+}
+
+rawwire_load_local_env_file(dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . '.env.local');
+
 /**
  * Stub Logger Class (Temporary)
  * 
@@ -221,6 +278,19 @@ class RawWire_Dashboard
             return;
         }
 
+        $page_slug = '';
+        if (isset($_GET['page'])) {
+            $page_slug = sanitize_key(wp_unslash($_GET['page']));
+        }
+
+        if ($page_slug === '') {
+            return;
+        }
+
+        if ($page_slug !== 'raw-wire-dashboard' && strpos($page_slug, 'rawwire-') !== 0) {
+            return;
+        }
+
         remove_all_actions('admin_notices');
         remove_all_actions('all_admin_notices');
         remove_all_actions('user_admin_notices');
@@ -240,7 +310,10 @@ class RawWire_Dashboard
         require_once plugin_dir_path(__FILE__) . 'assets/svg/class-animated-svg.php';
 
         // Integrations (AI Engine extensions - durable via filter hooks)
-        require_once plugin_dir_path(__FILE__) . 'includes/integrations/class-groq-engine.php';
+        // NOTE: Groq engine is intentionally disabled (hard return; at top of file).
+        // Skipping require_once to avoid wasted file include on every page load.
+        // To re-enable: uncomment the line below AND remove the return; in class-groq-engine.php.
+        // require_once plugin_dir_path(__FILE__) . 'includes/integrations/class-groq-engine.php';
         require_once plugin_dir_path(__FILE__) . 'includes/integrations/class-ollama-engine.php';
 
         // Centralized Key Manager (must load early, before adapters need keys)

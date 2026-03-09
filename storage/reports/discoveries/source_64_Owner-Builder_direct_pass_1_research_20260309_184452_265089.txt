@@ -1,0 +1,704 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 64
+Party: Owner-Builder
+License: S5245
+Permit: 24010-10000-02188
+Generated: 2026-03-09 18:44:52
+Stage: direct_pass_1_research
+Method: perplexity_direct
+Provider: Perplexity
+Model: openai/gpt-5.1
+==================================================
+
+1. TARGET SUMMARY
+------------------
+
+- The label “Owner-Builder” in Los Angeles permitting is a **permit role**, not necessarily a company name. It refers to a property owner acting as their own general contractor under an owner‑builder exemption, not a licensed construction firm.  
+  - CSLB defines an owner-builder as an individual or group of individuals who own the property on which they construct, alter, repair, or improve a structure; they may be exempt from licensure under specific conditions.  
+  - Source: Contractors State License Board (CSLB) Owner-Builder Overview – https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx
+
+- The **City of Los Angeles Department of Building and Safety (LADBS)** runs a special process for “Owner-Builder” permits. The permit is issued in the property owner’s name; LADBS requires an “Owner-Builder Acknowledgment and Information Verification Form” explaining that the owner assumes full legal and financial responsibility.  
+  - Source: LADBS “Notice to Property Owners for Owner-Builder Permits” – https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf
+
+- Los Angeles County’s Building & Safety Division also defines an **owner-builder** as a property owner of a one‑ or two‑family residence acting as their own general contractor, typically for their principal residence.  
+  - Source: LA County DPW Building & Safety “I AM A HOMEOWNER” – https://dpw.lacounty.gov/building-and-safety/homeowner
+
+- The **permit number format** for LA Permit # 24010-10000-02188 matches a standard LADBS building permit numbering convention, confirming that it is a 2024 building permit filed through the LADBS Metro office, master permit 000, sequence 02188:  
+  - LADBS application/permit number format: YYTTT-OOMMM-##### where:  
+    - YY = year, TTT = application type, OO = branch office (10 = Metro), MMM = master vs supplemental (000 = master), ##### = sequence.  
+  - Source: LADBS Permit Type and Status Guide (third-party explanation) – https://www.laconstructioncompliance.com/ladbs-permit-type-and-status-guide/
+
+- **CSLB license number constraints**: CA contractor license numbers are numeric only; the CSLB “Check a License” interface explicitly states that a California contractor license number does not contain alphabetic characters. This means “S5245” is **not** a standard CSLB California contractor license number.  
+  - Source: CSLB “Check a License” – https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+
+- Taken together, available public sources indicate:
+  - “Owner-Builder” in this context almost certainly **does not refer to a separate contracting company** in Los Angeles.  
+  - LA Permit # 24010-10000-02188 is likely an LADBS “Owner-Builder” permit, where the **property owner** (individual or entity) is the de facto project decision maker.  
+  - The **identity of that owner (and project address)** is stored inside LADBS’s internal records system (IDIS, LADBS GO, MyLA311) and **is not exposed via freely-crawlable public web pages**. Without direct access to LADBS’s records interface, I cannot see the owner name or address for permit 24010‑10000‑02188.
+
+- Because the actual owner/entity behind this permit **cannot be identified from public web pages alone**, I cannot truthfully name specific decision makers, gatekeepers, or projects tied to this permit number.
+
+2. PEOPLE
+---------
+
+Given the constraints above, **no individual names tied specifically to LA Permit # 24010‑10000‑02188 or “Owner-Builder” as a firm in Los Angeles could be identified** from public web pages. What we can say, based on official owner‑builder guidance:
+
+### 2.1 Likely roles (not person-specific) around this permit
+
+- **Property Owner (Owner-Builder)**  
+  - Role: Legal “builder of record” on the LADBS permit; responsible for hiring and paying subcontractors, ordering materials, scheduling inspections, and compliance with codes.  
+  - Authority: Ultimate decision maker on scope, budget, schedule, selection of designers, architects, interior designers, and all subs.  
+  - References:  
+    - LADBS Owner-Builder Acknowledgment (owner assumes full responsibility) – https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf  
+    - LA County DPW homeowner/owner-builder responsibilities – https://dpw.lacounty.gov/building-and-safety/homeowner  
+    - CSLB owner-builder overview – https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx
+
+- **Licensed Subcontractors engaged by the owner-builder**  
+  - Owner-builders often hire licensed subcontractors for trades (framing, electrical, plumbing, finishes). These subs may in turn influence design decisions, but no specific subcontractors connected to permit #24010‑10000‑02188 could be found in public sources.
+
+- **Consultants / expediters / design professionals**  
+  - Articles on owner-builder work in LA note that many owner-builders use consultants (planning, permit expediters, owner-builder coaching, etc.). Example entities (not proven to be connected to this permit, but active in the Los Angeles owner‑builder ecosystem):  
+    - JDJ Consulting (LA County owner‑builder/self‑build advisory) – https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/  
+    - Schorr Law (construction disputes/owner‑builder issues in Los Angeles) – https://schorr-law.com/construction-by-an-owner-builder/
+
+Because I cannot see the LADBS record or underlying documents for permit 24010‑10000‑02188, **I cannot list any actual names, titles, or direct contact details** associated with this specific project.
+
+3. COMPANY
+----------
+
+### 3.1 Identity and licensing
+
+- **No evidence was found of a Los Angeles construction company whose legal or DBA name is exactly “Owner-Builder” and that is tied to:**
+  - LA Permit # 24010‑10000‑02188, or  
+  - Any CSLB license number matching “S5245”.
+
+- The CSLB “Check a License” interface confirms that contractor licenses in California are **numeric only**, meaning “S5245” is not a valid CA contractor license number format.  
+  - Source: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+
+- Owner-builder status itself is an **exemption from licensure**, not a license class. CSLB explains that an owner-builder **may not need a contractor license** if they:  
+  - Do the work themselves or via their own employees and are not building for sale;  
+  - Or contract only with properly licensed subs;  
+  - Or contract with a licensed general “B” contractor.  
+  - Source: CSLB owner-builder overview – https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx
+
+- LADBS’s owner-builder documents confirm that **permits can be issued directly to property owners**, with no contractor-of-record, under an Owner-Builder declaration.  
+  - Source: LADBS owner-builder notice – https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf
+
+### 3.2 Operational profile (inferred category)
+
+- **Type:** Owner (non-licensed GC in the legal sense), acting as own general contractor under LADBS owner-builder permit.  
+- **Role in project:**  
+  - Acts as de facto GC: hires subs, coordinates inspections, ensures code compliance, manages payments and insurance responsibilities.  
+  - Decides whether/when to bring in architects, interior designers, and specialized consultants.  
+- **Markets / project type:**  
+  - Owner-builder exemptions in LA are almost always **one- or two-family residential** and tied to the owner’s principal residence.  
+  - Source: LA County DPW homeowner/owner-builder guidance – https://dpw.lacounty.gov/building-and-safety/homeowner
+
+Because we cannot see the LADBS record for permit 24010‑10000‑02188, we do **not** know:
+
+- The project address  
+- The owner name (individual, trust, or LLC)  
+- The project valuation  
+- Any subcontractors or design professionals formally linked in the permit record.
+
+4. NETWORKING OPPORTUNITIES
+----------------------------
+
+Since the decision maker is almost certainly the **property owner behind the owner‑builder permit**, the networking challenge is to reach them or their advisors. Public web data does not reveal their identity, but it does reveal **systems and side-doors** where that information can be obtained or where owner‑builders seek help.
+
+### 4.1 Regulatory interfaces where the permit owner appears by name
+
+These are key **gateways** to discovering the actual owner and potentially contacting them:
+
+- **LADBS Records / IDIS (Building Records)**  
+  - LADBS maintains scanned images and summary information for building permits (including owner names) in its IDIS system.  
+  - Public guidance hints that most records are accessible online or via email request:  
+    - “Most LADBS records are available online via https://records.ladbs.lacity.org.”  
+    - Non-online records can be requested by emailing **records.ladbs@lacity.org** using an LADBS research request form.  
+  - Source: LADBS Building Records announcement – https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx
+
+- **LADBS GO / MyLA311**  
+  - LADBS GO (mobile app) and MyLA311 allow users to review permits and inspections and check permit status. These tools often display **permit details including owner name and job address** once you have the permit number.  
+  - Sources:  
+    - LADBS GO info – https://dbs.lacity.gov/ladbs-go and https://ladbs.org/ladbsgo  
+    - MyLA311 information (with LADBS links) – referenced via LADBS announcement – https://www.aialosangeles.org/wp-content/uploads/2020/04/Announcement-3-LADBS-Svs-COVID19-Rev-2020.04..03.3-1.pdf
+
+### 4.2 Owner-builder advisory ecosystem (potential indirect touchpoints)
+
+While not tied to the specific permit, these entities **actively court owner‑builders in Los Angeles County**, so they may have or could develop relationships with high‑net-worth owners acting as their own builders:
+
+- **JDJ Consulting – Owner-Builder/Self-Build Guidance (LA County)**  
+  - JDJ publishes explicit guidance on self‑building a home in Los Angeles County, including step‑by‑step processes for zoning, EPIC‑LA portal use, and Owner‑Builder permits.  
+  - They work directly with owner‑builders as advisors/consultants.  
+  - Source: https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/
+
+- **Schorr Law – Owner-Builder Construction in Los Angeles**  
+  - Law firm explaining the risks and legal issues of owner‑builder construction in Los Angeles; they likely represent homeowners who embark on substantial owner‑builder projects.  
+  - They are more likely to be involved when problems arise, but they sit close to the same client profile (substantial residential work, often with custom improvements).  
+  - Source: https://schorr-law.com/construction-by-an-owner-builder/
+
+These entities are **not confirmed collaborators on the target permit**, but they are important nodes in the **owner‑builder network** in LA.
+
+5. DISCOVERED PROJECTS
+----------------------
+
+- **LA Permit # 24010‑10000‑02188**  
+  - Status: Identified only by format as a City of Los Angeles building permit filed in 2024 via the Metro office; likely an owner‑builder permit given the “Owner‑Builder” target label.  
+  - Data available from web sources:  
+    - Application/permit formatting confirms the year (24), type code, Metro office (10), master permit (000), sequence number 02188.  
+    - Source for format: https://www.laconstructioncompliance.com/ladbs-permit-type-and-status-guide/  
+  - Data **not** accessible without direct LADBS lookup:  
+    - Project address  
+    - Scope (new build vs addition/alteration)  
+    - Valuation  
+    - Owner name  
+    - Listed contractors or architects
+
+No additional specific projects linked to this owner or permit number were discoverable via public web pages.
+
+6. DISCOVERED ENTITIES
+-----------------------
+
+Entities identified that intersect the **owner‑builder / LA permitting ecosystem**:
+
+1. **LADBS – Los Angeles Department of Building and Safety**  
+   - Role: City agency issuing building permits, including owner‑builder permits; maintains records and processes inspections.  
+   - Relevance: Holds the authoritative record for Permit # 24010‑10000‑02188, including owner name and project address.  
+   - Key URLs:  
+     - Owner-builder permits notice – https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf  
+     - Building records guidance – https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx  
+     - LADBS GO overview – https://ladbs.org/ladbsgo  
+
+2. **CSLB – Contractors State License Board (California)**  
+   - Role: State regulator of contractor licensing; defines owner‑builder exemptions.  
+   - Relevance: Confirms “owner‑builder” is legally an owner exemption, not a license class; clarifies that “S5245” is not a standard CA contractor license number.  
+   - URL: https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx  
+
+3. **LA County Department of Public Works, Building and Safety Division**  
+   - Role: Building authority for unincorporated LA County (separate from City of LA), but its owner‑builder guidance closely mirrors the City’s.  
+   - Relevance: Clarifies responsibilities and typical patterns of owner‑builder projects.  
+   - URL: https://dpw.lacounty.gov/building-and-safety/homeowner  
+
+4. **JDJ Consulting (Owner-Builder/Self-Build Advisor)**  
+   - Role: Private consultant guiding owner‑builders through zoning, permitting (EPIC‑LA), and construction.  
+   - Relevance: Potential node to reach owner‑builder clients in LA County at planning/design stage.  
+   - URL: https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/  
+
+5. **Schorr Law (Construction / Owner-Builder Disputes)**  
+   - Role: Law firm; advises/represents property owners acting as owner‑builders or dealing with construction disputes.  
+   - Relevance: Another node that serves the same demographic as your target; a potential relationship channel to meet affluent owner‑builders.  
+   - URL: https://schorr-law.com/construction-by-an-owner-builder/  
+
+7. ENTRY POINTS
+---------------
+
+Because the specific owner and project details for LA Permit # 24010‑10000‑02188 are not exposed on public web pages, **the most actionable way to get in front of the decision maker is to obtain the underlying permit record and then pursue direct or relational outreach to that owner**.
+
+### 7.1 Concrete steps to uncover the owner (primary access path)
+
+1. **Use LADBS Building Records to pull the permit file**  
+   - Action: Submit a building records request for Permit # 24010‑10000‑02188 to LADBS.  
+   - How:  
+     - Use the LADBS Building Records portal (https://records.ladbs.lacity.org is referenced via LADBS building records announcement) or  
+     - Email **records.ladbs@lacity.org** with a completed Research Request Form, referencing the permit number.  
+   - Evidence: LADBS building records process and email address – https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx  
+   - Expected outcome: PDF or summary showing job address, owner name (individual or LLC), and possibly architect/designer of record. That becomes the foundation for a **person- and property-specific network map**.
+
+2. **Use LADBS GO or MyLA311 with the permit number**  
+   - Action: Once you (or a local collaborator) install LADBS GO or access MyLA311, use Permit # 24010‑10000‑02188 to pull permit details.  
+   - Evidence: LADBS GO app allows users to “Review Permits and Inspections” – https://ladbs.org/ladbsgo  
+   - Expected outcome: On-screen access to owner name, address, and inspection history; potential opportunity to time outreach around inspection dates (when owner or their representative is likely to be on-site).
+
+3. **Cross-reference the job address with LA County Assessor and title data**  
+   - Once you have the job address from LADBS, the parcel can be cross‑referenced via LA County Assessor and title sources to identify:  
+     - Owner-of-record (individual, trust, or LLC)  
+     - Mailing address for tax notices (often different from project site)  
+   - This triangulates the **true decision maker entity** beyond just the permit’s contact name.
+
+### 7.2 Indirect relationship channels into LA owner-builder circles
+
+4. **Develop relationships with owner-builder advisors active in LA County**
+
+   - **JDJ Consulting**  
+     - Position: They educate and guide owners interested in self‑building in LA County.  
+     - Why this matters: Owners who want to control design and construction personally (typical owner‑builder profile) are likely to seek consulting help. JDJ could be a **referral source** for interior design services once the shell is built or during early design.  
+     - Evidence: Detailed guide for self‑building in LA County, including owner‑builder permitting – https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/
+
+   - **Schorr Law**  
+     - Position: Represents owners facing issues in owner‑builder and construction contexts in Los Angeles.  
+     - Why this matters: When high‑value projects run into disputes, owners suddenly become very motivated to bring in strong professional teams (including interior designers) to stabilize and complete the project. Relationship with Schorr Law can create **introduction opportunities to affluent, project-driven clients**.  
+     - Evidence: “Owner Builder Construction in Los Angeles – Things to Know” – https://schorr-law.com/construction-by-an-owner-builder/
+
+5. **Leverage timing around inspections and completion milestones**
+
+   - Owner‑builder guidance emphasizes that the owner must pass multiple inspections and secure final sign‑off.  
+   - Evidence: LA County DPW “5 Steps of the Permit Process” – application through completion – https://dpw.lacounty.gov/building-and-safety/homeowner  
+   - Once inspection history is visible (via LADBS GO/MyLA311), you can time outreach:  
+     - Shortly after rough construction inspections (framing, mechanical, electrical, plumbing) when owners start focusing on interior finishes and furnishings—key moment for interior design decisions.
+
+8. RED FLAGS
+------------
+
+The red flags here are **structural to the owner‑builder model**, not specific to this permit:
+
+- **Heightened liability and complexity for owner-builders**  
+  - CSLB and LADBS warn that owner‑builders assume full responsibility for construction compliance, payment of all subs/suppliers, and worker‑related liabilities (taxes, workers’ comp, etc.).  
+  - Evidence:  
+    - CSLB owner‑builder overview – https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx  
+    - LADBS owner‑builder notice – https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf  
+
+- **Risk of unlicensed or under‑insured subs**  
+  - Schorr Law points out that owner‑builders may face serious exposure if they use unlicensed or uninsured workers; they are liable for resulting damages and injuries.  
+  - Evidence: https://schorr-law.com/construction-by-an-owner-builder/  
+
+- **Information opacity**  
+  - Owner‑builder permits center the owner, not a GC. There is **no centralized “bidders list” or GC prequalification process** for you to enroll in; access is dependent on discovering the owner identity and cultivating relationships with their advisors.  
+
+9. SOURCES
+----------
+
+Deduplicated list of key URLs referenced:
+
+1. CSLB – Owner-Builder Overview  
+   https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx  
+
+2. LADBS – Notice to Property Owners for Owner-Builder Permits (Owner-Builder Acknowledgment)  
+   https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf  
+
+3. LA County DPW Building & Safety – I AM A HOMEOWNER (Owner-Builder guidance)  
+   https://dpw.lacounty.gov/building-and-safety/homeowner  
+
+4. LADBS – Building Records / IDIS guidance (includes records.ladbs@lacity.org)  
+   https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx  
+
+5. LADBS – LADBS GO app overview  
+   https://ladbs.org/ladbsgo  
+
+6. LADBS / AIA LA – COVID announcement with records and MyLA311/LADBSGO references  
+   https://www.aialosangeles.org/wp-content/uploads/2020/04/Announcement-3-LADBS-Svs-COVID19-Rev-2020.04..03.3-1.pdf  
+
+7. LADBS Permit Type and Status Guide (application/permit number format explanation)  
+   https://www.laconstructioncompliance.com/ladbs-permit-type-and-status-guide/  
+
+8. CSLB – Check a License (numeric-only license constraint)  
+   https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+
+9. JDJ Consulting – “Can You Self-Build a Home in Los Angeles County?”  
+   https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/  
+
+10. Schorr Law – “Owner Builder Construction in Los Angeles – Things to Know”  
+    https://schorr-law.com/construction-by-an-owner-builder/  
+
+10. SEARCH LEDGER
+-----------------
+
+Exact search strings used during investigation:
+
+1. `CSLB S5245 contractor license`  
+2. `"24010-10000-02188"`  
+3. `"Owner-Builder" "24010-10000-02188" Los Angeles`  
+4. `"Owner Builder" "ownerbuilderla.com"`  
+5. `"Owner Builder" "Los Angeles" construction`  
+6. `"24010-10000-02188" LADBS`  
+7. `"S5245" "Contractors State License Board"`  
+8. `"License # S5245" contractor`  
+9. `"S 5245" contractor license`  
+
+11. EVIDENCE LOG
+----------------
+
+(Each entry: query – URL – extracted fact)
+
+1. **Query:** `CSLB S5245 contractor license`  
+   - **URL:** https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+   - **Fact:** CSLB “Check a License” page specifies that California contractor license numbers “don’t contain alphabetic characters,” implying “S5245” is not a valid CA license format.
+
+2. **Query:** `"Owner-Builder" "24010-10000-02188" Los Angeles`  
+   - **URL:** https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf  
+   - **Fact:** LADBS “Notice to Property Owners for Owner-Builder Permits” states that owner‑builder permits are issued to property owners after they sign an acknowledgment; emphasizes that the owner is the party legally and financially responsible for construction and that an agent cannot execute the notice without specific notarized authorization.
+
+3. **Query:** `"Owner Builder" "Los Angeles" construction`  
+   - **URL:** https://dpw.lacounty.gov/building-and-safety/homeowner  
+   - **Fact:** LA County DPW defines an owner‑builder as “a property owner of a one- or two-family residence acting as their own general contractor who either does the work themselves or has employees or subcontractors working on the project” and notes that the work site must be the owner’s principal residence.
+
+4. **Query:** `"Owner Builder" "Los Angeles" construction`  
+   - **URL:** https://schorr-law.com/construction-by-an-owner-builder/  
+   - **Fact:** Schorr Law article explains that owner‑builders in Los Angeles assume full responsibility for construction; they may be exempt from contractor licensing under certain conditions but bear liability for damage and injuries, particularly when using unlicensed or uninsured subs.
+
+5. **Query:** `"Owner Builder" "Los Angeles" construction`  
+   - **URL:** https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/  
+   - **Fact:** JDJ Consulting outlines the process for self‑building (owner‑builder) in LA County, including zoning checks, EPIC‑LA portal use, Owner‑Builder Declaration, and inspection scheduling; confirms owner‑builder is a legally recognized path for building one’s own residence.
+
+6. **Query:** `"24010-10000-02188" LADBS`  
+   - **URL:** https://www.laconstructioncompliance.com/ladbs-permit-type-and-status-guide/  
+   - **Fact:** Provides LADBS permit numbering scheme: YYTTT-OOMMM-#####; explains that OO codes include 10 (Metro) and MMM=000 indicates a master permit; supports interpreting 24010‑10000‑02188 as a 2024 Metro‑office master building permit.
+
+7. **Query:** `"24010-10000-02188" LADBS`  
+   - **URL:** https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx  
+   - **Fact:** LADBS Building Records document explains that most LADBS records are available online via records.ladbs.lacity.org and that records not available online may be obtained by emailing **records.ladbs@lacity.org** with a research request form.
+
+8. **Query:** `"Owner Builder" "Los Angeles" construction`  
+   - **URL:** https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx  
+   - **Fact:** CSLB owner‑builder overview defines owner‑builders, outlines when they are exempt from licensing, and sets conditions such as limiting the number of structures intended for sale and requiring residence in the completed structure for at least one year in certain cases.
+
+9. **Query:** `"Owner Builder" "Los Angeles" construction`  
+   - **URL:** https://ladbs.org/ladbsgo  
+   - **Fact:** LADBS GO app description states that users can “Review Permits and Inspections,” request inspections, and view permit details, confirming that permit‑specific information (including owner details) is accessible through this tool.
+
+10. **Query:** `"Owner Builder" "Los Angeles" construction`  
+    - **URL:** https://www.aialosangeles.org/wp-content/uploads/2020/04/Announcement-3-LADBS-Svs-COVID19-Rev-2020.04..03.3-1.pdf  
+    - **Fact:** LADBS announcement notes that building/property records are available online at records.ladbs.lacity.org and that non‑online records can be requested via records.ladbs@lacity.org; also references MyLA311 and LADBSGO as tools for checking permit status and requesting inspections.
+
+12. REQUIRED TODO CHECKLIST
+---------------------------
+
+- [ ] TODO 1: Confirm target identity (name, license, permit/address match)  
+  - Status: **Not completed.** Public web sources confirm that “owner‑builder” is a permit role; however, the specific owner/entity and project address for Permit # 24010‑10000‑02188 are not publicly visible without direct LADBS record access.
+
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target  
+  - CSLB owner‑builder overview visited – https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx  
+  - CSLB license check page consulted – https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+  - LADBS owner‑builder notice and building records guidance visited – https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf, https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx  
+
+- [ ] TODO 3: Identify at least 2 potential decision makers  
+  - Status: **Not completed.** No specific owner, architect, or GC names tied to LA Permit # 24010‑10000‑02188 are accessible from public web pages.
+
+- [x] TODO 4: Capture at least 3 concrete source URLs  
+  - Completed; see SOURCES section (9+ URLs listed).
+
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings  
+  - Completed; see EVIDENCE LOG section with query–URL–fact entries.
+
+- [ ] TODO 6: Summarize best entry points to reach decision makers  
+  - **Partially completed.** I outlined concrete steps to obtain the permit record and identify the owner (LADBS records request, LADBS GO/MyLA311) and indirect channels via owner‑builder advisors; however, without the actual owner identity, these remain procedural rather than person‑specific.
+
+- [ ] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)  
+  - Status: **Partially met in structural form only.**  
+    - Structural “diamonds” identified:  
+      - LADBS Building Records and LADBS GO/MyLA311 as key gatekeeping systems for project and owner data.  
+      - JDJ Consulting and Schorr Law as recurring advisors to LA owner‑builders.  
+    - No permit‑specific events, bid portals, or named gatekeepers tied directly to permit # 24010‑10000‑02188 could be found in public web data.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.bristolva.gov/DocumentCenter/View/2222/2018-2019-Condensed-Line-Item-Budget-Approved-June-12-2018
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.walmart.com/ip/onn-Google-TV-4K-Streaming-Box-New-2023-4K-UHD-Resolution/2835618394
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/SCADirectVers5.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omnicalculator.com/math/exponential-growth
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.tdhca.texas.gov/9-competitive-housing-tax-credits-archive
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.heisener.com/ProductDetail/241-4-10
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.aglaw209.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.oemstrade.com/search/24001
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.iso-group.com/NSNIndex/14118
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.iso-group.com/NSNIndex/6220
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dpw.lacounty.gov/building-and-safety/homeowner
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://schorr-law.com/construction-by-an-owner-builder/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://pw.lacounty.gov/building-and-safety/homeowner
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ownerbuilderla.com/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.rpvca.gov/DocumentCenter/View/20800/Owner-Builder-Declaration-PDF
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.lahabraca.gov/FormCenter/General-Forms-8/Disclosures-and-Forms-for-OwnerBuilders--50
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cityoflosalamitos.org/DocumentCenter/View/201/Owner-Builder-Information-PDF
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.kcha.org/documents/89.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/contractors/applicants/contractors_license/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ccneca.org/CSLB_Licensing_Summary.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.ccneca.org/CSLB_Licensing_Summary.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contractorslicensingschools.com/california-contractors-license-classifications
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contractorslicensingschools.com/contractors-license-requirements
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.californiacontractorbonds.com/california-contractor-licenses-cslb-classifications/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cslpschools.com/license-types/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/california-contractors-license
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/cslb-california-contractor-license-board
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ladbsdoc.lacity.org/idispublic_Records/idis/help/Document%20Search.htm
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dbs.lacity.gov/ladbs-go
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://dbs.lacity.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ladbs.org/ladbsgo
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.laconstructioncompliance.com/ladbs-permit-type-and-status-guide/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ladbs-go.updatestar.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dochub.com/fillable-form/167300-x-ladbs
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.aialosangeles.org/wp-content/uploads/2020/04/Announcement-3-LADBS-Svs-COVID19-Rev-2020.04..03.3-1.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lda.congress.gov/ld/help/LinkedDocuments/ld_user_guide.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.lhcm.org/208/Owner-Builder-Information
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbs.org/docs/default-source/forms/plan-check-2014/owner-builder-permits.pdf?sfvrsn=17
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://losangelesdesigngroup.com/owner-builders.php
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ownerbuilderla.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ownerbuilder.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ownerbuildernetwork.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ownerbuilderconstruction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ownerbuilderclass.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ownerbuildernetwork.com/articles?p=building-your-dream-home-a-guide-to-being-your-own-builder-with-owner-builder-network-250601
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.youtube.com/watch?v=E4qkR5sa2hU
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cityofplacerville.org/media/Building%20Division%20Files/Plan%20and%20Permitting%20Information/What%20is%20an%20Owner-Builder.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ca.gov/departments/299/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.lookupcontractor.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/California_Contractors_State_License_Board
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://arlspublic.lslbc.louisiana.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://aaaagen.com/CA.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lslbc.louisiana.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://digital.sandiego.edu/cgi/viewcontent.cgi?article=2065&context=crlr
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://calconstructionlawblog.com/2015/04/13/what-you-need-to-know-about-enforcement-actions-by-the-contractors-state-license-board/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://agingdisabilitysonomacounty.org/directory/contractors-state-licensing-board/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ca.gov/departments/299/services/12/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://aca-prod.accela.com/LARA/Cap/CapHome.aspx?IsToShowInspection=yes&module=Licenses&TabName=Licenses
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.automatedlogic.com/en/support/contractor-licenses/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://app.nvcontractorsboard.com/Clients/NVSCB/Public/ContractorLicenseSearch/ContractorLicenseSearch.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://npor-egov.aspgov.com/Click2GovOL/businesslicensesearch.html?OWASP_CSRFTOKEN=9AY4-IT45-1XJP-K4EF-WDBM-IUS7-B2D6-4RHI
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.sa.gov/Directory/Departments/DSD/Contractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permits.ssf.net/Search/aec.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://hills-trk.aspgov.com/eTRAKiT/Search/license2.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fairfaxcounty.gov/landdevelopment/sites/landdevelopment/files/assets/documents/forms/license-exemption-affidavit-info-sheet.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cdn.cocodoc.com/cocodoc-form-pdf/pdf/239894-fillable-2047-fillable-form-lacba.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fcgov.com/engineering/pdf/ContractorsLicenseEndorsements.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/contractors/applicants/contractors_license/exam_application/before_applying_for_license.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://nationalcontractorlicenseagency.com/south-carolina-contractor-license-information
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ccisbonds.com/california/education-center/contractor-license-law/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing/Contractor-Licenses
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://llr.sc.gov/clb/clb_general.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1101/
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.bristolva.gov/DocumentCenter/View/2222/2018-2019-Condensed-Line-Item-Budget-Approved-June-12-2018
+- https://www.walmart.com/ip/onn-Google-TV-4K-Streaming-Box-New-2023-4K-UHD-Resolution/2835618394
+- https://www.dol.gov/sites/dolgov/files/WHD/legacy/files/SCADirectVers5.pdf
+- https://www.omnicalculator.com/math/exponential-growth
+- https://www.tdhca.texas.gov/9-competitive-housing-tax-credits-archive
+- https://www.heisener.com/ProductDetail/241-4-10
+- https://www.aglaw209.com
+- https://www.oemstrade.com/search/24001
+- https://www.iso-group.com/NSNIndex/14118
+- https://www.iso-group.com/NSNIndex/6220
+- https://dpw.lacounty.gov/building-and-safety/homeowner
+- https://schorr-law.com/construction-by-an-owner-builder/
+- https://pw.lacounty.gov/building-and-safety/homeowner
+- https://dbs.lacity.gov/sites/default/files/efs/forms/pc14/owner-builder-permits.pdf
+- https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx
+- https://ownerbuilderla.com/about/
+- https://www.rpvca.gov/DocumentCenter/View/20800/Owner-Builder-Declaration-PDF
+- https://www.lahabraca.gov/FormCenter/General-Forms-8/Disclosures-and-Forms-for-OwnerBuilders--50
+- https://cityoflosalamitos.org/DocumentCenter/View/201/Owner-Builder-Information-PDF
+- https://www.kcha.org/documents/89.pdf
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.cslb.ca.gov/contractors/applicants/contractors_license/
+- https://www.ccneca.org/CSLB_Licensing_Summary.pdf
+- http://www.ccneca.org/CSLB_Licensing_Summary.pdf
+- https://contractorslicensingschools.com/california-contractors-license-classifications
+- https://contractorslicensingschools.com/contractors-license-requirements
+- https://www.californiacontractorbonds.com/california-contractor-licenses-cslb-classifications/
+- https://cslpschools.com/license-types/
+- https://www.procore.com/library/california-contractors-license
+- https://www.procore.com/library/cslb-california-contractor-license-board
+- https://ladbsdoc.lacity.org/idispublic_Records/idis/help/Document%20Search.htm
+- https://dbs.lacity.gov/ladbs-go
+- https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx
+- http://dbs.lacity.gov
+- https://ladbs.org/ladbsgo
+- https://www.laconstructioncompliance.com/ladbs-permit-type-and-status-guide/
+- https://ladbs-go.updatestar.com
+- https://www.dochub.com/fillable-form/167300-x-ladbs
+- https://www.aialosangeles.org/wp-content/uploads/2020/04/Announcement-3-LADBS-Svs-COVID19-Rev-2020.04..03.3-1.pdf
+- https://lda.congress.gov/ld/help/LinkedDocuments/ld_user_guide.pdf
+- https://jdj-consulting.com/can-you-self-build-a-home-in-los-angeles-county/
+- https://www.lhcm.org/208/Owner-Builder-Information
+- https://www.ladbs.org/docs/default-source/forms/plan-check-2014/owner-builder-permits.pdf?sfvrsn=17
+- http://losangelesdesigngroup.com/owner-builders.php
+- https://ownerbuilderla.com
+- https://www.ownerbuilder.org
+- https://www.ownerbuildernetwork.com
+- https://www.ownerbuilderconstruction.com
+- https://ownerbuilderclass.com
+- https://www.ownerbuildernetwork.com/articles?p=building-your-dream-home-a-guide-to-being-your-own-builder-with-owner-builder-network-250601
+- https://www.youtube.com/watch?v=E4qkR5sa2hU
+- https://www.cityofplacerville.org/media/Building%20Division%20Files/Plan%20and%20Permitting%20Information/What%20is%20an%20Owner-Builder.pdf
+- https://www.cslb.ca.gov
+- https://www.ca.gov/departments/299/
+- https://www.lookupcontractor.com
+- https://en.wikipedia.org/wiki/California_Contractors_State_License_Board
+- https://arlspublic.lslbc.louisiana.gov
+- https://aaaagen.com/CA.pdf
+- https://lslbc.louisiana.gov
+- https://digital.sandiego.edu/cgi/viewcontent.cgi?article=2065&context=crlr
+- https://calconstructionlawblog.com/2015/04/13/what-you-need-to-know-about-enforcement-actions-by-the-contractors-state-license-board/
+- https://agingdisabilitysonomacounty.org/directory/contractors-state-licensing-board/
+- https://www.ca.gov/departments/299/services/12/
+- https://aca-prod.accela.com/LARA/Cap/CapHome.aspx?IsToShowInspection=yes&module=Licenses&TabName=Licenses
+- https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/
+- https://www.automatedlogic.com/en/support/contractor-licenses/
+- https://app.nvcontractorsboard.com/Clients/NVSCB/Public/ContractorLicenseSearch/ContractorLicenseSearch.aspx
+- https://npor-egov.aspgov.com/Click2GovOL/businesslicensesearch.html?OWASP_CSRFTOKEN=9AY4-IT45-1XJP-K4EF-WDBM-IUS7-B2D6-4RHI
+- https://www.sa.gov/Directory/Departments/DSD/Contractor
+- https://permits.ssf.net/Search/aec.aspx
+- https://hills-trk.aspgov.com/eTRAKiT/Search/license2.aspx
+- https://www.fairfaxcounty.gov/landdevelopment/sites/landdevelopment/files/assets/documents/forms/license-exemption-affidavit-info-sheet.pdf
+- https://cdn.cocodoc.com/cocodoc-form-pdf/pdf/239894-fillable-2047-fillable-form-lacba.pdf
+- https://www.fcgov.com/engineering/pdf/ContractorsLicenseEndorsements.pdf
+- https://www.cslb.ca.gov/contractors/applicants/contractors_license/exam_application/before_applying_for_license.aspx
+- https://nationalcontractorlicenseagency.com/south-carolina-contractor-license-information
+- https://www.ccisbonds.com/california/education-center/contractor-license-law/
+- https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Contractor-Licensing/Contractor-Licenses
+- https://llr.sc.gov/clb/clb_general.aspx
+- https://law.lis.virginia.gov/vacode/title54.1/chapter11/section54.1-1101/

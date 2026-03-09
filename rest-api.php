@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * @ai-context Search Instinct MCP for "Activity Log Panel Architecture v3" before modifying this file.
+ */
+
 /**
  * REST API endpoints for RawWire Dashboard
  * Provides modern RESTful API access to dashboard functionality
@@ -6,9 +11,8 @@
 
 if (!defined('ABSPATH')) exit;
 
-error_log("RawWire REST API file loaded");
-
-class RawWire_REST_API {
+class RawWire_REST_API
+{
     private static $instance = null;
     private $namespace = 'rawwire/v1';
 
@@ -37,38 +41,39 @@ class RawWire_REST_API {
         'sunset_at' => null,
     );
 
-    public static function get_instance() {
-        error_log("RawWire REST API: get_instance called");
+    public static function get_instance()
+    {
         if (null === self::$instance) {
-            error_log("RawWire REST API: Creating new instance");
             self::$instance = new self();
         }
         return self::$instance;
     }
 
-    private function __construct() {
+    private function __construct()
+    {
         add_action('rest_api_init', array($this, 'register_routes'));
-        
+
         // OPTIMIZATION 1: Setup unified request validation
         $this->setup_validation_schemas();
-        
+
         // OPTIMIZATION 2: Add request logging middleware
         $this->add_middleware(array($this, 'log_request'));
-        
+
         // OPTIMIZATION 3: Add CORS headers
         add_action('rest_api_init', array($this, 'add_cors_headers'));
 
         // Background fetch runner hook
         add_action('rawwire_run_fetch_immediate', array($this, 'background_fetch_runner'));
-        
+
         // OPTIMIZATION 4: Add response compression
         add_filter('rest_pre_serve_request', array($this, 'enable_compression'), 10, 4);
-        
+
         // OPTIMIZATION 5: Add error formatting
         add_filter('rest_request_after_callbacks', array($this, 'format_response'), 10, 3);
     }
 
-    public function init() {
+    public function init()
+    {
         // Public initialization method
         add_action('rest_api_init', array($this, 'register_routes'));
     }
@@ -81,7 +86,8 @@ class RawWire_REST_API {
      * @since  1.0.15
      * @return void
      */
-    private function setup_validation_schemas() {
+    private function setup_validation_schemas()
+    {
         // Register schemas with RawWire_Validator if available
         if (!class_exists('RawWire_Validator')) {
             return;
@@ -116,7 +122,8 @@ class RawWire_REST_API {
      * @param  WP_REST_Request $request Request object
      * @return void
      */
-    public function log_request($request) {
+    public function log_request($request)
+    {
         if (!class_exists('RawWire_Logger')) {
             return;
         }
@@ -154,12 +161,14 @@ class RawWire_REST_API {
      * @param  callable $callback Middleware function
      * @return void
      */
-    private function add_middleware($callback) {
+    private function add_middleware($callback)
+    {
         $this->middleware[] = $callback;
     }
 
     // Background runner hook for scheduled fetches
-    public function background_fetch_runner() {
+    public function background_fetch_runner()
+    {
         try {
             if (!class_exists('RawWire_Dashboard')) return;
             $dashboard = RawWire_Dashboard::get_instance();
@@ -182,7 +191,8 @@ class RawWire_REST_API {
      * @since  1.0.15
      * @return void
      */
-    public function add_cors_headers() {
+    public function add_cors_headers()
+    {
         // Get allowed origins from settings
         $allowed_origins = apply_filters('rawwire_api_allowed_origins', array(
             get_site_url(),
@@ -219,33 +229,34 @@ class RawWire_REST_API {
      * @param  WP_REST_Server    $server Server instance
      * @return bool
      */
-    public function enable_compression($served, $result, $request, $server) {
+    public function enable_compression($served, $result, $request, $server)
+    {
         // Only apply to our namespace
         $route = $request->get_route();
         if (strpos($route, '/rawwire/') === false) {
             return $served;
         }
-        
+
         // Skip if headers already sent
         if (headers_sent()) {
             return $served;
         }
-        
+
         // Check if client accepts gzip
         $accept_encoding = isset($_SERVER['HTTP_ACCEPT_ENCODING']) ? $_SERVER['HTTP_ACCEPT_ENCODING'] : '';
-        
+
         if (strpos($accept_encoding, 'gzip') !== false && function_exists('gzencode')) {
             // Only compress if response is large enough (> 1KB)
             $data = $result->get_data();
             $json = wp_json_encode($data);
-            
+
             if (strlen($json) > 1024) {
                 header('Content-Encoding: gzip');
                 echo gzencode($json);
                 return true; // Prevent default serving
             }
         }
-        
+
         return $served;
     }
 
@@ -260,7 +271,8 @@ class RawWire_REST_API {
      * @param  WP_REST_Request  $request Request object
      * @return WP_REST_Response
      */
-    public function format_response($response, $server, $request) {
+    public function format_response($response, $server, $request)
+    {
         // Handle WP_Error objects
         if (is_wp_error($response)) {
             // Convert WP_Error to WP_REST_Response for consistent formatting
@@ -277,7 +289,7 @@ class RawWire_REST_API {
         // Now $response is guaranteed to be a WP_REST_Response
         // Add API version headers
         $response->header('X-API-Version', $this->api_version['version']);
-        
+
         // Add deprecation warnings if applicable
         if ($this->api_version['deprecated_at']) {
             $response->header('Deprecation', 'true');
@@ -287,7 +299,7 @@ class RawWire_REST_API {
         // Format error responses consistently
         if ($response->is_error()) {
             $data = $response->get_data();
-            
+
             // Ensure consistent error format
             if (!isset($data['error'])) {
                 $formatted = array(
@@ -324,7 +336,8 @@ class RawWire_REST_API {
      * @since  1.0.15
      * @return string
      */
-    private function get_client_ip() {
+    private function get_client_ip()
+    {
         $ip_keys = array('HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR');
         foreach ($ip_keys as $key) {
             if (isset($_SERVER[$key]) && filter_var($_SERVER[$key], FILTER_VALIDATE_IP)) {
@@ -334,9 +347,8 @@ class RawWire_REST_API {
         return 'unknown';
     }
 
-    public function register_routes() {
-        error_log("RawWire REST API: Registering routes for namespace: " . $this->namespace);
-
+    public function register_routes()
+    {
         // GET endpoint for fetch progress (OPTIMIZATION 1)
         register_rest_route($this->namespace, '/fetch-progress', array(
             'methods' => 'GET',
@@ -357,14 +369,14 @@ class RawWire_REST_API {
             'callback' => array($this, 'get_status'),
             'permission_callback' => array($this, 'check_permission')
         ));
-        
+
         // POST endpoint for advanced search with filters
         register_rest_route($this->namespace, '/search', array(
             'methods' => array('GET', 'POST'),
             'callback' => array($this, 'search_content'),
             'permission_callback' => array($this, 'check_permission')
         ));
-        
+
         // POST endpoint to update relevance score
         register_rest_route($this->namespace, '/content/(?P<id>\d+)/relevance', array(
             'methods' => 'POST',
@@ -379,14 +391,14 @@ class RawWire_REST_API {
                 )
             )
         ));
-        
+
         // GET endpoint for available filter options
         register_rest_route($this->namespace, '/filters', array(
             'methods' => 'GET',
             'callback' => array($this, 'get_filters'),
             'permission_callback' => '__return_true' // Public endpoint
         ));
-        
+
         // GET approved content (for AI models)
         register_rest_route($this->namespace, '/content', array(
             'methods' => 'GET',
@@ -403,28 +415,28 @@ class RawWire_REST_API {
                 )
             )
         ));
-        
+
         // GET single content item
         register_rest_route($this->namespace, '/content/(?P<id>\d+)', array(
             'methods' => 'GET',
             'callback' => array($this, 'get_single_content'),
             'permission_callback' => '__return_true'
         ));
-        
+
         // POST approve content
         register_rest_route($this->namespace, '/content/(?P<id>\d+)/approve', array(
             'methods' => 'POST',
             'callback' => array($this, 'approve_content'),
             'permission_callback' => array($this, 'check_permission')
         ));
-        
+
         // POST reject content
         register_rest_route($this->namespace, '/content/(?P<id>\d+)/reject', array(
             'methods' => 'POST',
             'callback' => array($this, 'reject_content'),
             'permission_callback' => array($this, 'check_permission')
         ));
-        
+
         // POST bulk approve
         register_rest_route($this->namespace, '/content/bulk-approve', array(
             'methods' => 'POST',
@@ -437,7 +449,7 @@ class RawWire_REST_API {
                 )
             )
         ));
-        
+
         // POST bulk reject
         register_rest_route($this->namespace, '/content/bulk-reject', array(
             'methods' => 'POST',
@@ -450,7 +462,7 @@ class RawWire_REST_API {
                 )
             )
         ));
-        
+
         // GET statistics
         register_rest_route($this->namespace, '/stats', array(
             'methods' => 'GET',
@@ -480,23 +492,122 @@ class RawWire_REST_API {
         ));
 
         // =====================================================================
+        // EQUALIZER TEMPLATE ENDPOINTS
+        // =====================================================================
+
+        // GET equalizer/stats - Get counts for all 7 Equalizer tables
+        register_rest_route($this->namespace, '/equalizer/stats', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'get_equalizer_stats'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST equalizer/ensure-tables - Creates all Equalizer tables
+        register_rest_route($this->namespace, '/equalizer/ensure-tables', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'ensure_equalizer_tables'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST equalizer/clear-lead-gen - Clear lead generation tables
+        register_rest_route($this->namespace, '/equalizer/clear-lead-gen', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'clear_lead_gen_tables'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST equalizer/clear-post-gen - Clear post generator tables
+        register_rest_route($this->namespace, '/equalizer/clear-post-gen', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'clear_post_gen_tables'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // =====================================================================
+        // EQUALIZER WORKFLOW ENDPOINTS (Post Generation Pipeline)
+        // =====================================================================
+
+        // POST equalizer/workflow/process-crdata - Process CR DATA batch with AI
+        register_rest_route($this->namespace, '/equalizer/workflow/process-crdata', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'equalizer_process_crdata'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // GET equalizer/content/review - Get content items for review
+        register_rest_route($this->namespace, '/equalizer/content/review', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'equalizer_get_content_for_review'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST equalizer/content/approve - Approve content item
+        register_rest_route($this->namespace, '/equalizer/content/(?P<id>\d+)/approve', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'equalizer_approve_content'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST equalizer/content/reject - Reject content item
+        register_rest_route($this->namespace, '/equalizer/content/(?P<id>\d+)/reject', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'equalizer_reject_content'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // GET equalizer/pending/review - Get pending items for final review
+        register_rest_route($this->namespace, '/equalizer/pending/review', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'equalizer_get_pending_for_review'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST equalizer/pending/publish - Publish pending item
+        register_rest_route($this->namespace, '/equalizer/pending/(?P<id>\d+)/publish', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'equalizer_publish_post'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST equalizer/workflow/import-crawlomatic - Import from Crawlomatic
+        register_rest_route($this->namespace, '/equalizer/workflow/import-crawlomatic', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'equalizer_import_crawlomatic'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // GET crawlomatic/rules - Get Crawlomatic rules list
+        register_rest_route($this->namespace, '/crawlomatic/rules', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'get_crawlomatic_rules'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST crawlomatic/run - Run a Crawlomatic rule
+        register_rest_route($this->namespace, '/crawlomatic/run', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'run_crawlomatic_rule'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // =====================================================================
         // WORKFLOW ORCHESTRATION ENDPOINTS
         // =====================================================================
-        
+
         // POST workflow/start - Start a workflow with configuration
         register_rest_route($this->namespace, '/workflow/start', array(
             'methods' => 'POST',
             'callback' => array($this, 'start_workflow'),
             'permission_callback' => array($this, 'check_permission')
         ));
-        
+
         // GET workflow/status - Get workflow execution status
         register_rest_route($this->namespace, '/workflow/status/(?P<id>[a-zA-Z0-9-]+)', array(
             'methods' => 'GET',
             'callback' => array($this, 'get_workflow_status'),
             'permission_callback' => array($this, 'check_permission')
         ));
-        
+
         // GET workflow/config - Get default workflow configuration and available adapters
         register_rest_route($this->namespace, '/workflow/config', array(
             'methods' => 'GET',
@@ -507,7 +618,7 @@ class RawWire_REST_API {
         // =====================================================================
         // AI STATUS ENDPOINT
         // =====================================================================
-        
+
         // GET ai/status - Get AI Engine availability and configuration
         register_rest_route($this->namespace, '/ai/status', array(
             'methods' => 'GET',
@@ -528,7 +639,7 @@ class RawWire_REST_API {
             'callback' => array($this, 'snooze_content_batch'),
             'permission_callback' => array($this, 'check_permission')
         ));
-        
+
         // GET automation logs
         register_rest_route($this->namespace, '/logs', array(
             'methods' => 'GET',
@@ -544,9 +655,28 @@ class RawWire_REST_API {
                 )
             )
         ));
+
+        // =====================================================================
+        // AUTOMATION PROGRESS ENDPOINTS (Dashboard Hardwired)
+        // =====================================================================
+
+        // GET automation/progress - Get current automation progress
+        register_rest_route($this->namespace, '/automation/progress', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'get_automation_progress'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
+
+        // POST automation/progress - Update automation progress (for internal use)
+        register_rest_route($this->namespace, '/automation/progress', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'update_automation_progress'),
+            'permission_callback' => array($this, 'check_permission')
+        ));
     }
 
-    public function check_permission() {
+    public function check_permission()
+    {
         // Permission check - requires manage_options capability (admin)
         // Note: For development/testing, you can temporarily return true
         return current_user_can('manage_options');
@@ -557,24 +687,25 @@ class RawWire_REST_API {
      *
      * @param WP_REST_Response $response Response object
      */
-    private function add_rate_limit_headers($response) {
+    private function add_rate_limit_headers($response)
+    {
         $user_id = get_current_user_id();
         $rate_limit_key = 'rawwire_rate_limit_' . $user_id;
         $rate_limit = get_transient($rate_limit_key);
-        
+
         if ($rate_limit === false) {
             $rate_limit = array(
                 'requests' => 0,
                 'reset_at' => time() + HOUR_IN_SECONDS
             );
         }
-        
+
         $rate_limit['requests']++;
         set_transient($rate_limit_key, $rate_limit, HOUR_IN_SECONDS);
-        
+
         $limit = 100; // 100 requests per hour
         $remaining = max(0, $limit - $rate_limit['requests']);
-        
+
         $response->header('X-RateLimit-Limit', $limit);
         $response->header('X-RateLimit-Remaining', $remaining);
         $response->header('X-RateLimit-Reset', $rate_limit['reset_at']);
@@ -588,7 +719,8 @@ class RawWire_REST_API {
      * @param WP_REST_Request $request REST request object
      * @return WP_REST_Response Progress information
      */
-    public function get_fetch_progress($request) {
+    public function get_fetch_progress($request)
+    {
         $user_id = get_current_user_id();
         $progress_key = 'rawwire_fetch_progress_' . $user_id;
         $progress = get_option($progress_key, array(
@@ -596,13 +728,14 @@ class RawWire_REST_API {
             'progress' => 0,
             'total' => 0
         ));
-        
+
         return new WP_REST_Response($progress, 200);
     }
 
-    public function search_content($request) {
+    public function search_content($request)
+    {
         $search_service = new Raw_Wire_Search_Service();
-        
+
         $params = array(
             'q' => $request->get_param('q'),
             'category' => $request->get_param('category'),
@@ -615,10 +748,12 @@ class RawWire_REST_API {
             'order_by' => $request->get_param('order_by'),
             'order' => $request->get_param('order'),
         );
-        
+
         // Remove null values
-        $params = array_filter($params, function($v) { return $v !== null; });
-        
+        $params = array_filter($params, function ($v) {
+            return $v !== null;
+        });
+
         $result = $search_service->search($params);
         if (is_wp_error($result)) {
             $this->log_error('Search failed', array('error' => $result->get_error_message()));
@@ -627,7 +762,7 @@ class RawWire_REST_API {
                 'message' => $result->get_error_message()
             ), 500);
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'data' => $result['results'],
@@ -637,16 +772,17 @@ class RawWire_REST_API {
             'filters_applied' => $result['filters_applied']
         ), 200);
     }
-    
-    public function update_relevance($request) {
+
+    public function update_relevance($request)
+    {
         $id = max(0, (int)$request->get_param('id'));
         $score = max(0.0, min(100.0, (float)$request->get_param('score')));
-        
+
         $table_check = $this->ensure_table();
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
+
         $search_service = new Raw_Wire_Search_Service();
         $result = $search_service->update_relevance($id, $score);
         if (is_wp_error($result)) {
@@ -656,14 +792,14 @@ class RawWire_REST_API {
                 'message' => $result->get_error_message()
             ), 500);
         }
-        
+
         if ($result === false) {
             return new WP_REST_Response(array(
                 'success' => false,
                 'message' => 'Failed to update relevance score'
             ), 500);
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'message' => 'Relevance score updated',
@@ -671,20 +807,21 @@ class RawWire_REST_API {
             'score' => $score
         ), 200);
     }
-    
-    public function get_filters($request) {
+
+    public function get_filters($request)
+    {
         $search_service = new Raw_Wire_Search_Service();
-        
+
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $table_check = $this->ensure_table($table);
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
+
         $statuses = $wpdb->get_col("SELECT DISTINCT status FROM {$table} WHERE status IS NOT NULL");
         $categories = $search_service->get_categories();
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'filters' => array(
@@ -698,16 +835,18 @@ class RawWire_REST_API {
         ), 200);
     }
 
-    public function clear_cache($request) {
+    public function clear_cache($request)
+    {
         delete_transient('rawwire_data_cache');
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'message' => 'Cache cleared successfully'
         ), 200);
     }
 
-    public function get_status($request) {
+    public function get_status($request)
+    {
         // Deprecated: All feature logic must be in the template. Return stub response.
         return new WP_REST_Response(array(
             'success' => false,
@@ -715,31 +854,32 @@ class RawWire_REST_API {
             'data' => array()
         ), 501);
     }
-    
+
     // Content Management Endpoints
-    
-    public function get_content($request) {
+
+    public function get_content($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $table_check = $this->ensure_table($table);
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
+
         $status = sanitize_text_field((string)$request->get_param('status'));
         if ($status === '') {
             $status = 'approved';
         }
         $limit = max(1, min(100, (int)$request->get_param('limit')));
-        
+
         $sql = $wpdb->prepare(
             "SELECT * FROM {$table} WHERE status = %s ORDER BY created_at DESC LIMIT %d",
             $status,
             $limit
         );
-        
+
         $content = $wpdb->get_results($sql, ARRAY_A);
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'count' => count($content),
@@ -747,46 +887,48 @@ class RawWire_REST_API {
             'status_filter' => $status
         ), 200);
     }
-    
-    public function get_single_content($request) {
+
+    public function get_single_content($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $table_check = $this->ensure_table($table);
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
+
         $id = (int)$request->get_param('id');
-        
+
         $content = $wpdb->get_row($wpdb->prepare(
             "SELECT * FROM {$table} WHERE id = %d",
             $id
         ), ARRAY_A);
-        
+
         if (!$content) {
             return new WP_REST_Response(array(
                 'success' => false,
                 'message' => 'Content not found'
             ), 404);
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'data' => $content
         ), 200);
     }
-    
-    public function approve_content($request) {
+
+    public function approve_content($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $table_check = $this->ensure_table($table);
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
+
         $id = (int)$request->get_param('id');
         $user_id = get_current_user_id();
-        
+
         $result = $wpdb->update(
             $table,
             array(
@@ -797,7 +939,7 @@ class RawWire_REST_API {
             array('%s', '%s'),
             array('%d')
         );
-        
+
         if ($result === false) {
             $this->log_error('Approve failed', array('id' => $id));
             return new WP_REST_Response(array(
@@ -811,28 +953,29 @@ class RawWire_REST_API {
                 'message' => 'Content not found'
             ), 404);
         }
-        
+
         // Log approval action
         $this->log_action('approve', $id, $user_id);
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'message' => 'Content approved',
             'id' => $id
         ), 200);
     }
-    
-    public function reject_content($request) {
+
+    public function reject_content($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $table_check = $this->ensure_table($table);
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
+
         $id = (int)$request->get_param('id');
         $user_id = get_current_user_id();
-        
+
         $result = $wpdb->update(
             $table,
             array(
@@ -843,7 +986,7 @@ class RawWire_REST_API {
             array('%s', '%s'),
             array('%d')
         );
-        
+
         if ($result === false) {
             $this->log_error('Reject failed', array('id' => $id));
             return new WP_REST_Response(array(
@@ -857,35 +1000,38 @@ class RawWire_REST_API {
                 'message' => 'Content not found'
             ), 404);
         }
-        
+
         // Log rejection action
         $this->log_action('reject', $id, $user_id);
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'message' => 'Content rejected',
             'id' => $id
         ), 200);
     }
-    
-    public function bulk_approve($request) {
+
+    public function bulk_approve($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $table_check = $this->ensure_table($table);
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
-        $ids = array_values(array_filter(array_map('intval', (array)$request->get_param('ids')), function($id) { return $id > 0; }));
+
+        $ids = array_values(array_filter(array_map('intval', (array)$request->get_param('ids')), function ($id) {
+            return $id > 0;
+        }));
         $user_id = get_current_user_id();
-        
+
         if (empty($ids) || !is_array($ids)) {
             return new WP_REST_Response(array(
                 'success' => false,
                 'message' => 'No IDs provided'
             ), 400);
         }
-        
+
         $placeholders = implode(',', array_fill(0, count($ids), '%d'));
         $result = $wpdb->query($wpdb->prepare(
             "UPDATE {$table} SET status = 'approved', updated_at = %s WHERE id IN ($placeholders)",
@@ -898,36 +1044,39 @@ class RawWire_REST_API {
                 'message' => 'Failed to approve items'
             ), 500);
         }
-        
+
         foreach ($ids as $id) {
             $this->log_action('bulk_approve', $id, $user_id);
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'message' => "Approved {$result} items",
             'count' => $result
         ), 200);
     }
-    
-    public function bulk_reject($request) {
+
+    public function bulk_reject($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $table_check = $this->ensure_table($table);
         if ($table_check instanceof WP_REST_Response) {
             return $table_check;
         }
-        
-        $ids = array_values(array_filter(array_map('intval', (array)$request->get_param('ids')), function($id) { return $id > 0; }));
+
+        $ids = array_values(array_filter(array_map('intval', (array)$request->get_param('ids')), function ($id) {
+            return $id > 0;
+        }));
         $user_id = get_current_user_id();
-        
+
         if (empty($ids) || !is_array($ids)) {
             return new WP_REST_Response(array(
                 'success' => false,
                 'message' => 'No IDs provided'
             ), 400);
         }
-        
+
         $placeholders = implode(',', array_fill(0, count($ids), '%d'));
         $result = $wpdb->query($wpdb->prepare(
             "UPDATE {$table} SET status = 'rejected', updated_at = %s WHERE id IN ($placeholders)",
@@ -940,21 +1089,22 @@ class RawWire_REST_API {
                 'message' => 'Failed to reject items'
             ), 500);
         }
-        
+
         foreach ($ids as $id) {
             $this->log_action('bulk_reject', $id, $user_id);
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'message' => "Rejected {$result} items",
             'count' => $result
         ), 200);
     }
-    
-    public function get_stats($request) {
+
+    public function get_stats($request)
+    {
         global $wpdb;
-        
+
         // Define all 6 workflow tables
         $tables = array(
             'candidates' => $wpdb->prefix . 'rawwire_candidates',
@@ -964,11 +1114,11 @@ class RawWire_REST_API {
             'archives'   => $wpdb->prefix . 'rawwire_archives',
             'published'  => $wpdb->prefix . 'rawwire_published',
         );
-        
+
         // Build table counts with full table names for workflow visibility
         $table_counts = array();
         $total_items = 0;
-        
+
         foreach ($tables as $name => $table) {
             $exists = $this->table_exists($table);
             $count = 0;
@@ -983,7 +1133,7 @@ class RawWire_REST_API {
             );
             $total_items += $count;
         }
-        
+
         // Get specific status counts from approvals table (pending review)
         $pending_review = 0;
         if ($this->table_exists($tables['approvals'])) {
@@ -991,7 +1141,7 @@ class RawWire_REST_API {
                 $wpdb->prepare("SELECT COUNT(*) FROM {$tables['approvals']} WHERE status = %s", 'pending')
             );
         }
-        
+
         // Get ready to publish count from releases table
         $ready_to_publish = 0;
         if ($this->table_exists($tables['releases'])) {
@@ -999,13 +1149,13 @@ class RawWire_REST_API {
                 $wpdb->prepare("SELECT COUNT(*) FROM {$tables['releases']} WHERE status = %s", 'ready')
             );
         }
-        
+
         // Get published count from published table
         $published_count = 0;
         if ($this->table_exists($tables['published'])) {
             $published_count = (int)$wpdb->get_var("SELECT COUNT(*) FROM {$tables['published']}");
         }
-        
+
         // Get published today count from published table
         $published_today = 0;
         if ($this->table_exists($tables['published'])) {
@@ -1013,7 +1163,7 @@ class RawWire_REST_API {
                 "SELECT COUNT(*) FROM {$tables['published']} WHERE DATE(published_at) = CURDATE()"
             );
         }
-        
+
         // Build stats response - real-time counts for workflow visibility
         $stats = array(
             'total'            => $total_items,
@@ -1042,9 +1192,10 @@ class RawWire_REST_API {
      * Get status of all 6 workflow tables with counts
      * Real-time view for workflow monitoring
      */
-    public function get_table_status($request) {
+    public function get_table_status($request)
+    {
         global $wpdb;
-        
+
         // Define all 6 workflow tables
         $tables = array(
             'candidates' => array(
@@ -1078,7 +1229,7 @@ class RawWire_REST_API {
                 'description' => 'Lower-scoring items (permanent archive)',
             ),
         );
-        
+
         $status = array();
         $total = 0;
         foreach ($tables as $key => $info) {
@@ -1096,7 +1247,7 @@ class RawWire_REST_API {
             );
             $total += $count;
         }
-        
+
         return new WP_REST_Response(array(
             'success'   => true,
             'timestamp' => current_time('mysql'),
@@ -1108,9 +1259,10 @@ class RawWire_REST_API {
     /**
      * Ensure all 6 workflow tables exist
      */
-    public function ensure_workflow_tables($request) {
+    public function ensure_workflow_tables($request)
+    {
         require_once plugin_dir_path(__FILE__) . 'services/class-migration-service.php';
-        
+
         try {
             \RawWire\Dashboard\Services\Migration_Service::run_migrations();
             return new WP_REST_Response(array(
@@ -1129,9 +1281,10 @@ class RawWire_REST_API {
      * Clear all workflow tables (TRUNCATE)
      * Only clears workflow tables, not WordPress core tables
      */
-    public function clear_workflow_tables($request) {
+    public function clear_workflow_tables($request)
+    {
         global $wpdb;
-        
+
         // Define ALL workflow-related tables to clear
         $workflow_tables = array(
             'candidates' => $wpdb->prefix . 'rawwire_candidates',
@@ -1142,10 +1295,10 @@ class RawWire_REST_API {
             'archives'   => $wpdb->prefix . 'rawwire_archives',
             'queue'      => $wpdb->prefix . 'rawwire_queue',
         );
-        
+
         $results = array();
         $total_deleted = 0;
-        
+
         foreach ($workflow_tables as $name => $table) {
             if ($this->table_exists($table)) {
                 $count_before = (int)$wpdb->get_var("SELECT COUNT(*) FROM {$table}");
@@ -1163,7 +1316,7 @@ class RawWire_REST_API {
                 );
             }
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'message' => "Cleared {$total_deleted} records from all workflow tables",
@@ -1173,9 +1326,288 @@ class RawWire_REST_API {
     }
 
     // =========================================================================
+    // EQUALIZER TEMPLATE METHODS
+    // =========================================================================
+
+    /**
+     * Get stats for all 7 Equalizer tables
+     */
+    public function get_equalizer_stats($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-tables.php';
+
+        $counts = \RawWire\Dashboard\Services\Equalizer_Tables::get_table_counts();
+        $definitions = \RawWire\Dashboard\Services\Equalizer_Tables::get_table_definitions();
+
+        $tables = array();
+        foreach ($counts as $key => $count) {
+            $def = isset($definitions[$key]) ? $definitions[$key] : array();
+            $tables[$key] = array(
+                'count' => $count,
+                'label' => isset($def['label']) ? $def['label'] : ucfirst($key),
+                'workflow' => isset($def['workflow']) ? $def['workflow'] : 'unknown',
+                'color' => isset($def['color']) ? $def['color'] : '#6b7280',
+                'icon' => isset($def['icon']) ? $def['icon'] : 'dashicons-database',
+            );
+        }
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'tables' => $tables,
+            'totals' => array(
+                'lead_generation' => ($counts['raw'] ?? 0) + ($counts['prospects'] ?? 0) + ($counts['leads'] ?? 0),
+                'post_generator' => ($counts['crdata'] ?? 0) + ($counts['content'] ?? 0) + ($counts['pending'] ?? 0) + ($counts['posted'] ?? 0),
+            ),
+        ), 200);
+    }
+
+    /**
+     * Create all Equalizer tables
+     */
+    public function ensure_equalizer_tables($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-tables.php';
+
+        try {
+            \RawWire\Dashboard\Services\Equalizer_Tables::create_all_tables();
+            return new WP_REST_Response(array(
+                'success' => true,
+                'message' => 'All Equalizer tables created/verified',
+            ), 200);
+        } catch (Exception $e) {
+            return new WP_REST_Response(array(
+                'success' => false,
+                'message' => 'Failed to create tables: ' . $e->getMessage(),
+            ), 500);
+        }
+    }
+
+    /**
+     * Clear Lead Generation workflow tables
+     */
+    public function clear_lead_gen_tables($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-tables.php';
+
+        $cleared = \RawWire\Dashboard\Services\Equalizer_Tables::clear_lead_gen_tables();
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'message' => "Cleared {$cleared} records from Lead Generation tables",
+            'cleared' => $cleared,
+        ), 200);
+    }
+
+    /**
+     * Clear Post Generator workflow tables
+     */
+    public function clear_post_gen_tables($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-tables.php';
+
+        $cleared = \RawWire\Dashboard\Services\Equalizer_Tables::clear_post_gen_tables();
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'message' => "Cleared {$cleared} records from Post Generator tables",
+            'cleared' => $cleared,
+        ), 200);
+    }
+
+    /**
+     * Get Crawlomatic rules list
+     */
+    public function get_crawlomatic_rules($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-tables.php';
+
+        $rules = \RawWire\Dashboard\Services\Equalizer_Tables::get_crawlomatic_rules();
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'rules' => $rules,
+            'count' => count($rules),
+        ), 200);
+    }
+
+    /**
+     * Run a Crawlomatic rule
+     */
+    public function run_crawlomatic_rule($request)
+    {
+        $params = $request->get_json_params();
+        $rule_index = isset($params['rule_index']) ? intval($params['rule_index']) : 0;
+
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-tables.php';
+
+        $result = \RawWire\Dashboard\Services\Equalizer_Tables::run_crawlomatic_rule($rule_index);
+
+        if ($result === false) {
+            return new WP_REST_Response(array(
+                'success' => false,
+                'message' => 'Crawlomatic function not available. Is the plugin active?',
+            ), 500);
+        }
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'message' => 'Crawlomatic rule executed',
+            'result' => $result,
+        ), 200);
+    }
+    
+    // =========================================================================
+    // EQUALIZER WORKFLOW METHODS (Post Generation Pipeline)
+    // =========================================================================
+
+    /**
+     * Process CR DATA batch with AI
+     * Condenses crawled content into post-sized stories
+     */
+    public function equalizer_process_crdata($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-workflow.php';
+
+        $params = $request->get_json_params();
+        $limit = isset($params['limit']) ? intval($params['limit']) : 10;
+        $crdata_id = isset($params['crdata_id']) ? intval($params['crdata_id']) : 0;
+
+        try {
+            if ($crdata_id) {
+                // Process single item
+                $result = \RawWire\Dashboard\Services\Equalizer_Workflow::process_crdata_item($crdata_id);
+            } else {
+                // Process batch
+                $result = \RawWire\Dashboard\Services\Equalizer_Workflow::process_crdata_batch($limit);
+            }
+
+            return new WP_REST_Response(array(
+                'success' => true,
+                'data' => $result,
+            ), 200);
+        } catch (Exception $e) {
+            return new WP_REST_Response(array(
+                'success' => false,
+                'message' => $e->getMessage(),
+            ), 500);
+        }
+    }
+
+    /**
+     * Get content items for review
+     */
+    public function equalizer_get_content_for_review($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-workflow.php';
+
+        $status = $request->get_param('status') ?: 'queued';
+        $limit = intval($request->get_param('limit') ?: 20);
+
+        $items = \RawWire\Dashboard\Services\Equalizer_Workflow::get_content_for_review($status, $limit);
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'items' => $items,
+            'count' => count($items),
+        ), 200);
+    }
+
+    /**
+     * Approve a content item
+     */
+    public function equalizer_approve_content($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-workflow.php';
+
+        $content_id = intval($request->get_param('id'));
+        $params = $request->get_json_params();
+        $generate_full = isset($params['generate_full']) ? (bool) $params['generate_full'] : true;
+
+        $result = \RawWire\Dashboard\Services\Equalizer_Workflow::approve_content($content_id, $generate_full);
+
+        $status_code = $result['success'] ? 200 : 400;
+        return new WP_REST_Response($result, $status_code);
+    }
+
+    /**
+     * Reject a content item
+     */
+    public function equalizer_reject_content($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-workflow.php';
+
+        $content_id = intval($request->get_param('id'));
+        $params = $request->get_json_params();
+        $reason = isset($params['reason']) ? sanitize_text_field($params['reason']) : '';
+
+        $result = \RawWire\Dashboard\Services\Equalizer_Workflow::reject_content($content_id, $reason);
+
+        return new WP_REST_Response($result, 200);
+    }
+
+    /**
+     * Get pending items for final review
+     */
+    public function equalizer_get_pending_for_review($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-workflow.php';
+
+        $limit = intval($request->get_param('limit') ?: 20);
+
+        $items = \RawWire\Dashboard\Services\Equalizer_Workflow::get_pending_for_review($limit);
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'items' => $items,
+            'count' => count($items),
+        ), 200);
+    }
+
+    /**
+     * Publish a pending post
+     */
+    public function equalizer_publish_post($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-workflow.php';
+
+        $pending_id = intval($request->get_param('id'));
+        $params = $request->get_json_params();
+
+        $options = array(
+            'post_status' => isset($params['post_status']) ? sanitize_text_field($params['post_status']) : 'publish',
+            'publish_social' => isset($params['publish_social']) ? (bool) $params['publish_social'] : false,
+        );
+
+        $result = \RawWire\Dashboard\Services\Equalizer_Workflow::publish_post($pending_id, $options);
+
+        $status_code = $result['success'] ? 200 : 400;
+        return new WP_REST_Response($result, $status_code);
+    }
+
+    /**
+     * Import existing Crawlomatic posts into CR DATA table
+     */
+    public function equalizer_import_crawlomatic($request)
+    {
+        require_once plugin_dir_path(__FILE__) . 'services/class-equalizer-workflow.php';
+
+        $params = $request->get_json_params();
+        $rule_index = isset($params['rule_index']) ? intval($params['rule_index']) : null;
+        $limit = isset($params['limit']) ? intval($params['limit']) : 50;
+
+        $imported = \RawWire\Dashboard\Services\Equalizer_Workflow::import_from_crawlomatic($rule_index, $limit);
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'imported' => $imported,
+            'message' => "Imported {$imported} posts into CR DATA table",
+        ), 200);
+    }
+
+    // =========================================================================
     // WORKFLOW ORCHESTRATION METHODS
     // =========================================================================
-    
+
     /**
      * Start a workflow with given configuration
      * 
@@ -1190,9 +1622,10 @@ class RawWire_REST_API {
      *   "async": false
      * }
      */
-    public function start_workflow($request) {
+    public function start_workflow($request)
+    {
         error_log('RawWire: start_workflow called');
-        
+
         $orchestrator_path = plugin_dir_path(__FILE__) . 'services/class-workflow-orchestrator.php';
         if (!file_exists($orchestrator_path)) {
             error_log('RawWire: Workflow orchestrator file not found: ' . $orchestrator_path);
@@ -1202,24 +1635,24 @@ class RawWire_REST_API {
             ), 500);
         }
         require_once $orchestrator_path;
-        
+
         $config = $request->get_json_params();
         if (!is_array($config)) {
             $config = array();
         }
         error_log('RawWire: Workflow config: ' . print_r($config, true));
-        
+
         // Merge with defaults
         $defaults = \RawWire\Dashboard\Services\Workflow_Orchestrator::get_default_config();
         $config = array_merge($defaults, $config);
-        
+
         // If no sources provided, load from template settings
         if (empty($config['sources'])) {
             $config['sources'] = $this->get_sources_from_template();
             // Use native scraper for non-GitHub sources (default is github)
             $config['scraper'] = 'native';
         }
-        
+
         // Validate required fields
         if (empty($config['sources'])) {
             return new WP_REST_Response(array(
@@ -1227,16 +1660,16 @@ class RawWire_REST_API {
                 'error' => 'No sources configured. Please enable at least one source in Settings.',
             ), 400);
         }
-        
+
         try {
             $orchestrator = new \RawWire\Dashboard\Services\Workflow_Orchestrator();
             $result = $orchestrator->start($config);
-            
+
             $status_code = $result['success'] ? 200 : 500;
             if (!empty($result['status']) && $result['status'] === 'scheduled') {
                 $status_code = 202; // Accepted for async
             }
-            
+
             return new WP_REST_Response($result, $status_code);
         } catch (\Exception $e) {
             return new WP_REST_Response(array(
@@ -1245,40 +1678,42 @@ class RawWire_REST_API {
             ), 500);
         }
     }
-    
+
     /**
      * Get workflow execution status
      */
-    public function get_workflow_status($request) {
+    public function get_workflow_status($request)
+    {
         require_once plugin_dir_path(__FILE__) . 'services/class-workflow-orchestrator.php';
-        
+
         $execution_id = $request->get_param('id');
-        
+
         $status = \RawWire\Dashboard\Services\Workflow_Orchestrator::get_status($execution_id);
-        
+
         if (!$status) {
             return new WP_REST_Response(array(
                 'success' => false,
                 'error' => 'Workflow execution not found',
             ), 404);
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'execution' => $status,
         ), 200);
     }
-    
+
     /**
      * Get workflow configuration options and available adapters
      */
-    public function get_workflow_config($request) {
+    public function get_workflow_config($request)
+    {
         require_once plugin_dir_path(__FILE__) . 'services/class-workflow-orchestrator.php';
-        
+
         $scrapers = \RawWire\Dashboard\Services\Workflow_Orchestrator::get_available_scrapers();
         $scorers = \RawWire\Dashboard\Services\Workflow_Orchestrator::get_available_scorers();
         $defaults = \RawWire\Dashboard\Services\Workflow_Orchestrator::get_default_config();
-        
+
         // Get available target tables
         $tables = array(
             'candidates' => array('label' => '1. Candidates', 'description' => 'Initial intake'),
@@ -1288,7 +1723,7 @@ class RawWire_REST_API {
             'published'  => array('label' => '5. Published', 'description' => 'Finished products'),
             'archives'   => array('label' => '0. Archives', 'description' => 'Historical data'),
         );
-        
+
         // GitHub-specific source presets
         $github_presets = array(
             array(
@@ -1317,7 +1752,7 @@ class RawWire_REST_API {
                 ),
             ),
         );
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'config' => array(
@@ -1340,9 +1775,10 @@ class RawWire_REST_API {
      * 
      * @return WP_REST_Response
      */
-    public function get_ai_status($request) {
+    public function get_ai_status($request)
+    {
         global $mwai, $mwai_core;
-        
+
         $status = array(
             'available' => false,
             'pro' => false,
@@ -1353,28 +1789,28 @@ class RawWire_REST_API {
             'groq_engine' => false,
             'debug' => array(),
         );
-        
+
         // Direct AI Engine detection
         $status['debug']['mwai_class_exists'] = class_exists('Meow_MWAI_Core');
         $status['debug']['mwai_init_exists'] = function_exists('mwai_init');
         $status['debug']['mwai_version_defined'] = defined('MWAI_VERSION');
         $status['debug']['mwai_global'] = !empty($mwai);
         $status['debug']['mwai_core_global'] = !empty($mwai_core);
-        
+
         // Check AI Engine availability directly
         if (class_exists('Meow_MWAI_Core') || function_exists('mwai_init')) {
             $status['available'] = true;
-            
+
             if (defined('MWAI_VERSION')) {
                 $status['version'] = MWAI_VERSION;
             }
         }
-        
+
         // Check for Pro version
         if (class_exists('Meow_MWAI_Pro') || defined('MWAI_PRO_VERSION') || defined('MWAI_ITEM_ID')) {
             $status['pro'] = true;
         }
-        
+
         // Get environments from AI Engine settings
         $ai_settings = get_option('mwai_options', array());
         if (isset($ai_settings['ai_envs']) && is_array($ai_settings['ai_envs'])) {
@@ -1387,7 +1823,7 @@ class RawWire_REST_API {
                 );
             }
         }
-        
+
         // Try to get AI Adapter instance for additional info
         $adapter_path = plugin_dir_path(__FILE__) . 'cores/toolbox-core/class-ai-adapter.php';
         if (file_exists($adapter_path)) {
@@ -1398,7 +1834,7 @@ class RawWire_REST_API {
                 $status['default_env'] = $adapter_status['default_env'];
             }
         }
-        
+
         // Check MCP Server availability
         $mcp_path = plugin_dir_path(__FILE__) . 'cores/toolbox-core/class-mcp-server.php';
         if (file_exists($mcp_path)) {
@@ -1407,7 +1843,7 @@ class RawWire_REST_API {
                 $status['mcp_server'] = true;
             }
         }
-        
+
         // Check Groq Engine availability
         // Note: Groq integration is in includes/integrations and hooks into AI Engine Pro
         $groq_path = plugin_dir_path(__FILE__) . 'includes/integrations/class-groq-engine.php';
@@ -1416,7 +1852,7 @@ class RawWire_REST_API {
             // Check if the integration class is loaded
             $status['groq_engine'] = class_exists('Meow_MWAI_Engines_Groq');
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'ai_status' => $status,
@@ -1426,7 +1862,8 @@ class RawWire_REST_API {
     /**
      * Approve content items in batch: expects { content_ids: [id, id, ...] }
      */
-    public function approve_content_batch($request) {
+    public function approve_content_batch($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $payload = $request->get_json_params();
@@ -1446,7 +1883,8 @@ class RawWire_REST_API {
     /**
      * Snooze content items: currently updates updated_at and logs action
      */
-    public function snooze_content_batch($request) {
+    public function snooze_content_batch($request)
+    {
         global $wpdb;
         $table = $wpdb->prefix . 'rawwire_content';
         $payload = $request->get_json_params();
@@ -1464,45 +1902,82 @@ class RawWire_REST_API {
         RawWire_Logger::log_activity('Snoozed items', 'approvals', array('ids' => $ids, 'minutes' => $minutes, 'count' => $result), 'info');
         return new WP_REST_Response(array('success' => true, 'message' => 'Snoozed items', 'count' => $result), 200);
     }
-    
-    public function get_logs($request) {
+
+    public function get_logs($request)
+    {
         $limit = min((int)$request->get_param('limit'), 500);
         $severity = $request->get_param('severity');
-        
-        // For now, return WordPress error log entries related to rawwire
-        // In production, you'd have a dedicated logs table
+
         $logs = array();
-        
+
         if (defined('WP_DEBUG_LOG') && WP_DEBUG_LOG) {
             $log_file = WP_CONTENT_DIR . '/debug.log';
             if (file_exists($log_file)) {
-                $lines = file($log_file);
-                $count = 0;
-                
-                foreach (array_reverse($lines) as $line) {
-                    if (stripos($line, 'rawwire') !== false || stripos($line, 'raw-wire') !== false || stripos($line, 'raw_wire') !== false) {
-                        $logs[] = array(
-                            'timestamp' => substr($line, 0, 25),
-                            'message' => trim(substr($line, 25)),
-                            'severity' => $this->detect_severity($line)
-                        );
-                        $count++;
-                        if ($count >= $limit) break;
+                // Read only the tail of the file to avoid OOM on large logs
+                $max_bytes = 512 * 1024; // 512 KB tail
+                $fsize = filesize($log_file);
+                $fh = fopen($log_file, 'r');
+                if ($fh) {
+                    if ($fsize > $max_bytes) {
+                        fseek($fh, -$max_bytes, SEEK_END);
+                        fgets($fh); // discard partial first line
+                    }
+                    $chunk = fread($fh, $max_bytes);
+                    fclose($fh);
+
+                    $lines = array_reverse(explode("\n", $chunk));
+                    $count = 0;
+
+                    foreach ($lines as $line) {
+                        $line = trim($line);
+                        if ($line === '') continue;
+
+                        // Match same keywords as server-side panel render
+                        if (
+                            stripos($line, 'rawwire') !== false ||
+                            stripos($line, 'raw-wire') !== false ||
+                            stripos($line, 'raw_wire') !== false ||
+                            stripos($line, 'workflow') !== false
+                        ) {
+                            $entry_severity = $this->detect_severity($line);
+
+                            // Apply severity filter if requested
+                            if ($severity && $entry_severity !== $severity) {
+                                continue;
+                            }
+
+                            // Parse timestamp properly (bracket-wrapped dates)
+                            $timestamp = '';
+                            $message   = $line;
+                            if (preg_match('/^\[([^\]]+)\]/', $line, $matches)) {
+                                $timestamp = $matches[1];
+                                $message   = trim(substr($line, strlen($matches[0])));
+                            }
+
+                            $logs[] = array(
+                                'timestamp' => $timestamp,
+                                'message'   => $message,
+                                'severity'  => $entry_severity,
+                            );
+                            $count++;
+                            if ($count >= $limit) break;
+                        }
                     }
                 }
             }
         }
-        
+
         return new WP_REST_Response(array(
             'success' => true,
             'logs' => $logs,
             'count' => count($logs)
         ), 200);
     }
-    
+
     // Helper functions
 
-    private function ensure_table($table = null) {
+    private function ensure_table($table = null)
+    {
         if ($table === null) {
             global $wpdb;
             $table = $wpdb->prefix . 'rawwire_content';
@@ -1517,7 +1992,8 @@ class RawWire_REST_API {
         ), 500);
     }
 
-    private function table_exists($table) {
+    private function table_exists($table)
+    {
         global $wpdb;
         return $wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table)) === $table;
     }
@@ -1532,9 +2008,10 @@ class RawWire_REST_API {
      * 
      * @return array Array of source configs
      */
-    private function get_sources_from_template() {
+    private function get_sources_from_template()
+    {
         $sources = array();
-        
+
         // PRIMARY: Get user-configured sources from Scraper Toolkit
         if (class_exists('RawWire_Scraper_Settings')) {
             $scraper_sources = \RawWire_Scraper_Settings::get_sources();
@@ -1544,10 +2021,10 @@ class RawWire_REST_API {
                     if (empty($source['enabled'])) {
                         continue;
                     }
-                    
+
                     $url = $source['url'] ?? $source['address'] ?? '';
                     $params = array();
-                    
+
                     // Parse existing params from source or URL
                     if (!empty($source['params'])) {
                         if (is_string($source['params'])) {
@@ -1556,7 +2033,7 @@ class RawWire_REST_API {
                             $params = $source['params'];
                         }
                     }
-                    
+
                     // Add default required params for known APIs
                     if (strpos($url, 'api.github.com/search') !== false) {
                         // GitHub search API requires 'q' parameter
@@ -1588,7 +2065,7 @@ class RawWire_REST_API {
                             $params['ailimit'] = min($source['records_limit'] ?? 10, 500);
                         }
                     }
-                    
+
                     // Add auth key as API key header/param if provided
                     $headers = array();
                     if (!empty($source['auth_key']) && $source['auth_type'] === 'api_key') {
@@ -1601,7 +2078,7 @@ class RawWire_REST_API {
                             $headers['Authorization'] = 'Bearer ' . $source['auth_key'];
                         }
                     }
-                    
+
                     $sources[] = array(
                         'id' => $source['id'] ?? sanitize_title($source['name'] ?? 'source'),
                         'url' => $url,
@@ -1616,7 +2093,7 @@ class RawWire_REST_API {
                 return $sources;
             }
         }
-        
+
         // FALLBACK: Try template sourceTypes (legacy built-in sources)
         if (class_exists('RawWire_Template_Engine')) {
             $template = \RawWire_Template_Engine::get_active_template();
@@ -1624,7 +2101,7 @@ class RawWire_REST_API {
                 foreach ($template['sourceTypes'] as $source_id => $source_config) {
                     if (!empty($source_config['enabled'])) {
                         $url = $source_config['config']['endpoint'] ?? null;
-                        
+
                         if (!$url) {
                             switch ($source_id) {
                                 case 'federal_register':
@@ -1637,7 +2114,7 @@ class RawWire_REST_API {
                                     continue 2;
                             }
                         }
-                        
+
                         $sources[] = array(
                             'id' => $source_id,
                             'url' => $url,
@@ -1650,7 +2127,7 @@ class RawWire_REST_API {
                 }
             }
         }
-        
+
         // DEFAULT: Use Federal Register as test source if nothing configured
         if (empty($sources)) {
             $sources[] = array(
@@ -1664,22 +2141,108 @@ class RawWire_REST_API {
                 ),
             );
         }
-        
+
         error_log('RawWire: get_sources_from_template returning ' . count($sources) . ' sources');
-        
+
         return $sources;
     }
 
-    private function log_error($message, $context = array()) {
+    /**
+     * Get current automation progress status
+     * Used by the automation progress panel to display current state
+     */
+    public function get_automation_progress($request)
+    {
+        $automation_id = $request->get_param('automation') ?: get_transient('rawwire_current_automation');
+        $current_step = (int) get_transient('rawwire_automation_step') ?: 0;
+        $status = get_transient('rawwire_automation_status') ?: 'idle';
+        $started_at = get_transient('rawwire_automation_started');
+        $message = get_transient('rawwire_automation_message') ?: '';
+        $error = get_transient('rawwire_automation_error');
+
+        // Calculate progress percentage based on workflow tables
+        $table_status = $this->get_table_status($request);
+        $table_data = $table_status->get_data();
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'automation' => array(
+                'id' => $automation_id,
+                'status' => $status,
+                'current_step' => $current_step,
+                'message' => $message,
+                'error' => $error,
+                'started_at' => $started_at,
+                'elapsed' => $started_at ? (time() - strtotime($started_at)) : 0,
+            ),
+            'tables' => $table_data['tables'] ?? array(),
+            'total_items' => $table_data['total'] ?? 0,
+            'timestamp' => current_time('mysql'),
+        ), 200);
+    }
+
+    /**
+     * Update automation progress (called by workflow orchestrator)
+     */
+    public function update_automation_progress($request)
+    {
+        $automation_id = $request->get_param('automation');
+        $step = $request->get_param('step');
+        $status = $request->get_param('status');
+        $message = $request->get_param('message');
+        $error = $request->get_param('error');
+
+        // Validate status
+        $valid_statuses = array('idle', 'running', 'complete', 'error', 'paused');
+        if ($status && !in_array($status, $valid_statuses)) {
+            return new WP_REST_Response(array(
+                'success' => false,
+                'message' => 'Invalid status value',
+            ), 400);
+        }
+
+        // Update transients
+        if ($automation_id !== null) {
+            set_transient('rawwire_current_automation', $automation_id, HOUR_IN_SECONDS);
+        }
+        if ($step !== null) {
+            set_transient('rawwire_automation_step', (int) $step, HOUR_IN_SECONDS);
+        }
+        if ($status !== null) {
+            set_transient('rawwire_automation_status', $status, HOUR_IN_SECONDS);
+
+            // Track start time for new runs
+            if ($status === 'running' && !get_transient('rawwire_automation_started')) {
+                set_transient('rawwire_automation_started', current_time('mysql'), HOUR_IN_SECONDS);
+            } elseif (in_array($status, array('complete', 'error', 'idle'))) {
+                delete_transient('rawwire_automation_started');
+            }
+        }
+        if ($message !== null) {
+            set_transient('rawwire_automation_message', $message, HOUR_IN_SECONDS);
+        }
+        if ($error !== null) {
+            set_transient('rawwire_automation_error', $error, HOUR_IN_SECONDS);
+        }
+
+        return new WP_REST_Response(array(
+            'success' => true,
+            'message' => 'Automation progress updated',
+        ), 200);
+    }
+
+    private function log_error($message, $context = array())
+    {
         $payload = $context ? ' ' . json_encode($context) : '';
         error_log('[RawWire REST] ' . $message . $payload);
     }
-    
-    private function log_action($action, $content_id, $user_id) {
+
+    private function log_action($action, $content_id, $user_id)
+    {
         // Log to database table (preferred) or transient (fallback)
         global $wpdb;
         $logs_table = $wpdb->prefix . 'rawwire_logs';
-        
+
         // Try to use the proper logs table
         if ($wpdb->get_var("SHOW TABLES LIKE '{$logs_table}'") === $logs_table) {
             $wpdb->insert($logs_table, array(
@@ -1693,7 +2256,7 @@ class RawWire_REST_API {
             ));
             return;
         }
-        
+
         // Fallback to transient with shorter lifespan (24 hours)
         $log_entry = array(
             'action' => $action,
@@ -1701,25 +2264,26 @@ class RawWire_REST_API {
             'user_id' => $user_id,
             'timestamp' => current_time('mysql')
         );
-        
+
         $existing_log = get_transient('rawwire_action_log');
         if (!is_array($existing_log)) {
             $existing_log = array();
         }
         $existing_log[] = $log_entry;
-        
+
         // Keep only last 500 entries (reduced from 1000)
         if (count($existing_log) > 500) {
             $existing_log = array_slice($existing_log, -500);
         }
-        
+
         // Store with 24-hour expiration
         set_transient('rawwire_action_log', $existing_log, DAY_IN_SECONDS);
     }
-    
-    private function detect_severity($log_line) {
+
+    private function detect_severity($log_line)
+    {
         $line_lower = strtolower($log_line);
-        
+
         if (strpos($line_lower, 'critical') !== false || strpos($line_lower, 'fatal') !== false) {
             return 'critical';
         } elseif (strpos($line_lower, 'error') !== false) {

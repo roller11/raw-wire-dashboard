@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Module Core - module loading and validation
  * Path: cores/module-core/module-core.php
@@ -13,7 +14,8 @@
  * - Dynamic settings UI generation
  */
 if (!class_exists('RawWire_Module_Core')) {
-    class RawWire_Module_Core {
+    class RawWire_Module_Core
+    {
         /**
          * Active module configuration
          * @var array|null
@@ -41,7 +43,8 @@ if (!class_exists('RawWire_Module_Core')) {
         /**
          * Initialize Module Core
          */
-        public static function init() {
+        public static function init()
+        {
             // Initialize logger
             if (class_exists('RawWire_Logger')) {
                 self::$logger = new RawWire_Logger();
@@ -64,7 +67,8 @@ if (!class_exists('RawWire_Module_Core')) {
         /**
          * Log a message safely
          */
-        protected static function log(string $message, string $level = 'info', array $context = array()) {
+        protected static function log(string $message, string $level = 'info', array $context = array())
+        {
             if (self::$logger) {
                 $context['component'] = 'module-core';
                 if ($level === 'error') {
@@ -80,7 +84,8 @@ if (!class_exists('RawWire_Module_Core')) {
         /**
          * Load active module metadata
          */
-        public static function load_active_module() {
+        public static function load_active_module()
+        {
             $module_name = get_option('rawwire_active_module', '');
             if (empty($module_name)) {
                 return false;
@@ -116,7 +121,8 @@ if (!class_exists('RawWire_Module_Core')) {
          * Discover modules by scanning the `modules/` directory and requiring their bootstrap files.
          * Modules are expected to register themselves by calling `RawWire_Module_Core::register_module()`.
          */
-        public static function discover_modules() {
+        public static function discover_modules()
+        {
             // Use absolute path from plugin root
             $plugin_dir = dirname(dirname(dirname(__FILE__)));
             $modules_dir = $plugin_dir . '/modules';
@@ -148,23 +154,33 @@ if (!class_exists('RawWire_Module_Core')) {
          * @param string $slug
          * @param RawWire_Module_Interface $instance
          */
-        public static function register_module($slug, $instance) {
+        public static function register_module($slug, $instance)
+        {
             if (! is_string($slug) || empty($slug)) {
                 return false;
             }
             self::$modules[$slug] = $instance;
             // allow modules to initialize themselves
             if (method_exists($instance, 'init')) {
-                try { $instance->init(); } catch (Exception $e) {}
+                try {
+                    $instance->init();
+                } catch (Exception $e) {
+                }
             }
             // Allow module to register REST routes - hook to rest_api_init
             if (method_exists($instance, 'register_rest_routes')) {
-                add_action('rest_api_init', function() use ($instance) {
-                    try { $instance->register_rest_routes(); } catch (Exception $e) {}
+                add_action('rest_api_init', function () use ($instance) {
+                    try {
+                        $instance->register_rest_routes();
+                    } catch (Exception $e) {
+                    }
                 });
             }
             if (method_exists($instance, 'register_ajax_handlers')) {
-                try { $instance->register_ajax_handlers(); } catch (Exception $e) {}
+                try {
+                    $instance->register_ajax_handlers();
+                } catch (Exception $e) {
+                }
             }
             return true;
         }
@@ -173,11 +189,13 @@ if (!class_exists('RawWire_Module_Core')) {
          * Get all registered modules
          * @return array<string, RawWire_Module_Interface>
          */
-        public static function get_modules() {
+        public static function get_modules()
+        {
             return self::$modules;
         }
 
-        public static function get_active_module() {
+        public static function get_active_module()
+        {
             return self::$active_module;
         }
 
@@ -190,7 +208,8 @@ if (!class_exists('RawWire_Module_Core')) {
          *
          * @return array
          */
-        public static function get_template_config() {
+        public static function get_template_config()
+        {
             if (is_array(self::$template_config)) {
                 return self::$template_config;
             }
@@ -210,12 +229,14 @@ if (!class_exists('RawWire_Module_Core')) {
             return self::$template_config;
         }
 
-        protected static function load_legacy_template_file() {
+        protected static function load_legacy_template_file()
+        {
             // Legacy method - no longer used, template engine handles loading
             return null;
         }
 
-        protected static function get_fallback_template_config() {
+        protected static function get_fallback_template_config()
+        {
             // Minimal fallback - template should always be available
             return array(
                 'name' => 'fallback',
@@ -245,7 +266,8 @@ if (!class_exists('RawWire_Module_Core')) {
          * @param string|null $module_slug
          * @return array
          */
-        public static function get_requirements(string $module_slug = null) {
+        public static function get_requirements(string $module_slug = null)
+        {
             if ($module_slug) {
                 $module_json = plugin_dir_path(__FILE__) . "../modules/{$module_slug}/module.json";
                 if (file_exists($module_json)) {
@@ -267,7 +289,8 @@ if (!class_exists('RawWire_Module_Core')) {
          * @param string|null $module_slug
          * @return array
          */
-        public static function get_defaults(string $module_slug = null) {
+        public static function get_defaults(string $module_slug = null)
+        {
             if ($module_slug) {
                 $module_json = plugin_dir_path(__FILE__) . "../modules/{$module_slug}/module.json";
                 if (file_exists($module_json)) {
@@ -289,7 +312,8 @@ if (!class_exists('RawWire_Module_Core')) {
          * @param string|null $module_slug
          * @return string HTML
          */
-        public static function render_toolkit_settings(string $module_slug = null) {
+        public static function render_toolkit_settings(string $module_slug = null)
+        {
             // Ensure Toolbox Core is loaded
             if (!class_exists('RawWire_Toolbox_Core')) {
                 $toolbox_path = plugin_dir_path(__FILE__) . '../toolbox-core/toolbox-core.php';
@@ -395,7 +419,8 @@ if (!class_exists('RawWire_Module_Core')) {
         /**
          * Render JavaScript for toolkit settings interactions
          */
-        protected static function render_toolkit_settings_js(string $module_slug = null) {
+        protected static function render_toolkit_settings_js(string $module_slug = null)
+        {
             $nonce = wp_create_nonce('rawwire_nonce');
             $module_slug_js = esc_js($module_slug ?? '');
 
@@ -564,7 +589,8 @@ JS;
         /**
          * AJAX handler: Save toolkit settings
          */
-        public static function ajax_save_toolkit_settings() {
+        public static function ajax_save_toolkit_settings()
+        {
             check_ajax_referer('rawwire_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -606,8 +632,13 @@ JS;
         /**
          * AJAX handler: Get module requirements
          */
-        public static function ajax_get_requirements() {
+        public static function ajax_get_requirements()
+        {
             check_ajax_referer('rawwire_nonce', 'nonce');
+
+            if (!current_user_can('manage_options')) {
+                wp_send_json_error(array('message' => 'Permission denied'));
+            }
 
             $module_slug = isset($_POST['module_slug']) ? sanitize_key($_POST['module_slug']) : null;
 
@@ -620,7 +651,8 @@ JS;
         /**
          * AJAX handler: Load toolkit configuration for modules page
          */
-        public static function ajax_load_toolkit_config() {
+        public static function ajax_load_toolkit_config()
+        {
             check_ajax_referer('rawwire_ajax_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -646,7 +678,8 @@ JS;
         /**
          * AJAX handler: Get adapter form for toolkit configuration
          */
-        public static function ajax_get_adapter_form() {
+        public static function ajax_get_adapter_form()
+        {
             check_ajax_referer('rawwire_ajax_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -673,11 +706,12 @@ JS;
         /**
          * Register REST API routes
          */
-        public static function register_rest_routes() {
+        public static function register_rest_routes()
+        {
             register_rest_route('rawwire/v1', '/module/requirements', array(
                 'methods' => 'GET',
                 'callback' => array(__CLASS__, 'rest_get_requirements'),
-                'permission_callback' => function() {
+                'permission_callback' => function () {
                     return current_user_can('manage_options');
                 },
             ));
@@ -685,7 +719,7 @@ JS;
             register_rest_route('rawwire/v1', '/module/toolkit-html', array(
                 'methods' => 'GET',
                 'callback' => array(__CLASS__, 'rest_get_toolkit_html'),
-                'permission_callback' => function() {
+                'permission_callback' => function () {
                     return current_user_can('manage_options');
                 },
             ));
@@ -694,7 +728,8 @@ JS;
         /**
          * REST: Get requirements
          */
-        public static function rest_get_requirements($request) {
+        public static function rest_get_requirements($request)
+        {
             $module_slug = $request->get_param('module_slug');
 
             return new WP_REST_Response(array(
@@ -706,7 +741,8 @@ JS;
         /**
          * REST: Get toolkit settings HTML
          */
-        public static function rest_get_toolkit_html($request) {
+        public static function rest_get_toolkit_html($request)
+        {
             $module_slug = $request->get_param('module_slug');
             $html = self::render_toolkit_settings($module_slug);
 
@@ -721,7 +757,8 @@ JS;
          * @param array $config Module configuration array
          * @return bool|WP_Error True if valid, WP_Error otherwise
          */
-        public static function validate_module(array $config) {
+        public static function validate_module(array $config)
+        {
             // Check required meta fields
             if (empty($config['meta']['name'])) {
                 self::log('Module validation failed: missing meta.name', 'error', $config);
@@ -791,7 +828,8 @@ JS;
          * @param string|null $module_slug
          * @return array Array of missing/unconfigured requirements
          */
-        public static function check_requirements_configured(string $module_slug = null) {
+        public static function check_requirements_configured(string $module_slug = null)
+        {
             $requirements = self::get_requirements($module_slug);
             $missing = array();
 
@@ -806,7 +844,7 @@ JS;
                 }
 
                 $config = RawWire_Toolbox_Core::get_saved_config($category, $module_slug);
-                
+
                 if (empty($config['adapter_id'])) {
                     $missing[] = array(
                         'key' => $req_key,
@@ -840,7 +878,8 @@ JS;
          * @param string|null $module_slug
          * @return string HTML notice or empty string
          */
-        public static function render_requirements_notice(string $module_slug = null) {
+        public static function render_requirements_notice(string $module_slug = null)
+        {
             $missing = self::check_requirements_configured($module_slug);
 
             if (empty($missing)) {

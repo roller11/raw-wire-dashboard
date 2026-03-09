@@ -1,0 +1,492 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rawwire.io/schemas/panel-template.schema.json",
+  "title": "Raw Wire Panel Template",
+  "description": "Schema for defining individual dashboard panels",
+  "type": "object",
+  "required": ["id", "type", "title"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the panel template",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "type": {
+      "type": "string",
+      "description": "Panel display type",
+      "enum": [
+        "table",
+        "cards",
+        "metrics",
+        "chart",
+        "form",
+        "timeline",
+        "calendar",
+        "kanban",
+        "map",
+        "file-browser",
+        "chat",
+        "html",
+        "iframe",
+        "status",
+        "list",
+        "gallery"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Panel header title"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "Optional subtitle or description"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Dashicon or custom icon class"
+    },
+    "version": {
+      "type": "string",
+      "default": "1.0.0"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category for organizing in panel library",
+      "examples": ["content", "leads", "analytics", "social", "support", "integration"]
+    },
+    "industry_tags": {
+      "type": "array",
+      "description": "Industries this panel is relevant to",
+      "items": { "type": "string" }
+    },
+    "data_source": {
+      "oneOf": [
+        { "type": "string", "description": "Simple data source reference" },
+        { "$ref": "#/definitions/data_source_config" }
+      ]
+    },
+    "chrome": {
+      "type": "object",
+      "description": "Panel wrapper/chrome configuration",
+      "properties": {
+        "collapsible": { "type": "boolean", "default": true },
+        "collapsed_default": { "type": "boolean", "default": false },
+        "show_header": { "type": "boolean", "default": true },
+        "show_footer": { "type": "boolean", "default": false },
+        "draggable": { "type": "boolean", "default": false },
+        "removable": { "type": "boolean", "default": false },
+        "fullscreen_enabled": { "type": "boolean", "default": false },
+        "css_class": { "type": "string" },
+        "min_height": { "type": "string" },
+        "max_height": { "type": "string" }
+      }
+    },
+    "header_actions": {
+      "type": "array",
+      "description": "Actions shown in panel header",
+      "items": { "$ref": "#/definitions/control" }
+    },
+    "toolbar": {
+      "type": "object",
+      "description": "Toolbar configuration (filters, search, bulk actions)",
+      "properties": {
+        "enabled": { "type": "boolean", "default": false },
+        "position": { "type": "string", "enum": ["top", "bottom"], "default": "top" },
+        "controls": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/control" }
+        }
+      }
+    },
+    "empty_state": {
+      "type": "object",
+      "description": "What to show when no data",
+      "properties": {
+        "icon": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "action": { "$ref": "#/definitions/control" }
+      }
+    },
+    "loading_state": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["spinner", "skeleton", "custom"], "default": "spinner" },
+        "custom_html": { "type": "string" }
+      }
+    },
+    "refresh": {
+      "type": "object",
+      "properties": {
+        "auto": { "type": "boolean", "default": false },
+        "interval": { "type": "integer", "description": "Seconds between auto-refresh" },
+        "show_button": { "type": "boolean", "default": true },
+        "show_timestamp": { "type": "boolean", "default": true }
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": true },
+        "per_page": { "type": "integer", "default": 10 },
+        "per_page_options": { "type": "array", "items": { "type": "integer" } },
+        "type": { "type": "string", "enum": ["numbered", "load-more", "infinite"], "default": "numbered" }
+      }
+    },
+    "type_config": {
+      "type": "object",
+      "description": "Configuration specific to the panel type",
+      "oneOf": [
+        { "$ref": "#/definitions/table_config" },
+        { "$ref": "#/definitions/cards_config" },
+        { "$ref": "#/definitions/metrics_config" },
+        { "$ref": "#/definitions/chart_config" },
+        { "$ref": "#/definitions/form_config" },
+        { "$ref": "#/definitions/timeline_config" },
+        { "$ref": "#/definitions/calendar_config" },
+        { "$ref": "#/definitions/kanban_config" },
+        { "$ref": "#/definitions/map_config" },
+        { "$ref": "#/definitions/chat_config" }
+      ]
+    },
+    "row_actions": {
+      "type": "array",
+      "description": "Actions available on each row/item",
+      "items": { "$ref": "#/definitions/control" }
+    },
+    "bulk_actions": {
+      "type": "array",
+      "description": "Actions for multiple selected items",
+      "items": { "$ref": "#/definitions/control" }
+    },
+    "visible_conditions": {
+      "$ref": "#/definitions/conditions"
+    },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "view": { "type": "string", "default": "read" },
+        "edit": { "type": "string", "default": "edit_posts" },
+        "delete": { "type": "string", "default": "delete_posts" }
+      }
+    }
+  },
+  "definitions": {
+    "data_source_config": {
+      "type": "object",
+      "required": ["source"],
+      "properties": {
+        "source": { 
+          "type": "string",
+          "description": "Data source identifier (e.g., 'scraper:sources', 'module:leads/get_all')"
+        },
+        "params": {
+          "type": "object",
+          "description": "Parameters to pass to the data source"
+        },
+        "transform": {
+          "type": "string",
+          "description": "PHP callback to transform data before display"
+        },
+        "cache_key": { "type": "string" },
+        "cache_ttl": { "type": "integer" }
+      }
+    },
+    "control": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "button",
+            "link",
+            "toggle",
+            "dropdown",
+            "search",
+            "filter",
+            "date-picker",
+            "date-range",
+            "select",
+            "multi-select",
+            "text-input",
+            "checkbox",
+            "radio",
+            "refresh",
+            "export",
+            "import",
+            "bulk-action"
+          ]
+        },
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "icon": { "type": "string" },
+        "placeholder": { "type": "string" },
+        "tooltip": { "type": "string" },
+        "action": {
+          "type": "string",
+          "description": "Action identifier (AJAX action, JS function, or URL)"
+        },
+        "action_type": {
+          "type": "string",
+          "enum": ["ajax", "rest", "js", "link", "modal"],
+          "default": "ajax"
+        },
+        "confirm": { "type": "string" },
+        "options": {
+          "type": "array",
+          "description": "Options for select/dropdown controls",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": { "type": "string" },
+              "label": { "type": "string" },
+              "icon": { "type": "string" }
+            }
+          }
+        },
+        "options_source": {
+          "type": "string",
+          "description": "Data source for dynamic options"
+        },
+        "default_value": {},
+        "css_class": { "type": "string" },
+        "style": {
+          "type": "string",
+          "enum": ["primary", "secondary", "danger", "success", "warning", "link"]
+        },
+        "size": {
+          "type": "string",
+          "enum": ["small", "medium", "large"]
+        },
+        "disabled_conditions": { "$ref": "#/definitions/conditions" },
+        "visible_conditions": { "$ref": "#/definitions/conditions" }
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "properties": {
+        "capability": { "type": "string" },
+        "option_equals": { "type": "object" },
+        "data_exists": { "type": "string" },
+        "data_field_equals": { "type": "object" },
+        "custom": { "type": "string" }
+      }
+    },
+    "table_config": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["key", "label"],
+            "properties": {
+              "key": { "type": "string" },
+              "label": { "type": "string" },
+              "type": { 
+                "type": "string", 
+                "enum": ["text", "number", "date", "datetime", "status", "badge", "link", "image", "toggle", "actions", "html", "currency", "percent", "email", "phone"]
+              },
+              "sortable": { "type": "boolean", "default": true },
+              "filterable": { "type": "boolean", "default": false },
+              "searchable": { "type": "boolean", "default": false },
+              "width": { "type": "string" },
+              "align": { "type": "string", "enum": ["left", "center", "right"] },
+              "format": { "type": "string", "description": "Format string or callback" },
+              "visible": { "type": "boolean", "default": true },
+              "responsive_priority": { "type": "integer" }
+            }
+          }
+        },
+        "default_sort": {
+          "type": "object",
+          "properties": {
+            "column": { "type": "string" },
+            "direction": { "type": "string", "enum": ["asc", "desc"] }
+          }
+        },
+        "row_click_action": { "type": "string" },
+        "selectable": { "type": "boolean", "default": false },
+        "expandable_rows": { "type": "boolean", "default": false },
+        "expand_template": { "type": "string" }
+      }
+    },
+    "cards_config": {
+      "type": "object",
+      "properties": {
+        "columns": { "type": "integer", "default": 3 },
+        "card_template": { "type": "string", "description": "HTML template with {{field}} placeholders" },
+        "image_field": { "type": "string" },
+        "title_field": { "type": "string" },
+        "subtitle_field": { "type": "string" },
+        "content_field": { "type": "string" },
+        "badge_field": { "type": "string" },
+        "card_actions": { "type": "array", "items": { "$ref": "#/definitions/control" } }
+      }
+    },
+    "metrics_config": {
+      "type": "object",
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["key", "label"],
+            "properties": {
+              "key": { "type": "string" },
+              "label": { "type": "string" },
+              "icon": { "type": "string" },
+              "format": { "type": "string", "enum": ["number", "currency", "percent", "duration"] },
+              "prefix": { "type": "string" },
+              "suffix": { "type": "string" },
+              "color": { "type": "string" },
+              "trend_field": { "type": "string" },
+              "trend_format": { "type": "string" },
+              "click_action": { "type": "string" },
+              "sparkline_data": { "type": "string" }
+            }
+          }
+        },
+        "layout": { "type": "string", "enum": ["grid", "row", "compact"], "default": "grid" }
+      }
+    },
+    "chart_config": {
+      "type": "object",
+      "properties": {
+        "chart_type": { 
+          "type": "string", 
+          "enum": ["line", "bar", "pie", "doughnut", "area", "scatter", "radar", "funnel"]
+        },
+        "x_axis_field": { "type": "string" },
+        "y_axis_field": { "type": "string" },
+        "series": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "field": { "type": "string" },
+              "label": { "type": "string" },
+              "color": { "type": "string" }
+            }
+          }
+        },
+        "options": { "type": "object", "description": "Chart.js options" }
+      }
+    },
+    "form_config": {
+      "type": "object",
+      "properties": {
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "type", "label"],
+            "properties": {
+              "name": { "type": "string" },
+              "type": { 
+                "type": "string", 
+                "enum": ["text", "textarea", "email", "phone", "number", "date", "datetime", "select", "multi-select", "checkbox", "radio", "file", "image", "wysiwyg", "hidden", "password", "url", "color"]
+              },
+              "label": { "type": "string" },
+              "placeholder": { "type": "string" },
+              "help_text": { "type": "string" },
+              "required": { "type": "boolean" },
+              "validation": { "type": "object" },
+              "options": { "type": "array" },
+              "options_source": { "type": "string" },
+              "default_value": {},
+              "width": { "type": "string", "enum": ["full", "half", "third", "quarter"] },
+              "conditional_display": { "type": "object" }
+            }
+          }
+        },
+        "submit_action": { "type": "string" },
+        "submit_label": { "type": "string", "default": "Save" },
+        "success_message": { "type": "string" },
+        "redirect_on_success": { "type": "string" },
+        "layout": { "type": "string", "enum": ["vertical", "horizontal", "inline"] }
+      }
+    },
+    "timeline_config": {
+      "type": "object",
+      "properties": {
+        "date_field": { "type": "string" },
+        "title_field": { "type": "string" },
+        "content_field": { "type": "string" },
+        "icon_field": { "type": "string" },
+        "color_field": { "type": "string" },
+        "author_field": { "type": "string" },
+        "group_by": { "type": "string", "enum": ["day", "week", "month", "none"] }
+      }
+    },
+    "calendar_config": {
+      "type": "object",
+      "properties": {
+        "start_field": { "type": "string" },
+        "end_field": { "type": "string" },
+        "title_field": { "type": "string" },
+        "color_field": { "type": "string" },
+        "default_view": { "type": "string", "enum": ["month", "week", "day", "list"] },
+        "editable": { "type": "boolean", "default": false },
+        "create_action": { "type": "string" },
+        "update_action": { "type": "string" }
+      }
+    },
+    "kanban_config": {
+      "type": "object",
+      "properties": {
+        "status_field": { "type": "string" },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": { "type": "string" },
+              "label": { "type": "string" },
+              "color": { "type": "string" },
+              "limit": { "type": "integer" }
+            }
+          }
+        },
+        "card_title_field": { "type": "string" },
+        "card_subtitle_field": { "type": "string" },
+        "draggable": { "type": "boolean", "default": true },
+        "update_action": { "type": "string" }
+      }
+    },
+    "map_config": {
+      "type": "object",
+      "properties": {
+        "lat_field": { "type": "string" },
+        "lng_field": { "type": "string" },
+        "address_field": { "type": "string" },
+        "title_field": { "type": "string" },
+        "popup_template": { "type": "string" },
+        "default_center": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" }
+          }
+        },
+        "default_zoom": { "type": "integer", "default": 10 },
+        "cluster_markers": { "type": "boolean", "default": true }
+      }
+    },
+    "chat_config": {
+      "type": "object",
+      "properties": {
+        "ai_enabled": { "type": "boolean", "default": true },
+        "ai_model": { "type": "string" },
+        "system_prompt": { "type": "string" },
+        "context_source": { "type": "string" },
+        "show_history": { "type": "boolean", "default": true },
+        "suggested_prompts": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

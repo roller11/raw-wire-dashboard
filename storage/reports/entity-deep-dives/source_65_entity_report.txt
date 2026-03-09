@@ -1,0 +1,13 @@
+RAW-WIRE ENTITY DEEP DIVE REPORT
+source_id: 65
+permit_nbr: 25016-10000-29166
+address: 350 S GRAND AVE LVLS 04-06
+generated_at: 2026-03-05 16:07:26
+
+---
+ENTITY: Environmental Contracting Corporation
+TYPE: contractor
+RELATIONSHIP: source_record
+SEARCH_RESULTS:
+- query: Environmental Contracting Corporation Los Angeles California contractor license | provider: venice-skill
+  * raw_findings: I've conducted research on Environmental Contracting Corporation, a contractor in Los Angeles, CA with License #491028-B. Here's the information I found: * Company website URL: Unfortunately, I couldn't find a website URL specifically for Environmental Contracting Corporation. It's possible that they may not have an official website or it may not be publicly available. * Email address: I couldn't find a publicly available email address for Environmental Contracting Corporation. * Phone number: According to the California Contractors State License Board (CSLB) website, the phone number for Environmental Contracting Corporation is (310) 390-3600. [Source: https://www.cslb.ca.gov/] * LinkedIn profile URL: I couldn't find a LinkedIn profile for Environmental Contracting Corporation. * Key personnel names and titles: According to the CSLB website, the qualifying individual for Environmental Contracting Corporation is Ruben P. Urrea, with the title of President. [Source: https://www.cslb.ca.gov/] Additional information: * License status: Environmental Contracting Corporation's license #491028-B is active, according to the CSLB website. [Source: https://www.cslb.ca.gov/] * Business addr

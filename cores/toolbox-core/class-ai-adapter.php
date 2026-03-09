@@ -198,9 +198,23 @@ class RawWire_AI_Adapter {
         if (!empty($env['endpoint'])) {
             $custom_endpoint = $env['endpoint'];
             
-            // Add https:// if not present
+            // Add https:// if not present (but allow http:// for local services like Ollama)
             if (strpos($custom_endpoint, 'http://') !== 0 && strpos($custom_endpoint, 'https://') !== 0) {
                 $custom_endpoint = 'https://' . $custom_endpoint;
+            }
+            
+            // Skip path modifications for Ollama endpoints (they use /v1 not /openai/v1)
+            // Ollama handles its own OpenAI-compatible endpoint structure
+            if (strpos($custom_endpoint, 'ollama') !== false || 
+                strpos($custom_endpoint, ':11434') !== false ||
+                strpos($custom_endpoint, ':8001') !== false) {
+                // Ollama uses /v1/chat/completions directly, not /openai/v1
+                // Return with /v1 suffix if not already present
+                if (strpos($custom_endpoint, '/v1') === false) {
+                    $custom_endpoint = rtrim($custom_endpoint, '/') . '/v1';
+                }
+                error_log('[RawWire AI Adapter] filter_openai_endpoint: Using Ollama endpoint ' . $custom_endpoint);
+                return $custom_endpoint;
             }
             
             // For Groq, use the correct path structure
@@ -209,7 +223,7 @@ class RawWire_AI_Adapter {
             if (strpos($custom_endpoint, 'groq.com') !== false) {
                 $custom_endpoint = 'https://api.groq.com/openai/v1';
             } elseif (strpos($custom_endpoint, '/v1') === false) {
-                // Add /v1 if not present for other OpenAI-compatible APIs
+                // Add /openai/v1 for other OpenAI-compatible APIs that need it
                 $custom_endpoint = rtrim($custom_endpoint, '/') . '/openai/v1';
             }
             
@@ -425,11 +439,122 @@ class RawWire_AI_Adapter {
                     'name'     => $env['name'] ?? '',
                     'type'     => $env['type'] ?? '',
                     'model'    => $env['model'] ?? '',
+                    'endpoint' => $env['endpoint'] ?? '',
                 ];
             }
         }
 
         return $environments;
+    }
+
+    /**
+     * Get available models for a specific environment
+     * 
+     * @param string $env_id
+     * @return array
+     */
+    public function get_models_for_env($env_id) {
+        if (!$this->ai_engine_available || empty($env_id)) {
+            return [];
+        }
+
+        $env = $this->get_env_by_id($env_id);
+        if (!$env) {
+            return [];
+        }
+
+        $type = strtolower($env['type'] ?? '');
+        $endpoint = $env['endpoint'] ?? '';
+
+        if ($type === 'ollama' || stripos($endpoint, 'ollama') !== false) {
+            return $this->get_ollama_models($endpoint);
+        }
+
+        if ($this->mwai_core && method_exists($this->mwai_core, 'get_engine_models')) {
+            $engine_type = $type;
+            if ($engine_type === 'openai' && stripos($env['name'] ?? '', 'groq') !== false) {
+                $engine_type = 'groq';
+            }
+            $models = $this->mwai_core->get_engine_models($engine_type);
+            return is_array($models) ? $models : [];
+        }
+
+        return [];
+    }
+
+    /**
+     * Find an environment by ID
+     * 
+     * @param string $env_id
+     * @return array|null
+     */
+    private function get_env_by_id($env_id) {
+        $ai_settings = get_option('mwai_options', []);
+        if (!isset($ai_settings['ai_envs']) || !is_array($ai_settings['ai_envs'])) {
+            return null;
+        }
+
+        foreach ($ai_settings['ai_envs'] as $env) {
+            if (($env['id'] ?? '') === $env_id) {
+                return $env;
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Fetch Ollama models from the Ollama API
+     * 
+     * @param string $endpoint
+     * @return array
+     */
+    private function get_ollama_models($endpoint = '') {
+        $bases = [];
+        if (!empty($endpoint)) {
+            $bases[] = rtrim($endpoint, '/');
+        }
+
+        $bases[] = 'http://ollama:11434';
+        $bases[] = 'http://localhost:11434';
+        $bases[] = 'http://host.docker.internal:11434';
+
+        foreach ($bases as $base) {
+            $url = $base . '/api/tags';
+            $response = wp_remote_get($url, [
+                'timeout' => 15,
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                ],
+            ]);
+
+            if (is_wp_error($response)) {
+                continue;
+            }
+
+            $body = json_decode(wp_remote_retrieve_body($response), true);
+            if (empty($body['models']) || !is_array($body['models'])) {
+                continue;
+            }
+
+            $models = [];
+            foreach ($body['models'] as $model) {
+                $name = $model['name'] ?? '';
+                if (empty($name)) {
+                    continue;
+                }
+                $models[] = [
+                    'model' => $name,
+                    'name' => $name,
+                ];
+            }
+
+            if (!empty($models)) {
+                return $models;
+            }
+        }
+
+        return [];
     }
 
     // =========================================================================

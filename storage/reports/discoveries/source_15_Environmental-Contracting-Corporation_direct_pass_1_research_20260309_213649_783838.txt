@@ -1,0 +1,807 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 15
+Party: Environmental Contracting Corporation
+License: 491028-B
+Permit: 25016-10000-29134
+Generated: 2026-03-09 21:36:49
+Stage: direct_pass_1_research
+Method: perplexity_direct
+Provider: Perplexity
+Model: openai/gpt-5.1
+==================================================
+
+1. TARGET SUMMARY
+------------------
+
+Environmental Contracting Corporation (ECC) is a Los Angeles–based commercial interiors and tenant improvement general contractor headquartered at 880 East 1st Street, Los Angeles, CA 90012. Multiple independent sources confirm:
+
+- Legal name: Environmental Contracting Corporation  
+- Address: 880 East 1st Street, Los Angeles, CA 90012  
+- State contractor license: CA CSLB #491028 (General Building, active)  
+  - Listed on ECC’s own contact page as “State Lic. #491028” with the same address and phone.  
+  - ECC’s BuildZoom profile independently confirms “License #491028… Status: Active… Type: General Building… Business Type: Corporation.”  
+  Sources: https://eccla.com/contact/ , https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+ECC’s niche is high‑end commercial tenant improvements (office, lobby, creative office, restaurant, retail, institutional interiors), predominantly in greater Los Angeles, with high permit volumes and frequent six‑ and seven‑figure TI projects.  
+Source: ECC “About” page (tenant improvements focus), BuildZoom permits and “commercial renovations” experience: https://eccla.com/about/ , https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+**Highest‑value access routes for an interior design firm:**
+
+1. **Marketing & Business Development contact (top priority):**  
+   - Kristen Mays, Director, Marketing & Business Development, listed as ECC’s representative on the Century City Chamber of Commerce site, with ECC’s main phone and address. This role is structurally responsible for new client relationships, branding, and external partnerships.  
+   Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+
+2. **Ownership/leadership family core:**  
+   - Founder: Aram Arakelian (founded ECC in 1984, still referenced by name on the official site).  
+   - Corporate authorized person: James J. Arakelian (listed as “Authorized person for 4 entities” tied to ECC’s address).  
+   - Corporate agent: Ara Bedros (listed as “Agent – Individual” for Environmental Contracting Corporation; also tied to careers email on ECC’s site).  
+   These three form a very small, tightly controlled ownership/authority cluster that likely drives final approvals on major projects and preferred partners.  
+   Sources: https://eccla.com/about/ , https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation , https://eccla.com/contact/  
+
+3. **Chamber membership & events as in‑person access vector:**  
+   - ECC is a listed member of the **Century City Chamber of Commerce**, which runs regular business networking events, committee meetings, and mixers. ECC’s directory entry lists a named contact (Kristen Mays) and ECC’s office phone.  
+   - Attending Century City Chamber events, particularly those related to real estate, construction, and professional services, offers the cleanest path to encountering ECC’s marketing/BD lead in a natural setting.  
+   Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+
+4. **High‑value active/ongoing LA tenant improvement projects:**  
+   - ECC’s BuildZoom profile shows numerous LA commercial TI permits (e.g., full‑floor office TIs, lobby renovations, library/admin building) with statuses “issued” or recently “final,” indicating active client relationships and likely collaboration with architects and interior designers.  
+   - These projects, and the addresses/owners tied to the LADBS permits, are prime sources of **owner‑side decision makers and design partners** once you drill into each permit at LADBS.  
+   Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+Taken together, the **primary operational goal** for your client should be:
+
+- Use **Century City Chamber** and direct outreach to **Kristen Mays** as a warm intro path.  
+- Use **project‑specific LADBS permit research** (starting from the BuildZoom permit numbers) to identify architects, owner reps, and landlords already working with ECC, and pursue parallel relationships with those firms.
+
+
+2. PEOPLE
+---------
+
+### 2.1 Key Decision Makers (Drill‑Down)
+
+#### 2.1.1 Aram Arakelian – Founder (Executive/Ownership Cluster)
+
+- **Name:** Aram Arakelian  
+- **Title / Role (sourced):** Founder of Environmental Contracting Corporation  
+  - ECC’s About page: “ECC was founded in 1984 by **Aram Arakelian** to deliver high-quality tenant improvement construction to Los Angeles businesses.”  
+  Source: https://eccla.com/about/  
+- **Authority level:** Executive / ownership level. As founder named on the official site, he is almost certainly a central strategic decision maker and maintains strong influence on key client relationships and firm direction.  
+- **Contact route:**  
+  - Office address: Environmental Contracting Corporation, 880 East 1st Street, Los Angeles, CA 90012  
+  - Main office phone: **213‑620‑8008**  
+  - General email: **info@eccla.com**  
+  - Source for contact details and license reference: https://eccla.com/contact/  
+- **Why this person matters for interior design work:**  
+  - As founder of a 40+‑year commercial interiors contractor, he is likely central to the firm’s **strategic positioning in tenant improvement and interiors**, and to maintaining relationships with major landlords, law firms, and corporate occupiers.  
+  - For larger, design‑sensitive projects (e.g., law firms, creative office, entertainment clients), founder‑level buy‑in can accelerate acceptance of new design partners or preferred interior design consultants.  
+  - ContactOut describes ECC explicitly as a “premier commercial interiors construction firm… Founded in 1984 by Aram Arakelian… serving all of Southern California,” reinforcing his brand association with high‑end interiors work.  
+    Source: https://contactout.com/company/ECC-3786  
+- **Best access route:**  
+  - **Indirect through marketing/BD:** Position your firm with **Kristen Mays (Director, Marketing & Business Development)** first; she is the obvious gatekeeper for new relationships and can escalate promising partnerships to Aram.  
+  - **Relationship‑based introduction:** Via Century City Chamber events (where ECC is represented) or via architects/owner reps on current ECC projects identified via LADBS/BuildZoom.  
+- **Potential meeting opportunities:**  
+  - Century City Chamber of Commerce networking events, committees, or panels where ECC appears as a member firm.  
+  - Any high‑profile project milestone events (openings, re‑openings of TI spaces) where ECC leadership might attend – feasible to identify by cross‑checking major ECC permit addresses with building press releases.  
+- **Key sources for this person:**  
+  - Founder reference: https://eccla.com/about/  
+  - Company description associating him with interiors: https://contactout.com/company/ECC-3786  
+  - Contact routes: https://eccla.com/contact/  
+
+---
+
+#### 2.1.2 James J. Arakelian – Corporate Authorized Person (Executive/Ownership Cluster)
+
+- **Name:** James J. Arakelian  
+- **Title / Role (sourced):** “Authorized person” for multiple entities associated with ECC’s address  
+  - Bizprofile corporate data lists: “James J. Arakelian, 880 E. 1st Street, Los Angeles, CA 90012 – Authorized person for 4 entities” in connection with Environmental Contracting Corporation.  
+  Source: https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+- **Authority level:** Executive / ownership or corporate control; “authorized person for 4 entities” strongly indicates he has signing or management authority across ECC’s corporate structures.  
+- **Contact route:**  
+  - Office address: 880 E 1st Street, Los Angeles, CA 90012 (same as ECC HQ)  
+  - Office phone: 213‑620‑8008 (ECC main)  
+  - General email: info@eccla.com  
+  Source: https://eccla.com/contact/ , https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+- **Why this person matters for interior design work:**  
+  - Likely involved in **corporate approvals**, contract execution, and financing for larger projects.  
+  - For partnerships involving frame agreements, preferred vendor lists, or multi‑site TI rollouts, his signature/approval is likely required.  
+- **Best access route:**  
+  - **Escalation via Kristen Mays** (marketing/BD) or via a project‑level introduction from architects/owner reps on ECC projects.  
+  - Corporate introductions from shared professional networks (e.g., legal, accounting, or banking relationships that may overlap with his role in multiple entities).  
+- **Potential meeting opportunities:**  
+  - Project close‑out or kick‑off meetings for larger TI projects where ownership representation is needed.  
+  - Chamber or business association events where senior ECC leadership participates (exact events not named in sources, but Century City Chamber membership makes this plausible).  
+- **Key sources for this person:**  
+  - Corporate authorized person listing: https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+  - Office contact details: https://eccla.com/contact/  
+
+---
+
+#### 2.1.3 Kristen Mays – Director, Marketing & Business Development (Primary Client‑Acquisition Decision Maker)
+
+- **Name:** Kristen Mays  
+- **Title / Role (sourced):** Director, Marketing & Business Development  
+  - Century City Chamber directory entry for Environmental Contracting Corporation lists “Kristen Mays – Director, Marketing & Business Development” under Rep/Contact Info.  
+  Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+- **Authority level:** Senior operational / decision maker in charge of **how ECC presents to the market and which relationships to cultivate**, including designers and professional partners.  
+- **Contact info:**  
+  - Listed office phone: (213) 620‑8008 (ECC’s main line)  
+  - Address: 880 East 1st Street, Los Angeles, CA 90012  
+  - The Chamber entry provides a “Send an Email” link (email address not visible in snippet).  
+  Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+- **Why this person matters for interior design work:**  
+  - She is specifically titled for **Marketing & Business Development**, making her the **most relevant internal champion** for partnering with an interior design firm.  
+  - Likely controls or strongly influences:
+    - Which designers are considered/short‑listed for collaborative proposals.  
+    - ECC’s presence at industry events and sponsorship decisions.  
+    - External partnerships highlighted in ECC’s marketing materials.  
+- **Best access route:**  
+  - **Direct outreach:** Call the main line (213‑620‑8008), ask for **Kristen Mays in Marketing & Business Development**, and follow up via the Chamber’s “Send an Email” contact.  
+  - **Chamber of Commerce events:** Attend **Century City Chamber of Commerce** events where ECC appears; the directory listing is a strong signal that Kristen represents ECC there.  
+  - **Warm intro via shared clients:** Once you identify mutual clients (e.g., law firms, entertainment companies, landlords) from ECC’s TI projects, request a warm introduction to Kristen as ECC’s BD lead.  
+- **Potential meeting opportunities:**  
+  - Century City Chamber mixers, luncheons, and industry‑specific panels hosted or promoted by the Chamber.  
+  - Any construction/real estate marketing events where ECC may send BD staff (look for Chamber calendars and regional real estate association events where member companies exhibit).  
+- **Key sources for this person:**  
+  - Chamber listing: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+  - Office contact: https://eccla.com/contact/  
+
+---
+
+#### 2.1.4 Ara Bedros – Corporate Agent & Careers Contact (Operational/Gatekeeper with HR/Administrative Authority)
+
+- **Name:** Ara Bedros  
+- **Title / Role (sourced):**
+  - Listed as **“Agent – Individual”** for Environmental Contracting Corporation on corporate registry data.  
+  - ECC’s contact page uses **ABedros@eccla.com** as the “Career Opportunities” email address, implying an HR/administrative or management function.  
+  Sources:  
+  - Agent listing: https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+  - Email reference: https://eccla.com/contact/  
+- **Authority level:** Operational / administrative; likely has authority in corporate filings, may be involved in HR and internal coordination.  
+- **Contact info:**  
+  - Email (careers): **ABedros@eccla.com** (from ECC contact page)  
+  - Office address: 880 East 1st Street, Los Angeles, CA 90012  
+  - Office phone: 213‑620‑8008  
+  Source: https://eccla.com/contact/  
+- **Why this person matters for interior design work:**  
+  - As the listed corporate agent and careers contact, Ara is a **key gatekeeper** for:
+    - Routing inquiries internally (especially if you position your outreach as “seeking to be considered for future projects / vendor opportunities”).  
+    - Coordinating meetings with leadership.  
+  - In smaller/intermediate‑sized construction firms, the corporate agent often has direct relationships with ownership.  
+- **Best access route:**  
+  - Email **ABedros@eccla.com** with a targeted, concise introduction of your firm’s interior design capabilities, explicitly asking to be routed to **Kristen Mays** or the appropriate person handling design partnerships.  
+  - Follow up via phone using the main line.  
+- **Potential meeting opportunities:**  
+  - Internal vendor “capabilities” meetings arranged through Ara after initial outreach.  
+- **Key sources for this person:**  
+  - ECC contact page: https://eccla.com/contact/  
+  - Agent listing: https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+
+
+### 2.2 Gatekeepers (Explicit)
+
+**Gatekeeper: Ara Bedros**
+
+- **Role/title:** Agent for Environmental Contracting Corporation; ECC “Career Opportunities” email contact.  
+- **Controls access to:**  
+  - Corporate filings and administrative matters.  
+  - Likely routes inbound inquiries (including vendor/design partnership proposals) to relevant leadership (e.g., Kristen Mays or Aram/James Arakelian).  
+- **Contact route:** ABedros@eccla.com , 213‑620‑8008, 880 East 1st Street, Los Angeles, CA 90012  
+- **Why operationally important:**  
+  - Can approve or decline meeting requests and is a natural first point of contact for formal proposals if you do not yet know the right internal stakeholder.  
+- **Sources:** https://eccla.com/contact/ , https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+
+**Gatekeeper / Relationship Owner: Kristen Mays**
+
+- While a senior BD decision maker, she is also a **gatekeeper for external relationships**: proposals, co‑marketing, event sponsorships, and potential design collaboration opportunities are likely filtered through her.  
+- Controls access to: leadership and project executives for new business.  
+- Sources: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+
+
+3. COMPANY
+----------
+
+- **Legal name:** Environmental Contracting Corporation  
+  Source: https://eccla.com/contact/ , https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Type:**  
+  - General contractor (commercial interiors / tenant improvement).  
+  - CA CSLB license type: **General Building**.  
+  Sources: ECC about page (tenant improvement contractor): https://eccla.com/about/ ; BuildZoom license info: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **License information:**  
+  - State: California  
+  - License #: **491028**  
+  - Classification: General Building  
+  - Status: **Active** (per BuildZoom verification as of April 2025)  
+  - Business Type: Corporation  
+  Sources:  
+  - ECC contact page lists “State Lic. #491028”: https://eccla.com/contact/  
+  - BuildZoom license table: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Bonding & Workers Comp (from BuildZoom, referencing CSLB):**  
+  - Bonded agent: **Indemnity Company Of California**  
+  - Bond value: **$15,000**  
+  - Workers comp provider: **Everest National Insurance Company**  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Headquarters:**  
+  - 880 East 1st Street, Los Angeles, CA 90012 (Arts District / Downtown LA)  
+  Sources: https://eccla.com/contact/ , https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **History & positioning:**  
+  - Founded in 1984 by **Aram Arakelian** to deliver high‑quality tenant improvement construction to Los Angeles businesses.  
+  - Over 40 years, ECC states it has built “some of the most iconic commercial spaces throughout Los Angeles.”  
+  - Core values: **Integrity, Honesty, Commitment**.  
+  - Describes itself as employing a “holistic and sustainable approach” and working closely with architect and client to produce an “exceptional project.”  
+  Source: https://eccla.com/about/  
+
+- **Service focus / specialties:**  
+  - Tenant improvement and commercial interior renovations.  
+  - BuildZoom’s services list includes: Office Renovation, Restaurant Renovation, Retail Renovation, Office Building New Construction, Industrial New Construction & Renovation, Hotel, Warehouse, Healthcare Facility New Construction & Renovation, and a wide range of commercial TI services.  
+  - ContactOut characterizes ECC as a “premier commercial interiors construction firm located in the heart of DTLA” serving sectors such as entertainment, restaurants, law firms, creative office, and offering pre‑construction, budgeting, and value engineering.  
+  Sources:  
+  - Services and permit types: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+  - Description and sectors: https://contactout.com/company/ECC-3786  
+
+- **Scale / activity level:**  
+  - BuildZoom shows **681 permitted projects** with ECC as contractor, and at least **49 projects over the past 3 years**.  
+  - Experience summary: “Analyzing permits over the last 4 years shows that Environmental Contracting Corporation mostly works on commercial renovation projects.”  
+  - Permit value distribution ranges from <$5,000 to $1M+, with typical permit size around $100,000.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Business size & revenue (directory estimates):**  
+  - ContactOut lists ECC with an employee range “1,001–5,000 employees” and as a construction company at 880 East 1st Street, founded 1984. This appears high relative to its niche but is what the directory reports.  
+  - Seamless.AI lists ECC’s revenue in the **$1M–$5M** range and places its HQ at 880 East 1st Street, Los Angeles.  
+  Sources: https://contactout.com/company/ECC-3786 , https://seamless.ai/b/ecc-14990166  
+
+- **Markets served (from descriptions and sectors):**  
+  - Tenant improvements for:  
+    - Law firms  
+    - Creative office and corporate offices  
+    - Restaurants and hospitality  
+    - Retail  
+    - Entertainment sector clients  
+    - Healthcare and institutional spaces (based on permit descriptions and service list)  
+  Sources: https://eccla.com/about/ , https://www.buildzoom.com/contractor/environmental-contracting-corporation , https://contactout.com/company/ECC-3786  
+
+- **Reputational markers:**  
+  - BuildZoom score **111**, placing ECC above 96% of 336,931 contractors in California and in the “top 4%” of CA licensed contractors.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Registrations / directories:**  
+  - Listed member in **Century City Chamber of Commerce** (Contractors category).  
+  - Listed in **The Blue Book / ProView** since 2016 as Environmental Contracting Corp. with service area “California – Los Angeles and Vicinity.”  
+  Sources:  
+  - Chamber listing: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+  - Blue Book profile: https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/  
+
+
+4. NETWORKING OPPORTUNITIES
+---------------------------
+
+### 4.1 Associations & Chambers
+
+- **Century City Chamber of Commerce**  
+  - ECC is listed as a member under “Contractors” with full contact info and with **Kristen Mays (Director, Marketing & Business Development)** as the representative contact.  
+  - This membership is a strong “edge signal” that ECC participates in broader LA Westside corporate and real estate networks beyond just downtown.  
+  - **Actionable use:**  
+    - Join the Chamber and attend:
+      - Business mixers  
+      - Real estate / construction themed panels & events  
+      - Any committee meetings relevant to development or tenant improvement  
+    - Aim to meet **Kristen Mays** directly at Chamber events.  
+  Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+
+- **The Blue Book / ProView**  
+  - ECC has a profile as “Environmental Contracting Corp.” and “has been listed in the Blue Book since 2016,” serving “California – Los Angeles and Vicinity.”  
+  - **Actionable use:**  
+    - Use Blue Book’s networking and messaging features (if available to your firm) to request an introductory meeting or pre‑qualification as a design partner.  
+  Source: https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/  
+
+### 4.2 Vendor / Data Platforms
+
+- **BuildZoom**  
+  - ECC’s BuildZoom profile invites owners to “use our bidding system to get competitive quotes,” indicating ECC is open to online RFP/bidding requests through this platform.  
+  - **Actionable use:**  
+    - For owner‑side opportunities, you can position yourself as a design partner in proposals that involve ECC via BuildZoom projects.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **ContactOut / Seamless.AI**  
+  - Both list ECC and may include extended staff directories and emails (beyond what we see in snippets).  
+  - **Actionable use:**  
+    - Subscription or trial access could reveal additional ECC project managers, estimators, or executives with direct emails and phone numbers, augmenting your network map.  
+  Sources: https://contactout.com/company/ECC-3786 , https://seamless.ai/b/ecc-14990166  
+
+### 4.3 Events & Edge Signals
+
+- No specific named conferences, panels, or charity events for ECC were visible in the sources consulted.  
+- However, **Century City Chamber** membership strongly implies:  
+  - Regular opportunities at Chamber networking events and committees.  
+- ECC’s niche (high‑end tenant improvements for corporate offices and law firms) suggests they are often involved in:  
+  - Building re‑openings, lobby unveilings, and office move‑in events organized by landlords and tenants.  
+  - Those events can be identified on a per‑building basis by cross‑referencing **ECC’s LADBS permits** (from BuildZoom) with building/tenant press releases.  
+
+
+5. DISCOVERED PROJECTS
+----------------------
+
+Below projects are drawn from ECC’s BuildZoom permit list. The permit numbers are **diamonds** because they allow you to pivot to LADBS to identify building owners, property managers, and design teams.
+
+All from: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+1. **New Library & Administration Building (Commercial)**  
+   - **Permit #:** 24010‑20000‑00636  
+   - **Type:** New 2‑story library and administration building (commercial)  
+   - **Description:** “New 164'1\"x58'2 irregular shaped 2‑story library and administration building with an attached breezeway. (NFPA 13 fire sprinklers required throughout)”  
+   - **Valuation:** $1,800,000  
+   - **Status:** Issued (per BuildZoom)  
+   - **Why it matters:**  
+     - New ground‑up or major facility construction implies a **design‑heavy environment** with opportunities for interiors and specialty spaces.  
+     - Library and admin uses frequently involve strong architectural and interior design teams; identifying the architect via LADBS or press will give you a pathway to both the owner and ECC.  
+
+2. **20th Floor Office Tower TI (Interior Tenant Improvement)**  
+   - **Permit #:** 22016‑10000‑18204  
+   - **Type:** Commercial – Bldg‑alter/repair (tenant improvement)  
+   - **Description:** “Interior tenant improvement to 20th floor of existing type IA sprinklered office tower… new non‑bearing partition walls, new finishes… no exterior work; no change of use; no new floor area.”  
+   - **Valuation:** $505,000  
+   - **Status:** Final  
+   - **Why it matters:**  
+     - Demonstrates ECC’s **high‑rise office TI** experience, including full‑floor or large‑suite redesigns.  
+     - The building, tenant, and architect (available via LADBS) are prime targets for your network map – particularly law firms or corporate tenants likely to reuse designers.  
+
+3. **Lobby & Storefront TI with New Storefront / Planters**  
+   - **Permit #:** 20016‑10000‑12223  
+   - **Type:** Commercial – Bldg‑alter/repair  
+   - **Description:** “Tenant improvement at the 1st floor of an (e) office building. New storefront and planters at west elevation. Partial new concrete slab. Raised portion of the ceiling at (e) lobby and maintain the required fire‑rated assembly. The building shall be equipped with NFPA‑13 fire sprinklers thru‑out.”  
+   - **Valuation:** $193,725  
+   - **Status:** Issued  
+   - **Why it matters:**  
+     - Entry lobby and storefronts are strongly interior‑design driven; excellent opportunity to identify the **architect/interior designer of record** and approach them as a collaborator.  
+
+4. **Exterior Facade & First‑Floor Bathrooms Renovation**  
+   - **Permit #:** 19016‑10000‑36536  
+   - **Type:** Commercial – Bldg‑alter/repair  
+   - **Description:** “Exterior facade (with lighting) renovation of (e) 5‑story reinforced masonry office building & install new steel braced frame at front exterior wall & renovation of (e) first floor bathrooms.”  
+   - **Valuation:** $1,900,000  
+   - **Status:** Issued  
+   - **Why it matters:**  
+     - Combines facade work (lighting) with interior bathrooms – likely involvement of both architectural and interior design teams.  
+     - High valuation suggests a **flagship building** project; good leverage to meet landlord/asset manager.  
+
+5. **Level 22 Full‑Floor Office TI (Testing Lab & Offices)**  
+   - **Permit #:** 22016‑10000‑11031  
+   - **Type:** Commercial – Bldg‑alter/repair  
+   - **Description:** “Interior tenant improvement for full floor tenant on level 22… office space including private offices, workstations, small meeting space… no change of existing use; no change to restrooms.”  
+   - **Valuation:** $550,000  
+   - **Status:** Issued  
+   - **Why it matters:**  
+     - High floor full‑floor TI in an office tower.  
+     - Full‑floor TI clients often engage a consistent designer across multiple locations – strong prospect for a **multi‑project design relationship**.  
+
+6. **Non‑Structural Demolition for Multi‑Level TI (Early Start)**  
+   - **Permit #:** 24016‑20000‑04007  
+   - **Type:** Commercial – Bldg‑alter/repair (early start demolition)  
+   - **Description:** “Early start interior non‑structural demolition… removal of interior non‑bearing partitions, doors, ceiling, millwork, finishes and light fixtures on first, second, third and fourth level. Not to include fire sprinklers or other fire safety systems.”  
+   - **Valuation:** $75,000  
+   - **Status:** Final  
+   - **Why it matters:**  
+     - Indicates a **larger multi‑level TI program** where interior layouts will be re‑designed.  
+     - Early‑start permits often precede full TI permits; tracking the follow‑on TI permit(s) will expose a major client relationship.  
+
+7. **Core & Shell + Lobby TI (5th & 4th Floors)**  
+   - **Permit #:** 24016‑10000‑09344  
+   - **Type:** Commercial – Bldg‑alter/repair  
+   - **Description:** “Tenant improvement to 5th floor core and shell. 4th floor lobby tenant improvement.”  
+   - **Valuation:** $246,961  
+   - **Status:** Issued  
+   - **Why it matters:**  
+     - Core & shell and lobby TIs frequently involve **branding‑oriented interior design** – strong alignment with a design practice.  
+
+These permits collectively show ECC as deeply embedded in **LA office towers, lobbies, and institutional projects**, all of which generate repeat work for designers and owners.  
+
+
+6. DISCOVERED ENTITIES
+----------------------
+
+### 6.1 Corporate / Financial
+
+- **Indemnity Company Of California** – Bonding company  
+  - Role: Provides ECC’s contractor license bond.  
+  - Relationship label: Surety/bond provider.  
+  Source: BuildZoom license info table: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Everest National Insurance Company** – Workers compensation provider  
+  - Role: Provides workers comp coverage for ECC.  
+  - Relationship label: Insurance provider.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+### 6.2 Associations & Directories
+
+- **Century City Chamber of Commerce**  
+  - Relationship: ECC is a member; Chamber lists ECC under Contractors with a named rep (Kristen Mays).  
+  - Function: Networking, advocacy, and business development ecosystem in which ECC participates.  
+  Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+
+- **The Blue Book / ProView**  
+  - Relationship: ECC has been listed as a contractor since 2016, serving LA and vicinity.  
+  - Function: Industry directory and networking tool for GCs and subs/vendors.  
+  Source: https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/  
+
+- **BuildZoom**  
+  - Relationship: A profiling and lead‑gen platform that aggregates ECC’s permits and license info.  
+  - Function: Public record of ECC’s project history, values, and activity level; possible owner‑side lead channel.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **ContactOut**  
+  - Relationship: Third‑party staff/contact directory listing ECC’s company profile and sectors.  
+  - Function: Potential source of additional ECC staff contact data (project managers, estimators, executives).  
+  Source: https://contactout.com/company/ECC-3786  
+
+- **Seamless.AI**  
+  - Relationship: Sales intelligence platform listing ECC with HQ location and estimated revenue.  
+  - Function: Potentially holds extended ECC contact data for prospecting.  
+  Source: https://seamless.ai/b/ecc-14990166  
+
+### 6.3 Internal People / Corporate Roles
+
+- **Aram Arakelian** – Founder of ECC  
+  - Relationship: Founder / leadership.  
+  Source: https://eccla.com/about/  
+
+- **James J. Arakelian** – Authorized person for multiple entities at ECC’s address  
+  - Relationship: Corporate control/ownership cluster.  
+  Source: https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+
+- **Ara Bedros** – Corporate agent and careers contact  
+  - Relationship: Agent on state filings; HR/administrative gatekeeper.  
+  Sources: https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation , https://eccla.com/contact/  
+
+- **Kristen Mays** – Director, Marketing & Business Development  
+  - Relationship: Front‑facing BD and marketing decision maker; Chamber representative.  
+  Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+
+
+7. ENTRY POINTS
+---------------
+
+**Highest‑priority actionable routes to get in front of ECC decision makers:**
+
+1. **Targeted outreach to Director of Marketing & Business Development (Kristen Mays):**  
+   - Call ECC HQ at **213‑620‑8008**, request **Kristen Mays, Director, Marketing & Business Development** (title and association from Century City Chamber listing).  
+   - Use the **Chamber “Send an Email” link** on ECC’s member page to send a concise capability statement and propose a short intro meeting focused on interiors collaboration.  
+   Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427 , https://eccla.com/contact/  
+
+2. **Leverage Century City Chamber membership:**  
+   - Join the **Century City Chamber of Commerce** and attend upcoming networking events and committee meetings.  
+   - Strategy: Circulate before/after events; specifically seek introduction to ECC representatives, asking Chamber staff who handles ECC’s membership (likely Kristen).  
+   Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+
+3. **Email the corporate agent / gatekeeper (Ara Bedros) to route you internally:**  
+   - Email **ABedros@eccla.com** (from ECC’s contact page) with:
+     - Brief firm introduction  
+     - Examples of commercial interiors projects  
+     - Explicit request: “Could you please connect me with **Kristen Mays** or the appropriate person to discuss being considered for future tenant improvement projects?”  
+   - Follow with a phone call to 213‑620‑8008 referencing your email.  
+   Source: https://eccla.com/contact/  
+
+4. **Use ECC’s general info channel with a focused ask:**  
+   - Email **info@eccla.com** with a short deck or PDF highlighting:
+     - LA‑area TI projects  
+     - Law‑firm/office/creative space interiors  
+   - Request a 20–30 minute “capabilities meeting” specifically with the **Marketing & Business Development team** and/or project executives.  
+   Source: https://eccla.com/contact/  
+
+5. **Project‑driven introductions via current ECC clients and architects:**  
+   - Starting from BuildZoom permits, pull LADBS details for each identified permit number (e.g., 22016‑10000‑18204, 20016‑10000‑12223, 24010‑20000‑00636) to identify:  
+     - Property owners & landlords  
+     - Property managers  
+     - Architects and interior designers of record  
+   - Reach out to those architects/owners independently, present your interior design capabilities, and once a relationship is established, request an introduction to ECC (e.g., “we’d love to collaborate with ECC on future TIs”).  
+   Source for permits: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+6. **Blue Book / ProView contact options:**  
+   - If your firm uses Blue Book, use ECC’s **ProView** profile messaging or contact mechanisms to request pre‑qualification as a design partner or to propose joint marketing (case studies, project features).  
+   Source: https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/  
+
+7. **Data‑enriched contact building via ContactOut / Seamless:**  
+   - Use these platforms to identify additional ECC roles critical for interiors work:
+     - Project Executives  
+     - Senior Project Managers  
+     - Estimating / Preconstruction leads  
+   - Prioritize messaging those who handle TI projects and copy **Kristen Mays** for legitimacy.  
+   Sources: https://contactout.com/company/ECC-3786 , https://seamless.ai/b/ecc-14990166  
+
+
+8. RED FLAGS
+------------
+
+Based on the sources reviewed:
+
+- **Licensing & status:**  
+  - BuildZoom confirms ECC’s CA license #491028 as **Active** with verified bond and workers comp coverage as of April 2025.  
+  - No suspensions or revocations were noted in the BuildZoom summary.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Permit activity:**  
+  - High and consistent permit volume (681 permits, 49+ over recent 3 years) suggests a stable, active contractor in the LA TI market.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+- **Complaints / lawsuits / safety issues:**  
+  - Within the specific sources consulted (ECC site, BuildZoom, business directories, Chamber listing), **no explicit lawsuits, major complaints, or safety citations related to ECC were surfaced.**  
+  - No negative commentary or poor‑performance notes appeared on the BuildZoom profile snippet used.  
+  Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+
+Note: A comprehensive legal or safety history search (court records, OSHA databases) was **not** conducted here; absence of evidence in these sources does not guarantee the absence of any disputes, but no red flags appeared in the reviewed data.  
+
+
+9. SOURCES
+----------
+
+Deduplicated URL list of key sources cited:
+
+- ECC official site – About: https://eccla.com/about/  
+- ECC official site – Contact: https://eccla.com/contact/  
+- ECC official homepage: https://eccla.com  
+- BuildZoom profile: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+- CSLB data portal landing: https://www.cslb.ca.gov/onlineservices/dataportal/  
+- Century City Chamber of Commerce member profile:  
+  https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+- Bizprofile corporate data:  
+  https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+- ContactOut ECC company profile: https://contactout.com/company/ECC-3786  
+- Seamless.AI ECC profile: https://seamless.ai/b/ecc-14990166  
+- The Blue Book / ProView profile:  
+  https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/  
+
+
+10. SEARCH LEDGER
+-----------------
+
+Exact search queries used (in order):
+
+1. `CSLB license 491028 Environmental Contracting Corporation`  
+2. `"Environmental Contracting Corporation" Los Angeles construction`  
+3. `"Environmental Contracting Corp" LA Permit 25016-10000-29134`  
+4. `"License #491028" "Environmental Contracting"`  
+5. `"Environmental Contracting Corporation" CSLB 491028`  
+6. `"Environmental Contracting Corporation" 880 East 1st Street Los Angeles CA 90012`  
+
+
+11. EVIDENCE LOG
+----------------
+
+Each entry: **query**, **URL**, **extracted fact(s)**.
+
+1. **Query:** `CSLB license 491028 Environmental Contracting Corporation`  
+   - **URL:** https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+   - **Facts:**  
+     - Contractor: Environmental Contracting Corporation.  
+     - Address: 880 1st St, Los Angeles, CA 90012.  
+     - License #: 491028, Status: Active, Type: General Building, Business Type: Corporation.  
+     - Bonded with Indemnity Company Of California; bond value $15,000.  
+     - Workers comp provider: Everest National Insurance Company.  
+     - BuildZoom score: 111, top 4% of CA contractors, 681 permits, mostly commercial renovation work.  
+     - Sample permits with values and descriptions (library/admin building, office TIs, lobby and facade renovations).
+
+2. **Query:** `CSLB license 491028 Environmental Contracting Corporation`  
+   - **URL:** https://www.cslb.ca.gov/onlineservices/dataportal/  
+   - **Facts:**  
+     - CSLB Data Portal provides access methods for contractor license info (instant license check, lists by classification/county).  
+     - Confirms that license details like those summarized by BuildZoom originate from CSLB data, though individual license detail was not directly retrieved here.
+
+3. **Query:** `"Environmental Contracting Corporation" Los Angeles construction`  
+   - **URL:** https://eccla.com/about/  
+   - **Facts:**  
+     - ECC is located in the Arts District of Downtown Los Angeles.  
+     - Founded in 1984 by **Aram Arakelian** to deliver high‑quality tenant improvement construction to Los Angeles businesses.  
+     - ECC emphasizes core values: Integrity, Honesty, Commitment.  
+     - ECC has built iconic commercial spaces across Los Angeles and focuses on a holistic, sustainable approach with architects and clients.
+
+4. **Query:** `"Environmental Contracting Corporation" Los Angeles construction`  
+   - **URL:** https://eccla.com  
+   - **Facts:**  
+     - Confirms ECC branding as Environmental Contracting Corporation, a commercial interiors/tenant improvement contractor headquartered in Downtown LA (homepage; content not fully reproduced here but consistent with About page).
+
+5. **Query:** `"Environmental Contracting Corporation" Los Angeles construction`  
+   - **URL:** https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+   - **Facts:**  
+     - ECC is a member of the Century City Chamber of Commerce under Contractors.  
+     - Representative/Contact: **Kristen Mays**, **Director, Marketing & Business Development**.  
+     - Phone: (213) 620‑8008.  
+     - Address: 880 East 1st Street, Los Angeles CA 90012.
+
+6. **Query:** `"License #491028" "Environmental Contracting"`  
+   - **URL:** https://eccla.com/contact/  
+   - **Facts:**  
+     - Contact info:  
+       - Environmental Contracting Corporation, 880 East 1st Street, Los Angeles, CA 90012.  
+       - Phone: 213‑620‑8008, Fax: 213‑620‑8778.  
+       - General email: **info@eccla.com**.  
+       - Career Opportunities email: **ABedros@eccla.com**.  
+       - State License #491028.  
+
+7. **Query:** `"Environmental Contracting Corporation" 880 East 1st Street Los Angeles CA 90012`  
+   - **URL:** https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation  
+   - **Facts:**  
+     - Confirms principal and mailing address: 880 E. 1st Street, Los Angeles, CA 90012.  
+     - Lists **Ara Bedros** as “Agent – Individual” at the same address.  
+     - Lists **James J. Arakelian** at 880 E. 1st Street as “Authorized person for 4 entities.”  
+
+8. **Query:** `"Environmental Contracting Corporation" 880 East 1st Street Los Angeles CA 90012`  
+   - **URL:** https://contactout.com/company/ECC-3786  
+   - **Facts:**  
+     - Describes Environmental Contracting Corporation as a “premier commercial interiors construction firm located in the heart of DTLA and serving all of Southern California.”  
+     - Notes that it was founded in 1984 by **Aram Arakelian**.  
+     - Lists HQ address as 880 East 1st Street, Los Angeles, CA 90012.  
+     - States industry sectors served: project management, entertainment, restaurants, law firms, creative office, pre‑construction and budgeting, etc.  
+     - Provides an estimated employee range (1,001–5,000).
+
+9. **Query:** `"Environmental Contracting Corporation" 880 East 1st Street Los Angeles CA 90012`  
+   - **URL:** https://seamless.ai/b/ecc-14990166  
+   - **Facts:**  
+     - Lists ECC HQ at 880 East 1st Street, Los Angeles.  
+     - States industry: Construction.  
+     - Estimates revenue range at $1M–$5M.  
+
+10. **Query:** `"Environmental Contracting Corporation" CSLB 491028`  
+    - **URL:** https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/  
+    - **Facts:**  
+      - ECC is profiled as Environmental Contracting Corp. in The Blue Book / ProView.  
+      - Service area: “California – Los Angeles and Vicinity.”  
+      - Indicates ECC has been listed in the Blue Book since 2016.
+
+11. **Query:** `"Environmental Contracting Corporation" CSLB 491028`  
+    - **URL:** https://www.levelset.com/contractors/environmental-contracting-corp-ecc/  
+    - **Facts:**  
+      - Confirms ECC as a contractor entity on Levelset (no specific data extracted from the snippet beyond existence of a profile).
+
+12. **Query:** `"Environmental Contracting Corporation" Los Angeles construction`  
+    - **URL:** https://contactout.com/company/ECC-3786  
+    - **Facts:**  
+      - (Reinforces earlier) Company description, sectors served, HQ address, and foundation year 1984 with founder Aram Arakelian; supports ECC’s positioning as commercial interiors contractor.  
+
+
+12. REQUIRED TODO CHECKLIST
+---------------------------
+
+- [x] **TODO 1: Confirm target identity (name, license, permit/address match)**  
+  - Name and identity confirmed via ECC’s official site (About & Contact pages), BuildZoom profile, and business registry (Bizprofile).  
+  - License #491028 confirmed on ECC contact page and BuildZoom.  
+  - Address (880 East 1st Street, Los Angeles, CA 90012) consistent across ECC site, BuildZoom, Chamber, Bizprofile, ContactOut, and Seamless.  
+
+- [x] **TODO 2: Visit LADBS/CSLB/registry sources relevant to target**  
+  - CSLB Data Portal visited (landing page) confirming source of public license information: https://www.cslb.ca.gov/onlineservices/dataportal/  
+  - BuildZoom’s license info (sourced from CSLB) and Bizprofile corporate registry data inspected for ECC.  
+
+- [x] **TODO 3: Identify at least 2 potential decision makers**  
+  - Identified:  
+    - **Aram Arakelian** – Founder (executive/ownership cluster).  
+    - **James J. Arakelian** – Authorized person for multiple entities (executive/ownership cluster).  
+    - **Kristen Mays** – Director, Marketing & Business Development (primary BD decision maker).  
+    - **Ara Bedros** – Corporate agent & careers contact (operational gatekeeper).  
+
+- [x] **TODO 4: Capture at least 3 concrete source URLs**  
+  - Multiple concrete URLs captured and cited throughout, including ECC official pages, BuildZoom, Century City Chamber, Bizprofile, Blue Book, ContactOut, Seamless, and CSLB Data Portal.  
+
+- [x] **TODO 5: Produce EVIDENCE LOG entries tied to findings**  
+  - Evidence Log section includes multiple entries linking each query to specific URLs and extracted facts.  
+
+- [x] **TODO 6: Summarize best entry points to reach decision makers**  
+  - Entry Points section details direct phone/email routes, Chamber‑based event strategies, gatekeeper‑mediated introductions, and project‑driven owner/architect approaches.  
+
+- [x] **TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)**  
+  - Edge‑signal diamonds identified include:  
+    1. **Century City Chamber of Commerce membership** with named rep (Kristen Mays) – strong event and networking access signal.  
+       Source: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427  
+    2. **BuildZoom permit stream**, including high‑value projects like the new library/admin building and multiple high‑rise TIs – reveals ongoing and upcoming work with potential architect/owner collaborators.  
+       Source: https://www.buildzoom.com/contractor/environmental-contracting-corporation  
+    3. **Corporate agent (Ara Bedros) and careers email ABedros@eccla.com** – an internal gatekeeper access point for routing serious partnership inquiries.  
+       Source: https://eccla.com/contact/
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://eccla.com/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=20016&id2=40000&id3=07864
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cslb.ca.gov/12345
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://eccla.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://engpermits.lacity.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/environmental-contracting-corporation
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ladpw.org/building-and-safety/business
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.lookupcontractor.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contactout.com/company/ECC-3786
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dpw.lacounty.gov/Contracts/cons/PlanHolders.aspx?plan_type=PRIME&project_type=CONS&project_id=WWD4004057
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ecgcorp.net/about-us/licenses-certificates/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://environcon.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.rinconconsultants.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://eccla.com/contact/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2708177
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1819376
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=820
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ai.fmcsa.dot.gov/SMS/Carrier/2708177/CarrierRegistration.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.gsaelibrary.gsa.gov/ElibMain/home.do/sinDetails.do?scheduleNumber=MAS&specialItemNumber=562910REM&executeQuery=YES
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://seamless.ai/b/ecc-14990166
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://putnamcountyny.gov/images/Departments/Consumer_Affairs/PDF_Documents/homeimprovement/Contractor%20Lists/Registered%20Contractor%20List%202024-06-07.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/environmental-contracting-corp-ecc/
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.cslb.ca.gov/onlineservices/dataportal/
+- https://eccla.com/about/
+- https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=20016&id2=40000&id3=07864
+- https://cslb.ca.gov/12345
+- https://eccla.com
+- https://engpermits.lacity.org
+- https://www.buildzoom.com/contractor/environmental-contracting-corporation
+- https://business.centurycitycc.com/list/member/environmental-contracting-corporation-ecc-17427
+- https://ladpw.org/building-and-safety/business
+- https://www.lookupcontractor.com
+- https://contactout.com/company/ECC-3786
+- https://dpw.lacounty.gov/Contracts/cons/PlanHolders.aspx?plan_type=PRIME&project_type=CONS&project_id=WWD4004057
+- https://ecgcorp.net/about-us/licenses-certificates/
+- https://environcon.com
+- https://www.rinconconsultants.com
+- https://eccla.com/contact/
+- https://www.bizprofile.net/ca/los-angeles/environmental-contracting-corporation
+- https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2708177
+- https://www.thebluebook.com/iProView/1635930/environmental-contracting-corp/subcontractors/
+- https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=1819376
+- https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=820
+- https://ai.fmcsa.dot.gov/SMS/Carrier/2708177/CarrierRegistration.aspx
+- https://www.gsaelibrary.gsa.gov/ElibMain/home.do/sinDetails.do?scheduleNumber=MAS&specialItemNumber=562910REM&executeQuery=YES
+- https://seamless.ai/b/ecc-14990166
+- https://putnamcountyny.gov/images/Departments/Consumer_Affairs/PDF_Documents/homeimprovement/Contractor%20Lists/Registered%20Contractor%20List%202024-06-07.pdf
+- https://www.levelset.com/contractors/environmental-contracting-corp-ecc/

@@ -1,0 +1,76 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 30
+Party: Acer Fire Protection
+License: 1047478-B
+Permit: 25016-10000-24802
+Generated: 2026-03-07 04:18:07
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+## FINAL EVIDENCE GATHERING FOR Environmental Contracting Corporation
+
+### SEARCH LEDGER
+1. "Environmental Contracting Corporation contractor license 491028-B"
+2. "Environmental Contracting Corporation Los Angeles construction"
+3. "Environmental Contracting Corporation company website"
+4. "Environmental Contracting Corporation leadership team"
+5. "Environmental Contracting Corporation LinkedIn profiles"
+6. "Environmental Contracting Corporation projects and collaborations"
+7. "Upcoming events for Environmental Contracting Corporation"
+8. "Environmental Contracting Corporation decision makers"
+9. "Environmental Contracting Corporation industry partnerships"
+10. "Environmental Contracting Corporation bidding opportunities"
+
+### EVIDENCE LOG
+- **Search Query:** "Check Environmental Contracting contractor license 491028-B"
+  - **Visited URL:** [CSLB License Lookup](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+  - **Extracted Fact:** Confirmed active licensing status and permit details.
+
+- **Search Query:** "Environmental Contracting Corporation company website"
+  - **Visited URL:** Blocked; unable to gain access.
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Environmental Contracting Corporation leadership team"
+  - **Visited URL:** [LinkedIn Search](https://www.linkedin.com/search/results/people/?keywords=Environmental+Contracting+Corporation&origin=GLOBAL_SEARCH_HEADER)
+  - **Extracted Fact:** LinkedIn access is restricted; profiles not available for extraction.
+
+- **Search Query:** "Environmental Contracting Corporation projects and collaborations"
+  - **Visited URL:** [BuildZoom](https://www.buildzoom.com/)
+  - **Extracted Fact:** General contractor insights were available but lacked specifics about Environmental Contracting Corporation personnel.
+
+- **Search Query:** "Upcoming events for Environmental Contracting Corporation"
+  - **Visited URL:** Blocked; unable to access.
+  - **Extracted Fact:** N/A due to access issues.
+
+### SOCIAL / PROFILE CHECK
+1. **CSLB License Lookup:** Successfully confirmed the contractor's license.
+   - **Result:** Active License Number and status validated.
+2. **LinkedIn:** Restricted access; professional profiles are not retrievable.
+   - **Result:** Blocked; requires login.
+3. **BuildZoom:** General overview of contractors; specific insights on Environmental Contracting Corporation were not found.
+   - **Result:** Limited information available.
+
+### INDIVIDUAL PROBE LEDGER
+- **No specific individuals identified at this stage due to access restrictions on LinkedIn and inability to retrieve data from external searches. Further sourcing is required.**
+
+### TARGET-SPECIFIC FACT PACK
+- **Company Name:** Environmental Contracting Corporation
+- **Type:** Contractor
+- **LA Permit #:** 25016-10000-29166
+- **Contractor License #:** 491028-B
+- **Licensing Status:** Active (confirmed via CSLB).
+
+### NEXT STEPS
+- Access efforts will continue in seeking personnel insights through LinkedIn or direct industry connections.
+- Explore local construction events and trade associations for networking opportunities relevant to the company.
+
+## REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match).
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target.
+- [ ] TODO 3: Identify at least 2 potential decision-makers.
+- [ ] TODO 4: Capture at least 3 concrete source URLs.
+- [ ] TODO 5: Produce EVIDENCE LOG entries tied to findings.
+- [ ] TODO 6: Summarize best entry points to reach decision-makers.
+- [ ] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work). 
+
+**Further attempts will be made to clarify personnel and establish actionable connections with Environmental Contracting Corporation.**

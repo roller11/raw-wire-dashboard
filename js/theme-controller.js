@@ -6,7 +6,7 @@
  * @since 1.0.24
  */
 
-(function() {
+(function () {
     'use strict';
 
     const STORAGE_KEY = 'rawwire-theme';
@@ -33,8 +33,12 @@
         }
 
         setup() {
+            // Find the dashboard container — soothsayer wrapper or legacy
             this.dashboard = document.querySelector('.rawwire-dashboard');
             if (!this.dashboard) return;
+
+            // Also track the soothsayer app wrapper if present
+            this.soothsayerApp = this.dashboard.closest('.soothsayer-app');
 
             // Load saved preference
             const savedTheme = localStorage.getItem(STORAGE_KEY) || THEMES.SYSTEM;
@@ -94,11 +98,20 @@
                 });
             });
 
-            // Find hero section or header to append toggle
+            // Find the best insertion point for the toggle:
+            // 1. Soothsayer hero actions (dashboard wrapped in soothsayer theme)
+            // 2. Legacy rawwire-hero actions (standard page-renderer header)
+            // 3. Dashboard header fallback
+            // 4. Create header area as last resort
+            const soothsayerActions = this.soothsayerApp
+                ? this.soothsayerApp.querySelector('.soothsayer-hero-actions')
+                : null;
             const hero = this.dashboard.querySelector('.rawwire-hero-actions');
             const header = this.dashboard.querySelector('.rawwire-dashboard-header');
-            
-            if (hero) {
+
+            if (soothsayerActions) {
+                soothsayerActions.prepend(toggle);
+            } else if (hero) {
                 hero.prepend(toggle);
             } else if (header) {
                 header.appendChild(toggle);
@@ -131,7 +144,15 @@
         applyTheme(theme) {
             if (!this.dashboard) return;
             this.dashboard.setAttribute('data-theme', theme);
-            
+
+            // Propagate to soothsayer wrapper if present
+            if (this.soothsayerApp) {
+                this.soothsayerApp.setAttribute('data-theme', theme);
+            }
+
+            // Propagate theme to body so CSS can style the WP admin shell
+            document.body.setAttribute('data-rw-theme', theme);
+
             // Dispatch custom event for other components
             this.dashboard.dispatchEvent(new CustomEvent('rawwire-theme-change', {
                 detail: { theme, preference: this.currentTheme }

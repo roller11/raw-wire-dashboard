@@ -1,0 +1,21 @@
+RAW-WIRE ENTITY DEEP DIVE REPORT
+source_id: 25
+permit_nbr: 25010-10000-00953
+address: 710 E 111TH PL
+generated_at: 2026-03-05 23:01:17
+
+---
+ENTITY: Mccarthy Building Companies Inc
+TYPE: contractor
+RELATIONSHIP: source_record
+SEARCH_RESULTS:
+- query: Mccarthy Building Companies Inc | provider: openclaw-agent
+  * raw_findings: Here’s the comprehensive report for **Mccarthy Building Companies Inc**: ## Contractor Overview - **Company Name:** Mccarthy Building Companies Inc - **Type:** Contractor (General Contractor) - **Location:** Los Angeles, CA - **Contractor License:** 411173-B ### Company Details - **Legal Name:** Mccarthy Building Companies Inc - **DBA:** McCarthy - **Specialties/Markets:** General contracting, construction management, expertise in safety, quality, innovative technology. - **Employee Count:** Specific count not listed; mid to large-sized general contracting firm. - **Revenue Range:** Not publicly specified. - **Delivery Methods:** - Self-performing aspects of projects. - Progressive delivery methods involved. ### Networking Opportunities - **Association Memberships:** Likely memberships in construction and contracting associations (check with AGC and other local chapters). - **Upcoming Events:** Specific future events were not identified; continual checking of the company’s website or industry platforms is recommended. - **Charity Involvement:** The company has a culture of community engagement and giving back, but specific events aren't listed in the material retrieved.
+
+---
+ENTITY: Mccarthy Building Companies
+TYPE: contractor
+RELATIONSHIP: investigated_party
+SEARCH_RESULTS:
+- query: Mccarthy Building Companies | provider: openclaw-agent
+  * raw_findings: Here's the comprehensive report on **Mccarthy Building Companies Inc**: ## Contractor Overview - **Company Name:** Mccarthy Building Companies Inc - **Type:** Contractor (General Contractor) - **Location:** Los Angeles, CA - **Contractor License:** 411173-B ### Company Details - **Legal Name:** Mccarthy Building Companies Inc - **DBA:** McCarthy - **Specialties/Markets:** General contracting, construction management, design-build services, aligned with innovative technology and sustainable practices. - **Employee Count:** Estimated to be several hundred, but the exact number not specified. - **Revenue Range:** Not publicly available; check for industry reports. - **Delivery Methods:** Progressive delivery techniques and self-performing capabilities for enhanced efficiency. - **Licensing:** Licensed; specifics are provided in the state registry. - **Ownership Structure:** 100% employee-owned company, fostering stakeholder engagement. ### Networking Opportunities - **Website:** [McCarthy Building Companies](https://www.mccarthy.com/) - **Upcoming Events:** Currently unspecified; continual updates recommended on the company’s website and by networking with construction industry a

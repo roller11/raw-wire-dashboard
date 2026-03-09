@@ -188,7 +188,8 @@
 
 .rawwire-btn-warning {
     background: var(--rawwire-warning);
-    color: white;
+    color: #000000;
+    font-weight: bold;
 }
 
 .rawwire-btn-warning:hover {

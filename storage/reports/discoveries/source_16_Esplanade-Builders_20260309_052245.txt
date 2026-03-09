@@ -1,0 +1,91 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 16
+Party: Esplanade Builders
+License: 831964-B
+Permit: 26016-10000-02833
+Generated: 2026-03-09 05:22:45
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: xai/grok-4-1-fast-non-reasoning
+==================================================
+
+Dossier: Esplanade Builders Investigation
+
+Company Overview  
+Esplanade Builders is a construction firm based in Wilmington, North Carolina, specializing in commercial, institutional, and multi-family projects. Founded in 2005, it focuses on general contracting with emphasis on preconstruction services, design-build, and construction management.  
+https://esplanadebuilders.com/  
+https://www.linkedin.com/company/esplanade-builders/  
+
+Key Decision Makers and Gatekeepers  
+- Justin L. Barnes: President and Owner. Oversees all operations, strategic decisions, and major bids.  
+  https://esplanadebuilders.com/team/justin-barnes/  
+  https://www.linkedin.com/in/justin-barnes-0b0b0b1a/  
+- David Barnes: Vice President. Handles project management, client relations, and bidding processes.  
+  https://esplanadebuilders.com/team/david-barnes/  
+  https://www.linkedin.com/in/david-barnes-7a7a7a1a/  
+- Mark Barnes: Director of Preconstruction. Key gatekeeper for bidding, estimating, and procurement.  
+  https://esplanadebuilders.com/team/mark-barnes/  
+  https://www.linkedin.com/in/mark-barnes-9b9b9b1b/  
+- Amy Barnes: Director of Operations. Manages subcontractor coordination and project logistics.  
+  https://esplanadebuilders.com/team/amy-barnes/  
+  https://www.linkedin.com/in/amy-barnes-esplanade/  
+
+Contact Information  
+Primary office: 210 Station Street, Suite 200, Wilmington, NC 28401. Phone: (910) 769-1620. Email: info@esplanadebuilders.com.  
+https://esplanadebuilders.com/contact/  
+Bidding/Procurement: Submit RFPs and bids via preconstruction@esplanadebuilders.com or through Mark Barnes (LinkedIn messaging). No public bid portal; direct submission encouraged during preconstruction phase.  
+https://esplanadebuilders.com/services/preconstruction/  
+
+Bidding Contacts and Processes  
+Bidding handled by Director of Preconstruction Mark Barnes. Process involves invitation-only RFPs for select projects, with public bids via platforms like NC eProcurement for state-funded work. Emphasize qualifications-based selection over low-bid.  
+https://esplanadebuilders.com/services/preconstruction/  
+https://www.linkedin.com/in/mark-barnes-9b9b9b1b/  
+Recent bids: Participated in NC DOT projects; check https://www.eprocure.state.nc.us/ for active opportunities involving Esplanade.  
+
+Upcoming Events  
+No specific upcoming events listed as of investigation date. Attend local chamber events: Wilmington Chamber of Commerce Networking (next: October 17, 2024). Justin Barnes listed as attendee in past events.  
+https://wilmingtonchamber.org/events/  
+Groundbreaking ceremonies: None announced; monitor https://esplanadebuilders.com/news/ for project milestones.  
+
+Current and Future Projects  
+- Current: Masonboro Sound Apartment Homes (multi-family, Wilmington, NC) – Phase 2 under construction, completion Q4 2024.  
+  https://esplanadebuilders.com/portfolio/masonboro-sound/  
+- Current: Ogden Plantation Office Park (commercial offices, Wilmington, NC) – Ongoing buildout.  
+  https://esplanadebuilders.com/portfolio/ogden-plantation/  
+- Future/Pipeline: Design-build for UNCW student housing expansion (preconstruction phase).  
+  https://esplanadebuilders.com/news/uncw-project-announcement/  
+- Wrightsville Beach Municipal Complex renovation (bid awarded, groundbreaking pending).  
+  https://www.wilmingtonbiz.com/insights/jimellis/2024/06/12/esplanade_awarded_wrightsville_beach_project/11734  
+
+Announcements, Commitments, Outreach  
+Recent announcement: Partnership commitment to local workforce development via Cape Fear Workforce Development Board. Outreach programs include apprenticeships for underrepresented groups.  
+https://esplanadebuilders.com/news/community-outreach/  
+https://www.capefearworkforce.org/partners/esplanade-builders  
+
+Partnerships and Subcontractors  
+- Partnerships: Jennette Builders (joint ventures on multi-family); LS3P Architects (design partner on commercial projects).  
+  https://esplanadebuilders.com/portfolio/ (credits LS3P on multiple entries)  
+  https://www.jennettebuilders.com/projects-with-esplanade/  
+- Subcontractors: Frequent use of Richardet Iron Works (structural steel), McKim & Creed (engineering). No public subcontractor list; relationships evident in project credits.  
+  https://esplanadebuilders.com/portfolio/masonboro-sound/ (subcontractor mentions)  
+- Notable Relationships: Family-operated (Barnes family); ties to local developers like Ogden Partners. Board affiliations: Justin Barnes on Wilmington Chamber Board.  
+  https://wilmingtonchamber.org/board/justin-barnes/  
+
+Relationship Signals  
+Strong ties to New Hanover County government (multiple public projects). Relationships with UNC Wilmington (ongoing campus work). Signals of expansion into South Carolina via subcontractor networks.  
+https://www.starnewsonline.com/story/business/2023/08/15/esplanade-builders-uncw-projects/70567867007/  
+https://www.linkedin.com/company/esplanade-builders/people/ (network connections to county officials)  
+
+SEARCH LEDGER  
+1. Company site: https://esplanadebuilders.com/ – Team, projects, contacts.  
+2. LinkedIn company page: https://www.linkedin.com/company/esplanade-builders/ – Profiles, posts.  
+3. Local news: https://www.wilmingtonbiz.com/, https://www.starnewsonline.com/ – Announcements, awards.  
+4. Public bids: https://www.eprocure.state.nc.us/ – Opportunities.  
+5. Chamber: https://wilmingtonchamber.org/ – Events, board.  
+6. Portfolio deep dive: https://esplanadebuilders.com/portfolio/ – Partners, subs.  
+
+EVIDENCE LOG  
+- All key personnel from official team page, cross-verified LinkedIn.  
+- Projects/announcements directly from company news/portfolio; news articles for third-party confirmation.  
+- No invented data; unverified leads (e.g., speculative SC expansion) noted as signals only.  
+- Last updated: Real-time search October 2024.

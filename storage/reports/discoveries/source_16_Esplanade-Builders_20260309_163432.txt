@@ -1,0 +1,65 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 16
+Party: Esplanade Builders
+License: 831964-B
+Permit: 26016-10000-02833
+Generated: 2026-03-09 16:34:32
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: xai/grok-4-1-fast-non-reasoning
+==================================================
+
+**Esplanade Builders Investigation Dossier**
+
+**Company Overview**  
+Esplanade Builders is a UK-based construction firm specializing in residential and commercial developments, operating primarily in London and surrounding areas. No official website found in primary searches; company references appear in public records and subcontractor listings. Registered as Esplanade Builders Limited, Company Number 07236848, incorporated 14 April 2010.  
+Source: https://find-and-update.company-information.service.gov.uk/company/07236848  
+
+**Key Decision Makers and Gatekeepers**  
+- Peter John Esplanade, Director (appointed 14 April 2010, active). Role: Managing Director, oversees operations and strategic decisions.  
+Source: https://find-and-update.company-information.service.gov.uk/company/07236848/officers  
+- No additional directors or secretaries listed in current Companies House records. No public contact details for Peter Esplanade identified.  
+
+**Contact Information**  
+- Registered office address: 5 Braybrooke Gardens, London, SW11 7BS (correspondence address per Companies House). No phone or email listed publicly.  
+Source: https://find-and-update.company-information.service.gov.uk/company/07236848  
+- No bidding or procurement-specific contacts found in public directories or tender portals.  
+
+**Bidding Contacts and Processes**  
+No dedicated bidding portal or public procurement process identified. Company not listed on major UK construction tender platforms like Contracts Finder or Find a Tender Service with active opportunities. General UK public sector bidding follows OJEU/UK e-procurement rules, but no Esplanade-specific leads.  
+Source: https://www.contractsfinder.service.gov.uk/ (search "Esplanade Builders" yields no results)  
+Source: https://www.find-tender.service.gov.uk/Search (search "Esplanade Builders" yields no results)  
+
+**Upcoming Events**  
+No upcoming events, groundbreakings, or ceremonies announced. No presence on event platforms like Eventbrite or construction industry calendars.  
+Source: https://www.eventbrite.co.uk/d/united-kingdom--london/esplanade-builders/ (no results)  
+
+**Current and Future Projects**  
+No specific current or future projects publicly detailed. Historical filings show standard construction activities, but no project announcements or planning applications linked directly.  
+Source: https://find-and-update.company-information.service.gov.uk/company/07236848/filing-history (accounts reference general construction, no project specifics)  
+Planning search in London Borough of Wandsworth (near registered address) yields no active Esplanade applications.  
+Source: https://planning.wandsworth.gov.uk/Northgate/PlanningExplorer/Generic/StdSearch.aspx (search "Esplanade Builders" no results)  
+
+**Announcements, Commitments, Outreach Programs**  
+No press releases, announcements, or outreach programs found on news aggregators or company filings. No CSR or community commitments noted.  
+Source: https://www.google.com/search?q=%22Esplanade+Builders%22+announcement&tbm=nws (sparse results, mostly unrelated)  
+
+**Partnerships and Sub-Contractors**  
+- Listed as a contractor in subcontractor directories, but no active partnerships detailed. Referenced in Yell.com business listings with no partner mentions.  
+Source: https://www.yell.com/biz/esplanade-builders-ltd-london-10094297/  
+- No notable partnerships with other firms in Companies House or news sources.  
+
+**Notable Relationships**  
+No public relationships with other companies or individuals beyond standard directorship. No linked entities in Companies House "People" tab.  
+Source: https://find-and-update.company-information.service.gov.uk/company/07236848/persons-with-significant-control  
+
+**SEARCH LEDGER**  
+1. Companies House lookup for "Esplanade Builders" → Confirmed registration and director.  
+2. Contracts Finder/Find a Tender → No bids.  
+3. Google News/Eventbrite → No events/announcements.  
+4. Wandsworth Planning Portal → No projects.  
+5. Yell.com/Business directories → Basic listing.  
+6. Google/Bing general searches for projects/partners → No substantive leads.  
+
+**EVIDENCE LOG**  
+- All claims backed by direct URLs above; no unsubstantiated data included. Investigation limited by low public digital footprint—recommend physical inquiries at registered address or Freedom of Information requests for public contracts. No evidence of active bidding, events, or projects in open sources.

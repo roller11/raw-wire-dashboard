@@ -25,11 +25,11 @@
     --rw-brand-gold: #f4b41a;
     --rw-brand-gold-light: #ffd54f;
     --rw-brand-gold-dark: #c49000;
-    
+
     /* Typography */
     --rw-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --rw-font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
-    
+
     /* Font Sizes */
     --rw-text-xs: 0.75rem;
     --rw-text-sm: 0.875rem;
@@ -39,13 +39,13 @@
     --rw-text-2xl: 1.5rem;
     --rw-text-3xl: 1.875rem;
     --rw-text-4xl: 2.25rem;
-    
+
     /* Font Weights */
     --rw-font-normal: 400;
     --rw-font-medium: 500;
     --rw-font-semibold: 600;
     --rw-font-bold: 700;
-    
+
     /* Spacing Scale */
     --rw-space-1: 0.25rem;
     --rw-space-2: 0.5rem;
@@ -57,7 +57,7 @@
     --rw-space-10: 2.5rem;
     --rw-space-12: 3rem;
     --rw-space-16: 4rem;
-    
+
     /* Border Radius */
     --rw-radius-sm: 6px;
     --rw-radius-md: 10px;
@@ -65,13 +65,13 @@
     --rw-radius-xl: 20px;
     --rw-radius-2xl: 28px;
     --rw-radius-full: 9999px;
-    
+
     /* Transitions */
     --rw-transition-fast: 150ms ease;
     --rw-transition-base: 250ms ease;
     --rw-transition-slow: 350ms ease;
     --rw-transition-bounce: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
-    
+
     /* Z-Index Scale */
     --rw-z-dropdown: 100;
     --rw-z-sticky: 200;
@@ -93,20 +93,20 @@
     --rw-bg-elevated: #ffffff;
     --rw-bg-muted: #f1f5f9;
     --rw-bg-subtle: #e2e8f0;
-    
+
     /* Foreground Colors */
     --rw-fg-default: #1e293b;
     --rw-fg-muted: #64748b;
     --rw-fg-subtle: #94a3b8;
     --rw-fg-on-accent: #ffffff;
-    --rw-fg-on-gold: #1a1a1a;
-    
+    --rw-fg-on-gold: #000000;
+
     /* Border Colors */
     --rw-border-default: #e2e8f0;
     --rw-border-muted: #f1f5f9;
     --rw-border-strong: #cbd5e1;
     --rw-border-accent: var(--rw-brand-blue);
-    
+
     /* Semantic Colors */
     --rw-success: #10b981;
     --rw-success-bg: #ecfdf5;
@@ -120,56 +120,56 @@
     --rw-info: #3b82f6;
     --rw-info-bg: #eff6ff;
     --rw-info-border: #bfdbfe;
-    
+
     /* Shadow Colors */
     --rw-shadow-color: 220 15% 55%;
-    
+
     /* Shadows - 3D Depth Effect */
-    --rw-shadow-xs: 
+    --rw-shadow-xs:
         0 1px 2px hsl(var(--rw-shadow-color) / 0.05);
-    --rw-shadow-sm: 
+    --rw-shadow-sm:
         0 1px 3px hsl(var(--rw-shadow-color) / 0.08),
         0 1px 2px hsl(var(--rw-shadow-color) / 0.06);
-    --rw-shadow-md: 
+    --rw-shadow-md:
         0 4px 6px -1px hsl(var(--rw-shadow-color) / 0.08),
         0 2px 4px -2px hsl(var(--rw-shadow-color) / 0.06);
-    --rw-shadow-lg: 
+    --rw-shadow-lg:
         0 10px 15px -3px hsl(var(--rw-shadow-color) / 0.10),
         0 4px 6px -4px hsl(var(--rw-shadow-color) / 0.08);
-    --rw-shadow-xl: 
+    --rw-shadow-xl:
         0 20px 25px -5px hsl(var(--rw-shadow-color) / 0.12),
         0 8px 10px -6px hsl(var(--rw-shadow-color) / 0.08);
-    --rw-shadow-2xl: 
+    --rw-shadow-2xl:
         0 25px 50px -12px hsl(var(--rw-shadow-color) / 0.25);
-    --rw-shadow-inner: 
+    --rw-shadow-inner:
         inset 0 2px 4px 0 hsl(var(--rw-shadow-color) / 0.06);
-    
+
     /* Card-specific 3D shadow */
-    --rw-shadow-card: 
+    --rw-shadow-card:
         0 1px 3px hsl(var(--rw-shadow-color) / 0.06),
         0 6px 16px hsl(var(--rw-shadow-color) / 0.08),
         0 12px 28px hsl(var(--rw-shadow-color) / 0.06);
-    --rw-shadow-card-hover: 
+    --rw-shadow-card-hover:
         0 2px 4px hsl(var(--rw-shadow-color) / 0.06),
         0 12px 24px hsl(var(--rw-shadow-color) / 0.12),
         0 20px 40px hsl(var(--rw-shadow-color) / 0.08);
-    
+
     /* Glassmorphism */
     --rw-glass-bg: rgba(255, 255, 255, 0.7);
     --rw-glass-border: rgba(255, 255, 255, 0.5);
     --rw-glass-blur: blur(12px);
-    
+
     /* Accent gradients */
     --rw-gradient-brand: linear-gradient(135deg, var(--rw-brand-blue) 0%, var(--rw-brand-blue-light) 100%);
     --rw-gradient-gold: linear-gradient(135deg, var(--rw-brand-gold) 0%, var(--rw-brand-gold-light) 100%);
-    --rw-gradient-hero: linear-gradient(135deg, 
-        hsl(215 60% 97%) 0%, 
-        hsl(215 50% 94%) 50%, 
-        hsl(45 90% 96%) 100%);
-    --rw-gradient-shine: linear-gradient(135deg, 
-        rgba(255,255,255,0) 0%, 
-        rgba(255,255,255,0.4) 50%, 
-        rgba(255,255,255,0) 100%);
+    --rw-gradient-hero: linear-gradient(135deg,
+            hsl(215 60% 97%) 0%,
+            hsl(215 50% 94%) 50%,
+            hsl(45 90% 96%) 100%);
+    --rw-gradient-shine: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%);
 }
 
 /* ==========================================================================
@@ -182,22 +182,23 @@
     --rw-bg-base: #101114;
     --rw-bg-surface: #18191c;
     --rw-bg-elevated: #1f2023;
-    --rw-bg-muted: #18191c;
+    --rw-bg-muted: #24262a;
+    /* Lighter than surface for tab containers to be visible */
     --rw-bg-subtle: #1f2023;
-    
+
     /* Foreground Colors */
     --rw-fg-default: #f1f5f9;
     --rw-fg-muted: #94a3b8;
     --rw-fg-subtle: #64748b;
     --rw-fg-on-accent: #ffffff;
-    --rw-fg-on-gold: #1a1a1a;
-    
+    --rw-fg-on-gold: #000000;
+
     /* Border Colors - subtle hint of color */
     --rw-border-default: #2a2b2f;
     --rw-border-muted: #1f2023;
     --rw-border-strong: #38393e;
     --rw-border-accent: var(--rw-brand-gold);
-    
+
     /* Semantic Colors (darker variants) */
     --rw-success: #34d399;
     --rw-success-bg: rgba(16, 185, 129, 0.15);
@@ -211,48 +212,48 @@
     --rw-info: #60a5fa;
     --rw-info-bg: rgba(59, 130, 246, 0.15);
     --rw-info-border: rgba(59, 130, 246, 0.3);
-    
+
     /* Shadow Colors */
     --rw-shadow-color: 220 50% 3%;
-    
+
     /* Shadows - darker, more dramatic */
-    --rw-shadow-xs: 
+    --rw-shadow-xs:
         0 1px 2px hsl(var(--rw-shadow-color) / 0.3);
-    --rw-shadow-sm: 
+    --rw-shadow-sm:
         0 1px 3px hsl(var(--rw-shadow-color) / 0.4),
         0 1px 2px hsl(var(--rw-shadow-color) / 0.3);
-    --rw-shadow-md: 
+    --rw-shadow-md:
         0 4px 6px -1px hsl(var(--rw-shadow-color) / 0.4),
         0 2px 4px -2px hsl(var(--rw-shadow-color) / 0.3);
-    --rw-shadow-lg: 
+    --rw-shadow-lg:
         0 10px 15px -3px hsl(var(--rw-shadow-color) / 0.5),
         0 4px 6px -4px hsl(var(--rw-shadow-color) / 0.4);
-    --rw-shadow-xl: 
+    --rw-shadow-xl:
         0 20px 25px -5px hsl(var(--rw-shadow-color) / 0.5),
         0 8px 10px -6px hsl(var(--rw-shadow-color) / 0.4);
-    --rw-shadow-2xl: 
+    --rw-shadow-2xl:
         0 25px 50px -12px hsl(var(--rw-shadow-color) / 0.6);
-    
+
     /* Card-specific 3D shadow */
-    --rw-shadow-card: 
+    --rw-shadow-card:
         0 2px 4px hsl(var(--rw-shadow-color) / 0.3),
         0 8px 20px hsl(var(--rw-shadow-color) / 0.4),
         0 16px 32px hsl(var(--rw-shadow-color) / 0.3);
-    --rw-shadow-card-hover: 
+    --rw-shadow-card-hover:
         0 4px 8px hsl(var(--rw-shadow-color) / 0.3),
         0 16px 32px hsl(var(--rw-shadow-color) / 0.5),
         0 24px 48px hsl(var(--rw-shadow-color) / 0.4);
-    
+
     /* Glassmorphism */
     --rw-glass-bg: rgba(24, 25, 28, 0.85);
     --rw-glass-border: rgba(42, 43, 47, 0.6);
     --rw-glass-blur: blur(16px);
-    
-    /* Accent gradients - very dark with hint of blue */
-    --rw-gradient-hero: linear-gradient(135deg, 
-        hsl(220 5% 7%) 0%, 
-        hsl(220 5% 9%) 50%, 
-        hsl(220 5% 11%) 100%);
+
+    /* Accent gradients - very dark with hint of gold */
+    --rw-gradient-hero: linear-gradient(135deg,
+            hsl(60, 6%, 7%) 0%,
+            hsl(60, 4%, 9%) 50%,
+            hsl(60, 4%, 11%) 100%);
 }
 
 /* System preference dark mode (when no explicit theme set) */
@@ -262,22 +263,23 @@
         --rw-bg-base: #101114;
         --rw-bg-surface: #18191c;
         --rw-bg-elevated: #1f2023;
-        --rw-bg-muted: #18191c;
+        --rw-bg-muted: #24262a;
+        /* Lighter than surface for tab containers to be visible */
         --rw-bg-subtle: #1f2023;
-        
+
         /* Foreground Colors */
-        --rw-fg-default: #f1f5f9;
-        --rw-fg-muted: #94a3b8;
-        --rw-fg-subtle: #64748b;
+        --rw-fg-default: #f9f7f1;
+        --rw-fg-muted: #b8b194;
+        --rw-fg-subtle: #454533;
         --rw-fg-on-accent: #ffffff;
-        --rw-fg-on-gold: #1a1a1a;
-        
+        --rw-fg-on-gold: #000000;
+
         /* Border Colors - subtle hint of color */
-        --rw-border-default: #2a2b2f;
+        --rw-border-default: #2f2e2a;
         --rw-border-muted: #1f2023;
-        --rw-border-strong: #38393e;
+        --rw-border-strong: #3e3d38;
         --rw-border-accent: var(--rw-brand-gold);
-        
+
         /* Semantic Colors (darker variants) */
         --rw-success: #34d399;
         --rw-success-bg: rgba(16, 185, 129, 0.15);
@@ -291,48 +293,78 @@
         --rw-info: #60a5fa;
         --rw-info-bg: rgba(59, 130, 246, 0.15);
         --rw-info-border: rgba(59, 130, 246, 0.3);
-        
+
         /* Shadow Colors */
         --rw-shadow-color: 220 5% 3%;
-        
+
         /* Shadows - darker, more dramatic */
-        --rw-shadow-xs: 
+        --rw-shadow-xs:
             0 1px 2px hsl(var(--rw-shadow-color) / 0.3);
-        --rw-shadow-sm: 
+        --rw-shadow-sm:
             0 1px 3px hsl(var(--rw-shadow-color) / 0.4),
             0 1px 2px hsl(var(--rw-shadow-color) / 0.3);
-        --rw-shadow-md: 
+        --rw-shadow-md:
             0 4px 6px -1px hsl(var(--rw-shadow-color) / 0.4),
             0 2px 4px -2px hsl(var(--rw-shadow-color) / 0.3);
-        --rw-shadow-lg: 
+        --rw-shadow-lg:
             0 10px 15px -3px hsl(var(--rw-shadow-color) / 0.5),
             0 4px 6px -4px hsl(var(--rw-shadow-color) / 0.4);
-        --rw-shadow-xl: 
+        --rw-shadow-xl:
             0 20px 25px -5px hsl(var(--rw-shadow-color) / 0.5),
             0 8px 10px -6px hsl(var(--rw-shadow-color) / 0.4);
-        --rw-shadow-2xl: 
+        --rw-shadow-2xl:
             0 25px 50px -12px hsl(var(--rw-shadow-color) / 0.6);
-        
+
         /* Card-specific 3D shadow */
-        --rw-shadow-card: 
+        --rw-shadow-card:
             0 2px 4px hsl(var(--rw-shadow-color) / 0.3),
             0 8px 20px hsl(var(--rw-shadow-color) / 0.4),
             0 16px 32px hsl(var(--rw-shadow-color) / 0.3);
-        --rw-shadow-card-hover: 
+        --rw-shadow-card-hover:
             0 4px 8px hsl(var(--rw-shadow-color) / 0.3),
             0 16px 32px hsl(var(--rw-shadow-color) / 0.5),
             0 24px 48px hsl(var(--rw-shadow-color) / 0.4);
-        
+
         /* Glassmorphism */
         --rw-glass-bg: rgba(24, 25, 28, 0.85);
         --rw-glass-border: rgba(42, 43, 47, 0.6);
         --rw-glass-blur: blur(16px);
-        
+
         /* Accent gradients - very dark with hint of blue */
-        --rw-gradient-hero: linear-gradient(135deg, 
-            hsl(220 5% 7%) 0%, 
-            hsl(220 5% 9%) 50%, 
-            hsl(220 5% 11%) 100%);
+        --rw-gradient-hero: linear-gradient(135deg,
+                hsl(220 5% 7%) 0%,
+                hsl(220 5% 9%) 50%,
+                hsl(220 5% 11%) 100%);
+    }
+}
+
+/* ==========================================================================
+   WORDPRESS ADMIN SHELL DARK MODE
+   Paints the WP chrome behind .rawwire-dashboard to match dark theme.
+   Only activates on Raw Wire pages (body.rawwire-admin-page).
+   ========================================================================== */
+
+body.rawwire-admin-page[data-rw-theme="dark"] #wpcontent,
+body.rawwire-admin-page[data-rw-theme="dark"] #wpbody-content,
+body.rawwire-admin-page[data-rw-theme="dark"] #wpbody {
+    background: #101114;
+}
+
+body.rawwire-admin-page[data-rw-theme="dark"] {
+    background: #101114;
+}
+
+/* Also handle system-preference dark when no explicit theme stored */
+@media (prefers-color-scheme: dark) {
+
+    body.rawwire-admin-page:not([data-rw-theme="light"]) #wpcontent,
+    body.rawwire-admin-page:not([data-rw-theme="light"]) #wpbody-content,
+    body.rawwire-admin-page:not([data-rw-theme="light"]) #wpbody {
+        background: #101114;
+    }
+
+    body.rawwire-admin-page:not([data-rw-theme="light"]) {
+        background: #101114;
     }
 }
 
@@ -392,24 +424,59 @@
     color: var(--rw-fg-default);
 }
 
-.rawwire-dashboard h1 { font-size: var(--rw-text-3xl); font-weight: var(--rw-font-bold); }
-.rawwire-dashboard h2 { font-size: var(--rw-text-2xl); }
-.rawwire-dashboard h3 { font-size: var(--rw-text-xl); }
-.rawwire-dashboard h4 { font-size: var(--rw-text-lg); }
-.rawwire-dashboard h5 { font-size: var(--rw-text-base); }
-.rawwire-dashboard h6 { font-size: var(--rw-text-sm); }
+.rawwire-dashboard h1 {
+    font-size: var(--rw-text-3xl);
+    font-weight: var(--rw-font-bold);
+}
+
+.rawwire-dashboard h2 {
+    font-size: var(--rw-text-2xl);
+}
+
+.rawwire-dashboard h3 {
+    font-size: var(--rw-text-xl);
+}
+
+.rawwire-dashboard h4 {
+    font-size: var(--rw-text-lg);
+}
+
+.rawwire-dashboard h5 {
+    font-size: var(--rw-text-base);
+}
+
+.rawwire-dashboard h6 {
+    font-size: var(--rw-text-sm);
+}
 
 .rawwire-dashboard p {
     margin: 0 0 var(--rw-space-4);
     color: var(--rw-fg-muted);
 }
 
-.rawwire-dashboard .text-xs { font-size: var(--rw-text-xs); }
-.rawwire-dashboard .text-sm { font-size: var(--rw-text-sm); }
-.rawwire-dashboard .text-lg { font-size: var(--rw-text-lg); }
-.rawwire-dashboard .text-xl { font-size: var(--rw-text-xl); }
-.rawwire-dashboard .text-muted { color: var(--rw-fg-muted); }
-.rawwire-dashboard .text-subtle { color: var(--rw-fg-subtle); }
+.rawwire-dashboard .text-xs {
+    font-size: var(--rw-text-xs);
+}
+
+.rawwire-dashboard .text-sm {
+    font-size: var(--rw-text-sm);
+}
+
+.rawwire-dashboard .text-lg {
+    font-size: var(--rw-text-lg);
+}
+
+.rawwire-dashboard .text-xl {
+    font-size: var(--rw-text-xl);
+}
+
+.rawwire-dashboard .text-muted {
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-dashboard .text-subtle {
+    color: var(--rw-fg-subtle);
+}
 
 /* Eyebrow / Label text */
 .rawwire-dashboard .eyebrow {
@@ -453,9 +520,9 @@
     right: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, 
-        rgba(244, 180, 26, 0.15) 0%, 
-        transparent 70%);
+    background: radial-gradient(circle,
+            rgba(244, 180, 26, 0.15) 0%,
+            transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -467,9 +534,9 @@
     left: -5%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, 
-        rgba(30, 58, 95, 0.1) 0%, 
-        transparent 70%);
+    background: radial-gradient(circle,
+            rgba(30, 58, 95, 0.1) 0%,
+            transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -535,7 +602,7 @@
     background: var(--rw-gradient-brand);
     color: var(--rw-fg-on-accent) !important;
     border-color: var(--rw-brand-blue);
-    box-shadow: 
+    box-shadow:
         var(--rw-shadow-sm),
         0 0 0 0 rgba(30, 58, 95, 0);
 }
@@ -543,7 +610,7 @@
 .rawwire-dashboard .rawwire-btn-primary:hover,
 .rawwire-dashboard .button-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 
+    box-shadow:
         var(--rw-shadow-lg),
         0 0 20px rgba(30, 58, 95, 0.3);
 }
@@ -557,16 +624,16 @@
 .rawwire-dashboard .rawwire-btn-gold,
 .rawwire-dashboard .button-gold {
     background: var(--rw-gradient-gold);
-    color: #1a1a1a !important;
+    color: #000000 !important;
     border-color: var(--rw-brand-gold);
     box-shadow: var(--rw-shadow-sm);
-    font-weight: var(--rw-font-semibold);
+    font-weight: var(--rw-font-bold);
 }
 
 .rawwire-dashboard .rawwire-btn-gold:hover,
 .rawwire-dashboard .button-gold:hover {
     transform: translateY(-2px);
-    box-shadow: 
+    box-shadow:
         var(--rw-shadow-lg),
         0 0 20px rgba(244, 180, 26, 0.4);
 }
@@ -615,6 +682,28 @@
     box-shadow: var(--rw-shadow-md);
 }
 
+/* Ghost Danger Button (icon only) */
+.rawwire-btn-icon.rawwire-btn-danger-ghost {
+    background: transparent;
+    border: none;
+    color: var(--rw-fg-muted);
+    padding: var(--rw-space-1);
+    border-radius: var(--rw-radius-sm);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-btn-icon.rawwire-btn-danger-ghost:hover {
+    background: var(--rw-danger-bg);
+    color: var(--rw-danger);
+}
+
+.rawwire-btn-icon.rawwire-btn-danger-ghost .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
 /* Button Sizes */
 .rawwire-dashboard .rawwire-btn-sm {
     padding: var(--rw-space-2) var(--rw-space-3);
@@ -647,6 +736,79 @@
     display: flex;
     gap: var(--rw-space-3);
     flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   PANEL ROWS (Builder)
+   ========================================================================== */
+
+.rawwire-panel-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+    gap: var(--rw-space-4);
+    padding: var(--rw-space-4);
+    margin-bottom: var(--rw-space-4);
+    background: var(--rw-bg-muted);
+    border: 2px dashed var(--rw-border-default);
+    border-radius: var(--rw-radius-lg);
+}
+
+.rawwire-row-label {
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-semibold);
+    color: var(--rw-fg-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: var(--rw-space-2);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+.rawwire-panel-row .rawwire-panel-slot {
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-md);
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rawwire-panel-row:has(.rawwire-panel-slot:nth-child(3)) {
+    grid-template-columns: auto repeat(2, 1fr) auto;
+}
+
+.rawwire-panel-row:has(.rawwire-panel-slot:nth-child(4)) {
+    grid-template-columns: auto repeat(3, 1fr) auto;
+}
+
+.rawwire-panel-row:has(.rawwire-panel-slot:nth-child(5)) {
+    grid-template-columns: auto repeat(4, 1fr) auto;
+}
+
+.rawwire-panel-slot-empty {
+    text-align: center;
+    color: var(--rw-fg-subtle);
+}
+
+.rawwire-panel-slot-empty .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+}
+
+.rawwire-panel-slot-empty p {
+    margin: var(--rw-space-2) 0 0;
+    font-size: var(--rw-text-xs);
+}
+
+.rawwire-row-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-1);
 }
 
 /* ==========================================================================
@@ -688,6 +850,24 @@
     display: flex;
     align-items: center;
     gap: var(--rw-space-3);
+    color: var(--rw-fg-default);
+    font-size: var(--rw-text-base);
+    font-weight: var(--rw-font-semibold);
+}
+
+.rawwire-dashboard .rawwire-panel-header h3 .dashicons {
+    color: var(--rw-brand-blue);
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-panel-header h3 {
+    color: var(--rw-fg-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-panel-header h3 .dashicons {
+    color: var(--rw-brand-gold);
 }
 
 .rawwire-dashboard .rawwire-card-header h3::before,
@@ -703,6 +883,35 @@
 .rawwire-dashboard[data-theme="dark"] .rawwire-card-header h3::before,
 .rawwire-dashboard[data-theme="dark"] .rawwire-panel-header h3::before {
     background: var(--rw-gradient-gold);
+}
+
+/* Panel Refresh Indicator */
+.rawwire-refresh-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--rw-radius-sm);
+    background: var(--rw-bg-muted);
+    color: var(--rw-fg-muted);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-refresh-indicator:hover {
+    background: var(--rw-brand-blue);
+    color: white;
+}
+
+.rawwire-refresh-indicator .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.rawwire-refresh-indicator.refreshing .dashicons {
+    animation: rawwire-spin 0.8s linear infinite;
 }
 
 .rawwire-dashboard .rawwire-card-body,
@@ -796,13 +1005,8 @@
     justify-content: center;
     background: var(--rw-bg-muted);
     border-radius: var(--rw-radius-md);
-    color: var(--rw-brand-blue);
-    font-size: 24px;
-}
-
-.rawwire-dashboard[data-theme="dark"] .rawwire-stat-icon {
-    background: var(--rw-bg-subtle);
     color: var(--rw-brand-gold);
+    font-size: 24px;
 }
 
 /* Horizontal Stats Bar */
@@ -828,7 +1032,465 @@
 
 .rawwire-dashboard .rawwire-stats-bar .rawwire-stat-card:hover {
     transform: none;
+    border-color: var(--rw-brand-gold);
+}
+
+/* Workflow-specific card colors (Equalizer template) */
+.rawwire-stat-card[style*="--card-accent"]::before {
+    background: var(--card-accent) !important;
+    opacity: 1;
+}
+
+.rawwire-stat-card[style*="--card-accent"] .dashicons {
+    color: var(--card-accent);
+}
+
+.rawwire-stat-card.rawwire-workflow-lead_generation {
+    border-left: 3px solid var(--rw-brand-gold);
+}
+
+.rawwire-stat-card.rawwire-workflow-post_generator {
+    border-left: 3px solid var(--rw-brand-gold);
+}
+
+/* Stats bar action buttons */
+.rawwire-stats-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    margin-left: auto;
+    padding-left: var(--rw-space-4);
+    border-left: 1px solid var(--rw-border-default);
+}
+
+.rawwire-stats-actions .rawwire-btn {
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   PANEL ROW CONTAINER (Side-by-side panels)
+   ========================================================================== */
+
+.rawwire-panel-row-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--rw-space-4);
+    margin-bottom: var(--rw-space-4);
+}
+
+.rawwire-panel-row-container>.rawwire-panel {
+    margin-bottom: 0;
+    /* Container handles margin */
+}
+
+@media (max-width: 1024px) {
+    .rawwire-panel-row-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   COMPACT PANELS
+   ========================================================================== */
+
+.rawwire-panel-compact {
+    padding: var(--rw-space-3) !important;
+}
+
+.rawwire-panel-compact .rawwire-panel-header {
+    padding-bottom: var(--rw-space-2);
+    margin-bottom: var(--rw-space-3);
+}
+
+.rawwire-panel-compact .rawwire-panel-header h3 {
+    font-size: var(--rw-text-sm);
+}
+
+.rawwire-panel-compact .rawwire-section-header {
+    font-size: var(--rw-text-xs);
+    margin-bottom: var(--rw-space-2);
+    padding-bottom: var(--rw-space-1);
+}
+
+.rawwire-panel-compact .rawwire-form-group {
+    margin-bottom: var(--rw-space-2);
+}
+
+.rawwire-panel-compact .rawwire-form-group label {
+    font-size: var(--rw-text-xs);
+    margin-bottom: var(--rw-space-1);
+}
+
+.rawwire-panel-compact input,
+.rawwire-panel-compact select,
+.rawwire-panel-compact textarea {
+    padding: var(--rw-space-1) var(--rw-space-2);
+    font-size: var(--rw-text-xs);
+}
+
+.rawwire-panel-compact .rawwire-btn {
+    padding: var(--rw-space-1) var(--rw-space-2);
+    font-size: var(--rw-text-xs);
+}
+
+.rawwire-panel-compact .rawwire-btn .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================================================
+   CRAWLOMATIC PANEL
+   ========================================================================== */
+
+.rawwire-crawlomatic-panel {
+    padding: var(--rw-space-4);
+}
+
+/* Standard layout (2-column grid) */
+.rawwire-crawlomatic-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: var(--rw-space-6);
+}
+
+@media (max-width: 1024px) {
+    .rawwire-crawlomatic-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Compact layout (single column) */
+.rawwire-panel-compact .rawwire-crawlomatic-panel {
+    padding: 0;
+}
+
+.rawwire-panel-compact .rawwire-crawlomatic-grid {
+    grid-template-columns: 1fr;
+    gap: var(--rw-space-3);
+}
+
+.rawwire-panel-compact .rawwire-rule-list {
+    max-height: 150px;
+}
+
+.rawwire-panel-compact .rawwire-rule-item {
+    padding: var(--rw-space-2);
+}
+
+.rawwire-panel-compact .rawwire-rule-meta {
+    display: none;
+    /* Hide meta in compact mode */
+}
+
+.rawwire-panel-compact .rawwire-crawlomatic-config {
+    padding: var(--rw-space-2);
+}
+
+.rawwire-panel-compact .rawwire-crawlomatic-actions {
+    margin-top: var(--rw-space-3);
+    padding-top: var(--rw-space-2);
+}
+
+.rawwire-panel-compact .rawwire-btn-group {
+    flex-direction: column;
+}
+
+.rawwire-section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-semibold);
+    color: var(--rw-fg-default);
+    margin-bottom: var(--rw-space-4);
+    padding-bottom: var(--rw-space-2);
+    border-bottom: 1px solid var(--rw-border-default);
+}
+
+.rawwire-section-header span:not(.dashicons):not(.rawwire-badge) {
+    color: var(--rw-fg-default);
+}
+
+.rawwire-section-header .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: var(--rw-brand-blue);
+}
+
+.rawwire-section-header .rawwire-badge {
+    margin-left: auto;
+    background: var(--rw-brand-blue);
+    color: white;
+    font-size: var(--rw-text-xs);
+    padding: 2px 8px;
+    border-radius: var(--rw-radius-full);
+}
+
+/* Rule List */
+.rawwire-rule-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-2);
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.rawwire-rule-item {
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-md);
+    padding: var(--rw-space-3);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-rule-item:hover {
     border-color: var(--rw-brand-blue);
+    box-shadow: var(--rw-shadow-sm);
+}
+
+.rawwire-rule-item.active {
+    border-left: 3px solid var(--rw-success);
+}
+
+.rawwire-rule-item.inactive {
+    opacity: 0.7;
+}
+
+.rawwire-rule-item.selected,
+.rawwire-rule-item:has(input:checked) {
+    border-color: var(--rw-brand-blue);
+    background: rgba(30, 58, 95, 0.05);
+}
+
+.rawwire-rule-header {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+}
+
+.rawwire-rule-header input[type="radio"] {
+    accent-color: var(--rw-brand-blue);
+}
+
+.rawwire-rule-header label {
+    flex: 1;
+    cursor: pointer;
+}
+
+.rawwire-rule-status .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.rawwire-rule-status .dashicons-yes-alt {
+    color: var(--rw-success);
+}
+
+.rawwire-rule-status .dashicons-marker {
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-rule-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rw-space-3);
+    margin-top: var(--rw-space-2);
+    padding-left: 24px;
+    font-size: var(--rw-text-xs);
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-rule-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-1);
+}
+
+.rawwire-rule-meta .dashicons {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+/* Crawlomatic Config Form */
+.rawwire-crawlomatic-config {
+    background: var(--rw-bg-muted);
+    border-radius: var(--rw-radius-md);
+    padding: var(--rw-space-4);
+}
+
+.rawwire-crawlomatic-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-4);
+}
+
+.rawwire-crawlomatic-form .rawwire-form-group label {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-medium);
+    margin-bottom: var(--rw-space-2);
+}
+
+.rawwire-crawlomatic-form .rawwire-form-group label .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-crawlomatic-form textarea,
+.rawwire-crawlomatic-form input[type="text"],
+.rawwire-crawlomatic-form input[type="number"],
+.rawwire-crawlomatic-form select {
+    width: 100%;
+    padding: var(--rw-space-2) var(--rw-space-3);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-sm);
+    font-size: var(--rw-text-sm);
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+    transition: border-color var(--rw-transition-fast);
+}
+
+.rawwire-crawlomatic-form textarea:focus,
+.rawwire-crawlomatic-form input:focus,
+.rawwire-crawlomatic-form select:focus {
+    outline: none;
+    border-color: var(--rw-brand-blue);
+    box-shadow: 0 0 0 2px rgba(30, 58, 95, 0.1);
+}
+
+.rawwire-form-hint {
+    margin-top: var(--rw-space-1);
+    font-size: var(--rw-text-xs);
+    color: var(--rw-fg-subtle);
+}
+
+.rawwire-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--rw-space-4);
+}
+
+.rawwire-form-half {
+    flex: 1;
+}
+
+.rawwire-crawlomatic-form .rawwire-form-actions {
+    display: flex;
+    gap: var(--rw-space-3);
+    padding-top: var(--rw-space-2);
+    margin-top: var(--rw-space-2);
+    border-top: 1px solid var(--rw-border-default);
+}
+
+/* Quick Actions */
+.rawwire-crawlomatic-actions {
+    margin-top: var(--rw-space-6);
+    padding-top: var(--rw-space-4);
+    border-top: 1px solid var(--rw-border-default);
+}
+
+.rawwire-btn-group {
+    display: flex;
+    gap: var(--rw-space-2);
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   POST GENERATOR PANEL
+   ========================================================================== */
+
+.rawwire-post-gen-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-3);
+}
+
+.rawwire-post-gen-config {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-3);
+}
+
+.rawwire-post-gen-actions {
+    display: flex;
+    gap: var(--rw-space-2);
+    padding-top: var(--rw-space-3);
+    margin-top: var(--rw-space-2);
+    border-top: 1px solid var(--rw-border-default);
+}
+
+/* Compact mode adjustments */
+.rawwire-panel-compact .rawwire-post-gen-panel {
+    gap: var(--rw-space-2);
+}
+
+.rawwire-panel-compact .rawwire-post-gen-config {
+    gap: var(--rw-space-2);
+}
+
+.rawwire-panel-compact .rawwire-post-gen-actions {
+    flex-direction: column;
+    padding-top: var(--rw-space-2);
+    margin-top: var(--rw-space-1);
+}
+
+/* Empty State */
+.rawwire-empty-state {
+    text-align: center;
+    padding: var(--rw-space-8) var(--rw-space-4);
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-empty-state .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+    margin-bottom: var(--rw-space-3);
+}
+
+.rawwire-empty-state p {
+    margin-bottom: var(--rw-space-4);
+}
+
+/* Alert */
+.rawwire-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--rw-space-3);
+    padding: var(--rw-space-4);
+    border-radius: var(--rw-radius-md);
+    background: var(--rw-bg-muted);
+    border: 1px solid var(--rw-border-default);
+}
+
+.rawwire-alert-warning {
+    background: var(--rw-warning-bg);
+    border-color: var(--rw-warning-border);
+}
+
+.rawwire-alert-warning .dashicons {
+    color: var(--rw-warning);
+}
+
+.rawwire-alert strong {
+    display: block;
+    margin-bottom: var(--rw-space-1);
+}
+
+.rawwire-alert p {
+    margin: 0;
+    font-size: var(--rw-text-sm);
+    color: var(--rw-fg-muted);
 }
 
 /* ==========================================================================
@@ -858,7 +1520,8 @@
 .rawwire-dashboard .rawwire-pill-gold {
     background: var(--rw-brand-gold);
     border-color: var(--rw-brand-gold);
-    color: var(--rw-fg-on-gold);
+    color: #000000;
+    font-weight: var(--rw-font-bold);
 }
 
 .rawwire-dashboard .rawwire-pill-success,
@@ -976,7 +1639,7 @@
 .rawwire-dashboard textarea:focus {
     outline: none;
     border-color: var(--rw-brand-blue);
-    box-shadow: 
+    box-shadow:
         var(--rw-shadow-inner),
         0 0 0 3px rgba(30, 58, 95, 0.15);
 }
@@ -985,7 +1648,7 @@
 .rawwire-dashboard[data-theme="dark"] select:focus,
 .rawwire-dashboard[data-theme="dark"] textarea:focus {
     border-color: var(--rw-brand-gold);
-    box-shadow: 
+    box-shadow:
         var(--rw-shadow-inner),
         0 0 0 3px rgba(244, 180, 26, 0.2);
 }
@@ -1046,15 +1709,15 @@
     transition: all var(--rw-transition-bounce);
 }
 
-.rawwire-dashboard .rawwire-toggle input:checked + .rawwire-toggle-track {
+.rawwire-dashboard .rawwire-toggle input:checked+.rawwire-toggle-track {
     background: var(--rw-brand-blue);
 }
 
-.rawwire-dashboard .rawwire-toggle input:checked + .rawwire-toggle-track .rawwire-toggle-thumb {
+.rawwire-dashboard .rawwire-toggle input:checked+.rawwire-toggle-track .rawwire-toggle-thumb {
     transform: translateX(22px);
 }
 
-.rawwire-dashboard[data-theme="dark"] .rawwire-toggle input:checked + .rawwire-toggle-track {
+.rawwire-dashboard[data-theme="dark"] .rawwire-toggle input:checked+.rawwire-toggle-track {
     background: var(--rw-brand-gold);
 }
 
@@ -1176,6 +1839,11 @@
     transition: transform var(--rw-transition-bounce);
 }
 
+.rawwire-dashboard .rawwire-modal.rawwire-modal-md {
+    max-width: 720px;
+    width: 92%;
+}
+
 .rawwire-dashboard .rawwire-modal-overlay.active .rawwire-modal {
     transform: scale(1) translateY(0);
 }
@@ -1184,7 +1852,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--rw-space-5) var(--rw-space-6);
+    padding: var(--rw-space-3) var(--rw-space-5);
     border-bottom: 1px solid var(--rw-border-default);
 }
 
@@ -1198,32 +1866,45 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--rw-bg-muted);
-    border: none;
+    background: transparent !important;
+    border: none !important;
     border-radius: var(--rw-radius-md);
     color: var(--rw-fg-muted);
+    font-size: 22px;
     cursor: pointer;
     transition: all var(--rw-transition-fast);
+    box-shadow: none !important;
+    outline: none;
 }
 
 .rawwire-dashboard .rawwire-modal-close:hover {
-    background: var(--rw-danger-bg);
-    color: var(--rw-danger);
+    background: transparent !important;
+    color: var(--rw-status-red, #ef4444);
 }
 
 .rawwire-dashboard .rawwire-modal-body {
-    padding: var(--rw-space-6);
+    padding: var(--rw-space-4) var(--rw-space-5);
     overflow-y: auto;
-    max-height: calc(90vh - 140px);
+    max-height: calc(90vh - 120px);
 }
 
 .rawwire-dashboard .rawwire-modal-footer {
     display: flex;
     justify-content: flex-end;
     gap: var(--rw-space-3);
-    padding: var(--rw-space-4) var(--rw-space-6);
+    padding: var(--rw-space-3) var(--rw-space-5);
     border-top: 1px solid var(--rw-border-default);
     background: var(--rw-bg-muted);
+}
+
+.rawwire-dashboard .rawwire-modal-footer .rawwire-btn {
+    padding: var(--rw-space-2) var(--rw-space-4);
+    min-width: 90px;
+    font-size: var(--rw-text-sm);
+    white-space: nowrap;
+    border-radius: var(--rw-radius-md);
+    cursor: pointer;
+    text-align: center;
 }
 
 /* ==========================================================================
@@ -1245,7 +1926,9 @@
 }
 
 @keyframes rawwire-spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .rawwire-dashboard .rawwire-loading {
@@ -1259,20 +1942,23 @@
 
 /* Skeleton Loading */
 .rawwire-dashboard .rawwire-skeleton {
-    background: linear-gradient(
-        90deg,
-        var(--rw-bg-muted) 0%,
-        var(--rw-bg-subtle) 50%,
-        var(--rw-bg-muted) 100%
-    );
+    background: linear-gradient(90deg,
+            var(--rw-bg-muted) 0%,
+            var(--rw-bg-subtle) 50%,
+            var(--rw-bg-muted) 100%);
     background-size: 200% 100%;
     animation: rawwire-shimmer 1.5s ease-in-out infinite;
     border-radius: var(--rw-radius-sm);
 }
 
 @keyframes rawwire-shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 /* ==========================================================================
@@ -1299,18 +1985,21 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255,255,255,0.3) 50%,
-        transparent 100%
-    );
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 100%);
     animation: rawwire-progress-shine 2s ease-in-out infinite;
 }
 
 @keyframes rawwire-progress-shine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .rawwire-dashboard .rawwire-progress-gold .rawwire-progress-bar {
@@ -1388,6 +2077,7 @@
         opacity: 0;
         transform: translateX(100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -1427,20 +2117,21 @@
 }
 
 @media (max-width: 768px) {
+
     .rawwire-dashboard .rawwire-grid-2,
     .rawwire-dashboard .rawwire-grid-3,
     .rawwire-dashboard .rawwire-grid-4 {
         grid-template-columns: 1fr;
     }
-    
+
     .rawwire-dashboard .rawwire-admin-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .rawwire-hero {
         grid-template-columns: 1fr;
     }
-    
+
     .rawwire-hero-actions {
         align-items: flex-start;
     }
@@ -1491,50 +2182,153 @@
    UTILITY CLASSES
    ========================================================================== */
 
-.rawwire-dashboard .flex { display: flex; }
-.rawwire-dashboard .flex-col { flex-direction: column; }
-.rawwire-dashboard .items-center { align-items: center; }
-.rawwire-dashboard .items-start { align-items: flex-start; }
-.rawwire-dashboard .items-end { align-items: flex-end; }
-.rawwire-dashboard .justify-center { justify-content: center; }
-.rawwire-dashboard .justify-between { justify-content: space-between; }
-.rawwire-dashboard .justify-end { justify-content: flex-end; }
-.rawwire-dashboard .gap-1 { gap: var(--rw-space-1); }
-.rawwire-dashboard .gap-2 { gap: var(--rw-space-2); }
-.rawwire-dashboard .gap-3 { gap: var(--rw-space-3); }
-.rawwire-dashboard .gap-4 { gap: var(--rw-space-4); }
-.rawwire-dashboard .gap-6 { gap: var(--rw-space-6); }
+.rawwire-dashboard .flex {
+    display: flex;
+}
 
-.rawwire-dashboard .mt-0 { margin-top: 0; }
-.rawwire-dashboard .mt-2 { margin-top: var(--rw-space-2); }
-.rawwire-dashboard .mt-4 { margin-top: var(--rw-space-4); }
-.rawwire-dashboard .mt-6 { margin-top: var(--rw-space-6); }
-.rawwire-dashboard .mb-0 { margin-bottom: 0; }
-.rawwire-dashboard .mb-2 { margin-bottom: var(--rw-space-2); }
-.rawwire-dashboard .mb-4 { margin-bottom: var(--rw-space-4); }
-.rawwire-dashboard .mb-6 { margin-bottom: var(--rw-space-6); }
+.rawwire-dashboard .flex-col {
+    flex-direction: column;
+}
 
-.rawwire-dashboard .p-2 { padding: var(--rw-space-2); }
-.rawwire-dashboard .p-4 { padding: var(--rw-space-4); }
-.rawwire-dashboard .p-6 { padding: var(--rw-space-6); }
+.rawwire-dashboard .items-center {
+    align-items: center;
+}
 
-.rawwire-dashboard .rounded { border-radius: var(--rw-radius-md); }
-.rawwire-dashboard .rounded-lg { border-radius: var(--rw-radius-lg); }
-.rawwire-dashboard .rounded-xl { border-radius: var(--rw-radius-xl); }
+.rawwire-dashboard .items-start {
+    align-items: flex-start;
+}
 
-.rawwire-dashboard .shadow { box-shadow: var(--rw-shadow-md); }
-.rawwire-dashboard .shadow-lg { box-shadow: var(--rw-shadow-lg); }
-.rawwire-dashboard .shadow-card { box-shadow: var(--rw-shadow-card); }
+.rawwire-dashboard .items-end {
+    align-items: flex-end;
+}
 
-.rawwire-dashboard .border { border: 1px solid var(--rw-border-default); }
-.rawwire-dashboard .border-t { border-top: 1px solid var(--rw-border-default); }
-.rawwire-dashboard .border-b { border-bottom: 1px solid var(--rw-border-default); }
+.rawwire-dashboard .justify-center {
+    justify-content: center;
+}
 
-.rawwire-dashboard .bg-surface { background: var(--rw-bg-surface); }
-.rawwire-dashboard .bg-muted { background: var(--rw-bg-muted); }
+.rawwire-dashboard .justify-between {
+    justify-content: space-between;
+}
 
-.rawwire-dashboard .text-center { text-align: center; }
-.rawwire-dashboard .text-right { text-align: right; }
+.rawwire-dashboard .justify-end {
+    justify-content: flex-end;
+}
+
+.rawwire-dashboard .gap-1 {
+    gap: var(--rw-space-1);
+}
+
+.rawwire-dashboard .gap-2 {
+    gap: var(--rw-space-2);
+}
+
+.rawwire-dashboard .gap-3 {
+    gap: var(--rw-space-3);
+}
+
+.rawwire-dashboard .gap-4 {
+    gap: var(--rw-space-4);
+}
+
+.rawwire-dashboard .gap-6 {
+    gap: var(--rw-space-6);
+}
+
+.rawwire-dashboard .mt-0 {
+    margin-top: 0;
+}
+
+.rawwire-dashboard .mt-2 {
+    margin-top: var(--rw-space-2);
+}
+
+.rawwire-dashboard .mt-4 {
+    margin-top: var(--rw-space-4);
+}
+
+.rawwire-dashboard .mt-6 {
+    margin-top: var(--rw-space-6);
+}
+
+.rawwire-dashboard .mb-0 {
+    margin-bottom: 0;
+}
+
+.rawwire-dashboard .mb-2 {
+    margin-bottom: var(--rw-space-2);
+}
+
+.rawwire-dashboard .mb-4 {
+    margin-bottom: var(--rw-space-4);
+}
+
+.rawwire-dashboard .mb-6 {
+    margin-bottom: var(--rw-space-6);
+}
+
+.rawwire-dashboard .p-2 {
+    padding: var(--rw-space-2);
+}
+
+.rawwire-dashboard .p-4 {
+    padding: var(--rw-space-4);
+}
+
+.rawwire-dashboard .p-6 {
+    padding: var(--rw-space-6);
+}
+
+.rawwire-dashboard .rounded {
+    border-radius: var(--rw-radius-md);
+}
+
+.rawwire-dashboard .rounded-lg {
+    border-radius: var(--rw-radius-lg);
+}
+
+.rawwire-dashboard .rounded-xl {
+    border-radius: var(--rw-radius-xl);
+}
+
+.rawwire-dashboard .shadow {
+    box-shadow: var(--rw-shadow-md);
+}
+
+.rawwire-dashboard .shadow-lg {
+    box-shadow: var(--rw-shadow-lg);
+}
+
+.rawwire-dashboard .shadow-card {
+    box-shadow: var(--rw-shadow-card);
+}
+
+.rawwire-dashboard .border {
+    border: 1px solid var(--rw-border-default);
+}
+
+.rawwire-dashboard .border-t {
+    border-top: 1px solid var(--rw-border-default);
+}
+
+.rawwire-dashboard .border-b {
+    border-bottom: 1px solid var(--rw-border-default);
+}
+
+.rawwire-dashboard .bg-surface {
+    background: var(--rw-bg-surface);
+}
+
+.rawwire-dashboard .bg-muted {
+    background: var(--rw-bg-muted);
+}
+
+.rawwire-dashboard .text-center {
+    text-align: center;
+}
+
+.rawwire-dashboard .text-right {
+    text-align: right;
+}
 
 .rawwire-dashboard .truncate {
     overflow: hidden;
@@ -1651,16 +2445,1856 @@
         background: white !important;
         color: black !important;
     }
-    
+
     .rawwire-dashboard .rawwire-card,
     .rawwire-dashboard .rawwire-panel {
         box-shadow: none !important;
         border: 1px solid #ddd !important;
     }
-    
+
     .rawwire-dashboard .rawwire-btn,
     .rawwire-dashboard .button,
     .rawwire-dashboard .rawwire-theme-toggle {
         display: none !important;
     }
+}
+
+/* ==========================================================================
+   DARK MODE OVERRIDES FOR TEMPLATE BUILDER
+   ========================================================================== */
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-templates-page {
+    background: var(--rw-bg-base);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-section,
+.rawwire-dashboard[data-theme="dark"] .rawwire-wizard-container,
+.rawwire-dashboard[data-theme="dark"] .rawwire-template-card,
+.rawwire-dashboard[data-theme="dark"] .stat-item,
+.rawwire-dashboard[data-theme="dark"] .wizard-step-content,
+.rawwire-dashboard[data-theme="dark"] .wizard-step-panel,
+.rawwire-dashboard[data-theme="dark"] .prompt-textarea-wrapper,
+.rawwire-dashboard[data-theme="dark"] .rawwire-results-summary,
+.rawwire-dashboard[data-theme="dark"] .rawwire-result-item,
+.rawwire-dashboard[data-theme="dark"] .rawwire-active-template-card,
+.rawwire-dashboard[data-theme="dark"] .feature-card {
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-nav-tabs {
+    border-bottom-color: var(--rw-border-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-template-card,
+.rawwire-dashboard[data-theme="dark"] .feature-card {
+    border-color: var(--rw-border-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-template-card:hover {
+    border-color: var(--rw-accent-gold);
+    box-shadow: 0 4px 12px rgba(244, 180, 26, 0.15);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-template-card.is-active {
+    border-color: var(--rw-accent-gold);
+    background: rgba(244, 180, 26, 0.08);
+}
+
+.rawwire-dashboard[data-theme="dark"] .template-stats {
+    border-top-color: var(--rw-border-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] .template-meta,
+.rawwire-dashboard[data-theme="dark"] .template-card-description,
+.rawwire-dashboard[data-theme="dark"] .rawwire-no-template p,
+.rawwire-dashboard[data-theme="dark"] .stat-label,
+.rawwire-dashboard[data-theme="dark"] .feature-card p {
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-dashboard[data-theme="dark"] .template-description,
+.rawwire-dashboard[data-theme="dark"] .template-info h3,
+.rawwire-dashboard[data-theme="dark"] .section-header h2,
+.rawwire-dashboard[data-theme="dark"] .rawwire-no-template h3,
+.rawwire-dashboard[data-theme="dark"] .feature-card h3 {
+    color: var(--rw-fg-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] .stat-value {
+    color: var(--rw-accent-gold);
+}
+
+/* Dark mode for widefat tables (WordPress default) */
+.rawwire-dashboard[data-theme="dark"] .widefat,
+.rawwire-dashboard[data-theme="dark"] table.widefat {
+    background: var(--rw-bg-surface);
+    border-color: var(--rw-border-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] .widefat th,
+.rawwire-dashboard[data-theme="dark"] .widefat td {
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+    border-color: var(--rw-border-muted);
+}
+
+.rawwire-dashboard[data-theme="dark"] .widefat thead th,
+.rawwire-dashboard[data-theme="dark"] .widefat tfoot th {
+    background: var(--rw-bg-muted);
+}
+
+.rawwire-dashboard[data-theme="dark"] .widefat tbody tr:hover td {
+    background: var(--rw-bg-elevated);
+}
+
+/* Dark mode for WordPress form elements */
+.rawwire-dashboard[data-theme="dark"] input[type="text"],
+.rawwire-dashboard[data-theme="dark"] input[type="number"],
+.rawwire-dashboard[data-theme="dark"] input[type="email"],
+.rawwire-dashboard[data-theme="dark"] input[type="password"],
+.rawwire-dashboard[data-theme="dark"] input[type="url"],
+.rawwire-dashboard[data-theme="dark"] textarea,
+.rawwire-dashboard[data-theme="dark"] select {
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+    border-color: var(--rw-border-default);
+}
+
+.rawwire-dashboard[data-theme="dark"] input[type="text"]:focus,
+.rawwire-dashboard[data-theme="dark"] input[type="number"]:focus,
+.rawwire-dashboard[data-theme="dark"] input[type="email"]:focus,
+.rawwire-dashboard[data-theme="dark"] input[type="password"]:focus,
+.rawwire-dashboard[data-theme="dark"] input[type="url"]:focus,
+.rawwire-dashboard[data-theme="dark"] textarea:focus,
+.rawwire-dashboard[data-theme="dark"] select:focus {
+    border-color: var(--rw-accent-gold);
+    box-shadow: 0 0 0 1px var(--rw-accent-gold);
+}
+
+.rawwire-dashboard[data-theme="dark"] select option {
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+}
+
+/* ==========================================================================
+   AUTOMATION PROGRESS PANEL
+   Hardwired dashboard component for workflow monitoring
+   ========================================================================== */
+
+.rawwire-progress-panel {
+    padding: var(--rw-space-4);
+}
+
+.rawwire-progress-selector {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-3);
+    margin-bottom: var(--rw-space-4);
+    flex-wrap: wrap;
+}
+
+.rawwire-progress-selector label {
+    font-weight: var(--rw-font-semibold);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-automation-select {
+    padding: var(--rw-space-2) var(--rw-space-3);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-md);
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+    min-width: 200px;
+}
+
+.rawwire-automation-description {
+    color: var(--rw-fg-muted);
+    font-size: var(--rw-text-sm);
+    font-style: italic;
+}
+
+/* Progress Steps Container */
+.rawwire-progress-steps {
+    margin-bottom: var(--rw-space-4);
+}
+
+.rawwire-progress-track {
+    height: 4px;
+    background: var(--rw-bg-muted);
+    border-radius: var(--rw-radius-full);
+    overflow: hidden;
+    margin-bottom: var(--rw-space-4);
+}
+
+.rawwire-progress-steps .rawwire-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--rw-accent-gold) 0%, var(--rw-primary-default) 100%);
+    border-radius: var(--rw-radius-full);
+    transition: width 0.5s ease-out;
+}
+
+.rawwire-steps-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.rawwire-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    padding: var(--rw-space-2);
+}
+
+.rawwire-step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--rw-space-2);
+    background: var(--rw-bg-muted);
+    border: 2px solid var(--rw-border-default);
+    transition: all 0.3s ease;
+}
+
+.rawwire-step-icon .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-step-label {
+    font-size: var(--rw-text-xs);
+    color: var(--rw-fg-muted);
+    text-align: center;
+    font-weight: var(--rw-font-medium);
+}
+
+/* Step States */
+.rawwire-step-pending .rawwire-step-icon {
+    background: var(--rw-bg-muted);
+    border-color: var(--rw-border-default);
+}
+
+.rawwire-step-active .rawwire-step-icon {
+    background: var(--rw-accent-gold);
+    border-color: var(--rw-accent-gold);
+    box-shadow: 0 0 0 4px rgba(244, 180, 26, 0.2);
+}
+
+.rawwire-step-active .rawwire-step-icon .dashicons {
+    color: var(--rw-primary-darker);
+}
+
+.rawwire-step-active .rawwire-step-label {
+    color: var(--rw-accent-gold);
+    font-weight: var(--rw-font-semibold);
+}
+
+.rawwire-step-complete .rawwire-step-icon {
+    background: var(--rw-status-success);
+    border-color: var(--rw-status-success);
+}
+
+.rawwire-step-complete .rawwire-step-icon .dashicons {
+    color: white;
+}
+
+.rawwire-step-complete .rawwire-step-label {
+    color: var(--rw-status-success);
+}
+
+/* Status Indicator */
+.rawwire-progress-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--rw-space-3);
+    background: var(--rw-bg-muted);
+    border-radius: var(--rw-radius-md);
+}
+
+.rawwire-status-indicator {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    font-weight: var(--rw-font-semibold);
+}
+
+.rawwire-status-indicator .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+.rawwire-status-idle .dashicons {
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-status-idle .rawwire-status-text {
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-status-running .dashicons {
+    color: var(--rw-accent-gold);
+}
+
+.rawwire-status-running .rawwire-status-text {
+    color: var(--rw-accent-gold);
+}
+
+.rawwire-status-complete .dashicons {
+    color: var(--rw-status-success);
+}
+
+.rawwire-status-complete .rawwire-status-text {
+    color: var(--rw-status-success);
+}
+
+.rawwire-status-error .dashicons {
+    color: var(--rw-status-danger);
+}
+
+.rawwire-status-error .rawwire-status-text {
+    color: var(--rw-status-danger);
+}
+
+.rawwire-status-paused .dashicons {
+    color: var(--rw-status-warning);
+}
+
+.rawwire-status-paused .rawwire-status-text {
+    color: var(--rw-status-warning);
+}
+
+.rawwire-progress-eta {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-1);
+    color: var(--rw-fg-muted);
+    font-size: var(--rw-text-sm);
+}
+
+/* Spin Animation */
+.rawwire-spin {
+    animation: rawwire-spin 1s linear infinite;
+}
+
+/* ==========================================================================
+   LOG PANEL ENHANCEMENTS
+   Tabbed interface with level filters
+   ========================================================================== */
+
+.rawwire-log-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-3);
+}
+
+.rawwire-log-tabs {
+    display: flex;
+    gap: var(--rw-space-1);
+    border-bottom: 1px solid var(--rw-border-default);
+    padding-bottom: var(--rw-space-2);
+}
+
+.rawwire-log-tab {
+    padding: var(--rw-space-2) var(--rw-space-3);
+    border: none;
+    background: transparent;
+    color: var(--rw-fg-muted);
+    cursor: pointer;
+    border-radius: var(--rw-radius-md) var(--rw-radius-md) 0 0;
+    font-weight: var(--rw-font-medium);
+    transition: all 0.2s ease;
+}
+
+.rawwire-log-tab:hover {
+    background: var(--rw-bg-muted);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-log-tab.active {
+    background: var(--rw-primary-default);
+    color: white;
+}
+
+.rawwire-log-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--rw-space-2);
+}
+
+.rawwire-log-stats {
+    display: flex;
+    gap: var(--rw-space-3);
+}
+
+.rawwire-log-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-1);
+    font-size: var(--rw-text-sm);
+    padding: var(--rw-space-1) var(--rw-space-2);
+    border-radius: var(--rw-radius-sm);
+    background: var(--rw-bg-muted);
+}
+
+.rawwire-log-stat.info {
+    color: var(--rw-primary-default);
+}
+
+.rawwire-log-stat.warning {
+    color: var(--rw-status-warning);
+}
+
+.rawwire-log-stat.error {
+    color: var(--rw-status-danger);
+}
+
+.rawwire-log-stat .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.rawwire-log-actions {
+    display: flex;
+    gap: var(--rw-space-2);
+    align-items: center;
+}
+
+.rawwire-log-filter {
+    padding: var(--rw-space-1) var(--rw-space-2);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-sm);
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+    font-size: var(--rw-text-sm);
+}
+
+.rawwire-log-refresh {
+    padding: var(--rw-space-1) var(--rw-space-2) !important;
+}
+
+.rawwire-log-entries {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-md);
+    background: var(--rw-bg-surface);
+}
+
+.rawwire-log-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--rw-space-2);
+    padding: var(--rw-space-2) var(--rw-space-3);
+    border-bottom: 1px solid var(--rw-border-muted);
+    font-size: var(--rw-text-sm);
+}
+
+.rawwire-log-entry:last-child {
+    border-bottom: none;
+}
+
+.rawwire-log-severity {
+    flex-shrink: 0;
+}
+
+.rawwire-log-severity .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.rawwire-log-info .rawwire-log-severity .dashicons {
+    color: var(--rw-primary-default);
+}
+
+.rawwire-log-warning .rawwire-log-severity .dashicons {
+    color: var(--rw-status-warning);
+}
+
+.rawwire-log-error .rawwire-log-severity .dashicons {
+    color: var(--rw-status-danger);
+}
+
+.rawwire-log-debug .rawwire-log-severity .dashicons {
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-log-time {
+    flex-shrink: 0;
+    color: var(--rw-fg-muted);
+    font-family: var(--rw-font-mono);
+    font-size: var(--rw-text-xs);
+    min-width: 140px;
+}
+
+.rawwire-log-message {
+    flex: 1;
+    word-break: break-word;
+}
+
+.rawwire-log-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--rw-space-8);
+    text-align: center;
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-log-empty .dashicons {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--rw-space-3);
+    opacity: 0.5;
+}
+
+.rawwire-log-empty small {
+    font-size: var(--rw-text-xs);
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   DASHBOARD FIXED LAYOUT
+   Three hardwired sections: stats bar, progress, activity log
+   ========================================================================== */
+
+.rawwire-layout-dashboard-fixed {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-4);
+}
+
+.rawwire-layout-dashboard-fixed .rawwire-panel {
+    width: 100%;
+}
+
+/* Ensure stats bar spans full width */
+.rawwire-layout-dashboard-fixed .rawwire-panel-status {
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-lg);
+}
+
+/* Make horizontal stats bar flex properly */
+.rawwire-stats-bar.rawwire-horizontal {
+    display: flex;
+    gap: var(--rw-space-2);
+}
+
+.rawwire-stats-bar.rawwire-horizontal .rawwire-stat-card {
+    flex: 1 1 0;
+    min-width: 100px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   BUILDER TOGGLE BAR
+   Thin bar at top to show/hide builder toolbar
+   ========================================================================== */
+
+.rawwire-builder-toggle-bar {
+    display: flex;
+    justify-content: flex-start;
+    padding: var(--rw-space-1) var(--rw-space-3);
+    background: linear-gradient(135deg, var(--rw-brand-blue-dark), var(--rw-brand-blue));
+    margin: -20px -20px var(--rw-space-2) -20px;
+}
+
+.rawwire-builder-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rw-space-1);
+    padding: var(--rw-space-1) var(--rw-space-2);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--rw-radius-sm);
+    color: white;
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-medium);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-builder-toggle:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.rawwire-builder-toggle.active {
+    background: var(--rw-brand-gold);
+    color: var(--rw-brand-blue-dark);
+    border-color: var(--rw-brand-gold);
+}
+
+.rawwire-builder-toggle .toggle-arrow {
+    transition: transform var(--rw-transition-fast);
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+
+.rawwire-builder-toggle.active .toggle-arrow {
+    transform: rotate(180deg);
+}
+
+.rawwire-builder-toggle .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================================================
+   BUILDER TOOLBAR (Sticky when open)
+   Controls: cache/reload | sidebars | add row
+   ========================================================================== */
+
+.rawwire-builder-toolbar {
+    position: sticky;
+    top: 32px;
+    z-index: var(--rw-z-sticky);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--rw-space-2) var(--rw-space-4);
+    padding: var(--rw-space-3) var(--rw-space-4);
+    background: linear-gradient(135deg, var(--rw-brand-blue), var(--rw-brand-blue-light));
+    border-radius: var(--rw-radius-md);
+    margin: 0 0 var(--rw-space-3) 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.rawwire-builder-section {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    flex-shrink: 0;
+}
+
+.rawwire-builder-section:not(:last-child) {
+    padding-right: var(--rw-space-3);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Group sections logically */
+.rawwire-builder-section.rawwire-builder-actions {
+    order: 1;
+}
+
+.rawwire-builder-section.rawwire-builder-tools {
+    order: 2;
+}
+
+.rawwire-builder-section.rawwire-sidebar-toggles {
+    order: 3;
+}
+
+.rawwire-builder-section.rawwire-row-controls {
+    order: 4;
+    margin-left: auto;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 1200px) {
+    .rawwire-builder-section.rawwire-builder-tools {
+        flex-basis: 100%;
+        order: 10;
+        padding-right: 0;
+        border-right: none;
+        padding-top: var(--rw-space-2);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        margin-top: var(--rw-space-1);
+    }
+}
+
+.rawwire-builder-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-medium);
+    margin-right: var(--rw-space-1);
+}
+
+.rawwire-builder-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rw-space-1);
+    padding: var(--rw-space-1) var(--rw-space-2);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--rw-radius-sm);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--rw-text-xs);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-builder-toggle-label:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.rawwire-builder-toggle-label input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    accent-color: var(--rw-brand-gold);
+}
+
+.rawwire-builder-toggle-label input:checked+.dashicons {
+    color: var(--rw-brand-gold);
+}
+
+.rawwire-builder-toggle-label .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.rawwire-builder-tools {
+    flex-wrap: wrap;
+    gap: var(--rw-space-1);
+}
+
+.rawwire-builder-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rw-space-1);
+    padding: var(--rw-space-1) var(--rw-space-2);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--rw-radius-sm);
+    color: white;
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-medium);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+    white-space: nowrap;
+}
+
+.rawwire-builder-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+.rawwire-builder-btn.active {
+    background: white;
+    color: var(--rw-brand-blue);
+}
+
+.rawwire-builder-btn-accent {
+    background: var(--rw-brand-gold);
+    color: #000000 !important;
+    border-color: var(--rw-brand-gold);
+    font-weight: var(--rw-font-bold);
+}
+
+.rawwire-builder-btn-accent:hover {
+    background: var(--rw-brand-gold-light);
+}
+
+.rawwire-builder-btn .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================================================
+   DEVELOPER MODE UI
+   Login modal, dev badge, logout button
+   ========================================================================== */
+
+/* Developer badge on toggle button */
+.rawwire-dev-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 6px;
+    background: var(--rw-brand-gold, #f0b429);
+    color: var(--rw-brand-blue-dark, #0b1724);
+    font-size: 9px;
+    font-weight: var(--rw-font-bold, 700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    line-height: 1.4;
+}
+
+/* Developer logout button (inline with toggle bar) */
+.rawwire-dev-logout-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: var(--rw-space-1, 4px) var(--rw-space-2, 8px);
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--rw-radius-sm, 4px);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--rw-text-xs, 11px);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast, 150ms ease);
+}
+
+.rawwire-dev-logout-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.5);
+    color: white;
+}
+
+.rawwire-dev-logout-btn .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* Developer Login Modal */
+.rawwire-modal-sm {
+    max-width: 380px;
+    width: 90%;
+}
+
+.rawwire-dev-login-desc {
+    color: var(--rw-fg-muted, #6b7280);
+    font-size: var(--rw-text-sm, 13px);
+    margin-bottom: var(--rw-space-4, 16px);
+    line-height: 1.5;
+}
+
+.rawwire-dev-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-3, 12px);
+}
+
+.rawwire-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-1, 4px);
+}
+
+.rawwire-form-field label {
+    font-size: var(--rw-text-xs, 11px);
+    font-weight: var(--rw-font-semibold, 600);
+    color: var(--rw-fg-default, #1f2937);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rawwire-form-field input[type="text"],
+.rawwire-form-field input[type="password"] {
+    padding: var(--rw-space-2, 8px) var(--rw-space-3, 12px);
+    border: 1px solid var(--rw-border-default, #e5e7eb);
+    border-radius: var(--rw-radius-sm, 4px);
+    font-size: var(--rw-text-sm, 13px);
+    background: var(--rw-bg-surface, #ffffff);
+    color: var(--rw-fg-default, #1f2937);
+    transition: border-color var(--rw-transition-fast, 150ms ease);
+}
+
+.rawwire-form-field input:focus {
+    outline: none;
+    border-color: var(--rw-brand-blue, #3b82f6);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.rawwire-dev-login-error {
+    padding: var(--rw-space-2, 8px) var(--rw-space-3, 12px);
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--rw-radius-sm, 4px);
+    color: var(--rw-color-danger, #ef4444);
+    font-size: var(--rw-text-xs, 11px);
+}
+
+.rawwire-form-actions {
+    padding-top: var(--rw-space-2, 8px);
+}
+
+.rawwire-form-actions .rawwire-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Placeholder card for dev pages without content yet */
+.rawwire-placeholder-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--rw-space-8, 32px) var(--rw-space-6, 24px);
+    background: var(--rw-bg-surface, #ffffff);
+    border: 2px dashed var(--rw-border-default, #e5e7eb);
+    border-radius: var(--rw-radius-lg, 12px);
+    gap: var(--rw-space-3, 12px);
+}
+
+.rawwire-placeholder-card h3 {
+    margin: 0;
+    color: var(--rw-fg-default, #1f2937);
+    font-size: var(--rw-text-lg, 16px);
+}
+
+.rawwire-placeholder-card p {
+    margin: 0;
+    color: var(--rw-fg-muted, #6b7280);
+    font-size: var(--rw-text-sm, 13px);
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* Legacy toggle-btn support */
+.rawwire-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    padding: var(--rw-space-2) var(--rw-space-3);
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-sm);
+    color: var(--rw-fg-default);
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-medium);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-toggle-btn:hover {
+    background: var(--rw-bg-elevated);
+    border-color: var(--rw-brand-blue);
+}
+
+.rawwire-toggle-btn.active {
+    background: var(--rw-brand-blue);
+    color: white;
+    border-color: var(--rw-brand-blue);
+}
+
+.rawwire-toggle-btn .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.rawwire-row-controls {
+    display: flex;
+    gap: var(--rw-space-2);
+}
+
+.rawwire-add-row-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    padding: var(--rw-space-2) var(--rw-space-4);
+    background: var(--rw-brand-gold);
+    border: none;
+    border-radius: var(--rw-radius-sm);
+    color: var(--rw-brand-blue-dark);
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-semibold);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-add-row-btn:hover {
+    background: var(--rw-brand-gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(244, 180, 26, 0.4);
+}
+
+.rawwire-add-row-btn .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* ==========================================================================
+   WORKFLOW PROGRESS BAR
+   Clean single-line: label/dropdown | progress track | status | run button
+   ========================================================================== */
+
+.rawwire-workflow-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-3);
+    padding: var(--rw-space-2) var(--rw-space-3);
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-md);
+    height: 44px;
+}
+
+/* Workflow Selector/Label */
+.rawwire-workflow-select {
+    padding: var(--rw-space-1) var(--rw-space-2);
+    background: var(--rw-bg-muted);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-sm);
+    font-size: var(--rw-text-xs);
+    color: var(--rw-fg-default);
+    cursor: pointer;
+    max-width: 140px;
+}
+
+.rawwire-workflow-select:hover {
+    border-color: var(--rw-brand-blue);
+}
+
+.rawwire-workflow-label {
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-semibold);
+    color: var(--rw-fg-default);
+    white-space: nowrap;
+}
+
+/* Progress Track */
+.rawwire-workflow-track {
+    flex: 1;
+    height: 8px;
+    background: var(--rw-bg-muted);
+    border-radius: var(--rw-radius-full);
+    overflow: hidden;
+    min-width: 100px;
+}
+
+.rawwire-workflow-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--rw-brand-blue), var(--rw-brand-gold));
+    border-radius: var(--rw-radius-full);
+    transition: width var(--rw-transition-base);
+}
+
+/* Status Badge */
+.rawwire-workflow-status {
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-medium);
+    padding: var(--rw-space-1) var(--rw-space-2);
+    border-radius: var(--rw-radius-sm);
+    white-space: nowrap;
+    background: var(--rw-bg-muted);
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-workflow-status.rawwire-status-running {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--rw-brand-blue);
+}
+
+.rawwire-workflow-status.rawwire-status-complete {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--rw-success);
+}
+
+.rawwire-workflow-status.rawwire-status-error {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--rw-danger);
+}
+
+/* Run/Stop Buttons */
+.rawwire-workflow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rw-space-1);
+    padding: var(--rw-space-1) var(--rw-space-2);
+    border: none;
+    border-radius: var(--rw-radius-sm);
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-semibold);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-workflow-btn .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.rawwire-workflow-run {
+    background: var(--rw-success);
+    color: white;
+}
+
+.rawwire-workflow-run:hover:not(:disabled) {
+    background: #0d9669;
+}
+
+.rawwire-workflow-run:disabled {
+    background: var(--rw-bg-subtle);
+    color: var(--rw-fg-subtle);
+    cursor: not-allowed;
+}
+
+.rawwire-workflow-stop {
+    background: var(--rw-warning);
+    color: white;
+}
+
+.rawwire-workflow-stop:hover {
+    background: #d97706;
+}
+
+/* Running animation */
+.rawwire-workflow-bar[data-status="running"] .rawwire-workflow-fill {
+    animation: progress-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* ==========================================================================
+   DASHBOARD BODY WITH SIDEBARS
+   Flexbox layout for main content area with optional sidebars
+   ========================================================================== */
+
+.rawwire-dashboard-body {
+    display: flex;
+    gap: var(--rw-space-4);
+    margin-top: var(--rw-space-4);
+    min-height: 700px;
+}
+
+.rawwire-main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ==========================================================================
+   SIDEBARS
+   Left and right sidebars for additional panels
+   ========================================================================== */
+
+.rawwire-sidebar {
+    width: 280px;
+    min-width: 280px;
+    max-width: 350px;
+    min-height: 700px;
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-lg);
+    display: flex;
+    flex-direction: column;
+    transition: all var(--rw-transition-base);
+}
+
+.rawwire-sidebar[style*="display: none"] {
+    display: none !important;
+}
+
+.rawwire-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rawwire-sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--rw-space-3) var(--rw-space-4);
+    border-bottom: 1px solid var(--rw-border-default);
+    background: var(--rw-bg-muted);
+    border-radius: var(--rw-radius-lg) var(--rw-radius-lg) 0 0;
+}
+
+.rawwire-sidebar-header h3 {
+    margin: 0;
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-semibold);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-sidebar-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: var(--rw-radius-sm);
+    color: var(--rw-fg-muted);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-sidebar-close:hover {
+    background: var(--rw-bg-subtle);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-sidebar-panels {
+    flex: 1;
+    padding: var(--rw-space-3);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-3);
+}
+
+/* Empty sidebar state */
+.rawwire-sidebar-panels:empty::after {
+    content: 'Drag panels here or use Add Row';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--rw-fg-subtle);
+    font-size: var(--rw-text-sm);
+    text-align: center;
+    padding: var(--rw-space-4);
+}
+
+/* ==========================================================================
+   ROW BUILDER
+   Infrastructure for adding dynamic panel rows
+   ========================================================================== */
+
+.rawwire-row-builder {
+    margin-top: var(--rw-space-4);
+    padding: var(--rw-space-6);
+    background: var(--rw-bg-muted);
+    border: 2px dashed var(--rw-border-default);
+    border-radius: var(--rw-radius-lg);
+    text-align: center;
+}
+
+.rawwire-row-placeholder {
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-row-placeholder .dashicons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    margin-bottom: var(--rw-space-2);
+    opacity: 0.5;
+}
+
+.rawwire-row-placeholder p {
+    margin: 0;
+    font-size: var(--rw-text-sm);
+}
+
+/* Dynamic panel rows */
+.rawwire-panel-row {
+    display: flex;
+    gap: var(--rw-space-4);
+    margin-bottom: var(--rw-space-4);
+}
+
+.rawwire-panel-row .rawwire-panel-slot {
+    flex: 1;
+    min-height: 200px;
+    background: var(--rw-bg-surface);
+    border: 2px dashed var(--rw-border-default);
+    border-radius: var(--rw-radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--rw-space-4);
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-panel-row .rawwire-panel-slot:hover {
+    border-color: var(--rw-brand-blue);
+    background: var(--rw-bg-muted);
+}
+
+.rawwire-panel-slot-empty {
+    text-align: center;
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-panel-slot-empty .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin-bottom: var(--rw-space-2);
+    opacity: 0.4;
+}
+
+.rawwire-panel-slot-empty p {
+    margin: 0;
+    font-size: var(--rw-text-xs);
+}
+
+/* ==========================================================================
+   TEMPLATE BUILDER – SLOT STATES & PICKER
+   Assigned slots, filled indicators, slot picker modal items
+   ========================================================================== */
+
+/* Save Template button (green accent) */
+.rawwire-builder-btn-success {
+    background: var(--rw-status-green, #34d399);
+    color: #000 !important;
+    border-color: var(--rw-status-green, #34d399);
+    font-weight: var(--rw-font-bold);
+}
+
+.rawwire-builder-btn-success:hover {
+    background: #2ec489;
+    transform: translateY(-1px);
+}
+
+/* Slot - clickable empty state */
+.rawwire-panel-slot.rawwire-slot-empty {
+    cursor: pointer;
+    border-style: dashed;
+}
+
+.rawwire-panel-slot.rawwire-slot-empty:hover {
+    border-color: var(--rw-brand-gold);
+    box-shadow: inset 0 0 0 1px var(--rw-brand-gold);
+}
+
+/* Slot - filled / assigned */
+.rawwire-panel-slot.rawwire-slot-filled {
+    border-style: solid;
+    border-color: var(--rw-brand-blue);
+    background: var(--rw-bg-surface);
+    cursor: default;
+}
+
+.rawwire-panel-slot-assigned {
+    width: 100%;
+    text-align: center;
+}
+
+.rawwire-slot-assigned-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--rw-space-2);
+}
+
+.rawwire-slot-assigned-header .rawwire-slot-type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: var(--rw-radius-sm);
+    font-size: var(--rw-text-xs);
+    font-weight: var(--rw-font-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.rawwire-slot-type-badge[data-type="tool"] {
+    background: rgba(30, 58, 95, 0.15);
+    color: var(--rw-brand-blue);
+    border: 1px solid rgba(30, 58, 95, 0.3);
+}
+
+.rawwire-slot-type-badge[data-type="workflow"] {
+    background: rgba(139, 92, 246, 0.15);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.rawwire-slot-type-badge[data-type="info"],
+.rawwire-slot-type-badge[data-type="info-only"] {
+    background: rgba(52, 211, 153, 0.15);
+    color: var(--rw-status-green, #34d399);
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.rawwire-slot-clear {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--rw-fg-muted);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-slot-clear:hover {
+    background: var(--rw-status-red, #ef4444);
+    color: white;
+}
+
+.rawwire-slot-assigned-name {
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-medium);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-slot-assigned-name .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    vertical-align: middle;
+    opacity: 0.6;
+}
+
+/* --- Slot Picker Modal --- */
+.rawwire-slot-picker-modal .rawwire-modal {
+    max-width: 520px;
+}
+
+.rawwire-slot-categories {
+    display: flex;
+    gap: var(--rw-space-2);
+    margin-bottom: var(--rw-space-4);
+    border-bottom: 2px solid var(--rw-border-subtle);
+    padding-bottom: var(--rw-space-2);
+}
+
+.rawwire-slot-category {
+    padding: var(--rw-space-2) var(--rw-space-3);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--rw-fg-muted);
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-medium);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+    margin-bottom: -2px;
+}
+
+.rawwire-slot-category:hover {
+    color: var(--rw-fg-default);
+}
+
+.rawwire-slot-category.active {
+    color: var(--rw-brand-blue);
+    border-bottom-color: var(--rw-brand-blue);
+}
+
+.rawwire-slot-panel-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rw-space-2);
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.rawwire-slot-panel-list[style*="display: none"] {
+    display: none !important;
+}
+
+.rawwire-slot-item {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-3);
+    padding: var(--rw-space-3);
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-md);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-slot-item:hover {
+    border-color: var(--rw-brand-blue);
+    background: var(--rw-bg-muted);
+    transform: translateX(4px);
+}
+
+.rawwire-slot-item .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--rw-fg-muted);
+    flex-shrink: 0;
+}
+
+.rawwire-slot-item:hover .dashicons {
+    color: var(--rw-brand-blue);
+}
+
+.rawwire-slot-item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.rawwire-slot-item-info strong {
+    display: block;
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-semibold);
+    color: var(--rw-fg-default);
+    margin-bottom: 2px;
+}
+
+.rawwire-slot-item-info span {
+    font-size: var(--rw-text-xs);
+    color: var(--rw-fg-muted);
+}
+
+/* --- Save Template Modal --- */
+.rawwire-save-template-modal .rawwire-modal {
+    max-width: 480px;
+}
+
+.rawwire-save-template-modal .rawwire-form-group {
+    margin-bottom: var(--rw-space-4);
+}
+
+.rawwire-save-template-modal .rawwire-form-group label {
+    display: block;
+    margin-bottom: var(--rw-space-1);
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-medium);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-save-template-modal .rawwire-form-group input,
+.rawwire-save-template-modal .rawwire-form-group textarea {
+    width: 100%;
+    padding: var(--rw-space-2) var(--rw-space-3);
+    background: var(--rw-bg-surface);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-sm);
+    color: var(--rw-fg-default);
+    font-size: var(--rw-text-sm);
+    font-family: inherit;
+}
+
+.rawwire-save-template-modal .rawwire-form-group input:focus,
+.rawwire-save-template-modal .rawwire-form-group textarea:focus {
+    outline: none;
+    border-color: var(--rw-brand-blue);
+    box-shadow: 0 0 0 2px rgba(30, 58, 95, 0.15);
+}
+
+.rawwire-save-template-modal .rawwire-form-group small {
+    display: block;
+    margin-top: var(--rw-space-1);
+    font-size: var(--rw-text-xs);
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-save-template-modal .rawwire-modal-actions {
+    display: flex;
+    gap: var(--rw-space-3);
+    justify-content: flex-end;
+    padding-top: var(--rw-space-4);
+    border-top: 1px solid var(--rw-border-subtle);
+}
+
+.rawwire-save-template-modal .rawwire-modal-actions .rawwire-btn-primary {
+    background: var(--rw-brand-blue);
+    color: white;
+    border: none;
+    padding: var(--rw-space-2) var(--rw-space-4);
+    border-radius: var(--rw-radius-sm);
+    font-weight: var(--rw-font-semibold);
+    cursor: pointer;
+}
+
+.rawwire-save-template-modal .rawwire-modal-actions .rawwire-btn-primary:hover {
+    opacity: 0.9;
+}
+
+.rawwire-save-template-modal .rawwire-modal-actions .rawwire-btn-secondary {
+    background: var(--rw-bg-surface);
+    color: var(--rw-fg-default);
+    border: 1px solid var(--rw-border-default);
+    padding: var(--rw-space-2) var(--rw-space-4);
+    border-radius: var(--rw-radius-sm);
+    cursor: pointer;
+}
+
+.rawwire-save-template-modal .rawwire-modal-actions .rawwire-btn-secondary:hover {
+    background: var(--rw-bg-muted);
+}
+
+/* Row type label */
+.rawwire-row-type-label {
+    position: absolute;
+    top: -10px;
+    left: var(--rw-space-3);
+    padding: 1px 8px;
+    background: var(--rw-bg-default);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-sm);
+    font-size: 10px;
+    font-weight: var(--rw-font-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-panel-row {
+    position: relative;
+}
+
+/* ==========================================================================
+   ROW BUILDER MODAL
+   Modal for selecting column count when adding rows
+   ========================================================================== */
+
+.rawwire-modal-md {
+    max-width: 720px;
+    width: 92%;
+}
+
+.rawwire-modal-description {
+    margin: 0 0 var(--rw-space-4);
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-row-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--rw-space-3);
+    margin-bottom: var(--rw-space-4);
+}
+
+.rawwire-row-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--rw-space-2);
+    padding: var(--rw-space-4);
+    background: var(--rw-bg-surface);
+    border: 2px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-md);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-row-option:hover {
+    border-color: var(--rw-brand-blue);
+    background: var(--rw-bg-muted);
+}
+
+.rawwire-row-option.selected {
+    border-color: var(--rw-brand-blue);
+    background: rgba(30, 58, 95, 0.1);
+}
+
+.rawwire-row-option span {
+    font-size: var(--rw-text-sm);
+    font-weight: var(--rw-font-medium);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-row-preview {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    height: 40px;
+}
+
+.rawwire-preview-col {
+    flex: 1;
+    background: var(--rw-brand-blue);
+    border-radius: var(--rw-radius-sm);
+    opacity: 0.6;
+}
+
+.rawwire-row-option:hover .rawwire-preview-col,
+.rawwire-row-option.selected .rawwire-preview-col {
+    opacity: 1;
+}
+
+.rawwire-row-custom {
+    padding-top: var(--rw-space-4);
+    border-top: 1px solid var(--rw-border-default);
+}
+
+.rawwire-row-custom label {
+    display: block;
+    margin-bottom: var(--rw-space-2);
+    font-size: var(--rw-text-sm);
+    color: var(--rw-fg-muted);
+}
+
+.rawwire-row-custom input[type="number"] {
+    width: 80px;
+    padding: var(--rw-space-2);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-sm);
+    font-size: var(--rw-text-base);
+}
+
+/* ==========================================================================
+   COLLAPSIBLE PANELS
+   Click header to expand/collapse panel content
+   ========================================================================== */
+
+.rawwire-panel.rawwire-collapsible .rawwire-panel-header {
+    cursor: pointer;
+    user-select: none;
+}
+
+.rawwire-panel.rawwire-collapsible .rawwire-panel-header::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: var(--rw-space-2);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--rw-fg-muted);
+    transition: transform var(--rw-transition-fast);
+}
+
+.rawwire-panel.rawwire-collapsible.collapsed .rawwire-panel-header::after {
+    transform: rotate(-90deg);
+}
+
+.rawwire-panel.rawwire-collapsible .rawwire-panel-body {
+    transition: all var(--rw-transition-base);
+    overflow: hidden;
+}
+
+.rawwire-panel.rawwire-collapsible.collapsed .rawwire-panel-body {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+}
+
+/* ==========================================================================
+   HERO HEADER ACTIONS
+   Container for theme toggle and other header actions
+   ========================================================================== */
+
+.rawwire-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-3);
+}
+
+.rawwire-hero-actions .rawwire-theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-2);
+    padding: var(--rw-space-2) var(--rw-space-3);
+    background: var(--rw-bg-muted);
+    border: 1px solid var(--rw-border-default);
+    border-radius: var(--rw-radius-full);
+    cursor: pointer;
+    transition: all var(--rw-transition-fast);
+}
+
+.rawwire-hero-actions .rawwire-theme-toggle:hover {
+    background: var(--rw-bg-subtle);
+}
+
+/* ==========================================================================
+   PANEL ROW ACTIONS
+   Controls for removing/reordering panel rows
+   ========================================================================== */
+
+.rawwire-row-actions {
+    position: absolute;
+    top: -12px;
+    right: var(--rw-space-2);
+    display: flex;
+    gap: var(--rw-space-1);
+    opacity: 0;
+    transition: opacity var(--rw-transition-fast);
+}
+
+.rawwire-panel-row {
+    position: relative;
+}
+
+.rawwire-panel-row:hover .rawwire-row-actions {
+    opacity: 1;
+}
+
+.rawwire-row-actions .rawwire-btn-sm {
+    padding: var(--rw-space-1) var(--rw-space-2);
+    font-size: var(--rw-text-xs);
+}
+
+.rawwire-row-actions .rawwire-btn-sm .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* ==========================================================================
+   DASHBOARD HEADER LAYOUT
+   Proper spacing and alignment for header elements
+   ========================================================================== */
+
+.rawwire-dashboard-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--rw-space-4);
+    padding: var(--rw-space-4) 0;
+}
+
+.rawwire-hero-content {
+    flex: 1;
+}
+
+.rawwire-hero-title {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-3);
+    margin: 0 0 var(--rw-space-2);
+    font-size: var(--rw-text-2xl);
+    font-weight: var(--rw-font-bold);
+    color: var(--rw-fg-default);
+}
+
+.rawwire-hero-title .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: var(--rw-brand-gold);
+}
+
+.rawwire-hero-description {
+    margin: 0;
+    color: var(--rw-fg-muted);
+    font-size: var(--rw-text-base);
+}
+
+/* ==========================================================================
+   UNIVERSAL GOLD/YELLOW BUTTON OVERRIDE
+   Ensures all gold/yellow buttons have black bold text for maximum contrast
+   ========================================================================== */
+.rawwire-dashboard [class*="btn"][style*="gold"],
+.rawwire-dashboard [class*="btn"][style*="#f4b41a"],
+.rawwire-dashboard [class*="btn"][style*="ffd54f"],
+.rawwire-dashboard .rawwire-btn-gold,
+.rawwire-dashboard .button-gold,
+.rawwire-dashboard .rawwire-btn-warning,
+.rawwire-dashboard .rawwire-builder-btn-accent,
+.rawwire-dashboard[data-theme="dark"] .rawwire-btn-primary,
+.rawwire-dashboard[data-theme="dark"] .rawwire-btn-success,
+.rawwire-dashboard[data-theme="dark"] .button-primary {
+    color: #000000 !important;
+    font-weight: 700 !important;
 }

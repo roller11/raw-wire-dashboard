@@ -1,0 +1,10 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 25
+Party: Mccarthy Building Companies
+License: 411173-B
+Permit: 25010-10000-00953
+Generated: 2026-03-05 22:53:11
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+INVESTIGATION_FAILED: All attempts to gather information via external web searches and fetches have failed due to the absence of a Brave Search API key and access restrictions on targeted sites.

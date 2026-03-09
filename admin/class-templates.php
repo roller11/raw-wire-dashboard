@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Templates Management Page
  * Comprehensive template builder with wizard, visual designer, and editor
@@ -13,17 +14,19 @@ if (!defined('ABSPATH')) {
 /**
  * RawWire Templates Page Class
  */
-class RawWire_Templates_Page {
+class RawWire_Templates_Page
+{
 
     /**
      * Render the templates page
      */
-    public function render() {
+    public function render()
+    {
         $active_tab = isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : 'overview';
         $active_template = $this->get_active_template_info();
         $available_templates = $this->get_available_templates();
-        
-        ?>
+
+?>
         <div class="wrap rawwire-dashboard rawwire-templates-page">
             <div class="rawwire-hero">
                 <div class="rawwire-hero-content">
@@ -39,23 +42,23 @@ class RawWire_Templates_Page {
 
             <!-- Tab Navigation -->
             <nav class="nav-tab-wrapper rawwire-nav-tabs">
-                <a href="?page=raw-wire-templates&tab=overview" 
-                   class="nav-tab <?php echo $active_tab === 'overview' ? 'nav-tab-active' : ''; ?>">
+                <a href="?page=rawwire-templates&tab=overview"
+                    class="nav-tab <?php echo $active_tab === 'overview' ? 'nav-tab-active' : ''; ?>">
                     <span class="dashicons dashicons-dashboard"></span>
                     Overview
                 </a>
-                <a href="?page=raw-wire-templates&tab=builder" 
-                   class="nav-tab <?php echo $active_tab === 'builder' ? 'nav-tab-active' : ''; ?>">
+                <a href="?page=rawwire-templates&tab=builder"
+                    class="nav-tab <?php echo $active_tab === 'builder' ? 'nav-tab-active' : ''; ?>">
                     <span class="dashicons dashicons-edit"></span>
                     Builder
                 </a>
-                <a href="?page=raw-wire-templates&tab=editor" 
-                   class="nav-tab <?php echo $active_tab === 'editor' ? 'nav-tab-active' : ''; ?>">
+                <a href="?page=rawwire-templates&tab=editor"
+                    class="nav-tab <?php echo $active_tab === 'editor' ? 'nav-tab-active' : ''; ?>">
                     <span class="dashicons dashicons-editor-code"></span>
                     JSON Editor
                 </a>
-                <a href="?page=raw-wire-templates&tab=import" 
-                   class="nav-tab <?php echo $active_tab === 'import' ? 'nav-tab-active' : ''; ?>">
+                <a href="?page=rawwire-templates&tab=import"
+                    class="nav-tab <?php echo $active_tab === 'import' ? 'nav-tab-active' : ''; ?>">
                     <span class="dashicons dashicons-upload"></span>
                     Import/Export
                 </a>
@@ -82,20 +85,21 @@ class RawWire_Templates_Page {
                 ?>
             </div>
         </div>
-        <?php
+    <?php
     }
 
     /**
      * Render overview tab
      */
-    protected function render_overview_tab($active_template, $available_templates) {
-        ?>
+    protected function render_overview_tab($active_template, $available_templates)
+    {
+    ?>
         <div class="rawwire-overview-tab">
-            
+
             <!-- Active Template Card -->
             <div class="rawwire-section">
                 <h2><?php _e('Active Template', 'raw-wire-dashboard'); ?></h2>
-                
+
                 <?php if ($active_template): ?>
                     <div class="rawwire-active-template-card">
                         <div class="template-header">
@@ -105,7 +109,7 @@ class RawWire_Templates_Page {
                             <div class="template-info">
                                 <h3><?php echo esc_html($active_template['meta']['name'] ?? 'Unknown'); ?></h3>
                                 <p class="template-meta">
-                                    Version <?php echo esc_html($active_template['meta']['version'] ?? '1.0.0'); ?> 
+                                    Version <?php echo esc_html($active_template['meta']['version'] ?? '1.0.0'); ?>
                                     by <?php echo esc_html($active_template['meta']['author'] ?? 'Unknown'); ?>
                                 </p>
                                 <p class="template-description">
@@ -113,17 +117,17 @@ class RawWire_Templates_Page {
                                 </p>
                             </div>
                             <div class="template-actions">
-                                <a href="?page=raw-wire-edit-template" class="button button-primary">
+                                <a href="?page=rawwire-templates&tab=builder" class="button button-primary">
                                     <span class="dashicons dashicons-edit"></span>
                                     Edit Active Template
                                 </a>
-                                <a href="?page=raw-wire-templates&tab=editor" class="button button-secondary">
+                                <a href="?page=rawwire-templates&tab=editor" class="button button-secondary">
                                     <span class="dashicons dashicons-editor-code"></span>
                                     JSON Editor
                                 </a>
                             </div>
                         </div>
-                        
+
                         <div class="template-stats">
                             <div class="stat-item">
                                 <span class="stat-label">Pages</span>
@@ -142,7 +146,7 @@ class RawWire_Templates_Page {
                                 <span class="stat-value"><?php echo count($active_template['features'] ?? []); ?></span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-label">Sources</span>
+                                <span class="stat-label">Variants</span>
                                 <span class="stat-value"><?php echo count($active_template['variants'] ?? ['default']); ?></span>
                             </div>
                             <div class="stat-item">
@@ -156,7 +160,7 @@ class RawWire_Templates_Page {
                         <span class="dashicons dashicons-warning"></span>
                         <h3><?php _e('No Template Active', 'raw-wire-dashboard'); ?></h3>
                         <p><?php _e('Create or activate a template to customize your dashboard.', 'raw-wire-dashboard'); ?></p>
-                        <a href="?page=raw-wire-templates&tab=builder" class="button button-primary button-hero">
+                        <a href="?page=rawwire-templates&tab=builder" class="button button-primary button-hero">
                             <span class="dashicons dashicons-plus-alt"></span>
                             <?php _e('Create New Template', 'raw-wire-dashboard'); ?>
                         </a>
@@ -168,7 +172,7 @@ class RawWire_Templates_Page {
             <div class="rawwire-section">
                 <div class="section-header">
                     <h2><?php _e('Available Templates', 'raw-wire-dashboard'); ?></h2>
-                    <a href="?page=raw-wire-templates&tab=builder" class="button button-primary">
+                    <a href="?page=rawwire-templates&tab=builder" class="button button-primary">
                         <span class="dashicons dashicons-plus-alt"></span>
                         Create New
                     </a>
@@ -192,16 +196,15 @@ class RawWire_Templates_Page {
                             </p>
                             <div class="template-card-footer">
                                 <?php if (!$is_active): ?>
-                                    <button type="button" class="button button-primary activate-template" 
-                                            data-template="<?php echo esc_attr($template['id']); ?>"
-                                            onclick="alert('Activate: Set rawwire_active_template to <?php echo esc_js($template['id']); ?>');">
+                                    <button type="button" class="button button-primary activate-template"
+                                        data-template="<?php echo esc_attr($template['id']); ?>">
                                         Activate
                                     </button>
                                 <?php endif; ?>
-                                <a href="?page=raw-wire-edit-template" class="button button-secondary">
+                                <a href="?page=rawwire-templates&tab=builder" class="button button-secondary">
                                     Edit in GUI
                                 </a>
-                                <a href="?page=raw-wire-templates&tab=editor" class="button button-secondary">
+                                <a href="?page=rawwire-templates&tab=editor" class="button button-secondary">
                                     Edit JSON
                                 </a>
                             </div>
@@ -247,85 +250,86 @@ class RawWire_Templates_Page {
                 </div>
             </div>
         </div>
-        <?php
+    <?php
     }
 
     /**
      * Render template builder wizard
      */
-    protected function render_builder_tab() {
-        ?>
+    protected function render_builder_tab()
+    {
+    ?>
         <div class="rawwire-builder-tab">
             <div class="rawwire-wizard-container">
-                
+
                 <!-- Progress Steps -->
                 <div class="wizard-steps">
-                    <div class="wizard-step active" data-step="1">
+                    <div class="wizard-step wizard-step-indicator active" data-step="1">
                         <span class="step-number">1</span>
                         <span class="step-label">Template Info</span>
                     </div>
-                    <div class="wizard-step" data-step="2">
+                    <div class="wizard-step wizard-step-indicator" data-step="2">
                         <span class="step-number">2</span>
                         <span class="step-label">Use Case</span>
                     </div>
-                    <div class="wizard-step" data-step="3">
+                    <div class="wizard-step wizard-step-indicator" data-step="3">
                         <span class="step-number">3</span>
                         <span class="step-label">Pages & Layout</span>
                     </div>
-                    <div class="wizard-step" data-step="4">
+                    <div class="wizard-step wizard-step-indicator" data-step="4">
                         <span class="step-number">4</span>
                         <span class="step-label">Panels</span>
                     </div>
-                    <div class="wizard-step" data-step="5">
+                    <div class="wizard-step wizard-step-indicator" data-step="5">
                         <span class="step-number">5</span>
                         <span class="step-label">Toolbox</span>
                     </div>
-                    <div class="wizard-step" data-step="6">
+                    <div class="wizard-step wizard-step-indicator" data-step="6">
                         <span class="step-number">6</span>
                         <span class="step-label">Styling</span>
                     </div>
-                    <div class="wizard-step" data-step="7">
+                    <div class="wizard-step wizard-step-indicator" data-step="7">
                         <span class="step-number">7</span>
                         <span class="step-label">Review</span>
                     </div>
                 </div>
 
                 <!-- Step 1: Template Info -->
-                <div class="wizard-content" data-step="1">
+                <div class="wizard-content wizard-step-content active" data-step="1">
                     <h2>Let's Create Your Template</h2>
                     <p class="wizard-description">Start by giving your template a name and description</p>
 
                     <div class="wizard-form">
                         <div class="form-group">
                             <label for="template-name">Template Name *</label>
-                            <input type="text" id="template-name" class="widefat" 
-                                   placeholder="e.g., News Aggregator, Content Hub, Social Monitor" required>
+                            <input type="text" id="template-name" class="widefat"
+                                placeholder="e.g., News Aggregator, Content Hub, Social Monitor" required>
                             <p class="description">A descriptive name for your template</p>
                         </div>
 
                         <div class="form-group">
                             <label for="template-id">Template ID *</label>
-                            <input type="text" id="template-id" class="widefat" 
-                                   placeholder="e.g., news-aggregator" required>
+                            <input type="text" id="template-id" class="widefat"
+                                placeholder="e.g., news-aggregator" required>
                             <p class="description">Lowercase, no spaces (auto-generated from name)</p>
                         </div>
 
                         <div class="form-group">
                             <label for="template-description">Description</label>
                             <textarea id="template-description" class="widefat" rows="3"
-                                      placeholder="Brief description of what this template does..."></textarea>
+                                placeholder="Brief description of what this template does..."></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="template-author">Author</label>
-                            <input type="text" id="template-author" class="widefat" 
-                                   value="<?php echo esc_attr(wp_get_current_user()->display_name); ?>">
+                            <input type="text" id="template-author" class="widefat"
+                                value="<?php echo esc_attr(wp_get_current_user()->display_name); ?>">
                         </div>
                     </div>
                 </div>
 
                 <!-- Step 2: Use Case -->
-                <div class="wizard-content" data-step="2" style="display:none;">
+                <div class="wizard-content wizard-step-content" data-step="2" style="display:none;">
                     <h2>What's Your Primary Use Case?</h2>
                     <p class="wizard-description">This helps us recommend the right features and layout</p>
 
@@ -417,7 +421,7 @@ class RawWire_Templates_Page {
                 </div>
 
                 <!-- Step 3: Pages & Layout -->
-                <div class="wizard-content" data-step="3" style="display:none;">
+                <div class="wizard-content wizard-step-content" data-step="3" style="display:none;">
                     <h2>Configure Your Pages</h2>
                     <p class="wizard-description">Add pages to your template. Each page can have its own layout and panels.</p>
 
@@ -484,7 +488,7 @@ class RawWire_Templates_Page {
                 </div>
 
                 <!-- Step 4: Panels -->
-                <div class="wizard-content" data-step="4" style="display:none;">
+                <div class="wizard-content wizard-step-content" data-step="4" style="display:none;">
                     <h2>Design Your Panels</h2>
                     <p class="wizard-description">Add panels to display data, controls, and custom content</p>
 
@@ -528,7 +532,7 @@ class RawWire_Templates_Page {
                 </div>
 
                 <!-- Step 5: Toolbox Configuration -->
-                <div class="wizard-content" data-step="5" style="display:none;">
+                <div class="wizard-content wizard-step-content" data-step="5" style="display:none;">
                     <h2>Configure Toolbox Features</h2>
                     <p class="wizard-description">Set up scrapers, AI generators, and publishers</p>
 
@@ -630,7 +634,7 @@ class RawWire_Templates_Page {
                 </div>
 
                 <!-- Step 6: Styling -->
-                <div class="wizard-content" data-step="6" style="display:none;">
+                <div class="wizard-content wizard-step-content" data-step="6" style="display:none;">
                     <h2>Choose Your Style</h2>
                     <p class="wizard-description">Customize colors, spacing, and create theme variants</p>
 
@@ -706,7 +710,7 @@ class RawWire_Templates_Page {
                 </div>
 
                 <!-- Step 7: Review & Generate -->
-                <div class="wizard-content" data-step="7" style="display:none;">
+                <div class="wizard-content wizard-step-content" data-step="7" style="display:none;">
                     <h2>Review Your Template</h2>
                     <p class="wizard-description">Review your configuration and generate the template</p>
 
@@ -753,11 +757,11 @@ class RawWire_Templates_Page {
 
                 <!-- Wizard Navigation -->
                 <div class="wizard-navigation">
-                    <button type="button" class="button button-secondary" id="wizard-prev" disabled>
+                    <button type="button" class="button button-secondary wizard-prev" id="wizard-prev" disabled>
                         <span class="dashicons dashicons-arrow-left-alt2"></span>
                         Previous
                     </button>
-                    <button type="button" class="button button-primary" id="wizard-next">
+                    <button type="button" class="button button-primary wizard-next" id="wizard-next">
                         Next
                         <span class="dashicons dashicons-arrow-right-alt2"></span>
                     </button>
@@ -765,28 +769,29 @@ class RawWire_Templates_Page {
 
             </div>
         </div>
-        <?php
+    <?php
     }
 
     /**
      * Render JSON editor tab
      */
-    protected function render_editor_tab($active_template) {
+    protected function render_editor_tab($active_template)
+    {
         $template_json = $active_template ? json_encode($active_template, JSON_PRETTY_PRINT) : '';
-        ?>
+    ?>
         <div class="rawwire-editor-tab">
             <div class="editor-header">
                 <h2>JSON Template Editor</h2>
                 <div class="editor-actions">
-                    <button type="button" class="button button-secondary" id="validate-json-btn">
+                    <button type="button" class="button button-secondary json-validate" id="validate-json-btn">
                         <span class="dashicons dashicons-yes-alt"></span>
                         Validate
                     </button>
-                    <button type="button" class="button button-secondary" id="format-json-btn">
+                    <button type="button" class="button button-secondary json-format" id="format-json-btn">
                         <span class="dashicons dashicons-editor-code"></span>
                         Format
                     </button>
-                    <button type="button" class="button button-primary" id="save-json-btn">
+                    <button type="button" class="button button-primary json-save" id="save-json-btn">
                         <span class="dashicons dashicons-saved"></span>
                         Save Template
                     </button>
@@ -799,14 +804,15 @@ class RawWire_Templates_Page {
 
             <div id="validation-results" class="validation-results" style="display:none;"></div>
         </div>
-        <?php
+    <?php
     }
 
     /**
      * Render import/export tab
      */
-    protected function render_import_tab() {
-        ?>
+    protected function render_import_tab()
+    {
+    ?>
         <div class="rawwire-import-tab">
             <div class="import-export-grid">
                 <!-- Import Section -->
@@ -815,7 +821,7 @@ class RawWire_Templates_Page {
                     <p>Upload a JSON template file to import</p>
 
                     <div class="file-upload-area" id="template-upload-area">
-                        <input type="file" id="template-file-input" accept=".json" style="display:none;">
+                        <input type="file" id="template-import-file" accept=".json" style="display:none;">
                         <div class="upload-placeholder">
                             <span class="dashicons dashicons-upload"></span>
                             <p>Drag and drop a JSON file here or click to browse</p>
@@ -858,7 +864,7 @@ class RawWire_Templates_Page {
                         </label>
                     </div>
 
-                    <button type="button" class="button button-primary" id="export-template-btn">
+                    <button type="button" class="button button-primary export-template-btn" id="export-template-btn">
                         <span class="dashicons dashicons-download"></span>
                         Export Template
                     </button>
@@ -868,37 +874,38 @@ class RawWire_Templates_Page {
             <!-- Template Library -->
             <div class="template-library">
                 <h2>Template Library</h2>
-                <p>Browse and install templates from the community</p>
+                <p>Community templates — coming in a future release</p>
 
                 <div class="library-grid">
-                    <div class="library-template">
+                    <div class="library-template" style="opacity: 0.5;">
                         <h3>News Aggregator Pro</h3>
                         <p>Advanced news aggregation with AI summarization</p>
                         <span class="template-badge">Popular</span>
-                        <button type="button" class="button button-secondary">Install</button>
+                        <button type="button" class="button button-secondary" disabled>Coming Soon</button>
                     </div>
-                    <div class="library-template">
+                    <div class="library-template" style="opacity: 0.5;">
                         <h3>Social Media Monitor</h3>
                         <p>Track mentions and engagement across platforms</p>
                         <span class="template-badge">New</span>
-                        <button type="button" class="button button-secondary">Install</button>
+                        <button type="button" class="button button-secondary" disabled>Coming Soon</button>
                     </div>
-                    <div class="library-template">
+                    <div class="library-template" style="opacity: 0.5;">
                         <h3>Content Factory</h3>
                         <p>Full AI content generation workflow</p>
                         <span class="template-badge">Premium</span>
-                        <button type="button" class="button button-secondary">Install</button>
+                        <button type="button" class="button button-secondary" disabled>Coming Soon</button>
                     </div>
                 </div>
             </div>
         </div>
-        <?php
+<?php
     }
 
     /**
      * Get active template info
      */
-    protected function get_active_template_info() {
+    protected function get_active_template_info()
+    {
         if (!class_exists('RawWire_Template_Engine')) {
             return null;
         }
@@ -910,9 +917,10 @@ class RawWire_Templates_Page {
     /**
      * Get available templates
      */
-    protected function get_available_templates() {
+    protected function get_available_templates()
+    {
         $templates_dir = plugin_dir_path(dirname(__FILE__)) . 'templates/';
-        
+
         if (!is_dir($templates_dir)) {
             return array();
         }

@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raw Wire Dashboard - Architecture Flowchart</title>
+    <style>
+        @page {
+            size: landscape;
+            margin: 0.5in;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8f9fa;
+            color: #1a1a2e;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        
+        .page {
+            background: white;
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+        
+        .page:last-child {
+            page-break-after: avoid;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #1a1a2e;
+            text-align: center;
+            margin-bottom: 5px;
+            border-bottom: 3px solid #4361ee;
+            padding-bottom: 15px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        h2 {
+            font-size: 20px;
+            color: #4361ee;
+            margin: 25px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid #4361ee;
+        }
+        
+        h3 {
+            font-size: 16px;
+            color: #1a1a2e;
+            margin: 15px 0 10px;
+        }
+        
+        /* =========================== */
+        /* MAIN ARCHITECTURE DIAGRAM   */
+        /* =========================== */
+        
+        .architecture-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .layer {
+            display: flex;
+            gap: 15px;
+            align-items: stretch;
+        }
+        
+        .layer-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            background: #4361ee;
+            color: white;
+            padding: 10px 8px;
+            font-weight: 600;
+            font-size: 12px;
+            border-radius: 8px 0 0 8px;
+            text-align: center;
+            min-width: 35px;
+        }
+        
+        .layer-content {
+            flex: 1;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .subsystem-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 12px 15px;
+            flex: 1;
+            min-width: 180px;
+            max-width: 250px;
+            position: relative;
+        }
+        
+        .subsystem-box.primary {
+            border-color: #4361ee;
+            background: linear-gradient(135deg, #eef1ff 0%, #dce2ff 100%);
+        }
+        
+        .subsystem-box.secondary {
+            border-color: #7209b7;
+            background: linear-gradient(135deg, #f5eeff 0%, #eddeff 100%);
+        }
+        
+        .subsystem-box.tertiary {
+            border-color: #f72585;
+            background: linear-gradient(135deg, #fff0f5 0%, #ffe0eb 100%);
+        }
+        
+        .subsystem-box.data {
+            border-color: #4cc9f0;
+            background: linear-gradient(135deg, #edfaff 0%, #d9f4ff 100%);
+        }
+        
+        .subsystem-num {
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: #4361ee;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .subsystem-box.secondary .subsystem-num { background: #7209b7; }
+        .subsystem-box.tertiary .subsystem-num { background: #f72585; }
+        .subsystem-box.data .subsystem-num { background: #4cc9f0; }
+        
+        .subsystem-title {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 6px;
+            padding-left: 15px;
+        }
+        
+        .subsystem-files {
+            font-size: 10px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .subsystem-files code {
+            background: rgba(255,255,255,0.7);
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        
+        /* =========================== */
+        /* DATAFLOW DIAGRAMS           */
+        /* =========================== */
+        
+        .flow-container {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .flow-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+        
+        .flow-node {
+            background: white;
+            border: 2px solid #4361ee;
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: 11px;
+            font-weight: 500;
+            text-align: center;
+            min-width: 100px;
+        }
+        
+        .flow-node.database {
+            border-color: #4cc9f0;
+            background: #edfaff;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .flow-node.external {
+            border-color: #f72585;
+            background: #fff0f5;
+        }
+        
+        .flow-node.service {
+            border-color: #7209b7;
+            background: #f5eeff;
+        }
+        
+        .flow-node.user {
+            border-color: #4ade80;
+            background: #f0fdf4;
+            border-radius: 50%;
+            min-width: 80px;
+            padding: 15px 10px;
+        }
+        
+        .flow-arrow {
+            color: #888;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .flow-label {
+            font-size: 9px;
+            color: #666;
+            text-align: center;
+            display: block;
+        }
+        
+        /* =========================== */
+        /* PIPELINE DIAGRAM            */
+        /* =========================== */
+        
+        .pipeline {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin: 15px 0;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+        
+        .pipeline-stage {
+            background: white;
+            border: 2px solid #4361ee;
+            border-radius: 8px;
+            padding: 10px 15px;
+            text-align: center;
+            min-width: 130px;
+        }
+        
+        .pipeline-stage .stage-num {
+            background: #4361ee;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .pipeline-stage .stage-name {
+            font-weight: 600;
+            font-size: 12px;
+            display: block;
+        }
+        
+        .pipeline-stage .stage-table {
+            font-size: 9px;
+            color: #666;
+            font-family: monospace;
+        }
+        
+        .pipeline-arrow {
+            font-size: 24px;
+            color: #4361ee;
+        }
+        
+        .pipeline-reject {
+            position: relative;
+        }
+        
+        .reject-arrow {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #f72585;
+        }
+        
+        .reject-box {
+            background: #fff0f5;
+            border: 2px solid #f72585;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        /* =========================== */
+        /* THREE CORES DIAGRAM         */
+        /* =========================== */
+        
+        .cores-diagram {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .core-box {
+            flex: 1;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .core-dashboard {
+            background: linear-gradient(180deg, #4361ee 0%, #3730a3 100%);
+            color: white;
+        }
+        
+        .core-module {
+            background: linear-gradient(180deg, #7209b7 0%, #5b0e91 100%);
+            color: white;
+        }
+        
+        .core-toolbox {
+            background: linear-gradient(180deg, #f72585 0%, #d61a6c 100%);
+            color: white;
+        }
+        
+        .core-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .core-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .core-desc {
+            font-size: 11px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+        
+        .core-files {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            font-size: 10px;
+            opacity: 0.8;
+            text-align: left;
+        }
+        
+        /* =========================== */
+        /* LEGEND                      */
+        /* =========================== */
+        
+        .legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 11px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 2px solid;
+        }
+        
+        .legend-color.primary { border-color: #4361ee; background: #eef1ff; }
+        .legend-color.secondary { border-color: #7209b7; background: #f5eeff; }
+        .legend-color.tertiary { border-color: #f72585; background: #fff0f5; }
+        .legend-color.data { border-color: #4cc9f0; background: #edfaff; }
+        
+        /* =========================== */
+        /* FILE INVENTORY TABLE        */
+        /* =========================== */
+        
+        .file-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            margin: 15px 0;
+        }
+        
+        .file-table th {
+            background: #4361ee;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .file-table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .file-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .file-table code {
+            background: #eef1ff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
+        }
+        
+        /* =========================== */
+        /* PRINT STYLES                */
+        /* =========================== */
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .page {
+                box-shadow: none;
+                border: none;
+                padding: 15px;
+                margin: 0;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+        
+        /* =========================== */
+        /* SUBSYSTEM QUICK REFERENCE   */
+        /* =========================== */
+        
+        .quick-ref {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .quick-ref-item {
+            background: #f8f9fa;
+            border-left: 4px solid #4361ee;
+            padding: 10px;
+            font-size: 10px;
+        }
+        
+        .quick-ref-item .num {
+            font-weight: bold;
+            color: #4361ee;
+        }
+        
+        .quick-ref-item .name {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .quick-ref-item .files {
+            color: #666;
+            font-family: monospace;
+        }
+        
+        /* Database table visual */
+        .db-visual {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+        
+        .db-table {
+            background: #edfaff;
+            border: 2px solid #4cc9f0;
+            border-radius: 0 0 12px 12px;
+            padding: 8px 12px;
+            font-size: 10px;
+            text-align: center;
+        }
+        
+        .db-table::before {
+            content: "📊";
+            display: block;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        
+        .db-table .table-name {
+            font-weight: 600;
+            font-family: monospace;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: OVERVIEW ==================== -->
+<div class="page">
+    <h1>🔌 Raw Wire Dashboard - Architecture Flowchart</h1>
+    <p class="subtitle">Version 1.0.30 | January 25, 2026 | 12 Subsystems | 116 Active Files</p>
+    
+    <h2>📐 Three-Core Architecture</h2>
+    
+    <div class="cores-diagram">
+        <div class="core-box core-dashboard">
+            <div class="core-icon">🏠</div>
+            <div class="core-title">DASHBOARD CORE</div>
+            <div class="core-desc">
+                Foundation layer handling WordPress integration, 
+                authentication, routing, and permissions.
+            </div>
+            <div class="core-files">
+                <strong>Key Files:</strong><br>
+                • raw-wire-dashboard.php<br>
+                • includes/bootstrap.php<br>
+                • includes/class-menu-manager.php<br>
+                • cores/dashboard-core/class-access-control.php
+            </div>
+        </div>
+        
+        <div class="core-box core-module">
+            <div class="core-icon">🎨</div>
+            <div class="core-title">MODULE CORE</div>
+            <div class="core-desc">
+                Human interface layer with panel registry, 
+                template engine, and UI rendering.
+            </div>
+            <div class="core-files">
+                <strong>Key Files:</strong><br>
+                • modules/core/module.php<br>
+                • cores/template-engine/template-engine.php<br>
+                • cores/template-engine/page-renderer.php<br>
+                • cores/template-engine/panel-renderer.php
+            </div>
+        </div>
+        
+        <div class="core-box core-toolbox">
+            <div class="core-icon">🧰</div>
+            <div class="core-title">TOOLBOX CORE</div>
+            <div class="core-desc">
+                External functionality including MCP server, 
+                AI adapters, scrapers, and workflow engine.
+            </div>
+            <div class="core-files">
+                <strong>Key Files:</strong><br>
+                • cores/toolbox-core/class-mcp-server.php<br>
+                • cores/toolbox-core/class-tool-registry.php<br>
+                • cores/toolbox-core/adapters/*<br>
+                • services/class-workflow-orchestrator.php
+            </div>
+        </div>
+    </div>
+    
+    <h2>🗂️ Subsystem Overview (12 Total)</h2>
+    
+    <div class="architecture-diagram">
+        <!-- Layer 1: Bootstrap & Core -->
+        <div class="layer">
+            <div class="layer-label">FOUNDATION</div>
+            <div class="layer-content">
+                <div class="subsystem-box primary">
+                    <span class="subsystem-num">1</span>
+                    <div class="subsystem-title">Bootstrap & Lifecycle</div>
+                    <div class="subsystem-files">
+                        <code>raw-wire-dashboard.php</code><br>
+                        <code>includes/bootstrap.php</code><br>
+                        <code>includes/class-admin.php</code>
+                    </div>
+                </div>
+                <div class="subsystem-box primary">
+                    <span class="subsystem-num">2</span>
+                    <div class="subsystem-title">Menu & Navigation</div>
+                    <div class="subsystem-files">
+                        <code>includes/class-menu-manager.php</code><br>
+                        Single source of truth for all menus
+                    </div>
+                </div>
+                <div class="subsystem-box primary">
+                    <span class="subsystem-num">3</span>
+                    <div class="subsystem-title">Config Authority & Access</div>
+                    <div class="subsystem-files">
+                        <code>includes/class-config-authority.php</code><br>
+                        <code>cores/.../class-access-control.php</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Layer 2: UI & Rendering -->
+        <div class="layer">
+            <div class="layer-label">UI LAYER</div>
+            <div class="layer-content">
+                <div class="subsystem-box secondary">
+                    <span class="subsystem-num">4</span>
+                    <div class="subsystem-title">Template Engine</div>
+                    <div class="subsystem-files">
+                        <code>cores/template-engine/*.php</code><br>
+                        9 PHP files + 6 JSON templates
+                    </div>
+                </div>
+                <div class="subsystem-box secondary">
+                    <span class="subsystem-num">5</span>
+                    <div class="subsystem-title">Module System</div>
+                    <div class="subsystem-files">
+                        <code>modules/core/module.php</code><br>
+                        <code>cores/module-core/module-core.php</code>
+                    </div>
+                </div>
+                <div class="subsystem-box secondary">
+                    <span class="subsystem-num">6</span>
+                    <div class="subsystem-title">Admin UI & AJAX</div>
+                    <div class="subsystem-files">
+                        <code>admin/*.php</code> (5 files)<br>
+                        <code>assets/js/*.js</code> (2 files)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Layer 3: API & Services -->
+        <div class="layer">
+            <div class="layer-label">SERVICES</div>
+            <div class="layer-content">
+                <div class="subsystem-box tertiary">
+                    <span class="subsystem-num">7</span>
+                    <div class="subsystem-title">REST API Layer</div>
+                    <div class="subsystem-files">
+                        <code>rest-api.php</code><br>
+                        ~1600 lines, all endpoints
+                    </div>
+                </div>
+                <div class="subsystem-box tertiary">
+                    <span class="subsystem-num">8</span>
+                    <div class="subsystem-title">Toolbox Core & MCP</div>
+                    <div class="subsystem-files">
+                        <code>cores/toolbox-core/*.php</code><br>
+                        33 MCP tools, adapters
+                    </div>
+                </div>
+                <div class="subsystem-box tertiary">
+                    <span class="subsystem-num">9</span>
+                    <div class="subsystem-title">Scraper & Sources</div>
+                    <div class="subsystem-files">
+                        <code>services/class-scraper-service.php</code><br>
+                        5 scraper adapters
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Layer 4: Data & AI -->
+        <div class="layer">
+            <div class="layer-label">DATA/AI</div>
+            <div class="layer-content">
+                <div class="subsystem-box data">
+                    <span class="subsystem-num">10</span>
+                    <div class="subsystem-title">Workflow Pipeline</div>
+                    <div class="subsystem-files">
+                        <code>services/class-workflow-orchestrator.php</code><br>
+                        6-table pipeline
+                    </div>
+                </div>
+                <div class="subsystem-box data">
+                    <span class="subsystem-num">11</span>
+                    <div class="subsystem-title">AI Integration & Chat</div>
+                    <div class="subsystem-files">
+                        <code>includes/class-ai-content-analyzer.php</code><br>
+                        <code>cores/.../class-dashboard-chat-panel.php</code>
+                    </div>
+                </div>
+                <div class="subsystem-box data">
+                    <span class="subsystem-num">12</span>
+                    <div class="subsystem-title">Supporting Systems</div>
+                    <div class="subsystem-files">
+                        <code>tests/*.php</code> (13 files)<br>
+                        <code>scripts/*.php</code> (13 files)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="legend">
+        <div class="legend-item"><div class="legend-color primary"></div> Foundation (1-3)</div>
+        <div class="legend-item"><div class="legend-color secondary"></div> UI Layer (4-6)</div>
+        <div class="legend-item"><div class="legend-color tertiary"></div> Services (7-9)</div>
+        <div class="legend-item"><div class="legend-color data"></div> Data/AI (10-12)</div>
+    </div>
+</div>
+
+<!-- ==================== PAGE 2: CONTENT PIPELINE ==================== -->
+<div class="page">
+    <h1>📊 Content Pipeline - 6-Stage Workflow</h1>
+    <p class="subtitle">Data flows from scraping through publishing with approval gates</p>
+    
+    <h2>🔄 Pipeline Stages</h2>
+    
+    <div class="pipeline">
+        <div class="pipeline-stage pipeline-reject">
+            <div class="stage-num">1</div>
+            <span class="stage-name">SCRAPE</span>
+            <span class="stage-table">wp_rawwire_candidates</span>
+            <div class="reject-arrow">↓</div>
+        </div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-stage pipeline-reject">
+            <div class="stage-num">2</div>
+            <span class="stage-name">SCORE</span>
+            <span class="stage-table">wp_rawwire_approvals</span>
+            <div class="reject-arrow">↓</div>
+        </div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-stage pipeline-reject">
+            <div class="stage-num">3</div>
+            <span class="stage-name">APPROVE</span>
+            <span class="stage-table">wp_rawwire_content</span>
+            <div class="reject-arrow">↓</div>
+        </div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-stage pipeline-reject">
+            <div class="stage-num">4</div>
+            <span class="stage-name">GENERATE</span>
+            <span class="stage-table">wp_rawwire_releases</span>
+            <div class="reject-arrow">↓</div>
+        </div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-stage">
+            <div class="stage-num">5</div>
+            <span class="stage-name">PUBLISH</span>
+            <span class="stage-table">wp_rawwire_published</span>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin: 20px 0;">
+        <div class="reject-box" style="display: inline-block;">
+            ❌ <strong>wp_rawwire_archives</strong><br>
+            <small>Rejected items from any stage</small>
+        </div>
+    </div>
+    
+    <h2>📥 Stage 1: Scraping Flow</h2>
+    <div class="flow-container">
+        <div class="flow-row">
+            <div class="flow-node user">👤<br>Admin</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Scraper Settings Panel</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">REST API /scraper/run</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">Scraper Service</div>
+        </div>
+        <div class="flow-row" style="margin-left: 400px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="flex-direction: row-reverse; justify-content: flex-end;">
+            <div class="flow-node database">candidates table</div>
+            <span class="flow-arrow">←</span>
+            <div class="flow-node">Storage Service</div>
+            <span class="flow-arrow">←</span>
+            <div class="flow-node service">Scraper Adapter<br><small>(native/ai/api/github)</small></div>
+        </div>
+    </div>
+    
+    <h2>⚖️ Stage 2-3: Scoring & Approval Flow</h2>
+    <div class="flow-container">
+        <div class="flow-row">
+            <div class="flow-node database">candidates</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">Workflow Orchestrator</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">Scorer Adapter<br><small>(AI/Keyword)</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node database">approvals</div>
+        </div>
+        <div class="flow-row" style="margin-left: 350px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="margin-left: 200px;">
+            <div class="flow-node user">👤<br>Human Review</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Approve/Reject</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node database">content</div>
+        </div>
+    </div>
+    
+    <h2>🤖 Stage 4-5: Generation & Publishing Flow</h2>
+    <div class="flow-container">
+        <div class="flow-row">
+            <div class="flow-node database">content</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">Workflow Orchestrator</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">AI Adapter</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node external">AI Provider<br><small>(Anthropic/OpenAI/Ollama)</small></div>
+        </div>
+        <div class="flow-row" style="margin-left: 500px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="flex-direction: row-reverse; justify-content: flex-end;">
+            <div class="flow-node external">Platform<br><small>(WP/Discord/Twitter)</small></div>
+            <span class="flow-arrow">←</span>
+            <div class="flow-node service">Poster Adapter</div>
+            <span class="flow-arrow">←</span>
+            <div class="flow-node database">releases</div>
+        </div>
+        <div class="flow-row" style="margin-left: 200px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="margin-left: 200px;">
+            <div class="flow-node database">published</div>
+            <span class="flow-label">✅ Complete</span>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== PAGE 3: OTHER DATAFLOWS ==================== -->
+<div class="page">
+    <h1>🔀 Additional Dataflows</h1>
+    <p class="subtitle">Configuration, AI Chat, and Template Rendering</p>
+    
+    <h2>🔐 Configuration Management Flow</h2>
+    <div class="flow-container">
+        <div class="flow-row">
+            <div class="flow-node user">👤<br>Admin</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Settings UI</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">Config Authority<br><small>sign_config_change()</small></div>
+        </div>
+        <div class="flow-row" style="margin-left: 300px;">
+            <span class="flow-arrow">↓</span>
+            <span class="flow-label" style="margin-left: 10px;">HMAC-SHA256 Signed Payload</span>
+        </div>
+        <div class="flow-row" style="margin-left: 200px;">
+            <div class="flow-node service">verify_signed_change()</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">apply_signed_change()</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node database">wp_options</div>
+        </div>
+        <div class="flow-row" style="margin-left: 450px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="margin-left: 400px;">
+            <div class="flow-node">Audit Log Entry</div>
+            <span class="flow-label">📝 Logged</span>
+        </div>
+    </div>
+    
+    <h2>💬 AI Chat Interaction Flow</h2>
+    <div class="flow-container">
+        <div class="flow-row">
+            <div class="flow-node user">👤<br>User</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Chat Panel UI<br><small>chat-panel.js</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">REST API<br><small>/ai/chat</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">Chatbot Context<br><small>Build context</small></div>
+        </div>
+        <div class="flow-row" style="margin-left: 500px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="flex-direction: row-reverse; justify-content: flex-end;">
+            <div class="flow-node external">AI Provider<br><small>(Anthropic/OpenAI/Ollama)</small></div>
+            <span class="flow-arrow">←</span>
+            <div class="flow-node service">AI Adapter<br><small>Route to model</small></div>
+        </div>
+        <div class="flow-row" style="margin-left: 200px;">
+            <span class="flow-arrow">↓</span>
+            <span class="flow-label" style="margin-left: 10px;">Function calls?</span>
+        </div>
+        <div class="flow-row" style="margin-left: 100px;">
+            <div class="flow-node service">MCP Server<br><small>33 tools</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Execute Tool</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Tool Result</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">AI Memory<br><small>Save conversation</small></div>
+        </div>
+        <div class="flow-row" style="margin-left: 450px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="margin-left: 350px;">
+            <div class="flow-node">Response to User</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node user">👤<br>User</div>
+        </div>
+    </div>
+    
+    <h2>🎨 Template Rendering Flow</h2>
+    <div class="flow-container">
+        <div class="flow-row">
+            <div class="flow-node">WordPress Init</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">Template Engine<br><small>load_active_template()</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">JSON Template<br><small>templates/*.json</small></div>
+        </div>
+        <div class="flow-row" style="margin-left: 300px;">
+            <span class="flow-arrow">↓</span>
+            <span class="flow-label" style="margin-left: 10px;">Validate schema</span>
+        </div>
+        <div class="flow-row" style="margin-left: 200px;">
+            <div class="flow-node service">Config Authority<br><small>check_template_authorization()</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">page-renderer.php</div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node service">panel-renderer.php</div>
+        </div>
+        <div class="flow-row" style="margin-left: 450px;">
+            <span class="flow-arrow">↓</span>
+        </div>
+        <div class="flow-row" style="margin-left: 350px;">
+            <div class="flow-node service">data-facade.php<br><small>Fetch data</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">Control Registry<br><small>Render controls</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">HTML Output</div>
+        </div>
+    </div>
+    
+    <h2>🗄️ Database Tables</h2>
+    <div class="db-visual">
+        <div class="db-table">
+            <span class="table-name">wp_rawwire_candidates</span><br>
+            Stage 1: Scraped data
+        </div>
+        <div class="db-table">
+            <span class="table-name">wp_rawwire_approvals</span><br>
+            Stage 2: AI scored
+        </div>
+        <div class="db-table">
+            <span class="table-name">wp_rawwire_content</span><br>
+            Stage 3: Human approved
+        </div>
+        <div class="db-table">
+            <span class="table-name">wp_rawwire_releases</span><br>
+            Stage 4: Generated
+        </div>
+        <div class="db-table">
+            <span class="table-name">wp_rawwire_published</span><br>
+            Stage 5: Finished
+        </div>
+        <div class="db-table" style="border-color: #f72585; background: #fff0f5;">
+            <span class="table-name">wp_rawwire_archives</span><br>
+            Rejected items
+        </div>
+    </div>
+</div>
+
+<!-- ==================== PAGE 4: FILE INVENTORY ==================== -->
+<div class="page">
+    <h1>📁 File Inventory by Subsystem</h1>
+    <p class="subtitle">Complete accounting of all 116 active files</p>
+    
+    <div class="quick-ref">
+        <div class="quick-ref-item">
+            <span class="num">#1</span> <span class="name">Bootstrap</span>
+            <span class="files">5 files: raw-wire-dashboard.php, bootstrap.php, class-admin.php, uninstall.php, vendor/autoload.php</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#2</span> <span class="name">Menu & Nav</span>
+            <span class="files">1 file: class-menu-manager.php</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#3</span> <span class="name">Config Authority</span>
+            <span class="files">2 files: class-config-authority.php, class-access-control.php</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#4</span> <span class="name">Template Engine</span>
+            <span class="files">9 PHP + 6 JSON + 3 CSS files</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#5</span> <span class="name">Module System</span>
+            <span class="files">4 files: module-core.php, module.php, interface-module.php, sample/module.php</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#6</span> <span class="name">Admin UI</span>
+            <span class="files">5 PHP + 4 JS + 3 CSS files</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#7</span> <span class="name">REST API</span>
+            <span class="files">1 file: rest-api.php (~1600 lines)</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#8</span> <span class="name">Toolbox & MCP</span>
+            <span class="files">37 PHP + 2 JS + 1 CSS files</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#9</span> <span class="name">Scraper</span>
+            <span class="files">3 PHP + 1 JS + 1 CSS files</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#10</span> <span class="name">Workflow Pipeline</span>
+            <span class="files">1 file: class-workflow-orchestrator.php</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#11</span> <span class="name">AI Integration</span>
+            <span class="files">5 PHP + 2 JS + 1 CSS files</span>
+        </div>
+        <div class="quick-ref-item">
+            <span class="num">#12</span> <span class="name">Supporting</span>
+            <span class="files">23 PHP files (tests + scripts)</span>
+        </div>
+    </div>
+    
+    <h2>📊 File Count Summary</h2>
+    
+    <table class="file-table">
+        <tr>
+            <th>Category</th>
+            <th>Count</th>
+            <th>Key Files</th>
+        </tr>
+        <tr>
+            <td>PHP Files</td>
+            <td><strong>89</strong></td>
+            <td><code>raw-wire-dashboard.php</code>, <code>rest-api.php</code>, <code>class-mcp-server.php</code></td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td><strong>8</strong></td>
+            <td><code>dashboard.js</code>, <code>template-system.js</code>, <code>chat-panel.js</code></td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td><strong>10</strong></td>
+            <td><code>dashboard.css</code>, <code>rawwire-design-system.css</code></td>
+        </tr>
+        <tr>
+            <td>JSON Templates</td>
+            <td><strong>6</strong></td>
+            <td><code>default.template.json</code>, <code>news-aggregator.template.json</code></td>
+        </tr>
+        <tr>
+            <td>Documentation</td>
+            <td><strong>3</strong></td>
+            <td><code>CLAUDE.md</code>, <code>docs/SUBSYSTEM_AUDIT.md</code></td>
+        </tr>
+        <tr>
+            <td style="background: #4361ee; color: white;"><strong>TOTAL</strong></td>
+            <td style="background: #4361ee; color: white;"><strong>116</strong></td>
+            <td style="background: #4361ee; color: white;">Active files (excludes vendor/, _archive/)</td>
+        </tr>
+    </table>
+    
+    <h2>🛠️ MCP Server Tools (33 Total)</h2>
+    
+    <table class="file-table">
+        <tr>
+            <th>Category</th>
+            <th>Tools</th>
+            <th>Count</th>
+        </tr>
+        <tr>
+            <td>Scraper Tools</td>
+            <td>list_sources, run, add_source, remove_source, get_status, preview</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Workflow Tools</td>
+            <td>list, trigger, create, get_status, stop, schedule, get_history</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Content Tools</td>
+            <td>list, get, approve, reject, score, generate</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>AI Tools</td>
+            <td>query, summarize, sentiment, chat</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Config Tools</td>
+            <td>get_settings, update_settings, get_info</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>WordPress Tools</td>
+            <td>system_info, plugins, error_log, database, health_check, cron, options</td>
+            <td>7</td>
+        </tr>
+    </table>
+    
+    <h2>🔑 Authorization Tiers</h2>
+    
+    <table class="file-table">
+        <tr>
+            <th>Tier</th>
+            <th>Level</th>
+            <th>Features</th>
+        </tr>
+        <tr>
+            <td style="background: #f0f0f0;">FREE</td>
+            <td>0</td>
+            <td>Dashboard, Templates, Settings</td>
+        </tr>
+        <tr>
+            <td style="background: #e3f2fd;">BASIC</td>
+            <td>1</td>
+            <td>+ Tools, Workflows, AI Settings</td>
+        </tr>
+        <tr>
+            <td style="background: #e8f5e9;">PRO</td>
+            <td>2</td>
+            <td>+ AI Scraper, Workflow DB, Custom Panels/Tools</td>
+        </tr>
+        <tr>
+            <td style="background: #fff3e0;">ENTERPRISE</td>
+            <td>3</td>
+            <td>+ Multi-site, White Label, API Access</td>
+        </tr>
+        <tr>
+            <td style="background: #fce4ec;">DEVELOPER</td>
+            <td>4</td>
+            <td>ALL features + Debug Mode</td>
+        </tr>
+    </table>
+    
+    <footer>
+        <p><strong>Raw Wire Dashboard v1.0.30</strong> | Generated January 25, 2026</p>
+        <p>Full documentation: <code>docs/SUBSYSTEM_AUDIT.md</code> | AI Reference: <code>CLAUDE.md</code></p>
+    </footer>
+</div>
+
+</body>
+</html>

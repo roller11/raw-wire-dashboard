@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Panel Renderer - Renders template panels dynamically
  * Path: cores/template-engine/panel-renderer.php
@@ -12,7 +13,8 @@
  */
 
 if (!class_exists('RawWire_Panel_Renderer')) {
-    class RawWire_Panel_Renderer {
+    class RawWire_Panel_Renderer
+    {
 
         /**
          * Registered custom panel renderers
@@ -26,7 +28,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
          * @param array $context Additional context data
          * @return string HTML output
          */
-        public static function render($panel, $context = array()) {
+        public static function render($panel, $context = array())
+        {
             if (!is_array($panel) || !isset($panel['type'])) {
                 return '';
             }
@@ -45,14 +48,33 @@ if (!class_exists('RawWire_Panel_Renderer')) {
             }
 
             ob_start();
-            ?>
-            <div class="<?php echo esc_attr(implode(' ', $css_classes)); ?>" 
-                 data-panel="<?php echo esc_attr($panel_id); ?>"
-                 data-panel-type="<?php echo esc_attr($type); ?>"
-                 <?php if ($css_style): ?>style="<?php echo esc_attr(trim($css_style)); ?>"<?php endif; ?>>
-                
+
+            // Progress panels render as a thin bar without wrapper
+            if ($type === 'progress') {
+                self::render_progress_panel($panel, $context);
+                return ob_get_clean();
+            }
+
+            // Row panels render child panels in a grid
+            if ($type === 'row') {
+                self::render_row_panel($panel, $context);
+                return ob_get_clean();
+            }
+
+            // Check for compact mode
+            $compact = isset($panel['compact']) && $panel['compact'];
+            $panel_classes = $css_classes;
+            if ($compact) {
+                $panel_classes[] = 'rawwire-panel-compact';
+            }
+?>
+            <div class="<?php echo esc_attr(implode(' ', $panel_classes)); ?>"
+                data-panel="<?php echo esc_attr($panel_id); ?>"
+                data-panel-type="<?php echo esc_attr($type); ?>"
+                <?php if ($css_style): ?>style="<?php echo esc_attr(trim($css_style)); ?>" <?php endif; ?>>
+
                 <?php self::render_panel_header($panel); ?>
-                
+
                 <div class="rawwire-panel-body">
                     <?php
                     switch ($type) {
@@ -84,18 +106,48 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     ?>
                 </div>
             </div>
-            <?php
+        <?php
             return ob_get_clean();
+        }
+
+        /**
+         * Render ROW panel (side-by-side child panels)
+         */
+        protected static function render_row_panel($panel, $context)
+        {
+            $child_panels = $panel['panels'] ?? array();
+            $css_style = '';
+
+            if (isset($panel['css'])) {
+                foreach ($panel['css'] as $prop => $value) {
+                    $css_style .= self::camel_to_kebab($prop) . ': ' . esc_attr($value) . '; ';
+                }
+            }
+        ?>
+            <div class="rawwire-panel-row-container"
+                data-panel="<?php echo esc_attr($panel['id'] ?? ''); ?>"
+                style="<?php echo esc_attr(trim($css_style)); ?>">
+                <?php
+                foreach ($child_panels as $child_panel_id) {
+                    $child_config = RawWire_Template_Engine::get_panel($child_panel_id);
+                    if ($child_config) {
+                        echo self::render($child_config, $context);
+                    }
+                }
+                ?>
+            </div>
+        <?php
         }
 
         /**
          * Render panel header
          */
-        protected static function render_panel_header($panel) {
+        protected static function render_panel_header($panel)
+        {
             $title = $panel['title'] ?? '';
             $icon = $panel['icon'] ?? '';
             $refresh = isset($panel['refreshInterval']) && $panel['refreshInterval'] > 0;
-            ?>
+        ?>
             <div class="rawwire-panel-header">
                 <h3>
                     <?php if ($icon): ?>
@@ -109,26 +161,68 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     </span>
                 <?php endif; ?>
             </div>
-            <?php
+        <?php
         }
 
         /**
          * Render STATUS panel (metrics, statistics)
+         * 
+         * Metrics can come from:
+         * 1. Panel config (template JSON) - static metrics
+         * 2. Tool source via toolSource: "active" - dynamic from active tool
+         * 3. Specific tool via toolSource: "lead_generator" 
          */
-        protected static function render_status_panel($panel, $context) {
+        protected static function render_status_panel($panel, $context)
+        {
             $metrics = $panel['metrics'] ?? array();
             $actions = $panel['actions'] ?? array();
             $layout = $panel['layout'] ?? 'grid-4col';
             $is_horizontal = ($layout === 'horizontal');
-            ?>
-            <div class="rawwire-stats-bar <?php echo $is_horizontal ? 'rawwire-horizontal' : 'rawwire-grid rawwire-' . esc_attr($layout); ?>">
+            $tool_source = $panel['toolSource'] ?? '';
+            $panel_id = $panel['id'] ?? 'stats_panel';
+
+            // If tool source specified, pull metrics from that tool
+            $active_tool_id = '';
+            if ($tool_source && function_exists('rawwire_tools') && rawwire_tools()) {
+                if ($tool_source === 'active') {
+                    // Get active tool from transient or first enabled tool with stats
+                    $active_tool_id = get_transient('rawwire_active_dashboard_tool') ?: '';
+                    if (empty($active_tool_id)) {
+                        $all_stats = rawwire_tools()->get_all_enabled_stats();
+                        if (!empty($all_stats)) {
+                            $active_tool_id = array_key_first($all_stats);
+                        }
+                    }
+                } else {
+                    $active_tool_id = $tool_source;
+                }
+
+                // If we have an active tool, use its metrics
+                if ($active_tool_id) {
+                    $tool_stats = rawwire_tools()->get_tool_stats($active_tool_id);
+                    if (!empty($tool_stats)) {
+                        $metrics = $tool_stats;
+                    }
+                }
+            }
+        ?>
+            <div class="rawwire-stats-bar <?php echo $is_horizontal ? 'rawwire-horizontal' : 'rawwire-grid rawwire-' . esc_attr($layout); ?>"
+                data-stats-panel="<?php echo esc_attr($panel_id); ?>"
+                data-active-tool="<?php echo esc_attr($active_tool_id); ?>">
                 <?php foreach ($metrics as $metric): ?>
                     <?php
                     $value = self::resolve_data_binding($metric['source'] ?? '', $context);
                     $highlight = $metric['highlight'] ?? '';
-                    $highlight_class = $highlight ? 'rawwire-highlight-' . $highlight : '';
+                    $workflow = $metric['workflow'] ?? '';
+                    $color = $metric['color'] ?? '';
+
+                    $classes = array('rawwire-stat-card');
+                    if ($highlight) $classes[] = 'rawwire-highlight-' . $highlight;
+                    if ($workflow) $classes[] = 'rawwire-workflow-' . $workflow;
+
+                    $style_attr = $color ? 'style="--card-accent: ' . esc_attr($color) . ';"' : '';
                     ?>
-                    <div class="rawwire-stat-card <?php echo esc_attr($highlight_class); ?>">
+                    <div class="<?php echo esc_attr(implode(' ', $classes)); ?>" data-metric-id="<?php echo esc_attr($metric['id'] ?? ''); ?>" <?php echo $style_attr; ?>>
                         <?php if (isset($metric['icon'])): ?>
                             <span class="dashicons <?php echo esc_attr($metric['icon']); ?>"></span>
                         <?php endif; ?>
@@ -138,7 +232,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         <p><?php echo esc_html($metric['label'] ?? ''); ?></p>
                     </div>
                 <?php endforeach; ?>
-                
+
                 <?php if (!empty($actions)): ?>
                     <div class="rawwire-stats-actions">
                         <?php foreach ($actions as $action): ?>
@@ -146,10 +240,10 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                             $style = $action['style'] ?? 'secondary';
                             $confirm = isset($action['confirm']) ? 'data-confirm="' . esc_attr($action['confirm']) . '"' : '';
                             ?>
-                            <button type="button" 
-                                    class="rawwire-btn rawwire-btn-<?php echo esc_attr($style); ?>"
-                                    data-action="<?php echo esc_attr($action['action'] ?? ''); ?>"
-                                    <?php echo $confirm; ?>>
+                            <button type="button"
+                                class="rawwire-btn rawwire-btn-<?php echo esc_attr($style); ?>"
+                                data-action="<?php echo esc_attr($action['action'] ?? ''); ?>"
+                                <?php echo $confirm; ?>>
                                 <?php if (isset($action['icon'])): ?>
                                     <span class="dashicons <?php echo esc_attr($action['icon']); ?>"></span>
                                 <?php endif; ?>
@@ -159,13 +253,14 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     </div>
                 <?php endif; ?>
             </div>
-            <?php
+        <?php
         }
 
         /**
          * Render CONTROL panel (buttons, toggles, inputs)
          */
-        protected static function render_control_panel($panel, $context) {
+        protected static function render_control_panel($panel, $context)
+        {
             $controls = $panel['controls'] ?? array();
             $data_source = $panel['dataSource'] ?? '';
             $items = array();
@@ -173,7 +268,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
             if ($data_source) {
                 $items = self::resolve_data_binding($data_source, $context);
             }
-            ?>
+        ?>
             <div class="rawwire-controls">
                 <?php foreach ($controls as $control): ?>
                     <?php self::render_control($control, $context); ?>
@@ -195,7 +290,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Render a single control element
          */
-        protected static function render_control($control, $context) {
+        protected static function render_control($control, $context)
+        {
             $type = $control['type'] ?? 'button';
             $id = $control['id'] ?? 'control-' . uniqid();
             $label = $control['label'] ?? '';
@@ -206,36 +302,36 @@ if (!class_exists('RawWire_Panel_Renderer')) {
 
             switch ($type) {
                 case 'button':
-                    ?>
-                    <button type="button" 
-                            class="rawwire-btn rawwire-btn-<?php echo esc_attr($style); ?>"
-                            data-control="<?php echo esc_attr($id); ?>"
-                            data-action="<?php echo esc_attr($action); ?>"
-                            <?php if ($confirm): ?>data-confirm="<?php echo esc_attr($confirm); ?>"<?php endif; ?>>
+            ?>
+                    <button type="button"
+                        class="rawwire-btn rawwire-btn-<?php echo esc_attr($style); ?>"
+                        data-control="<?php echo esc_attr($id); ?>"
+                        data-action="<?php echo esc_attr($action); ?>"
+                        <?php if ($confirm): ?>data-confirm="<?php echo esc_attr($confirm); ?>" <?php endif; ?>>
                         <?php if ($icon): ?>
                             <span class="dashicons <?php echo esc_attr($icon); ?>"></span>
                         <?php endif; ?>
                         <?php echo esc_html($label); ?>
                     </button>
-                    <?php
+                <?php
                     break;
 
                 case 'toggle':
                     $binding = $control['binding'] ?? '';
                     $value = self::resolve_data_binding($binding, $context);
                     $checked = $value || ($control['default'] ?? false);
-                    ?>
+                ?>
                     <label class="rawwire-toggle">
-                        <input type="checkbox" 
-                               data-control="<?php echo esc_attr($id); ?>"
-                               data-binding="<?php echo esc_attr($binding); ?>"
-                               <?php checked($checked); ?>>
+                        <input type="checkbox"
+                            data-control="<?php echo esc_attr($id); ?>"
+                            data-binding="<?php echo esc_attr($binding); ?>"
+                            <?php checked($checked); ?>>
                         <span><?php echo esc_html($label); ?></span>
                     </label>
                     <?php if (isset($control['description'])): ?>
                         <p class="rawwire-form-description"><?php echo esc_html($control['description']); ?></p>
                     <?php endif; ?>
-                    <?php
+                <?php
                     break;
 
                 case 'number':
@@ -244,17 +340,17 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     $value = $value !== null ? $value : ($control['default'] ?? 0);
                     $min = $control['min'] ?? 0;
                     $max = $control['max'] ?? 100;
-                    ?>
+                ?>
                     <div class="rawwire-form-group">
                         <label><?php echo esc_html($label); ?></label>
-                        <input type="number" 
-                               data-control="<?php echo esc_attr($id); ?>"
-                               data-binding="<?php echo esc_attr($binding); ?>"
-                               value="<?php echo esc_attr($value); ?>"
-                               min="<?php echo esc_attr($min); ?>"
-                               max="<?php echo esc_attr($max); ?>">
+                        <input type="number"
+                            data-control="<?php echo esc_attr($id); ?>"
+                            data-binding="<?php echo esc_attr($binding); ?>"
+                            value="<?php echo esc_attr($value); ?>"
+                            min="<?php echo esc_attr($min); ?>"
+                            max="<?php echo esc_attr($max); ?>">
                     </div>
-                    <?php
+                <?php
                     break;
 
                 case 'select':
@@ -271,14 +367,14 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                             esc_attr($show_if['value'] ?? '')
                         );
                     }
-                    ?>
+                ?>
                     <div class="rawwire-form-group" <?php echo $visibility_attr; ?>>
                         <label><?php echo esc_html($label); ?></label>
                         <select data-control="<?php echo esc_attr($id); ?>"
-                                name="<?php echo esc_attr($binding); ?>"
-                                data-binding="<?php echo esc_attr($binding); ?>">
+                            name="<?php echo esc_attr($binding); ?>"
+                            data-binding="<?php echo esc_attr($binding); ?>">
                             <?php foreach ($options as $opt): ?>
-                                <?php 
+                                <?php
                                 // Handle both {value, label} objects and simple strings
                                 if (is_array($opt)) {
                                     $opt_value = $opt['value'] ?? '';
@@ -288,14 +384,14 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                                     $opt_label = $opt;
                                 }
                                 ?>
-                                <option value="<?php echo esc_attr($opt_value); ?>" 
-                                        <?php selected($value, $opt_value); ?>>
+                                <option value="<?php echo esc_attr($opt_value); ?>"
+                                    <?php selected($value, $opt_value); ?>>
                                     <?php echo esc_html($opt_label); ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    <?php
+                <?php
                     break;
 
                 case 'slider':
@@ -306,24 +402,24 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     $max = $control['max'] ?? 100;
                     $step = $control['step'] ?? 1;
                     $show_value = $control['showValue'] ?? false;
-                    ?>
+                ?>
                     <div class="rawwire-form-group rawwire-slider-group">
                         <label><?php echo esc_html($label); ?>
                             <?php if ($show_value): ?>
                                 <span class="rawwire-slider-value"><?php echo esc_html($value); ?></span>
                             <?php endif; ?>
                         </label>
-                        <input type="range" 
-                               data-control="<?php echo esc_attr($id); ?>"
-                               name="<?php echo esc_attr($binding); ?>"
-                               data-binding="<?php echo esc_attr($binding); ?>"
-                               value="<?php echo esc_attr($value); ?>"
-                               min="<?php echo esc_attr($min); ?>"
-                               max="<?php echo esc_attr($max); ?>"
-                               step="<?php echo esc_attr($step); ?>"
-                               class="rawwire-slider">
+                        <input type="range"
+                            data-control="<?php echo esc_attr($id); ?>"
+                            name="<?php echo esc_attr($binding); ?>"
+                            data-binding="<?php echo esc_attr($binding); ?>"
+                            value="<?php echo esc_attr($value); ?>"
+                            min="<?php echo esc_attr($min); ?>"
+                            max="<?php echo esc_attr($max); ?>"
+                            step="<?php echo esc_attr($step); ?>"
+                            class="rawwire-slider">
                     </div>
-                    <?php
+                <?php
                     break;
 
                 case 'text':
@@ -343,17 +439,17 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         // Start hidden by default if conditional
                         $visibility_style = 'style="display: none;"';
                     }
-                    ?>
+                ?>
                     <div class="rawwire-form-group" <?php echo $visibility_attr; ?> <?php echo $visibility_style; ?>>
                         <label><?php echo esc_html($label); ?></label>
-                        <input type="text" 
-                               data-control="<?php echo esc_attr($id); ?>"
-                               name="<?php echo esc_attr($binding); ?>"
-                               data-binding="<?php echo esc_attr($binding); ?>"
-                               value="<?php echo esc_attr($value); ?>"
-                               placeholder="<?php echo esc_attr($placeholder); ?>">
+                        <input type="text"
+                            data-control="<?php echo esc_attr($id); ?>"
+                            name="<?php echo esc_attr($binding); ?>"
+                            data-binding="<?php echo esc_attr($binding); ?>"
+                            value="<?php echo esc_attr($value); ?>"
+                            placeholder="<?php echo esc_attr($placeholder); ?>">
                     </div>
-                    <?php
+            <?php
                     break;
             }
         }
@@ -361,7 +457,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Render DATA panel (tables, lists, cards)
          */
-        protected static function render_data_panel($panel, $context) {
+        protected static function render_data_panel($panel, $context)
+        {
             $layout = $panel['layout'] ?? 'table';
             $data_source = $panel['dataSource'] ?? '';
             $items = self::resolve_data_binding($data_source, $context);
@@ -393,7 +490,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Render data as table
          */
-        protected static function render_data_table($panel, $items) {
+        protected static function render_data_table($panel, $items)
+        {
             $columns = $panel['columns'] ?? array();
             $item_actions = $panel['itemActions'] ?? array();
             ?>
@@ -409,7 +507,14 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item): ?>
-                        <tr data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>">
+                        <?php
+                        $row_classes = array();
+                        if (isset($item['enabled'])) {
+                            $row_classes[] = $item['enabled'] ? 'enabled' : 'disabled';
+                        }
+                        $row_class = !empty($row_classes) ? ' class="' . esc_attr(implode(' ', $row_classes)) . '"' : '';
+                        ?>
+                        <tr data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>" <?php echo $row_class; ?>>
                             <?php foreach ($columns as $col): ?>
                                 <td>
                                     <?php
@@ -429,18 +534,19 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     <?php endforeach; ?>
                 </tbody>
             </table>
-            <?php
+        <?php
         }
 
         /**
          * Render data as cards
          */
-        protected static function render_data_cards($panel, $items) {
+        protected static function render_data_cards($panel, $items)
+        {
             $template = $panel['cardTemplate'] ?? array();
             $bulk_actions = $panel['bulkActions'] ?? array();
             $sort_options = $panel['sortOptions'] ?? array();
             $filter_options = $panel['filterOptions'] ?? array();
-            ?>
+        ?>
             <?php if (!empty($sort_options) || !empty($filter_options)): ?>
                 <div class="rawwire-card-toolbar">
                     <?php if (!empty($sort_options)): ?>
@@ -455,10 +561,10 @@ if (!class_exists('RawWire_Panel_Renderer')) {
 
                     <?php if (!empty($filter_options)): ?>
                         <?php foreach ($filter_options as $filter): ?>
-                            <select class="rawwire-filter-select" 
-                                    data-field="<?php echo esc_attr($filter['field']); ?>">
+                            <select class="rawwire-filter-select"
+                                data-field="<?php echo esc_attr($filter['field']); ?>">
                                 <option value=""><?php echo esc_html($filter['label']); ?>: All</option>
-                                <?php 
+                                <?php
                                 $options = $filter['options'] ?? array();
                                 if (is_string($options) && strpos($options, 'template:') === 0) {
                                     // Resolve from template
@@ -480,7 +586,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         <div class="rawwire-bulk-actions">
                             <?php foreach ($bulk_actions as $action): ?>
                                 <button type="button" class="rawwire-btn rawwire-btn-secondary"
-                                        data-bulk-action="<?php echo esc_attr($action); ?>">
+                                    data-bulk-action="<?php echo esc_attr($action); ?>">
                                     <?php echo esc_html(ucwords(str_replace('_', ' ', $action))); ?>
                                 </button>
                             <?php endforeach; ?>
@@ -523,7 +629,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                                     <span class="rawwire-expand-text">Show More</span>
                                 </button>
                                 <div class="rawwire-card-expanded" style="display: none;">
-                                    <?php 
+                                    <?php
                                     if (isset($template['expandedContent'])) {
                                         echo wp_kses_post(self::interpolate_template($template['expandedContent'], $item));
                                     }
@@ -542,10 +648,10 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                                     foreach ($page_actions as $action_id => $action):
                                         $btn_style = $action['style'] ?? 'secondary';
                                     ?>
-                                        <button type="button" 
-                                                class="rawwire-btn rawwire-btn-<?php echo esc_attr($btn_style); ?>"
-                                                data-action="<?php echo esc_attr($action['action'] ?? $action_id); ?>"
-                                                data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>">
+                                        <button type="button"
+                                            class="rawwire-btn rawwire-btn-<?php echo esc_attr($btn_style); ?>"
+                                            data-action="<?php echo esc_attr($action['action'] ?? $action_id); ?>"
+                                            data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>">
                                             <?php if (isset($action['icon'])): ?>
                                                 <span class="dashicons <?php echo esc_attr($action['icon']); ?>"></span>
                                             <?php endif; ?>
@@ -558,14 +664,15 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     </div>
                 <?php endforeach; ?>
             </div>
-            <?php
+        <?php
         }
 
         /**
          * Render data as list
          */
-        protected static function render_data_list($panel, $items) {
-            ?>
+        protected static function render_data_list($panel, $items)
+        {
+        ?>
             <ul class="rawwire-list">
                 <?php foreach ($items as $item): ?>
                     <li data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>">
@@ -579,20 +686,21 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Render SETTINGS panel (forms)
          */
-        protected static function render_settings_panel($panel, $context) {
+        protected static function render_settings_panel($panel, $context)
+        {
             $sections = $panel['sections'] ?? array();
             $fields = $panel['fields'] ?? array();
             $binding = $panel['binding'] ?? '';
 
             if (!empty($sections)) {
                 // Render tabbed sections
-                ?>
+            ?>
                 <div class="rawwire-settings-tabs">
                     <div class="rawwire-tabs-nav">
                         <?php foreach ($sections as $i => $section): ?>
-                            <button type="button" 
-                                    class="rawwire-tab-btn <?php echo $i === 0 ? 'active' : ''; ?>"
-                                    data-tab="<?php echo esc_attr($section['id']); ?>">
+                            <button type="button"
+                                class="rawwire-tab-btn <?php echo $i === 0 ? 'active' : ''; ?>"
+                                data-tab="<?php echo esc_attr($section['id']); ?>">
                                 <?php echo esc_html($section['title']); ?>
                             </button>
                         <?php endforeach; ?>
@@ -600,7 +708,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     <div class="rawwire-tabs-content">
                         <?php foreach ($sections as $i => $section): ?>
                             <div class="rawwire-tab-panel <?php echo $i === 0 ? 'active' : ''; ?>"
-                                 data-tab-content="<?php echo esc_attr($section['id']); ?>">
+                                data-tab-content="<?php echo esc_attr($section['id']); ?>">
                                 <?php
                                 // Render toolkit config form if binding is toolbox
                                 if (isset($section['binding']) && strpos($section['binding'], 'toolbox:') === 0) {
@@ -612,7 +720,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <?php
+            <?php
             } elseif (!empty($fields)) {
                 // Render flat form
                 self::render_settings_form($fields, $binding, $context);
@@ -622,7 +730,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Render settings form fields
          */
-        protected static function render_settings_form($fields, $binding, $context) {
+        protected static function render_settings_form($fields, $binding, $context)
+        {
             ?>
             <form class="rawwire-settings-form" data-binding="<?php echo esc_attr($binding); ?>">
                 <?php foreach ($fields as $field): ?>
@@ -638,44 +747,44 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         <?php
                         switch ($field['type'] ?? 'text') {
                             case 'select':
-                                ?>
+                        ?>
                                 <select name="<?php echo esc_attr($field['key']); ?>"
-                                        id="<?php echo esc_attr($field['key']); ?>">
+                                    id="<?php echo esc_attr($field['key']); ?>">
                                     <?php foreach ($field['options'] as $opt): ?>
-                                        <option value="<?php echo esc_attr($opt); ?>" 
-                                                <?php selected($value, $opt); ?>>
+                                        <option value="<?php echo esc_attr($opt); ?>"
+                                            <?php selected($value, $opt); ?>>
                                             <?php echo esc_html(ucfirst($opt)); ?>
                                         </option>
                                     <?php endforeach; ?>
                                 </select>
-                                <?php
+                            <?php
                                 break;
 
                             case 'checkbox':
-                                ?>
-                                <input type="checkbox" 
-                                       name="<?php echo esc_attr($field['key']); ?>"
-                                       id="<?php echo esc_attr($field['key']); ?>"
-                                       value="1"
-                                       <?php checked($value); ?>>
-                                <?php
+                            ?>
+                                <input type="checkbox"
+                                    name="<?php echo esc_attr($field['key']); ?>"
+                                    id="<?php echo esc_attr($field['key']); ?>"
+                                    value="1"
+                                    <?php checked($value); ?>>
+                            <?php
                                 break;
 
                             case 'textarea':
-                                ?>
+                            ?>
                                 <textarea name="<?php echo esc_attr($field['key']); ?>"
-                                          id="<?php echo esc_attr($field['key']); ?>"
-                                          rows="4"><?php echo esc_textarea($value); ?></textarea>
-                                <?php
+                                    id="<?php echo esc_attr($field['key']); ?>"
+                                    rows="4"><?php echo esc_textarea($value); ?></textarea>
+                            <?php
                                 break;
 
                             default:
-                                ?>
+                            ?>
                                 <input type="<?php echo esc_attr($field['type'] ?? 'text'); ?>"
-                                       name="<?php echo esc_attr($field['key']); ?>"
-                                       id="<?php echo esc_attr($field['key']); ?>"
-                                       value="<?php echo esc_attr($value); ?>">
-                                <?php
+                                    name="<?php echo esc_attr($field['key']); ?>"
+                                    id="<?php echo esc_attr($field['key']); ?>"
+                                    value="<?php echo esc_attr($value); ?>">
+                        <?php
                                 break;
                         }
                         ?>
@@ -688,13 +797,14 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     <button type="submit" class="rawwire-btn rawwire-btn-primary">Save Settings</button>
                 </div>
             </form>
-            <?php
+        <?php
         }
 
         /**
          * Render toolbox configuration section
          */
-        protected static function render_toolbox_section($type, $context) {
+        protected static function render_toolbox_section($type, $context)
+        {
             if (!class_exists('RawWire_Toolbox_Core')) {
                 echo '<p>Toolbox Core not available</p>';
                 return;
@@ -711,7 +821,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
             $adapters = $category['adapters'] ?? array();
             $saved_config = get_option('rawwire_toolkit_' . $type, array());
             $selected_adapter = $saved_config['adapter_id'] ?? '';
-            ?>
+        ?>
             <div class="rawwire-toolbox-config" data-category="<?php echo esc_attr($type); ?>">
                 <p class="rawwire-form-description"><?php echo esc_html($category['description'] ?? ''); ?></p>
 
@@ -723,31 +833,50 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         $is_selected = $adapter_id === $selected_adapter;
                         ?>
                         <div class="rawwire-adapter-option <?php echo $is_selected ? 'selected' : ''; ?> <?php echo esc_attr($tier_class); ?>"
-                             data-adapter="<?php echo esc_attr($adapter_id); ?>">
+                            data-adapter="<?php echo esc_attr($adapter_id); ?>">
                             <div class="rawwire-adapter-header">
                                 <strong><?php echo esc_html($adapter['label'] ?? $adapter_id); ?></strong>
                                 <span class="rawwire-tier-badge"><?php echo esc_html(ucfirst($tier)); ?></span>
                             </div>
                             <p><?php echo esc_html($adapter['description'] ?? ''); ?></p>
                             <button type="button" class="rawwire-btn rawwire-btn-secondary rawwire-configure-adapter"
-                                    data-adapter="<?php echo esc_attr($adapter_id); ?>">
+                                data-adapter="<?php echo esc_attr($adapter_id); ?>">
                                 <?php echo $is_selected ? 'Configure' : 'Select'; ?>
                             </button>
                         </div>
                     <?php endforeach; ?>
                 </div>
             </div>
-            <?php
+        <?php
         }
 
         /**
          * Render CUSTOM panel (script execution or PHP callback)
          */
-        protected static function render_custom_panel($panel, $context) {
+        protected static function render_custom_panel($panel, $context)
+        {
+            // Check if there's a customRenderer reference in the panel config
+            if (isset($panel['customRenderer']) && !empty($panel['customRenderer'])) {
+                $renderer_id = $panel['customRenderer'];
+
+                // Check registered custom renderers
+                if (isset(self::$custom_renderers[$renderer_id])) {
+                    call_user_func(self::$custom_renderers[$renderer_id], $panel, $context);
+                    return;
+                }
+
+                // Check for built-in renderers
+                $builtin_method = 'render_' . $renderer_id;
+                if (method_exists(__CLASS__, $builtin_method)) {
+                    self::$builtin_method($panel, $context);
+                    return;
+                }
+            }
+
             // Check if there's a PHP renderer callback
             if (isset($panel['renderer']) && !empty($panel['renderer'])) {
                 $renderer = $panel['renderer'];
-                
+
                 // Support "Class::method" string format
                 if (is_string($renderer) && strpos($renderer, '::') !== false) {
                     list($class, $method) = explode('::', $renderer);
@@ -756,18 +885,18 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         return;
                     }
                 }
-                
+
                 // Support callable arrays and closures
                 if (is_callable($renderer)) {
                     call_user_func($renderer, $panel, $context);
                     return;
                 }
             }
-            
+
             // Fall back to script-based rendering
             $script = $panel['script'] ?? array();
             $script_type = $script['type'] ?? 'inline';
-            ?>
+        ?>
             <div class="rawwire-custom-panel" data-script-type="<?php echo esc_attr($script_type); ?>">
                 <?php if (isset($panel['description'])): ?>
                     <p class="rawwire-form-description"><?php echo esc_html($panel['description']); ?></p>
@@ -785,32 +914,49 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     <!-- Custom content rendered by script -->
                 </div>
             </div>
-            <?php
+        <?php
         }
 
         /**
          * Render LOG panel (activity and error logs from debug.log)
          */
-        protected static function render_log_panel($panel, $context) {
+        protected static function render_log_panel($panel, $context)
+        {
             $max_entries = $panel['maxEntries'] ?? 50;
             $refresh_interval = $panel['refreshInterval'] ?? 30;
             $panel_id = $panel['id'] ?? 'activity_log';
-            
-            // Read logs from debug.log
+
+            // Read logs from debug.log (tail-based to avoid OOM on large logs)
             $logs = array();
             if (defined('WP_DEBUG_LOG') && WP_DEBUG_LOG) {
                 $log_file = WP_CONTENT_DIR . '/debug.log';
                 if (file_exists($log_file)) {
-                    $lines = file($log_file);
+                    // Read only the last 256KB instead of the whole file
+                    $tail_bytes = 256 * 1024;
+                    $fsize = filesize($log_file);
+                    $fh = fopen($log_file, 'r');
+                    if ($fh) {
+                        if ($fsize > $tail_bytes) {
+                            fseek($fh, -$tail_bytes, SEEK_END);
+                            fgets($fh); // discard partial first line
+                        }
+                        $tail_content = fread($fh, $tail_bytes);
+                        fclose($fh);
+                    } else {
+                        $tail_content = '';
+                    }
+                    $all_lines = $tail_content ? explode("\n", $tail_content) : array();
                     $count = 0;
-                    
-                    foreach (array_reverse($lines) as $line) {
+
+                    foreach (array_reverse($all_lines) as $line) {
                         // Filter for rawwire-related entries
-                        if (stripos($line, 'rawwire') !== false || 
-                            stripos($line, 'raw-wire') !== false || 
+                        if (
+                            stripos($line, 'rawwire') !== false ||
+                            stripos($line, 'raw-wire') !== false ||
                             stripos($line, 'raw_wire') !== false ||
-                            stripos($line, 'workflow') !== false) {
-                            
+                            stripos($line, 'workflow') !== false
+                        ) {
+
                             $severity = 'info';
                             if (stripos($line, 'error') !== false || stripos($line, 'fatal') !== false) {
                                 $severity = 'error';
@@ -819,7 +965,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                             } elseif (stripos($line, 'debug') !== false) {
                                 $severity = 'debug';
                             }
-                            
+
                             // Extract timestamp if present
                             $timestamp = '';
                             if (preg_match('/^\[([^\]]+)\]/', $line, $matches)) {
@@ -828,20 +974,20 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                             } else {
                                 $message = trim($line);
                             }
-                            
+
                             $logs[] = array(
                                 'timestamp' => $timestamp,
                                 'message' => $message,
                                 'severity' => $severity
                             );
-                            
+
                             $count++;
                             if ($count >= $max_entries) break;
                         }
                     }
                 }
             }
-            
+
             // Count by severity
             $counts = array('info' => 0, 'warning' => 0, 'error' => 0, 'debug' => 0);
             foreach ($logs as $log) {
@@ -849,7 +995,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     $counts[$log['severity']]++;
                 }
             }
-            ?>
+        ?>
             <div class="rawwire-log-panel" data-panel-id="<?php echo esc_attr($panel_id); ?>" data-refresh="<?php echo intval($refresh_interval); ?>">
                 <div class="rawwire-log-controls">
                     <div class="rawwire-log-stats">
@@ -879,7 +1025,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="rawwire-log-entries">
                     <?php if (empty($logs)): ?>
                         <div class="rawwire-log-empty">
@@ -891,11 +1037,9 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                         <?php foreach ($logs as $log): ?>
                             <div class="rawwire-log-entry rawwire-log-<?php echo esc_attr($log['severity']); ?>">
                                 <span class="rawwire-log-severity">
-                                    <span class="dashicons dashicons-<?php 
-                                        echo $log['severity'] === 'error' ? 'no' : 
-                                            ($log['severity'] === 'warning' ? 'warning' : 
-                                            ($log['severity'] === 'debug' ? 'admin-tools' : 'info')); 
-                                    ?>"></span>
+                                    <span class="dashicons dashicons-<?php
+                                                                        echo $log['severity'] === 'error' ? 'no' : ($log['severity'] === 'warning' ? 'warning' : ($log['severity'] === 'debug' ? 'admin-tools' : 'info'));
+                                                                        ?>"></span>
                                 </span>
                                 <?php if ($log['timestamp']): ?>
                                     <span class="rawwire-log-time"><?php echo esc_html($log['timestamp']); ?></span>
@@ -906,31 +1050,446 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                     <?php endif; ?>
                 </div>
             </div>
-            <?php
+        <?php
+        }
+
+        /**
+         * Render CRAWLOMATIC panel - Crawlomatic integration and rule management
+         */
+        protected static function render_crawlomatic_panel($panel, $context)
+        {
+            $config = $panel['config'] ?? array();
+            $show_rule_selector = $config['showRuleSelector'] ?? true;
+            $show_quick_run = $config['showQuickRun'] ?? true;
+            $show_fields = $config['showFields'] ?? array('urls', 'selector_type', 'selector', 'max_items', 'schedule');
+
+            // Check if Crawlomatic is available
+            $crawlomatic_active = function_exists('crawlomatic_run_rule') || class_exists('CrawlomaticMultipageScraper');
+
+            // Get rules from our REST endpoint or directly
+            $rules = array();
+            if ($crawlomatic_active) {
+                $rules_option = get_option('crawlomatic_rules_list', array());
+                if (is_array($rules_option)) {
+                    foreach ($rules_option as $index => $rule) {
+                        if (!empty($rule[0])) { // Has URLs
+                            $rules[] = array(
+                                'index' => $index,
+                                'name' => $rule[33] ?? ('Rule ' . ($index + 1)), // unique_id or generic name
+                                'urls' => is_array($rule[0]) ? implode("\n", $rule[0]) : $rule[0],
+                                'schedule' => $rule[1] ?? 'manual',
+                                'active' => !empty($rule[2]),
+                                'selector_type' => $rule[20] ?? 'css',
+                                'selector' => $rule[21] ?? '',
+                                'max_items' => $rule[14] ?? 50,
+                            );
+                        }
+                    }
+                }
+            }
+        ?>
+            <div class="rawwire-crawlomatic-panel" data-panel-id="<?php echo esc_attr($panel['id'] ?? 'crawlomatic_config'); ?>">
+                <?php if (!$crawlomatic_active): ?>
+                    <div class="rawwire-alert rawwire-alert-warning">
+                        <span class="dashicons dashicons-warning"></span>
+                        <div>
+                            <strong>Crawlomatic Not Found</strong>
+                            <p>Please install and activate the Crawlomatic plugin to use scraping features.</p>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="rawwire-crawlomatic-grid">
+                        <!-- Rule Selector Column -->
+                        <div class="rawwire-crawlomatic-rules">
+                            <div class="rawwire-section-header">
+                                <span class="dashicons dashicons-list-view"></span>
+                                <span>Scraping Rules</span>
+                                <span class="rawwire-badge"><?php echo count($rules); ?></span>
+                            </div>
+
+                            <?php if (empty($rules)): ?>
+                                <div class="rawwire-empty-state">
+                                    <span class="dashicons dashicons-admin-site-alt3"></span>
+                                    <p>No scraping rules configured</p>
+                                    <a href="<?php echo esc_url(admin_url('admin.php?page=crawlomatic_items_panel')); ?>" class="rawwire-btn rawwire-btn-secondary rawwire-btn-sm">
+                                        <span class="dashicons dashicons-plus-alt"></span>
+                                        Add Rule in Crawlomatic
+                                    </a>
+                                </div>
+                            <?php else: ?>
+                                <div class="rawwire-rule-list">
+                                    <?php foreach ($rules as $rule): ?>
+                                        <div class="rawwire-rule-item <?php echo $rule['active'] ? 'active' : 'inactive'; ?>"
+                                            data-rule-index="<?php echo esc_attr($rule['index']); ?>">
+                                            <div class="rawwire-rule-header">
+                                                <input type="radio" name="crawlomatic_rule"
+                                                    id="rule_<?php echo esc_attr($rule['index']); ?>"
+                                                    value="<?php echo esc_attr($rule['index']); ?>">
+                                                <label for="rule_<?php echo esc_attr($rule['index']); ?>">
+                                                    <strong><?php echo esc_html($rule['name']); ?></strong>
+                                                </label>
+                                                <span class="rawwire-rule-status">
+                                                    <?php if ($rule['active']): ?>
+                                                        <span class="dashicons dashicons-yes-alt" title="Active"></span>
+                                                    <?php else: ?>
+                                                        <span class="dashicons dashicons-marker" title="Inactive"></span>
+                                                    <?php endif; ?>
+                                                </span>
+                                            </div>
+                                            <div class="rawwire-rule-meta">
+                                                <span><span class="dashicons dashicons-admin-site-alt3"></span> <?php echo esc_html(substr($rule['urls'], 0, 40)); ?><?php echo strlen($rule['urls']) > 40 ? '...' : ''; ?></span>
+                                                <span><span class="dashicons dashicons-clock"></span> <?php echo esc_html($rule['schedule']); ?></span>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <!-- Configuration Column -->
+                        <div class="rawwire-crawlomatic-config">
+                            <div class="rawwire-section-header">
+                                <span class="dashicons dashicons-admin-generic"></span>
+                                <span>Rule Configuration</span>
+                            </div>
+
+                            <form class="rawwire-crawlomatic-form" data-action="configure_crawlomatic">
+                                <?php if (in_array('urls', $show_fields)): ?>
+                                    <div class="rawwire-form-group">
+                                        <label for="crawl_urls">
+                                            <span class="dashicons dashicons-admin-links"></span>
+                                            URLs to Crawl
+                                        </label>
+                                        <textarea id="crawl_urls" name="urls" rows="3" placeholder="https://example.com/page1&#10;https://example.com/page2"></textarea>
+                                        <p class="rawwire-form-hint">One URL per line</p>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (in_array('selector_type', $show_fields)): ?>
+                                    <div class="rawwire-form-row">
+                                        <div class="rawwire-form-group rawwire-form-half">
+                                            <label for="selector_type">
+                                                <span class="dashicons dashicons-editor-code"></span>
+                                                Selector Type
+                                            </label>
+                                            <select id="selector_type" name="selector_type">
+                                                <option value="css">CSS Selector</option>
+                                                <option value="xpath">XPath</option>
+                                                <option value="regex">Regular Expression</option>
+                                            </select>
+                                        </div>
+
+                                        <?php if (in_array('max_items', $show_fields)): ?>
+                                            <div class="rawwire-form-group rawwire-form-half">
+                                                <label for="max_items">
+                                                    <span class="dashicons dashicons-backup"></span>
+                                                    Max Items
+                                                </label>
+                                                <input type="number" id="max_items" name="max_items" value="50" min="1" max="1000">
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (in_array('selector', $show_fields)): ?>
+                                    <div class="rawwire-form-group">
+                                        <label for="selector">
+                                            <span class="dashicons dashicons-tag"></span>
+                                            Content Selector
+                                        </label>
+                                        <input type="text" id="selector" name="selector" placeholder=".article-content, #main-content">
+                                        <p class="rawwire-form-hint">CSS selector for main content area</p>
+                                    </div>
+                                <?php endif; ?>
+
+                                <?php if (in_array('schedule', $show_fields)): ?>
+                                    <div class="rawwire-form-group">
+                                        <label for="schedule">
+                                            <span class="dashicons dashicons-calendar-alt"></span>
+                                            Schedule
+                                        </label>
+                                        <select id="schedule" name="schedule">
+                                            <option value="manual">Manual Only</option>
+                                            <option value="hourly">Hourly</option>
+                                            <option value="twicedaily">Twice Daily</option>
+                                            <option value="daily">Daily</option>
+                                            <option value="weekly">Weekly</option>
+                                        </select>
+                                    </div>
+                                <?php endif; ?>
+
+                                <div class="rawwire-form-actions">
+                                    <button type="button" class="rawwire-btn rawwire-btn-secondary" data-action="load_rule_config">
+                                        <span class="dashicons dashicons-download"></span>
+                                        Load Selected
+                                    </button>
+                                    <button type="submit" class="rawwire-btn rawwire-btn-primary">
+                                        <span class="dashicons dashicons-saved"></span>
+                                        Save Configuration
+                                    </button>
+                                </div>
+                            </form>
+
+                            <?php if ($show_quick_run): ?>
+                                <div class="rawwire-crawlomatic-actions">
+                                    <div class="rawwire-section-header">
+                                        <span class="dashicons dashicons-controls-play"></span>
+                                        <span>Quick Actions</span>
+                                    </div>
+                                    <div class="rawwire-btn-group">
+                                        <button type="button" class="rawwire-btn rawwire-btn-primary" data-action="run_crawlomatic_rule">
+                                            <span class="dashicons dashicons-controls-play"></span>
+                                            Run Selected Rule
+                                        </button>
+                                        <button type="button" class="rawwire-btn rawwire-btn-secondary" data-action="test_crawlomatic_rule">
+                                            <span class="dashicons dashicons-visibility"></span>
+                                            Test Rule
+                                        </button>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php
+        }
+
+        /**
+         * Render POST_GEN panel - Post Generator settings and quick controls
+         */
+        protected static function render_post_gen_panel($panel, $context)
+        {
+            $config = $panel['config'] ?? array();
+            $show_template_selector = $config['showTemplateSelector'] ?? true;
+            $show_quick_generate = $config['showQuickGenerate'] ?? true;
+
+            // Get AI Engine settings
+            $ai_engine_active = function_exists('meow_get_ai_engine') || class_exists('Meow_MWAI_Core');
+            $current_model = get_option('rawwire_ai_model', 'gpt-4');
+            $current_template = get_option('rawwire_post_template', 'standard');
+
+            // Available templates
+            $templates = array(
+                'standard' => 'Standard Article',
+                'listicle' => 'Listicle (Top 10)',
+                'howto' => 'How-To Guide',
+                'comparison' => 'Comparison',
+                'news' => 'News Summary',
+                'deep_dive' => 'Deep Dive Analysis'
+            );
+
+            // Available models
+            $models = array(
+                'gpt-4' => 'GPT-4',
+                'gpt-4o' => 'GPT-4o',
+                'gpt-4o-mini' => 'GPT-4o Mini',
+                'claude-3-5-sonnet' => 'Claude 3.5 Sonnet',
+                'llama-3.1-70b' => 'Llama 3.1 70B'
+            );
+        ?>
+            <div class="rawwire-post-gen-panel" data-panel-id="<?php echo esc_attr($panel['id'] ?? 'post_gen_settings'); ?>">
+                <?php if (!$ai_engine_active): ?>
+                    <div class="rawwire-alert rawwire-alert-warning">
+                        <span class="dashicons dashicons-warning"></span>
+                        <div>
+                            <strong>AI Engine Required</strong>
+                            <p>Install AI Engine plugin for post generation.</p>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="rawwire-post-gen-config">
+                        <?php if ($show_template_selector): ?>
+                            <div class="rawwire-form-group">
+                                <label for="post_template">
+                                    <span class="dashicons dashicons-layout"></span>
+                                    Post Template
+                                </label>
+                                <select id="post_template" name="post_template">
+                                    <?php foreach ($templates as $key => $label): ?>
+                                        <option value="<?php echo esc_attr($key); ?>" <?php selected($current_template, $key); ?>><?php echo esc_html($label); ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                            <div class="rawwire-form-group">
+                                <label for="ai_model">
+                                    <span class="dashicons dashicons-cloud"></span>
+                                    AI Model
+                                </label>
+                                <select id="ai_model" name="ai_model">
+                                    <?php foreach ($models as $key => $label): ?>
+                                        <option value="<?php echo esc_attr($key); ?>" <?php selected($current_model, $key); ?>><?php echo esc_html($label); ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                            <div class="rawwire-form-row">
+                                <div class="rawwire-form-group rawwire-form-half">
+                                    <label for="word_count">
+                                        <span class="dashicons dashicons-editor-alignleft"></span>
+                                        Word Count
+                                    </label>
+                                    <input type="number" id="word_count" name="word_count" value="<?php echo esc_attr(get_option('rawwire_word_count', 1200)); ?>" min="200" max="5000" step="100">
+                                </div>
+                                <div class="rawwire-form-group rawwire-form-half">
+                                    <label for="tone">
+                                        <span class="dashicons dashicons-format-status"></span>
+                                        Tone
+                                    </label>
+                                    <select id="tone" name="tone">
+                                        <option value="professional">Professional</option>
+                                        <option value="conversational">Conversational</option>
+                                        <option value="technical">Technical</option>
+                                        <option value="casual">Casual</option>
+                                    </select>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($show_quick_generate): ?>
+                            <div class="rawwire-post-gen-actions">
+                                <button type="button" class="rawwire-btn rawwire-btn-primary" data-action="run_post_generator" title="Import from Crawlomatic and process with AI">
+                                    <span class="dashicons dashicons-controls-play"></span>
+                                    Run Pipeline
+                                </button>
+                                <button type="button" class="rawwire-btn rawwire-btn-secondary" data-action="process_crdata" title="Process new CR DATA with AI">
+                                    <span class="dashicons dashicons-admin-generic"></span>
+                                    Process
+                                </button>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php
+        }
+
+        /**
+         * Render PROGRESS panel (automation progress bar)
+         * Clean single-line: dropdown | progress bar | status | run button
+         * 
+         * Automations can come from:
+         * 1. Panel config (template JSON)
+         * 2. Enabled tools via rawwire_tools()->get_all_enabled_automations()
+         */
+        protected static function render_progress_panel($panel, $context)
+        {
+            $automations = $panel['automations'] ?? array();
+            $config = $panel['config'] ?? array();
+            $refresh_interval = $panel['refreshInterval'] ?? 5;
+            $panel_id = $panel['id'] ?? 'automation_progress';
+            $dashboard_mode = $context['dashboard_mode'] ?? '';
+
+            // If no automations in template, pull from enabled tools
+            if (empty($automations) && function_exists('rawwire_tools') && rawwire_tools()) {
+                $automations = rawwire_tools()->get_all_enabled_automations();
+            }
+
+            // Filter automations by dashboard mode if set
+            if ($dashboard_mode && !empty($automations)) {
+                $filtered = array_filter($automations, function ($auto) use ($dashboard_mode) {
+                    $auto_mode = $auto['mode'] ?? '';
+                    return empty($auto_mode) || $auto_mode === $dashboard_mode;
+                });
+                $automations = array_values($filtered);
+            }
+
+            // Get current automation state
+            $current_automation = get_transient('rawwire_current_automation') ?: null;
+            $current_step = intval(get_transient('rawwire_automation_step') ?: 0);
+            $automation_status = get_transient('rawwire_automation_status') ?: 'idle';
+            $selected_automation = $current_automation ?: (isset($automations[0]) ? $automations[0]['id'] : '');
+
+            // Find selected automation
+            $active_automation = null;
+            $active_tool_id = '';
+            foreach ($automations as $automation) {
+                if ($automation['id'] === $selected_automation) {
+                    $active_automation = $automation;
+                    $active_tool_id = $automation['_tool_id'] ?? '';
+                    break;
+                }
+            }
+            if (!$active_automation && !empty($automations)) {
+                $active_automation = $automations[0];
+                $selected_automation = $active_automation['id'];
+                $active_tool_id = $active_automation['_tool_id'] ?? '';
+            }
+
+            // Calculate progress
+            $total_steps = $active_automation ? count($active_automation['steps'] ?? array()) : 0;
+            $progress_percent = $total_steps > 0 ? min(100, ($current_step / $total_steps) * 100) : 0;
+            if ($automation_status === 'complete') $progress_percent = 100;
+
+            $status_labels = array('idle' => 'Ready', 'running' => 'Running', 'complete' => 'Done', 'error' => 'Error', 'paused' => 'Paused');
+        ?>
+            <div class="rawwire-workflow-bar" data-panel="<?php echo esc_attr($panel_id); ?>" data-status="<?php echo esc_attr($automation_status); ?>" data-active-tool="<?php echo esc_attr($active_tool_id); ?>">
+                <?php if (count($automations) > 1): ?>
+                    <select class="rawwire-workflow-select">
+                        <?php foreach ($automations as $auto): ?>
+                            <option value="<?php echo esc_attr($auto['id']); ?>" data-tool="<?php echo esc_attr($auto['_tool_id'] ?? ''); ?>" data-mode="<?php echo esc_attr($auto['mode'] ?? ''); ?>" <?php selected($selected_automation, $auto['id']); ?>><?php echo esc_html($auto['label']); ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                <?php elseif ($active_automation): ?>
+                    <span class="rawwire-workflow-label"><?php echo esc_html($active_automation['label']); ?></span>
+                <?php endif; ?>
+
+                <div class="rawwire-workflow-track">
+                    <div class="rawwire-workflow-fill" style="width:<?php echo esc_attr($progress_percent); ?>%"></div>
+                </div>
+
+                <span class="rawwire-workflow-status rawwire-status-<?php echo esc_attr($automation_status); ?>"><?php echo esc_html($status_labels[$automation_status] ?? 'Ready'); ?></span>
+
+                <?php if ($automation_status === 'running'): ?>
+                    <button type="button" class="rawwire-workflow-btn rawwire-workflow-stop" data-action="stop_workflow" data-automation="<?php echo esc_attr($selected_automation); ?>" data-tool="<?php echo esc_attr($active_tool_id); ?>">
+                        <span class="dashicons dashicons-controls-pause"></span> Stop
+                    </button>
+                <?php else: ?>
+                    <button type="button" class="rawwire-workflow-btn rawwire-workflow-run" data-action="run_workflow" data-automation="<?php echo esc_attr($selected_automation); ?>" data-tool="<?php echo esc_attr($active_tool_id); ?>" <?php echo !$active_automation ? 'disabled' : ''; ?>>
+                        <span class="dashicons dashicons-controls-play"></span> Run
+                    </button>
+                <?php endif; ?>
+            </div>
+        <?php
         }
 
         /**
          * Render item actions
          */
-        protected static function render_item_actions($item, $actions) {
-            ?>
+        protected static function render_item_actions($item, $actions)
+        {
+        ?>
             <div class="rawwire-item-actions">
                 <?php foreach ($actions as $action): ?>
-                    <button type="button" class="rawwire-btn-icon"
-                            data-action="<?php echo esc_attr($action['action'] ?? $action['id']); ?>"
-                            data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>"
-                            title="<?php echo esc_attr($action['label'] ?? ''); ?>">
+                    <?php
+                    $is_enabled = isset($item['enabled']) ? $item['enabled'] : true;
+                    $disabled_attr = '';
+                    $disabled_class = '';
+
+                    // Disable test button if source is disabled
+                    if (($action['action'] ?? $action['id']) === 'test_scraper_source' && !$is_enabled) {
+                        $disabled_attr = ' disabled="disabled"';
+                        $disabled_class = ' disabled';
+                    }
+                    ?>
+                    <button type="button" class="rawwire-btn-icon<?php echo $disabled_class; ?>"
+                        data-action="<?php echo esc_attr($action['action'] ?? $action['id']); ?>"
+                        data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>"
+                        data-enabled="<?php echo $is_enabled ? 'true' : 'false'; ?>"
+                        title="<?php echo esc_attr($action['label'] ?? ''); ?>" <?php echo $disabled_attr; ?>>
                         <span class="dashicons <?php echo esc_attr($action['icon'] ?? ''); ?>"></span>
                     </button>
                 <?php endforeach; ?>
             </div>
-            <?php
+        <?php
         }
 
         /**
          * Render cell value with formatting
          */
-        protected static function render_cell_value($value, $render, $item = array()) {
+        protected static function render_cell_value($value, $render, $item = array())
+        {
             switch ($render) {
                 case 'badge':
                     return sprintf(
@@ -974,7 +1533,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Resolve data binding to actual value
          */
-        public static function resolve_data_binding($binding, $context) {
+        public static function resolve_data_binding($binding, $context)
+        {
             if (empty($binding)) {
                 return null;
             }
@@ -1008,7 +1568,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Resolve database binding
          */
-        protected static function resolve_db_binding($binding) {
+        protected static function resolve_db_binding($binding)
+        {
             global $wpdb;
 
             // Parse: db:table:operation:filters
@@ -1074,7 +1635,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Resolve template binding
          */
-        protected static function resolve_template_binding($binding) {
+        protected static function resolve_template_binding($binding)
+        {
             if (!class_exists('RawWire_Template_Engine')) {
                 return null;
             }
@@ -1090,7 +1652,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Resolve settings binding
          */
-        protected static function resolve_settings_binding($binding) {
+        protected static function resolve_settings_binding($binding)
+        {
             // Parse: settings:key
             $parts = explode(':', $binding);
             $key = $parts[1] ?? '';
@@ -1112,7 +1675,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Resolve scraper binding - get configured sources from Scraper Toolkit
          */
-        protected static function resolve_scraper_binding($binding) {
+        protected static function resolve_scraper_binding($binding)
+        {
             // Parse: scraper:sources or scraper:sources:enabled
             $parts = explode(':', $binding);
             $what = $parts[1] ?? 'sources';
@@ -1125,7 +1689,7 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                 }
 
                 $sources = RawWire_Scraper_Settings::get_sources();
-                
+
                 // Transform sources to dashboard-friendly format
                 $formatted = array();
                 foreach ($sources as $id => $source) {
@@ -1159,7 +1723,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Get nested value from array using dot notation
          */
-        protected static function get_nested_value($array, $path) {
+        protected static function get_nested_value($array, $path)
+        {
             $keys = explode('.', $path);
             $value = $array;
 
@@ -1177,8 +1742,9 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Interpolate template string with item data
          */
-        protected static function interpolate_template($template, $item) {
-            return preg_replace_callback('/\{\{(\w+)\}\}/', function($matches) use ($item) {
+        protected static function interpolate_template($template, $item)
+        {
+            return preg_replace_callback('/\{\{(\w+)\}\}/', function ($matches) use ($item) {
                 $key = $matches[1];
 
                 // Special handlers
@@ -1193,7 +1759,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Format value based on format type
          */
-        protected static function format_value($value, $format) {
+        public static function format_value($value, $format)
+        {
             switch ($format) {
                 case 'number':
                     return number_format((int) $value);
@@ -1218,10 +1785,11 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Render item from template definition
          */
-        protected static function render_item_from_template($item, $template) {
+        protected static function render_item_from_template($item, $template)
+        {
             $fields = $template['fields'] ?? array();
             $actions = $template['actions'] ?? array();
-            ?>
+        ?>
             <div class="rawwire-item-content">
                 <?php foreach ($fields as $field): ?>
                     <?php if (isset($item[$field])): ?>
@@ -1241,20 +1809,21 @@ if (!class_exists('RawWire_Panel_Renderer')) {
                 <div class="rawwire-item-actions">
                     <?php foreach ($actions as $action): ?>
                         <button type="button" class="rawwire-btn-icon"
-                                data-action="<?php echo esc_attr($action); ?>"
-                                data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>">
+                            data-action="<?php echo esc_attr($action); ?>"
+                            data-item-id="<?php echo esc_attr($item['id'] ?? ''); ?>">
                             <span class="dashicons dashicons-<?php echo esc_attr(str_replace('_', '-', $action)); ?>"></span>
                         </button>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-            <?php
+<?php
         }
 
         /**
          * Register a custom panel renderer
          */
-        public static function register_renderer($type, $callback) {
+        public static function register_renderer($type, $callback)
+        {
             if (is_callable($callback)) {
                 self::$custom_renderers[$type] = $callback;
             }
@@ -1263,7 +1832,8 @@ if (!class_exists('RawWire_Panel_Renderer')) {
         /**
          * Helper: Convert camelCase to kebab-case
          */
-        protected static function camel_to_kebab($str) {
+        protected static function camel_to_kebab($str)
+        {
             return strtolower(preg_replace('/([a-z])([A-Z])/', '$1-$2', $str));
         }
     }

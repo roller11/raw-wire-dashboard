@@ -1,0 +1,124 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 58
+Party: G C X
+License: 1045286-B
+Permit: 25016-10000-35692
+Generated: 2026-03-08 16:23:00
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+### TARGET SUMMARY
+GCX LLC (GCX) is an active Los Angeles-area general contractor specializing in commercial renovations and tenant improvements, confirmed via California license 1045286-B (Class B General Building, expires 10/31/2026) and LA Permit #25016-10000-35692 (North Hollywood office TI, $870,900 valuation, final status).[1][2] Decision makers are Co-Founder Greg O'Connor (project approvals) and Member Jarred Walker (operations/principal contact), with addresses at 4130 Cahuenga Blvd, North Hollywood, CA; 29209 Laro Drive, Agoura Hills, CA 91301; and LA operations via projects.[1][2][3]
+
+### PEOPLE
+**Decision Maker Drill-Down:**
+- **Name:** Greg O'Connor (Gregory Dawson O'Connor)  
+  **Specific role/title:** Co-Founder  
+  **Contact info found:** greg.oconnor@gcxworx.com (via profile lookup); LinkedIn via company page (https://www.gcxworx.com links to LinkedIn); LA-based.  
+  **Why this person matters for winning interior design work:** Co-Founder oversees high-value TI projects (e.g., 330K SF animation, 240K SF media in LA area) including office/media/manufacturing spaces per portfolio and permits.  
+  **Best access route:** Email or LinkedIn outreach referencing North Hollywood TI permit or featured projects like Lucid Motors Beverly Hills.  
+  **Potential meeting opportunities:** Monitor GCX LinkedIn/Instagram for project updates/open houses; no specific events found, but LA construction mixers via client networks (e.g., Lucid, Armadillo).  
+  https://rocketreach.co/greg-oconnor-email_70911602[4] https://www.gcxworx.com[3]
+
+- **Name:** Jarred Scott Walker (Jarred Walker)  
+  **Specific role/title:** Member (business management/principal)  
+  **Contact info found:** Phone (213) 377-1838 primary, (213) 280-8091 additional; email via BBB contact form.  
+  **Why this person matters for winning interior design work:** Principal manages operations for 88 projects (mostly commercial renovations/TI) including query-matched North Hollywood office permit.  
+  **Best access route:** Direct phone or BBB email, citing BuildZoom activity (88 projects, top 3% score).  
+  **Potential meeting opportunities:** No events specified; use permitting records for site visits or subs intros on LA TI jobs.  
+  https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2] https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+
+**Gatekeeper Drill-Down:**  
+No gatekeepers (executive assistants, office managers, coordinators) identified in sources.
+
+### COMPANY
+- Legal name: GCX LLC (Domestically formed LLC, filed June 25, 2018 in Los Angeles, CA). https://www.bizprofile.net/ca/los-angeles/gcx-llc[5]
+- DBA/Type: General Contractor (B - General Building). https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+- Specialties/markets: Commercial renovations (26 projects), tenant improvements (office/media/manufacturing), home additions (3 projects). https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+- Employee count: 2 named principals (Gregory Dawson O'Connor, Jarred Scott Walker). https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+- Revenue range: Not specified in sources.
+- Licensing: 1045286-B active (verified, expires 10/31/2026); bonding/workers comp compliant per records. https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2]
+- Ownership structure: LLC with members including Jarred Walker. https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2]
+- Locations: 4130 Cahuenga Blvd, North Hollywood, CA 91602; 29209 Laro Drive, Agoura Hills, CA 91301; LA project focus. https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1] https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2]
+- Scale: 88 projects past 3 years (33 in 2022, 24 in 2023, 21 in 2024, 10 in 2025); BuildZoom score 113 (top 3%). https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+- Website: https://www.gcxworx.com (projects, about, contact, talent pages; social: Instagram, Facebook, LinkedIn). https://www.gcxworx.com[3]
+
+### NETWORKING OPPORTUNITIES
+- No association memberships (e.g., AGC, NAIOP), upcoming events, conferences, charity, golf, or speaking engagements found.  
+- Company social channels (LinkedIn, Instagram, Facebook) for project announcements/networking. https://www.gcxworx.com[3]
+- No DVBE/MBE/WBE programs, bid lists, or prequal portals identified.
+
+### DISCOVERED PROJECTS
+- **Permit #25016-10000-35692 (BS2100713):** North Hollywood, CA; tenant improvement/office alteration (change to advertising manufacturing/office); $870,900 valuation; final status (2023-04-07). https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+- **Poms & Associates:** Calabasas, CA - 21K SF TI. https://www.gcxworx.com[3]
+- **Confidential Consulting Client:** Downtown Los Angeles - 18K SF / 5K SF TI. https://www.gcxworx.com[3]
+- **Lucid Motors:** Beverly Hills, CA - 20K SF TI. https://www.gcxworx.com[3]
+- **Armadillo & Co.:** Los Angeles, CA - 5K SF TI. https://www.gcxworx.com[3]
+- **Confidential Media Client:** Culver City, CA - 240K SF TI. https://www.gcxworx.com[3]
+- **Confidential Animation Client:** Burbank, CA - 330K SF TI. https://www.gcxworx.com[3]
+
+### DISCOVERED ENTITIES
+- Clients/Owners: Poms & Associates (Calabasas TI), Lucid Motors (Beverly Hills TI), Armadillo & Co. (LA TI), confidential media/animation/consulting clients (Culver City, Burbank, DTLA). https://www.gcxworx.com[3]
+- No subcontractors, suppliers, architects, developers, owner's reps, or competitors specified in sources.
+
+### ENTRY POINTS
+- Use https://www.gcxworx.com contact form/TALENT page to pitch interior design for LA TI projects (e.g., DTLA 18K SF, North Hollywood permit). https://www.gcxworx.com[3]
+- Call Jarred Walker (213) 377-1838/(213) 280-8091; reference 88 projects/Top 3% BuildZoom for commercial TI subs. https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2]
+- Email Greg O'Connor (greg.oconnor@gcxworx.com) or LinkedIn connect via company page, citing SPACKLE background/portfolio matches. https://rocketreach.co/greg-oconnor-email_70911602[4]
+- Track new permits on BuildZoom for LA TI leads; approach via project-specific outreach. https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+
+### RED FLAGS
+- Not BBB accredited; insufficient info for rating (file opened 10/5/2018). https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2]
+- No lawsuits, safety issues, financial trouble, or complaints found in sources.
+
+### SOURCES
+- https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1]
+- https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2]
+- https://www.gcxworx.com[3]
+- https://rocketreach.co/greg-oconnor-email_70911602[4]
+- https://www.bizprofile.net/ca/los-angeles/gcx-llc[5]
+
+### SEARCH LEDGER
+1. "GCX LLC contractor license 1045286-B CSLB status"
+2. "GCX LLC GCXworx.com team leadership Greg O'Connor Jarred Walker LinkedIn"
+3. "GCX LLC Los Angeles bids events subcontractors prequalification NAIOP AGC"
+4. "GCX LLC projects LA permits LADBS 25016-10000-35692 decision makers"
+5. "Jarred Walker GCX LLC contact phone email events"
+
+### EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.gcxworx.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rocketreach.co/greg-oconnor-email_70911602
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bizprofile.net/ca/los-angeles/gcx-llc
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: "GCX LLC contractor license 1045286-B CSLB status", URL: https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca[1], Extracted fact: License active 1045286-B, employees O'Connor/Walker, 88 projects, North Hollywood permit #25016-10000-35692 details ($870,900 TI).
+- Query: "GCX LLC GCXworx.com team leadership", URL: https://www.gcxworx.com[3], Extracted fact: Projects (Lucid, Armadillo, media/animation clients in LA area), contact/TALENT pages, social links (LinkedIn/Instagram).
+- Query: "Jarred Walker GCX LLC contact", URL: https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895[2], Extracted fact: Member/principal Jarred Walker, phones (213) 377-1838/(213) 280-8091, Agoura Hills address, license expires 2026, not accredited.
+- Query: "Greg O'Connor GCX", URL: https://rocketreach.co/greg-oconnor-email_70911602[4], Extracted fact: Co-Founder Greg O'Connor at GCX, email greg.oconnor@gcxworx.com, prior SPACKLE.
+- Query: "GCX LLC incorporation Los Angeles", URL: https://www.bizprofile.net/ca/los-angeles/gcx-llc[5], Extracted fact: GCX LLC filed June 25, 2018 in LA.
+
+### REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match)
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target (via BuildZoom/BBB/CSLB proxies)
+- [x] TODO 3: Identify at least 2 potential decision makers
+- [x] TODO 4: Capture at least 3 concrete source URLs
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings
+- [x] TODO 6: Summarize best entry points to reach decision makers
+- [x] TODO 7: Identify at least 2 edge-signal diamonds (North Hollywood TI permit, featured LA projects/clients as collaborators)
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.buildzoom.com/contractor/gcx-llc-agoura-hills-ca
+- https://www.bbb.org/us/ca/agoura-hills/profile/general-contractor/gcx-llc-1216-899895
+- https://www.gcxworx.com
+- https://rocketreach.co/greg-oconnor-email_70911602
+- https://www.bizprofile.net/ca/los-angeles/gcx-llc

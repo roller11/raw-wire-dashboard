@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Toolbox Core - adapter registry and orchestrator hooks
  * Path: cores/toolbox-core/toolbox-core.php
@@ -13,7 +14,8 @@
  * The code remains static; only configuration changes.
  */
 if (!class_exists('RawWire_Toolbox_Core')) {
-    class RawWire_Toolbox_Core {
+    class RawWire_Toolbox_Core
+    {
         /**
          * Instantiated adapter instances
          * @var array
@@ -42,6 +44,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
             // Generators (real AI only - removed mock generator)
             'RawWire_Adapter_Generator_OpenAI' => 'adapters/generators/class-generator-openai.php',
             'RawWire_Adapter_Generator_Anthropic' => 'adapters/generators/class-generator-anthropic.php',
+            'RawWire_Adapter_Generator_Venice' => 'adapters/generators/class-generator-venice.php',
+            'RawWire_Adapter_Generator_OpenClaw' => 'adapters/generators/class-generator-openclaw.php',
             // Posters
             'RawWire_Poster_WordPress' => 'adapters/posters/class-poster-wordpress.php',
             'RawWire_Poster_Twitter' => 'adapters/posters/class-poster-twitter.php',
@@ -57,7 +61,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Initialize the Toolbox Core
          */
-        public static function init() {
+        public static function init()
+        {
             // Load interfaces first
             require_once __DIR__ . '/interfaces/interface-adapter.php';
             require_once __DIR__ . '/interfaces/interface-scraper.php';
@@ -67,7 +72,10 @@ if (!class_exists('RawWire_Toolbox_Core')) {
 
             // Load base adapter class
             require_once __DIR__ . '/adapters/class-adapter-base.php';
-            
+
+            // Load browser automation tools (OpenClaw CLI wrapper)
+            require_once __DIR__ . '/adapters/browser/class-browser-openclaw.php';
+
             // Load centralized key manager (early, before adapters need keys)
             require_once __DIR__ . '/class-key-manager.php';
 
@@ -91,7 +99,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Log a message safely
          */
-        protected static function log(string $message, string $level = 'info', array $context = array()) {
+        protected static function log(string $message, string $level = 'info', array $context = array())
+        {
             if (self::$logger) {
                 $context['component'] = 'toolbox-core';
                 if ($level === 'error') {
@@ -107,7 +116,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Load the adapter registry from JSON
          */
-        public static function load_registry() {
+        public static function load_registry()
+        {
             if (self::$registry !== null) {
                 return self::$registry;
             }
@@ -144,7 +154,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * 
          * @return array
          */
-        public static function get_registry() {
+        public static function get_registry()
+        {
             if (self::$registry === null) {
                 self::load_registry();
             }
@@ -156,7 +167,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * 
          * @return array
          */
-        public static function get_categories() {
+        public static function get_categories()
+        {
             $registry = self::get_registry();
             return $registry['categories'] ?? array();
         }
@@ -167,7 +179,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * @param string $category
          * @return array
          */
-        public static function get_category_adapters(string $category) {
+        public static function get_category_adapters(string $category)
+        {
             $categories = self::get_categories();
             return $categories[$category]['adapters'] ?? array();
         }
@@ -179,7 +192,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * @param string $adapter_id
          * @return array|null
          */
-        public static function get_adapter_definition(string $category, string $adapter_id) {
+        public static function get_adapter_definition(string $category, string $adapter_id)
+        {
             $adapters = self::get_category_adapters($category);
             return $adapters[$adapter_id] ?? null;
         }
@@ -192,7 +206,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * @param array $config Configuration (credentials, options)
          * @return object|WP_Error Adapter instance or error
          */
-        public static function factory(string $category, string $adapter_id, array $config = array()) {
+        public static function factory(string $category, string $adapter_id, array $config = array())
+        {
             // Get adapter definition from registry
             $definition = self::get_adapter_definition($category, $adapter_id);
 
@@ -254,7 +269,6 @@ if (!class_exists('RawWire_Toolbox_Core')) {
                 ));
 
                 return $instance;
-
             } catch (Exception $e) {
                 self::log('Failed to instantiate adapter', 'error', array(
                     'class' => $class_name,
@@ -267,7 +281,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Merge user config with defaults from registry definition
          */
-        protected static function merge_config_with_defaults(array $definition, array $config) {
+        protected static function merge_config_with_defaults(array $definition, array $config)
+        {
             $defaults = array();
 
             foreach ($definition['config_fields'] ?? array() as $field) {
@@ -287,7 +302,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * @param string|null $module_slug Optional module context
          * @return object|WP_Error
          */
-        public static function get_configured_adapter(string $category, string $module_slug = null) {
+        public static function get_configured_adapter(string $category, string $module_slug = null)
+        {
             $cache_key = $category . '_' . ($module_slug ?? 'global');
 
             // Return cached instance if available
@@ -338,7 +354,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Get saved adapter configuration
          */
-        public static function get_saved_config(string $category, string $module_slug = null) {
+        public static function get_saved_config(string $category, string $module_slug = null)
+        {
             $option_key = 'rawwire_toolkit_' . $category;
 
             if ($module_slug) {
@@ -353,7 +370,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Save adapter configuration
          */
-        public static function save_config(string $category, array $config, string $module_slug = null) {
+        public static function save_config(string $category, array $config, string $module_slug = null)
+        {
             $option_key = 'rawwire_toolkit_' . $category;
 
             if ($module_slug) {
@@ -390,7 +408,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * @param string $adapter_id
          * @return array
          */
-        public static function get_adapter_form_fields(string $category, string $adapter_id) {
+        public static function get_adapter_form_fields(string $category, string $adapter_id)
+        {
             $definition = self::get_adapter_definition($category, $adapter_id);
 
             if (!$definition) {
@@ -403,7 +422,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Render HTML form for adapter configuration
          */
-        public static function render_adapter_form(string $category, string $adapter_id, array $saved_values = array()) {
+        public static function render_adapter_form(string $category, string $adapter_id, array $saved_values = array())
+        {
             $fields = self::get_adapter_form_fields($category, $adapter_id);
             $definition = self::get_adapter_definition($category, $adapter_id);
 
@@ -493,7 +513,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Test an adapter connection
          */
-        public static function test_adapter(string $category, string $adapter_id, array $config) {
+        public static function test_adapter(string $category, string $adapter_id, array $config)
+        {
             $instance = self::factory($category, $adapter_id, $config);
 
             if (is_wp_error($instance)) {
@@ -526,11 +547,12 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Register REST API routes
          */
-        public static function register_rest_routes() {
+        public static function register_rest_routes()
+        {
             register_rest_route('rawwire/v1', '/toolkit/registry', array(
                 'methods' => 'GET',
                 'callback' => array(__CLASS__, 'rest_get_registry'),
-                'permission_callback' => function() {
+                'permission_callback' => function () {
                     return current_user_can('manage_options');
                 },
             ));
@@ -538,7 +560,7 @@ if (!class_exists('RawWire_Toolbox_Core')) {
             register_rest_route('rawwire/v1', '/toolkit/test', array(
                 'methods' => 'POST',
                 'callback' => array(__CLASS__, 'rest_test_adapter'),
-                'permission_callback' => function() {
+                'permission_callback' => function () {
                     return current_user_can('manage_options');
                 },
             ));
@@ -546,7 +568,7 @@ if (!class_exists('RawWire_Toolbox_Core')) {
             register_rest_route('rawwire/v1', '/toolkit/config', array(
                 'methods' => array('GET', 'POST'),
                 'callback' => array(__CLASS__, 'rest_handle_config'),
-                'permission_callback' => function() {
+                'permission_callback' => function () {
                     return current_user_can('manage_options');
                 },
             ));
@@ -555,14 +577,16 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * REST: Get registry
          */
-        public static function rest_get_registry($request) {
+        public static function rest_get_registry($request)
+        {
             return new WP_REST_Response(self::get_registry(), 200);
         }
 
         /**
          * REST: Test adapter
          */
-        public static function rest_test_adapter($request) {
+        public static function rest_test_adapter($request)
+        {
             $category = sanitize_key($request->get_param('category'));
             $adapter_id = sanitize_key($request->get_param('adapter_id'));
             $config = $request->get_param('config') ?? array();
@@ -582,7 +606,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * REST: Handle config get/save
          */
-        public static function rest_handle_config($request) {
+        public static function rest_handle_config($request)
+        {
             $category = sanitize_key($request->get_param('category'));
             $module_slug = $request->get_param('module_slug');
 
@@ -617,7 +642,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * AJAX: Test adapter
          */
-        public static function ajax_test_adapter() {
+        public static function ajax_test_adapter()
+        {
             check_ajax_referer('rawwire_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -644,7 +670,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * AJAX: Save config
          */
-        public static function ajax_save_config() {
+        public static function ajax_save_config()
+        {
             check_ajax_referer('rawwire_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -677,7 +704,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * AJAX: Get adapter form
          */
-        public static function ajax_get_form() {
+        public static function ajax_get_form()
+        {
             check_ajax_referer('rawwire_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -711,7 +739,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
          * @param callable|null $on_update Progress callback
          * @return array Execution result
          */
-        public static function execute_plan(array $plan, callable $on_update = null) {
+        public static function execute_plan(array $plan, callable $on_update = null)
+        {
             $execution_id = wp_generate_uuid4();
             $results = array();
 
@@ -780,7 +809,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Execute a single plan step
          */
-        protected static function execute_step(array $step, array $context) {
+        protected static function execute_step(array $step, array $context)
+        {
             $category = $step['adapter_category'] ?? '';
             $action = $step['action'] ?? '';
 
@@ -826,13 +856,14 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Interpolate template variables in params
          */
-        protected static function interpolate_params(array $params, array $context) {
+        protected static function interpolate_params(array $params, array $context)
+        {
             $result = array();
 
             foreach ($params as $value) {
                 if (is_string($value)) {
                     // Replace {{variable}} with context values
-                    $value = preg_replace_callback('/\{\{([^}]+)\}\}/', function($matches) use ($context) {
+                    $value = preg_replace_callback('/\{\{([^}]+)\}\}/', function ($matches) use ($context) {
                         $key = trim($matches[1]);
                         return self::get_nested_value($context, $key) ?? '';
                     }, $value);
@@ -848,7 +879,8 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Get nested value from array
          */
-        protected static function get_nested_value($data, string $path) {
+        protected static function get_nested_value($data, string $path)
+        {
             $keys = explode('.', $path);
             foreach ($keys as $key) {
                 if (!is_array($data) || !isset($data[$key])) {
@@ -862,14 +894,16 @@ if (!class_exists('RawWire_Toolbox_Core')) {
         /**
          * Get adapter by name (legacy compatibility)
          */
-        public static function get_adapter($name) {
+        public static function get_adapter($name)
+        {
             return self::$adapters[$name] ?? null;
         }
 
         /**
          * Register adapter instance manually (legacy compatibility)
          */
-        public static function register_adapter_instance($name, $instance) {
+        public static function register_adapter_instance($name, $instance)
+        {
             self::$adapters[$name] = $instance;
         }
     }

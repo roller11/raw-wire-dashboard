@@ -1,0 +1,61 @@
+Category,Title,Value,Confidence,Notes
+COMPANY_INFO,Company Name,Swinerton Builders,confirmed,
+COMPANY_INFO,Type,General Contractor,confirmed,
+COMPANY_INFO,Ownership,100% Employee-Owned (ESOP),confirmed,
+COMPANY_INFO,Founded,1888,confirmed,137 years in business
+COMPANY_INFO,Size,4300+ employees,confirmed,
+COMPANY_INFO,Revenue,$5B+,confirmed,
+COMPANY_INFO,Headquarters,San Francisco CA,confirmed,
+COMPANY_INFO,LA Office Address,"1150 South Olive Street, 27th Floor, Los Angeles CA 90015",confirmed,
+COMPANY_INFO,LA Office Phone,213.896.3400,confirmed,Main line
+
+CONTACTS,Email Domain,@swinerton.com,confirmed,
+CONTACTS,Email Pattern 1,FLast@swinerton.com,confirmed,First initial + last name
+CONTACTS,Email Pattern 2,firstname.lastname@swinerton.com,confirmed,Full name format
+CONTACTS,Bobby Jennings - VP Commercial,RJennings@swinerton.com | 858.376.2805,confirmed,San Diego region
+CONTACTS,Daniel Camin - VP Special Projects,DCamin@swinerton.com | 213.310.8939,confirmed,LA region
+CONTACTS,Veronika Bendl - BD Director,vbendl@swinerton.com | 213.896.3452,confirmed,Business development
+CONTACTS,Shane Springer - Preconstruction Manager,sspring@swinerton.com,inferred,Preconstruction team
+CONTACTS,Subcontractor Prequalification,subcontractorprequal@swinerton.com,confirmed,Sub intake
+CONTACTS,Payroll/VOE,payroll@swinerton.com,confirmed,Employment verification
+CONTACTS,General Inquiries,info@swinerton.com,confirmed,
+CONTACTS,CEO - Dave Callis,dave.callis@swinerton.com,inferred,Corporate leadership
+CONTACTS,CRO - Chris Chany,chris.chany@swinerton.com,inferred,Revenue/Sales
+CONTACTS,PR Manager - Danielle Ridgeway,danielle.ridgeway@swinerton.com,inferred,Media relations
+CONTACTS,LinkedIn - Bobby Jennings,linkedin.com/in/bobbyjennings,confirmed,
+CONTACTS,LinkedIn - Veronika Bendl,linkedin.com/in/veronikabendl,confirmed,
+CONTACTS,LinkedIn - Daniel Camin,linkedin.com/in/danielcamin,confirmed,
+
+PROJECTS,Life Time Fitness Chula Vista,"Design-build fitness facility, Life Time Property Development",confirmed,Current
+PROJECTS,San Diego Airport Terminal 1,Parking plazas infrastructure,confirmed,Current
+PROJECTS,Multnomah County Holgate Library,Mass timber construction,confirmed,Current - Oregon
+PROJECTS,Joinery Phase 2 Charlotte NC,Mass timber residential mixed-use,confirmed,Current
+PROJECTS,Market Focus,Mass timber via Timberlab subsidiary,confirmed,Specialty niche
+
+RELATIONSHIPS,Sister Company - Timberlab,Mass timber EPC manufacturing and installation,confirmed,
+RELATIONSHIPS,Sister Company - SAK Builders,Division 3 concrete West Coast,confirmed,
+RELATIONSHIPS,Sister Company - Swinerton Energy,Industrial/solar EPC,confirmed,
+RELATIONSHIPS,Architect Partner - Shook Kelley Inc,Joinery Phase 2 project,confirmed,
+RELATIONSHIPS,Project Platform,CMiC CollabCenter,confirmed,Subcontractors use this
+RELATIONSHIPS,BIM Tools,BIM 360,confirmed,They train subs on it
+
+GATHERINGS,AGC SoCal Golf Classic,April 10 2025,confirmed,Networking opportunity
+GATHERINGS,AGC Legislative Day Sacramento,May 5-6 2025,confirmed,Industry advocacy
+GATHERINGS,NAIOP I.CON West,March 3-4 2025,inferred,Commercial real estate
+
+AFFILIATIONS,AGC California,Active member and event sponsor,confirmed,
+AFFILIATIONS,ESOP Structure,100% employee-owned since founding,confirmed,
+
+COMMUNITY,Swinerton Foundation,Corporate giving program,confirmed,
+COMMUNITY,Swinerton Cares,Employee volunteer initiative,confirmed,
+COMMUNITY,Habitat for Humanity,Partner builds,inferred,
+
+EDGE_INTEL,Swinerton Quarterly Magazine,Thought leadership publication - pitch opportunity,confirmed,
+EDGE_INTEL,Company History PDF,swinerton.com/about/history,confirmed,
+EDGE_INTEL,Ethics Hotline,reportissues@swinerton.com,confirmed,
+EDGE_INTEL,Sustainability Focus,LEED projects and green building emphasis,confirmed,
+
+ENTRY_POINTS,Email subcontractor prequal,subcontractorprequal@swinerton.com,,"Design services that complement construction documentation"
+ENTRY_POINTS,LinkedIn + pitch,Danielle Ridgeway (PR Manager),,"Propose feature for Swinerton Quarterly magazine"
+ENTRY_POINTS,Attend industry event,AGC SoCal Golf Classic - April 10 2025,,"Casual networking with project teams"
+ENTRY_POINTS,Direct BD contact,Veronika Bendl - 213.896.3452,,"Business development decision maker"

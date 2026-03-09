@@ -1,0 +1,10 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 44
+Party: Michael Rohrs Dorta
+License: C72538
+Permit: 25010-20000-02596
+Generated: 2026-03-05 12:58:09
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+INVESTIGATION_FAILED: Browsing tools need a Brave Search API key, which is not currently set up. Please configure the necessary API key to proceed with the search for Michael Rohrs Dorta and related networking opportunities.

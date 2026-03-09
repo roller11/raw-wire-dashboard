@@ -1,0 +1,50 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 64
+Party: Owner-Builder
+License: S5245
+Permit: 24010-10000-02188
+Generated: 2026-03-08 15:40:31
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+INVESTIGATION_FAILED: No information found on "Owner-Builder" matching contractor license S5245 or LA Permit 24010-10000-02188 in CSLB records, LADBS searches, or LA-area contractor directories; "Owner-Builder" refers to a permit classification for self-performing owners, not a licensed contractor entity with decision makers or networkable structure.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ca/los-angeles/category/general-contractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/network/us/ca/los-angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://palibuilds.com/business-directory/single-category/?atbdp_category=general-contractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://labusinessjournal.com/wp-content/uploads/2025/07/2025-0623_labj_017-19_GenContract-LIST.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.easyleadz.com/lists/List-of-Construction-Companies-in-Los-Angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dnb.com/business-directory/company-information.residential_building_construction.us.california.los_angeles.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://recovery.lacounty.gov/rebuilding/licensed-contractors-and-industry-professionals-list/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://d7leadfinder.com/app/view-leads/48651600/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/ContractorList
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.bbb.org/us/ca/los-angeles/category/general-contractor
+- https://www.procore.com/network/us/ca/los-angeles
+- https://palibuilds.com/business-directory/single-category/?atbdp_category=general-contractor
+- https://labusinessjournal.com/wp-content/uploads/2025/07/2025-0623_labj_017-19_GenContract-LIST.pdf
+- https://www.easyleadz.com/lists/List-of-Construction-Companies-in-Los-Angeles
+- https://www.dnb.com/business-directory/company-information.residential_building_construction.us.california.los_angeles.html
+- https://recovery.lacounty.gov/rebuilding/licensed-contractors-and-industry-professionals-list/
+- https://d7leadfinder.com/app/view-leads/48651600/
+- https://www.cslb.ca.gov/onlineservices/dataportal/ContractorList

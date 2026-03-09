@@ -1,0 +1,1380 @@
+[
+    {
+        "key": "group_rw_lead_permit",
+        "title": "Permit Details",
+        "fields": [
+            {
+                "key": "field_permit_number",
+                "label": "Permit Number",
+                "name": "permit_number",
+                "type": "text",
+                "instructions": "Official permit number from LA City records",
+                "required": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_permit_type",
+                "label": "Permit Type",
+                "name": "permit_type",
+                "type": "select",
+                "instructions": "",
+                "choices": {
+                    "bldg": "Building",
+                    "elec": "Electrical",
+                    "mech": "Mechanical",
+                    "plumb": "Plumbing",
+                    "grading": "Grading",
+                    "demo": "Demolition",
+                    "other": "Other"
+                },
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_permit_sub_type",
+                "label": "Permit Sub-Type",
+                "name": "permit_sub_type",
+                "type": "text",
+                "instructions": "Detailed permit classification",
+                "wrapper": {
+                    "width": "34",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_permit_status",
+                "label": "Permit Status",
+                "name": "permit_status",
+                "type": "select",
+                "choices": {
+                    "issued": "Issued",
+                    "submitted": "Submitted",
+                    "approved": "Approved",
+                    "pending": "Pending Review",
+                    "expired": "Expired",
+                    "closed": "Closed"
+                },
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_issue_date",
+                "label": "Issue Date",
+                "name": "issue_date",
+                "type": "date_picker",
+                "display_format": "F j, Y",
+                "return_format": "Y-m-d",
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_expiration_date",
+                "label": "Expiration Date",
+                "name": "expiration_date",
+                "type": "date_picker",
+                "display_format": "F j, Y",
+                "return_format": "Y-m-d",
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_valuation",
+                "label": "Valuation ($)",
+                "name": "valuation",
+                "type": "number",
+                "instructions": "Declared project value in USD",
+                "prepend": "$",
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "active": true
+    },
+    {
+        "key": "group_rw_lead_property",
+        "title": "Property Details",
+        "fields": [
+            {
+                "key": "field_address",
+                "label": "Street Address",
+                "name": "address",
+                "type": "text",
+                "instructions": "Full street address from permit",
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_city",
+                "label": "City",
+                "name": "city",
+                "type": "text",
+                "default_value": "Los Angeles",
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_zip_code",
+                "label": "ZIP Code",
+                "name": "zip_code",
+                "type": "text",
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_council_district",
+                "label": "Council District",
+                "name": "council_district",
+                "type": "text",
+                "wrapper": {
+                    "width": "34",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_use_type",
+                "label": "Property Use Type",
+                "name": "use_type",
+                "type": "select",
+                "choices": {
+                    "commercial": "Commercial",
+                    "residential": "Residential",
+                    "industrial": "Industrial",
+                    "mixed_use": "Mixed Use",
+                    "institutional": "Institutional",
+                    "other": "Other"
+                },
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_use_description",
+                "label": "Use Description",
+                "name": "use_description",
+                "type": "text",
+                "instructions": "Detailed property use classification",
+                "wrapper": {
+                    "width": "67",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_floor_area_sqft",
+                "label": "Floor Area (sq ft)",
+                "name": "floor_area_sqft",
+                "type": "number",
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_stories",
+                "label": "Number of Stories",
+                "name": "stories",
+                "type": "number",
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_dwelling_units",
+                "label": "Dwelling Units",
+                "name": "dwelling_units",
+                "type": "number",
+                "wrapper": {
+                    "width": "34",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_work_description",
+                "label": "Work Description",
+                "name": "work_description",
+                "type": "textarea",
+                "instructions": "Scope of work from permit application",
+                "rows": 3,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_latitude",
+                "label": "Latitude",
+                "name": "latitude",
+                "type": "number",
+                "step": "any",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_longitude",
+                "label": "Longitude",
+                "name": "longitude",
+                "type": "number",
+                "step": "any",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 5,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "active": true
+    },
+    {
+        "key": "group_rw_lead_applicant",
+        "title": "Filing Party / Applicant",
+        "fields": [
+            {
+                "key": "field_applicant_name",
+                "label": "Applicant Name",
+                "name": "applicant_name",
+                "type": "text",
+                "instructions": "Name of the filing party",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_applicant_company",
+                "label": "Company / Organization",
+                "name": "applicant_company",
+                "type": "text",
+                "instructions": "Business entity name if applicable",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_applicant_address",
+                "label": "Applicant Address",
+                "name": "applicant_address",
+                "type": "text",
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_applicant_phone",
+                "label": "Phone",
+                "name": "applicant_phone",
+                "type": "text",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_applicant_email",
+                "label": "Email",
+                "name": "applicant_email",
+                "type": "email",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_applicant_ai_investigation",
+                "label": "AI Investigation - Applicant",
+                "name": "applicant_ai_investigation",
+                "type": "group",
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_applicant_ai_status",
+                        "label": "Investigation Status",
+                        "name": "status",
+                        "type": "select",
+                        "choices": {
+                            "pending": "Pending",
+                            "in_progress": "In Progress",
+                            "completed": "Completed",
+                            "failed": "Failed",
+                            "skipped": "Skipped"
+                        },
+                        "default_value": "pending",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_ai_timestamp",
+                        "label": "Last Updated",
+                        "name": "timestamp",
+                        "type": "date_time_picker",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_ai_confidence",
+                        "label": "Confidence Score",
+                        "name": "confidence",
+                        "type": "range",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_ai_agent",
+                        "label": "Agent Used",
+                        "name": "agent",
+                        "type": "text",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_social_linkedin",
+                        "label": "LinkedIn URL",
+                        "name": "linkedin",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_website",
+                        "label": "Website",
+                        "name": "website",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_social_other",
+                        "label": "Other Profiles",
+                        "name": "other_profiles",
+                        "type": "textarea",
+                        "rows": 2,
+                        "wrapper": {
+                            "width": "34",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_ai_summary",
+                        "label": "AI Summary",
+                        "name": "summary",
+                        "type": "textarea",
+                        "instructions": "AI-generated summary of applicant research",
+                        "rows": 4,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_applicant_ai_raw",
+                        "label": "Raw Investigation Data",
+                        "name": "raw_data",
+                        "type": "textarea",
+                        "instructions": "JSON data from AI investigation",
+                        "rows": 6,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    }
+                ],
+                "wrapper": {
+                    "width": "100",
+                    "class": "rw-ai-investigation-group",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 10,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "active": true
+    },
+    {
+        "key": "group_rw_lead_owner",
+        "title": "Property Owner Information",
+        "fields": [
+            {
+                "key": "field_owner_name",
+                "label": "Owner Name",
+                "name": "owner_name",
+                "type": "text",
+                "instructions": "Property owner from permit records",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_owner_company",
+                "label": "Company / Entity",
+                "name": "owner_company",
+                "type": "text",
+                "instructions": "Business entity if applicable (LLC, Corp, etc.)",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_owner_address",
+                "label": "Owner Address",
+                "name": "owner_address",
+                "type": "text",
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_owner_phone",
+                "label": "Phone",
+                "name": "owner_phone",
+                "type": "text",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_owner_email",
+                "label": "Email",
+                "name": "owner_email",
+                "type": "email",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_owner_ai_investigation",
+                "label": "AI Investigation - Owner",
+                "name": "owner_ai_investigation",
+                "type": "group",
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_owner_ai_status",
+                        "label": "Investigation Status",
+                        "name": "status",
+                        "type": "select",
+                        "choices": {
+                            "pending": "Pending",
+                            "in_progress": "In Progress",
+                            "completed": "Completed",
+                            "failed": "Failed",
+                            "skipped": "Skipped"
+                        },
+                        "default_value": "pending",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_ai_timestamp",
+                        "label": "Last Updated",
+                        "name": "timestamp",
+                        "type": "date_time_picker",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_ai_confidence",
+                        "label": "Confidence Score",
+                        "name": "confidence",
+                        "type": "range",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_ai_agent",
+                        "label": "Agent Used",
+                        "name": "agent",
+                        "type": "text",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_social_linkedin",
+                        "label": "LinkedIn URL",
+                        "name": "linkedin",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_website",
+                        "label": "Website",
+                        "name": "website",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_social_other",
+                        "label": "Other Profiles",
+                        "name": "other_profiles",
+                        "type": "textarea",
+                        "rows": 2,
+                        "wrapper": {
+                            "width": "34",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_ai_summary",
+                        "label": "AI Summary",
+                        "name": "summary",
+                        "type": "textarea",
+                        "instructions": "AI-generated summary of owner research",
+                        "rows": 4,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_owner_ai_raw",
+                        "label": "Raw Investigation Data",
+                        "name": "raw_data",
+                        "type": "textarea",
+                        "instructions": "JSON data from AI investigation",
+                        "rows": 6,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    }
+                ],
+                "wrapper": {
+                    "width": "100",
+                    "class": "rw-ai-investigation-group",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 12,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "active": true
+    },
+    {
+        "key": "group_rw_lead_contractor",
+        "title": "Contractor Information",
+        "fields": [
+            {
+                "key": "field_contractor_name",
+                "label": "Contractor Name",
+                "name": "contractor_name",
+                "type": "text",
+                "instructions": "Licensed contractor on permit",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_company",
+                "label": "Company Name",
+                "name": "contractor_company",
+                "type": "text",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_license",
+                "label": "License Number",
+                "name": "contractor_license",
+                "type": "text",
+                "instructions": "CSLB License Number",
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_license_class",
+                "label": "License Class",
+                "name": "contractor_license_class",
+                "type": "text",
+                "instructions": "e.g., A, B, C-10",
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_license_expiry",
+                "label": "License Expiry",
+                "name": "contractor_license_expiry",
+                "type": "date_picker",
+                "wrapper": {
+                    "width": "34",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_address",
+                "label": "Business Address",
+                "name": "contractor_address",
+                "type": "text",
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_phone",
+                "label": "Phone",
+                "name": "contractor_phone",
+                "type": "text",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_email",
+                "label": "Email",
+                "name": "contractor_email",
+                "type": "email",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_contractor_ai_investigation",
+                "label": "AI Investigation - Contractor",
+                "name": "contractor_ai_investigation",
+                "type": "group",
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_contractor_ai_status",
+                        "label": "Investigation Status",
+                        "name": "status",
+                        "type": "select",
+                        "choices": {
+                            "pending": "Pending",
+                            "in_progress": "In Progress",
+                            "completed": "Completed",
+                            "failed": "Failed",
+                            "skipped": "Skipped",
+                            "not_applicable": "N/A"
+                        },
+                        "default_value": "pending",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_ai_timestamp",
+                        "label": "Last Updated",
+                        "name": "timestamp",
+                        "type": "date_time_picker",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_ai_confidence",
+                        "label": "Confidence Score",
+                        "name": "confidence",
+                        "type": "range",
+                        "min": 0,
+                        "max": 100,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_ai_agent",
+                        "label": "Agent Used",
+                        "name": "agent",
+                        "type": "text",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_cslb_verified",
+                        "label": "CSLB Verified",
+                        "name": "cslb_verified",
+                        "type": "true_false",
+                        "ui": 1,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_cslb_status",
+                        "label": "CSLB Status",
+                        "name": "cslb_status",
+                        "type": "text",
+                        "instructions": "Active, Suspended, Revoked, etc.",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_bonded",
+                        "label": "Bonded",
+                        "name": "bonded",
+                        "type": "true_false",
+                        "ui": 1,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_insured",
+                        "label": "Insured",
+                        "name": "insured",
+                        "type": "true_false",
+                        "ui": 1,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_website",
+                        "label": "Website",
+                        "name": "website",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_yelp",
+                        "label": "Yelp/Reviews URL",
+                        "name": "reviews_url",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_ai_summary",
+                        "label": "AI Summary",
+                        "name": "summary",
+                        "type": "textarea",
+                        "instructions": "AI-generated summary of contractor research",
+                        "rows": 4,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_contractor_ai_raw",
+                        "label": "Raw Investigation Data",
+                        "name": "raw_data",
+                        "type": "textarea",
+                        "rows": 6,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    }
+                ],
+                "wrapper": {
+                    "width": "100",
+                    "class": "rw-ai-investigation-group",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 15,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "active": true
+    },
+    {
+        "key": "group_rw_lead_manager",
+        "title": "Property Manager / Contact",
+        "fields": [
+            {
+                "key": "field_manager_name",
+                "label": "Manager Name",
+                "name": "manager_name",
+                "type": "text",
+                "instructions": "Property manager or primary contact",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_manager_company",
+                "label": "Management Company",
+                "name": "manager_company",
+                "type": "text",
+                "instructions": "Property management company if applicable",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_manager_address",
+                "label": "Manager Address",
+                "name": "manager_address",
+                "type": "text",
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_manager_phone",
+                "label": "Phone",
+                "name": "manager_phone",
+                "type": "text",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_manager_email",
+                "label": "Email",
+                "name": "manager_email",
+                "type": "email",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_manager_ai_investigation",
+                "label": "AI Investigation - Manager",
+                "name": "manager_ai_investigation",
+                "type": "group",
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_manager_ai_status",
+                        "label": "Investigation Status",
+                        "name": "status",
+                        "type": "select",
+                        "choices": {
+                            "pending": "Pending",
+                            "in_progress": "In Progress",
+                            "completed": "Completed",
+                            "failed": "Failed",
+                            "skipped": "Skipped"
+                        },
+                        "default_value": "pending",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_ai_timestamp",
+                        "label": "Last Updated",
+                        "name": "timestamp",
+                        "type": "date_time_picker",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_ai_confidence",
+                        "label": "Confidence Score",
+                        "name": "confidence",
+                        "type": "range",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_ai_agent",
+                        "label": "Agent Used",
+                        "name": "agent",
+                        "type": "text",
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_social_linkedin",
+                        "label": "LinkedIn URL",
+                        "name": "linkedin",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_website",
+                        "label": "Website",
+                        "name": "website",
+                        "type": "url",
+                        "wrapper": {
+                            "width": "33",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_social_other",
+                        "label": "Other Profiles",
+                        "name": "other_profiles",
+                        "type": "textarea",
+                        "rows": 2,
+                        "wrapper": {
+                            "width": "34",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_ai_summary",
+                        "label": "AI Summary",
+                        "name": "summary",
+                        "type": "textarea",
+                        "instructions": "AI-generated summary of manager research",
+                        "rows": 4,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    },
+                    {
+                        "key": "field_manager_ai_raw",
+                        "label": "Raw Investigation Data",
+                        "name": "raw_data",
+                        "type": "textarea",
+                        "instructions": "JSON data from AI investigation",
+                        "rows": 6,
+                        "wrapper": {
+                            "width": "100",
+                            "class": "",
+                            "id": ""
+                        }
+                    }
+                ],
+                "wrapper": {
+                    "width": "100",
+                    "class": "rw-ai-investigation-group",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 17,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "active": true
+    },
+    {
+        "key": "group_rw_lead_pipeline",
+        "title": "Lead Pipeline & Scoring",
+        "fields": [
+            {
+                "key": "field_lead_score",
+                "label": "AI Score",
+                "name": "lead_score",
+                "type": "range",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "default_value": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_lead_status",
+                "label": "Pipeline Status",
+                "name": "lead_status",
+                "type": "select",
+                "choices": {
+                    "imported": "Imported",
+                    "scored": "Scored",
+                    "candidate": "Candidate",
+                    "investigating": "AI Investigating",
+                    "approved": "Approved",
+                    "contacted": "Contacted",
+                    "converted": "Converted",
+                    "archived": "Archived",
+                    "rejected": "Rejected"
+                },
+                "default_value": "imported",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_import_source",
+                "label": "Import Source",
+                "name": "import_source",
+                "type": "text",
+                "instructions": "Socrata dataset ID or import job name",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_imported_at",
+                "label": "Imported At",
+                "name": "imported_at",
+                "type": "date_time_picker",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_score_breakdown",
+                "label": "Score Breakdown",
+                "name": "score_breakdown",
+                "type": "group",
+                "layout": "table",
+                "sub_fields": [
+                    {
+                        "key": "field_score_valuation",
+                        "label": "Valuation",
+                        "name": "valuation",
+                        "type": "number"
+                    },
+                    {
+                        "key": "field_score_use_type",
+                        "label": "Use Type",
+                        "name": "use_type",
+                        "type": "number"
+                    },
+                    {
+                        "key": "field_score_recency",
+                        "label": "Recency",
+                        "name": "recency",
+                        "type": "number"
+                    },
+                    {
+                        "key": "field_score_contractor",
+                        "label": "Contractor",
+                        "name": "contractor",
+                        "type": "number"
+                    },
+                    {
+                        "key": "field_score_custom",
+                        "label": "Custom",
+                        "name": "custom",
+                        "type": "number"
+                    }
+                ],
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_notes",
+                "label": "Internal Notes",
+                "name": "internal_notes",
+                "type": "textarea",
+                "instructions": "Notes visible only to team members",
+                "rows": 3,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 20,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "active": true
+    },
+    {
+        "key": "group_rw_lead_socrata_raw",
+        "title": "Raw Import Data",
+        "fields": [
+            {
+                "key": "field_socrata_record_id",
+                "label": "Socrata Record ID",
+                "name": "socrata_record_id",
+                "type": "text",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_import_batch_id",
+                "label": "Import Batch ID",
+                "name": "import_batch_id",
+                "type": "text",
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                }
+            },
+            {
+                "key": "field_raw_json",
+                "label": "Raw JSON Response",
+                "name": "raw_json",
+                "type": "textarea",
+                "instructions": "Original JSON data from Socrata API",
+                "rows": 10,
+                "wrapper": {
+                    "width": "100",
+                    "class": "",
+                    "id": ""
+                }
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "rw_lead"
+                }
+            ]
+        ],
+        "menu_order": 100,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "active": true
+    }
+]

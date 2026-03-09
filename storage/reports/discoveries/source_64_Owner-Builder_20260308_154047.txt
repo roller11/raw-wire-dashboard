@@ -1,0 +1,120 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 64
+Party: Owner-Builder
+License: S5245
+Permit: 24010-10000-02188
+Generated: 2026-03-08 15:40:47
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+# TARGET SUMMARY
+"Owner-Builder" is not a licensed contractor entity under CSLB license S5245; it refers to a permit classification in Los Angeles for property owners acting as their own general contractor on specific projects, bypassing the need for a licensed contractor. https://www.ladbs.org/services/core-services/plan-check-permit/owner-builder-permits No company website, decision makers, or network structure exists for "Owner-Builder" as a target; the LA Permit #24010-10000-02178 likely ties to an individual owner's private project, with no public records revealing owners, subcontractors, or bidding processes. https://ladbsdoc.lacity.org/validations/ CSLB license lookup for S5245 returns no active or historical matches for any business or individual named "Owner-Builder" or related terms in Los Angeles. https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+
+# PEOPLE
+No named decision makers, executives, gatekeepers, or personnel identified for "Owner-Builder" as it is a permit type, not a company with staff or leadership pages.
+
+# COMPANY
+No legal name, DBA, ownership structure, employee count, revenue, specialties, or active licensing found matching "Owner-Builder" with CSLB S5245; searches confirm "Owner-Builder" permits allow individuals to self-perform construction without a contractor license. https://www.cslb.ca.gov/Consumers/Owner_Builder.aspx No presence in LA contractor directories, Procore, BBB, or D&B listings under this name or license. https://www.procore.com/network/us/ca?types=general-contractors https://d7leadfinder.com/app/view-leads/26424500/
+
+# NETWORKING OPPORTUNITIES
+No associations, events, conferences, charity involvement, or trade group memberships found for "Owner-Builder" permit classification or license S5245.
+
+# DISCOVERED PROJECTS
+LA Permit #24010-10000-02188 is an Owner-Builder permit issued by LADBS, but public records do not disclose project address, owner name, value, status, type, or interior design opportunities; owner-builder projects are private and not listed with bidding or subcontractor details. https://ladbsdoc.lacity.org/validations/ No upcoming or active projects tied to CSLB S5245.
+
+# DISCOVERED ENTITIES
+No partners, subcontractors, architects, developers, owners, or related firms identified; owner-builder permits typically involve individual owners hiring directly without public procurement paths.
+
+# ENTRY POINTS
+No actionable entry points, bid lists, prequalification portals, or events to connect with decision makers, as no company or named individuals exist. For owner-builder permits, contact LADBS for permit holder details if publicly releasable, but privacy limits access. https://www.ladbs.org/services/core-services/plan-check-permit/owner-builder-permits
+
+# RED FLAGS
+Owner-builder permits carry risks for unlicensed work, potential code violations, and no workers' comp/bonding requirement, but no specific complaints, lawsuits, or issues tied to this permit/license. https://www.cslb.ca.gov/Consumers/Owner_Builder.aspx
+
+# SOURCES
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.ladbs.org/services/core-services/plan-check-permit/owner-builder-permits
+- https://ladbsdoc.lacity.org/validations/
+- https://www.cslb.ca.gov/Consumers/Owner_Builder.aspx
+- https://d7leadfinder.com/app/view-leads/26424500/
+- https://www.procore.com/network/us/ca?types=general-contractors
+- https://www.bbb.org/us/ca/los-angeles/category/general-contractor
+
+# SEARCH LEDGER
+- "CSLB license S5245 lookup Owner-Builder"
+- "Los Angeles Owner-Builder permit 24010-10000-02188 details"
+- "\"Owner-Builder\" contractor license S5245 Los Angeles"
+- "CSLB S5245 contractor name"
+- "LADBS permit 24010-10000-02188 owner"
+- "Owner-Builder construction company Los Angeles site:linkedin.com"
+- "\"S5245\" CSLB contractor"
+
+# EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://d7leadfinder.com/app/view-leads/26424500/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ca/los-angeles/category/general-contractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.malibu.org/list/ql/construction-professionals-7
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/network/us/ca?types=general-contractors
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://econstructinc.com/top-10-residential-contractors-in-los-angeles-for-2024-your-ultimate-guide/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://labusinessjournal.com/wp-content/uploads/2025/07/2025-0623_labj_017-19_GenContract-LIST.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://sccaweb.org/directory/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://recovery.lacounty.gov/rebuilding/licensed-contractors-and-industry-professionals-list/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/ContractorList
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: CSLB license S5245 lookup Owner-Builder
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: No license record for S5245; "Owner-Builder" not a licensed entity.
+- Query: Los Angeles Owner-Builder permit 24010-10000-02188 details
+  - URL: https://ladbsdoc.lacity.org/validations/
+  - Extracted Fact: Permit exists as Owner-Builder type; no owner name, address, or project details public.
+- Query: "Owner-Builder" contractor license S5245 Los Angeles
+  - URL: https://www.ladbs.org/services/core-services/plan-check-permit/owner-builder-permits
+  - Extracted Fact: Owner-Builder is permit for self-performing owners, no contractor license required or matching S5245.
+- Query: CSLB S5245 contractor name
+  - URL: https://www.cslb.ca.gov/Consumers/Owner_Builder.aspx
+  - Extracted Fact: Owner-builders exempt from licensing; no business tied to S5245.
+- Query: LADBS permit 24010-10000-02188 owner
+  - URL: https://ladbsdoc.lacity.org/validations/
+  - Extracted Fact: Validation search confirms permit number but blocks owner/project specifics.
+- Query: Owner-Builder construction company Los Angeles site:linkedin.com
+  - URL: No relevant LinkedIn results
+  - Extracted Fact: No company or people profiles match.
+- Query: "S5245" CSLB contractor
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/ContractorList
+  - Extracted Fact: Master list has no S5245 entry.
+
+# REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match) - Confirmed as permit type, not company; no license match.
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target - CSLB no S5245; LADBS confirms Owner-Builder permit exists but private.
+- [ ] TODO 3: Identify at least 2 potential decision makers - No people found; permit owners not public.
+- [x] TODO 4: Capture at least 3 concrete source URLs - 7+ URLs cited.
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings - 7 entries with facts.
+- [x] TODO 6: Summarize best entry points to reach decision makers - Summarized as none viable; LADBS contact only.
+- [ ] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work) - None found; private permit lacks signals.
+
+## DIRECT SOURCE URL APPENDIX
+- https://d7leadfinder.com/app/view-leads/26424500/
+- https://www.bbb.org/us/ca/los-angeles/category/general-contractor
+- https://www.malibu.org/list/ql/construction-professionals-7
+- https://www.procore.com/network/us/ca?types=general-contractors
+- https://econstructinc.com/top-10-residential-contractors-in-los-angeles-for-2024-your-ultimate-guide/
+- https://labusinessjournal.com/wp-content/uploads/2025/07/2025-0623_labj_017-19_GenContract-LIST.pdf
+- https://sccaweb.org/directory/
+- https://recovery.lacounty.gov/rebuilding/licensed-contractors-and-industry-professionals-list/
+- https://www.cslb.ca.gov/onlineservices/dataportal/ContractorList

@@ -1,0 +1,598 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 68
+Party: Parkway C & A
+License: 1023585-B
+Permit: 25016-20000-30006
+Generated: 2026-03-09 21:14:11
+Stage: direct_pass_2_refinement
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: xai/grok-4-1-fast-non-reasoning
+==================================================
+
+1. TARGET SUMMARY
+------------------
+
+Identity: Parkway C&A, L.P. (branded “Parkway Construction & Architecture” or “Parkway Construction & Associates”) confirmed as national design-build general contractor founded 1981, HQ Lewisville TX, California regional office Irvine CA (18600 MacArthur Blvd Ste 440, Irvine CA 92612, phone 949-272-3857) handling SoCal/LA work. Matches CA License #1023585 (General Building, active per BuildZoom as of Jan 2025, verify CSLB). No new confirmation of permit 25016-20000-30006 or address 6600 N Topanga Canyon Blvd Suite 1290 linking to Parkway; identity remains anchored to license/permit context but specific permit/address ambiguous—excluded from claims. Scale: 6500+ projects, licensed all 50 states, commercial design-build (restaurant/retail/entertainment/senior living/hospitality/industrial/worship/education/self-storage/defense). LA/SoCal: Permits/projects for Raising Cane’s, Chuck E Cheese, Kitchen United, Carvana, landlords (e.g., Duesenberg Investments).  
+https://parkwayconstruction.com  
+https://parkwayconstruction.com/offices/  
+https://parkwayconstruction.com/about-us/faq/  
+https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/  
+https://www.buildzoom.com/contractor/parkway-c-and-a  
+https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html  
+https://www.levelset.com/contractors/parkway-construction/permits/
+
+2. PEOPLE
+---------
+
+2.1 Executive / Strategic Decision Makers (HQ & Enterprise)
+
+1) Ryan Elmer – President & CEO  
+Role: President & CEO Parkway C&A L.P. (appt 2024, succeeded Rick Wojciechowski); prior VP Strategy/Business Development, led CA expansion.  
+Contact: Corporate channels; r*****@parkwa***.com (partial via Wiza). BYU NAC profile.  
+https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/  
+https://parkwayconstruction.com/about-us/  
+https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600  
+https://wiza.co/d/parkway-construction-associates-l-p/9796/ryan-elmer
+
+2) David Elmer – COO  
+Role: COO (appt 2024, succeeded Vaughan Hancock); prior VP Construction.  
+Contact: Corporate/HQ channels.  
+https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/  
+https://parkwayconstruction.com/about-us/
+
+3) Scott Chadwick – CFO  
+Role: CFO (retained post-2024 transition).  
+Contact: Corporate channels.  
+https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/  
+https://parkwayconstruction.com/about-us/
+
+2.2 Ownership / Partners / Founder
+
+John Golden Elmer – Founder/Partner (1981 founder).  
+Quentin Vaughan Hancock – Managing Partner (former COO).  
+Richard Gerard (Rick) Wojciechowski – Managing Partner (former President/CEO).  
+David Wesley Elmer – RME.  
+Jerry Bennett Elmer – Officer/Partner.  
+Others: Joseph William Elmer (Officer), Warren Dale Clark (Officer).  
+https://www.buildzoom.com/contractor/parkway-c-and-a  
+https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/  
+https://parkwayconstruction.com/about-us/
+
+2.3 Regional & Operational Contacts – California / Irvine Office
+
+Address/Phone: 18600 MacArthur Blvd Ste 440, Irvine CA 92612-1250 / (949) 272-3857.  
+Key Contacts (ConstructionJournal Irvine listing, titles/phones redacted): Aaron Shurts, Blake Nelson (Project Manager per Wiza), Brian Richardson, Dan Booles, Jess Wagner, Kimberly Bradstreet, Travis Allen, Troy Smith, Estimating. Likely PMs/estimators for SoCal projects (Raising Cane’s #616 South Gate, Kitchen United Pasadena). No new titles/roles/contacts confirmed.  
+https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html  
+https://wiza.co/d/parkway-construction-associates-l-p/9796/blake-nelson
+
+2.4 Additional Leadership (Enterprise)
+
+Jon Shaw – VP Construction.  
+Ted Young – VP Construction.  
+Ethan Mabe – VP Construction.  
+Travis Sheridan – VP Business Development (phone partial: +12143045570).  
+Mark Lundell – Senior Director Preconstruction.  
+Jennifer Wagner – Controller.  
+Chris Rutledge – Senior Director Architecture.  
+https://parkwayconstruction.com/about-us/  
+https://parkwayconstruction.com/about-us/your-team/
+
+2.5 Networking Contacts (Blue Book)
+
+Jared Baugh – Owner/Principal/Senior Executive (HQ, phone 469-322-3754). No new details.  
+https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/
+
+3. COMPANY
+----------
+
+Legal: Parkway C&A, L.P.  
+DBA: Parkway Construction & Architecture / Associates.  
+Type: Design-build GC (architecture+construction+precon+permitting+procurement); 5X Build process. HQ: 1000 Civic Cir, Lewisville TX. CA Office: Irvine (since 2018). Utah: Ogden (2021). License: CA #1023585 active (BuildZoom); verify CSLB. All 50 states licensed. Revenue: $560M (2022), 400+ employees. Markets: Restaurant/retail/entertainment/hospitality/etc. No vendor portal/bid process detailed; subcontractor page emphasizes partnerships, "BID TODAY" invite but no form/portal.  
+https://parkwayconstruction.com/subcontractors/  
+https://parkwayconstruction.com/offices/  
+https://www.buildzoom.com/contractor/parkway-c-and-a  
+https://parkwayconstruction.com/about-us/faq/
+
+4. NETWORKING OPPORTUNITIES
+---------------------------
+
+1) Irvine Office Direct: (949) 272-3857; key contacts/Estimating for LA projects.  
+https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html
+
+2) Subcontractor Partnerships: General invite via site; contact for bids.  
+https://parkwayconstruction.com/subcontractors/
+
+3) Blue Book: Qualifications to Jared Baugh.  
+https://www.thebluebook.com/iProView/1616772
+
+4) BYU NAC: Ryan Elmer.  
+https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600
+
+5) Business Dev Team: Travis Sheridan et al.  
+https://parkwayconstruction.com/about-us/your-team/
+
+5. DISCOVERED PROJECTS (LA/SoCal)
+---------------------------------
+
+No new 2025/2026/upcoming confirmed. Prior: Raising Cane’s (North Hollywood/Northridge/South Gate #616 post-bid), Kitchen United Pasadena (post-bid), Chuck E Cheese Beverly Hills TI, etc. No link to 25016-20000-30006 or Topanga.  
+https://www.levelset.com/contractors/parkway-construction/permits/  
+https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html
+
+6. DISCOVERED ENTITIES
+----------------------
+
+Clients: Raising Cane’s, CEC Entertainment/Chuck E Cheese, Kitchen United, Carvana, At Home.  
+Owners: Duesenberg Investments, Gray Enterprises.  
+No new partners/subcontractors.
+
+7. ENTRY POINTS (ACTIONABLE)
+----------------------------
+
+1) Irvine Phone: (949) 272-3857 to Estimating/key contacts re: LA projects.  
+2) Subcontractor Page: "BID TODAY" via site contact.  
+https://parkwayconstruction.com/subcontractors/
+
+3) Business Dev: Travis Sheridan (+12143045570 partial).  
+https://parkwayconstruction.com/about-us/your-team/
+
+4) Blue Book to Jared Baugh (469-322-3754).  
+5) Corporate Contact for executives.
+
+8. RED FLAGS
+------------
+
+Slow payments (Levelset). Historic CA licenses inactive. Verify CSLB #1023585 current status—no new data post-Jan 2025.  
+https://www.levelset.com/contractors/parkway-construction/  
+https://www.buildzoom.com/contractor/parkway-c-and-a
+
+9. SOURCES (DEDUPLICATED URL LIST)
+----------------------------------
+
+https://parkwayconstruction.com  
+https://parkwayconstruction.com/offices/  
+https://parkwayconstruction.com/about-us/  
+https://parkwayconstruction.com/about-us/your-team/  
+https://parkwayconstruction.com/subcontractors/  
+https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/  
+https://parkwayconstruction.com/about-us/faq/  
+https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/  
+https://www.buildzoom.com/contractor/parkway-c-and-a  
+https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html  
+https://www.levelset.com/contractors/parkway-construction/permits/  
+https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/  
+https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600  
+https://wiza.co/d/parkway-construction-associates-l-p/9796  
+https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+
+10. SEARCH LEDGER (KEY QUERIES USED)
+------------------------------------
+
+PASS 1 preserved + new:  
+"Parkway C & A","1023585","6600 N TOPANGA CANYON BLVD Suite 1290","25016-20000-30006","Aaron Shurts Parkway Construction","Jared Baugh Parkway","Parkway Construction Irvine bidding","Parkway C&A LADBS 25016-20000-30006","Parkway Construction Irvine key contacts","CSLB 1023585 status","Parkway Construction Irvine LinkedIn","Ryan Elmer Parkway","Parkway Construction Irvine office director".
+
+11. EVIDENCE LOG
+----------------
+
+1. (Parkway Irvine key contacts → https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html → Irvine office 18600 MacArthur Blvd Ste 440 (949)272-3857; key contacts: Aaron Shurts, Blake Nelson etc.)
+
+2. (Subcontractors → https://parkwayconstruction.com/subcontractors/ → General subcontractor partner invite, "BID TODAY", no portal/form.)
+
+3. (About/Leadership → https://parkwayconstruction.com/about-us/ → Executives: Ryan Elmer CEO, David Elmer COO, Scott Chadwick CFO; leadership: Jon Shaw/Ted Young/Ethan Mabe VPs Construction, Travis Sheridan VP BD, Jennifer Wagner Controller etc.)
+
+4. (Your Team → https://parkwayconstruction.com/about-us/your-team/ → Business dev team: Travis Sheridan, Dan Hammons, Ty Schlotmann, Nick Lesage etc.; no Irvine-specific.)
+
+5. (Blake Nelson → https://wiza.co/d/parkway-construction-associates-l-p/9796/blake-nelson → Blake Nelson Project Manager Parkway.)
+
+6. (CSLB → https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx → Official verification for #1023585; no direct new status.)
+
+12. REQUIRED TODO CHECKLIST
+---------------------------
+
+[x] TODO 1: Target identity confirmed via license #1023585/CA office; 25016-20000-30006/Topanga ambiguous—no switch.  
+[x] TODO 2: CSLB/LADBS/Levelset checked; no new permit match.  
+[x] TODO 3: Executives + Irvine keys + leadership.  
+[x] TODO 4: 10+ new/verified URLs.  
+[x] TODO 5: Log updated source-backed.  
+[x] TODO 6: Irvine phone, subcontractor page, BD team.  
+[x] TODO 7: Subcontractor bid invite, BD contacts, prior projects.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://care.healthline.com/find-care/provider/jared-baugh-1518184076
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/title
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/role
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contacts.google.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://play.google.com/store/apps/details?id=com.google.android.dialer&hl=en_US
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Email
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Irvine,_California
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/California
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/bid
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.youtube.com/watch?v=iN0y4P8gPZs
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/subcontractors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wiktionary.org/wiki/title
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Role
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/contact
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/parkway-c-and-a
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://qdro.com/retirement-qdro/PARKWAY-C-A-LP-401K-SAVINGS-PLAN/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.tacomaworld.com/tirecalc?tires=235-75r15-31-10.5r15
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/canoga-park/91303-2609/6600-topanga-canyon-blvd-34.19096,-118.60453
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://farringtonspecialtycenters.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwaycoc.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/about-us/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.einpresswire.com/article-print/685192488/innovative-leadership-parkway-c-a-lp-appoints-new-ceo-coo
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://zh-hans.ipshu.com/ip_d_list/103.25.8
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.loopnet.com/property/6600-topanga-canyon-blvd-canoga-park-ca-91303/06037-2139004044/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Los_Angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://dbs.lacity.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/instruction-permits/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calculator.net/percent-calculator.html?ctype=22&x=46
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zillow.com/homedetails/6600-Topanga-Canyon-Blvd-Canoga-Park-CA-91303/2070248657_zpid/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/project
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/2025
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.discoverlosangeles.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbsservices2.lacity.org/onlineservices/?service=plr
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.alamedaca.gov/Departments/Planning-Building-and-Transportation/Permit-Center
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Bidding
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Subcontractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bankofamerica.com/mortgage/learn/mortgage-prequalification/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Vendor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Portal_(video_game)
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/process
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://uplandsoftware.com/articles/content-automation/what-is-a-request-for-proposal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cityofirvine.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dictionary.cambridge.org/us/dictionary/english/bidding
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.law.cornell.edu/wex/subcontractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.experian.com/blogs/ask-experian/pre-approved-vs-pre-qualified-whats-the-difference/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://aaronshurts.com/info.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Tim_Blake_Nelson
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://english.umd.edu/directory/brian-richardson
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rmdigital.co.id/kamus/boolean/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://canvasrebel.com/meet-jess-wagner-2/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://arch-fab.com/author/theturnbucklechick/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Travis_Allen
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Troy_Smith
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://chapter2.transistor.fm/people/aaron-shurts
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Blake_Nelson
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Brian_Richardson_(rower)
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bc.edu/bc-web/sites/bc-news/articles/2025/spring/interview-with-daniel-bowles.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buyersbrokersonly.com/wagner
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/about-us/culture/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.parkwayconstruction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/about-us/your-team/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dnb.com/contact-directory/contact-profile.ryan_elmer.2efe030b580130241e838db07202e4c3.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/parkway-construction-and-associates-lp-az
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/offices/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://wiza.co/d/parkway-construction-associates-l-p/9796/ryan-elmer
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.npidashboard.com/npi/1073988242-david-elmer-md-pc
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/525401/parkway-construction/general-contractors/locations-contacts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://craft.co/parkway-construction-architecture/locations
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://muraena.ai/profile/ryan_elmer_58d27536
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://berry.edu/academics/fs/delmer
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/success-story/maverik/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://wiza.co/d/parkway-construction-associates-l-p/9796/blake-nelson
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cityofirvine.org/news-media/news-article/marine-way-undercrossing
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.permitla.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zillow.com/homedetails/6633-Topanga-Canyon-Blvd-Woodland-Hills-CA-91303/2131433461_zpid/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.datanyze.com/companies/parkway-construction-architecture/81740585
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://app.nittec.org/travel_advisories/construction_activities_reports/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://content.govdelivery.com/accounts/CAIRVINE/bulletins/3caf537
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.permitla.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/1
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/about-us/leadership/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contactout.com/Travis-Sheridan-66196
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Jon_Shaw
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lithoniacity.org/Assets/Files/City%20News/Parkway%20Bid.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/topanga-cny-repaving-project
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://pw.lacounty.gov/explore-public-works/permit-center/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://prospect-la.com/about-2/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.marketscreener.com/insider/TRAVIS-SHERIDAN-A1XQQV/experience/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://jonshawpaintings.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.smdp.com/caltrans-announces-weekly-road-and-lane-closures-on-pacific-coast-highway-and-topanga-canyon-boulevard/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dpw.lacounty.gov/explore-public-works/permit-center/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zippia.com/parkway-construction-architecture-careers-1582130/executives/
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://care.healthline.com/find-care/provider/jared-baugh-1518184076
+- https://parkwayconstruction.com
+- https://www.merriam-webster.com/dictionary/title
+- https://www.merriam-webster.com/dictionary/role
+- https://contacts.google.com
+- https://play.google.com/store/apps/details?id=com.google.android.dialer&hl=en_US
+- https://en.wikipedia.org/wiki/Email
+- https://en.wikipedia.org/wiki/Irvine,_California
+- https://en.wikipedia.org/wiki/California
+- https://www.merriam-webster.com/dictionary/bid
+- https://www.youtube.com/watch?v=iN0y4P8gPZs
+- https://parkwayconstruction.com/subcontractors/
+- https://en.wiktionary.org/wiki/title
+- https://en.wikipedia.org/wiki/Role
+- https://www.merriam-webster.com/dictionary/contact
+- https://www.buildzoom.com/contractor/parkway-c-and-a
+- https://qdro.com/retirement-qdro/PARKWAY-C-A-LP-401K-SAVINGS-PLAN/
+- https://www.tacomaworld.com/tirecalc?tires=235-75r15-31-10.5r15
+- https://www.mapquest.com/us/california/canoga-park/91303-2609/6600-topanga-canyon-blvd-34.19096,-118.60453
+- https://farringtonspecialtycenters.com
+- https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/
+- https://parkwaycoc.org
+- https://www.cslb.ca.gov
+- https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/
+- https://parkwayconstruction.com/about-us/
+- https://www.einpresswire.com/article-print/685192488/innovative-leadership-parkway-c-a-lp-appoints-new-ceo-coo
+- https://zh-hans.ipshu.com/ip_d_list/103.25.8
+- https://www.loopnet.com/property/6600-topanga-canyon-blvd-canoga-park-ca-91303/06037-2139004044/
+- https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/
+- https://en.wikipedia.org/wiki/Los_Angeles
+- http://dbs.lacity.gov
+- https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/instruction-permits/
+- https://www.calculator.net/percent-calculator.html?ctype=22&x=46
+- https://www.zillow.com/homedetails/6600-Topanga-Canyon-Blvd-Canoga-Park-CA-91303/2070248657_zpid/
+- https://www.merriam-webster.com/dictionary/project
+- https://en.wikipedia.org/wiki/2025
+- https://www.discoverlosangeles.com
+- https://www.ladbsservices2.lacity.org/onlineservices/?service=plr
+- https://www.alamedaca.gov/Departments/Planning-Building-and-Transportation/Permit-Center
+- https://en.wikipedia.org/wiki/Bidding
+- https://en.wikipedia.org/wiki/Subcontractor
+- https://www.bankofamerica.com/mortgage/learn/mortgage-prequalification/
+- https://en.wikipedia.org/wiki/Vendor
+- https://en.wikipedia.org/wiki/Portal_(video_game)
+- https://www.merriam-webster.com/dictionary/process
+- https://uplandsoftware.com/articles/content-automation/what-is-a-request-for-proposal/
+- https://cityofirvine.org
+- https://dictionary.cambridge.org/us/dictionary/english/bidding
+- https://www.law.cornell.edu/wex/subcontractor
+- https://www.experian.com/blogs/ask-experian/pre-approved-vs-pre-qualified-whats-the-difference/
+- http://aaronshurts.com/info.html
+- https://en.wikipedia.org/wiki/Tim_Blake_Nelson
+- https://english.umd.edu/directory/brian-richardson
+- https://rmdigital.co.id/kamus/boolean/
+- https://canvasrebel.com/meet-jess-wagner-2/
+- https://arch-fab.com/author/theturnbucklechick/
+- https://en.wikipedia.org/wiki/Travis_Allen
+- https://en.wikipedia.org/wiki/Troy_Smith
+- https://chapter2.transistor.fm/people/aaron-shurts
+- https://en.wikipedia.org/wiki/Blake_Nelson
+- https://en.wikipedia.org/wiki/Brian_Richardson_(rower)
+- https://www.bc.edu/bc-web/sites/bc-news/articles/2025/spring/interview-with-daniel-bowles.html
+- https://www.buyersbrokersonly.com/wagner
+- https://parkwayconstruction.com/about-us/culture/
+- http://www.parkwayconstruction.com
+- https://parkwayconstruction.com/about-us/your-team/
+- https://www.dnb.com/contact-directory/contact-profile.ryan_elmer.2efe030b580130241e838db07202e4c3.html
+- https://www.buildzoom.com/contractor/parkway-construction-and-associates-lp-az
+- https://parkwayconstruction.com/offices/
+- https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html
+- https://wiza.co/d/parkway-construction-associates-l-p/9796/ryan-elmer
+- https://www.npidashboard.com/npi/1073988242-david-elmer-md-pc
+- https://www.thebluebook.com/iProView/525401/parkway-construction/general-contractors/locations-contacts/
+- https://craft.co/parkway-construction-architecture/locations
+- https://muraena.ai/profile/ryan_elmer_58d27536
+- https://berry.edu/academics/fs/delmer
+- https://parkwayconstruction.com/success-story/maverik/
+- https://wiza.co/d/parkway-construction-associates-l-p/9796/blake-nelson
+- https://cityofirvine.org/news-media/news-article/marine-way-undercrossing
+- http://www.permitla.org
+- https://www.zillow.com/homedetails/6633-Topanga-Canyon-Blvd-Woodland-Hills-CA-91303/2131433461_zpid/
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.datanyze.com/companies/parkway-construction-architecture/81740585
+- https://app.nittec.org/travel_advisories/construction_activities_reports/
+- https://content.govdelivery.com/accounts/CAIRVINE/bulletins/3caf537
+- https://www.permitla.org
+- https://www.cslb.ca.gov/1
+- https://parkwayconstruction.com/about-us/leadership/
+- https://contactout.com/Travis-Sheridan-66196
+- https://en.wikipedia.org/wiki/Jon_Shaw
+- https://lithoniacity.org/Assets/Files/City%20News/Parkway%20Bid.pdf
+- https://dot.ca.gov/caltrans-near-me/district-7/district-7-projects/topanga-cny-repaving-project
+- https://pw.lacounty.gov/explore-public-works/permit-center/
+- https://prospect-la.com/about-2/
+- https://www.marketscreener.com/insider/TRAVIS-SHERIDAN-A1XQQV/experience/
+- https://jonshawpaintings.com
+- https://www.smdp.com/caltrans-announces-weekly-road-and-lane-closures-on-pacific-coast-highway-and-topanga-canyon-boulevard/
+- https://dpw.lacounty.gov/explore-public-works/permit-center/
+- https://www.zippia.com/parkway-construction-architecture-careers-1582130/executives/

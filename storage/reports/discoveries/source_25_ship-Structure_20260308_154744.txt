@@ -1,0 +1,100 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 25
+Party: ship Structure
+License: N/A
+Permit: 25010-10000-00953
+Generated: 2026-03-08 15:47:44
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+# TARGET SUMMARY
+No company or entity named "ship Structure" identified as an owner or contractor matching LA Permit # 25010-10000-00953 in Los Angeles area searches across LADBS, CSLB, or public records. Searches for the exact name, permit, and variations (e.g., "ship structure construction Los Angeles", "ship Structure permit 25010-10000-00953") yielded no direct matches; results surfaced unrelated marine/ship repair firms but none tied to the target name or permit. Investigation reveals no decision makers, projects, or networking leads specific to "ship Structure"; permit may reference a private owner-builder for ship-related structural work not publicly linked to a firm.
+
+# PEOPLE
+No decision makers, executives, gatekeepers, or personnel identified for "ship Structure" across CSLB lookups, company sites, LinkedIn, or LA construction directories. No names, titles, contacts, or roles found matching the target.
+
+# COMPANY
+No legal name, DBA, license, ownership structure, specialties, employee count, revenue, or scale confirmed for "ship Structure". CSLB license lookup for implied contractor yielded no results under this name. LADBS permit 25010-10000-00953 not publicly detailed in accessible records; no owner-builder identity extracted. No evidence of GC, sub, developer, or owner type.
+
+# NETWORKING OPPORTUNITIES
+No associations, events, conferences, charity involvement, or trade groups linked to "ship Structure".
+
+# DISCOVERED PROJECTS
+No active, upcoming, or prior projects identified for "ship Structure", including no ties to permit 25010-10000-00953.
+
+# DISCOVERED ENTITIES
+No partners, subcontractors, clients, architects, suppliers, or related firms confirmed for "ship Structure".
+
+# ENTRY POINTS
+No actionable entry points, bid portals, prequal forms, vendor lists, or procurement paths found. No opportunities to connect with decision makers.
+
+# RED FLAGS
+No lawsuits, safety issues, financial trouble, or complaints found due to lack of target identification.
+
+# SOURCES
+No target-specific sources located.
+
+# SEARCH LEDGER
+- "ship Structure Los Angeles construction permit 25010-10000-00953"
+- "\"ship Structure\" OR \"shipstructure\" owner builder Los Angeles permit"
+- "CSLB license ship Structure Los Angeles"
+- "LADBS permit 25010-10000-00953 ship Structure"
+- "ship Structure contractor team leadership Los Angeles"
+- "\"ship Structure\" bid RFP prequalification Los Angeles"
+- "ship Structure event conference association Los Angeles marine"
+
+# EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://amarinecorp.com/find/marine-construction-in-los-angeles-california/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://associatedpacific.com/los-angeles-marine-construction-solutions/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://oceanwiderepair.com/ship-repair-los-angeles/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hc-co.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://curtinmaritime.com/services/shipyard-services-port-of-long-beach/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://portoflosangeles.org/business/terminals/maritime-support
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bluewavemaritime.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.foss.com/marine-services/naval-architecture-and-marine-engineering/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://nassco.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://connollypacific.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: "ship Structure Los Angeles construction permit 25010-10000-00953", URL: https://www.ladbs.org/services/check-status, extracted fact: No public permit details matching name/permit; LADBS search requires onsite form, no "ship Structure" listed.
+- Query: "CSLB license ship Structure Los Angeles", URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx, extracted fact: No license under "ship Structure"; zero results for name variations.
+- Query: "\"ship Structure\" OR \"shipstructure\" owner builder Los Angeles permit", URLs: [1][2][3][4][5][6], extracted fact: Results show marine/ship firms (e.g., American Marine, Associated Pacific) but none named "ship Structure" or linked to permit; no owner-builder match.
+
+# REQUIRED TODO CHECKLIST
+- [ ] TODO 1: Confirm target identity (name, license, permit/address match)
+- [ ] TODO 2: Visit LADBS/CSLB/registry sources relevant to target
+- [ ] TODO 3: Identify at least 2 potential decision makers
+- [ ] TODO 4: Capture at least 3 concrete source URLs
+- [ ] TODO 5: Produce EVIDENCE LOG entries tied to findings
+- [ ] TODO 6: Summarize best entry points to reach decision makers
+- [ ] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)
+
+## DIRECT SOURCE URL APPENDIX
+- https://amarinecorp.com/find/marine-construction-in-los-angeles-california/
+- https://associatedpacific.com/los-angeles-marine-construction-solutions/
+- https://oceanwiderepair.com/ship-repair-los-angeles/
+- https://www.hc-co.com
+- https://curtinmaritime.com/services/shipyard-services-port-of-long-beach/
+- https://portoflosangeles.org/business/terminals/maritime-support
+- https://www.bluewavemaritime.com
+- https://www.foss.com/marine-services/naval-architecture-and-marine-engineering/
+- https://nassco.com
+- https://connollypacific.com

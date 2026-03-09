@@ -1,0 +1,473 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 20
+Party: Hanover R S Construction
+License: 970389-B
+Permit: 21010-10001-06954
+Generated: 2026-03-09 21:02:26
+Stage: direct_pass_2_refinement
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: xai/grok-4-1-fast-non-reasoning
+==================================================
+
+1. TARGET SUMMARY
+Hanover R.S. Construction, LLC remains confirmed as a multi-state general contractor tied to Hanover Company, Houston-based multifamily developer, with principal address 1780 S Post Oak Lane, Houston, TX 77056, managed by Hanover R.S. Limited Partnership. No new evidence links this entity directly to California CSLB license 970389-B, LADBS permit 21010-10001-06954, or project address 6055 W Center Dr, Los Angeles, CA. Identity ambiguous for specified California/LADBS context; no compatible matches found in public records despite targeted searches. Houston-based entity operates nationally including California projects via Levelset data, but CSLB/LADBS alignment unconfirmed.
+Sources: North Carolina SOS https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066; Florida Sunbiz https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530; Levelset https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/; CSLB portal https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx (no detail surfaced); LADBS no public permit match.
+
+2. PEOPLE (Decision-maker / gatekeeper drill-down)
+2.1. CORTEZ ALLEN JOSEPH JR
+Role/Title: Owned by Cortez Allen Joseph Jr for Hanover R.S. Limited Partnership (Hollywood, FL office).
+Authority: Executive/ownership over manager of Hanover R.S. Construction, LLC.
+Contact: No direct info; route via BuildZoom https://www.buildzoom.com/contractor/hanover-rs-limited-partnership.
+Sources: https://www.buildzoom.com/contractor/hanover-rs-limited-partnership; Sunbiz above.
+
+2.2. HOWARD DYER SMITH
+Role/Title: Employee associated with Hanover R.S. Construction LLC, 1780 S Post Oak Lane, Houston, TX.
+Authority: Operational/technical qualifier for licensing.
+Contact: Phone (713) 858-0824.
+Sources: https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co.
+
+No additional named decision makers, bidding contacts, or LA-specific gatekeepers identified.
+
+3. COMPANY
+3.1. Identity & Structure: As PASS 1; no CA registry match for license/permit context.
+3.2. Type, Markets, Specialties: General Contractor, multifamily/mixed-use nationally including CA (e.g., San Jose, Burlingame via Levelset).
+Sources: https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/.
+3.3. Scale: Dozens of projects; e.g., $112M Dallas garage.
+3.4. Licensing: CSLB 970389-B unlinked publicly to this entity; no verification.
+3.5. Offices: Houston/Boston as listed.
+3.6. Reputation: BBB Not Rated (Danville CA, Medford MA listings incompatible jurisdiction/scale).
+
+4. NETWORKING OPPORTUNITIES
+4.1. Digital Procurement: Procore https://network.procore.com/p/hanover-rs-construction-llc-houston (+1 713-952-2363); Levelset AP https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/ (no emails in content).
+4.2. LA-Area: Hanover Hollywood (6200 Sunset) via Urbanize https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction; no new events/projects.
+No bidding processes, upcoming events, or partnerships detailed.
+
+5. DISCOVERED PROJECTS
+Hanover Hollywood, Westchester/Warner Center (historical); CA projects (San Jose/Burlingame). No ties to 6055 W Center Dr or permit 21010-10001-06954.
+Sources: As PASS 1; address search yielded no construction links.
+
+6. DISCOVERED ENTITIES (Network Map Seeds)
+Core: Hanover R.S. Construction LLC, Hanover R.S. Limited Partnership, Hanover Company.
+LA: Steinberg Hart.
+Others unchanged; Danville/Medford BBB listings excluded (incompatible).
+
+7. ENTRY POINTS (Actionable)
+Procore/Levelset vendor registration; Houston contacts. No LA-specific paths confirmed.
+
+8. RED FLAGS
+CSLB 970389-B/permit 21010-10001-06954 unverified for target; potential mismatch. Slow payments noted previously.
+
+9. SOURCES (deduplicated key URLs)
+https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066
+https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530
+https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/
+https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/
+https://www.buildzoom.com/contractor/hanover-rs-limited-partnership
+https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co
+https://network.procore.com/p/hanover-rs-construction-llc-houston
+https://la.urbanize.city/post/hollywood-6200-sunset-boulevard-hanover-company-construction
+https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+
+10. SEARCH LEDGER (queries executed, in order)
+1. "Hanover R S Construction"
+2. "CSLB license 970389"
+3. "Hanover R.S. Construction"
+4. "21010-10001-06954"
+5. "6055 W CENTER DR"
+6. "Hanover R S Construction"
+7. "970389-B" "Hanover R S Construction" "Hanover R.S. Construction" "6055 W CENTER DR"
+8. "LADBS permit 21010-10001-06954" "Hanover" "CSLB 970389-B contractor"
+9. "970389-B contractor name" "970389-B Hanover"
+10. "6055 W CENTER DR" "construction" "permit" "Hanover"
+11. "Hanover R S Construction" "LADBS" "Los Angeles"
+
+11. EVIDENCE LOG (query → URL → extracted fact)
+Query: "Hanover R S Construction" → https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/ → General Contractor; offices Houston/Boston; AP/vendor hub (no emails/phone in full content).
+Query: "CSLB license 970389" → https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx → Search form only; no public detail on 970389-B.
+Query: "21010-10001-06954" → No relevant matches.
+Query: "6055 W CENTER DR" → https://www.redfin.com/CA/Los-Angeles/6055-Center-Dr-90045/home/182333213 → Property record; no construction/permit/Hanover link.
+Query: "970389-B" "Hanover R S Construction" etc. → No linking evidence.
+Query: "LADBS permit 21010-10001-06954" etc. → LADBS sites; no permit data or Hanover match.
+Query: https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co → Howard Dyer Smith; phone (713) 858-0824; projects but none LA-specific.
+
+12. REQUIRED TODO CHECKLIST
+- [ ] TODO 1: Confirm target identity (name, license, permit/address match) → Ambiguous; no CA/LADBS evidence.
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target
+- [x] TODO 3: Identify at least 2 potential decision makers → Cortez Allen Joseph Jr; Howard Dyer Smith.
+- [x] TODO 4: Capture at least 3 concrete source URLs
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings
+- [x] TODO 6: Summarize best entry points to reach decision makers
+- [x] TODO 7: Identify at least 2 edge-signal diamonds → Procore/Levelset portals.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.redfin.com/CA/Los-Angeles/6055-Center-Dr-90045/home/182333213
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.xome.com/realestate/6055-center-dr-los-angeles-ca-90045-151430235
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/cizek-construction/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=19RC
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.all-contractors.com/Cizek_Homes_Builders_and_Contractors_in_Omaha_Nebraska_227630
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ne/omaha/profile/home-builders/cizek-construction-0714-300004038
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cityfeet.com/cont/listing/6601-center-dr-w-los-angeles-ca-90045/cs25825518
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.waze.com/live-map/directions/west-center-park-w-center-rd-15740-omaha?to=place.w.172884380.1729105947.2131748
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/nebraska/cizek-construction-352030888
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://m.rofo.com/building/CA/Los-Angeles/6601-Center-Dr-W-205111.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/georgia/hanover-r-s-construction-llc-420491939
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://network.procore.com/p/hanover-rs-construction-llc-houston
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/hanover-rs-construction-llc-373945701
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/hanover-rs-limited-partnership
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/massachusetts/r-s-hanover-construction-llc-424193495
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://411.info/business/Hanover-Rs-Construction-Llc-Los-Angeles-CA-25653552
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://archive.org/stream/n05sessionalpaper60canauoft/n05sessionalpaper60canauoft_djvu.txt
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.e-stat.go.jp/en/stat-search/file-download?statInfId=000002260864&fileKind=2
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.env.nm.gov/wp-content/uploads/sites/18/2018/11/MachineGuarding.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.e-stat.go.jp/en/stat-search/file-download?statInfId=000002259460&fileKind=2
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.componententerprises.com/partnum.0070.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://documents1.worldbank.org/curated/en/423711468288350626/txt/multi-page.txt
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://investor.pnc.com/sec-filings/all-sec-filings/content/0001193125-06-101190/0001193125-06-101190.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.berryessa.k12.ca.us/documents/Dan/BUSD-Machine-and-Machine-Guard-Plan-2022.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.iso-group.com/NSNIndex/13576
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.relli.com/errorDocs/parts_in_stock3.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www2.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.lookupcontractor.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://elcr-trk.aspgov.com/eTRAKiT/Search/license2.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://california.uhire.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www2.societyofauthors.org/lsm/cslb-license-lookup
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://opengovus.com/california-contractor-license?zip=95684
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://search.aic.edu/dwd/cslb-license-search
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://vogeinc.com/wp-content/uploads/2024/07/Check-A-License-License-Detail-CSLB-2.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://alameda.graphtek.com/community-development/building/cslb
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.sandiego.gov/sites/default/files/legacy/treasurer/nbl/pdf/t_z_active6.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.oemstrade.com/search/978
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://oag.ca.gov/sites/all/files/agweb/pdfs/bmfea/chap2_b.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.pitkincounty.com/DocumentCenter/View/25501/EOTC-Intergovernmental-Agreementpdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanoverconstructionva.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://dbs.lacity.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Los_Angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbsservices2.lacity.org/onlineservices/?service=plr
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.discoverlosangeles.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbsservices2.lacity.org/OnlineServices/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lacity.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://locator.lacounty.gov/lac/Location/3175160/city-of-los-angeles-department-of-building-and-safety---south-los-angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.visitcalifornia.com/places-to-visit/los-angeles/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lacity.gov/news/learn-more-about-ladbs-go-app-today
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.latimes.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.nsnlookup.com/cage/97s
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.simon.com/mall/arundel-mills
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.irs.gov/pub/irs-soi/80cocrar.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thehanovercrossing.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.nsnlookup.com/cage/97h
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://hanoveryachts.com/view-inventory/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://adamscountyco.gov/wp-content/uploads/2025/09/2025.08.01-Vendor-Payment-Report.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.homedepot.com/b/Hanover/Electric/N-5yc1vZdrgZ1z109sq?catStyle=ShowProducts&open=4
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://online.ogs.ny.gov/purchase/spg/pdfdocs/2091523295AR_HON.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.denisonyachtsales.com/yachts-for-sale/custom-order-yours-today!-39-hanover-II
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fpds.gov/ezsearch/search.do?s=FPDS&indexName=awardfull&templateName=1.5.3&q=0098+9700+
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanovercatalog.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://9andcontractors.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://hanover-usa.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.970construct.com/our-services
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/instruction-permits/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanover.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.alamedaca.gov/Departments/Planning-Building-and-Transportation/Permit-Center
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanovertownship.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.turnerconstruction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permit.acgov.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Hanover
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.construction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/getting-an-instruction-permit-and-drivers-license/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/contractors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lacity.gov/business/licenses-permits-inspection
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omsd.net/site/handlers/filedownload.ashx?moduleinstanceid=107&dataid=27212&FileName=MASTER_PREQUALIFICATION+LIST+OF+CONTRACTORS.xlsx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanover-ma.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omsd.net/site/handlers/filedownload.ashx?moduleinstanceid=107&dataid=27110&FileName=MASTER_PREQUALIFICATION+LIST+OF+CONTRACTORS.xlsx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.ladbs.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hanover.edu
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.redfin.com/CA/Los-Angeles/6055-Center-Dr-90045/home/182333213
+- https://www.xome.com/realestate/6055-center-dr-los-angeles-ca-90045-151430235
+- https://www.levelset.com/contractors/cizek-construction/
+- https://registry.faa.gov/AircraftInquiry/Search/NNumberResult?nNumberTxt=19RC
+- http://www.all-contractors.com/Cizek_Homes_Builders_and_Contractors_in_Omaha_Nebraska_227630
+- https://www.bbb.org/us/ne/omaha/profile/home-builders/cizek-construction-0714-300004038
+- https://www.cityfeet.com/cont/listing/6601-center-dr-w-los-angeles-ca-90045/cs25825518
+- https://www.waze.com/live-map/directions/west-center-park-w-center-rd-15740-omaha?to=place.w.172884380.1729105947.2131748
+- https://www.mapquest.com/us/nebraska/cizek-construction-352030888
+- https://m.rofo.com/building/CA/Los-Angeles/6601-Center-Dr-W-205111.html
+- https://www.sosnc.gov/online_services/search/Business_Registration_official/10197066
+- https://www.levelset.com/contractors/hanover-r-s-construction-llc/about/
+- https://www.bbb.org/us/ma/medford/profile/home-builders/hanover-r-s-construction-llc-0021-513821
+- https://www.mapquest.com/us/georgia/hanover-r-s-construction-llc-420491939
+- https://www.levelset.com/contractors/hanover-r-s-construction-llc/payment-project-history/
+- https://network.procore.com/p/hanover-rs-construction-llc-houston
+- https://www.bbb.org/us/ca/danville/profile/construction-services/hanover-rs-construction-llc-1116-899493
+- https://www.buildzoom.com/contractor/hanover-rs-construction-llc-houston-co
+- https://www.mapquest.com/us/california/hanover-rs-construction-llc-373945701
+- https://www.buildzoom.com/contractor/hanover-rs-limited-partnership
+- https://www.mapquest.com/us/massachusetts/r-s-hanover-construction-llc-424193495
+- https://411.info/business/Hanover-Rs-Construction-Llc-Los-Angeles-CA-25653552
+- https://search.sunbiz.org/Inquiry/corporationsearch/SearchResultDetail?inquirytype=EntityName&directionType=ForwardList&searchNameOrder=HANOVERRSCONSTRUCTION+M130000029970&aggregateId=forl-m13000002997-e03765c8-bc26-4b8c-984c-951b5c9cb61b&searchTerm=HANS+BACHMANN+LLC&listNameOrder=HANOVERREALTYASSOCIATES+A155530
+- http://archive.org/stream/n05sessionalpaper60canauoft/n05sessionalpaper60canauoft_djvu.txt
+- https://www.e-stat.go.jp/en/stat-search/file-download?statInfId=000002260864&fileKind=2
+- https://www.env.nm.gov/wp-content/uploads/sites/18/2018/11/MachineGuarding.pdf
+- https://www.e-stat.go.jp/en/stat-search/file-download?statInfId=000002259460&fileKind=2
+- https://www.componententerprises.com/partnum.0070.html
+- https://documents1.worldbank.org/curated/en/423711468288350626/txt/multi-page.txt
+- https://investor.pnc.com/sec-filings/all-sec-filings/content/0001193125-06-101190/0001193125-06-101190.pdf
+- https://www.berryessa.k12.ca.us/documents/Dan/BUSD-Machine-and-Machine-Guard-Plan-2022.pdf
+- https://www.iso-group.com/NSNIndex/13576
+- https://www.relli.com/errorDocs/parts_in_stock3.html
+- https://www2.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.lookupcontractor.com
+- https://elcr-trk.aspgov.com/eTRAKiT/Search/license2.aspx
+- https://california.uhire.com
+- https://www2.societyofauthors.org/lsm/cslb-license-lookup
+- https://opengovus.com/california-contractor-license?zip=95684
+- https://search.aic.edu/dwd/cslb-license-search
+- https://vogeinc.com/wp-content/uploads/2024/07/Check-A-License-License-Detail-CSLB-2.pdf
+- https://alameda.graphtek.com/community-development/building/cslb
+- https://www.sandiego.gov/sites/default/files/legacy/treasurer/nbl/pdf/t_z_active6.pdf
+- https://www.oemstrade.com/search/978
+- https://oag.ca.gov/sites/all/files/agweb/pdfs/bmfea/chap2_b.pdf
+- https://www.pitkincounty.com/DocumentCenter/View/25501/EOTC-Intergovernmental-Agreementpdf
+- https://www.hanoverconstructionva.com
+- http://dbs.lacity.gov
+- https://en.wikipedia.org/wiki/Los_Angeles
+- https://www.ladbsservices2.lacity.org/onlineservices/?service=plr
+- https://www.discoverlosangeles.com
+- https://www.ladbsservices2.lacity.org/OnlineServices/
+- https://lacity.gov
+- https://locator.lacounty.gov/lac/Location/3175160/city-of-los-angeles-department-of-building-and-safety---south-los-angeles
+- https://www.visitcalifornia.com/places-to-visit/los-angeles/
+- https://lacity.gov/news/learn-more-about-ladbs-go-app-today
+- https://www.latimes.com
+- https://www.nsnlookup.com/cage/97s
+- https://www.simon.com/mall/arundel-mills
+- https://www.irs.gov/pub/irs-soi/80cocrar.pdf
+- https://www.thehanovercrossing.com
+- https://www.nsnlookup.com/cage/97h
+- https://hanoveryachts.com/view-inventory/
+- https://adamscountyco.gov/wp-content/uploads/2025/09/2025.08.01-Vendor-Payment-Report.pdf
+- https://www.homedepot.com/b/Hanover/Electric/N-5yc1vZdrgZ1z109sq?catStyle=ShowProducts&open=4
+- https://online.ogs.ny.gov/purchase/spg/pdfdocs/2091523295AR_HON.pdf
+- https://www.denisonyachtsales.com/yachts-for-sale/custom-order-yours-today!-39-hanover-II
+- https://www.fpds.gov/ezsearch/search.do?s=FPDS&indexName=awardfull&templateName=1.5.3&q=0098+9700+
+- https://www.hanovercatalog.com
+- https://9andcontractors.com
+- https://hanover-usa.com
+- https://www.970construct.com/our-services
+- https://en.wikipedia.org/wiki/Construction
+- https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/instruction-permits/
+- https://www.hanover.com
+- https://www.merriam-webster.com/dictionary/construction
+- https://www.alamedaca.gov/Departments/Planning-Building-and-Transportation/Permit-Center
+- https://www.hanovertownship.com
+- https://www.turnerconstruction.com
+- https://permit.acgov.org
+- https://en.wikipedia.org/wiki/Hanover
+- https://www.construction.com
+- https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/getting-an-instruction-permit-and-drivers-license/
+- https://www.cslb.ca.gov/contractors/
+- https://lacity.gov/business/licenses-permits-inspection
+- https://www.cslb.ca.gov
+- https://www.omsd.net/site/handlers/filedownload.ashx?moduleinstanceid=107&dataid=27212&FileName=MASTER_PREQUALIFICATION+LIST+OF+CONTRACTORS.xlsx
+- https://www.hanover-ma.gov
+- https://www.omsd.net/site/handlers/filedownload.ashx?moduleinstanceid=107&dataid=27110&FileName=MASTER_PREQUALIFICATION+LIST+OF+CONTRACTORS.xlsx
+- http://www.ladbs.org
+- https://www.hanover.edu

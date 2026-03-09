@@ -1,0 +1,110 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 30
+Party: Acer Fire Protection
+License: 1047478-B
+Permit: 25016-10000-24802
+Generated: 2026-03-07 16:42:03
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+## PASS 2 EVIDENCE GATHERING FOR Acer Fire Protection
+
+### SEARCH LEDGER
+1. "Check Acer Fire Protection contractor license 1047478-B"
+2. "Acer Fire Protection Los Angeles construction"
+3. "Acer Fire Protection company website"
+4. "Acer Fire Protection leadership team"
+5. "Acer Fire Protection LinkedIn profiles"
+6. "Acer Fire Protection projects and collaborations"
+7. "Acer Fire Protection events sponsorship"
+8. "Acer Fire Protection industry partnerships"
+9. "Acer Fire Protection decision-makers"
+10. "upcoming events Acer Fire Protection"
+11. "Acer Fire Protection conferences"
+12. "Acer Fire Protection Inc news events"
+
+### EVIDENCE LOG
+- **Search Query:** "Check Acer Fire Protection contractor license 1047478-B"
+  - **Visited URL:** [CSLB License Lookup](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+  - **Extracted Fact:** Confirmed licensing status as active and verified permit details. **(Web Fetch)**
+
+- **Search Query:** "Acer Fire Protection Los Angeles construction"
+  - **Visited URL:** Blocked; unable to gain access. 
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection company website"
+  - **Visited URL:** Blocked; unable to gain access. 
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection leadership team"
+  - **Visited URL:** Blocked; access to LinkedIn is restricted; requires login.
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection projects and collaborations"
+  - **Visited URL:** Blocked; unable to gain access. 
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection events sponsorship"
+  - **Visited URL:** Blocked; unable to gain access.
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection industry partnerships"
+  - **Visited URL:** Blocked; unable to gain access.
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection decision-makers"
+  - **Visited URL:** Blocked; unable to gain access.
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "upcoming events Acer Fire Protection"
+  - **Visited URL:** Blocked; unable to gain access.  
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection conferences"
+  - **Visited URL:** Blocked; unable to gain access.
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Acer Fire Protection Inc news events"
+  - **Visited URL:** [AGC](https://www.agc.org/)
+  - **Extracted Fact:** AGC provides networking opportunities and events relevant to the construction industry. **(Web Fetch)**
+
+- **Search Query:** "Acer Fire Protection Inc news events"
+  - **Visited URL:** [BOMA](https://www.boma.org/)
+  - **Extracted Fact:** BOMA hosts various events and provides membership whose connections can benefit contractors in the industry. **(Web Fetch)**
+
+- **Search Query:** "Acer Fire Protection Inc news events"
+  - **Visited URL:** [NAIOP](https://www.naiop.org/)
+  - **Extracted Fact:** NAIOP is relevant to commercial real estate which could offer networking and developmental opportunities. **(Web Fetch)**
+
+### SOCIAL / PROFILE CHECK
+- **CSLB License Lookup:** Successfully validated license; status is active. 
+  - **Result:** License confirmed active.
+- **LinkedIn:** Access to professional profiles restricted; requires login to view details.
+  - **Result:** Blocked; requires login.
+- **BuildZoom:** General contractor information available but lacked specifics about personnel.
+  - **Result:** Limited insights.
+
+### INDIVIDUAL PROBE LEDGER
+- **No specific individuals or roles identified due to restricted access on LinkedIn and inability to retrieve more detailed external data. Further sourcing required.**
+
+### TARGET-SPECIFIC FACT PACK
+- **Company Name:** Acer Fire Protection
+- **Type:** Contractor
+- **LA Permit #:** 25016-10000-24802
+- **Contractor License #:** 1047478-B
+- **Licensing Status:** Active (confirmed via CSLB).
+
+### NEXT STEPS
+- Continue exploring local industry events and associations where Acer Fire Protection may participate.
+- Gather insights on networking opportunities to connect with relevant decision-makers associated with Acer Fire Protection.
+
+## REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match).
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target.
+- [ ] TODO 3: Identify at least 2 potential decision makers.
+- [ ] TODO 4: Capture at least 3 concrete source URLs.
+- [ ] TODO 5: Produce EVIDENCE LOG entries tied to findings.
+- [ ] TODO 6: Summarize best entry points to reach decision makers.
+- [ ] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work).
+
+**Further investigations will be necessary to clarify personnel and establish actionable connections with Acer Fire Protection.**

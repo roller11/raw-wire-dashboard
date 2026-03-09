@@ -1,0 +1,1055 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 68
+Party: Parkway C & A
+License: 1023585-B
+Permit: 25016-20000-30006
+Generated: 2026-03-09 21:13:42
+Stage: direct_pass_1_research
+Method: perplexity_direct
+Provider: Perplexity
+Model: openai/gpt-5.1
+==================================================
+
+1. TARGET SUMMARY
+------------------
+
+- **Identity:** Parkway C&A, L.P. (often branded “Parkway Construction & Architecture” or “Parkway Construction & Associates”) is a **national design‑build general contractor** founded in 1981, headquartered in Lewisville, TX, with a **California regional office in Irvine** that drives Southern California and Los Angeles–area work.  
+  Sources: company site, offices page, leadership release, ConstructionJournal company page  
+  [https://parkwayconstruction.com](https://parkwayconstruction.com)  
+  [https://parkwayconstruction.com/offices/](https://parkwayconstruction.com/offices/)  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+- **License:** BuildZoom links **California Contractor License #1023585 – General Building** to “Parkway C and A,” with status “Active” as of Jan 2025 and explicit instruction to verify at CSLB. This ties your target to the given license number.  
+  [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+
+- **Scale & specialties:** Over **6,000+ completed projects**, licensed in all 50 states, heavily focused on **commercial design‑build** for restaurant, retail, entertainment, senior living, hospitality, industrial, worship, education, self‑storage, and defense/amenity centers. They market **integrated architecture + construction**, site investigations, permitting, preconstruction, and procurement.  
+  [https://parkwayconstruction.com/about-us/faq/](https://parkwayconstruction.com/about-us/faq/)  
+  [https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/](https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/)  
+
+- **LA/SoCal footprint:** Numerous permits and projects in Los Angeles City, LA County, and SoCal (North Hollywood, Northridge, South Gate, Beverly Hills, Pasadena, Orange County) for **Raising Cane’s**, **Chuck E. Cheese**, **Kitchen United**, Carvana, and various landlords. These are the practical leverage points to meet decision makers.  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+- **Primary LA‑area opportunity for your client:** Target **Irvine regional office leadership and key contacts** who run SoCal programs and **owners/brand real estate teams** on recurring programs (Raising Cane’s, Kitchen United, Chuck E. Cheese, landlords like Duesenberg Investments, etc.). Use specific **LA permits and upcoming projects** as conversation anchors.
+
+---
+
+2. PEOPLE
+---------
+
+### 2.1 Executive / Strategic Decision Makers (HQ & Enterprise)
+
+#### 1) Ryan Elmer – President & Chief Executive Officer (CEO)
+
+- **Role / title**
+  - President & CEO of Parkway C&A, L.P.  
+  - Appointed CEO in 2024, succeeding long‑time CEO Rick Wojciechowski.  
+  - Former VP of Strategy and Business Development who **spearheaded Parkway’s expansion into California** and founded their BD division.  
+  Sources: company leadership release; BYU NAC bio  
+  [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)  
+  [https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600](https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600)
+
+- **Contact route**
+  - Corporate site “Contact Us” form and office routing (Texas HQ / California office).  
+    [https://parkwayconstruction.com](https://parkwayconstruction.com)  
+  - Public BYU NAC profile (relationship path for introductions).  
+    [https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600](https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600)  
+  - Direct email/phone are not listed in public sources; access is via corporate channels and professional networks.
+
+- **Why he matters for interior design work**
+  - As CEO with a BD background, he sets **market strategy, client targeting, and integrated design‑build positioning**, including:
+    - Whether Parkway uses in‑house design vs. external design partners.
+    - Appetite for bringing on **specialist interior design firms** for specific programs (e.g., new restaurant prototypes, rollouts in LA/SoCal).
+  - His history **expanding into California** makes him a key sponsor for West Coast initiatives and for private programs with national brands.  
+    [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)
+
+- **Best access route (practical)**
+  - **Warm introduction via BYU Marriott School / National Advisory Council**: his NAC membership indicates regular involvement with BYU business/alumni events.  
+    [https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600](https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600)
+  - **Referrals from program clients** (Raising Cane’s, CEC/Chuck E. Cheese, Carvana) who interact with executive leadership on national rollouts.
+  - Escalation path: start with **Irvine regional contacts (Section 2.3)** on specific LA projects, then request a brief intro to “our corporate design‑build leadership” once you demonstrate value.
+
+- **Potential meeting opportunities**
+  - **BYU Marriott NAC meetings / events** where industry leaders and donors gather; these often include receptions and small‑group sessions where an introduction could be brokered.  
+    [https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600](https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600)
+  - Industry recognition platforms where Parkway appears (ENR Top 400, BD+C Giants 400) suggest that leadership may participate in **panel discussions, awards receptions, and conferences** associated with these lists, though specific appearances were not documented in sources.  
+    [https://parkwayconstruction.com/bdcs-2024-giants-400-report/](https://parkwayconstruction.com/bdcs-2024-giants-400-report/)  
+    [https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/](https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/)
+
+---
+
+#### 2) David Elmer – Chief Operating Officer (COO)
+
+- **Role / title**
+  - Chief Operating Officer of Parkway C&A, L.P., appointed alongside Ryan Elmer’s CEO move.  
+  - Previously Vice President of Construction; long‑tenured operational leader.  
+  - Replaced Vaughan Hancock as COO.  
+  [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)
+
+- **Contact route**
+  - Reached indirectly via:
+    - Corporate contact form and HQ office; ask for “COO’s office” or “operations leadership for West region”.  
+      [https://parkwayconstruction.com](https://parkwayconstruction.com)
+    - Relationship paths through **project executives and regional PMs** in the Irvine office who report up through construction leadership.
+
+- **Why he matters for interior design work**
+  - Oversees **project delivery, program execution, and operational standards**. This includes:
+    - Which **design consultants** are allowed on programs.
+    - Whether to accept a new **interior design partner** into standard program teams for restaurant, hospitality, entertainment, and tenant improvement work.
+  - Given his history as VP of Construction, David will be the key sponsor/approver for any change in vendor mix on **multi‑site rollouts** that include LA/SoCal stores.  
+    [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)
+
+- **Best access route (practical)**
+  - Start with **Irvine‑based project contacts** on specific jobs (Raising Cane’s #616 South Gate, Kitchen United Pasadena, North Hollywood/Northridge work). Once you’re embedded, request that your firm be presented to “our COO for program‑level endorsement.”
+  - Use **Blue Book and ConstructionJournal** to position yourself as a trusted partner on specific LA projects; once you’ve built credibility, ask to join their programmatic vendor pool (which will require operations sign‑off).  
+    [https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/](https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/)  
+    [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+- **Potential meeting opportunities**
+  - **Owner/client project kickoff meetings and program reviews** for major LA rollouts (e.g., new Raising Cane’s waves or major multi‑tenant redevelopments) where operations leadership often participates.
+  - Internal **program summits** and lessons‑learned sessions, typically including COO and regional leaders; not public, but you can be invited if you’re on a program team.
+
+---
+
+#### 3) Scott Chadwick – Chief Financial Officer (CFO)
+
+- **Role / title**
+  - Chief Financial Officer, part of the executive leadership team and referenced as remaining in that role during the 2024 leadership transition.  
+  [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)
+
+- **Contact route**
+  - CFO’s office is reachable indirectly via HQ phone lines and via relationships with project executives who escalate financial / vendor questions.
+
+- **Why he matters for interior design work**
+  - Controls **risk tolerance, contract terms, and vendor financial qualification**.
+  - For a new interior design vendor, his team may:
+    - Review your financial stability, insurance, and contract terms.
+    - Approve professional services rates for program work.
+  - Not typically the first touchpoint but often the one who approves a **new class of professional services vendor.**
+
+- **Best access route**
+  - Through project executives or the COO when a new design partner is being proposed; they will loop in finance to vet commercial terms.
+
+- **Potential meeting opportunities**
+  - Executive‑level **owner presentations** for large capital programs where finance and risk are front‑and‑center.
+
+---
+
+### 2.2 Ownership / Partners / Founder
+
+From BuildZoom’s “Employees” list tied to Parkway C and A:  
+[https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+
+- **John Golden Elmer** – “CEO / President,” “Partner/Member”  
+  - Founder of Parkway (also confirmed in 40‑year anniversary article). Still appears as a partner and historical leader wielding influence on strategy and culture.  
+    [https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/](https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/)  
+    [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+
+- **Quentin Vaughan Hancock** – Limited Partner (BuildZoom)  
+  - Former COO per company leadership release (David Elmer replaced him), remains a limited partner; may still influence relationships and legacy client programs.  
+    [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)  
+    [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+
+- **Richard Gerard (Rick) Wojciechowski** – Limited Partner; former President & CEO  
+  - Led Parkway since 2014 and is cited as President & CEO during the 40‑year celebration; now a limited partner but still a high‑influence figure.  
+    [https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/](https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/)  
+    [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)  
+    [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+
+- **Other BuildZoom‑listed principals** (less central for LA interior design, but relevant network nodes):
+  - **David Wesley Elmer** – RME (Responsible Managing Employee).  
+  - **Jerry Bennett Elmer** – Officer / Partner.  
+  - **Joseph William Elmer** – Officer.  
+  - **Warren Dale Clark** – Officer and early investor (ties to retail development noted in 40‑year article).  
+  [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+
+These individuals may appear on **ownership documents, bank references, or board‑level events**, offering secondary networking routes if you connect with them via mutual contacts or business associations.
+
+---
+
+### 2.3 Regional & Operational Contacts – California / Irvine Office
+
+**California Regional Office (primary for LA and SoCal):**
+
+- **Address:** 18600 MacArthur Blvd, Ste 440, Irvine, CA 92612‑1250  
+- **Phone:** (949) 272‑3857  
+- **Listed as “Parkway Construction & Architecture”** with active projects including Raising Cane’s #616 (South Gate) and Kitchen United (Pasadena).  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+**Key Contacts listed on ConstructionJournal (Irvine office)**
+
+ConstructionJournal lists the following as **“Key Contacts”** for the Irvine office (names only; titles and direct phones/emails are redacted):  
+[https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+- **Aaron Shurts** – Key Contact (Irvine)  
+- **Blake Nelson** – Key Contact (Irvine)  
+- **Brian Richardson** – Key Contact (Irvine)  
+- **Dan Booles** – Key Contact (Irvine)  
+- **Jess Wagner** – Key Contact (Irvine)  
+- **Kimberly Bradstreet** – Key Contact (Irvine)  
+- **Travis Allen** – Key Contact (Irvine)  
+- **Troy Smith** – Key Contact (Irvine)  
+- **“Estimating”** – generic Estimating contact (Irvine)
+
+*Why they matter:*  
+While titles are not specified, these names appear under “Key Contacts” for the Irvine office associated with **active Southern California projects**, indicating they likely encompass project managers, estimators, and regional leadership. For your interior design client, these individuals are the **first practical gatekeepers to job‑specific decisions** in LA/SoCal.
+
+*Contact route:*  
+- Call the **Irvine office main line** (949‑272‑3857) and ask to be connected to:
+  - “Estimating for restaurant/retail projects in Los Angeles County,” or  
+  - A specific key contact if you can reference a project they’re tied to (e.g., “Raising Cane’s #616 in South Gate” or “Kitchen United Pasadena”).  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+---
+
+### 2.4 Blue Book Contact – Practical Gate to GC Relationship
+
+**Jared Baugh – Owner / Principal / Senior Executive (Blue Book listing)**
+
+- **Role / title (per Blue Book):** Listed among “Owners, Principals & Senior Executives” and as the named contact for Parkway Construction & Associates, Inc.  
+- **Location:** 1000 Civic Cir, Lewisville, TX 75067 (HQ).  
+- **Phone:** (469) 322‑3754 (main contact number shown).  
+  [https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/](https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/)
+
+- **Why he matters:**
+  - Blue Book is used for **GC–subcontractor networking and qualification**. Jared is effectively the **public‑facing principal** in that network. If your firm approaches via Blue Book, his office is the probable recipient.
+  - He can champion your addition as a **preferred designer or consultant** across programs, including LA projects.
+
+- **Contact route / access:**
+  - Use the **Blue Book “Request Qualifications” form** on their profile, which routes your information to Parkway and Jared’s office.  
+    [https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/](https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/)
+  - Follow up with a direct call to the listed number referencing your Blue Book qualification request and a specific LA project you can help with.
+
+---
+
+### 2.5 Additional People (Regulatory / Licensing Context)
+
+- **CSLB license record (institutional, not a person):**
+  - CA Contractors State License Board “Check a License” portal is where Parkway’s **License #1023585 – General Building** is to be verified.  
+    [https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+
+- **Florida licensing record for Parkway C&A, LP**
+  - Listed as “PARKWAY C&A, LP – Construction Business Information” in Florida’s DBPR system, indicating multi‑state licensing and compliance.  
+    [https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357](https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357)
+
+---
+
+3. COMPANY
+----------
+
+- **Legal name:** Parkway C&A, L.P.  
+  - Supported by company press releases and Creditsafe company profile.  
+  [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)  
+  [https://www.creditsafe.com/business-index/en-gb/company/parkway-ca-lp-us15913236](https://www.creditsafe.com/business-index/en-gb/company/parkway-ca-lp-us15913236)
+
+- **Branding / DBA:** Often branded as **Parkway Construction & Architecture** or **Parkway Construction & Associates** in project and directory listings.  
+  [https://parkwayconstruction.com](https://parkwayconstruction.com)  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+- **Type:** General contractor / design‑build firm providing integrated **construction + architecture + preconstruction** services, including site investigations, value engineering, permitting, procurement, and program management.  
+  [https://parkwayconstruction.com/about-us/faq/](https://parkwayconstruction.com/about-us/faq/)  
+  [https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/](https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/)
+
+- **Headquarters & offices:**
+  - **HQ:** 1000 Civic Cir, Lewisville, TX 75067.  
+    [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)  
+  - **California Regional Office:** 18600 MacArthur Blvd, Ste 440, Irvine, CA 92612 (operating since 2018).  
+    [https://parkwayconstruction.com/offices/](https://parkwayconstruction.com/offices/)  
+    [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+  - **Utah Regional Office:** Ogden, UT (operating since 2021).  
+    [https://parkwayconstruction.com/offices/](https://parkwayconstruction.com/offices/)
+
+- **Licensing (focus: California and national)**
+  - **CA License #1023585 – General Building** – status “Active” per BuildZoom, with verification reference to CSLB Check‑a‑License portal.  
+    [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)  
+    [https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+  - Other CA license numbers (e.g., **728566**, **811344**) are noted as “Inactive” in BuildZoom, reflecting previous registrations.  
+    [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+  - The firm states it is **licensed in all 50 states**.  
+    [https://parkwayconstruction.com/about-us/faq/](https://parkwayconstruction.com/about-us/faq/)
+  - Florida DBPR also lists “PARKWAY C&A, LP” as a Construction Business Information record.  
+    [https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357](https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357)
+
+- **Bonding & insurance** (from BuildZoom CA profile):
+  - **Insured** – Workers Comp provider listed as **St Paul Guardian Insurance Company**.  
+  - **Bonded** – “This License Filed A Contractor’s Bond With” (bond value **$10,000**).  
+  [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)
+
+- **Scale:**
+  - Over **6,500 completed projects** and **92% repeat business** per corporate homepage.  
+    [https://parkwayconstruction.com](https://parkwayconstruction.com)
+  - 40‑year article notes **over 5,000 projects** and **31.7% annual growth since 2016**; ENR Top 400 contractor ranking (e.g., #252 in 2020; #206 in 2023).  
+    [https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/](https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/)  
+    [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/)
+  - A later press piece notes **$560M revenue in 2022 and 400+ employees nationwide**.  
+    [https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/](https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/)
+
+- **Delivery methods:**
+  - **Design‑Build (with price guarantee)** – single contract for design + construction, with an “industry‑first Price Guarantee” once scope is set.  
+  - **Design‑Assist**, **Construction Management**, and **Program Management**, all built around their proprietary **5X Build** process (“Built in Concept, Built on Paper, Built on Partnership, Built in the Field, Built by Schedule”).  
+  [https://parkwayconstruction.com](https://parkwayconstruction.com)  
+  [https://parkwayconstruction.com/about-us/faq/](https://parkwayconstruction.com/about-us/faq/)
+
+- **Markets / Sectors**  
+  - Restaurant, entertainment, healthcare, senior living, automotive, industrial, hospitality, worship, education, self‑storage, amenity centers, aerospace, fuel centers, retail.  
+  [https://parkwayconstruction.com/about-us/faq/](https://parkwayconstruction.com/about-us/faq/)
+
+- **LA‑area role:**  
+  - Acts as **program GC / design‑build partner** for national brands entering or expanding in LA/SoCal, particularly **Raising Cane’s**, **Chuck E. Cheese / CEC Entertainment**, **Kitchen United**, and Carvana.  
+  - Permits show numerous projects in LA City (North Hollywood, Northridge, San Fernando, South Gate) and LA County suburbs like Beverly Hills.  
+    [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)  
+    [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+- **Outreach programs (DVBE/MBE/WBE/SBE):**  
+  - No explicit, general small business or diversity outreach program was identified on Parkway’s site or primary profiles. They operate within client‑driven and jurisdictional requirements (e.g., owner or public‑sector goals) rather than publishing their own standing program.
+
+---
+
+4. NETWORKING OPPORTUNITIES
+---------------------------
+
+**1) BYU Marriott School – National Advisory Council**
+
+- **Signal:** Ryan Elmer is profiled as a member of the BYU Marriott School of Business **National Advisory Council**, identified as CEO of Parkway C&A with regional offices in Irvine and Salt Lake City.  
+  [https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600](https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600)
+
+- **Opportunity:**  
+  - NAC meetings, donor events, and conferences are **high‑access settings** where introductions to Ryan (and thus Parkway’s top leadership) are realistic if your client or their allies have BYU or Utah ties.
+
+---
+
+**2) Blue Book (The Blue Book Building & Construction Network)**
+
+- **Signal:** Parkway Construction & Associates is listed, with **Jared Baugh** as a principal contact and ability to “Request Qualifications.”  
+  [https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/](https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/)
+
+- **Opportunity:**
+  - Blue Book is effectively a **vendor / subcontractor networking portal**. Submit your interior design firm’s qualifications and LA‑specific profile via their form, then follow up by phone.
+  - Blue Book also hosts localized events; aligning with those in **Los Angeles and Orange County** improves the odds of in‑person encounters with Parkway estimators and BD personnel.
+
+---
+
+**3) ConstructionJournal Platform**
+
+- **Signal:** Parkway Construction & Architecture’s profile lists **active CA projects** (Raising Cane’s #616 in South Gate; Kitchen United in Pasadena) and **Key Contacts** for the Irvine office.  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+- **Opportunity:**
+  - ConstructionJournal is used for tracking bidders and project status. A paid account allows deeper access to **bidder lists and historical project teams**, enabling targeted outreach to Parkway contacts and owners on LA projects.
+  - Use it to:
+    - Identify which key contact is tied to each LA project.
+    - Time outreach when projects are **“Post‑Bid”** but pre‑award or early in construction – ideal windows to propose **interior design value‑adds**.
+
+---
+
+**4) Industry Rankings & Publications**
+
+- **Signals:**
+  - Parkway appears in **ENR Top 400 contractors** and **BD+C Giants 400** lists.  
+    [https://parkwayconstruction.com/bdcs-2024-giants-400-report/](https://parkwayconstruction.com/bdcs-2024-giants-400-report/)  
+    [https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/](https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/)
+- **Opportunity:**
+  - These publications hold **award events, webinars, and conferences** where top contractors participate. While specific Parkway appearances were not documented, this ecosystem is where their peers and some of their clients gather, offering **indirect networking** paths.
+
+---
+
+**5) LA / SoCal Owner & Brand Networks**
+
+From Levelset’s permit data, recurring **owners/brands** in LA/SoCal using Parkway include:  
+[https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+- **Raising Cane’s Restaurants / Raising Cane’s Chicken Fingers**
+- **CEC Entertainment / Chuck E. Cheese**
+- **Kitchen United**
+- **Carvana**
+- **Duesenberg Investments (Beverly Hills)**
+- **City of Torrance**, **City of South Gate**, and other local jurisdictions
+
+These brands and owners often participate in **retail, restaurant, and real estate conferences** and local business groups. Building relationships with their real estate and design leaders can lead to **owner‑side introductions to Parkway**.
+
+---
+
+5. DISCOVERED PROJECTS (EMPHASIS: LA / SOCAL)
+---------------------------------------------
+
+> *Values/status per Levelset and ConstructionJournal; focus on LA/SoCal where your client can plausibly enter.*
+
+### 5.1 LA City & LA County
+
+1) **Raising Cane’s Restaurant – North Hollywood (New Ground‑Up)**  
+- **Location:** 4835 Lankershim Blvd, North Hollywood, CA 91601 (LA City).  
+- **Permit:** 21010‑20000‑01343 – “New 88.9 x 39.9 irregular shaped restaurant building w drive‑thru, 110 sf attached patio cover and 232 sf corral, total 824 sf outdoor dining.”  
+- **Valuation:** $1,300,000 (BuildZoom / Levelset).  
+- **Status:** Issued / Approved.  
+- **Why it matters:**  
+  - Flagship **pad restaurant** in a prominent LA corridor; heavy interior branding and dining environment, ideal for **specialized interior design** work (front‑of‑house experience).  
+- Sources:  
+  [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+2) **Raising Cane’s / Retail Project – Northridge**  
+- **Location:** 19310 Business Center Dr, Northridge, CA 91324 (LA City).  
+- **Permits:** Multiple LA permits, including 21010‑20000‑04449 (valuation $1,300,000) and other related permits for TI and site work.  
+- **Status:** Approved.  
+- **Why it matters:**  
+  - Another **high‑value restaurant/retail project** in LA with heavy interior work; demonstrates Parkway’s recurring role for this client in the Valley.  
+- Source:  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+3) **Commercial Project – Reseda Blvd, Northridge**  
+- **Location:** 8425 Reseda Blvd, Northridge, CA 91324 (LA City).  
+- **Permit:** 22016‑20000‑23594 – Valuation $325,000 (commercial project).  
+- **Status:** Approved.  
+- **Why it matters:**  
+  - Indicates Parkway’s participation in **mid‑size tenant improvements** in LA neighborhoods where interior design strongly shapes customer experience.  
+- Source:  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+4) **Office / Tenant Improvement – Coral Tree Place, West LA**  
+- **Location:** 12959 Coral Tree Pl, Floor 2, Los Angeles, CA 90066.  
+- **Permit:** 22016‑10000‑02991 – Valuation $794,855 (commercial TI).  
+- **Status:** Approved.  
+- **Why it matters:**  
+  - Office interior improvement work in **West LA**, likely with higher‑end finishes; useful precedent when pitching **office / workplace design** services to Parkway and the building owner.  
+- Source:  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+5) **Chuck E. Cheese – Beverly Hills TI**  
+- **Location:** 8833 Wilshire Blvd, Beverly Hills, CA 90211.  
+- **Permit:** BS2105260 (valuation $625,000) and related permit BS2105121 ($50,000); owner: **Duesenberg Investments**; contractor: Parkway Construction & Associates.  
+- **Status:** Approved.  
+- **Why it matters:**  
+  - High‑profile **family entertainment / restaurant** TI in Beverly Hills; engages both brand standards and upscale landlord expectations – strong **reference case for hospitality/entertainment interiors**.  
+- Source:  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+6) **Raising Cane’s – South Gate (Raising Cane’s #616)**  
+- **Location:** 2505 Tweedy Blvd, South Gate, CA 90280.  
+- **Project:** Listed on ConstructionJournal as **“Raising Cane’s #616 – New Construction, 1,807 SF – Post‑Bid”**.  
+- **Permits (LA County / City of South Gate):** 210000090 (valuation $244,944), 210000091 ($150,000), plus 210001613 ($51,000).  
+- **Status:** Post‑Bid / Approved.  
+- **Why it matters:**  
+  - **Upcoming or recently awarded** project in a nearby LA County city. Ideal for approaching the **Irvine office** and brand real estate team with a **design/finish package** tailored to urban South Gate demographics.  
+- Sources:  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+7) **Kitchen United – Pasadena (Multi‑tenant Kitchen)**  
+- **Location:** Pasadena, CA 91105 (exact address redacted in snippet).  
+- **Project:** ConstructionJournal lists **“Kitchen United – Renovation – 8,901 SF – Post‑Bid”** as an active project for Parkway Construction & Architecture.  
+- **Why it matters:**  
+  - Central LA‑metro **ghost kitchen / multi‑tenant food hall**; interior design heavily influences functionality and brand identity for multiple tenants. Excellent entry point to show expertise in **complex back‑of‑house and shared front‑of‑house** environments.  
+- Source:  
+  [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+---
+
+### 5.2 Broader SoCal / Contextual Work (selected)
+
+- **Fullerton, CA – Raising Cane’s Ground‑Up**  
+  - 201 W Orangethorpe Ave, Fullerton, CA – multiple permits, including BLDC‑2021‑0127 (valuation $1,300,000).  
+- **Costa Mesa, CA – Restaurant + TI**  
+  - 2200 Harbor Blvd and 1750 Newport Blvd – multi‑million restaurant build and TIs with owners such as **Gray Enterprises L.P.** and **Steven S Grant Trust**.  
+- **Orange County / Tustin – Office / Retail TIs**  
+  - 1700 Flight Way, Tustin, CA (COMBC‑2022‑00174, $2.5M).  
+
+All the above strengthen Parkway’s **SoCal client roster and landlord network**, giving you more messages like “we’ve worked with your peers at X project in Orange County.”
+
+Sources for these:  
+[https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+---
+
+6. DISCOVERED ENTITIES
+----------------------
+
+### 6.1 Clients / Brands (frequently paired with Parkway, LA & SoCal emphasis)
+
+From Levelset permits and CJ project lists:  
+[https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)  
+[https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+- **Raising Cane’s Chicken Fingers / Raising Cane’s Restaurants** – recurring national client; multiple projects in LA City (North Hollywood, Northridge), South Gate, and across CA.
+- **CEC Entertainment, LLC / Chuck E. Cheese** – numerous TIs and remodels, including **Beverly Hills (8833 Wilshire)** and other CA and national sites.
+- **Kitchen United** – multi‑tenant kitchen in Pasadena; innovation‑oriented F&B operator.
+- **Carvana** – e.g., Mission Valley project (San Diego) and TX/other states; large, design‑intensive auto retail/showroom work.
+- **At Home** (home décor retailer) – referenced in corporate marketing as a major national program partner.  
+  [https://parkwayconstruction.com/offices/](https://parkwayconstruction.com/offices/)
+- **Church of Jesus Christ of Latter‑day Saints – Real Estate Division** – multiple church and facility projects in CO, SC, TX, etc. (not LA‑specific but relevant for LDS networks).  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+### 6.2 Owners / Developers / Landlords (LA & SoCal emphasis)
+
+From Levelset’s owner fields on permits:  
+[https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+- **Duesenberg Investments** – Owner for 8833 Wilshire Blvd, Beverly Hills (Chuck E. Cheese TI). High‑end office/retail landlord; potential **direct interior design client** beyond Parkway.
+- **City of Torrance (CA)** – Owner for 2821 Pacific Coast Hwy project (TI with Parkway), giving public‑sector network ties in LA County.
+- **Best Plaza**, **Country Club Centre Group**, **Gray Enterprises L.P.**, **Steven S Grant Trust**, **Pacheco Pass Retail XII**, etc. – SoCal landlords/owners with projects built by Parkway.
+- **Various REITs / private owners** (Post Square Shopping Center, Grand Plaza, etc.) – across CA and nationally.
+
+### 6.3 Architects / Engineers / Consultants (Recurring Collaborators)
+
+From Levelset contractor/consultant fields:  
+[https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+- **DKY Architects** – Architect on Costa Mesa restaurant project.  
+- **Tectonics Design Group** – Appears on projects in Tyler, TX and Costa Mesa, CA.  
+- **Boucher Design Group** – Involved on Mesquite, TX project with Parkway; indicates a design partner in retail/restaurant.  
+- **Kimley‑Horn and Associates** – Civil/engineering partner on Tustin project (2505 El Camino Real).  
+
+These firms are part of Parkway’s **trusted design ecosystem**; aligning with them offers lateral introductions to Parkway’s PMs and owners.
+
+### 6.4 Agencies / Authorities
+
+- **City of Los Angeles Department of Building and Safety (LADBS)** – Issues permits (e.g., 21010‑20000‑01343, 22016‑xxxxx) for LA projects built by Parkway.  
+  [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)  
+  [https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+- **City of South Gate, Beverly Hills, Pasadena** – Each with their own planning/building departments which have recurring interactions with Parkway on local projects.
+
+---
+
+7. ENTRY POINTS (ACTIONABLE)
+----------------------------
+
+1) **Direct call into the Irvine Office (primary LA gate)**  
+   - Call **(949) 272‑3857**, identify yourself as an interior design firm specializing in **restaurant, entertainment, and multi‑tenant kitchen interiors** in Los Angeles.  
+   - Ask specifically for:
+     - “Estimating for Raising Cane’s and Kitchen United projects in LA / LA County,” or  
+     - A key contact (e.g., “Could I speak with the PM or estimator for Raising Cane’s #616 in South Gate?”).  
+   - Use concrete project references from this dossier to show you’ve done your homework.  
+   Source: [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+2) **Blue Book Qualification Request to Jared Baugh / HQ**
+
+   - Submit a **qualification request** through Parkway’s Blue Book profile, uploading a concise portfolio with:
+     - LA/SoCal hospitality and restaurant interiors.
+     - Experience coordinating with **national brands** and local building departments.  
+   - Follow up by calling **(469) 322‑3754** referencing Blue Book and at least one LA project (e.g., “We’d like to be considered for future TI and prototype refinement work on your LA Raising Cane’s and Kitchen United projects.”).  
+   Source: [https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/](https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/)
+
+3) **ConstructionJournal Project‑Specific Outreach**
+
+   - Subscribe to ConstructionJournal for Parkway’s profile:
+     - Track **status changes** (e.g., from Post‑Bid to Awarded) for: Raising Cane’s #616 (South Gate), Kitchen United (Pasadena), and other CA projects.
+     - Use the “Key Contacts” list (Aaron Shurts, etc.) to direct targeted calls/emails referencing project IDs.  
+   - Offer a **no‑cost design review** of interior layouts and finishes for one upcoming LA project to demonstrate value.  
+   Source: [https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html](https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html)
+
+4) **Owner‑Side Leverage – Duesenberg Investments & LA Landlords**
+
+   - For 8833 Wilshire Blvd, Beverly Hills, **Duesenberg Investments** appears as owner with Parkway as GC. Approach Duesenberg (and similar LA landlords) offering:
+     - Lease‑driven TI design strategies.
+     - Upgrades to existing Parkway‑built fit‑outs.  
+   - If they like your work, they can **recommend you to Parkway** for future TIs in their assets.  
+   Source: [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+5) **Brand‑Side Leverage – Raising Cane’s & Kitchen United**
+
+   - Build relationships with **Raising Cane’s real estate / design leadership** and **Kitchen United’s development team** through restaurant development conferences and direct outreach (their names and contacts come from brand‑side research, outside Parkway).  
+   - Pitch yourself as a specialist interior designer who understands:
+     - Parkway’s design‑build model.
+     - LA/SoCal entitlement and building constraints.  
+   - Owners often suggest preferred consultants to their GCs.
+
+6) **BYU NAC / Alumni Path to CEO**
+
+   - If your client or a close ally has **BYU or Utah business ties**, use the BYU NAC profile to:
+     - Request a warm introduction to Ryan Elmer.
+     - Offer to share insights on **guest‑facing interior trends in LA** that can support Parkway’s national restaurant and entertainment programs.  
+   Source: [https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600](https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600)
+
+7) **Regulatory & Permit‑Driven Entry**
+
+   - Monitor **LADBS and Levelset** for new LA‑area permits listing Parkway; once a permit hits “issued” or “in plan check,” contact the Irvine office referencing the permit number and offer quick‑turn **finish/furniture/lighting packages** that can be approved with minimal schedule risk.  
+   Sources:  
+   [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)  
+   [https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+
+---
+
+8. RED FLAGS
+------------
+
+1) **Slow Payment Reports (Subcontractor Feedback)**  
+   - Levelset shows **multiple “slow payment (90+ days)” reports** on Parkway Construction & Associates commercial projects (examples in Texas), with amounts over $5,000–$10,000.  
+   - While this may reflect project‑specific issues, it indicates you should:
+     - Negotiate **clear payment milestones** and retainers for design services.
+     - Be prepared for extended payment cycles.  
+   Source: [https://www.levelset.com/contractors/parkway-construction/](https://www.levelset.com/contractors/parkway-construction/)
+
+2) **Historic CA License Changes**  
+   - BuildZoom lists prior California license numbers (**728566**, **811344**) as “Inactive” for Parkway, though **License #1023585 – General Building** is active.  
+   - There is no evidence of disciplinary action in the sources used, but historical license changes suggest you should always verify **current CSLB status** at the time of contracting.  
+   Source: [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a)  
+   [https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+
+No specific lawsuits, safety violations, or financial distress indicators were found in the sources consulted.
+
+---
+
+9. SOURCES (DEDUPLICATED URL LIST)
+----------------------------------
+
+- Parkway corporate & content  
+  - https://parkwayconstruction.com  
+  - https://parkwayconstruction.com/offices/  
+  - https://parkwayconstruction.com/about-us/faq/  
+  - https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/  
+  - https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/  
+  - https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/  
+  - https://parkwayconstruction.com/bdcs-2024-giants-400-report/
+
+- Licensing / registry  
+  - https://www.buildzoom.com/contractor/parkway-c-and-a  
+  - https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+  - https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357  
+  - https://www.creditsafe.com/business-index/en-gb/company/parkway-ca-lp-us15913236  
+
+- Project & permit data  
+  - https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html  
+  - https://www.levelset.com/contractors/parkway-construction/permits/  
+  - https://www.levelset.com/contractors/parkway-construction/
+
+- Networking platforms  
+  - https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/  
+  - https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600  
+
+---
+
+10. SEARCH LEDGER (KEY QUERIES USED)
+------------------------------------
+
+1. `"CSLB 1023585 Parkway C & A"`  
+2. `"Parkway C and A" contractor`  
+3. `"Parkway C&A, LP" CSLB`  
+4. `"Parkway C&A Lp"`  
+5. `"Parkway C&A" general contractor`  
+6. `"Parkway C&A" Irvine California office`  
+7. `"Parkway Construction" Irvine CA regional office`  
+8. `"Parkway C&A" Los Angeles project`  
+9. `"Parkway C&A" bid prequalification`  
+10. `"Parkway Construction" subcontractor prequalification`  
+11. `"Parkway C&A" vendor portal`  
+12. `"Parkway C&A" site:linkedin.com`  
+13. `"Parkway Construction Architecture" site:linkedin.com`  
+14. `"Parkway C&A" VP construction site:linkedin.com`  
+15. `"Parkway C and A" BuildZoom`  
+16. `"Parkway Construction & Architecture" Construction Journal`  
+17. `"Parkway Construction" Levelset permits`  
+18. `"Parkway Construction & Associates" Blue Book`  
+19. `"Parkway C&A, LP" Enr top 400`  
+20. `"Ryan Elmer" "Parkway C&A"`  
+21. `"Parkway C&A" BYU Advisory Council`  
+22. `"Parkway C&A" Los Angeles permit`  
+23. `21010-20000-01343 "Parkway"`  
+24. `"Raising Cane's" "Parkway Construction" California`  
+
+---
+
+11. EVIDENCE LOG
+----------------
+
+Each entry: **(Query → URL → Extracted Fact)**
+
+1. **“Parkway C and A BuildZoom”** →  
+   **URL:** https://www.buildzoom.com/contractor/parkway-c-and-a  
+   **Fact:** Identifies “Parkway C and A” at 1000 Civic Cir, Lewisville, TX as a general contractor with **CA License #1023585 – General Building (Active)**, bonded and insured, and lists multiple employees/partners (John Golden Elmer, David Wesley Elmer, Quentin Vaughan Hancock, Richard Gerard Wojciechowski, etc.), plus a permit record for **21010‑20000‑01343** in North Hollywood.
+
+2. **“Parkway Construction offices”** →  
+   **URL:** https://parkwayconstruction.com/offices/  
+   **Fact:** Confirms Parkway’s **Texas HQ**, plus **California regional office (operating since 2018)** and **Utah regional office**, with language highlighting national reach and clients like **Raising Cane’s** and **Chuck‑E‑Cheese**.
+
+3. **“Parkway Construction FAQ”** →  
+   **URL:** https://parkwayconstruction.com/about-us/faq/  
+   **Fact:** Details Parkway’s services (Design‑Build, Design‑Assist, Construction Management, Program Management), industry sectors (restaurant, entertainment, healthcare, senior living, hospitality, industrial, etc.), claim of **licensing in all 50 states**, and their **5X Build** process.
+
+4. **“Innovative Leadership: Parkway C&A, LP appoints new CEO and COO”** →  
+   **URL:** https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/  
+   **Fact:** Announces **Ryan Elmer** as CEO and **David Elmer** as COO, replacing Rick Wojciechowski and Vaughan Hancock respectively; notes Ryan’s role in expanding into California and founding the BD division; confirms **Scott Chadwick** as CFO.
+
+5. **“Parkway C&A 40 years”** →  
+   **URL:** https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/  
+   **Fact:** States Parkway was founded on October 12, 1981 by **John Elmer**, has completed over 5,000 projects, operates across 49 states, specializes in general contracting and architecture/design‑build, and has been recognized as an **ENR Top 400** contractor.
+
+6. **“Parkway Construction Architecture ConstructionJournal”** →  
+   **URL:** https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html  
+   **Fact:** Lists **Parkway Construction & Architecture** at **18600 MacArthur Blvd Ste 440, Irvine, CA 92612** with phone (949) 272‑3857; shows active projects like **Raising Cane’s #616 (South Gate, CA – Post‑Bid)**, **Carvana – Mission Valley (San Diego)**, and **Kitchen United (Pasadena – Renovation, 8,901 SF, Post‑Bid)**; provides **Key Contacts** (Aaron Shurts, Blake Nelson, Brian Richardson, etc., plus Estimating).
+
+7. **“Parkway Construction Levelset permits”** →  
+   **URL:** https://www.levelset.com/contractors/parkway-construction/permits/  
+   **Fact:** Lists hundreds of permits across states; identifies **multiple LA/SoCal permits** (e.g., 21010‑20000‑01343 – 4835 Lankershim Blvd, North Hollywood; 22016‑20000‑23594 – 8425 Reseda Blvd, Northridge; 22016‑10000‑02991 – 12959 Coral Tree Pl Fl 2, Los Angeles; 21019‑20000‑04977 & 21010‑20000‑04449 – 19310 Business Center Dr, Northridge; 210000090/091/210001613 – 2505 Tweedy Blvd, South Gate; **BS2105260** and **BS2105121** – 8833 Wilshire Blvd, Beverly Hills); shows some owners (Duesenberg Investments, City of Torrance, Raising Cane’s) and notes **slow payment (90+ days)** reports for some projects.
+
+8. **“Parkway Construction Blue Book”** →  
+   **URL:** https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/  
+   **Fact:** Shows **Parkway Construction & Associates, Inc.** at 1000 Civic Cir, Lewisville, TX, with phone numbers **(469) 322‑3754** and **(972) 219‑0061**, listing **Jared Baugh** under “Owners, Principals & Senior Executives,” and offers a **Request Qualifications** mechanism for GCs to collect vendor information.
+
+9. **“Ryan Elmer Parkway BYU NAC”** →  
+   **URL:** https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600  
+   **Fact:** BYU Marriott School’s National Advisory Council biography identifies **Ryan Elmer as CEO of Parkway C&A**, a “commercial design‑build firm headquartered in Dallas, with regional offices in Irvine, California and Salt Lake City,” confirming his role and linking him to the Irvine office.
+
+10. **“Parkway C&A BD+C Giants 400 report”** →  
+    **URL:** https://parkwayconstruction.com/bdcs-2024-giants-400-report/  
+    **Fact:** Describes Parkway C&A, L.P. as established in 1981, offering integrated services and being **licensed in 49 states** (earlier figure, now updated on FAQ to all 50), with over 6,000 projects and recognition in **Building Design+Construction’s 2024 Giants 400**.
+
+11. **“Parkway growth new Lewisville TX office opening”** →  
+    **URL:** https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/  
+    **Fact:** Announces a new Lewisville office, notes that Parkway had **$560M in revenue in 2022** and **400+ employees**, and reconfirms that existing offices include **Irvine, California and Ogden, Utah**.
+
+12. **“PARKWAY C&A LP Florida license”** →  
+    **URL:** https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357  
+    **Fact:** Confirms a **Florida Construction Business Information** record for “PARKWAY C&A, LP,” supporting nationwide licensing.
+
+13. **“CSLB Check a License”** →  
+    **URL:** https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+    **Fact:** Provides the official CA “Check a License” portal, referenced by BuildZoom as the verification point for **License #1023585 – General Building** used by Parkway C and A.
+
+---
+
+12. REQUIRED TODO CHECKLIST
+---------------------------
+
+- [x] **TODO 1: Confirm target identity (name, license, permit/address match)**  
+  - Parkway C&A, L.P. / Parkway Construction & Architecture is tied to **CA License #1023585 – General Building** via BuildZoom, with verification directed to CSLB. Multiple LA‑area permits (e.g., 21010‑20000‑01343 in North Hollywood, 22016‑20000‑23594 in Northridge, 22016‑10000‑02991 in Los Angeles) list Parkway as contractor, confirming presence in LA. The specific LADBS permit **25016‑20000‑30006** was not seen in the sources consulted, but the overall identity/license/LA‑work linkage is clear.  
+  Source: [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a); [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+- [x] **TODO 2: Visit LADBS/CSLB/registry sources relevant to target**  
+  - CSLB “Check a License” portal and BuildZoom’s CSLB‑linked data accessed; Levelset used as a proxy to LADBS and other LA‑area permit data.  
+  Sources: [https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx); [https://www.buildzoom.com/contractor/parkway-c-and-a](https://www.buildzoom.com/contractor/parkway-c-and-a); [https://www.levelset.com/contractors/parkway-construction/permits/](https://www.levelset.com/contractors/parkway-construction/permits/)
+
+- [x] **TODO 3: Identify at least 2 potential decision makers**  
+  - Identified and profiled **Ryan Elmer (CEO)**, **David Elmer (COO)**, **Scott Chadwick (CFO)**, plus **Jared Baugh (principal contact via Blue Book)** and a set of **Irvine key contacts**.  
+  Sources: [https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/](https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/); [https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/](https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/)
+
+- [x] **TODO 4: Capture at least 3 concrete source URLs**  
+  - Numerous URLs captured and cited throughout, including Parkway’s own site, BuildZoom, Levelset, ConstructionJournal, Blue Book, BYU NAC, CSLB portal, Creditsafe, and Florida DBPR.
+
+- [x] **TODO 5: Produce EVIDENCE LOG entries tied to findings**  
+  - Evidence Log section (Section 11) includes 13 entries linking specific queries, URLs, and extracted facts (licenses, leadership, offices, projects, permits, owners, and payment behavior).
+
+- [x] **TODO 6: Summarize best entry points to reach decision makers**  
+  - Section 7 (“ENTRY POINTS”) details concrete actions: direct calls to the Irvine office, Blue Book qualification submissions to Jared Baugh, ConstructionJournal project outreach to Irvine key contacts, owner‑side routes (Duesenberg, Raising Cane’s, Kitchen United), and a BYU NAC path to the CEO.
+
+- [x] **TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)**  
+  - Edge signals identified include:  
+    - **BYU Marriott National Advisory Council** membership of CEO Ryan Elmer (high‑value networking environment).  
+    - **Blue Book vendor/qualification portal** with principal contact Jared Baugh.  
+    - **ConstructionJournal active projects** (Raising Cane’s #616 South Gate, Kitchen United Pasadena – post‑bid, upcoming work).  
+    - **Recurring collaborators and owners** (Raising Cane’s, CEC/Chuck E. Cheese, Duesenberg Investments, Kitchen United), providing indirect access points and warm intro potential.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/parkway-c-a-lp
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/parkway-c-and-a
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.creditsafe.com/business-index/en-gb/company/parkway-ca-lp-us15913236
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/bdcs-2024-giants-400-report/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwaysolutionsllc.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/parkway-construction/permits/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/parkway-ca-lp-named-top-contractor-in-enr-top-400-list/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/parkway-construction/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.einpresswire.com/article-print/685192488/innovative-leadership-parkway-c-a-lp-appoints-new-ceo-coo
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.parkwayic.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://opengovus.com/california-contractor-license?zip=92663
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/rick-wojciechowski-celebrates-40-years-of-excellence/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.parkway.us
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://opengovus.com/california-contractor-license?zip=95684
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://engpermits.lacity.org/docs/upermits/uploads/2020003961/BOE_APPROVED_19H5104_R1_73015521__1_.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.installitdirect.com/learn/san-diego-contractor-license-insurance-verification/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://libraryarchives.metro.net/dpgtl/trafficplans/1941_parkway_plan_city_los_angeles_metropolitan_area.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.siteline.com/general-contractor/contractor/parkway-construction-architecture
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calgary.ca/content/dam/www/ca/fs/documents/bid-and-vendor-information/rfpq-24-020-prequalification-for-prime-contractor.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/subcontractor-prequalification
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.scsdk8.org/apps/pages/Contractor-Prequalification-Bid-Process
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://trenchlesstechnology.com/pdfs/2016-microtunneling-supp.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayvt.com/vendors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.oxnardsd.org/departments/purchasing/purchasing/contractor-prequalification-andor-cupcca-bid-process
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dpr.com/subcontractor-prequalification
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.parkwayschools.net/Page/11301
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://auhsdblueprint.auhsd.us/docs/pdf/Bid%202025-02%20prequal.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.autodesk.com/blogs/construction/subcontractor-prequalification-best-practices/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.parkwayschools.net/contact/departments/purchasing
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.centerusd.org/documents/Departments/MOFTT/Request-for-Proposal/CJUSD-Request-of-Pre-qualification-of-Bidders.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mass.gov/doc/guidelines-for-prequalification-of-general-contractors-and-subcontractors-to-work-on-public/download
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.rapidtables.com/calc/math/multiplication-calculator.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://resources.finalsite.net/images/v1749493279/comptonk12caus/fxwfzibcnlsx1oj6lvml/2025-05-20REG-2.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://projects.propublica.org/nursing-homes/homes/h-225497
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omnicalculator.com/math/percentage
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cityofpasadena.net/public-notices/wp-content/uploads/sites/16/2021-11-01-CC-ORD-7381.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://pdf.secdatabase.com/669/0001193125-17-052285.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omnicalculator.com/math/multiplication
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cityclerk.lacity.org/onlinedocs/2020/20-0600_cis_06-02-2025.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.parkwaysp.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calculator.net/long-division-calculator.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cityclerk.lacity.org/onlinedocs/2025/25-0600_cis_04-30-2025.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://npidb.org/organizations/suppliers/specialty-pharmacy_3336s0011x/1619296761.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://legal.thomsonreuters.com/en/products/cocounsel-legal
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://spb.ca.gov/appeals/evidentiary_appeals_calendar.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.curbsideclassic.com/bus-stop-classic/bus-stop-classics-1974-76-mazda-parkway-22-26-minibus-does-that-thing-have-a-rotary/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/about_us/library/licensing_classifications/Licensing_Classifications_Detail.aspx?Class=C32
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/1035580
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/about-us/faq/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/1
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/contractors/applicants/contractors_license/exam_application/before_applying_for_license.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.nyc.gov/site/buildings/industry/check-license-registration-status.page
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/parkway-construction-and-associates-lp-az
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://pegbo.com/contractor/parkway-construction-architecture
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.agc-ca.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com/offices/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://parkwayconstruction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://file.lacounty.gov/SDSInter/bos/supdocs/209867.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cityclerk.lacity.org/onlinedocs/2013/13-0973_rpt_boe_8-5-13.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://availablenow.com/pdf/ILS64086.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://craft.co/parkway-construction-architecture/locations
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cityclerk.lacity.org/onlinedocs/2022/22-1309_misc_01_02-23-2023.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://files.ceqanet.lci.ca.gov/240399-25/attachment/XDcgQCqJD0T-PBuR4Mc80DqBrcH38C5HOa2P0ZGGgVjvgx9pJQnB4L280ENTQJh7WwSRXqOoW2wJ2AZ80
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.parkwayusa.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://file.lacounty.gov/SDSInter/bos/supdocs/159774.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/parkway-construction-453806143
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://ladpw.org/general/bids/pdf/RMDJOC1305.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.buildzoom.com/contractor/parkway-c-a-lp
+- https://www.buildzoom.com/contractor/parkway-c-and-a
+- https://marriott.byu.edu/advisoryboard/nac/directory/member?member=3600
+- https://www.creditsafe.com/business-index/en-gb/company/parkway-ca-lp-us15913236
+- https://parkwayconstruction.com/bdcs-2024-giants-400-report/
+- https://parkwayconstruction.com/innovative-leadership-parkway-ca-lp-appoints-new-ceo-and-coo/
+- https://www.myfloridalicense.com/LicenseDetail.asp?SID=&id=1DAE8C38E9735B95A7FC5F261F7BB357
+- https://parkwayconstruction.com/honoring-the-past-building-the-future-parkway-ca-celebrates-40-years/
+- https://parkwaysolutionsllc.com
+- https://parkwayconstruction.com/parkway-continues-rapid-growth-with-new-lewisville-tx-office-opening/
+- https://www.levelset.com/contractors/parkway-construction/permits/
+- https://parkwayconstruction.com/parkway-ca-lp-named-top-contractor-in-enr-top-400-list/
+- https://www.levelset.com/contractors/parkway-construction/
+- https://www.einpresswire.com/article-print/685192488/innovative-leadership-parkway-c-a-lp-appoints-new-ceo-coo
+- https://www.thebluebook.com/iProView/1616772/parkway-construction-associates-inc/general-contractors/locations-contacts/
+- https://www.cslb.ca.gov
+- https://www.parkwayic.com
+- https://www.cslb.ca.gov/onlineservices/dataportal/
+- https://opengovus.com/california-contractor-license?zip=92663
+- https://parkwayconstruction.com/rick-wojciechowski-celebrates-40-years-of-excellence/
+- https://www.parkway.us
+- https://opengovus.com/california-contractor-license?zip=95684
+- https://engpermits.lacity.org/docs/upermits/uploads/2020003961/BOE_APPROVED_19H5104_R1_73015521__1_.pdf
+- https://www.installitdirect.com/learn/san-diego-contractor-license-insurance-verification/
+- https://libraryarchives.metro.net/dpgtl/trafficplans/1941_parkway_plan_city_los_angeles_metropolitan_area.pdf
+- https://www.siteline.com/general-contractor/contractor/parkway-construction-architecture
+- https://www.calgary.ca/content/dam/www/ca/fs/documents/bid-and-vendor-information/rfpq-24-020-prequalification-for-prime-contractor.pdf
+- https://www.procore.com/library/subcontractor-prequalification
+- https://www.scsdk8.org/apps/pages/Contractor-Prequalification-Bid-Process
+- https://trenchlesstechnology.com/pdfs/2016-microtunneling-supp.pdf
+- https://parkwayvt.com/vendors/
+- https://www.oxnardsd.org/departments/purchasing/purchasing/contractor-prequalification-andor-cupcca-bid-process
+- https://www.dpr.com/subcontractor-prequalification
+- https://www.parkwayschools.net/Page/11301
+- https://auhsdblueprint.auhsd.us/docs/pdf/Bid%202025-02%20prequal.pdf
+- https://www.autodesk.com/blogs/construction/subcontractor-prequalification-best-practices/
+- https://www.parkwayschools.net/contact/departments/purchasing
+- https://www.centerusd.org/documents/Departments/MOFTT/Request-for-Proposal/CJUSD-Request-of-Pre-qualification-of-Bidders.pdf
+- https://www.mass.gov/doc/guidelines-for-prequalification-of-general-contractors-and-subcontractors-to-work-on-public/download
+- https://www.rapidtables.com/calc/math/multiplication-calculator.html
+- https://resources.finalsite.net/images/v1749493279/comptonk12caus/fxwfzibcnlsx1oj6lvml/2025-05-20REG-2.pdf
+- https://projects.propublica.org/nursing-homes/homes/h-225497
+- https://www.omnicalculator.com/math/percentage
+- https://www.cityofpasadena.net/public-notices/wp-content/uploads/sites/16/2021-11-01-CC-ORD-7381.pdf
+- http://pdf.secdatabase.com/669/0001193125-17-052285.pdf
+- https://www.omnicalculator.com/math/multiplication
+- https://cityclerk.lacity.org/onlinedocs/2020/20-0600_cis_06-02-2025.pdf
+- https://www.parkwaysp.com
+- https://www.calculator.net/long-division-calculator.html
+- https://cityclerk.lacity.org/onlinedocs/2025/25-0600_cis_04-30-2025.pdf
+- https://npidb.org/organizations/suppliers/specialty-pharmacy_3336s0011x/1619296761.aspx
+- https://legal.thomsonreuters.com/en/products/cocounsel-legal
+- https://spb.ca.gov/appeals/evidentiary_appeals_calendar.aspx
+- https://www.curbsideclassic.com/bus-stop-classic/bus-stop-classics-1974-76-mazda-parkway-22-26-minibus-does-that-thing-have-a-rotary/
+- https://www.cslb.ca.gov/about_us/library/licensing_classifications/Licensing_Classifications_Detail.aspx?Class=C32
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.cslb.ca.gov/1035580
+- https://parkwayconstruction.com/about-us/faq/
+- https://www.cslb.ca.gov/1
+- https://www.cslb.ca.gov/contractors/applicants/contractors_license/exam_application/before_applying_for_license.aspx
+- https://www.nyc.gov/site/buildings/industry/check-license-registration-status.page
+- https://www.buildzoom.com/contractor/parkway-construction-and-associates-lp-az
+- https://pegbo.com/contractor/parkway-construction-architecture
+- https://www.phila.gov/services/permits-violations-licenses/find-a-licensed-contractor-and-contractor-information/
+- https://www.agc-ca.org
+- https://parkwayconstruction.com/offices/
+- https://parkwayconstruction.com
+- https://file.lacounty.gov/SDSInter/bos/supdocs/209867.pdf
+- https://www.constructionjournal.com/companies/details/pages/Parkway-Construction-Architecture-1018523.html
+- https://cityclerk.lacity.org/onlinedocs/2013/13-0973_rpt_boe_8-5-13.pdf
+- https://availablenow.com/pdf/ILS64086.pdf
+- https://craft.co/parkway-construction-architecture/locations
+- https://cityclerk.lacity.org/onlinedocs/2022/22-1309_misc_01_02-23-2023.pdf
+- https://files.ceqanet.lci.ca.gov/240399-25/attachment/XDcgQCqJD0T-PBuR4Mc80DqBrcH38C5HOa2P0ZGGgVjvgx9pJQnB4L280ENTQJh7WwSRXqOoW2wJ2AZ80
+- https://www.parkwayusa.com
+- https://file.lacounty.gov/SDSInter/bos/supdocs/159774.pdf
+- https://www.mapquest.com/us/california/parkway-construction-453806143
+- http://ladpw.org/general/bids/pdf/RMDJOC1305.pdf

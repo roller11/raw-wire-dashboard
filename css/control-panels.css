@@ -52,38 +52,46 @@
 }
 
 /* Dark Mode Overrides for Control Panels */
-.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel {
-    background: #16181c;
-    border-color: #2a2d33;
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel,
+.rawwire-dashboard[data-theme="dark"] .rawwire-control-panel {
+    background: var(--rw-bg-surface, #16181c);
+    border-color: var(--rw-border-default, #2a2d33);
 }
 
-.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-header {
-    background: linear-gradient(135deg, #0a0c0e 0%, #0f1114 100%);
-    border-bottom-color: #22252a;
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-header,
+.rawwire-dashboard[data-theme="dark"] .rawwire-control-panel .panel-header {
+    background: linear-gradient(135deg, var(--rw-bg-base, #0a0c0e) 0%, var(--rw-bg-surface, #0f1114) 100%);
+    border-bottom-color: var(--rw-border-muted, #22252a);
 }
 
-.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-header h3 {
-    color: #e9ecef !important;
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-header h3,
+.rawwire-dashboard[data-theme="dark"] .rawwire-control-panel .panel-header h3 {
+    color: var(--rw-fg-default, #e9ecef) !important;
 }
 
-.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-body {
-    background: #16181c;
+.wrap.rawwire-dashboard.dark-mode .rawwire-control-panel .panel-body,
+.rawwire-dashboard[data-theme="dark"] .rawwire-control-panel .panel-body {
+    background: var(--rw-bg-surface, #16181c);
 }
 
-.wrap.rawwire-dashboard.dark-mode .control-section {
-    border-bottom-color: #22252a;
+.wrap.rawwire-dashboard.dark-mode .control-section,
+.rawwire-dashboard[data-theme="dark"] .control-section {
+    border-bottom-color: var(--rw-border-muted, #22252a);
 }
 
-.wrap.rawwire-dashboard.dark-mode .control-section h4 {
-    color: #e9ecef !important;
+.wrap.rawwire-dashboard.dark-mode .control-section h4,
+.rawwire-dashboard[data-theme="dark"] .control-section h4 {
+    color: var(--rw-fg-default, #e9ecef) !important;
 }
 
-.wrap.rawwire-dashboard.dark-mode .control-section .description {
-    color: #adb5bd !important;
+.wrap.rawwire-dashboard.dark-mode .control-section .description,
+.rawwire-dashboard[data-theme="dark"] .control-section .description {
+    color: var(--rw-fg-muted, #adb5bd) !important;
 }
 
-.wrap.rawwire-dashboard.dark-mode .control-section .hint {
-    color: #adb5bd !important;
+.wrap.rawwire-dashboard.dark-mode .control-section .hint,
+.rawwire-dashboard[data-theme="dark"] .control-section .hint {
+    color: var(--rw-fg-muted, #adb5bd) !important;
 }
 
 /* Add all other modern styles... */

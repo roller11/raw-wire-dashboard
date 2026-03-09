@@ -1,0 +1,260 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 41
+Party: Dynamic Trades
+License: 874896-B
+Permit: 25016-10000-18603
+Generated: 2026-03-09 18:14:29
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: xai/grok-4-1-fast-non-reasoning
+==================================================
+
+1. TARGET SUMMARY
+- Identity: Dynamic Trades Inc. (“Dynamic Trades”) is a full-spectrum commercial construction general contractor headquartered in Greenwood/Auburn, California, operating nationally and licensed in 46 states. It holds California contractor license no. 874896 (Classifications: A General Engineering, B General Building, C-10 Electrical), confirmed active with expiration June 30, 2026, no disciplinary actions, bonded ($25,000 Western Surety), and workers’ compensation insured (Insurance Company of the West).
+  Sources: https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/ ; https://www.houzz.com/professionals/general-contractors/dynamic-trades-inc-pfvwus-pf~1637203319 ; https://www.dynamictrades.com/about-us/
+- Relevance to Los Angeles: Nationwide GC licensed in 46 states including California; Levelset records show permits in Southern California locations (e.g., Orange CA, Riverside CA, El Segundo CA), structurally capable of LA projects matching permit context 25016-10000-18603 and address 100 N LA CIENEGA BLVD C123, though no explicit LADBS record tying directly to this permit was found in reviewed sources.
+  Sources: https://www.levelset.com/contractors/dynamic-trades/permits/ ; https://www.dynamictrades.com ; https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/
+- Core positioning: Founded 2006, focused on commercial/industrial/retail TI, ground-up, facilities services, design-build, with relational approach.
+  Sources: https://www.dynamictrades.com/about-us/ ; https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/
+- Scale: 10-50 employees, revenue ~$6.2M.
+  Sources: https://www.datanyze.com/companies/dynamic-trades/459146258 ; https://rocketreach.co/dynamic-trades-inc-profile_b45e9e2bfc754d6e ; https://www.procore.com/network/p/dynamic-trades-inc-greenwood
+- Key decision-maker cluster:
+  - Tyson Steward – President/Founder/CEO: Overall leadership, safety, financials.
+  - Andrew Klein – Chief Business Officer/license holder: Development, estimating, operations, bidding contact.
+  - Noah Price – COO/Project Manager: Project finances, PMs, supers, client/sub relations.
+  - Kyle Soria – Director Sales & Marketing/National Accounts Manager: New projects, national clients.
+  - Chris – VP Business Development: Architect/developer outreach, sales.
+  - Greg Olender – VP: Executive influence.
+  Sources: https://www.dynamictrades.com/about-us/ ; https://www.datanyze.com/companies/dynamic-trades/459146258 ; https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/locations-contacts/ ; http://linode.mono.ca.gov/dynamic-trades-inc
+
+2. PEOPLE (DECISION-MAKER & GATEKEEPER DRILL-DOWN)
+
+2.1 Tyson Steward – President / Founder / CEO
+- Role & authority: Founder (2006), CEO handling safety, financials, hiring, contracts, culture.
+  Sources: https://www.dynamictrades.com/about-us/ ; https://www.datanyze.com/companies/dynamic-trades/459146258 ; https://rocketreach.co/dynamic-trades-inc-profile_b45e9e2bfc754d6e
+- Contact routes: @dynamictrades.com domain (patterns: firstinitiallastname@dynamictrades.com, first.last@dynamictrades.com); main phones (866) 887-2337, (530) 906-4372.
+  Sources: https://www.datanyze.com/companies/dynamic-trades/459146258 ; https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/ ; https://www.houzz.com/professionals/general-contractors/dynamic-trades-inc-pfvwus-pf~1637203319
+- Best access: Via BD (Chris/Kyle) or EA Deidre Walker for strategic partnerships.
+
+2.2 Andrew Klein – Chief Business Officer / License Holder / Co-Owner
+- Role & authority: Partner since 2018 (VP to CBO), holds 45+ state licenses, oversees development, estimating, field ops, public bidding.
+  Sources: https://www.dynamictrades.com/about-us/ ; http://linode.mono.ca.gov/dynamic-trades-inc
+- Contact routes: Primary phone 530-613-0451; email [email protected] (Mono County vendor record).
+  Source: http://linode.mono.ca.gov/dynamic-trades-inc
+- Best access: Direct for bidding/procurement (e.g., public projects, CA opportunities aligning with LADBS permit).
+
+2.3 Noah Price – COO / Project Manager
+- Role & authority: Oversees project finances, PM/sup teams, client/sub relations, problem resolution.
+  Sources: https://www.dynamictrades.com/about-us/ ; https://www.datanyze.com/companies/dynamic-trades/459146258
+- Contact routes: Via main lines or @dynamictrades.com.
+  Sources: https://www.datanyze.com/companies/dynamic-trades/459146258 ; https://www.houzz.com/professionals/general-contractors/dynamic-trades-inc-pfvwus-pf~1637203319
+
+2.4 Kyle Soria – Director Sales & Marketing / National Accounts Manager
+- Role & authority: Initial contact for new projects, national clients, bidding (e.g., Granite Regional Park Playground).
+  Sources: https://www.datanyze.com/companies/dynamic-trades/459146258 ; https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+- Contact routes: Via company phones; listed as key contact on bidding platforms.
+  Source: https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+
+2.5 Chris – VP Business Development
+- Role & authority: Promotes capabilities, interfaces with architects/developers, sells services.
+  Source: https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/locations-contacts/
+- Contact routes: Via Blue Book ProView or main lines.
+
+2.6 Gatekeepers: Deidre Walker – Executive Assistant (screens exec access); Greg Olender – VP.
+  Source: https://www.datanyze.com/companies/dynamic-trades/459146258
+- PMs/Supers: Gus Barone (PM), Levi Hartman (PM per Blue Book), Alicia Fiack (Project Engineer), multiple supers (e.g., Travis Rakela).
+  Sources: https://www.datanyze.com/companies/dynamic-trades/459146258 ; https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/locations-contacts/
+
+3. COMPANY
+- Legal name: Dynamic Trades Inc.
+  Sources: https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/ ; https://www.procore.com/network/p/dynamic-trades-inc-greenwood
+- Licensing: 874896 (A/B/C-10), active to 6/30/2026, matches 874896-B context.
+  Source: https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/
+- Addresses: 4617 Weed Patch Ct, Greenwood CA 95635 (primary); 470 Nevada St Suite 110, Auburn CA 95603; others via Levelset.
+  Sources: https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/ ; http://linode.mono.ca.gov/dynamic-trades-inc ; https://rocketreach.co/dynamic-trades-inc-profile_b45e9e2bfc754d6e
+- Sectors/Services: Commercial TI, ground-up, industrial, facilities; design-build, GC, MEP, sitework.
+  Sources: https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/ ; https://business.nccabuildingpros.com/list/member/dynamic-trades-inc-5554
+- Scale: 30 employees, $6.2M revenue.
+  Source: https://www.datanyze.com/companies/dynamic-trades/459146258
+
+4. NETWORKING OPPORTUNITIES
+- Bidding platforms: Mono County (Andrew Klein contact), Construction Journal (Kyle Soria on Granite Regional Park Playground bid).
+  Sources: http://linode.mono.ca.gov/dynamic-trades-inc ; https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+- Directories: Blue Book ProView, Procore Network, Levelset (sub/bid processes).
+  Sources: https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/ ; https://www.procore.com/network/p/dynamic-trades-inc-greenwood ; https://www.levelset.com/contractors/dynamic-trades/about/
+
+5. DISCOVERED PROJECTS
+- Permits (Levelset): Dinuba CA ($185k commercial 9/24/2024), Sacramento, Orange CA (691 S Main St 10/13/2022), Riverside (7920 Lindbergh Dr 8/4/2022); no direct LADBS 25016-10000-18603 match found.
+  Source: https://www.levelset.com/contractors/dynamic-trades/permits/
+- Active bid: Granite Regional Park Playground, Sacramento CA ($251k est.).
+  Source: https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+- No LA-specific groundbreaking/events found.
+
+6. DISCOVERED ENTITIES (NETWORK MAP NODES)
+- Platforms: Levelset (permits/sub processes), Blue Book, Procore, Construction Journal (bids).
+  Sources: https://www.levelset.com/contractors/dynamic-trades/permits/ ; https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+- No named partners/subcontractors beyond permit mentions (e.g., Rapid Gas, BBAM).
+
+7. ENTRY POINTS (ACTIONABLE)
+1. Andrew Klein direct: 530-613-0451 or [email protected] for bidding (Mono County/public CA projects).
+   Source: http://linode.mono.ca.gov/dynamic-trades-inc
+2. Kyle Soria via Construction Journal/bids or main (866) 887-2337.
+   Source: https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+3. Levelset for sub/bid alignment on active permits.
+   Source: https://www.levelset.com/contractors/dynamic-trades/permits/
+4. Blue Book/Procore for BD intros to Chris.
+   Sources: https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/ ; https://www.procore.com/network/p/dynamic-trades-inc-greenwood
+5. Main lines: (866) 887-2337, (530) 906-4372 requesting Deidre Walker/leadership.
+
+8. RED FLAGS
+- No disciplinary actions (CSLB via contractorlicenseca.com); no negatives found.
+
+9. SOURCES (DEDUPLICATED URL LIST)
+https://www.dynamictrades.com
+https://www.dynamictrades.com/about-us/
+https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/
+http://linode.mono.ca.gov/dynamic-trades-inc
+https://www.datanyze.com/companies/dynamic-trades/459146258
+https://rocketreach.co/dynamic-trades-inc-profile_b45e9e2bfc754d6e
+https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/
+https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/locations-contacts/
+https://www.levelset.com/contractors/dynamic-trades/permits/
+https://www.levelset.com/contractors/dynamic-trades/about/
+https://www.procore.com/network/p/dynamic-trades-inc-greenwood
+https://www.houzz.com/professionals/general-contractors/dynamic-trades-inc-pfvwus-pf~1637203319
+https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+
+10. SEARCH LEDGER (QUERIES USED)
+1. "Dynamic Trades Inc"
+2. "Dynamic Trades"
+3. "Dynamic Trades Inc Los Angeles"
+4. "Dynamic Trades Inc LADBS 25016-10000-18603"
+5. "Dynamic Trades Inc bidding contacts California"
+6. CSLB license 874896 Dynamic Trades Inc
+7. "Dynamic Trades Inc" California license 874896-B
+
+11. EVIDENCE LOG
+1. "Dynamic Trades Inc" → https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/ → License 874896 active (A/B/C-10), address 4617 Weed Patch Ct Greenwood CA, phone (866) 887-2337, no disciplinary actions.
+2. "Dynamic Trades Inc bidding contacts California" → http://linode.mono.ca.gov/dynamic-trades-inc → Andrew Klein primary contact, 530-613-0451, [email protected], Auburn address.
+3. "Dynamic Trades Inc" → https://www.datanyze.com/companies/dynamic-trades/459146258 → Employees (Tyson Steward President, Noah Price PM, Kyle Soria Sales/Mktg, Deidre Walker EA, etc.), $6.2M revenue, @dynamictrades.com emails.
+4. "Dynamic Trades Inc Los Angeles" → https://www.levelset.com/contractors/dynamic-trades/permits/ → Permits in CA (Dinuba, Sacramento, Orange, Riverside), indicating SoCal activity.
+5. "Dynamic Trades Inc bidding contacts California" → https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html → Kyle Soria key contact, bidding Granite Regional Park Playground Sacramento.
+6. "Dynamic Trades Inc" → https://www.dynamictrades.com/about-us/ → Leadership bios (Tyson founder/CEO, Andrew CBO/license holder, Noah COO).
+7. "Dynamic Trades Inc" → https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/locations-contacts/ → Chris VP BD, Levi PM bios.
+
+12. REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match)
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target
+- [x] TODO 3: Identify at least 2 potential decision makers
+- [x] TODO 4: Capture at least 3 concrete source URLs
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings
+- [x] TODO 6: Summarize best entry points to reach decision makers
+- [x] TODO 7: Identify at least 2 edge-signal diamonds (bids, permits, gatekeepers)
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.dynamictrades.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dynamictrades.com/about-us/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/dynamic-trades-inc-426728275
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/locations-contacts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.houzz.com/professionals/general-contractors/dynamic-trades-inc-pfvwus-pf~1637203319
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://business.nccabuildingpros.com/list/member/dynamic-trades-inc-5554
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://linode.mono.ca.gov/dynamic-trades-inc
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.signalhire.com/companies/dynamic-trades-inc
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dynamictraders.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://nbgarleanu.github.io/DynTrad.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dynamictrading.net
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.sec.gov/enforcement-litigation/public-alerts-unregistered-soliciting-entities/dynamictrade
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://app.dynamictrades.live/register
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dtstradings.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dt.live
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rocketreach.co/dynamic-trades-inc-profile_b45e9e2bfc754d6e
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dynamictrades.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dl.fxf1.com/files/books/english/Dynamic.Trading.by.Robert.C..Miner.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://search.sunbiz.org/Inquiry/corporationsearch/SearchResults?inquiryType=EntityName&searchTerm=DYNAMIC+TRADES%2C+INC.
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://find-and-update.company-information.service.gov.uk/company/15580992
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.levelset.com/contractors/dynamic-trades/permits/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://abr.business.gov.au/Search/ResultsActive?SearchText=dynamic+trading&AllNames=False&EntityName=False&BusinessName=False&NarrowSearch=False&SearchType=ActiveAbns&AllStates=True&ACT=False&NSW=False&NT=False&QLD=False&TAS=False&SA=False&VIC=False&WA=False&PostcodeDisplay=Informative&HideBreadcrumbs=False&HideSearchBox=False&HideLeftSideBar=False&ShowHelp=False&IsHomePage=False&NoIndex=False&ShowVersionNumber=False
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/construction-projects/
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.dynamictrades.com
+- https://www.dynamictrades.com/about-us/
+- https://www.mapquest.com/us/california/dynamic-trades-inc-426728275
+- https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/locations-contacts/
+- https://www.houzz.com/professionals/general-contractors/dynamic-trades-inc-pfvwus-pf~1637203319
+- https://business.nccabuildingpros.com/list/member/dynamic-trades-inc-5554
+- https://contractorlicenseca.com/contractor/874896/dynamic-trades-inc/
+- http://linode.mono.ca.gov/dynamic-trades-inc
+- https://www.signalhire.com/companies/dynamic-trades-inc
+- https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/
+- https://dynamictraders.com
+- https://nbgarleanu.github.io/DynTrad.pdf
+- https://dynamictrading.net
+- https://www.sec.gov/enforcement-litigation/public-alerts-unregistered-soliciting-entities/dynamictrade
+- https://app.dynamictrades.live/register
+- https://www.dtstradings.com
+- https://www.dt.live
+- https://rocketreach.co/dynamic-trades-inc-profile_b45e9e2bfc754d6e
+- https://dynamictrades.com
+- https://dl.fxf1.com/files/books/english/Dynamic.Trading.by.Robert.C..Miner.pdf
+- https://search.sunbiz.org/Inquiry/corporationsearch/SearchResults?inquiryType=EntityName&searchTerm=DYNAMIC+TRADES%2C+INC.
+- https://www.constructionjournal.com/companies/details/pages/Dynamic-Trades-Inc-5575719.html
+- https://find-and-update.company-information.service.gov.uk/company/15580992
+- https://www.levelset.com/contractors/dynamic-trades/permits/
+- https://abr.business.gov.au/Search/ResultsActive?SearchText=dynamic+trading&AllNames=False&EntityName=False&BusinessName=False&NarrowSearch=False&SearchType=ActiveAbns&AllStates=True&ACT=False&NSW=False&NT=False&QLD=False&TAS=False&SA=False&VIC=False&WA=False&PostcodeDisplay=Informative&HideBreadcrumbs=False&HideSearchBox=False&HideLeftSideBar=False&ShowHelp=False&IsHomePage=False&NoIndex=False&ShowVersionNumber=False
+- https://www.thebluebook.com/iProView/1765264/dynamic-trades-inc/general-contractors/construction-projects/

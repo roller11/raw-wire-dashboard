@@ -369,7 +369,7 @@ class RawWire_Soothsayer_V2
                                         <span class="discovered-from">via <?php echo esc_html($entity['discovered_from']); ?></span>
                                     </div>
                                     <div class="network-item-actions">
-                                        <button class="btn-sm btn-probe" data-action="probe" data-id="<?php echo esc_attr($entity['id']); ?>" data-type="entity">
+                                        <button class="btn-sm btn-probe" data-action="probe" data-id="<?php echo esc_attr($entity['id']); ?>" data-type="entity" data-source-id="<?php echo esc_attr($entity['source_id']); ?>">
                                             <span class="dashicons dashicons-search"></span> Probe Further
                                         </button>
                                     </div>
@@ -410,7 +410,7 @@ class RawWire_Soothsayer_V2
                                         <span class="discovered-from">via <?php echo esc_html($project['discovered_from']); ?></span>
                                     </div>
                                     <div class="network-item-actions">
-                                        <button class="btn-sm btn-probe" data-action="probe" data-id="<?php echo esc_attr($project['id']); ?>" data-type="project">
+                                        <button class="btn-sm btn-probe" data-action="probe" data-id="<?php echo esc_attr($project['id']); ?>" data-type="project" data-source-id="<?php echo esc_attr($project['source_id']); ?>">
                                             <span class="dashicons dashicons-search"></span> Probe Further
                                         </button>
                                     </div>
@@ -464,6 +464,7 @@ class RawWire_Soothsayer_V2
             foreach ($rows as $row) {
                 $entities[] = [
                     'id'              => $row['id'],
+                    'source_id'       => (int) $row['source_id'],
                     'name'            => $row['name'],
                     'company'         => $row['company'],
                     'type'            => $row['type'],
@@ -492,6 +493,7 @@ class RawWire_Soothsayer_V2
                 $status_label = $row['status_label'] ?: ucfirst(str_replace('_', ' ', $row['status']));
                 $projects[] = [
                     'id'              => $row['id'],
+                    'source_id'       => (int) $row['source_id'],
                     'name'            => $row['name'],
                     'location'        => $row['location'],
                     'status'          => $row['status'],
@@ -577,9 +579,7 @@ class RawWire_Soothsayer_V2
                 c.primary_address,
                 c.work_desc,
                 c.contractor_name,
-                c.contractor_license,
                 c.applicant_name,
-                c.applicant_business,
                 c.valuation,
                 c.permit_type,
                 c.permit_sub_type,
@@ -587,12 +587,6 @@ class RawWire_Soothsayer_V2
                 c.square_footage,
                 c.lat,
                 c.lon,
-                c.city,
-                c.state,
-                c.council_district,
-                c.zip_code,
-                c.solar,
-                c.ev,
                 c.issue_date,
                 c.score_composite,
                 c.score_project_scale,
@@ -611,12 +605,8 @@ class RawWire_Soothsayer_V2
                 s.submitted_date,
                 s.stories,
                 s.construction_type,
-                s.use_code,
-                s.height,
-                s.zone,
                 s.party_profiles,
                 s.investigation_status,
-                s.investigator_summary,
                 s.community_plan_area,
                 s.neighborhood_council,
                 s.cofo_date
@@ -651,7 +641,7 @@ class RawWire_Soothsayer_V2
             $end_date = 'TBD';
             if ($row['cofo_date']) {
                 $end_date = date('M Y', strtotime($row['cofo_date']));
-            } elseif ($row['estimated_completion_date'] ?? null) {
+            } elseif ($row['estimated_completion_date']) {
                 $end_date = date('M Y', strtotime($row['estimated_completion_date']));
             } elseif ($issue_date) {
                 // Estimate based on valuation: roughly 1 month per $200K
@@ -661,27 +651,27 @@ class RawWire_Soothsayer_V2
             }
 
             // Build full location string
-            $location = $row['primary_address'] ?? '';
-            if (($row['city'] ?? '') || ($row['zip_code'] ?? '')) {
+            $location = $row['primary_address'] ?: '';
+            if ($row['city'] || $row['zip_code']) {
                 $location .= $location ? ', ' : '';
-                $location .= trim(($row['city'] ?? '') . ' ' . ($row['zip_code'] ?? ''));
+                $location .= trim(($row['city'] ?: '') . ' ' . ($row['zip_code'] ?: ''));
             }
 
             $leads[] = array(
                 'id' => (int) $row['id'],
                 'source_id' => (int) $row['source_id'],
                 'project_name' => $project_name,
-                'contractor' => $row['contractor_name'] ?? 'TBD',
-                'contractor_license' => $row['contractor_license'] ?? '',
-                'contractor_phone' => $row['contractor_phone'] ?? '',
-                'contractor_email' => $row['contractor_email'] ?? '',
-                'owner' => $row['owner_name'] ?? 'Unknown Owner',
-                'owner_phone' => $row['owner_phone'] ?? '',
-                'owner_email' => $row['owner_email'] ?? '',
-                'applicant' => $row['applicant_name'] ?? '',
-                'applicant_business' => $row['applicant_business'] ?? '',
-                'architect' => $row['architect_name'] ?? '',
-                'architect_firm' => $row['architect_firm'] ?? '',
+                'contractor' => $row['contractor_name'] ?: 'TBD',
+                'contractor_license' => $row['contractor_license'] ?: '',
+                'contractor_phone' => $row['contractor_phone'] ?: '',
+                'contractor_email' => $row['contractor_email'] ?: '',
+                'owner' => $row['owner_name'] ?: 'Unknown Owner',
+                'owner_phone' => $row['owner_phone'] ?: '',
+                'owner_email' => $row['owner_email'] ?: '',
+                'applicant' => $row['applicant_name'] ?: '',
+                'applicant_business' => $row['applicant_business'] ?: '',
+                'architect' => $row['architect_name'] ?: '',
+                'architect_firm' => $row['architect_firm'] ?: '',
                 'value' => (float) $row['valuation'],
                 'start_date' => $start_date,
                 'end_date' => $end_date,
@@ -703,33 +693,33 @@ class RawWire_Soothsayer_V2
                 'permit_nbr' => $row['permit_nbr'],
                 'permit_type' => $row['permit_type'],
                 'permit_sub_type' => $row['permit_sub_type'],
-                'use_code' => $row['use_code'] ?? '',
-                'use_desc' => $row['use_desc'] ?? '',
-                'status_desc' => $row['status_desc'] ?? '',
+                'use_code' => $row['use_code'],
+                'use_desc' => $row['use_desc'],
+                'status_desc' => $row['status_desc'],
                 'status_date' => $row['status_date'] ? date('M j, Y', strtotime($row['status_date'])) : '',
-                'address' => $row['primary_address'] ?? '',
+                'address' => $row['primary_address'],
                 'full_location' => $location,
-                'zip_code' => $row['zip_code'] ?? '',
-                'city' => $row['city'] ?? '',
-                'state' => ($row['state'] ?? '') ?: 'CA',
-                'council_district' => $row['council_district'] ?? '',
-                'community_plan_area' => $row['community_plan_area'] ?? '',
-                'neighborhood_council' => $row['neighborhood_council'] ?? '',
+                'zip_code' => $row['zip_code'],
+                'city' => $row['city'] ?: '',
+                'state' => $row['state'] ?: 'CA',
+                'council_district' => $row['council_district'] ?: '',
+                'community_plan_area' => $row['community_plan_area'] ?: '',
+                'neighborhood_council' => $row['neighborhood_council'] ?: '',
                 'square_footage' => (int) $row['square_footage'],
-                'height' => $row['height'] ?? '',
-                'stories' => $row['stories'] ?? '',
-                'construction_type' => $row['construction_type'] ?? '',
-                'zone' => $row['zone'] ?? '',
-                'solar' => $row['solar'] ?? '',
-                'ev' => $row['ev'] ?? '',
+                'height' => $row['height'] ?: '',
+                'stories' => $row['stories'] ?: '',
+                'construction_type' => $row['construction_type'] ?: '',
+                'zone' => $row['zone'] ?: '',
+                'solar' => $row['solar'] ?: '',
+                'ev' => $row['ev'] ?: '',
                 'lat' => (float) $row['lat'],
                 'lon' => (float) $row['lon'],
-                'investigation_status' => $row['investigation_status'] ?? 'pending',
-                'investigator_summary' => $row['investigator_summary'] ?? '',
+                'investigation_status' => $row['investigation_status'],
+                'investigator_summary' => $row['investigator_summary'] ?: '',
                 'investigator_confidence' => (int) ($row['investigator_confidence'] ?? 0),
                 'party_profiles' => $row['party_profiles'] ? json_decode($row['party_profiles'], true) : null,
-                'candidate_status' => $row['status'] ?? 'pending',
-                'scored_at' => $row['scored_at'] ?? null,
+                'candidate_status' => $row['status'],
+                'scored_at' => $row['scored_at'],
             );
         }
 
@@ -1055,7 +1045,7 @@ class RawWire_Soothsayer_V2
                         $contacts[] = $contact;
                     }
                 }
-                // Fallback format: party['profile']['person'] (singular, from fallback_analysis)
+                // Legacy format: party['profile']['person'] (singular)
                 if (empty($contacts) && !empty($party['profile']['person'])) {
                     $person = $party['profile']['person'];
                     $contacts[] = array(
@@ -1526,7 +1516,7 @@ class RawWire_Soothsayer_V2
 
             <!-- TIER 2 DEEP DIVE -->
             <div class="ss-tier2-action">
-                <button class="btn-tier2-dive" data-action="launch-deep-dive" data-lead-id="<?php echo esc_attr($lead['id']); ?>">
+                <button class="btn-tier2-dive" data-action="launch-deep-dive" data-lead-id="<?php echo esc_attr($lead['id']); ?>" data-source-id="<?php echo esc_attr($lead['source_id']); ?>">
                     <span class="ss-tier2-icon">
                         <span class="dashicons dashicons-admin-site-alt3"></span>
                         <span class="ss-tier2-badge">T2</span>
@@ -1561,7 +1551,7 @@ class RawWire_Soothsayer_V2
                     </span>
                 </div>
 
-                <?php if ($inv_status === 'pending' || $inv_status === 'failed'): ?>
+                <?php if ($inv_status === 'pending' || $inv_status === 'incomplete'): ?>
                     <div class="ss-intel-cta">
                         <button class="ss-btn ss-btn-primary btn-investigate btn-hero-cta"
                             data-action="investigate-parties"
@@ -1572,6 +1562,20 @@ class RawWire_Soothsayer_V2
                         </button>
                         <span class="ss-intel-hint"><?php _e('AI-powered research on contractors, owners, and key parties', 'raw-wire-dashboard'); ?></span>
                     </div>
+                <?php elseif ($inv_status === 'failed'): ?>
+                    <div class="ss-intel-cta">
+                        <button class="ss-btn ss-btn-primary btn-investigate btn-hero-cta"
+                            data-action="investigate-parties"
+                            data-candidate-id="<?php echo esc_attr($lead['id']); ?>"
+                            data-source-id="<?php echo esc_attr($lead['source_id']); ?>">
+                            <span class="dashicons dashicons-search"></span>
+                            <?php _e('Re-run Intelligence Scan', 'raw-wire-dashboard'); ?>
+                        </button>
+                        <button class="ss-btn ss-btn-ghost" data-action="reset-investigation" data-source-id="<?php echo esc_attr($lead['source_id']); ?>">
+                            <span class="dashicons dashicons-image-rotate"></span>
+                            <?php _e('Reset Investigation', 'raw-wire-dashboard'); ?>
+                        </button>
+                    </div>
                 <?php elseif ($inv_status === 'completed' || $inv_status === 'no_parties_found'): ?>
                     <div class="ss-intel-cta ss-intel-cta-rerun">
                         <button class="ss-btn ss-btn-ghost" data-action="reset-investigation" data-source-id="<?php echo esc_attr($lead['source_id']); ?>">
@@ -1581,6 +1585,25 @@ class RawWire_Soothsayer_V2
                     </div>
                 <?php endif; ?>
             </div>
+
+            <?php
+            // Persistent failure banner -- clearly shows investigation failed, with dismiss button
+            if ($inv_status === 'failed'):
+                $failure_note = esc_html($lead['investigator_notes'] ?? 'Investigation failed. No research data was obtained.');
+            ?>
+                <div class="ss-failure-banner" id="ss-failure-banner-<?php echo esc_attr($lead['source_id']); ?>">
+                    <div class="ss-failure-content">
+                        <span class="dashicons dashicons-warning"></span>
+                        <div class="ss-failure-text">
+                            <strong>Investigation Failed</strong>
+                            <p><?php echo $failure_note; ?></p>
+                        </div>
+                    </div>
+                    <button class="ss-failure-dismiss" data-dismiss-banner="<?php echo esc_attr($lead['source_id']); ?>" title="Dismiss">
+                        <span class="dashicons dashicons-no-alt"></span>
+                    </button>
+                </div>
+            <?php endif; ?>
 
             <?php if ($has_profiles): ?>
                 <?php foreach ($lead['party_profiles'] as $party_type => $party_data): ?>
@@ -2376,7 +2399,7 @@ class RawWire_Soothsayer_V2
         $settings = get_option('rawwire_party_investigator_settings', array());
         $base_url = $settings['openclaw_base_url'] ?? 'http://172.17.76.22:18789/v1';
         $auth_token = $settings['openclaw_auth_token'] ?? 'rawwire-local-dev-2025';
-        $model = $settings['openclaw_model'] ?? 'venice/olafangensan-glm-4.7-flash-heretic';
+        $model = $settings['openclaw_model'] ?? 'venice/grok-41-fast';
 
         $response = wp_remote_post(rtrim($base_url, '/') . '/chat/completions', array(
             'headers' => array(
@@ -2508,10 +2531,10 @@ class RawWire_Soothsayer_V2
         $end_date = date('Y-m-t', strtotime($start_date));
 
         $permits = $wpdb->get_results($wpdb->prepare(
-            "SELECT id, permit_nbr, work_desc, primary_address, zip_code, community_plan_area, submitted_date, permit_type, valuation
+            "SELECT id, permit_nbr, work_desc, primary_address, filing_date, permit_type, valuation
              FROM $table
-             WHERE submitted_date BETWEEN %s AND %s
-             ORDER BY submitted_date ASC
+             WHERE filing_date BETWEEN %s AND %s
+             ORDER BY filing_date ASC
              LIMIT 20",
             $start_date,
             $end_date
@@ -2522,14 +2545,14 @@ class RawWire_Soothsayer_V2
             $events[] = array(
                 'id' => 'permit_' . $permit['id'],
                 'title' => $this->build_project_name($permit),
-                'date' => $permit['submitted_date'],
+                'date' => $permit['filing_date'],
                 'type' => 'permit',
-                'location' => $permit['community_plan_area'] ?? $permit['zip_code'] ?? 'Unknown',
+                'location' => $permit['primary_address'] ?? 'Unknown',
                 'permit_id' => $permit['id'],
                 'details' => array(
-                    'permit_number' => $permit['permit_nbr'] ?? '',
-                    'permit_type' => $permit['permit_type'] ?? '',
-                    'valuation' => $permit['valuation'] ?? 0,
+                    'permit_number' => $permit['permit_nbr'],
+                    'permit_type' => $permit['permit_type'],
+                    'valuation' => $permit['valuation'],
                 ),
             );
         }
@@ -2787,8 +2810,7 @@ class RawWire_Soothsayer_V2
     }
 
     /**
-     * Probe Further - Create lead from discovered entity/project
-     * Tier 1 investigation triggered for discovered network item
+     * Probe further into a discovered entity/project using the source-based Tier 2 flow.
      */
     public function ajax_probe_further()
     {
@@ -2802,110 +2824,80 @@ class RawWire_Soothsayer_V2
 
         $type = sanitize_text_field($_POST['type'] ?? ''); // 'entity' or 'project'
         $item_id = intval($_POST['item_id'] ?? 0);
-        $parent_lead_id = intval($_POST['parent_lead_id'] ?? 0);
+        $source_id = intval($_POST['source_id'] ?? 0);
 
         if (!in_array($type, array('entity', 'project')) || !$item_id) {
             wp_send_json_error(array('message' => 'Invalid parameters'));
         }
 
         $table_prefix = $wpdb->prefix . 'rawwire_';
-        $leads_table = $table_prefix . 'leads';
+        $investigator = RawWire_Party_Investigator::get_instance();
+        $row = null;
 
         if ($type === 'entity') {
-            // Get entity data
-            $entity = $wpdb->get_row($wpdb->prepare(
+            $row = $wpdb->get_row($wpdb->prepare(
                 "SELECT * FROM {$table_prefix}network_entities WHERE id = %d",
                 $item_id
             ), ARRAY_A);
 
-            if (!$entity) {
+            if (!$row) {
                 wp_send_json_error(array('message' => 'Entity not found'));
             }
-
-            // Create lead from entity
-            $lead_data = array(
-                'lead_name' => $entity['entity_name'],
-                'source_type' => 'network_discovery',
-                'source_id' => 'probe_' . $entity['lead_id'],
-                'party_type' => $entity['entity_type'],
-                'confidence' => intval($entity['confidence']),
-                'status' => 'pending_investigation',
-                'metadata' => wp_json_encode(array(
-                    'discovered_from_lead' => $parent_lead_id,
-                    'relationship' => $entity['relationship'] ?? 'unknown',
-                    'probed_at' => current_time('mysql'),
-                )),
-                'created_at' => current_time('mysql'),
-            );
-
-            $inserted = $wpdb->insert($leads_table, $lead_data);
-            $new_lead_id = $wpdb->insert_id;
-
-            // Mark entity as probed
-            $wpdb->update(
-                $table_prefix . 'network_entities',
-                array('probed' => 1, 'probed_lead_id' => $new_lead_id),
-                array('id' => $item_id)
-            );
         } else {
-            // Get project data
-            $project = $wpdb->get_row($wpdb->prepare(
+            $projects_table = $table_prefix . 'network_projects';
+            if ($wpdb->get_var("SHOW TABLES LIKE '{$projects_table}'") !== $projects_table) {
+                wp_send_json_error(array('message' => 'Project deep dives are not available until network_projects is created.'));
+            }
+
+            $row = $wpdb->get_row($wpdb->prepare(
                 "SELECT * FROM {$table_prefix}network_projects WHERE id = %d",
                 $item_id
             ), ARRAY_A);
 
-            if (!$project) {
+            if (!$row) {
                 wp_send_json_error(array('message' => 'Project not found'));
             }
+        }
 
-            // Create lead from project
-            $lead_data = array(
-                'lead_name' => $project['project_name'],
-                'source_type' => 'project_discovery',
-                'source_id' => 'probe_project_' . $project['lead_id'],
-                'party_type' => 'project',
-                'confidence' => intval($project['confidence']),
-                'status' => 'pending_investigation',
-                'metadata' => wp_json_encode(array(
-                    'discovered_from_lead' => $parent_lead_id,
-                    'estimated_value' => $project['estimated_value'] ?? null,
-                    'location' => $project['location'] ?? null,
-                    'probed_at' => current_time('mysql'),
-                )),
-                'created_at' => current_time('mysql'),
-            );
+        $row_source_id = intval($row['source_id'] ?? 0);
+        if (!$source_id) {
+            $source_id = $row_source_id;
+        }
 
-            $inserted = $wpdb->insert($leads_table, $lead_data);
-            $new_lead_id = $wpdb->insert_id;
+        if (!$source_id) {
+            wp_send_json_error(array('message' => 'Unable to resolve source for this network item.'));
+        }
 
-            // Mark project as probed
+        $result = $type === 'entity'
+            ? $investigator->run_entity_deep_dive($source_id, array($item_id))
+            : $investigator->run_entity_deep_dive($source_id);
+
+        if (is_wp_error($result)) {
+            wp_send_json_error(array('message' => $result->get_error_message()));
+        }
+
+        if ($type === 'project') {
             $wpdb->update(
                 $table_prefix . 'network_projects',
-                array('probed' => 1, 'probed_lead_id' => $new_lead_id),
+                array(
+                    'probed' => 1,
+                    'probed_at' => current_time('mysql'),
+                    'investigation_tier' => 2,
+                ),
                 array('id' => $item_id)
             );
         }
 
-        if (!$inserted) {
-            wp_send_json_error(array('message' => 'Failed to create lead'));
-        }
-
-        // Schedule Tier 1 investigation for the new lead
-        $lead_generator = \Raw_Wire_Dashboard\Cores\Lead_Generator\Lead_Generator::get_instance();
-        if (method_exists($lead_generator, 'schedule_investigation')) {
-            $lead_generator->schedule_investigation($new_lead_id, 1); // Tier 1
-        }
-
         wp_send_json_success(array(
-            'message' => 'Investigation queued',
-            'lead_id' => $new_lead_id,
+            'message' => 'Tier 2 deep dive completed',
+            'source_id' => $source_id,
+            'entity_count' => (int) ($result['entity_count'] ?? 0),
             'type' => $type,
         ));
     }
 
     /**
-     * Launch Tier 2 Deep Dive
-     * Recursive investigation of all discovered entities/projects
+     * Launch Tier 2 Deep Dive for the selected source.
      */
     public function ajax_launch_deep_dive()
     {
@@ -2917,117 +2909,61 @@ class RawWire_Soothsayer_V2
 
         global $wpdb;
 
+        $source_id = intval($_POST['source_id'] ?? 0);
         $lead_id = intval($_POST['lead_id'] ?? 0);
 
-        if (!$lead_id) {
-            wp_send_json_error(array('message' => 'Invalid lead ID'));
+        if (!$source_id && $lead_id) {
+            $source_id = $this->resolve_source_id_from_lead($lead_id);
+        }
+
+        if (!$source_id) {
+            wp_send_json_error(array('message' => 'Invalid source record'));
+        }
+
+        $result = RawWire_Party_Investigator::get_instance()->run_entity_deep_dive($source_id);
+        if (is_wp_error($result)) {
+            wp_send_json_error(array('message' => $result->get_error_message()));
         }
 
         $table_prefix = $wpdb->prefix . 'rawwire_';
+        $entities_count = (int) $wpdb->get_var($wpdb->prepare(
+            "SELECT COUNT(*) FROM {$table_prefix}network_entities WHERE source_id = %d",
+            $source_id
+        ));
 
-        // Get all unprobed entities for this lead
-        $entities = $wpdb->get_results($wpdb->prepare(
-            "SELECT id, entity_name FROM {$table_prefix}network_entities 
-             WHERE lead_id = %d AND (probed = 0 OR probed IS NULL)",
-            $lead_id
-        ), ARRAY_A);
-
-        // Get all unprobed projects for this lead
-        $projects = $wpdb->get_results($wpdb->prepare(
-            "SELECT id, project_name FROM {$table_prefix}network_projects 
-             WHERE lead_id = %d AND (probed = 0 OR probed IS NULL)",
-            $lead_id
-        ), ARRAY_A);
-
-        $queued = 0;
-        $lead_generator = \Raw_Wire_Dashboard\Cores\Lead_Generator\Lead_Generator::get_instance();
-
-        // Probe all entities
-        foreach ($entities as $entity) {
-            $_POST['type'] = 'entity';
-            $_POST['item_id'] = $entity['id'];
-            $_POST['parent_lead_id'] = $lead_id;
-
-            // Direct insert to avoid recursion
-            $lead_data = array(
-                'lead_name' => $entity['entity_name'],
-                'source_type' => 'tier2_deep_dive',
-                'source_id' => 'dive_entity_' . $lead_id . '_' . $entity['id'],
-                'party_type' => 'contractor',
-                'status' => 'pending_investigation',
-                'tier' => 2,
-                'metadata' => wp_json_encode(array(
-                    'parent_lead_id' => $lead_id,
-                    'deep_dive_batch' => current_time('mysql'),
-                )),
-                'created_at' => current_time('mysql'),
-            );
-
-            $wpdb->insert($table_prefix . 'leads', $lead_data);
-            $new_id = $wpdb->insert_id;
-
-            if ($new_id && method_exists($lead_generator, 'schedule_investigation')) {
-                $lead_generator->schedule_investigation($new_id, 2); // Tier 2
-            }
-
-            // Mark as probed
-            $wpdb->update(
-                $table_prefix . 'network_entities',
-                array('probed' => 1, 'probed_lead_id' => $new_id),
-                array('id' => $entity['id'])
-            );
-
-            $queued++;
+        $projects_count = 0;
+        $projects_table = $table_prefix . 'network_projects';
+        if ($wpdb->get_var("SHOW TABLES LIKE '{$projects_table}'") === $projects_table) {
+            $projects_count = (int) $wpdb->get_var($wpdb->prepare(
+                "SELECT COUNT(*) FROM {$projects_table} WHERE source_id = %d",
+                $source_id
+            ));
         }
-
-        // Probe all projects
-        foreach ($projects as $project) {
-            $lead_data = array(
-                'lead_name' => $project['project_name'],
-                'source_type' => 'tier2_deep_dive',
-                'source_id' => 'dive_project_' . $lead_id . '_' . $project['id'],
-                'party_type' => 'project',
-                'status' => 'pending_investigation',
-                'tier' => 2,
-                'metadata' => wp_json_encode(array(
-                    'parent_lead_id' => $lead_id,
-                    'deep_dive_batch' => current_time('mysql'),
-                )),
-                'created_at' => current_time('mysql'),
-            );
-
-            $wpdb->insert($table_prefix . 'leads', $lead_data);
-            $new_id = $wpdb->insert_id;
-
-            if ($new_id && method_exists($lead_generator, 'schedule_investigation')) {
-                $lead_generator->schedule_investigation($new_id, 2); // Tier 2
-            }
-
-            // Mark as probed
-            $wpdb->update(
-                $table_prefix . 'network_projects',
-                array('probed' => 1, 'probed_lead_id' => $new_id),
-                array('id' => $project['id'])
-            );
-
-            $queued++;
-        }
-
-        // Update parent lead status
-        $wpdb->update(
-            $table_prefix . 'leads',
-            array(
-                'tier' => 2,
-                'tier2_launched_at' => current_time('mysql'),
-            ),
-            array('id' => $lead_id)
-        );
 
         wp_send_json_success(array(
-            'message' => "Tier 2 Deep Dive launched: {$queued} investigations queued",
-            'queued_count' => $queued,
-            'entities_count' => count($entities),
-            'projects_count' => count($projects),
+            'message' => sprintf('Tier 2 Deep Dive completed for source #%d', $source_id),
+            'queued_count' => (int) ($result['entity_count'] ?? 0),
+            'entities_count' => $entities_count,
+            'projects_count' => $projects_count,
+            'source_id' => $source_id,
+        ));
+    }
+
+    /**
+     * Resolve the source id behind a Soothsayer lead/candidate row.
+     */
+    private function resolve_source_id_from_lead(int $lead_id): int
+    {
+        global $wpdb;
+
+        if ($lead_id <= 0) {
+            return 0;
+        }
+
+        $candidates_table = $wpdb->prefix . 'rawwire_lead_candidates';
+        return (int) $wpdb->get_var($wpdb->prepare(
+            "SELECT source_id FROM {$candidates_table} WHERE id = %d",
+            $lead_id
         ));
     }
 

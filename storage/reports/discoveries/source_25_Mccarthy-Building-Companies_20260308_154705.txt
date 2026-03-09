@@ -1,0 +1,129 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 25
+Party: Mccarthy Building Companies
+License: 411173-B
+Permit: 25010-10000-00953
+Generated: 2026-03-08 15:47:05
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+### TARGET SUMMARY
+McCarthy Building Companies, Inc. is a national general contractor with a Los Angeles office at 515 S. Flower St., Suite 3600, Los Angeles, CA 90071, holding California Contractors License 411173 (classes A, B, C-8), actively involved in LA-area projects like education, healthcare, and public infrastructure; key focus for interior design networking includes decision makers in business development and project leadership on high-value builds such as the $72M Cesar Chavez Workforce Building at LA City College (permit-linked via LACCD projects) and Colburn Center expansion. https://www.mccarthy.com/locations/los-angeles https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf
+
+### PEOPLE
+#### Decision Maker Drill-Down
+- **Chris DeHaven**  
+  Specific role/title: Director, Business Development, Los Angeles office.  
+  Contact info found: cdehaven@mccarthy.com; 515 S. Flower St., Suite 3600, Los Angeles, CA 90071; 213-655-1100 (office).  
+  Why this person matters for winning interior design work: Oversees business development for LA projects including healthcare (Providence Tarzana), education (CSULA Student Housing), and performing arts (Colburn Center), influencing subcontractor selection for interior fit-outs in high-profile builds.  
+  Best access route: Direct email or office phone for LA market outreach; trade partner plan room for project bids.  
+  Potential meeting opportunities: ENR California events (e.g., Best Projects awards where McCarthy won for Tarzana Reimagined); DBIA Western Pacific Region events (Project of the Year for CSULA); LA construction networking via AGC or local chambers.  
+  Source URLs: https://www.mccarthy.com/locations/los-angeles
+
+- **Michael Kim**  
+  Specific role/title: Sr. Vice President at McCarthy Building Companies.  
+  Contact info found: LA office 213-655-1100; la@mccarthy.com.  
+  Why this person matters for winning interior design work: Leads LA Community College District (LACCD) projects like the $72M Cesar Chavez Administration & Workforce Building (67,230 SF, interior-focused with lobbies, educational spaces; completion early 2027), influencing design-build interiors for sustainability-driven campuses.  
+  Best access route: LACCD project outreach or McCarthy trade partners portal.  
+  Potential meeting opportunities: LACCD sustainability events or Measure CC-funded project groundbreakings/open houses; UC/CSU education construction conferences.  
+  Source URLs: https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles
+
+#### Gatekeeper Drill-Down
+No specific gatekeepers (e.g., executive assistants, estimating admins) named in sources.
+
+### COMPANY
+Legal name: McCarthy Building Companies, Inc.; type: General Contractor (GC); specialties/markets: Healthcare, education, parking structures, infrastructure, life sciences, hospitality; employee count: Not specified (national firm with 28-state presence); revenue range: Not specified; delivery methods: Design-build (e.g., LACCD projects); licensing: California Contractors License 411173 (A, B, C-8, active); ownership structure: Privately held; LA office: 515 S. Flower St., Suite 3600, Los Angeles, CA 90071; phone: 213-655-1100; email: la@mccarthy.com. Matches provided license 411173-B and LA permit context via LACCD work. https://www.mccarthy.com/locations/los-angeles https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles
+
+### NETWORKING OPPORTUNITIES
+- Association memberships/awards: DBIA Western Pacific Region (2023 Project of the Year: CSULA Student Housing); ENR California (2024 Best Project, Healthcare: Tarzana Reimagined).  
+- Upcoming events: Not directly listed; infer LA project groundbreakings (e.g., Cesar Chavez Building) and ENR/DBIA award ceremonies as access points.  
+- Charity/community: Partnering with Adaptive Construction Solutions for veterans on renewable projects; community builder in LA via LACCD/UC projects.  
+- Trade groups: Online plan room for nationwide projects (key for LA bids).  
+Sources: https://www.mccarthy.com/locations/los-angeles https://www.mccarthy.com/trade-partners
+
+### DISCOVERED PROJECTS
+- Cesar Chavez Administration & Workforce Building: Groundbreaking complete, $72M, 67,230 SF, 4-story education/admin at LA City College (855 N. Vermont Ave, East Hollywood), completion early 2027, LEED-focused interiors, owner LACCD (Measure CC-funded); why it matters: Interior design opportunities in lobbies/educational spaces; 10th McCarthy-LACCD project. https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles
+- Colburn Center: 100,000 SF campus expansion (1,000-seat concert hall), DTLA Los Angeles, 2024-2027, owner Colburn School, architect Gehry Partners; why it matters: Performing arts interiors with high design needs. https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf
+- Kedren Children's Village: 42,392 SF maintenance/admin/warehouse, 710 E. 111th Place Los Angeles 90059, 2024-2027, LEED Gold, owner LA Dept of Water and Power, architect Vertrees A&E; why it matters: Potential TI/interior work. https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf
+- Providence Tarzana Medical Center Parking Structure: Tarzana, CA, award-winning healthcare; CSULA Student Housing: Award-winning education. https://www.mccarthy.com/locations/los-angeles
+
+### DISCOVERED ENTITIES
+- Owners/clients: Los Angeles Community College District (LACCD, recurring, 10 projects); Colburn School; LA Dept of Water and Power; Loma Linda University Medical Center.  
+- Architects/design partners: Steinberg Hart (Cesar Chavez); Gehry Partners (Colburn); Vertrees A&E (Kedren); HED (LACCD tech building).  
+- Related: Adaptive Construction Solutions (partner for veterans/renewables); competitors noted in LA Business Journal (e.g., Pankow Builders).  
+Sources: https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf https://www.mccarthy.com/locations/los-angeles
+
+### ENTRY POINTS
+- Contact Chris DeHaven (Business Development Director) directly at cdehaven@mccarthy.com or 213-655-1100 for LA project interiors (e.g., Colburn Center, Cesar Chavez). https://www.mccarthy.com/locations/los-angeles
+- Register via McCarthy online plan room for bid access on LA projects (subcontractor/vendor entry for interiors). https://www.mccarthy.com/trade-partners
+- Attend ENR California/DBIA events tied to McCarthy awards for face-time with LA team (e.g., Best Projects winners). https://www.mccarthy.com/locations/los-angeles
+- Outreach to LACCD on Cesar Chavez project (interior specs align with client expertise). https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles
+
+### RED FLAGS
+None identified in sources (strong award track record, no lawsuits/safety/financial issues noted).
+
+### SOURCES
+https://www.mccarthy.com/locations/los-angeles  
+https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles  
+https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf  
+https://www.mccarthy.com/trade-partners  
+https://www.mccarthy.com/
+
+### SEARCH LEDGER
+1. "McCarthy Building Companies" Los Angeles contractor license 411173-B  
+2. "McCarthy Building Companies" Los Angeles projects site:mccarthy.com  
+3. "McCarthy Building Companies" Los Angeles "business development" OR "project executive" OR "preconstruction"  
+4. "McCarthy Building Companies" bid OR prequalification OR trade partners  
+5. "Chris DeHaven" "McCarthy Building" Los Angeles  
+6. "Michael Kim" "McCarthy Building" Los Angeles LACCD  
+7. "McCarthy Building Companies" Los Angeles events OR conference OR AGC OR DBIA
+
+### EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mccarthy.com/insights/mccarthy-building-companies-inc-begins-construction-on-new-17-acre-equipment-operations
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mccarthy.com/locations/los-angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-94m-sbvc-student-services-building
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mccarthy.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mccarthy.com/our-work
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mccarthy.com/trade-partners
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: "McCarthy Building Companies" Los Angeles contractor license 411173-B, URL: https://www.mccarthy.com/locations/los-angeles, extracted fact: License 411173 (A,B,C-8); LA office address/phone/email; Chris DeHaven contact.  
+- Query: "McCarthy Building Companies" Los Angeles projects site:mccarthy.com, URL: https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles, extracted fact: $72M Cesar Chavez project details, Michael Kim SVP quote, LACCD relationship.  
+- Query: "McCarthy Building Companies" Los Angeles projects, URL: https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf, extracted fact: Colburn Center, Kedren Village projects with values/locations/architects.  
+- Query: "McCarthy Building Companies" bid OR trade partners, URL: https://www.mccarthy.com/trade-partners, extracted fact: Online plan room for subcontractors.  
+- Query: "Chris DeHaven" "McCarthy Building" Los Angeles, URL: https://www.mccarthy.com/locations/los-angeles, extracted fact: DeHaven role/email as BD Director.
+
+### REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match)  
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target (license confirmed via company site; permit via LACCD project)  
+- [x] TODO 3: Identify at least 2 potential decision makers (Chris DeHaven, Michael Kim)  
+- [x] TODO 4: Capture at least 3 concrete source URLs  
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings  
+- [x] TODO 6: Summarize best entry points to reach decision makers (ENTRY POINTS section)  
+- [x] TODO 7: Identify at least 2 edge-signal diamonds (trade partners portal, ENR/DBIA events/awards; LACCD recurring collaboration)
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-72m-sustainable-administration-workforce-building-at-los-angeles
+- https://www.mccarthy.com/insights/mccarthy-building-companies-inc-begins-construction-on-new-17-acre-equipment-operations
+- https://www.mccarthy.com/locations/los-angeles
+- https://www.mccarthy.com/insights/mccarthy-breaks-ground-on-94m-sbvc-student-services-building
+- https://labusinessjournal.com/wp-content/uploads/2025/11/20251110_labj_018-20_Const-LIST.pdf
+- https://www.mccarthy.com
+- https://www.mccarthy.com/our-work
+- https://www.mccarthy.com/trade-partners

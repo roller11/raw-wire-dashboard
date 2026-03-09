@@ -1,0 +1,70 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 21
+Party: Stonerock Construction
+License: 918974-B
+Permit: 25010-20000-04882
+Generated: 2026-03-06 01:49:01
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+Here’s the comprehensive report for **Stonerock Construction Inc**:
+
+## Contractor Overview
+- **Company Name:** Stonerock Construction Inc
+- **Type:** Contractor (General Contractor)
+- **Location:** Los Angeles, CA
+- **LA Permit #:** 25010-20000-04882
+- **Contractor License:** 918974-B
+
+### Company Details
+- **Legal Name:** Stonerock Construction Inc
+- **DBA:** Stonerock Construction
+- **Specialties/Markets:** General contracting, construction projects (specific specialties need to be further researched).
+- **Employee Count:** Not specified in the immediate findings; further searching needed.
+- **Revenue Range:** Not publicly available; industry reports may offer insights.
+- **Delivery Methods:** Standard construction practices; details not specified.
+- **Licensing:** Active (license number 918974-B as confirmed from the California Contractors State License Board).
+
+### Networking Opportunities
+- **Website:** No specific website found; further searching may yield results.
+- **Upcoming Events:** Specific events not identified; monitoring construction industry calendars or news will be beneficial.
+- **Association Memberships:** Likely membership in local construction and contractor associations (e.g., Associated General Contractors of America).
+
+### Outreach Programs
+- **DVBE/MBE/WBE/SBE goals:** Not found; contacting the contractor directly is recommended to inquire about these.
+- **Small Business Programs:** Same as above; reaching out could provide information.
+
+### Active/Upcoming Projects
+- **Active Projects:** Specific details not available; company updates may appear in local construction news or industry announcements.
+
+### Related Entities
+- **Partners/Subcontractors:** Not specified; may learn through project news or company announcements.
+- **Clients:** Not disclosed in available resources; further scrutiny may be needed to identify key clients.
+
+### Entry Points to Decision Makers
+- **Decision Makers:** Identification via LinkedIn or by direct inquiry into company resources.
+- **Best Access Routes:** Networking through local builders’ events, construction expos, or industry meetups.
+
+## Decision Maker Drill-Down
+No specific decision makers were retrieved in the search. Recommendations include:
+- **LinkedIn Searches:** Look for employees under Stonerock Construction to identify roles and responsibilities.
+- **Engagement at Events:** Target opportunities where construction companies gather to present or network.
+
+## Red Flags
+No apparent red flags identified; continuous monitoring of any financial or operational concerns as they relate to the contractor's activities is advisable.
+
+## Evidence Log
+1. **URL Fetched:** [CSLB License Check](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+   - **Learned:** Validity of contractor license number 918974-B confirmed; check for details of the business license, bonding, etc.
+
+2. **URL Fetched:** [LADBS](https://www.ladbs.org/)
+   - **Learned:** Resource for permits and plan reviews in Los Angeles; a great location for local construction services.
+
+3. **URL Fetched:** [CSLB Home Page](https://www.cslb.ca.gov/)
+   - **Learned:** Provides access to contractor information, enforcement actions, and consumer tips.
+
+### Next Steps
+- Investigate further for specific project information or decision-making contacts.
+- Engage in networking within local construction events or industry conferences to make introductions.
+
+For any specific follow-up actions or additional areas of interest, please let me know!

@@ -55,8 +55,8 @@ class RawWire_Chatbot_Context {
         // Hook into chatbot params for admin pages
         add_filter('mwai_chatbot_params', [$this, 'modify_chatbot_params'], 10, 2);
         
-        // Add context via instructions override
-        add_filter('mwai_ai_context', [$this, 'add_dynamic_context'], 10, 2);
+        // Add context via instructions override (using new filter name)
+        add_filter('mwai_ai_instructions', [$this, 'add_dynamic_context'], 10, 2);
         
         // Register AJAX for fetching live context
         add_action('wp_ajax_rawwire_get_chatbot_context', [$this, 'ajax_get_context']);

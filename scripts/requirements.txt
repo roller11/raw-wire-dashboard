@@ -1,0 +1,5 @@
+# Requirements for LADBS scraper scripts
+# Install with: pip install -r requirements.txt
+
+playwright>=1.40.0
+mysql-connector-python>=8.0.0

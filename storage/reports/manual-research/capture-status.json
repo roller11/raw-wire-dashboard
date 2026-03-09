@@ -1,0 +1,11 @@
+{
+    "status": "completed",
+    "finished_at": "2026-03-08T03:18:26+00:00",
+    "entity": "Bernards Bros.",
+    "latest_output_file": "/mnt/f/dev/raw-wire-equalizer/wordpress-plugins/raw-wire-dashboard/storage/reports/manual-research/latest-findings.txt",
+    "archive_file": "/mnt/f/dev/raw-wire-equalizer/wordpress-plugins/raw-wire-dashboard/storage/reports/manual-research/findings_20260308_031825_bernards-bros.txt",
+    "trace_path": "/mnt/f/dev/raw-wire-equalizer/wordpress-plugins/raw-wire-dashboard/storage/reports/openclaw-traces/trace_20260308_031824_0c84bd8dc353.json",
+    "usage_total": null,
+    "soft_token_budget": 2000000,
+    "budget_exceeded": false
+}

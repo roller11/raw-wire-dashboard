@@ -1,0 +1,203 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rawwire.io/schemas/page-template.schema.json",
+  "title": "Raw Wire Page Template",
+  "description": "Schema for defining dashboard page layouts",
+  "type": "object",
+  "required": ["id", "name", "layout"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the page template",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name for the page"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description of the page purpose"
+    },
+    "version": {
+      "type": "string",
+      "description": "Template version for migrations",
+      "default": "1.0.0"
+    },
+    "industry": {
+      "type": "string",
+      "description": "Industry vertical this template is designed for",
+      "examples": ["news-aggregator", "interior-design", "real-estate", "consulting", "e-commerce"]
+    },
+    "icon": {
+      "type": "string",
+      "description": "Dashicon or custom icon class"
+    },
+    "menu": {
+      "type": "object",
+      "description": "WordPress admin menu configuration",
+      "properties": {
+        "position": { "type": "integer" },
+        "parent": { "type": "string" },
+        "capability": { "type": "string", "default": "manage_options" }
+      }
+    },
+    "header": {
+      "type": "object",
+      "description": "Page header configuration",
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "logo": { "type": "string", "description": "URL or attachment ID" },
+        "show_breadcrumbs": { "type": "boolean", "default": true },
+        "show_search": { "type": "boolean", "default": false },
+        "show_notifications": { "type": "boolean", "default": true },
+        "actions": {
+          "type": "array",
+          "description": "Header action buttons",
+          "items": { "$ref": "#/definitions/action" }
+        },
+        "nav": {
+          "type": "array",
+          "description": "Navigation tabs/links",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": { "type": "string" },
+              "href": { "type": "string" },
+              "icon": { "type": "string" },
+              "active_conditions": { "type": "object" }
+            }
+          }
+        }
+      }
+    },
+    "sidebar": {
+      "type": "object",
+      "description": "Optional sidebar configuration",
+      "properties": {
+        "enabled": { "type": "boolean", "default": false },
+        "position": { "type": "string", "enum": ["left", "right"], "default": "left" },
+        "width": { "type": "integer", "description": "Width in grid columns (1-4)", "default": 3 },
+        "collapsible": { "type": "boolean", "default": true },
+        "panels": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/panel_reference" }
+        }
+      }
+    },
+    "layout": {
+      "type": "array",
+      "description": "Main content area rows",
+      "items": { "$ref": "#/definitions/row" }
+    },
+    "footer": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean", "default": false },
+        "panels": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/panel_reference" }
+        }
+      }
+    },
+    "scripts": {
+      "type": "array",
+      "description": "Additional JavaScript files to load",
+      "items": { "type": "string" }
+    },
+    "styles": {
+      "type": "array",
+      "description": "Additional CSS files to load",
+      "items": { "type": "string" }
+    },
+    "settings": {
+      "type": "object",
+      "description": "Page-level settings",
+      "properties": {
+        "refresh_interval": { "type": "integer", "description": "Auto-refresh in seconds, 0 to disable" },
+        "cache_ttl": { "type": "integer", "description": "Cache duration in seconds" },
+        "require_auth": { "type": "boolean", "default": true },
+        "custom": { "type": "object", "description": "Industry-specific settings" }
+      }
+    }
+  },
+  "definitions": {
+    "row": {
+      "type": "object",
+      "required": ["panels"],
+      "properties": {
+        "id": { "type": "string" },
+        "css_class": { "type": "string" },
+        "visible_conditions": { "$ref": "#/definitions/conditions" },
+        "panels": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/panel_slot" }
+        }
+      }
+    },
+    "panel_slot": {
+      "type": "object",
+      "required": ["width"],
+      "properties": {
+        "id": { "type": "string", "description": "Unique slot ID within page" },
+        "width": { 
+          "type": "integer", 
+          "description": "Width in grid columns (1-12)",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "width_tablet": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "width_mobile": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "panel_ref": { 
+          "type": "string", 
+          "description": "Reference to panel template ID" 
+        },
+        "panel_inline": { 
+          "$ref": "panel-template.schema.json",
+          "description": "Inline panel definition (alternative to panel_ref)"
+        },
+        "css_class": { "type": "string" },
+        "visible_conditions": { "$ref": "#/definitions/conditions" }
+      }
+    },
+    "panel_reference": {
+      "type": "object",
+      "required": ["panel_ref"],
+      "properties": {
+        "panel_ref": { "type": "string" },
+        "overrides": { 
+          "type": "object",
+          "description": "Override panel template properties"
+        }
+      }
+    },
+    "action": {
+      "type": "object",
+      "required": ["type", "label"],
+      "properties": {
+        "type": { 
+          "type": "string", 
+          "enum": ["button", "link", "dropdown", "toggle"]
+        },
+        "label": { "type": "string" },
+        "icon": { "type": "string" },
+        "href": { "type": "string" },
+        "action": { "type": "string", "description": "JavaScript action or AJAX endpoint" },
+        "confirm": { "type": "string", "description": "Confirmation message" },
+        "css_class": { "type": "string" },
+        "visible_conditions": { "$ref": "#/definitions/conditions" }
+      }
+    },
+    "conditions": {
+      "type": "object",
+      "description": "Visibility/enable conditions",
+      "properties": {
+        "capability": { "type": "string" },
+        "option_equals": { "type": "object" },
+        "data_exists": { "type": "string" },
+        "custom": { "type": "string", "description": "PHP callback for complex conditions" }
+      }
+    }
+  }
+}

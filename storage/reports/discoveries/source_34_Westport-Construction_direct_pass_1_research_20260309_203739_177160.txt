@@ -1,0 +1,936 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 34
+Party: Westport Construction
+License: 712732-B
+Permit: 25010-10000-01859
+Generated: 2026-03-09 20:37:39
+Stage: direct_pass_1_research
+Method: perplexity_direct
+Provider: Perplexity
+Model: openai/gpt-5.1
+==================================================
+
+1. TARGET SUMMARY
+------------------
+
+Westport Construction Inc. is a Southern California general contractor based in Monrovia with a strong Los Angeles–centric portfolio, specializing in market-rate and affordable multi-family housing, historic rehabs, and urban infill projects. The firm is family-led (Apodaca family), operates under California B (General Building) licenses including #712732, and is active in the “California–Los Angeles and Vicinity” region for major affordable and market-rate residential work, hotels, and historic SRO renovations. Key internal power centers for an interior design firm are:
+
+- Family ownership/strategic leadership (Ray, Joanne, Andrew Apodaca).  
+- Operations & business development (Mr. Shaw; project executives Tim [surname not listed] and Mr. Carsey).  
+- Preconstruction and estimating (Mr. Dauth – VP Pre-Construction; Kristen Patterson – Director of Purchasing/Chief Cost Estimator).  
+
+Primary access vectors emerge via:
+
+- Affordable housing and multi-family trade networks (SCANPH, Urban Land Institute).  
+- Chamber of commerce / civic business circles (Glendale Chamber of Commerce).  
+- Construction bid/relationship platforms (Blue Book ProView, ConstructConnect).  
+
+For LA-focused interior design work, the decision-making gravity is concentrated in preconstruction (budget/scope), purchasing (subcontractor and interiors buyout), project executives managing LA affordable-housing and historic rehab projects, and the Apodaca family leadership that shapes client and project selection.
+
+---
+
+2. PEOPLE
+---------
+
+### 2.1 Executive & Strategic Leadership
+
+**Ray Apodaca**  
+- **Role/Title:** Founder (company founded in 1987 by Ray Apodaca).  
+- **Authority Level:** Executive/owner-level; sets long-term direction and culture.  
+- **What he controls:** Overall strategic direction; legacy relationships in Southern California construction; credibility as the founding principal.  
+- **Contact route:**  
+  - Company HQ phone: +1 (626) 447‑2448 (main line from multiple business directories).  
+    - MapQuest Monrovia listing: 125 W Maple Ave, Monrovia, CA 91016, +1 (626) 447‑2448, website https://westport-inc.com.  
+    - Source: https://www.mapquest.com/us/california/westport-construction-411326187  
+- **Why he matters for interiors:** As founder and senior figure in a family-owned firm, he influences which developers they partner with and whether they bring design partners (including interior designers) into projects early.  
+- **Sources:**  
+  - Founding info and family-led description: https://westport-inc.com/about/  
+
+**Joanne Apodaca**  
+- **Role/Title:** Partner (joined as partner in 1989); senior operations/administration leader.  
+- **Authority Level:** Executive/operational.  
+- **What she controls:**  
+  - Has “guided Westport in delivering exceptional contract performance and customer satisfaction since inception.”  
+  - Leads establishment and management of complex multi-year projects as prime, JV partner, and subcontractor.  
+  - Provides administrative and operational support for back-office management: accounting, payroll, HR, lien waivers, subcontractor payments, and oversees marketing and advertising.  
+  - Source text explicitly notes she “has led the company in establishing and managing numerous complex and multi-year projects as a prime contractor, joint venture partner and subcontractor” and “oversees Westport’s marketing and advertising activities.”  
+  - Source: https://westport-inc.com/about/  
+- **Contact route:** via HQ and back-office/admin channels:  
+  - HQ phone: +1 (626) 447‑2448.  
+  - Likely routing through office administration/HR (both under her umbrella).  
+- **Why she matters for interiors:**  
+  - Controls marketing and brand messaging—key for positioning a design firm as a repeat collaborator.  
+  - Deep involvement in complex, multi-year contracts; likely involved in high-level negotiations with large affordable housing developers and institutional owners where interiors scope is significant.  
+
+**Andrew Apodaca**  
+- **Role/Title:** Senior management / corporate strategy & growth (family leadership).  
+  - The About page describes: “Based in Los Angeles, CA, Mr. Apodaca specializes in business strategy, corporate growth planning, operations and business development. He oversees Westport and the Apodaca family’s investments, both domestically and internationally.”  
+  - He is “currently managing a large-scale growth initiative for Westport Construction… technology integration, advanced SOPs, employee education, implementation of a board of directors and an increase in project capacity and size.”  
+  - Source: https://westport-inc.com/about/  
+- **Authority Level:** Executive – strategy/business development.  
+- **What he controls:**  
+  - Corporate growth strategy and expansion of project capacity/size.  
+  - Business development focus, especially on larger, more complex multi-family/affordable housing projects.  
+  - Oversees Apodaca family investments (indicates broad financial authority).  
+- **Extra affiliations (“diamonds”):**  
+  - Played an integral role in launching **Clhub**, an Italy-based venture incubator focusing on green tech tied to US construction; sits on its board and participates in international financing and investments.  
+    - This ties him into innovation- and ESG-oriented networks where interiors and sustainability intersect.  
+  - “Andrew is an active member of **SCANPH** (Southern California Association of Non-Profit Housing) and **Urban Land Institute (ULI)**.”  
+    - Source (membership & Clhub info): https://westport-inc.com/about/  
+- **Contact route:**  
+  - HQ phone and corporate/business development channels: +1 (626) 447‑2448 (Monrovia HQ).  
+  - Likely reachable via Westport’s general contact routing and through SCANPH / ULI networking channels.  
+- **Why he matters for interiors:**  
+  - As the strategist behind growth and BD, he influences which developers and projects Westport pursues and how much design assist or interior design support is baked into their delivery model.  
+  - His involvement in tech/green start-ups suggests openness to innovative, sustainability-focused interior design solutions, particularly for affordable and market-rate multi-family.  
+- **Best access routes / meeting opportunities:**  
+  - **SCANPH events:** SCANPH regularly convenes LA affordable housing developers, non-profits, and GCs; as an active member, Andrew is a plausible attendee/panelist.  
+  - **Urban Land Institute (ULI) events in LA:** ULI organizes local councils, breakfast panels, and conferences where multi-family and affordable housing are central topics; Andrew’s membership positions him within those circles.  
+  - **Developer/introduction path:** Developers and non-profit housing entities that choose Westport as GC often interact with Andrew on early-stage deals; an interior design firm allied with those developers could be introduced as a trusted partner.  
+- **Sources:**  
+  - Leadership description, SCANPH & ULI membership, Clhub involvement: https://westport-inc.com/about/  
+
+### 2.2 Operations & Project Leadership
+
+**Mr. Cummings**  
+- **Role/Title:** Executive Vice President of Operations, Westport Construction.  
+- **Authority Level:** Executive – operations/client relationships.  
+- **What he controls:**  
+  - “Responsible for developing new and augmenting existing client relationships for government, military and business sector projects.”  
+  - Brings over 35 years of construction and engineering experience; prior credits: Angelus Plaza (1,063-unit senior living, 17 stories), North Valley Commerce Center, Howard Business Park, Burbank Airport Commerce Center.  
+  - Source: https://westport-inc.com/about/  
+- **Why he matters for interiors:**  
+  - Oversees client relationships for large-scale multi-family and institutional projects where interior design scope is substantial (senior living, large commercial campuses).  
+  - Likely key decision-maker on technical, budgetary and schedule issues involving interior finishes and scope.  
+- **Contact route:** Via HQ and operations chain; no direct contact published; use HQ phone and reference multi-family/affordable housing operations.  
+
+**Mr. Shaw**  
+- **Role/Title:** Senior construction operations & business development leader.  
+  - The About page: “Mr. Shaw oversees the construction operations and business development. He effectively and positively represents the company to clients, vendors, subcontractors and company employees. Oversee development of initial sales, proposals and project estimates and is responsible to maintain client relationships… Provides oversight on prime contract negotiations and assure that projects are properly estimated, contracted, planned, organized, managed and reported…”  
+  - Also responsible for corporate reporting and communications and ensuring project safety compliance; manages subcontractor services, submittals, project schedules, cost controls; reviews scopes for subcontractors and vendors; involved in negotiations with Compliance & Claims Officer and risk management; meets with clients and superintendents to resolve issues.  
+  - Prior roles include Director of Construction at Cobalt Construction, Director of Construction at Casden Properties (owner-builder of multi-family), and Director of Purchasing at Forest City Development (multi-family owner-builder).  
+  - Source: https://westport-inc.com/about/  
+- **Authority Level:** Executive – operations & BD, direct control of project contract and subcontract scopes.  
+- **What he controls:**  
+  - Initial sales/proposals, project estimates, contract negotiations.  
+  - Oversight of subcontracting and purchasing through management of Compliance & Claims Officer and project teams.  
+  - Client relationship maintenance across their portfolio.  
+- **Why he matters for interiors:**  
+  - Directly influences whether an interior design firm is brought in early, how interior scopes are structured in bids, and which subs/design partners are selected.  
+  - His history at Casden Properties and Forest City connects him to major multi-family owner-builder networks in Southern California.  
+- **Contact route:**  
+  - Via Westport HQ, referencing business development or upcoming multi-family/affordable housing projects.  
+  - Through developers and owner-builders who have worked with him (Casden, Forest City networks) for warm introductions.  
+- **Potential meeting opportunities:**  
+  - Industry multi-family and affordable housing events attended by executive-level GC reps (often same events Andrew/Carsey attend).  
+  - Developer-side networking where Casden/Forest City people are active; Mr. Shaw’s prior relationships make introductions via those communities plausible.  
+
+**Tim (surname not listed)**  
+- **Role/Title:** Project Executive, Westport Construction.  
+  - Description: “With over 25 years of experience in multi-family construction, pre-construction, and subcontractor buyout, Tim brings deep industry expertise... As Project Executive at Westport Construction, Tim plays a pivotal role in client and consultant relationship management… He provides hands-on guidance and leadership to project managers, ensuring projects are delivered on schedule, within budget, and with cost-efficient solutions.”  
+  - Source: https://westport-inc.com/about/  
+- **Authority Level:** Senior operational – project executive.  
+- **What he controls:**  
+  - Oversight of multiple multi-family projects from preconstruction through Certificate of Occupancy.  
+  - Involvement in estimating, purchasing, and field coordination; influence on which subs (including interior trades) are accepted during buyout.  
+- **Why he matters for interiors:**  
+  - Project executives are often the final word on value engineering for interior finishes; they determine what stays in budget vs. gets VE’d out.  
+- **Contact route:**  
+  - Via project-specific introductions from developers or architects; referenced as the “project executive” on active jobs.  
+
+**Mr. Carsey**  
+- **Role/Title:** Project Executive, Affordable Housing focus, Westport Construction.  
+  - Description: “With over 25 years of experience in the construction industry, Mr. Carsey brings a wealth of knowledge and expertise, particularly within the Affordable Housing sector. He has cultivated strong, long-standing relationships with the City and County of Los Angeles, as well as numerous other jurisdictions… As one of Westport’s two Project Executives, Mr. Carsey oversees multiple projects from initiation through completion.”  
+  - Also supports Preconstruction (budgeting/bid), Purchasing (buyout/subcontracting), and Business Development.  
+  - Source: https://westport-inc.com/about/  
+- **Authority Level:** Senior operational – project executive with specific LA-government ties.  
+- **What he controls:**  
+  - Affordable housing projects, especially those requiring City/County of LA coordination—precisely where interior design for supportive housing and multi-family is central.  
+  - Influence over bid-phase decisions and subcontractor selection; assists BD in strengthening client relationships.  
+- **Why he matters for interiors:**  
+  - Key gatekeeper/approver for interior scopes on City/County-affiliated affordable housing projects.  
+  - His relationships with LA City/County are high-value “network map” nodes for your client.  
+- **Best access route:**  
+  - Affordable housing conferences, SCANPH events, and City/County of LA affordable housing briefings where Westport’s project executives interface with agencies and non-profit developers.  
+
+### 2.3 Preconstruction, Purchasing & Finance (Key for Interior Design)
+
+**Mr. Dauth**  
+- **Role/Title:** Vice President of Pre-Construction, Westport Construction.  
+- **Authority Level:** Executive – preconstruction & estimating.  
+- **What he controls:**  
+  - Leads “an integrated team that encompasses all aspects of the pre-construction process including estimating, value engineering, scheduling, and constructability review.”  
+  - Has prior developer experience in acquisition, entitlement, and product development.  
+  - Ensures understanding of developer/GC relationship, which is central to how interior design scope is funded and staged.  
+  - Source: https://westport-inc.com/about/  
+- **Why he matters for interiors:**  
+  - Preconstruction is where interior design fees, finish levels, and unit amenities are fixed into pro formas and GMP contracts.  
+  - Mr. Dauth’s team will decide if your firm’s interior design scope is viable within project budgets and VE cycles.  
+- **Contact route:**  
+  - Through Westport’s preconstruction/estimating channel and via developers who use Westport on repeated multi-family deals.  
+- **Meeting opportunities:**  
+  - Pre-bid conferences, early design meetings with developers/architects where Westport participates; introductions via those partners are ideal.  
+
+**Kristen Patterson**  
+- **Role/Title:**  
+  - **Director of Purchasing** (current description on Westport site).  
+    - “With over 15 years of experience… Kristen Patterson serves as the Director of Purchasing at Westport Construction, where she oversees all subcontractor procurement and supplier agreements for the company’s multi-family, market rate and affordable housing projects throughout California… responsible for evaluating subcontractor bids, developing scopes of work, negotiating pricing, and coordinating with internal teams and design consultants…”  
+    - Source: https://westport-inc.com/about/  
+  - **Chief Cost Estimator** (listed on Blue Book “Locations and Key Contacts”).  
+    - Blue Book lists “Kristen Patterson – Chief Cost Estimator – Main Location” at 125 W Maple St, Monrovia, CA 91016.  
+    - Source: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+- **Authority Level:** Senior procurement & estimating – critical gatekeeper for bids and subs.  
+- **What she controls:**  
+  - All subcontractor procurement and supplier agreements across multi-family projects.  
+  - Evaluation of subcontractor bids, scope development, pricing negotiations.  
+  - Coordination with design consultants for compliance with plans, specs, and schedule.  
+- **Contact info (partial):**  
+  - HQ / main location: 125 W Maple St, Monrovia, CA 91016.  
+  - Blue Book identifies her as a named contact under “Main Location”; communications can be initiated via Blue Book “Request Qualifications” or Westport HQ.  
+  - Blue Book contact page: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+- **Why she matters for interiors (Decision-maker drill-down):**  
+  - Directly controls which interior-finishes subs and design-related vendors are approved and at what price.  
+  - Her role in evaluating bids and negotiating pricing means she can support or veto inclusion of a design firm’s preferred finishes or spec packages during buyout/VE.  
+- **Best access routes:**  
+  - Submit capability statements and portfolio via:  
+    - Blue Book “Request Qualifications” form on Westport’s ProView page (which specifically offers to route requests for information, licenses, bonding, etc.): https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+    - Introductions from architects or developers on active multi-family projects where she is running procurement.  
+- **Potential meeting opportunities:**  
+  - Pre-bid meetings, subcontractor outreach calls, and purchasing review meetings during buyout—especially on new large affordable housing and market-rate multi-family builds.  
+
+**Mr. Wile**  
+- **Role/Title:** Finance & corporate development support.  
+  - “Mr. Wile supports Westport’s finance and corporate development teams… responsible for financial reporting & analysis, management of financial administrative support, accounting operations, fiscal forecasting, establishing performance benchmarking, cost control activities and maintaining financial relationships to support company growth needs.”  
+  - Source: https://westport-inc.com/about/  
+- **Authority Level:** Financial/analytical – influences cost thresholds and project financial structure.  
+- **Why he matters:**  
+  - While not selecting designers directly, his cost-control framework affects how generous interior budgets can be.  
+
+### 2.4 HR & Organizational Development
+
+**Mario Willis**  
+- **Role/Title:** Director of Human Resources.  
+- **Authority Level:** Department head – HR.  
+- **What he controls:**  
+  - Leads HR, company culture, employee engagement and development programs; implements people strategies aligned with business goals.  
+  - Source: https://westport-inc.com/about/  
+- **Why he matters:**  
+  - Not a direct interiors decision-maker; however, HR often coordinates internal training, vendor-lunch-and-learn, and culture events where design partners could be introduced informally.  
+
+**Ms. Schmidtberger**  
+- **Role/Title:** Organizational development / operations & project management background.  
+  - Described as having “more than 15 years of diverse experience across construction operations, project management, preconstruction, and organizational development… field coordination, internal systems development, multi-family rehabilitation, affordable housing, and process design.”  
+  - Source: https://westport-inc.com/about/  
+- **Authority Level:** Operations/organizational development – bridges field and office.  
+- **Why she matters:**  
+  - Helps design internal processes; could shape how and when external design partners are involved across project lifecycle.  
+
+### 2.5 Business Development & Client Relations
+
+**Mr. Bohling** (John Bohling)  
+- **Role/Title:** Business development and client relations.  
+  - About page: “Mr. Bohling brings over 35 years of construction client relations, strategic planning, and marketing experience. In addition to business development, Mr. Bohling also has extensive past construction operations experience as owner of Bohling Enterprises and as Vice President of Creative Construction…”  
+  - Source: https://westport-inc.com/about/  
+  - ConstructConnect snippet lists contacts including **John Bohling** with Westport domain email:  
+    - “Contacts: Cindy Lucero, Terry Martin, Zack Silverstein, John Bohling, Felipe Pantoja… @westportconstructioninc.com” (usernames redacted).  
+    - Source: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+- **Authority Level:** Senior business development.  
+- **What he controls:**  
+  - Front-end client relationship building and identification of new projects.  
+  - Influence on which design partners are recommended/positioned to clients.  
+- **Contact route:**  
+  - ConstructConnect contact listing (requires login for details).  
+  - Westport HQ and BD channel; referencing multi-family and affordable housing experience.  
+- **Why he matters for interiors:**  
+  - BD often advocates for preferred design firms when presenting GC capabilities to developers and housing agencies.  
+
+### 2.6 Gatekeepers & Other Named Contacts
+
+**Cindy Lucero, Terry Martin, Zack Silverstein, Felipe Pantoja**  
+- **Role/Title:** Listed as “Contacts” for Westport Construction/WPIC on ConstructConnect (roles not specified).  
+  - The ConstructConnect listing shows: “Contacts: Cindy Lucero, Terry Martin, Zack Silverstein, John Bohling, Felipe Pantoja… @westportconstructioninc.com” with a Monrovia address and notes “General Contractor – Commercial.”  
+  - Source: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+- **Authority Level:** Likely project management/estimating/administrative.  
+- **Gatekeeper function:**  
+  - At minimum, these individuals control information flow regarding bids and project opportunities via ConstructConnect; they may be estimators or PMs handling incoming inquiries and distributing bid packages.  
+- **Contact route:**  
+  - Through ConstructConnect messaging (if your firm uses the platform) and via Westport HQ using their names.  
+
+**Gatekeeper drill-down: Kristen Patterson**  
+- **Gatekeeper to:** Preconstruction leadership (Mr. Dauth), project executives, and developers/architects regarding subcontract and supplier selection.  
+- **Contact route:**  
+  - Blue Book “Key Contacts” listing (Chief Cost Estimator at main location): https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+  - HQ phone and procurement email channels.  
+- **Why she matters operationally:**  
+  - She filters which subcontractors and vendors are considered during buyout; can champion or block new interior design–aligned subs based on perceived reliability, pricing and scope completeness.  
+
+---
+
+3. COMPANY
+----------
+
+**Legal Identity & Registration**
+
+- **Legal Name:** Westport Construction Inc.  
+  - Confirmed by multiple sources:  
+    - VisualVisitor: “Legal Name: Westport Construction Inc.” – https://www.visualvisitor.com/companies/4581404/westport_construction_inc.  
+    - BuildZoom contractor profile – https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+- **Type:** General contractor / construction manager with design-build and preconstruction capabilities; focus on multi-family residential (market-rate & affordable), historic rehab, commercial and institutional.  
+  - Westport site and Blue Book profile:  
+    - Services: construction management, general contracting, design-build, commercial construction, pre-construction, restoration & preservation, value engineering, scheduling, constructability review, utility work.  
+    - Sources:  
+      - https://westport-inc.com/services/  
+      - https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+- **Headquarters:** 125 W Maple Ave (or Maple St), Monrovia, CA 91016.  
+  - Verified by MapQuest, Waze, VisualVisitor, RocketReach, Blue Book.  
+  - Examples:  
+    - MapQuest: “Westport Construction, 125 W Maple Ave, Monrovia, CA 91016, US” – https://www.mapquest.com/us/california/westport-construction-411326187  
+    - Waze: “WESTPORT CONSTRUCTION INC., 125 W Maple Ave, Monrovia, CA, US, (626) 447‑2448, westport-inc.com” – https://www.waze.com/live-map/directions/us/ca/monrovia/westport-construction-inc.?to=place.ChIJ8xTpmW7ZwoAR9WsOxDnT7co  
+- **Los Angeles Presence:**  
+  - MapQuest lists a Los Angeles address: “Westport Construction, 538 Wall St, Los Angeles, CA 90013 +1 (213) 623‑2850” – indicating either an LA office or project site.  
+  - Source: https://www.mapquest.com/us/california/westport-construction-468113409  
+  - Blue Book region: “California–Los Angeles and Vicinity” – https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+
+**Licensing & Classification**
+
+- **Contractor Licenses (CA):**  
+  - BuildZoom lists two verified California General Building licenses:  
+    - License #465880 – Status: Active, Type: General Building, Business Type: Joint Venture.  
+    - License #712732 – Status: Active, Type: General Building, Business Type: Joint Venture.  
+    - Source: https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+  - License verification is tied to the California Contractors State License Board (CSLB) “Check A License” tool, which BuildZoom references.  
+    - CSLB check portal: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+- **License Status:** Active (per BuildZoom verification as of November 2024).  
+
+**Scale & Financials**
+
+- **Employee Count:**  
+  - VisualVisitor: ~46 employees.  
+    - Source: https://www.visualvisitor.com/companies/4581404/westport_construction_inc.  
+  - RocketReach: ~85 employees listed on their system.  
+    - Source: https://rocketreach.co/westport-construction-profile_b5ec2f6ef42e733a  
+- **Revenue Range:**  
+  - VisualVisitor: $10–$50M range.  
+    - Source: https://www.visualvisitor.com/companies/4581404/westport_construction_inc.  
+  - RocketReach: ~$15.2M (specific estimate).  
+    - Source: https://rocketreach.co/westport-construction-profile_b5ec2f6ef42e733a  
+- **NAICS Code:** 236116 (New Multifamily Housing Construction).  
+  - Source: VisualVisitor – https://www.visualvisitor.com/companies/4581404/westport_construction_inc.  
+
+**Specialties & Markets**
+
+- **Core Markets:**  
+  - Market-rate and affordable multi-family housing.  
+  - Historic rehabilitation (notably downtown LA SRO and hotel conversions).  
+  - Commercial and institutional projects.  
+  - Westport site describes them as: “A Southern California market rate and affordable housing leader,” with portfolio including multi-family residential, commercial, and institutional projects.  
+  - Source: https://westport-inc.com/about/  
+- **Service Capabilities:**  
+  - Preconstruction & design/assist: cost estimating, value engineering, scheduling, construction phasing, constructability review, weekly design review meetings with owner, input from key subcontractors on building systems.  
+  - Design-build capabilities and project programming/budgeting (Blue Book).  
+  - Historic preservation and restoration expertise (CSI codes include interior finishes and historic treatment of windows, masonry, etc.).  
+  - Sources:  
+    - https://westport-inc.com/services/  
+    - https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+
+**Ownership Structure**
+
+- Family-led company founded by Ray and Joanne Apodaca, with ongoing leadership by the Apodaca family including Andrew Apodaca overseeing corporate growth and investments.  
+- BuildZoom lists “Business Type: Joint Venture” for licenses, indicating that for some projects or legal structures Westport operates as a JV entity.  
+- Sources:  
+  - Family leadership: https://westport-inc.com/about/  
+  - JV business type: https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+
+---
+
+4. NETWORKING OPPORTUNITIES
+---------------------------
+
+**4.1 Trade & Industry Associations**
+
+- **SCANPH (Southern California Association of Non-Profit Housing)**  
+  - Andrew Apodaca is explicitly stated as an “active member of SCANPH.”  
+  - This positions him in regular contact with non-profit affordable housing developers, City/County officials, and financiers.  
+  - Source: https://westport-inc.com/about/  
+  - **Actionable angle for your client:**  
+    - Attend SCANPH conferences, membership meetings, and trainings where Westport’s leadership (especially Andrew and possibly Carsey) are likely attendees.  
+    - Offer panels/roundtables on interior design for supportive housing and trauma-informed design, framed around SCANPH’s mission.
+
+- **Urban Land Institute (ULI)**  
+  - Andrew is also “an active member of Urban Land Institute.”  
+  - ULI hosts local LA Council events, technical panels, and urban housing forums.  
+  - Source: https://westport-inc.com/about/  
+  - **Actionable angle:**  
+    - Join ULI LA, target multi-family and affordable housing councils.  
+    - Seek speaking slots or sponsorship around topics like “Designing durable yet humane interiors for affordable housing” where Westport and their developer clients are likely present.
+
+- **Glendale Chamber of Commerce**  
+  - Westport Construction Inc appears in the Glendale Chamber member directory with a profile quoting their “Vision, Integrity, Dedication” statements.  
+  - Source: https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc  
+  - **Actionable angle:**  
+    - Participate in Glendale Chamber networking breakfasts and construction/real estate–themed events; ask specifically whether Westport leaders attend or have seats on committees.  
+    - Chamber staff often know which members are active vs. passive and can broker introductions.  
+
+**4.2 Business & Construction Platforms**
+
+- **Blue Book ProView (The Blue Book Building & Construction Network)**  
+  - Westport has a robust ProView profile with a list of services and a “Request Qualifications” function plus a “Request Brochure” option.  
+  - ProView page: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+  - Key Contacts page (identifies Kristen Patterson as Chief Cost Estimator): https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+  - **Actionable angle:**  
+    - Use the “Request Qualifications” form to send a tailored package highlighting your interior design work on multi-family and affordable housing, referencing specific Westport-appropriate project types (SRO, historic rehabs, podium/wrap).  
+    - Ask explicitly to be considered for design-assist and interior finish consultation on upcoming LA affordable/multi-family projects.
+
+- **ConstructConnect**  
+  - Westport Construction/WPIC has a listing with Monrovia address and multiple named contacts.  
+  - Source: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+  - **Actionable angle:**  
+    - If your firm uses ConstructConnect, “follow” Westport, turn on alerts for new projects, and use the platform messaging to request inclusion on relevant bid lists for interior design–related scopes (design-assist, amenity interiors, model units).  
+
+**4.3 Civic / Government Interfaces**
+
+- **City & County of Los Angeles**  
+  - Mr. Carsey is noted for “strong, long-standing relationships with the City and County of Los Angeles, as well as numerous other jurisdictions.”  
+  - Source: https://westport-inc.com/about/  
+  - **Actionable angle:**  
+    - Identify City/County affordable housing RFQs where Westport is a likely GC; attend public pre-proposal conferences and networking sessions where both agencies and GCs mingle.  
+    - Position your firm with City/County housing staff so that they know you as an interior design resource; this can translate into developer and GC referrals including to Westport.  
+
+---
+
+5. DISCOVERED PROJECTS
+----------------------
+
+*(Note: Only projects explicitly named in sources are listed; many are historic/affordable, interior-heavy projects suitable for your client.)*
+
+**Ford Hotel – Los Angeles, CA**  
+- **Type:** Hotel / Motel (historic SRO-type building).  
+- **Status:** Completed (listed as completed – Oct 2011 – on Blue Book).  
+- **Location:** Los Angeles, CA.  
+- **Why it matters:**  
+  - Shows Westport’s experience with historic urban hotels/SRO conversions—projects with complex interior renovation needs.  
+  - Owners/operators of such buildings are key nodes for future interior rehabilitation work.  
+- **Source:** Blue Book projects listing: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+
+**Rosslyn Lofts – (Blue Book lists as project, city label in snippet is Monrovia but building is in downtown LA)**  
+- **Type:** Apartments & Condominiums (historic loft/SRO).  
+- **Status:** Completed.  
+- **Why it matters:**  
+  - High-profile historic adaptive reuse; interior design scope critical.  
+  - Owners and architects on this job are likely repeating players with Westport in downtown LA affordable/historic rehab work.  
+- **Source:** https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+
+**Alexandria Hotel**  
+- **Type:** Hotel / Motel (historic downtown LA landmark).  
+- **Status:** Completed (Blue Book).  
+- **Why it matters:**  
+  - Another major historic property with large interior scope; indicates Westport’s familiarity with City approvals, preservation agencies, and specialty interior subs.  
+- **Source:** Blue Book projects: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+
+**New Pershing**  
+- **Type:** Historic Preservation (likely downtown LA SRO/loft).  
+- **Status:** Completed.  
+- **Why it matters:**  
+  - Confirms Westport’s niche in historic LA residential/hotel repositioning—prime territory for interior designers.  
+- **Source:** https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+
+**The Watermark – Reseda, CA**  
+- **Type:** Apartments & Condominiums.  
+- **Status:** Listed in projects; multi-family complex.  
+- **Location:** Reseda, CA (San Fernando Valley).  
+- **Why it matters:**  
+  - Shows active/in-recent-past multi-family pipeline in the LA area beyond downtown; suggests ongoing relationships with market-rate developers in the Valley.  
+- **Source:** https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+
+**Additional Blue Book–Listed Projects (all indicative of network density):**  
+- Broadwood Terrace – Apartments & Condominiums (Monrovia, CA).  
+- New Carver – Apartments & Condominiums.  
+- El Segundo Family Apartments – Apartments & Condominiums.  
+- Concord, Boyle-Cummings Block, Alexandria Hotel – hotels/motels.  
+- VA Westwood Building 209 – Office Building (ties into VA and federal networks).  
+- Verdugo Parking & Retail – Retail Store.  
+- California State Parks – School/College/University (education sector).  
+- Gateway Community Charter, Winters Industrial, Dome Printing, World Savings, McClellan Business Park, Donner Truckee Veterinarian, etc.  
+- Source: same Blue Book projects page: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+
+**Owner/Developer-side Experience via Leadership Background (not all under Westport but relevant networks):**  
+- Angelus Plaza – 1,063-unit, 17‑story senior living project.  
+- North Valley Commerce Center – 7 buildings, 300,000 SF industrial complex.  
+- Howard Business Park – 4 buildings, 200,000 SF industrial complex.  
+- Burbank Airport Commerce Center – 10 buildings, 500,000 SF industrial complex.  
+  - These are listed as prior projects to Mr. Cummings’ credit.  
+  - Source: https://westport-inc.com/about/  
+
+**Relevance for Upcoming Projects:**  
+- Given Westport’s stated focus on “market rate and affordable housing” and their deep portfolio of LA historic SRO and multi-family rehabs, future projects are likely to mirror this profile: LA City/County-sponsored affordable housing, downtown SRO rehabs, and market-rate multi-family in LA’s urban/suburban nodes (Reseda, El Segundo, etc.).  
+
+---
+
+6. DISCOVERED ENTITIES
+----------------------
+
+**Internal Entities**
+
+- **Westport Construction Inc.** – GC, Monrovia-based, core target.  
+- **Apodaca Family** – Ownership/leadership family (Ray, Joanne, Andrew).  
+
+**External Organizations & Platforms**
+
+- **SCANPH (Southern California Association of Non-Profit Housing)**  
+  - Relationship: Andrew Apodaca is an active member.  
+  - Relevance: Hub for non-profit housing developers, public agencies, and mission-driven financiers; critical networking environment for Westport and your client.  
+  - Source: https://westport-inc.com/about/  
+
+- **Urban Land Institute (ULI)**  
+  - Relationship: Andrew is an active member.  
+  - Relevance: Connects Westport to broader development, investment, and design community; high leverage for intros and panels.  
+  - Source: https://westport-inc.com/about/  
+
+- **Glendale Chamber of Commerce**  
+  - Relationship: Westport Construction Inc is a listed member.  
+  - Relevance: Local business networking, civic visibility, connection to property owners in Glendale/LA region.  
+  - Source: https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc  
+
+- **Blue Book Building & Construction Network**  
+  - Relationship: Westport maintains a ProView profile and uses Blue Book as a marketing and qualification tool.  
+  - Relevance: Conduit for subcontractor and vendor outreach; you can submit qualifications through this platform.  
+  - Source: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+
+- **ConstructConnect**  
+  - Relationship: Westport/WPIC profile with contact list.  
+  - Relevance: Bid and project information platform; contact-entry point for estimators/PMs.  
+  - Source: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+
+- **Clhub (Italy-based venture incubator)**  
+  - Relationship: Andrew Apodaca co-launched Clhub, sits on its board, and participates in investment rounds focusing on green tech bridging Italy and US construction.  
+  - Relevance: Signals interest in innovative and sustainable construction methods; potential angle for sustainable interior design collaborations or pilot projects.  
+  - Source: https://westport-inc.com/about/  
+
+**Possible Los Angeles Owner/Property Relationships (Indirect Signals)**
+
+- **SRO Housing Corporation**  
+  - Appears in the MapQuest entry that lists Westport Construction at 538 Wall St, Los Angeles, CA, with descriptive text about SRO Housing’s activities.  
+  - While the exact relationship is not explicitly spelled out, SRO Housing is a major owner/operator of SRO properties in downtown LA; Westport’s historic SRO/hotel rehab projects (Ford Hotel, Rosslyn Lofts, Alexandria, New Pershing) strongly overlap with SRO’s portfolio.  
+  - MapQuest LA listing with SRO description: https://www.mapquest.com/us/california/westport-construction-468113409  
+  - Relevance: High-likelihood ecosystem partner; both Westport and your client can benefit from relationships with SRO’s leadership and facilities team.  
+
+---
+
+7. ENTRY POINTS
+---------------
+
+**Top Priority Entry Paths to Decision Makers**
+
+1. **Preconstruction & Purchasing (High Leverage for Interior Design)**  
+   - Target: **Mr. Dauth (VP Pre-Construction)** and **Kristen Patterson (Director of Purchasing / Chief Cost Estimator)**.  
+   - How:  
+     - Use Blue Book ProView’s “Request Qualifications” to submit a curated interior design portfolio showcasing:  
+       - Affordable housing, SRO, senior living, and multi-family experience.  
+       - Ability to design cost-effective, durable interiors (critical for VE discussions run by Dauth and Patterson).  
+     - Clearly request to be considered for design-assist/finish package development on upcoming LA multi-family and historic rehab projects.  
+   - Evidence:  
+     - Westport’s preconstruction/purchasing roles and responsibilities: https://westport-inc.com/about/  
+     - Blue Book ProView + “Request Qualifications” function: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+     - Kristen listed as Chief Cost Estimator: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+
+2. **Affordable Housing Network (SCANPH & City/County of LA)**  
+   - Target: **Andrew Apodaca** and **Project Executive Mr. Carsey** (affordable housing focus).  
+   - How:  
+     - Join SCANPH and ULI; attend their LA-based conferences and working groups where Andrew is active.  
+     - Position your firm as a specialist in trauma-informed and durable interiors for affordable and supportive housing.  
+     - Use SCANPH events to meet non-profit developers and LA City/County housing staff who already work with Westport, then request introductions to Westport’s project executives for upcoming projects.  
+   - Evidence:  
+     - Andrew’s SCANPH & ULI membership: https://westport-inc.com/about/  
+     - Carsey’s strong relationships with City/County of Los Angeles: https://westport-inc.com/about/  
+
+3. **Multi-Family Developer & Owner-Builders (Mr. Shaw & Mr. Cummings)**  
+   - Target: **Mr. Shaw** (construction operations & BD) and **Mr. Cummings** (EVP Operations).  
+   - How:  
+     - Track Westport’s multi-family projects (The Watermark, El Segundo Family Apartments, etc.) via Blue Book and ConstructConnect.  
+     - Identify developers/owners on those projects and approach them first with your design capabilities, asking them to include you in their next deal and mention you to Westport’s operations team.  
+     - Highlight your understanding of VE pressures and your ability to design within tight budgets—core concerns for both Shaw and Cummings.  
+   - Evidence:  
+     - Project list: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+     - Shaw’s BD/operations role: https://westport-inc.com/about/  
+     - Cummings’ client relationship role: https://westport-inc.com/about/  
+
+4. **Chamber & Civic Business Circles (Glendale Chamber)**  
+   - Target: Leadership (Apodacas) and BD/operations staff who attend civic events.  
+   - How:  
+     - Join Glendale Chamber of Commerce, attend their real estate/construction-oriented events, and ask staff which Westport representatives are most active.  
+     - Offer to present or sponsor sessions showcasing interior design for mixed-use and affordable housing developments in Glendale and surrounding LA communities.  
+   - Evidence:  
+     - Glendale Chamber membership listing: https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc  
+
+5. **Bid & Project Information Platforms (ConstructConnect)**  
+   - Target: **Contacts listed on ConstructConnect** (Cindy Lucero, Terry Martin, Zack Silverstein, John Bohling, Felipe Pantoja).  
+   - How:  
+     - Use ConstructConnect to “follow” Westport’s projects; when interior-heavy projects appear, send messages to the listed contacts offering design assistance, renderings, or finish-package rationalization that can help them win or keep projects on budget.  
+   - Evidence:  
+     - Contacts and company listing: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+
+---
+
+8. RED FLAGS
+------------
+
+From the sources reviewed:
+
+- No explicit red flags (lawsuits, major safety issues, financial distress, or disciplinary actions) were identified.  
+- BuildZoom reports active licenses (#465880 and #712732) with verification as of November 2024 and a high BuildZoom score (113, top 3% of CA contractors), which is a positive signal of performance and licensing compliance.  
+  - Source: https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+
+(Absence of red flags in these sources does not guarantee no issues exist, but nothing negative surfaced in the reviewed public records and profiles.)
+
+---
+
+9. SOURCES
+----------
+
+*(Deduplicated main URLs; many sections above cite them inline.)*
+
+- Company site:  
+  - https://westport-inc.com  
+  - https://westport-inc.com/about/  
+  - https://westport-inc.com/services/  
+
+- Construction directories & networking platforms:  
+  - Blue Book ProView main profile: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+  - Blue Book locations & key contacts: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+  - Blue Book projects list: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+  - ConstructConnect company profile: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+
+- Business registries & data aggregators:  
+  - BuildZoom: https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+  - VisualVisitor: https://www.visualvisitor.com/companies/4581404/westport_construction_inc.  
+  - RocketReach overview: https://rocketreach.co/westport-construction-profile_b5ec2f6ef42e733a  
+
+- Location & mapping:  
+  - MapQuest Monrovia HQ: https://www.mapquest.com/us/california/westport-construction-411326187  
+  - MapQuest Los Angeles address: https://www.mapquest.com/us/california/westport-construction-468113409  
+  - Waze listing: https://www.waze.com/live-map/directions/us/ca/monrovia/westport-construction-inc.?to=place.ChIJ8xTpmW7ZwoAR9WsOxDnT7co  
+
+- Licensing / registration:  
+  - CSLB “Check A License” portal: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+
+- Associations / chambers:  
+  - Glendale Chamber member profile: https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc  
+
+---
+
+10. SEARCH LEDGER
+-----------------
+
+Exact queries used (in order):
+
+1. `CSLB license 712732 Westport Construction`  
+2. `"Westport Construction" Los Angeles construction`  
+3. `"Westport Construction Inc" contractor California`  
+4. `"Westport Construction" Inc projects Los Angeles`  
+5. `"Westport Construction" tenant improvement contractor`  
+6. `"Westport Construction" bid prequalification RFQ RFP`  
+7. `"Westport Construction" conference golf charity association`  
+8. `"Westport Construction" subcontractor vendor`  
+9. `"Westport Construction" leadership president estimating preconstruction`  
+10. `"712732" "Westport Construction" site:cslb.ca.gov`  
+11. `"Westport Construction Inc" 712732`  
+12. `"Westport Construction" 125 W Maple Monrovia`  
+
+---
+
+11. EVIDENCE LOG
+----------------
+
+1. **Query:** `CSLB license 712732 Westport Construction`  
+   - **URL:** https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+   - **Extracted Fact:** BuildZoom lists Westport Construction Inc with verified CA licenses #465880 and #712732 (General Building, business type Joint Venture, status Active), confirming licensing and tying the license number to the company name.
+
+2. **Query:** `CSLB license 712732 Westport Construction`  
+   - **URL:** https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+   - **Extracted Fact:** CSLB’s “Check A License” portal is the official state resource for verifying contractor license status, bonds, and insurance; this is the canonical source referenced by BuildZoom for license verification.
+
+3. **Query:** `"Westport Construction Inc" contractor California`  
+   - **URL:** https://www.visualvisitor.com/companies/4581404/westport_construction_inc.  
+   - **Extracted Fact:** VisualVisitor confirms legal name “Westport Construction Inc”, HQ address 125 W Maple Ave, Monrovia, CA, phone +1 (626) 447‑2448, NAICS code 236116, and revenue range $10–$50M with ~46 employees.
+
+4. **Query:** `"Westport Construction" 125 W Maple Monrovia`  
+   - **URL:** https://www.mapquest.com/us/california/westport-construction-411326187  
+   - **Extracted Fact:** MapQuest lists Westport Construction at 125 W Maple Ave, Monrovia, CA 91016 with phone +1 (626) 447‑2448 and website https://westport-inc.com, confirming HQ location and contact.
+
+5. **Query:** `"Westport Construction" 125 W Maple Monrovia`  
+   - **URL:** https://www.waze.com/live-map/directions/us/ca/monrovia/westport-construction-inc.?to=place.ChIJ8xTpmW7ZwoAR9WsOxDnT7co  
+   - **Extracted Fact:** Waze listing confirms same HQ address and phone number and associates the business explicitly with domain westport-inc.com, reinforcing the HQ identity.
+
+6. **Query:** `"Westport Construction" Los Angeles construction`  
+   - **URL:** https://www.mapquest.com/us/california/westport-construction-468113409  
+   - **Extracted Fact:** MapQuest lists a Los Angeles location “Westport Construction, 538 Wall St, Los Angeles, CA 90013 +1 (213) 623‑2850” and includes descriptive text about SRO Housing Corporation, linking Westport to LA SRO/affordable housing context.
+
+7. **Query:** `"Westport Construction Inc" contractor California`  
+   - **URL:** https://rocketreach.co/westport-construction-profile_b5ec2f6ef42e733a  
+   - **Extracted Fact:** RocketReach reports Westport Construction Inc headquartered at 125 W Maple Ave, Monrovia, CA, with estimated revenue ~$15.2M and ~85 employees on its platform.
+
+8. **Query:** `"Westport Construction Inc" contractor California`  
+   - **URL:** https://westport-inc.com  
+   - **Extracted Fact:** Company home page describes Westport’s “Partnering with Purpose” philosophy and highlights projects across Market Rate, Affordable, and Historical categories.
+
+9. **Query:** `"Westport Construction" leadership president estimating preconstruction`  
+   - **URL:** https://westport-inc.com/about/  
+   - **Extracted Fact:** About page outlines company history (founded 1987 by Ray Apodaca; Joanne Apodaca partner since 1989), describes Westport as a Southern California market-rate and affordable housing leader, and provides detailed bios for leadership and key staff including Andrew Apodaca, Ms. Apodaca, Mr. Eastman, Mr. Cummings, Mr. Shaw, Mr. Wile, Mr. Dauth, Tim (Project Executive), Mr. Bohling, Mr. Carsey, Ms. Schmidtberger, Mario Willis, and Kristen Patterson (Director of Purchasing).
+
+10. **Query:** `"Westport Construction" leadership president estimating preconstruction`  
+    - **URL:** https://westport-inc.com/services/  
+    - **Extracted Fact:** Services page lists preconstruction/design-assist capabilities (cost estimating, value engineering, scheduling, construction phasing, constructability review, weekly design review meetings, input from key subcontractors), confirming emphasis on early-stage collaboration where interior design can be integrated.
+
+11. **Query:** `"Westport Construction" Inc projects Los Angeles`  
+    - **URL:** https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+    - **Extracted Fact:** Blue Book ProView lists Westport’s services (construction management, general contracting, design-build, commercial construction, preconstruction, restoration & preservation) and confirms their region as “California–Los Angeles and Vicinity.”
+
+12. **Query:** `"Westport Construction" Inc projects Los Angeles`  
+    - **URL:** https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+    - **Extracted Fact:** Locations/contacts page lists main location at 125 W Maple St, Monrovia, CA and names **Kristen Patterson** as “Chief Cost Estimator,” providing a concrete named cost/estimating contact for the firm.
+
+13. **Query:** `"Westport Construction" Inc projects Los Angeles`  
+    - **URL:** https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+    - **Extracted Fact:** Projects page lists 20 featured projects including Ford Hotel (Los Angeles, CA), Broadwood Terrace, New Carver, El Segundo Family Apartments, Rosslyn Lofts, Alexandria Hotel, New Pershing, The Watermark (Reseda, CA), and others, indicating strong experience in LA/SoCal multi-family and historic rehabs.
+
+14. **Query:** `"Westport Construction" leadership president estimating preconstruction`  
+    - **URL:** https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc  
+    - **Extracted Fact:** Glendale Chamber member directory entry quotes Westport’s vision/integrity/dedication statements and confirms their membership, demonstrating civic/business association involvement.
+
+15. **Query:** `"Westport Construction" leadership president estimating preconstruction`  
+    - **URL:** https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+    - **Extracted Fact:** ConstructConnect profile lists Westport Construction/WPIC as a general contractor – commercial, with address at 125 W Maple Ave, Monrovia, CA, and lists contacts including Cindy Lucero, Terry Martin, Zack Silverstein, John Bohling, and Felipe Pantoja with emails at @westportconstructioninc.com (usernames redacted).
+
+---
+
+12. REQUIRED TODO CHECKLIST
+---------------------------
+
+- [x] **TODO 1: Confirm target identity (name, license, permit/address match)**  
+  - Confirmed legal name (Westport Construction Inc), HQ address (125 W Maple Ave, Monrovia, CA 91016), and license association (BuildZoom linking Westport Construction Inc to CA licenses #465880 and #712732).  
+  - Sources: BuildZoom, VisualVisitor, MapQuest, Waze, RocketReach, company website.
+
+- [x] **TODO 2: Visit LADBS/CSLB/registry sources relevant to target**  
+  - CSLB “Check A License” portal identified and referenced; BuildZoom shows Westport Construction Inc with license #712732 and #465880 verified via CSLB as of Nov 2024.  
+  - Permitting detail for LADBS permit #25010-10000-01859 could not be directly retrieved in the material available, but LA presence is corroborated via projects and LA address on MapQuest.  
+  - Sources:  
+    - CSLB portal: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx  
+    - BuildZoom: https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+
+- [x] **TODO 3: Identify at least 2 potential decision makers**  
+  - Identified multiple: Andrew Apodaca (corporate strategy/BD), Mr. Cummings (EVP Operations), Mr. Shaw (operations & BD), Mr. Dauth (VP Pre-Construction), Kristen Patterson (Director of Purchasing/Chief Cost Estimator), project executives Tim and Mr. Carsey, plus founders Ray and Joanne Apodaca.  
+  - Detailed decision-maker drill-downs provided for Andrew, Shaw, Carsey, Dauth, and Patterson.
+
+- [x] **TODO 4: Capture at least 3 concrete source URLs**  
+  - Numerous URLs captured and cited throughout, including:  
+    - Westport site pages (about, services).  
+    - Blue Book ProView and projects pages.  
+    - BuildZoom, VisualVisitor, RocketReach.  
+    - MapQuest, Waze.  
+    - CSLB portal.  
+    - Glendale Chamber, ConstructConnect.
+
+- [x] **TODO 5: Produce EVIDENCE LOG entries tied to findings**  
+  - Evidence Log section includes 15 entries, each tying a specific query, URL, and extracted fact to findings in the dossier.
+
+- [x] **TODO 6: Summarize best entry points to reach decision makers**  
+  - Entry points section (Section 7) summarizes concrete access routes: Blue Book/ConstructConnect outreach to preconstruction and purchasing leadership, SCANPH/ULI networking for Andrew and Carsey, developer introductions for Shaw/Cummings, and Glendale Chamber/civic networking.
+
+- [x] **TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)**  
+  - Edge-signal diamonds identified include:  
+    - Andrew Apodaca’s active membership in **SCANPH** and **Urban Land Institute** (event/network hubs).  
+    - Westport’s membership in **Glendale Chamber of Commerce** (civic networking).  
+    - **Blue Book ProView “Request Qualifications”** and **ConstructConnect** presence (vendor/bid portals and gatekeeper routes).  
+    - Kristen Patterson’s dual role as Director of Purchasing/Chief Cost Estimator (critical procurement gatekeeper).
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://www.casf.org/events/2025/05/05/team-building/charity-golf-classic-2025/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westport-inc.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://theorg.com/org/westport-construction/teams/construction-team
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.wabuildingtrades.org/club.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westport-inc.com/services/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westerngolfclassic.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westport-inc.com/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.wadsworthgolffoundation.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://omeganyct.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://wcsconstruction.com/wcs-bids-a-fond-farewell-to-ken-shaw-and-fred-dipietro/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westporty.org/giving/annual-golf-tournament/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.pdbgroup.com/post/premier-welcomes-joe-camacho-as-director-of-preconstruction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/dataportal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/westport-construction-468113409
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.salary.com/research/company/westport-construction-inc-overview
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/westport-construction-inc-ca
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.westportcompanies.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.visualvisitor.com/companies/4581404/westport_construction_inc.
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://losangelesgeneralcontractor.com/how-to-check-a-general-contractors-license-and-references-in-california/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/general-contractor-los-angeles-783211374
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://misc-external.dot.ca.gov/pets/ctors.php
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.westportconst.com/licensing
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.houzz.com/professionals/general-contractors/westport-construction-pfvwus-pf~218542665
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://misc-external.dot.ca.gov/pets/ctors.php/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.amazingprobuilders.com/contact-us
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westportkcmo.com/rfqp/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westportconstruction.com.au
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rfpdocumentstg.ddcanywhere.nyc/rfq/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rivcofm.org/sites/g/files/aldnop366/files/2024-03/2024%20Pre-Qual%20RFQ%20for%20Prime%20Contractors%20FM.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/westport-construction-411326187
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.westportps.org/uploaded/site_files/www/bids/2020-2021/21-006_SES_RR_Arch_RFP.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://wt-construction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.govcb.com/government-bids/RFQ-CONSTRUCTION-PREQUALIFICATION-AND-22443177.htm
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/Resources/CSLB/PL250818.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://reviews.birdeye.com/westport-construction-management-165501385419709
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/Resources/CSLB/PL250811.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.waze.com/live-map/directions/us/ca/monrovia/westport-construction-inc.?to=place.ChIJ8xTpmW7ZwoAR9WsOxDnT7co
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/Resources/Other/2024/CLC_Newsletter_Fall2024_final.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rocketreach.co/westport-construction-profile_b5ec2f6ef42e733a
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/Consumers/Report_Unlicensed_Activity/How_Can_I_Report_Unlicensed_Contractors.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://cslb.ca.gov/Resources/BoardMinutes/2024/C2b_--_March_21_Legislative_Committee_Minutes.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.casf.org/events/2025/05/05/team-building/charity-golf-classic-2025/
+- https://westport-inc.com
+- https://theorg.com/org/westport-construction/teams/construction-team
+- https://www.wabuildingtrades.org/club.html
+- https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc
+- https://westport-inc.com/services/
+- https://westerngolfclassic.com
+- https://westport-inc.com/about/
+- https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/
+- https://www.wadsworthgolffoundation.org
+- https://omeganyct.com
+- https://wcsconstruction.com/wcs-bids-a-fond-farewell-to-ken-shaw-and-fred-dipietro/
+- https://westporty.org/giving/annual-golf-tournament/
+- https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/
+- https://www.pdbgroup.com/post/premier-welcomes-joe-camacho-as-director-of-preconstruction
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.cslb.ca.gov/onlineservices/dataportal/
+- https://www.mapquest.com/us/california/westport-construction-468113409
+- https://www.salary.com/research/company/westport-construction-inc-overview
+- https://www.buildzoom.com/contractor/westport-construction-inc-ca
+- https://www.westportcompanies.com
+- https://www.visualvisitor.com/companies/4581404/westport_construction_inc.
+- https://losangelesgeneralcontractor.com/how-to-check-a-general-contractors-license-and-references-in-california/
+- https://www.mapquest.com/us/california/general-contractor-los-angeles-783211374
+- https://misc-external.dot.ca.gov/pets/ctors.php
+- https://www.westportconst.com/licensing
+- https://www.houzz.com/professionals/general-contractors/westport-construction-pfvwus-pf~218542665
+- https://misc-external.dot.ca.gov/pets/ctors.php/
+- https://www.amazingprobuilders.com/contact-us
+- https://westportkcmo.com/rfqp/
+- https://westportconstruction.com.au
+- https://rfpdocumentstg.ddcanywhere.nyc/rfq/
+- https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/
+- https://rivcofm.org/sites/g/files/aldnop366/files/2024-03/2024%20Pre-Qual%20RFQ%20for%20Prime%20Contractors%20FM.pdf
+- https://www.mapquest.com/us/california/westport-construction-411326187
+- https://www.westportps.org/uploaded/site_files/www/bids/2020-2021/21-006_SES_RR_Arch_RFP.pdf
+- https://wt-construction.com
+- https://www.govcb.com/government-bids/RFQ-CONSTRUCTION-PREQUALIFICATION-AND-22443177.htm
+- https://www.cslb.ca.gov/Resources/CSLB/PL250818.pdf
+- https://reviews.birdeye.com/westport-construction-management-165501385419709
+- https://www.cslb.ca.gov/Resources/CSLB/PL250811.pdf
+- https://www.waze.com/live-map/directions/us/ca/monrovia/westport-construction-inc.?to=place.ChIJ8xTpmW7ZwoAR9WsOxDnT7co
+- https://www.cslb.ca.gov/Resources/Other/2024/CLC_Newsletter_Fall2024_final.pdf
+- https://rocketreach.co/westport-construction-profile_b5ec2f6ef42e733a
+- https://www.cslb.ca.gov/Consumers/Report_Unlicensed_Activity/How_Can_I_Report_Unlicensed_Contractors.aspx
+- https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016
+- https://cslb.ca.gov/Resources/BoardMinutes/2024/C2b_--_March_21_Legislative_Committee_Minutes.pdf

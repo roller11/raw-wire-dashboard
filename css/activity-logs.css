@@ -341,3 +341,50 @@
         page-break-inside: avoid;
     }
 }
+
+/* Explicit Dark Mode Support */
+.rawwire-dashboard[data-theme="dark"] .tab-button {
+    background: var(--rw-bg-muted, #2c3338);
+    border-color: var(--rw-border-default, #40464d);
+    color: var(--rw-fg-default, #fff);
+}
+
+.rawwire-dashboard[data-theme="dark"] .tab-button:hover {
+    background: var(--rw-bg-elevated, #363b3f);
+}
+
+.rawwire-dashboard[data-theme="dark"] .tab-button.active {
+    background: var(--rw-bg-surface, #32373c);
+    border-color: var(--rw-border-default, #40464d);
+}
+
+.rawwire-dashboard[data-theme="dark"] .tab-pane {
+    background: var(--rw-bg-surface, #32373c);
+    border-color: var(--rw-border-default, #40464d);
+}
+
+.rawwire-dashboard[data-theme="dark"] .log-entry {
+    background: var(--rw-bg-surface, #32373c);
+    border-color: var(--rw-border-default, #40464d);
+}
+
+.rawwire-dashboard[data-theme="dark"] .log-entry:hover {
+    background: var(--rw-bg-elevated, #363b3f);
+}
+
+.rawwire-dashboard[data-theme="dark"] .log-details {
+    background: var(--rw-bg-muted, #2c3338);
+    border-color: var(--rw-accent-primary, #007cba);
+}
+
+.rawwire-dashboard[data-theme="dark"] .log-empty {
+    color: var(--rw-fg-muted, #c3c4c7);
+}
+
+.rawwire-dashboard[data-theme="dark"] .log-empty .dashicons {
+    color: var(--rw-fg-subtle, #646970);
+}
+
+.rawwire-dashboard[data-theme="dark"] .stat-item {
+    color: var(--rw-fg-muted, #adb5bd);
+}

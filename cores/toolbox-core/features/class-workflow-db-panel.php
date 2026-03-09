@@ -5,6 +5,26 @@
  * Read-only view of candidates, approvals, and archives tables
  * for workflow monitoring and fine-tuning.
  *
+ * ╔═══════════════════════════════════════════════════════════════════════════╗
+ * ║ STOP! THIS TOOL REGISTERS AS A TAB, NOT A SUBMENU                         ║
+ * ╠═══════════════════════════════════════════════════════════════════════════╣
+ * ║ Menu Architecture (see class-menu-manager.php):                           ║
+ * ║                                                                           ║
+ * ║   Raw Wire (Dashboard)                                                    ║
+ * ║   ├── Templates        ← Always visible                                   ║
+ * ║   ├── Tools            ← Multi-tab page (THIS TOOL registers here)        ║
+ * ║   ├── Workflows        ← Multi-tab page                                   ║
+ * ║   └── Settings                                                            ║
+ * ║                                                                           ║
+ * ║ Tools register TABS via RawWire_Menu_Manager::register_tool_tab()         ║
+ * ║ DO NOT use add_submenu_page() - that creates separate menu items!         ║
+ * ║                                                                           ║
+ * ║ This tool:                                                                ║
+ * ║   - ID: workflow_db                                                       ║
+ * ║   - Feature: collection_workflow                                          ║
+ * ║   - Shows as tab in Tools page when feature is enabled                    ║
+ * ╚═══════════════════════════════════════════════════════════════════════════╝
+ *
  * @package RawWire\Dashboard\Cores\ToolboxCore\Features
  * @since 1.0.23
  */
@@ -17,6 +37,16 @@ if (!defined('ABSPATH')) {
  * Class RawWire_Workflow_DB_Panel
  */
 class RawWire_Workflow_DB_Panel {
+
+    /**
+     * Tool ID for tab registration
+     */
+    const TOOL_ID = 'workflow_db';
+
+    /**
+     * Required feature for this tool
+     */
+    const REQUIRED_FEATURE = 'collection_workflow';
 
     /**
      * Singleton instance
@@ -46,7 +76,8 @@ class RawWire_Workflow_DB_Panel {
      * Private constructor
      */
     private function __construct() {
-        add_action('admin_menu', [$this, 'add_submenu'], 35);
+        // Register as tab via Menu Manager instead of submenu
+        add_action('rawwire_register_tool_tabs', [$this, 'register_tool_tab']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_assets']);
         add_action('wp_ajax_rawwire_workflow_db_refresh', [$this, 'ajax_refresh_table']);
         add_action('wp_ajax_rawwire_workflow_db_delete', [$this, 'ajax_delete_record']);
@@ -92,17 +123,38 @@ class RawWire_Workflow_DB_Panel {
     }
 
     /**
-     * Add submenu page
+     * Register this tool as a tab in the Tools page
+     * 
+     * Called via 'rawwire_register_tool_tabs' action from Menu Manager
+     */
+    public function register_tool_tab() {
+        if (!class_exists('RawWire_Menu_Manager')) {
+            return;
+        }
+
+        RawWire_Menu_Manager::register_tool_tab(self::TOOL_ID, [
+            'label'           => __('Workflow DB', 'raw-wire-dashboard'),
+            'icon'            => 'dashicons-database',
+            'required_feature'=> self::REQUIRED_FEATURE,
+            'render_callback' => [$this, 'render_tab_content'],
+            'priority'        => 20,
+        ]);
+    }
+
+    /**
+     * Render tab content (called by Menu Manager)
+     * Note: render_page() outputs full content - Menu Manager handles the tab container
+     */
+    public function render_tab_content() {
+        $this->render_page();
+    }
+
+    /**
+     * @deprecated Use register_tool_tab() instead - this is kept for backward compatibility
      */
     public function add_submenu() {
-        add_submenu_page(
-            'raw-wire-dashboard',
-            __('Workflow DB', 'raw-wire-dashboard'),
-            __('Workflow DB', 'raw-wire-dashboard'),
-            'manage_options',
-            'rawwire-workflow-db',
-            [$this, 'render_page']
-        );
+        // DEPRECATED: Menu registration moved to RawWire_Menu_Manager
+        // This method does nothing - tabs are registered via register_tool_tab()
     }
 
     /**
@@ -111,7 +163,7 @@ class RawWire_Workflow_DB_Panel {
      * @param string $hook Current page hook
      */
     public function enqueue_assets($hook) {
-        if (strpos($hook, 'rawwire-workflow-db') === false) {
+        if (strpos($hook, 'rawwire-workflow-db') === false && strpos($hook, 'raw-wire-tools') === false) {
             return;
         }
 
@@ -218,14 +270,15 @@ class RawWire_Workflow_DB_Panel {
         
         <style>
             .rawwire-workflow-db .nav-tab .count {
-                background: #f0f0f0;
+                background: var(--rw-bg-muted, #f0f0f0);
+                color: var(--rw-fg-default, #333);
                 padding: 2px 6px;
                 border-radius: 3px;
                 font-size: 11px;
                 margin-left: 5px;
             }
             .rawwire-workflow-db .nav-tab-active .count {
-                background: #2271b1;
+                background: var(--rw-accent-primary, #2271b1);
                 color: #fff;
             }
             .rawwire-overview-grid {
@@ -235,45 +288,48 @@ class RawWire_Workflow_DB_Panel {
                 margin: 20px 0;
             }
             .rawwire-overview-card {
-                background: #fff;
-                border: 1px solid #ccd0d4;
-                border-radius: 4px;
+                background: var(--rw-bg-surface, #fff);
+                border: 1px solid var(--rw-border-default, #ccd0d4);
+                border-radius: 8px;
                 padding: 20px;
                 border-left: 4px solid;
             }
             .rawwire-overview-card h2 {
                 margin: 0 0 5px 0;
                 font-size: 16px;
+                color: var(--rw-fg-default, #1d2327);
             }
             .rawwire-overview-card .count {
                 font-size: 48px;
                 font-weight: 600;
                 margin: 10px 0;
+                color: var(--rw-fg-default, #1d2327);
             }
             .rawwire-overview-card .description {
-                color: #666;
+                color: var(--rw-fg-muted, #666);
                 font-size: 13px;
             }
             .rawwire-overview-card .actions {
                 margin-top: 15px;
                 padding-top: 15px;
-                border-top: 1px solid #eee;
+                border-top: 1px solid var(--rw-border-muted, #eee);
             }
             .rawwire-table-panel {
-                background: #fff;
-                border: 1px solid #ccd0d4;
-                border-radius: 4px;
+                background: var(--rw-bg-surface, #fff);
+                border: 1px solid var(--rw-border-default, #ccd0d4);
+                border-radius: 8px;
                 margin: 20px 0;
             }
             .rawwire-table-header {
                 padding: 15px 20px;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid var(--rw-border-muted, #eee);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
             .rawwire-table-header h2 {
                 margin: 0;
+                color: var(--rw-fg-default, #1d2327);
             }
             .rawwire-table-actions {
                 display: flex;
@@ -287,17 +343,18 @@ class RawWire_Workflow_DB_Panel {
             .rawwire-db-table td {
                 padding: 10px 15px;
                 text-align: left;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid var(--rw-border-muted, #eee);
                 font-size: 13px;
+                color: var(--rw-fg-default, #1d2327);
             }
             .rawwire-db-table th {
-                background: #f9f9f9;
+                background: var(--rw-bg-muted, #f9f9f9);
                 font-weight: 600;
                 position: sticky;
                 top: 0;
             }
             .rawwire-db-table tr:hover {
-                background: #f5f5f5;
+                background: var(--rw-bg-elevated, #f5f5f5);
             }
             .rawwire-db-table .col-id {
                 width: 60px;
@@ -338,51 +395,73 @@ class RawWire_Workflow_DB_Panel {
                 font-weight: 600;
             }
             .rawwire-db-table .score-high {
-                background: #d4edda;
-                color: #155724;
+                background: rgba(0, 163, 42, 0.15);
+                color: var(--rw-accent-success, #155724);
             }
             .rawwire-db-table .score-medium {
-                background: #fff3cd;
-                color: #856404;
+                background: rgba(244, 180, 26, 0.15);
+                color: var(--rw-accent-warning, #856404);
             }
             .rawwire-db-table .score-low {
-                background: #f8d7da;
-                color: #721c24;
+                background: rgba(214, 54, 56, 0.15);
+                color: var(--rw-accent-error, #721c24);
             }
             .rawwire-pagination {
                 padding: 15px 20px;
-                border-top: 1px solid #eee;
+                border-top: 1px solid var(--rw-border-muted, #eee);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
             .rawwire-pagination-info {
-                color: #666;
+                color: var(--rw-fg-muted, #666);
             }
             .rawwire-pagination-links a,
             .rawwire-pagination-links span {
                 padding: 5px 10px;
                 margin: 0 2px;
-                border: 1px solid #ccc;
+                border: 1px solid var(--rw-border-default, #ccc);
                 border-radius: 3px;
                 text-decoration: none;
+                color: var(--rw-fg-default, #333);
+                background: var(--rw-bg-surface, #fff);
             }
             .rawwire-pagination-links a:hover {
-                background: #f0f0f0;
+                background: var(--rw-bg-muted, #f0f0f0);
             }
             .rawwire-pagination-links .current {
-                background: #2271b1;
+                background: var(--rw-accent-primary, #2271b1);
                 color: #fff;
-                border-color: #2271b1;
+                border-color: var(--rw-accent-primary, #2271b1);
             }
             .rawwire-empty-table {
                 padding: 40px;
                 text-align: center;
-                color: #666;
+                color: var(--rw-fg-muted, #666);
             }
             .rawwire-table-scroll {
                 max-height: 600px;
                 overflow-y: auto;
+            }
+            /* Button styling for dark mode */
+            .rawwire-workflow-db .button {
+                background: var(--rw-bg-elevated, #f0f0f1);
+                color: var(--rw-fg-default, #2c3338);
+                border-color: var(--rw-border-default, #c3c4c7);
+            }
+            .rawwire-workflow-db .button:hover {
+                background: var(--rw-bg-muted, #e0e0e0);
+                color: var(--rw-fg-default, #2c3338);
+                border-color: var(--rw-border-strong, #8c8f94);
+            }
+            .rawwire-workflow-db .button-primary {
+                background: var(--rw-accent-primary, #2271b1);
+                color: #fff;
+                border-color: var(--rw-accent-primary, #2271b1);
+            }
+            .rawwire-workflow-db .button-primary:hover {
+                background: var(--rw-brand-blue, #1e3a5f);
+                border-color: var(--rw-brand-blue, #1e3a5f);
             }
             @media (max-width: 1600px) {
                 .rawwire-overview-grid {

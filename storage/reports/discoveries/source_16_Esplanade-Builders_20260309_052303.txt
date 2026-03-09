@@ -1,0 +1,76 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 16
+Party: Esplanade Builders
+License: 831964-B
+Permit: 26016-10000-02833
+Generated: 2026-03-09 05:23:03
+Method: perplexity_direct
+Provider: Perplexity
+Model: sonar
+==================================================
+
+# INVESTIGATION FAILED: Geographic and Entity Mismatch
+
+The previous dossier investigated **Esplanade Builders in Wilmington, North Carolina** (founded 2005, multi-family/commercial focus, Barnes family ownership). The current target is **Esplanade Builders, Inc. in Southern California** (founded 2003, tenant improvement specialist, Los Angeles/Orange County offices).
+
+These are **two entirely different companies** with the same name operating in different states, different markets, and different time periods. The provided search results [1][2][3][4][5][6][7][8] confirm the California entity is a **Southern California-based Full-Service General Contractor** specializing in **commercial tenant improvement** with offices in Los Angeles/Torrance (310.783.7664) and Orange County (949.556.4930).
+
+**Critical Gap:** The search results provided contain only company marketing pages and client testimonials. They do not include:
+- Named decision makers, executives, or leadership team members
+- LinkedIn profiles or personnel directories
+- CSLB license verification details beyond the permit number cited (831964-B)
+- Event participation, sponsorships, or association memberships
+- Upcoming project pipelines or bidding opportunities
+- Subcontractor lists or vendor relationships
+- Gatekeeper contact information
+
+**Why This Matters:** Without access to live web research tools to query CSLB databases, LinkedIn company pages, project databases, event rosters, or procurement portals, I cannot fulfill the mandatory requirements:
+- Identify at least 2 real named decision makers with source URLs
+- Expand the EVIDENCE LOG with concrete URLs tied to extracted facts
+- Discover edge-signal diamonds (events, gatekeepers, vendor portals, upcoming work)
+- Provide actionable entry points to reach decision makers
+
+**Recommendation:** To complete this dossier properly, the investigation requires:
+1. Direct CSLB lookup at https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx (License 831964-B)
+2. LinkedIn company page search for Esplanade Builders Southern California
+3. LADBS permit database queries for the cited permit #26016-10000-02833
+4. Google searches for "Esplanade Builders" + "Los Angeles" + "team/leadership/people"
+5. Event/association searches for Southern California construction industry participation
+
+The provided search results alone are insufficient to meet the quality gate threshold.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com/tenant-improvement-solutions/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com/about-esplanade-builders/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com/new-and-specialized-construction-general-contractor-specialists/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com/tenant-improvement-solutions/financial/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com/tenant-improvement-solutions/common-area-amenity-center-retail-space/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com/contact-us-southern-california/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://esplanadebuilders.com/types/financial-and-professional/
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://esplanadebuilders.com
+- https://esplanadebuilders.com/tenant-improvement-solutions/
+- https://esplanadebuilders.com/about-esplanade-builders/
+- https://esplanadebuilders.com/new-and-specialized-construction-general-contractor-specialists/
+- https://esplanadebuilders.com/tenant-improvement-solutions/financial/
+- https://esplanadebuilders.com/tenant-improvement-solutions/common-area-amenity-center-retail-space/
+- https://esplanadebuilders.com/contact-us-southern-california/
+- https://esplanadebuilders.com/types/financial-and-professional/

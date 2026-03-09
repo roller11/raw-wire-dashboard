@@ -1,0 +1,528 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 34
+Party: Westport Construction
+License: 712732-B
+Permit: 25010-10000-01859
+Generated: 2026-03-09 20:50:23
+Stage: direct_pass_2_refinement
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: xai/grok-4-1-fast-non-reasoning
+==================================================
+
+1. TARGET SUMMARY
+------------------
+
+- **Identity & core focus**
+  - **Legal name:** Westport Construction Inc (often branded as "Westport Construction")  
+    Sources: company site, Blue Book, VisualVisitor, BuildZoom  
+    https://westport-inc.com • https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/ • https://www.visualvisitor.com/companies/4581404/westport_construction_inc • https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+  - **Headquarters:** 125 W Maple Ave, Monrovia, CA 91016  
+    Sources: MapQuest, Blue Book, BuildZoom, VisualVisitor, company site  
+    https://www.mapquest.com/us/california/westport-construction-411326187 • https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/ • https://www.buildzoom.com/contractor/westport-construction-inc-ca • https://www.visualvisitor.com/companies/4581404/westport_construction_inc • https://westport-inc.com/contact/  
+  - **LA-area presence:** Listing for Westport Construction at 538 Wall St, Los Angeles, CA 90013, phone +1 (213) 623-2850. No confirmed tie to 155 W 6TH ST 1-281 or permit 25010-10000-01859 in searched sources; identity remains anchored to Monrovia HQ and license 712732-B via prior LADBS examples like 21010-10003-03976.  
+    Sources: MapQuest  
+    https://www.mapquest.com/us/california/westport-construction-468113409  
+
+- **Licensing & regulatory footprint**
+  - **California contractor license:** #712732 (General Building, B classification), status active; also associated with #465880 (active) and #848193 (inactive).  
+    Sources: BuildZoom (CSLB pull), company permits  
+    https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+  - **Bonding:** Bonded with American Contractors Indemnity Company, bond value $15,000.  
+    https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+  - **Workers’ compensation:** Provider listed as State Compensation Insurance Fund.  
+    https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+  - LADBS permit example tying license & LA work: Permit 21010-10003-03976 for 1919 W Court St (Apartment Alter/Repair) lists Westport Construction Inc, License 712732-B, 125 W Maple Ave, Monrovia as Contractor. No data found on 25010-10000-01859.  
+    https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=21010&id2=10003&id3=03976  
+
+- **Markets & specialties (LA-relevant)**
+  - Southern California market rate and affordable housing leader with multi-family residential, commercial, and institutional projects. Services: construction management, general contracting, design-build, pre-construction, restoration/preservation, cost estimating, value engineering, scheduling, constructability review.  
+    Sources: company site, Blue Book  
+    https://westport-inc.com/about/ • https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/  
+  - LA-area projects include Ford Hotel (Los Angeles), Rosslyn Lofts, The Watermark (Reseda); recent permits show ongoing multifamily/apartment work (e.g., 220-unit TOC, 149-unit apartment).  
+    Sources: Blue Book, BuildZoom  
+    https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/ • https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+
+- **Scale**
+  - ~46 employees; revenue $10–50M; NAICS 236116 (New multifamily housing construction). BuildZoom: 2,537 permitted projects, score 113 (top 3% CA contractors); 133 projects past 3 years (1 in 2025, 26 in 2024).  
+    Sources: VisualVisitor, BuildZoom  
+    https://www.visualvisitor.com/companies/4581404/westport_construction_inc • https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+
+2. PEOPLE
+---------
+
+### Executive & Strategy Leadership (decision makers)
+
+**1) Andrew Apodaca – Chief Executive Officer (CEO)**  
+- **Role / title:** CEO; based in Los Angeles, specializes in business strategy, corporate growth, operations, business development; oversees family investments and growth initiatives (tech, SOPs, board, project capacity). Active in SCANPH and Urban Land Institute.  
+  Sources: company site, Wiza  
+  https://westport-inc.com/about/ • https://wiza.co/d/westport-construction-inc/800f/jay-eastman  
+- **Contact route:** HQ (626) 447-2448; info@westport-inc.com.  
+  https://westport-inc.com/contact/ • https://www.mapquest.com/us/california/westport-construction-411326187  
+
+**2) Jay Eastman – President / Chief Operating Officer (COO)**  
+- **Role / title:** President/COO; 30+ years experience overseeing major SoCal projects (multi-family, institutional, commercial, interiors).  
+  Sources: company site, Wiza  
+  https://westport-inc.com/about/ • https://wiza.co/d/westport-construction-inc/800f/jay-eastman  
+
+**3) Robert Dauth – Vice President of Pre-Construction**  
+- **Role / title:** VP Pre-Construction; leads estimating, value engineering, scheduling, constructability; 20+ years multi-family/commercial.  
+  Sources: company site, Wiza, Blue Book  
+  https://westport-inc.com/about/ • https://wiza.co/d/westport-construction-inc/800f/jay-eastman • https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+
+**4) Todd Carsey – Project Executive (LA-heavy)** / **Tim [Carsey?] – Project Executive**  
+- **Role / title:** Project Executives; Todd: 25+ years affordable housing, LA city/county ties, oversees projects end-to-end, supports pre-con/purchasing/BD. Tim: 25+ years multi-family (Type IIIA/V, up to 444 units), client relations, risk mitigation.  
+  Sources: company site, Wiza  
+  https://westport-inc.com/about/ • https://wiza.co/d/westport-construction-inc/800f/jay-eastman  
+
+**5) Vincent (Vince) Wile – Chief Financial Officer**  
+- **Role / title:** CFO; oversees AP, financial software, vendor onboarding.  
+  Sources: company site, Wiza, AvidXchange  
+  https://westport-inc.com/about/ • https://wiza.co/d/westport-construction-inc/800f/jay-eastman • https://www.avidxchange.com/resources-home/customer-spotlights/westport-construction/  
+
+**6) Kristen Patterson – Director of Purchasing / Chief Cost Estimator** (key gatekeeper)  
+- **Role / title:** Director of Purchasing (15+ years); oversees subcontractor procurement, bids, scopes, negotiations for multifamily/affordable projects. Previously Chief Cost Estimator.  
+  Sources: company site, Blue Book, Wiza  
+  https://westport-inc.com/about/ • https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/ • https://wiza.co/d/westport-construction-inc/800f/jay-eastman  
+
+### Additional leaders
+- **Joanne Apodaca – Senior Manager / Partner:** Operations, HR, admin support. https://westport-inc.com/about/  
+- **Mr. Cummings – Executive VP Operations:** Client relations, government/military projects. https://westport-inc.com/about/  
+- **Mr. Shaw – Construction Operations / BD:** Project oversight, estimates, subs. https://westport-inc.com/about/  
+- **John Bohling – Business Development:** 35+ years client relations/marketing. Sources: company site, ConstructConnect https://westport-inc.com/about/ • https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+- **Mario Willis – Director of Human Resources.** https://westport-inc.com/about/  
+- **Ms. Schmidtberger:** Systems/team improvement. https://westport-inc.com/about/  
+
+3. COMPANY
+----------
+
+- **Legal identity & type:** Westport Construction Inc; General Contractor/Construction Manager (design-build); Joint Venture per CSLB.  
+  https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+- **Licensing:** CSLB #712732-B (active General Building), #465880 (active), #848193 (inactive).  
+  https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+- **Addresses & phones:** HQ 125 W Maple Ave, Monrovia, CA 91016, (626) 447-2448, info@westport-inc.com; LA: 538 Wall St, Los Angeles, CA 90013, (213) 623-2850.  
+  https://westport-inc.com/contact/ • https://www.mapquest.com/us/california/westport-construction-468113409  
+- **Website & profiles:** https://westport-inc.com; Blue Book https://www.thebluebook.com/iProView/1426473; BuildZoom https://www.buildzoom.com/contractor/westport-construction-inc-ca; Glendale Chamber https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc  
+- **Specialties:** Market rate/affordable multifamily, commercial, institutional; pre-con, value engineering.  
+- **Project volume:** 2,537 permits; focus apartments/new construction/home additions. Recent: 23016-10000-33911 (hotel remodel, $2.4M), 21010-20000-03603 (220-unit apt, $24M issued).  
+  https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+- **Ownership:** Family-led (Ray/Joanne/Andrew Apodaca).  
+- **No public bidding/RFP portals, subcontractor pre-qual processes, or 2026 events found tied to Westport.**
+
+4. NETWORKING OPPORTUNITIES
+---------------------------
+
+- **SCANPH:** Andrew Apodaca active member. Annual Conference September 11, 2025 (LA; past event as of 2026). No 2026 events found.  
+  Sources: company site, SCANPH  
+  https://westport-inc.com/about/ • http://www.scanph.org  
+- **Urban Land Institute (ULI) LA:** Andrew Apodaca active member. No specific 2026 events found.  
+  https://westport-inc.com/about/ • https://la.uli.org  
+- **Glendale Chamber:** Member; events for networking.  
+  https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc  
+- **Blue Book:** Key contacts like Kristen Patterson; used for subcontractor outreach.  
+  https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/  
+- **ConstructConnect contacts:** Cindy Lucero, Terry Martin, Zack Silverstein, John Bohling, Felipe Pantoja ((626) area code, @westportconstructioninc.com pattern).  
+  https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+
+5. DISCOVERED PROJECTS
+----------------------
+
+1. **1919 W Court St (21010-10003-03976):** Apartment Alter/Repair; Westport GC (712732-B); Architect Kevin M. Maffris (C33104).  
+  https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=21010&id2=10003&id3=03976  
+2. **220-unit Apartment (21010-20000-03603):** New 5-story, $24M, issued; mixed-income TOC.  
+  https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+3. **149-unit Apartment (21010-20000-02964):** New 5-story, $11M, issued; affordable TOC.  
+  https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+4. **Hotel Remodels (23016-10000-33911/33917/33916):** 2024 issued; SRO affordable housing maintenance ($1.8-2.4M each).  
+  https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+5. **Ford Hotel, Rosslyn Lofts, The Watermark:** Completed LA multifamily/hotel.  
+  https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+No tie to 155 W 6TH ST or 25010-10000-01859 found; no upcoming 2026 groundbreaking/events.
+
+6. DISCOVERED ENTITIES
+----------------------
+
+- **Clients/Owners:** CA State Parks, Gateway Community Charter, McClellan Business Park (past).  
+  https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/  
+- **Architects (1919 W Court):** Kevin M. Maffris (724 S Spring St #304, LA).  
+  https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=21010&id2=10003&id3=03976  
+- **Associations:** SCANPH, ULI, Glendale Chamber.  
+- **No subcontractors/partners named in new sources.**
+
+7. ENTRY POINTS
+---------------
+
+1. **Pre-con/Purchasing:** Kristen Patterson (Director Purchasing/Chief Estimator), Robert Dauth (VP Pre-Con) via HQ (626) 447-2448 or Blue Book.  
+2. **Project Executives:** Todd Carsey/Tim for LA affordable; reference recent permits.  
+3. **CEO Networking:** Andrew Apodaca via SCANPH/ULI events (e.g., SCANPH 2025 conf past; monitor 2026).  
+4. **General Contact:** info@westport-inc.com; pitch interiors for multifamily (e.g., 220-unit project).  
+5. **Developer Intros:** Via LADBS permits (e.g., Kevin Maffris). No public bidding processes found.
+
+8. RED FLAGS
+------------
+
+None found: Active licenses/bond/insurance; high BuildZoom score. No complaints/litigation in sources.
+
+9. SOURCES
+----------
+
+https://westport-inc.com • https://westport-inc.com/about/ • https://westport-inc.com/contact/ • https://www.buildzoom.com/contractor/westport-construction-inc-ca • https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/ • https://www.ladbsservices2.lacity.org/OnlineServices/PermitReport/PcisPermitDetail?id1=21010&id2=10003&id3=03976 • https://wiza.co/d/westport-construction-inc/800f/jay-eastman • https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016 • http://www.scanph.org
+
+10. SEARCH LEDGER
+-----------------
+
+Prior + new: "Westport Construction Inc", "25010-10000-01859", "712732-B", "Westport Construction", "Westport Construction 155 W 6TH ST Los Angeles", "Westport Construction Inc bidding subcontractor rfp", "Westport Construction Inc projects 2026", "SCANPH events 2026", "Urban Land Institute Los Angeles events 2026".
+
+11. EVIDENCE LOG
+----------------
+
+1. **Query:** "Westport Construction Inc"  
+   - **URL:** https://westport-inc.com/about/  
+   - **Facts:** Updated team bios: Kristen Patterson now Director Purchasing; Tim (Project Exec); John Bohling BD. Andrew Apodaca SCANPH/ULI.  
+2. **Query:** "712732-B" / BuildZoom  
+   - **URL:** https://www.buildzoom.com/contractor/westport-construction-inc-ca  
+   - **Facts:** Licenses active (712732,465880); recent permits (e.g., 23016-10000-33911 hotel $2.4M; 21010-20000-03603 220-unit $24M).  
+3. **Query:** "25010-10000-01859"  
+   - **URL:** https://www.ladbsservices2.lacity.org/... (permit pages)  
+   - **Facts:** No content/data returned; no Westport tie.  
+4. **Query:** ConstructConnect  
+   - **URL:** https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016  
+   - **Facts:** Contacts: Cindy Lucero, Terry Martin et al. @westportconstructioninc.com.  
+5. **Query:** SCANPH events  
+   - **URL:** http://www.scanph.org  
+   - **Facts:** Annual Conf Sept 11, 2025 (past). No 2026.
+
+12. REQUIRED TODO CHECKLIST
+---------------------------
+
+- [x] **TODO 1:** Confirmed via license/permit anchors (no 25010-10000-01859 match).  
+- [x] **TODO 2:** LADBS/CSLB checked; no new on permit/address.  
+- [x] **TODO 3:** 6+ decision makers with updated roles.  
+- [x] **TODO 4:** 10+ concrete URLs.  
+- [x] **TODO 5:** Evidence logged.  
+- [x] **TODO 6:** Entry points prioritized.  
+- [x] **TODO 7:** Diamonds: Kristen Patterson gatekeeper, SCANPH/ULI, recent LA permits. No bidding/events 2026 found.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://westport-inc.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westport-inc.com/about/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/westport-construction-411326187
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.westportcompanies.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/westport-construction-inc-ca
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/california/westport-construction-468113409
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westportconstruction.com.au
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://omeganyct.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://westportconstruction.com.au/residential/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omnicalculator.com/math/exponential-growth
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dollartimes.com/savings/250000
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M581/K453/581453488.PDF
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://calculat.io/en/number/percent-of/10--250000
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://math.answers.com/questions/What_is_10_percent_of_2500000_dollars
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.montgomerycountymd.gov/Ethics/Resources/Files/pdfs/W25-09-010.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://percentages.calculators.ro/02-percentage-calculated-from-number.php?percentage=10&number=250000
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-rates/general-rate-case/southern-california-edison-grc-proceedings
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://divided-by.com/250000-by-10/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.tax.ny.gov/pdf/current_forms/it/it216i.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calculator.net/fraction-calculator.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.flsenate.gov/Laws/Statutes/2022/Chapter776/All
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.calculatorsoup.com/calculators/math/percentage.php
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fool.com/quote/nyse/crcl/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.numberguru.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799%2F0776%2F0776.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.oemstrade.com/search/7123
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.flsenate.gov/laws/statutes/2018/776.012
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mosesandrooth.com/defenses-to-crimes/self-defense/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.findchips.com/search/712-12
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Bidding
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Subcontractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://uplandsoftware.com/articles/content-automation/what-is-a-request-for-proposal/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dictionary.cambridge.org/us/dictionary/english/bidding
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.law.cornell.edu/wex/subcontractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.adobe.com/acrobat/business/resources/rfp-meaning.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thesaurus.com/browse/bidding
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/subcontractor
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Request_for_proposal
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://biddingkings.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/types-of-subcontractors-construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Project
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/2026
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/project
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.timeanddate.com/calendar/?country=1
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dictionary.cambridge.org/us/dictionary/english/project
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.youtube.com/watch?v=XSN4uuL3jMg
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.pmi.org/about/what-is-a-project
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://monday.com/blog/project-management/so-what-is-a-project-everything-you-should-know/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ssa.gov/news/en/cola/factsheets/2026.html
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.scanph.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.eventbrite.com/d/wi--milwaukee/events/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://www.scanph.org/annual-conference
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.visitphilly.com/events/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://hfront.org/2025/02/27/nlihc-recognizes-scanph-as-an-organizing-awards-nominee/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.eventbrite.com/d/pa--philadelphia/events/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contactout.com/company/Southern-California-Association-of-NonProfit-Housing-SCANPH-31900
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.visittampabay.com/tampa-events/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.devex.com/organizations/southern-california-association-of-nonprofit-housing-scanph-78426
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://events.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://uli.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://la.uli.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Urban_Land_Institute
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lusk.usc.edu/news/los-angeles-business-first-urban-land-institute-launches-roadmap-support-la-rebuilding-after
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lusk.usc.edu/news/urban-land-institute-urban-land-institute-ucla-usc-release-comprehensive-roadmap-post-wildfire
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://aroundtown-re.com/listing/73373164/153-155-w-6th-street-boston-ma-02127/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Los_Angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.realtor.com/realestateandhomes-detail/1515-W-6th-St_Brooklyn_NY_11204_M45906-04284
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.discoverlosangeles.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.remax.com/ia/davenport/home-details/1509-w-6th-st-davenport-ia-52802/593768281682410267
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lacity.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zillow.com/homedetails/151-W-6th-St-APT-3-South-Boston-MA-02127/67095614_zpid/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.visitcalifornia.com/places-to-visit/los-angeles/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.homes.com/property/115-w-6th-st-tempe-az/87e2sjljrrmb9/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.britannica.com/place/Los-Angeles-California
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://westport-inc.com
+- https://westport-inc.com/about/
+- https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/
+- https://www.mapquest.com/us/california/westport-construction-411326187
+- https://www.westportcompanies.com
+- https://www.buildzoom.com/contractor/westport-construction-inc-ca
+- https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/construction-projects/
+- https://www.glendalechamber.com/membership/member-directory/listing/westport-construction-inc
+- https://www.mapquest.com/us/california/westport-construction-468113409
+- https://projects.constructconnect.com/companies/1241809-westport-construction-wpic&find_loc=CA-91016
+- https://westportconstruction.com.au
+- https://www.thebluebook.com/iProView/1426473/westport-construction-inc/general-contractors/locations-contacts/
+- https://omeganyct.com
+- https://westportconstruction.com.au/residential/
+- https://www.omnicalculator.com/math/exponential-growth
+- https://www.dollartimes.com/savings/250000
+- https://docs.cpuc.ca.gov/PublishedDocs/Published/G000/M581/K453/581453488.PDF
+- https://calculat.io/en/number/percent-of/10--250000
+- https://math.answers.com/questions/What_is_10_percent_of_2500000_dollars
+- https://www.montgomerycountymd.gov/Ethics/Resources/Files/pdfs/W25-09-010.pdf
+- https://percentages.calculators.ro/02-percentage-calculated-from-number.php?percentage=10&number=250000
+- https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-rates/general-rate-case/southern-california-edison-grc-proceedings
+- https://divided-by.com/250000-by-10/
+- https://www.tax.ny.gov/pdf/current_forms/it/it216i.pdf
+- https://www.calculator.net/fraction-calculator.html
+- https://www.flsenate.gov/Laws/Statutes/2022/Chapter776/All
+- https://www.calculatorsoup.com/calculators/math/percentage.php
+- https://www.fool.com/quote/nyse/crcl/
+- https://www.numberguru.com
+- https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799%2F0776%2F0776.html
+- https://www.oemstrade.com/search/7123
+- https://www.flsenate.gov/laws/statutes/2018/776.012
+- https://www.mosesandrooth.com/defenses-to-crimes/self-defense/
+- https://www.findchips.com/search/712-12
+- https://en.wikipedia.org/wiki/Bidding
+- https://en.wikipedia.org/wiki/Subcontractor
+- https://uplandsoftware.com/articles/content-automation/what-is-a-request-for-proposal/
+- https://dictionary.cambridge.org/us/dictionary/english/bidding
+- https://www.law.cornell.edu/wex/subcontractor
+- https://www.adobe.com/acrobat/business/resources/rfp-meaning.html
+- https://www.thesaurus.com/browse/bidding
+- https://www.merriam-webster.com/dictionary/subcontractor
+- https://en.wikipedia.org/wiki/Request_for_proposal
+- https://biddingkings.com
+- https://www.procore.com/library/types-of-subcontractors-construction
+- https://en.wikipedia.org/wiki/Project
+- https://en.wikipedia.org/wiki/2026
+- https://www.merriam-webster.com/dictionary/project
+- https://www.timeanddate.com/calendar/?country=1
+- https://dictionary.cambridge.org/us/dictionary/english/project
+- https://www.youtube.com/watch?v=XSN4uuL3jMg
+- https://www.pmi.org/about/what-is-a-project
+- https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026
+- https://monday.com/blog/project-management/so-what-is-a-project-everything-you-should-know/
+- https://www.ssa.gov/news/en/cola/factsheets/2026.html
+- http://www.scanph.org
+- https://www.eventbrite.com/d/wi--milwaukee/events/
+- http://www.scanph.org/annual-conference
+- https://www.visitphilly.com/events/
+- https://hfront.org/2025/02/27/nlihc-recognizes-scanph-as-an-organizing-awards-nominee/
+- https://www.eventbrite.com/d/pa--philadelphia/events/
+- https://contactout.com/company/Southern-California-Association-of-NonProfit-Housing-SCANPH-31900
+- https://www.visittampabay.com/tampa-events/
+- https://www.devex.com/organizations/southern-california-association-of-nonprofit-housing-scanph-78426
+- https://events.com
+- https://uli.org
+- https://la.uli.org
+- https://en.wikipedia.org/wiki/Urban_Land_Institute
+- https://lusk.usc.edu/news/los-angeles-business-first-urban-land-institute-launches-roadmap-support-la-rebuilding-after
+- https://lusk.usc.edu/news/urban-land-institute-urban-land-institute-ucla-usc-release-comprehensive-roadmap-post-wildfire
+- https://aroundtown-re.com/listing/73373164/153-155-w-6th-street-boston-ma-02127/
+- https://en.wikipedia.org/wiki/Los_Angeles
+- https://www.realtor.com/realestateandhomes-detail/1515-W-6th-St_Brooklyn_NY_11204_M45906-04284
+- https://www.discoverlosangeles.com
+- https://www.remax.com/ia/davenport/home-details/1509-w-6th-st-davenport-ia-52802/593768281682410267
+- https://lacity.gov
+- https://www.zillow.com/homedetails/151-W-6th-St-APT-3-South-Boston-MA-02127/67095614_zpid/
+- https://www.visitcalifornia.com/places-to-visit/los-angeles/
+- https://www.homes.com/property/115-w-6th-st-tempe-az/87e2sjljrrmb9/
+- https://www.britannica.com/place/Los-Angeles-California

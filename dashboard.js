@@ -1,11 +1,6 @@
 jQuery(document).ready(function($) {
-    console.log('Raw-Wire dashboard.js loaded');
-    console.log('RawWireCfg:', typeof RawWireCfg !== 'undefined' ? RawWireCfg : 'NOT AVAILABLE');
-    
-    // Test if jQuery click works
-    console.log('Testing jQuery click binding...');
-    console.log('Button element:', document.getElementById('rawwire-sync-btn'));
-    console.log('Button jQuery object:', $('#rawwire-sync-btn'));
+    // Raw Wire Dashboard - Main JavaScript
+    // Debug logging removed for production
     
     // === CLEAR WORKFLOW TABLES HANDLER ===
     // MOVED TO template-system.js - RawWireAdmin.Controls.clearWorkflowTables()
@@ -37,7 +32,6 @@ jQuery(document).ready(function($) {
             }),
             contentType: 'application/json',
             success: (response) => {
-                console.log('Workflow response:', response);
                 if (response && response.success) {
                     showToast('Scraped ' + (response.items_scraped || 0) + ' items, stored ' + (response.items_stored || 0), 'success');
                 } else {
@@ -584,93 +578,10 @@ jQuery(document).ready(function($) {
     
     // Initial update for conditional fields
     updateConditionalVisibility();
-    
+
     // === ACTIVITY LOG PANEL ===
-    // Refresh log panel
-    $(document).on('click', '.rawwire-log-refresh', function() {
-        const panel = $(this).closest('.rawwire-log-panel');
-        const panelId = panel.data('panel-id');
-        refreshLogPanel(panel);
-    });
-    
-    // Filter log entries
-    $(document).on('change', '.rawwire-log-filter', function() {
-        const filter = $(this).val();
-        const entries = $(this).closest('.rawwire-log-panel').find('.rawwire-log-entry');
-        
-        entries.each(function() {
-            const entry = $(this);
-            if (filter === 'all') {
-                entry.show();
-            } else {
-                entry.toggle(entry.hasClass('rawwire-log-' + filter));
-            }
-        });
-    });
-    
-    function refreshLogPanel(panel) {
-        const entriesContainer = panel.find('.rawwire-log-entries');
-        entriesContainer.html('<div class="rawwire-log-loading" style="text-align:center;padding:20px;"><span class="dashicons dashicons-update spin"></span> Loading logs...</div>');
-        
-        $.ajax({
-            url: RawWireCfg.rest + '/logs',
-            method: 'GET',
-            data: { limit: 30 },
-            beforeSend: (xhr) => xhr.setRequestHeader('X-WP-Nonce', RawWireCfg.nonce),
-            success: function(response) {
-                if (response && response.logs) {
-                    let html = '';
-                    let counts = { info: 0, warning: 0, error: 0, debug: 0 };
-                    
-                    if (response.logs.length === 0) {
-                        html = '<div class="rawwire-log-empty"><span class="dashicons dashicons-info-outline"></span><p>No log entries found. Run a workflow to see activity here.</p></div>';
-                    } else {
-                        response.logs.forEach(function(log) {
-                            counts[log.severity] = (counts[log.severity] || 0) + 1;
-                            const icon = log.severity === 'error' ? 'no' : 
-                                        (log.severity === 'warning' ? 'warning' : 
-                                        (log.severity === 'debug' ? 'admin-tools' : 'info'));
-                            html += '<div class="rawwire-log-entry rawwire-log-' + escapeHtml(log.severity) + '">';
-                            html += '<span class="rawwire-log-severity"><span class="dashicons dashicons-' + icon + '"></span></span>';
-                            if (log.timestamp) {
-                                html += '<span class="rawwire-log-time">' + escapeHtml(log.timestamp.substring(0, 19)) + '</span>';
-                            }
-                            html += '<span class="rawwire-log-message">' + escapeHtml(log.message.substring(0, 200)) + '</span>';
-                            html += '</div>';
-                        });
-                    }
-                    
-                    entriesContainer.html(html);
-                    
-                    // Update counts
-                    panel.find('.rawwire-log-stat.info .count').text(counts.info);
-                    panel.find('.rawwire-log-stat.warning .count').text(counts.warning);
-                    panel.find('.rawwire-log-stat.error .count').text(counts.error);
-                }
-            },
-            error: function(xhr) {
-                entriesContainer.html('<div class="rawwire-log-empty"><span class="dashicons dashicons-warning"></span><p>Failed to load logs</p></div>');
-            }
-        });
-    }
-    
-    // Auto-refresh log panels
-    function initLogPanelAutoRefresh() {
-        $('.rawwire-log-panel').each(function() {
-            const panel = $(this);
-            const refreshInterval = parseInt(panel.data('refresh')) || 30;
-            
-            if (refreshInterval > 0) {
-                setInterval(function() {
-                    // Only refresh if the panel is visible
-                    if (panel.is(':visible')) {
-                        refreshLogPanel(panel);
-                    }
-                }, refreshInterval * 1000);
-            }
-        });
-    }
-    
-    // Initialize log panel auto-refresh
-    initLogPanelAutoRefresh();
+    // MOVED TO template-system.js - RawWireAdmin.DashboardPanels.initActivityLog()
+    // All log panel handlers (refresh, filter, auto-refresh) are managed by
+    // DashboardPanels.initActivityLog() and DashboardPanels.refreshActivityLog()
+    // to prevent duplicate event bindings and racing AJAX calls.
 });

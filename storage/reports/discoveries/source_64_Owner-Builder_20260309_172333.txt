@@ -1,0 +1,466 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 64
+Party: Owner-Builder
+License: S5245
+Permit: 24010-10000-02188
+Generated: 2026-03-09 17:23:33
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: xai/grok-4-1-fast-non-reasoning
+==================================================
+
+1. TARGET SUMMARY
+Owner-Builder for LA Permit #24010-10000-02188 remains a permit category/role, not a named company, per CSLB and LADBS definitions. No public web records reveal owner identity, project details at 2912 N KNOX AVE, or ties to license S5245. Extensive searches across permit-specific queries, address lookups, and LADBS portals yielded no indexed owner names, decision makers, or project teams. S5245 does not match CSLB numeric license format and shows no LADBS special/deputy inspector matches in California context.
+Sources: https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx; https://www.ladbs.org/docs/default-source/forms/plan-check-2014/owner-builder-permits.pdf?sfvrsn=17; https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx (confirms records access via direct request/email/appointment only; no permit #24010-10000-02188 details visible online).
+
+Practical implication: Decision maker is unnamed private property owner. Actionable intelligence requires offline LADBS records pull at 201 N Figueroa St or records.ladbs@lacity.org.
+
+2. PEOPLE
+No individuals identified. Property Owner (Unnamed) is sole decision maker per owner-builder rules.
+LADBS Staff (Unspecified) process permits/inspections as gatekeepers.
+Sources: https://dpw.lacounty.gov/building-and-safety/homeowner; CSLB license check portal under maintenance, no S5245 data: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx.
+
+3. COMPANY
+No company; Owner-Builder denotes individual owner acting as GC. S5245 ambiguous (non-CSLB format, no matches).
+Type/Specialty: Residential owner-builder exemption.
+Sources: https://california.licenselookup.org/contractor/; https://www.cslb.ca.gov/Resources/GuidesAndPublications/OwnerBuildersPamphlet.pdf.
+
+4. NETWORKING OPPORTUNITIES
+LADBS IDIS portal gatekeeper: Search by permit/address requires direct access; non-online records via email/appointment.
+No bidding contacts, events, partnerships found.
+Owner-builder process mandates signed declaration (owner/agent details).
+Sources: https://ladbsdoc.lacity.org/idispublic_Records/idis/help/Document%20Search.htm (IDIS FAQ confirms address/permit search yields summaries; digital images restricted); https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx.
+
+5. DISCOVERED PROJECTS
+LA Permit #24010-10000-02188: No details (owner, scope, status, value) in public indexes. Address 2912 N KNOX AVE yields no LA construction hits (Chicago mismatches excluded).
+Access: LADBS IDIS/email request.
+Sources: LADBS records PDF confirms non-online retrieval process.
+
+6. DISCOVERED ENTITIES
+LADBS: Permit issuer/gatekeeper. https://ladbsdoc.lacity.org (search instructions).
+CSLB: Owner-builder/CSLB oversight. https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx.
+LA County DPW Building & Safety: Guidance. https://dpw.lacounty.gov/building-and-safety/homeowner.
+No subs/partners tied to permit/license/address.
+
+7. ENTRY POINTS
+1. Email records.ladbs@lacity.org with Research Request Form for #24010-10000-02188 (5-7 days). https://www.ladbs.org/docs/default-source/forms/administrative/research-request-form-ad-form-01.pdf.
+2. LADBS appointment: https://appointments.lacity.org (Metro/Van Nuys counters).
+3. IDIS search by address "2912 N KNOX AVE" for related permits (trades/architects).
+4. CSLB check S5245 post-maintenance for potential deputy inspector.
+No online design/bid paths.
+
+8. RED FLAGS
+Data opacity persists: No public owner/project details despite targeted searches. S5245/CSLB mismatch. Owner-builder risks (liability, subs coordination).
+Sources: CSLB pamphlet; LADBS IDIS (requires manual request).
+
+9. SOURCES (DEDUPLICATED)
+https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx
+https://www.cslb.ca.gov/Resources/GuidesAndPublications/OwnerBuildersPamphlet.pdf
+https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+https://www.ladbs.org/docs/default-source/forms/plan-check-2014/owner-builder-permits.pdf?sfvrsn=17
+https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx
+https://ladbsdoc.lacity.org/idispublic_Records/idis/help/Document%20Search.htm
+https://dpw.lacounty.gov/building-and-safety/homeowner
+https://data.lacity.org/api/views/3f9m-afei/rows.pdf?accessType=DOWNLOAD
+https://california.licenselookup.org/contractor/
+https://www.ladbs.org/docs/default-source/forms/administrative/research-request-form-ad-form-01.pdf
+
+10. SEARCH LEDGER
+Prior + New:
+`"24010-10000-02188"`
+`"24010-10000-02188" LADBS permit`
+`"2912 N KNOX AVE" permit LADBS "owner builder"`
+`"S5245" LADBS "special inspector" "deputy inspector"`
+`"S5245" "contractor license" "Los Angeles"`
+`"2912 N KNOX AVE" "Los Angeles" construction permit`
+`"ladbsdoc.lacity.org" "24010-10000-02188"`
+`"2912 N Knox Ave" "Los Angeles" CA permit`
+`"S5245" LADBS "deputy inspector"`
+`"S5245" CSLB license`
+`"LADBS" "permit search" "24010-10000-02188"`
+
+11. EVIDENCE LOG
+Query: `"24010-10000-02188"` → https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx → No permit match; confirms IDIS for address/permit searches, non-online via email/appointment.
+Query: `"S5245" CSLB license` → https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx → Portal under maintenance; reinforces numeric format, no alpha prefix.
+Query: `"2912 N KNOX AVE" permit LADBS` → Multiple Chicago Zillow hits → Address mismatches excluded (Chicago IL ≠ LA CA).
+Query: `ladbsdoc.lacity.org "24010-10000-02188"` → https://ladbsdoc.lacity.org/idispublic_Records/idis/help/Document%20Search.htm → IDIS FAQ details address/permit search process; digital images restricted.
+Query: `"S5245" LADBS "deputy inspector"` → No CA/LADBS matches; NY/WA bills irrelevant.
+
+12. REQUIRED TODO CHECKLIST
+- [ ] TODO 1: Confirm target identity → Not completed; no public match.
+- [x] TODO 2: Visit LADBS/CSLB/registry → IDIS fetched; CSLB checked.
+- [ ] TODO 3: Identify 2+ decision makers → Not completed; unnamed owner only.
+- [x] TODO 4: 3+ URLs → Multiple cited.
+- [x] TODO 5: Evidence log → Updated.
+- [x] TODO 6: Entry points → LADBS request prioritized.
+- [x] TODO 7: 2+ diamonds → 1. IDIS/email for owner/agent. 2. Owner-builder declaration form (name/contact).
+
+Identity ambiguous; no CA/LADBS evidence beyond system info. Client must pursue LADBS records directly for names/projects.
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://opentextbc.ca/businesstechnicalmath/chapter/9-1-simple-interest-2/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.omnicalculator.com/math/exponential-growth
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.sun-source.com/Product/193-0022-001-eaton
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.tax.ny.gov/pdf/current_forms/it/it216i.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.iso-group.com/NSNIndex/17788
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.iso-group.com/NSNIndex/17813
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://vtwin.parts/model-year/oldbook/hardware-group/hardware-kits-application-related/harley-davidson-indian-motorcycle-feuling-oil-pump-corp.-feuling-oil-pump-corp.-3067-arp-12-point-fastener-kit-primary-transmission-85-99-evo-fxr-2401-1102
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.beefcakeracing.com/wilwood-washer-flat-515-idx-875-odx-063-240-11102/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.hfsindustrial.com/pub/media/resources/images/image/h/o/howmet-recoil-technical-catalogue.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.sp-spareparts.com/en/p/193-0020-001-charlynn
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.collisionworld.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/instruction-permits/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: http://dbs.lacity.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ownerbuildernetwork.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zillow.com/homedetails/3464-N-Knox-Ave-Chicago-IL-60641/2103661042_zpid/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.alamedaca.gov/Departments/Planning-Building-and-Transportation/Permit-Center
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbsservices2.lacity.org/onlineservices/?service=plr
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.greenbuildingadvisor.com/article/building-your-first-house-as-an-owner-builder
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zillow.com/homedetails/3012-N-Knox-Ave-Chicago-IL-60641/3670907_zpid/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permit.acgov.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbsservices2.lacity.org/OnlineServices/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ownerbuilder.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.redfin.com/IL/Chicago/3012-N-Knox-Ave-60641/home/13444664
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/permit
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://locator.lacounty.gov/lac/Location/3175160/city-of-los-angeles-department-of-building-and-safety---south-los-angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.nysenate.gov/legislation/bills/2025/S5245
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.iccsafe.org/professional-development/certifications-and-testing/special-inspector-exams/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ig.army.mil/Portals/101/TIGS/TIGS%20eJournal/The%20Deputy%20Inspector%20General.docx?ver=TYu8jKHT6-gD_UE7rMmQZg%3D%3D
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.iqlightbulbs.com/satco_s5245_qt3x40_277_dl.asp
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.concrete.org/certification/certificationprograms.aspx?m=details&pgm=Concrete+Construction+Inspection&cert=Concrete+Construction+Special+Inspector
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://starwars.fandom.com/wiki/Deputy_Inspector
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://assembly.state.ny.us/leg/?default_fld=&leg_video=&bn=S5245&term=2025&Text=Y
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.easternengineeringgroup.com/everything-you-need-to-know-about-special-inspectors/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Police_ranks_of_the_United_States
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://in.trip.com/flights/status-s5245/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.wbdg.org/FFC/DOD/UFGS/UFGS%2001%2045%2035.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lacity.gov/news/learn-more-about-ladbs-go-app-today
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dmv.ny.gov/driver-license/get-learner-permit
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www2.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Los_Angeles
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.discoverlosangeles.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/california-contractors-license
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://lacity.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.contractorsischool.com/contractors-license/general-building-contractors-license
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.visitcalifornia.com/places-to-visit/los-angeles/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://aviability.com/en/flight/s5245-star-air/blr-nag
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.contractorsischool.com/learning-resources/how-to-get-your-contractors-license-in-california-guide
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.britannica.com/place/Los-Angeles-California
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/construction
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.turnerconstruction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.construction.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://solareclipseinc.com/oracle-lighting-s5245-001-psx24w-s3-led-headlight-bulb-conversion-kit-6000k
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://fastdemocracy.com/bill-search/wa/2025-2026/bills/WAB00022356/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://marshallgeo.com/geotechnical-engineering/la-city-deputy-inspections-code-compliance-safety-protocols/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.strobelssupply.com/oracle-lighting-psx24w-vseries-led-headlight-bulb-conversion-kit-v5245-001/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.riversideca.gov/cedd/sites/riversideca.gov.cedd/files/pdf/building/Duties%20of%20the%20Deputy%20Inspector.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslb.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ca.gov/departments/299/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ixigo.com/airlines/star-air-s5/s5-245-flight-status
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.contractorslicenseguru.com/cslb-license-your-complete-guide/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.procore.com/library/cslb-california-contractor-license-board
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.cslbexperts.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.billsponsor.com/bills/488094/house-bill-5245-congress-118
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/California_Contractors_State_License_Board
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.dailyjournal.com/articles/388415-jones-day-partner-eric-c-tung-wins-9th-circuit-confirmation-52-45
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://contractorslicensingschools.com/california-contractors-license-classifications
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://abcnews.go.com/US/senate-votes-overturn-biden-era-arctic-protections-environmental/story?id=127058213
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/Chicago
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.visittheusa.com/destination/chicago
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.britannica.com/place/Chicago
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://chicagotheband.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.mapquest.com/us/illinois/chicago/60641-3744/3464-n-knox-ave-41.94441,-87.74306
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.enjoyillinois.com/places-to-go/chicago-and-beyond/chicago/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dbs.lacity.gov/sites/default/files/efs/forms/research-request-form-ad-form-01.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://palisades-rebuild.org/how-to-view-and-request-records-for-your-properties-in-los-angeles/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://ladbs.org/services/special-assistance/custodian-of-records/lists/custodian-of-records/what-type-of-information-can-i-request
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ladbs.org/docs/default-source/forms/administrative/research-request-form-ad-form-01.pdf
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://catalog.data.gov/dataset/?tags=ladbs
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ca.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zillow.com/b/2200-n-knox-ave-chicago-il-9S4HCQ/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.canva.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://en.wikipedia.org/wiki/California
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.merriam-webster.com/dictionary/ca
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permitinfo.jccal.org
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.miamidade.gov/permits/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://dbiweb02.sfgov.org/dbipts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permitfinder.boston.gov
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://permitsearch.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://opentextbc.ca/businesstechnicalmath/chapter/9-1-simple-interest-2/
+- https://www.omnicalculator.com/math/exponential-growth
+- https://www.sun-source.com/Product/193-0022-001-eaton
+- https://www.tax.ny.gov/pdf/current_forms/it/it216i.pdf
+- https://www.iso-group.com/NSNIndex/17788
+- https://www.iso-group.com/NSNIndex/17813
+- https://vtwin.parts/model-year/oldbook/hardware-group/hardware-kits-application-related/harley-davidson-indian-motorcycle-feuling-oil-pump-corp.-feuling-oil-pump-corp.-3067-arp-12-point-fastener-kit-primary-transmission-85-99-evo-fxr-2401-1102
+- https://www.beefcakeracing.com/wilwood-washer-flat-515-idx-875-odx-063-240-11102/
+- https://www.hfsindustrial.com/pub/media/resources/images/image/h/o/howmet-recoil-technical-catalogue.pdf
+- https://www.sp-spareparts.com/en/p/193-0020-001-charlynn
+- https://www.collisionworld.com
+- https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/instruction-permits/
+- http://dbs.lacity.gov
+- https://www.ownerbuildernetwork.com
+- https://www.zillow.com/homedetails/3464-N-Knox-Ave-Chicago-IL-60641/2103661042_zpid/
+- https://www.alamedaca.gov/Departments/Planning-Building-and-Transportation/Permit-Center
+- https://www.ladbsservices2.lacity.org/onlineservices/?service=plr
+- https://www.greenbuildingadvisor.com/article/building-your-first-house-as-an-owner-builder
+- https://www.zillow.com/homedetails/3012-N-Knox-Ave-Chicago-IL-60641/3670907_zpid/
+- https://permit.acgov.org
+- https://www.ladbsservices2.lacity.org/OnlineServices/
+- https://www.ownerbuilder.org
+- https://www.redfin.com/IL/Chicago/3012-N-Knox-Ave-60641/home/13444664
+- https://www.merriam-webster.com/dictionary/permit
+- https://locator.lacounty.gov/lac/Location/3175160/city-of-los-angeles-department-of-building-and-safety---south-los-angeles
+- https://www.nysenate.gov/legislation/bills/2025/S5245
+- https://www.iccsafe.org/professional-development/certifications-and-testing/special-inspector-exams/
+- https://ig.army.mil/Portals/101/TIGS/TIGS%20eJournal/The%20Deputy%20Inspector%20General.docx?ver=TYu8jKHT6-gD_UE7rMmQZg%3D%3D
+- https://www.iqlightbulbs.com/satco_s5245_qt3x40_277_dl.asp
+- https://www.concrete.org/certification/certificationprograms.aspx?m=details&pgm=Concrete+Construction+Inspection&cert=Concrete+Construction+Special+Inspector
+- https://starwars.fandom.com/wiki/Deputy_Inspector
+- https://assembly.state.ny.us/leg/?default_fld=&leg_video=&bn=S5245&term=2025&Text=Y
+- https://www.easternengineeringgroup.com/everything-you-need-to-know-about-special-inspectors/
+- https://en.wikipedia.org/wiki/Police_ranks_of_the_United_States
+- https://in.trip.com/flights/status-s5245/
+- https://www.wbdg.org/FFC/DOD/UFGS/UFGS%2001%2045%2035.pdf
+- https://lacity.gov/news/learn-more-about-ladbs-go-app-today
+- https://dmv.ny.gov/driver-license/get-learner-permit
+- https://www2.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://en.wikipedia.org/wiki/Los_Angeles
+- https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx
+- https://www.discoverlosangeles.com
+- https://www.procore.com/library/california-contractors-license
+- https://lacity.gov
+- https://www.contractorsischool.com/contractors-license/general-building-contractors-license
+- https://www.visitcalifornia.com/places-to-visit/los-angeles/
+- https://aviability.com/en/flight/s5245-star-air/blr-nag
+- https://www.contractorsischool.com/learning-resources/how-to-get-your-contractors-license-in-california-guide
+- https://www.britannica.com/place/Los-Angeles-California
+- https://en.wikipedia.org/wiki/Construction
+- https://www.merriam-webster.com/dictionary/construction
+- https://www.turnerconstruction.com
+- https://www.construction.com
+- https://solareclipseinc.com/oracle-lighting-s5245-001-psx24w-s3-led-headlight-bulb-conversion-kit-6000k
+- https://fastdemocracy.com/bill-search/wa/2025-2026/bills/WAB00022356/
+- https://marshallgeo.com/geotechnical-engineering/la-city-deputy-inspections-code-compliance-safety-protocols/
+- https://www.strobelssupply.com/oracle-lighting-psx24w-vseries-led-headlight-bulb-conversion-kit-v5245-001/
+- https://www.riversideca.gov/cedd/sites/riversideca.gov.cedd/files/pdf/building/Duties%20of%20the%20Deputy%20Inspector.pdf
+- https://www.cslb.ca.gov
+- https://www.ca.gov/departments/299/
+- https://www.ixigo.com/airlines/star-air-s5/s5-245-flight-status
+- https://www.contractorslicenseguru.com/cslb-license-your-complete-guide/
+- https://www.procore.com/library/cslb-california-contractor-license-board
+- https://www.cslbexperts.com
+- https://www.billsponsor.com/bills/488094/house-bill-5245-congress-118
+- https://en.wikipedia.org/wiki/California_Contractors_State_License_Board
+- https://www.dailyjournal.com/articles/388415-jones-day-partner-eric-c-tung-wins-9th-circuit-confirmation-52-45
+- https://contractorslicensingschools.com/california-contractors-license-classifications
+- https://abcnews.go.com/US/senate-votes-overturn-biden-era-arctic-protections-environmental/story?id=127058213
+- https://en.wikipedia.org/wiki/Chicago
+- https://www.visittheusa.com/destination/chicago
+- https://www.britannica.com/place/Chicago
+- https://chicagotheband.com
+- https://www.mapquest.com/us/illinois/chicago/60641-3744/3464-n-knox-ave-41.94441,-87.74306
+- https://www.enjoyillinois.com/places-to-go/chicago-and-beyond/chicago/
+- https://ladbsdoc.lacity.org/IDISPublic_Records/idis/ViewReport.aspx
+- https://dbs.lacity.gov/sites/default/files/efs/forms/research-request-form-ad-form-01.pdf
+- https://palisades-rebuild.org/how-to-view-and-request-records-for-your-properties-in-los-angeles/
+- https://ladbs.org/services/special-assistance/custodian-of-records/lists/custodian-of-records/what-type-of-information-can-i-request
+- https://www.ladbs.org/docs/default-source/forms/administrative/research-request-form-ad-form-01.pdf
+- https://catalog.data.gov/dataset/?tags=ladbs
+- https://www.ca.gov
+- https://www.zillow.com/b/2200-n-knox-ave-chicago-il-9S4HCQ/
+- https://www.canva.com
+- https://en.wikipedia.org/wiki/California
+- https://www.merriam-webster.com/dictionary/ca
+- https://permitinfo.jccal.org
+- https://www.miamidade.gov/permits/
+- https://dbiweb02.sfgov.org/dbipts/
+- https://permitfinder.boston.gov
+- https://permitsearch.com

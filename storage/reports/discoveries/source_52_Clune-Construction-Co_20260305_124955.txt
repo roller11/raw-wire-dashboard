@@ -1,0 +1,14 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 52
+Party: Clune Construction Co.
+License: 732107-B
+Permit: 25016-10000-30254
+Generated: 2026-03-05 12:49:55
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+I am currently unable to perform web searches to gather the information you need due to the lack of a Brave Search API key. Without this access, I cannot retrieve real-time data about Clune Construction Co. or its decision-makers, projects, and networking opportunities.
+
+You may want to configure the Brave Search API key to allow me to assist you effectively, or you could conduct manual searches on platforms like their official website, LinkedIn, industry-related publications, or news sources.
+
+If you want assistance with a specific search or need guidance on how to gather this information manually, please let me know!

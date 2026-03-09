@@ -684,17 +684,38 @@ class RawWire_Scraper_Settings {
      * AJAX: Test source connection
      */
     public function ajax_test_source() {
-        check_ajax_referer('rawwire_scraper_nonce', 'nonce');
-        
-        if (!current_user_can('manage_options')) {
-            wp_send_json_error('Permission denied');
+        // Accept either scraper-specific or global nonce
+        if (!wp_verify_nonce($_POST['nonce'] ?? '', 'rawwire_scraper_nonce') && 
+            !wp_verify_nonce($_POST['nonce'] ?? '', 'rawwire_ajax_nonce')) {
+            wp_send_json_error(array('message' => 'Invalid nonce'));
+            return;
         }
         
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Permission denied'));
+            return;
+        }
+        
+        // Handle both direct URL testing and source ID testing
+        $source_id = sanitize_key($_POST['source_id'] ?? '');
         $url = esc_url_raw($_POST['url'] ?? '');
         $protocol = sanitize_key($_POST['protocol'] ?? 'rest_api');
         
+        // If source_id provided, fetch the source data
+        if (!empty($source_id)) {
+            $sources = self::get_sources();
+            if (!isset($sources[$source_id])) {
+                wp_send_json_error(array('message' => 'Source not found'));
+                return;
+            }
+            $source = $sources[$source_id];
+            $url = $source['address'] ?? $source['url'] ?? '';
+            $protocol = $source['protocol'] ?? $source['type'] ?? 'rest_api';
+        }
+        
         if (empty($url)) {
-            wp_send_json_error('URL is required');
+            wp_send_json_error(array('message' => 'URL is required'));
+            return;
         }
         
         // Simple connection test

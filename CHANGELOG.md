@@ -1,5 +1,199 @@
 # Changelog
 
+## [1.0.30] - 2026-01-24
+
+### Added - Menu Architecture Refactor & Config Authority
+
+**New Centralized Menu Manager**
+- Created `includes/class-menu-manager.php` as the SINGLE SOURCE OF TRUTH for all menu registration
+- Hardwired menu structure: Dashboard → Templates → Tools → Workflows → Settings
+- Multi-tab architecture for Tools and Workflows pages (not separate submenus)
+- Tab registration system via `register_tool_tab()` and `register_workflow_tab()`
+- Feature-gated tool visibility via `is_tool_activated()`
+
+**Signed Configuration Authority System**
+- Created `includes/class-config-authority.php` - cryptographic config management
+- HMAC-SHA256 signed configuration changes
+- 5-tier authorization hierarchy: free → basic → pro → enterprise → developer
+- Feature-to-tier mapping for all plugin features
+- Protected configuration keys that require signing
+- Complete audit log of all configuration changes
+- License key generation and verification
+- Template authorization checking
+
+**Tool Tab Registration System**
+- Tools no longer create submenus via `add_submenu_page()`
+- Tools register TABS within the Tools page via `rawwire_register_tool_tabs` action
+- Config options: label, icon, required_feature, render_callback, priority
+- Updated `class-ai-scraper-panel.php`, `class-ai-settings-panel.php`, `class-workflow-db-panel.php`
+
+**Comprehensive STOP Banners**
+- Added detailed architecture documentation to all key files
+- STOP banners in: raw-wire-dashboard.php, bootstrap.php, class-menu-manager.php, module.php
+- Each banner explains what the file does and what NOT to do
+- Menu architecture diagram in module.php
+
+### Changed
+
+**Menu Registration Architecture**
+- Deprecated `add_admin_menu()` in raw-wire-dashboard.php (now no-op with STOP banner)
+- Deprecated `register_menu()` and `register_template_pages()` in bootstrap.php
+- All menu registration now flows through RawWire_Menu_Manager
+- Tools page renders multi-tab interface from registered tool tabs
+- Workflows page renders multi-tab interface from template-defined workflows
+
+**Authorization Flow**
+- `is_tool_activated()` now checks BOTH template authorization AND license tier
+- Menu Manager integrates with Config Authority for feature authorization
+- Template switching requires signed config changes
+
+**Documentation Updates**
+- Updated CLAUDE.md with Config Authority section and code examples
+- Added menu architecture to AI_ARCHITECTURE_MAP.md
+- Version bumped to 1.0.30
+
+### Fixed
+- Subpages no longer show as individual menu items
+- Clean separation between Menu Manager, Bootstrap, and main plugin file
+- Consistent tab-based navigation for tools and workflows
+
+---
+
+## [1.0.29] - 2026-01-23
+
+### Added - Source Toggle & Test Workflow Integration
+
+**Dashboard Source Controls**
+- Added test buttons to both template sources and scraper toolkit sources in main dashboard
+- Test buttons trigger workflows using only the selected source
+- Buttons automatically disabled when source is toggled off
+
+**Scraper Settings Page Improvements**
+- Test buttons now respect source enabled/disabled state
+- Added visual disabled state styling with opacity reduction
+- Test buttons automatically enable/disable based on source toggle
+- Added `.source-disabled` class with reduced opacity (0.5) and darkened background
+
+**Toast Notification System**
+- Moved source toggle logic from inline PHP scripts to `assets/js/admin.js`
+- Centralized toast notification function `showToast()` in admin.js
+- Success and error notifications for source toggle actions
+- Proper error handling with fallback to safe state on failure
+
+### Changed
+
+**JavaScript Architecture Refactor**
+- Moved all source toggle JavaScript from `modules/core/module.php` to `assets/js/admin.js`
+- Added `handleSourceToggle()` and `handleToolkitSourceToggle()` methods to RawWireAdmin object
+- Added `toggleTemplateSource()` and `toggleScraperSource()` AJAX methods
+- Removed inline script tags from PHP module responses (separation of concerns)
+
+**Scraper Settings Toggle Handler**
+- Updated `handleSourceToggle()` in `assets/js/scraper-settings.js` with comprehensive error handling
+- Added source name to toast notifications
+- Test button state management synced with toggle state
+- Revert toggle and return to safe state on AJAX errors
+
+**PHP Source Rendering**
+- Updated `render_source_row()` in `class-scraper-settings-panel.php`
+- Test buttons now render with `disabled` attribute when source is disabled
+- Added `source-disabled` CSS class to disabled source rows
+- Improved initial state rendering to match enabled/disabled status
+
+### Fixed
+- Source toggles now properly update visual state and show confirmation
+- Test buttons properly disabled for inactive sources on initial page load
+- Error states properly revert UI to safe state instead of leaving inconsistent state
+- Module.php no longer contains mixed HTML/JavaScript concerns
+
+---
+
+## [1.0.28] - 2026-01-22
+
+### Added - MCP Tools & Access Control
+
+**MCP Server with 33 Tools**
+- Complete tool-call capability for AI agents via `class-mcp-server.php` (~3000 lines)
+- 6 tool categories: Scraper (6), Workflow (7), Content (6), AI (4), Config (3), WordPress (7)
+- AI Engine integration via `mwai_functions_list` and `mwai_functions_execute` filters
+- External MCP client support via `mwai_mcp_tools` and `mwai_mcp_callback` filters
+
+**4-Tier Access Control System**
+- `class-access-control.php` (~730 lines) in `cores/dashboard-core/`
+- Tiers: DEVELOPER > ADMIN > EDITOR > VIEWER
+- Deployment modes: internal, client, demo
+- Custom capabilities: rawwire_developer, rawwire_manage, rawwire_configure, rawwire_view, rawwire_use_ai
+- Feature/Settings/Tool permission matrices with tier requirements
+
+**Tool Toggle System**
+- Admin UI to enable/disable individual MCP tools
+- Per-tool granular control for security and customization
+
+### Fixed
+
+**Ollama Model Population**
+- Added `retrieve_models()` method to `class-ollama-engine.php`
+- "Refresh Models" button now fetches models from Ollama API
+- Added `option_mwai_options` filter to inject models into AI Engine environment config
+- Root cause: AI Engine uses `$env['models']` array for custom engines, not filter hooks
+
+**Chat Panel Visibility**
+- Added `should_show_chat()` method to `class-dashboard-chat-panel.php`
+- Three visibility modes: `rawwire_only`, `everywhere`, `disabled`
+- Chat no longer appears on every WordPress admin page by default
+
+### Changed
+
+- CLAUDE.md updated to v1.0.28 with AI-optimized quick reference section
+- Created EMBEDDING_DATA folder with split reference documents for vector stores
+
+---
+
+## [1.0.26] - 2026-01-20
+
+### Added - AI Chat Integration & Smart Provider Selection
+
+**Custom Ollama Engine for AI Engine Pro**
+- New `ai-engine-pro/classes/engines/ollama.php`: Full Ollama integration extending ChatML
+- Bypasses AI Engine Pro's paid Ollama addon requirement
+- OpenAI-compatible API endpoints (`/v1/chat/completions`)
+- Docker internal network support (`http://ollama:11434`)
+- Dynamic model fetching via `/api/tags` endpoint
+- Modified `ai-engine-pro/classes/engines/factory.php` to register Ollama engine type
+
+**Smart AI Provider Selection**
+- `get_preferred_env_id()`: Auto-selects best available AI environment
+- `get_preferred_model()`: Returns optimal model for selected provider
+- Priority order: Claude (Anthropic) > Groq > OpenAI > Ollama
+- Detects Groq environments even when registered as 'openai' type
+
+**Model Defaults by Provider**
+- Claude: `claude-sonnet-4-20250514` (best tool calling)
+- Groq: `llama-3.3-70b-versatile` (free, fast, good agentic support)
+- OpenAI: `gpt-4o` (excellent capabilities)
+- Ollama: `llama3.1:8b` (local fallback)
+
+**Auto-Configuration**
+- `setup_ai_engine_ollama()` in `raw-wire-dashboard.php`
+- Automatically creates Ollama environment in AI Engine on plugin init
+- One-time setup with `rawwire_ollama_ai_engine_configured` option flag
+- Docker-aware endpoint configuration
+
+### Changed
+
+- `class-dashboard-chat-panel.php`: Updated to use smart provider selection
+- `contextMaxLength` increased from 16000 to 32000 tokens
+- Removed hardcoded Ollama dependency in favor of dynamic selection
+
+### Technical Notes
+
+- FLUX.1 Schnell image generation confirmed working via ComfyUI (H:\ComfyUI)
+- Docker services: WordPress (8000), Ollama (8001), MySQL (3306)
+- Ollama models available: `llama3.1:8b` (4.9GB), `llama3.2` (2GB)
+- Network connectivity verified: WordPress container can reach Ollama via internal Docker network
+
+---
+
 ## [1.0.25] - 2026-01-17
 
 ### Added - Professional UI Redesign

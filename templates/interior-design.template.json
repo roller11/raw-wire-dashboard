@@ -1,0 +1,883 @@
+{
+  "$schema": "../cores/template-engine/schema/page-template.schema.json",
+  "id": "interior-design-leads",
+  "title": "Interior Design Dashboard",
+  "description": "Lead generation and client management for interior design professionals",
+  "version": "1.0.0",
+  "industry": "interior-design",
+  "meta": {
+    "author": "RawWire",
+    "tags": [
+      "interior-design",
+      "lead-generation",
+      "crm",
+      "sustainable-design"
+    ],
+    "icon": "dashicons-admin-home",
+    "color": "#8B7355"
+  },
+  "header": {
+    "enabled": true,
+    "title": "Lead Dashboard",
+    "left_controls": [
+      {
+        "type": "dropdown",
+        "id": "pipeline-filter",
+        "label": "Pipeline",
+        "icon": "dashicons-filter",
+        "options": [
+          {
+            "value": "all",
+            "label": "All Leads"
+          },
+          {
+            "value": "new",
+            "label": "New Inquiries"
+          },
+          {
+            "value": "qualified",
+            "label": "Qualified"
+          },
+          {
+            "value": "proposal",
+            "label": "Proposal Sent"
+          },
+          {
+            "value": "negotiation",
+            "label": "Negotiation"
+          },
+          {
+            "value": "won",
+            "label": "Won"
+          },
+          {
+            "value": "lost",
+            "label": "Lost"
+          }
+        ]
+      }
+    ],
+    "center_controls": [
+      {
+        "type": "search",
+        "id": "lead-search",
+        "placeholder": "Search leads, projects, locations...",
+        "action": "filter_leads"
+      }
+    ],
+    "right_controls": [
+      {
+        "type": "button",
+        "id": "add-lead-btn",
+        "label": "Add Lead",
+        "icon": "dashicons-plus-alt",
+        "style": "primary",
+        "action": "open_add_lead_modal"
+      },
+      {
+        "type": "refresh",
+        "id": "refresh-btn"
+      }
+    ]
+  },
+  "sidebar": {
+    "enabled": true,
+    "position": "left",
+    "width": 260,
+    "collapsible": true,
+    "navigation": [
+      {
+        "id": "overview",
+        "label": "Overview",
+        "icon": "dashicons-dashboard",
+        "url": "#overview",
+        "active": true
+      },
+      {
+        "id": "leads",
+        "label": "Leads",
+        "icon": "dashicons-groups",
+        "url": "#leads"
+      },
+      {
+        "id": "projects",
+        "label": "Active Projects",
+        "icon": "dashicons-portfolio",
+        "url": "#projects"
+      },
+      {
+        "id": "calendar",
+        "label": "Calendar",
+        "icon": "dashicons-calendar-alt",
+        "url": "#calendar"
+      },
+      {
+        "id": "content",
+        "label": "Social Content",
+        "icon": "dashicons-share",
+        "url": "#content"
+      },
+      {
+        "id": "files",
+        "label": "Files",
+        "icon": "dashicons-media-document",
+        "url": "#files"
+      },
+      {
+        "id": "email",
+        "label": "Email Campaigns",
+        "icon": "dashicons-email",
+        "url": "#email"
+      },
+      {
+        "id": "support",
+        "label": "Support Chat",
+        "icon": "dashicons-format-chat",
+        "url": "#support"
+      },
+      {
+        "id": "settings",
+        "label": "Settings",
+        "icon": "dashicons-admin-generic",
+        "url": "#settings"
+      }
+    ],
+    "panels": [
+      {
+        "id": "quick-stats-sidebar",
+        "type": "metrics",
+        "compact": true,
+        "data_source": "module:scraper.get_stats",
+        "metrics_config": {
+          "layout": "vertical",
+          "items": [
+            {
+              "key": "new_leads_this_week",
+              "label": "New This Week",
+              "icon": "dashicons-chart-line"
+            },
+            {
+              "key": "active_projects",
+              "label": "Active Projects",
+              "icon": "dashicons-admin-multisite"
+            },
+            {
+              "key": "pending_proposals",
+              "label": "Pending Proposals",
+              "icon": "dashicons-media-text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "layout": [
+    {
+      "id": "metrics-row",
+      "panels": [
+        {
+          "id": "total-leads",
+          "type": "metrics",
+          "title": "Total Leads",
+          "width": 3,
+          "data_source": "module:leads.count_total",
+          "metrics_config": {
+            "layout": "single",
+            "show_trend": true,
+            "trend_period": "month",
+            "format": "number"
+          }
+        },
+        {
+          "id": "conversion-rate",
+          "type": "metrics",
+          "title": "Conversion Rate",
+          "width": 3,
+          "data_source": "module:leads.get_conversion_rate",
+          "metrics_config": {
+            "layout": "single",
+            "show_trend": true,
+            "format": "percentage",
+            "color_thresholds": [
+              {
+                "max": 10,
+                "color": "#dc3545"
+              },
+              {
+                "max": 25,
+                "color": "#ffc107"
+              },
+              {
+                "min": 25,
+                "color": "#28a745"
+              }
+            ]
+          }
+        },
+        {
+          "id": "avg-project-value",
+          "type": "metrics",
+          "title": "Avg Project Value",
+          "width": 3,
+          "data_source": "module:projects.get_average_value",
+          "metrics_config": {
+            "layout": "single",
+            "format": "currency",
+            "currency": "USD"
+          }
+        },
+        {
+          "id": "response-time",
+          "type": "metrics",
+          "title": "Avg Response Time",
+          "width": 3,
+          "data_source": "module:leads.get_avg_response_time",
+          "metrics_config": {
+            "layout": "single",
+            "format": "duration",
+            "target_value": 24,
+            "target_label": "Target: 24h"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pipeline-map-row",
+      "panels": [
+        {
+          "id": "lead-pipeline",
+          "type": "kanban",
+          "title": "Lead Pipeline",
+          "width": 8,
+          "width_md": 12,
+          "data_source": "module:leads.get_pipeline",
+          "kanban_config": {
+            "columns": [
+              {
+                "id": "new",
+                "label": "New",
+                "color": "#3498db",
+                "limit": 20
+              },
+              {
+                "id": "qualified",
+                "label": "Qualified",
+                "color": "#9b59b6"
+              },
+              {
+                "id": "proposal",
+                "label": "Proposal",
+                "color": "#f39c12"
+              },
+              {
+                "id": "negotiation",
+                "label": "Negotiation",
+                "color": "#e74c3c"
+              },
+              {
+                "id": "won",
+                "label": "Won",
+                "color": "#27ae60"
+              }
+            ],
+            "card_fields": [
+              "name",
+              "location",
+              "estimated_value",
+              "last_contact"
+            ],
+            "draggable": true,
+            "on_move": "update_lead_stage"
+          },
+          "controls": [
+            {
+              "type": "filter",
+              "id": "date-filter",
+              "label": "Period",
+              "options_source": "static:date_ranges"
+            }
+          ]
+        },
+        {
+          "id": "lead-map",
+          "type": "map",
+          "title": "Treasure Valley Leads",
+          "width": 4,
+          "width_md": 12,
+          "data_source": "module:leads.get_map_data",
+          "map_config": {
+            "provider": "leaflet",
+            "center": {
+              "lat": 43.615,
+              "lng": -116.2023
+            },
+            "zoom": 10,
+            "marker_field": "location",
+            "popup_template": "<strong>{{name}}</strong><br>{{address}}<br>Stage: {{stage}}",
+            "cluster": true,
+            "regions": [
+              {
+                "id": "boise",
+                "label": "Boise",
+                "color": "#3498db"
+              },
+              {
+                "id": "meridian",
+                "label": "Meridian",
+                "color": "#9b59b6"
+              },
+              {
+                "id": "eagle",
+                "label": "Eagle",
+                "color": "#27ae60"
+              },
+              {
+                "id": "nampa",
+                "label": "Nampa",
+                "color": "#f39c12"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "leads-table-row",
+      "panels": [
+        {
+          "id": "leads-table",
+          "type": "table",
+          "title": "Recent Leads",
+          "width": 12,
+          "data_source": "module:leads.get_recent",
+          "table_config": {
+            "columns": [
+              {
+                "key": "name",
+                "label": "Name",
+                "sortable": true
+              },
+              {
+                "key": "email",
+                "label": "Email",
+                "type": "email"
+              },
+              {
+                "key": "phone",
+                "label": "Phone",
+                "type": "phone"
+              },
+              {
+                "key": "source",
+                "label": "Source",
+                "filterable": true
+              },
+              {
+                "key": "project_type",
+                "label": "Project Type",
+                "filterable": true
+              },
+              {
+                "key": "estimated_value",
+                "label": "Est. Value",
+                "type": "currency",
+                "sortable": true
+              },
+              {
+                "key": "stage",
+                "label": "Stage",
+                "type": "badge",
+                "filterable": true
+              },
+              {
+                "key": "created_at",
+                "label": "Added",
+                "type": "relative_date",
+                "sortable": true
+              }
+            ],
+            "row_actions": [
+              {
+                "id": "view",
+                "label": "View",
+                "icon": "dashicons-visibility",
+                "action": "view_lead"
+              },
+              {
+                "id": "edit",
+                "label": "Edit",
+                "icon": "dashicons-edit",
+                "action": "edit_lead"
+              },
+              {
+                "id": "email",
+                "label": "Email",
+                "icon": "dashicons-email",
+                "action": "email_lead"
+              },
+              {
+                "id": "delete",
+                "label": "Delete",
+                "icon": "dashicons-trash",
+                "action": "delete_lead",
+                "confirm": "Delete this lead?"
+              }
+            ],
+            "bulk_actions": [
+              {
+                "id": "export",
+                "label": "Export Selected"
+              },
+              {
+                "id": "assign",
+                "label": "Assign To..."
+              },
+              {
+                "id": "delete",
+                "label": "Delete Selected",
+                "confirm": "Delete selected leads?"
+              }
+            ],
+            "pagination": {
+              "enabled": true,
+              "per_page": 15,
+              "per_page_options": [
+                15,
+                30,
+                50
+              ]
+            },
+            "searchable": true,
+            "exportable": true
+          },
+          "controls": [
+            {
+              "type": "bulk-action",
+              "id": "bulk-actions",
+              "options_source": "static:lead_bulk_actions"
+            },
+            {
+              "type": "export",
+              "id": "export-btn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activity-content-row",
+      "panels": [
+        {
+          "id": "recent-activity",
+          "type": "timeline",
+          "title": "Recent Activity",
+          "width": 6,
+          "data_source": "module:activity.get_recent",
+          "timeline_config": {
+            "max_items": 10,
+            "show_relative_time": true,
+            "group_by": "date",
+            "item_template": {
+              "icon_field": "type_icon",
+              "title_field": "summary",
+              "description_field": "details",
+              "time_field": "created_at"
+            }
+          },
+          "refresh_interval": 60
+        },
+        {
+          "id": "social-content-queue",
+          "type": "cards",
+          "title": "Social Content Queue",
+          "width": 6,
+          "data_source": "module:social.get_queue",
+          "cards_config": {
+            "layout": "list",
+            "max_items": 5,
+            "card_template": {
+              "image_field": "thumbnail",
+              "title_field": "title",
+              "subtitle_field": "platform",
+              "description_field": "scheduled_for",
+              "badge_field": "status"
+            },
+            "card_actions": [
+              {
+                "id": "edit",
+                "label": "Edit",
+                "action": "edit_post"
+              },
+              {
+                "id": "schedule",
+                "label": "Schedule",
+                "action": "open_scheduler"
+              },
+              {
+                "id": "preview",
+                "label": "Preview",
+                "action": "preview_post"
+              }
+            ]
+          },
+          "footer_link": {
+            "label": "View All Content →",
+            "url": "#content"
+          }
+        }
+      ]
+    },
+    {
+      "id": "calendar-chat-row",
+      "panels": [
+        {
+          "id": "upcoming-appointments",
+          "type": "calendar",
+          "title": "Upcoming Consultations",
+          "width": 6,
+          "data_source": "module:calendar.get_events",
+          "calendar_config": {
+            "view": "week",
+            "available_views": [
+              "day",
+              "week",
+              "month"
+            ],
+            "event_sources": [
+              {
+                "id": "consultations",
+                "label": "Consultations",
+                "color": "#3498db"
+              },
+              {
+                "id": "site_visits",
+                "label": "Site Visits",
+                "color": "#27ae60"
+              },
+              {
+                "id": "deadlines",
+                "label": "Deadlines",
+                "color": "#e74c3c"
+              }
+            ],
+            "business_hours": {
+              "start": "09:00",
+              "end": "17:00",
+              "days": [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "click_action": "open_event_modal",
+            "drag_enabled": true
+          }
+        },
+        {
+          "id": "support-chat",
+          "type": "chat",
+          "title": "Client Support",
+          "width": 6,
+          "chat_config": {
+            "provider": "ai-engine",
+            "context_sources": [
+              "module:projects.get_active",
+              "module:faq.get_all",
+              "wp:posts.portfolio"
+            ],
+            "system_prompt": "You are a helpful assistant for an interior design studio specializing in sustainable design in the Boise/Treasure Valley area. Help clients with questions about services, scheduling, and design consultations.",
+            "suggested_prompts": [
+              "What are your design services?",
+              "How do I schedule a consultation?",
+              "What is sustainable design?",
+              "Can you show me your portfolio?"
+            ],
+            "human_handoff": {
+              "enabled": true,
+              "trigger_keywords": [
+                "speak to human",
+                "real person",
+                "manager"
+              ],
+              "notification_email": "support@example.com"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "enabled": true,
+    "text": "RawWire Dashboard • Interior Design Lead Manager",
+    "controls": []
+  },
+  "data_sources": {
+    "static": {
+      "date_ranges": [
+        {
+          "value": "today",
+          "label": "Today"
+        },
+        {
+          "value": "week",
+          "label": "This Week"
+        },
+        {
+          "value": "month",
+          "label": "This Month"
+        },
+        {
+          "value": "quarter",
+          "label": "This Quarter"
+        },
+        {
+          "value": "year",
+          "label": "This Year"
+        },
+        {
+          "value": "all",
+          "label": "All Time"
+        }
+      ],
+      "lead_bulk_actions": [
+        {
+          "value": "export",
+          "label": "Export Selected"
+        },
+        {
+          "value": "assign",
+          "label": "Assign To..."
+        },
+        {
+          "value": "stage",
+          "label": "Change Stage"
+        },
+        {
+          "value": "delete",
+          "label": "Delete Selected"
+        }
+      ],
+      "project_types": [
+        {
+          "value": "residential_new",
+          "label": "Residential - New Construction"
+        },
+        {
+          "value": "residential_remodel",
+          "label": "Residential - Remodel"
+        },
+        {
+          "value": "commercial",
+          "label": "Commercial"
+        },
+        {
+          "value": "consultation",
+          "label": "Design Consultation"
+        },
+        {
+          "value": "staging",
+          "label": "Home Staging"
+        }
+      ]
+    }
+  },
+  "permissions": {
+    "view": "read",
+    "edit": "edit_posts",
+    "delete": "delete_posts",
+    "export": "export",
+    "settings": "manage_options"
+  },
+  "features": {
+    "scraper": {
+      "enabled": true,
+      "description": "Web scraping for lead discovery",
+      "sources": [
+        "houzz",
+        "zillow",
+        "realtor",
+        "local_news"
+      ]
+    },
+    "ai_assistant": {
+      "enabled": true,
+      "description": "AI-powered chat and content generation"
+    },
+    "email_campaigns": {
+      "enabled": true,
+      "description": "Email marketing and newsletters"
+    },
+    "social_scheduler": {
+      "enabled": true,
+      "description": "Social media post scheduling"
+    },
+    "file_manager": {
+      "enabled": true,
+      "description": "Document and project file management"
+    },
+    "lead_generator": {
+      "enabled": true,
+      "description": "Building permit lead discovery and qualification",
+      "tool_id": "lead_generator"
+    }
+  },
+  "pages": {
+    "lead_sources": {
+      "id": "lead_sources",
+      "title": "Lead Sources",
+      "slug": "rawwire-lead-sources",
+      "icon": "dashicons-database",
+      "layout": "custom",
+      "panels": [
+        "lead_sources_page"
+      ],
+      "requires_tool": "lead_generator"
+    },
+    "lead_approvals": {
+      "id": "lead_approvals",
+      "title": "Lead Approvals",
+      "slug": "rawwire-lead-approvals",
+      "icon": "dashicons-yes-alt",
+      "layout": "custom",
+      "panels": [
+        "lead_approvals_page"
+      ],
+      "requires_tool": "lead_generator"
+    },
+    "lead_completed": {
+      "id": "lead_completed",
+      "title": "Completed Leads",
+      "slug": "rawwire-lead-completed",
+      "icon": "dashicons-portfolio",
+      "layout": "custom",
+      "panels": [
+        "lead_completed_page"
+      ],
+      "requires_tool": "lead_generator"
+    }
+  },
+  "panels": {
+    "lead_sources_page": {
+      "id": "lead_sources_page",
+      "type": "custom",
+      "title": "Lead Sources",
+      "icon": "dashicons-database",
+      "renderer": "RawWire_Lead_Generator_Panels::render_sources_page",
+      "description": "Import, score, and manage building permit records"
+    },
+    "lead_approvals_page": {
+      "id": "lead_approvals_page",
+      "type": "custom",
+      "title": "Lead Approvals",
+      "icon": "dashicons-yes-alt",
+      "renderer": "RawWire_Lead_Generator_Panels::render_approvals_page",
+      "description": "Review and approve AI-scored candidates"
+    },
+    "lead_completed_page": {
+      "id": "lead_completed_page",
+      "type": "custom",
+      "title": "Completed Leads",
+      "icon": "dashicons-portfolio",
+      "renderer": "RawWire_Lead_Generator_Panels::render_completed_page",
+      "description": "Enriched leads ready for outreach"
+    },
+    "pipeline_stats": {
+      "id": "pipeline_stats",
+      "type": "custom",
+      "title": "Pipeline Stats",
+      "icon": "dashicons-chart-bar",
+      "renderer": "RawWire_Lead_Generator_Panels::render_pipeline_stats",
+      "description": "Visual pipeline statistics cards"
+    },
+    "pipeline_actions": {
+      "id": "pipeline_actions",
+      "type": "custom",
+      "title": "Pipeline Actions",
+      "icon": "dashicons-controls-play",
+      "renderer": "RawWire_Lead_Generator_Panels::render_pipeline_actions",
+      "description": "Score, enrich, and import action buttons"
+    },
+    "conversion_funnel": {
+      "id": "conversion_funnel",
+      "type": "custom",
+      "title": "Conversion Funnel",
+      "icon": "dashicons-chart-bar",
+      "renderer": "RawWire_Lead_Generator_Panels::render_conversion_funnel",
+      "description": "Lead conversion funnel visualization"
+    },
+    "import_form": {
+      "id": "import_form",
+      "type": "custom",
+      "title": "Import Permits",
+      "icon": "dashicons-download",
+      "renderer": "RawWire_Lead_Generator_Panels::render_import_form",
+      "description": "Socrata API permit import form"
+    },
+    "records_table": {
+      "id": "records_table",
+      "type": "custom",
+      "title": "Source Records",
+      "icon": "dashicons-database",
+      "renderer": "RawWire_Lead_Generator_Panels::render_records_table",
+      "description": "Paginated source records table"
+    },
+    "scoring_weights": {
+      "id": "scoring_weights",
+      "type": "custom",
+      "title": "Scoring Weights",
+      "icon": "dashicons-chart-bar",
+      "renderer": "RawWire_Lead_Generator_Panels::render_scoring_weights",
+      "description": "AI scoring weight configuration"
+    },
+    "api_settings": {
+      "id": "api_settings",
+      "type": "custom",
+      "title": "API Settings",
+      "icon": "dashicons-admin-network",
+      "renderer": "RawWire_Lead_Generator_Panels::render_api_settings",
+      "description": "Socrata and TextRazor API configuration"
+    },
+    "pipeline_settings": {
+      "id": "pipeline_settings",
+      "type": "custom",
+      "title": "Pipeline Settings",
+      "icon": "dashicons-admin-generic",
+      "renderer": "RawWire_Lead_Generator_Panels::render_pipeline_settings",
+      "description": "Threshold, limit, and auto-processing settings"
+    },
+    "approval_filters": {
+      "id": "approval_filters",
+      "type": "custom",
+      "title": "Approval Filters",
+      "icon": "dashicons-filter",
+      "renderer": "RawWire_Lead_Generator_Panels::render_approval_filters",
+      "description": "Status tabs and bulk action bar"
+    },
+    "candidate_grid": {
+      "id": "candidate_grid",
+      "type": "custom",
+      "title": "Candidate Grid",
+      "icon": "dashicons-grid-view",
+      "renderer": "RawWire_Lead_Generator_Panels::render_candidate_grid",
+      "description": "Card-based candidate display with scores"
+    },
+    "completed_filters": {
+      "id": "completed_filters",
+      "type": "custom",
+      "title": "Lead Filters",
+      "icon": "dashicons-filter",
+      "renderer": "RawWire_Lead_Generator_Panels::render_completed_filters",
+      "description": "Status tabs and sort controls"
+    },
+    "lead_cards": {
+      "id": "lead_cards",
+      "type": "custom",
+      "title": "Lead Cards",
+      "icon": "dashicons-portfolio",
+      "renderer": "RawWire_Lead_Generator_Panels::render_lead_cards",
+      "description": "Enriched lead file cards with expandable details"
+    }
+  }
+}

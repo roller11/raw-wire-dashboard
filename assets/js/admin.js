@@ -4,7 +4,7 @@
  * @since 1.0.18
  */
 
-(function($) {
+(function ($) {
     'use strict';
 
     /**
@@ -15,18 +15,28 @@
         /**
          * Initialize
          */
-        init: function() {
+        init: function () {
             this.bindEvents();
             this.loadDashboardData();
+            this.initAISettings();
+            this.initApprovalsBatchPolling();
         },
 
         /**
          * Bind events
          */
-        bindEvents: function() {
+        bindEvents: function () {
             // Sync button - handled by dashboard.js via REST API
             // $(document).on('click', '#rawwire-sync-btn', this.sync.bind(this));
             $(document).on('click', '#rawwire-clear-cache-btn', this.clearCache.bind(this));
+
+            // Source toggle handlers - for supplementary dashboard controls
+            $(document).on('change', '.source-checkbox', this.handleSourceToggle.bind(this));
+            $(document).on('change', '.toolkit-source-checkbox', this.handleToolkitSourceToggle.bind(this));
+
+            // Template panel action buttons (for Configured Sources panel)
+            $(document).on('click', 'button[data-action="toggle_scraper_source"]', this.handleTemplateToggle.bind(this));
+            $(document).on('click', 'button[data-action="test_scraper_source"]', this.handleTemplateTest.bind(this));
 
             // Content management - handled by dashboard.js via REST API
             // $(document).on('click', '.approve-btn, .reject-btn', this.updateContent.bind(this));
@@ -35,18 +45,11 @@
             $(document).on('click', '.panel-header', this.togglePanel.bind(this));
             $(document).on('change', '.panel-control-toggle', this.handlePanelControl.bind(this));
 
-            // Chat interface
-            $(document).on('click', '.rawwire-chat-toggle', this.toggleChat.bind(this));
-            $(document).on('click', '.chat-close', this.closeChat.bind(this));
-            $(document).on('click', '.chat-send', this.sendChatMessage.bind(this));
-            $(document).on('keypress', '.chat-input', this.handleChatKeypress.bind(this));
+            // Chat — handled by chat-panel.js + Venice Chat Handler
+            // Legacy bindings removed in v1.0.26
 
-            // Workflow windows
-            $(document).on('click', '.rawwire-workflow-search', this.openSearchWorkflow.bind(this));
-            $(document).on('click', '.rawwire-workflow-generative', this.openGenerativeWorkflow.bind(this));
-            $(document).on('click', '.workflow-close', this.closeWorkflow.bind(this));
-            $(document).on('click', '.workflow-execute', this.executeWorkflow.bind(this));
-            $(document).on('click', '.workflow-cancel', this.cancelWorkflow.bind(this));
+            // Workflows — handled by workflow-handlers.php + dashboard.js
+            // Legacy bindings removed in v1.0.26
 
             // Modules page
             $(document).on('click', '.configure-toolkit', this.openToolkitModal.bind(this));
@@ -56,9 +59,72 @@
         },
 
         /**
+         * Initialize AI settings behaviors
+         */
+        initAISettings: function () {
+            var $envSelect = $('#default_env_id');
+            var $modelInput = $('#default_model');
+            var $modelList = $('#rawwire-model-list');
+            var $refreshBtn = $('#rawwire-refresh-models');
+            var $status = $('#rawwire-models-status');
+
+            if (!$envSelect.length || typeof rawwire_ai_settings === 'undefined') {
+                return;
+            }
+
+            var fetchModels = function () {
+                var envId = $envSelect.val();
+                $status.text('Loading models...');
+
+                $.ajax({
+                    url: rawwire_ai_settings.ajaxUrl,
+                    method: 'POST',
+                    data: {
+                        action: 'rawwire_ai_get_models',
+                        nonce: rawwire_ai_settings.nonce,
+                        envId: envId
+                    },
+                    success: function (response) {
+                        $modelList.empty();
+                        if (response.success && response.data && response.data.models) {
+                            response.data.models.forEach(function (model) {
+                                var modelId = model.model || model;
+                                if (!modelId) return;
+                                var label = model.name || modelId;
+                                $modelList.append($('<option>', { value: modelId, text: label }));
+                            });
+                            $status.text('Models updated');
+                        } else {
+                            $status.text('No models found');
+                        }
+                    },
+                    error: function () {
+                        $status.text('Failed to load models');
+                    }
+                });
+            };
+
+            $envSelect.on('change', function () {
+                fetchModels();
+            });
+
+            $refreshBtn.on('click', function () {
+                fetchModels();
+            });
+        },
+
+        /**
+         * Approval batch polling — handled by workflow-handlers.php via REST.
+         * Legacy 5s polling removed in v1.0.26.
+         */
+        initApprovalsBatchPolling: function () {
+            // No-op: rawwire_get_last_batch is handled server-side now
+        },
+
+        /**
          * Load dashboard data
          */
-        loadDashboardData: function() {
+        loadDashboardData: function () {
             this.updateStats();
             this.loadContentTable();
             this.loadPanelData();
@@ -73,7 +139,7 @@
          * @param {function} error
          * @param {function} complete
          */
-        moduleAjax: function(module, action, data, success, error, complete) {
+        moduleAjax: function (module, action, data, success, error, complete) {
             var payload = data || {};
             $.ajax({
                 url: rawwire_ajax.ajax_url,
@@ -85,13 +151,13 @@
                     module_action: action,
                     data: payload
                 },
-                success: function(response) {
+                success: function (response) {
                     if (typeof success === 'function') success(response);
                 },
-                error: function(xhr, status, err) {
+                error: function (xhr, status, err) {
                     if (typeof error === 'function') error(xhr, status, err);
                 },
-                complete: function() {
+                complete: function () {
                     if (typeof complete === 'function') complete();
                 }
             });
@@ -100,8 +166,8 @@
         /**
          * Update stats display
          */
-        updateStats: function() {
-            RawWireAdmin.moduleAjax('core', 'get_stats', {}, function(response) {
+        updateStats: function () {
+            RawWireAdmin.moduleAjax('core', 'get_stats', {}, function (response) {
                 if (response.success) {
                     // legacy fields fallback
                     var data = response.data || response;
@@ -112,7 +178,7 @@
                 } else {
                     RawWireAdmin.showError('Failed to load statistics: ' + (response.data || response.message || ''));
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showError('AJAX error loading stats: ' + err);
             });
         },
@@ -120,14 +186,14 @@
         /**
          * Load content table
          */
-        loadContentTable: function() {
-            RawWireAdmin.moduleAjax('core', 'get_content', { limit: 10 }, function(response) {
+        loadContentTable: function () {
+            RawWireAdmin.moduleAjax('core', 'get_content', { limit: 10 }, function (response) {
                 if (response.success) {
                     RawWireAdmin.renderContentTable(response.data);
                 } else {
                     RawWireAdmin.showError('Failed to load content: ' + (response.data || response.message || ''));
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showError('AJAX error loading content: ' + err);
             });
         },
@@ -135,7 +201,7 @@
         /**
          * Render content table
          */
-        renderContentTable: function(data) {
+        renderContentTable: function (data) {
             var tbody = $('.rawwire-content tbody');
             tbody.empty();
 
@@ -144,7 +210,7 @@
                 return;
             }
 
-            data.forEach(function(item) {
+            data.forEach(function (item) {
                 var row = '<tr>' +
                     '<td>' + RawWireAdmin.escapeHtml(item.title) + '</td>' +
                     '<td>' + RawWireAdmin.escapeHtml(item.source) + '</td>' +
@@ -159,7 +225,7 @@
         /**
          * Load panel data
          */
-        loadPanelData: function() {
+        loadPanelData: function () {
             this.loadOverviewData();
             this.loadSourcesData();
             this.loadQueueData();
@@ -171,9 +237,9 @@
         /**
          * Load dynamic panels that declare data-module and data-action on the server-rendered container
          */
-        loadDynamicPanels: function() {
+        loadDynamicPanels: function () {
             var self = this;
-            $('.panel-body-content[data-module][data-action]').each(function() {
+            $('.panel-body-content[data-module][data-action]').each(function () {
                 var container = $(this);
                 var module = container.data('module');
                 var action = container.data('action');
@@ -182,7 +248,7 @@
 
                 if (!module || !action) return;
 
-                self.moduleAjax(module, action, { panel_id: panelId }, function(response) {
+                self.moduleAjax(module, action, { panel_id: panelId }, function (response) {
                     if (response.success) {
                         // If response.data contains HTML, render it, otherwise stringify
                         var out = response.data !== undefined ? response.data : response;
@@ -196,7 +262,7 @@
                     } else {
                         container.html('<div class="notice notice-error"><p>' + (response.data || response.message || 'Error loading panel') + '</p></div>');
                     }
-                }, function(xhr, status, err) {
+                }, function (xhr, status, err) {
                     container.html('<div class="notice notice-error"><p>Error: ' + err + '</p></div>');
                 });
             });
@@ -205,12 +271,12 @@
         /**
          * Load overview data
          */
-        loadOverviewData: function() {
-            RawWireAdmin.moduleAjax('core', 'get_overview', {}, function(response) {
+        loadOverviewData: function () {
+            RawWireAdmin.moduleAjax('core', 'get_overview', {}, function (response) {
                 if (response.success) {
                     RawWireAdmin.updateOverviewPanel(response.data);
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showPanelError('overview', err);
             });
         },
@@ -218,7 +284,7 @@
         /**
          * Update overview panel
          */
-        updateOverviewPanel: function(data) {
+        updateOverviewPanel: function (data) {
             $('#overview-total-processed').text(data.total_processed || 0);
             $('#overview-active-workflows').text(data.active_workflows || 0);
             $('#overview-success-rate').text(data.success_rate || '0%');
@@ -228,12 +294,12 @@
         /**
          * Load sources data
          */
-        loadSourcesData: function() {
-            RawWireAdmin.moduleAjax('core', 'get_sources', {}, function(response) {
+        loadSourcesData: function () {
+            RawWireAdmin.moduleAjax('core', 'get_sources', {}, function (response) {
                 if (response.success) {
                     RawWireAdmin.updateSourcesPanel(response.data);
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showPanelError('sources', err);
             });
         },
@@ -241,7 +307,7 @@
         /**
          * Update sources panel
          */
-        updateSourcesPanel: function(data) {
+        updateSourcesPanel: function (data) {
             var list = $('#sources-list');
             list.empty();
 
@@ -265,7 +331,7 @@
                 return;
             }
 
-            data.forEach(function(source) {
+            data.forEach(function (source) {
                 var item = '<div class="source-item">' +
                     '<strong>' + RawWireAdmin.escapeHtml(source.name) + '</strong> - ' +
                     '<span class="status-' + source.status + '">' + source.status + '</span>' +
@@ -275,14 +341,38 @@
         },
 
         /**
+         * Handle template source toggle
+         */
+        handleSourceToggle: function (e) {
+            var $checkbox = $(e.target);
+            var sourceId = $checkbox.data('source-id');
+            var enabled = $checkbox.is(':checked');
+            var $item = $checkbox.closest('.source-item');
+
+            this.toggleTemplateSource(sourceId, enabled, $item);
+        },
+
+        /**
+         * Handle scraper toolkit source toggle
+         */
+        handleToolkitSourceToggle: function (e) {
+            var $checkbox = $(e.target);
+            var sourceId = $checkbox.data('source-id');
+            var enabled = $checkbox.is(':checked');
+            var $item = $checkbox.closest('.source-item');
+
+            this.toggleScraperSource(sourceId, enabled, $item);
+        },
+
+        /**
          * Load queue data
          */
-        loadQueueData: function() {
-            RawWireAdmin.moduleAjax('core', 'get_queue', {}, function(response) {
+        loadQueueData: function () {
+            RawWireAdmin.moduleAjax('core', 'get_queue', {}, function (response) {
                 if (response.success) {
                     RawWireAdmin.updateQueuePanel(response.data);
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showPanelError('queue', err);
             });
         },
@@ -290,7 +380,7 @@
         /**
          * Update queue panel
          */
-        updateQueuePanel: function(data) {
+        updateQueuePanel: function (data) {
             $('#queue-pending').text(data.pending || 0);
             $('#queue-processing').text(data.processing || 0);
             $('#queue-completed').text(data.completed || 0);
@@ -300,12 +390,12 @@
         /**
          * Load logs data
          */
-        loadLogsData: function() {
-            RawWireAdmin.moduleAjax('core', 'get_logs', { limit: 20 }, function(response) {
+        loadLogsData: function () {
+            RawWireAdmin.moduleAjax('core', 'get_logs', { limit: 20 }, function (response) {
                 if (response.success) {
                     RawWireAdmin.updateLogsPanel(response.data);
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showPanelError('logs', err);
             });
         },
@@ -313,7 +403,7 @@
         /**
          * Update logs panel
          */
-        updateLogsPanel: function(data) {
+        updateLogsPanel: function (data) {
             var logs = $('#logs-container');
             logs.empty();
 
@@ -331,13 +421,13 @@
                 logs.text('Error: Invalid log data');
                 return;
             }
-            
+
             if (data.length === 0) {
                 logs.text('No recent activity');
                 return;
             }
 
-            data.forEach(function(log) {
+            data.forEach(function (log) {
                 var logEntry = '[' + RawWireAdmin.formatDate(log.created_at) + '] ' +
                     log.level.toUpperCase() + ': ' + RawWireAdmin.escapeHtml(log.message) + '\n';
                 logs.append(logEntry);
@@ -350,12 +440,12 @@
         /**
          * Load insights data
          */
-        loadInsightsData: function() {
-            RawWireAdmin.moduleAjax('core', 'get_insights', {}, function(response) {
+        loadInsightsData: function () {
+            RawWireAdmin.moduleAjax('core', 'get_insights', {}, function (response) {
                 if (response.success) {
                     RawWireAdmin.updateInsightsPanel(response.data);
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showPanelError('insights', err);
             });
         },
@@ -363,7 +453,7 @@
         /**
          * Update insights panel
          */
-        updateInsightsPanel: function(data) {
+        updateInsightsPanel: function (data) {
             $('#insights-top-categories').text(data.top_categories || 'None');
             $('#insights-peak-hours').text(data.peak_hours || 'N/A');
             $('#insights-avg-quality').text(data.avg_quality || '0%');
@@ -373,7 +463,7 @@
         /**
          * Clear cache
          */
-        clearCache: function(e) {
+        clearCache: function (e) {
             e.preventDefault();
 
             if (!confirm('Are you sure you want to clear the cache?')) {
@@ -387,57 +477,23 @@
                 .html('<span class="dashicons dashicons-trash"></span> Clearing...')
                 .addClass('rawwire-loading');
 
-            RawWireAdmin.moduleAjax('core', 'clear_cache', {}, function(response) {
+            RawWireAdmin.moduleAjax('core', 'clear_cache', {}, function (response) {
                 RawWireAdmin.resetButton($btn, originalText);
                 if (response.success) {
                     RawWireAdmin.showSuccess('Cache cleared successfully');
                 } else {
                     RawWireAdmin.showError(response.data.message || response.message || 'Cache clear failed');
                 }
-            }, function() {
+            }, function () {
                 RawWireAdmin.showError('Network error occurred');
                 RawWireAdmin.resetButton($btn, originalText);
             });
         },
 
         /**
-         * Update content status
-         */
-        updateContent: function(e) {
-            e.preventDefault();
-
-            var $btn = $(e.target);
-            var $row = $btn.closest('tr');
-            var id = $btn.data('id');
-            var status = $btn.data('status');
-
-            $btn.prop('disabled', true);
-
-            RawWireAdmin.moduleAjax('core', 'update_content', { id: id, status: status }, function(response) {
-                if (response.success) {
-                    // Update status display
-                    $row.find('.status')
-                        .removeClass('status-pending status-approved status-rejected')
-                        .addClass('status-' + status)
-                        .text(status.charAt(0).toUpperCase() + status.slice(1));
-
-                    // Update stats
-                    RawWireAdmin.updateStats();
-                    RawWireAdmin.showSuccess('Content updated successfully');
-                } else {
-                    RawWireAdmin.showError(response.data.message || response.message || 'Update failed');
-                }
-            }, function() {
-                RawWireAdmin.showError('Network error occurred');
-            }, function() {
-                $btn.prop('disabled', false);
-            });
-        },
-
-        /**
          * Toggle panel
          */
-        togglePanel: function(e) {
+        togglePanel: function (e) {
             var header = $(e.target).closest('.panel-header');
             var panel = header.closest('.panel');
             var body = panel.find('.panel-body');
@@ -449,7 +505,7 @@
         /**
          * Handle panel control
          */
-        handlePanelControl: function(e) {
+        handlePanelControl: function (e) {
             var control = $(e.target);
             var action = control.data('action');
             var value = control.is(':checked') ? 1 : 0;
@@ -457,264 +513,27 @@
             var panel_id = panel.length ? panel.attr('id') : '';
             var module = panel.find('.panel-body-content').data('module') || 'core';
 
-            RawWireAdmin.moduleAjax(module, 'panel_control', { control_action: action, value: value, panel_id: panel_id, module: module }, function(response) {
+            RawWireAdmin.moduleAjax(module, 'panel_control', { control_action: action, value: value, panel_id: panel_id, module: module }, function (response) {
                 if (response.success) {
                     RawWireAdmin.showSuccess('Control updated successfully');
                 } else {
                     RawWireAdmin.showError('Failed to update control: ' + (response.data || response.message || ''));
                     control.prop('checked', !value); // Revert on failure
                 }
-            }, function(xhr, status, err) {
+            }, function (xhr, status, err) {
                 RawWireAdmin.showError('Error updating control: ' + err);
                 control.prop('checked', !value); // Revert on failure
             });
         },
 
-        /**
-         * Toggle chat
-         */
-        toggleChat: function(e) {
-            e.preventDefault();
-            $('.rawwire-chat').toggleClass('open');
-        },
+        // Legacy chat methods removed in v1.0.26 — see chat-panel.js
 
-        /**
-         * Close chat
-         */
-        closeChat: function(e) {
-            e.preventDefault();
-            $('.rawwire-chat').removeClass('open');
-        },
-
-        /**
-         * Send chat message
-         */
-        sendChatMessage: function(e) {
-            e.preventDefault();
-            var input = $('.chat-input');
-            var message = input.val().trim();
-
-            if (!message) return;
-
-            RawWireAdmin.addChatMessage(message, 'user');
-            input.val('');
-
-            // Send to AI
-            RawWireAdmin.sendToAI(message);
-        },
-
-        /**
-         * Handle chat keypress
-         */
-        handleChatKeypress: function(e) {
-            if (e.which === 13 && !e.shiftKey) {
-                e.preventDefault();
-                RawWireAdmin.sendChatMessage(e);
-            }
-        },
-
-        /**
-         * Add chat message
-         */
-        addChatMessage: function(message, type) {
-            var messages = $('.chat-messages');
-            var messageEl = $('<div class="chat-message ' + type + '">' + RawWireAdmin.escapeHtml(message) + '</div>');
-            messages.append(messageEl);
-            messages.scrollTop(messages[0].scrollHeight);
-        },
-
-        /**
-         * Send message to AI
-         */
-        sendToAI: function(message) {
-            RawWireAdmin.addChatMessage('Thinking...', 'assistant');
-            RawWireAdmin.moduleAjax('core', 'ai_chat', { message: message }, function(response) {
-                $('.chat-message.assistant').last().remove();
-
-                if (response.success) {
-                    RawWireAdmin.addChatMessage(response.data, 'assistant');
-                } else {
-                    RawWireAdmin.addChatMessage('Error: ' + (response.data || response.message || ''), 'assistant');
-                }
-            }, function(xhr, status, error) {
-                $('.chat-message.assistant').last().remove();
-                RawWireAdmin.addChatMessage('Network error: ' + error, 'assistant');
-            });
-        },
-
-        /**
-         * Open search workflow
-         */
-        openSearchWorkflow: function(e) {
-            e.preventDefault();
-            RawWireAdmin.openWorkflow('search');
-        },
-
-        /**
-         * Open generative workflow
-         */
-        openGenerativeWorkflow: function(e) {
-            e.preventDefault();
-            RawWireAdmin.openWorkflow('generative');
-        },
-
-        /**
-         * Open workflow window
-         */
-        openWorkflow: function(type) {
-            var modal = $('.rawwire-workflow-modal');
-            var title = type === 'search' ? 'Search AI Workflow' : 'Generative AI Workflow';
-
-            $('.workflow-header h3').text(title);
-            modal.data('type', type);
-            modal.addClass('open');
-
-            // Load workflow configuration
-            RawWireAdmin.loadWorkflowConfig(type);
-        },
-
-        /**
-         * Close workflow
-         */
-        closeWorkflow: function(e) {
-            e.preventDefault();
-            $('.rawwire-workflow-modal').removeClass('open');
-        },
-
-        /**
-         * Load workflow config
-         */
-        loadWorkflowConfig: function(type) {
-            RawWireAdmin.moduleAjax('core', 'get_workflow_config', { type: type }, function(response) {
-                if (response.success) {
-                    RawWireAdmin.populateWorkflowForm(response.data);
-                } else {
-                    RawWireAdmin.showWorkflowError('Failed to load workflow config: ' + (response.data || response.message || ''));
-                }
-            }, function(xhr, status, error) {
-                RawWireAdmin.showWorkflowError('Error loading workflow config: ' + error);
-            });
-        },
-
-        /**
-         * Populate workflow form
-         */
-        populateWorkflowForm: function(config) {
-            // Populate form fields based on config
-            if (config.models) {
-                var modelSelect = $('#workflow-model');
-                modelSelect.empty();
-                config.models.forEach(function(model) {
-                    modelSelect.append('<option value="' + model.id + '">' + model.name + '</option>');
-                });
-            }
-
-            if (config.parameters) {
-                // Populate parameter fields
-                Object.keys(config.parameters).forEach(function(key) {
-                    var field = $('#workflow-' + key);
-                    if (field.length) {
-                        field.val(config.parameters[key]);
-                    }
-                });
-            }
-        },
-
-        /**
-         * Execute workflow
-         */
-        executeWorkflow: function(e) {
-            e.preventDefault();
-            var modal = $('.rawwire-workflow-modal');
-            var type = modal.data('type');
-            var button = $(e.target);
-
-            button.addClass('rawwire-loading').prop('disabled', true);
-
-            var formData = RawWireAdmin.getWorkflowFormData();
-
-            RawWireAdmin.moduleAjax('core', 'execute_workflow', { type: type, config: formData }, function(response) {
-                button.removeClass('rawwire-loading').prop('disabled', false);
-
-                if (response.success) {
-                    RawWireAdmin.showWorkflowSuccess('Workflow executed successfully');
-                    RawWireAdmin.updateWorkflowLogs(response.data.logs);
-                    RawWireAdmin.updateWorkflowStatus('completed');
-                } else {
-                    RawWireAdmin.showWorkflowError('Workflow execution failed: ' + (response.data || response.message || ''));
-                    RawWireAdmin.updateWorkflowStatus('failed');
-                }
-            }, function(xhr, status, error) {
-                button.removeClass('rawwire-loading').prop('disabled', false);
-                RawWireAdmin.showWorkflowError('Workflow execution error: ' + error);
-                RawWireAdmin.updateWorkflowStatus('error');
-            });
-        },
-
-        /**
-         * Cancel workflow
-         */
-        cancelWorkflow: function(e) {
-            e.preventDefault();
-            var modal = $('.rawwire-workflow-modal');
-            var type = modal.data('type');
-
-            RawWireAdmin.moduleAjax('core', 'cancel_workflow', { type: type }, function(response) {
-                if (response.success) {
-                    RawWireAdmin.showWorkflowSuccess('Workflow cancelled');
-                    RawWireAdmin.updateWorkflowStatus('cancelled');
-                } else {
-                    RawWireAdmin.showWorkflowError('Failed to cancel workflow: ' + (response.data || response.message || ''));
-                }
-            }, function(xhr, status, error) {
-                RawWireAdmin.showWorkflowError('Error cancelling workflow: ' + error);
-            });
-        },
-
-        /**
-         * Get workflow form data
-         */
-        getWorkflowFormData: function() {
-            return {
-                model: $('#workflow-model').val(),
-                temperature: $('#workflow-temperature').val(),
-                max_tokens: $('#workflow-max-tokens').val(),
-                prompt: $('#workflow-prompt').val(),
-                input_data: $('#workflow-input').val()
-            };
-        },
-
-        /**
-         * Update workflow logs
-         */
-        updateWorkflowLogs: function(logs) {
-            var logsContainer = $('.workflow-logs');
-            logsContainer.empty();
-
-            if (logs && logs.length > 0) {
-                logs.forEach(function(log) {
-                    logsContainer.append('<div>' + RawWireAdmin.escapeHtml(log) + '</div>');
-                });
-            } else {
-                logsContainer.text('No logs available');
-            }
-        },
-
-        /**
-         * Update workflow status
-         */
-        updateWorkflowStatus: function(status) {
-            var statusEl = $('.workflow-status');
-            statusEl.text('Status: ' + status);
-
-            statusEl.removeClass('status-completed status-failed status-error status-cancelled');
-            statusEl.addClass('status-' + status);
-        },
+        // Legacy workflow methods removed in v1.0.26 — see workflow-handlers.php
 
         /**
          * Show panel error
          */
-        showPanelError: function(panelId, error) {
+        showPanelError: function (panelId, error) {
             var panel = $('#' + panelId + '-panel');
             panel.addClass('rawwire-error');
             panel.find('.panel-body').prepend('<div class="notice notice-error"><p>Error loading ' + panelId + ' data: ' + error + '</p></div>');
@@ -723,41 +542,41 @@
         /**
          * Show workflow error
          */
-        showWorkflowError: function(message) {
+        showWorkflowError: function (message) {
             $('.workflow-body').prepend('<div class="notice notice-error"><p>' + message + '</p></div>');
         },
 
         /**
          * Show workflow success
          */
-        showWorkflowSuccess: function(message) {
+        showWorkflowSuccess: function (message) {
             $('.workflow-body').prepend('<div class="notice notice-success"><p>' + message + '</p></div>');
         },
 
         /**
          * Show error
          */
-        showError: function(message) {
+        showError: function (message) {
             RawWireAdmin.showNotice(message, 'error');
         },
 
         /**
          * Show success
          */
-        showSuccess: function(message) {
+        showSuccess: function (message) {
             RawWireAdmin.showNotice(message, 'success');
         },
 
         /**
          * Show notice
          */
-        showNotice: function(message, type) {
+        showNotice: function (message, type) {
             var notice = $('<div class="notice notice-' + type + ' is-dismissible"><p>' + message + '</p></div>');
             $('.rawwire-dashboard').prepend(notice);
 
             // Auto-dismiss after 5 seconds
-            setTimeout(function() {
-                notice.fadeOut(function() {
+            setTimeout(function () {
+                notice.fadeOut(function () {
                     notice.remove();
                 });
             }, 5000);
@@ -766,16 +585,16 @@
         /**
          * Format date
          */
-        formatDate: function(dateString) {
+        formatDate: function (dateString) {
             if (!dateString) return 'N/A';
             var date = new Date(dateString);
-            return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         },
 
         /**
          * Open toolkit configuration modal
          */
-        openToolkitModal: function(e) {
+        openToolkitModal: function (e) {
             e.preventDefault();
             var $btn = $(e.target);
             var moduleSlug = $btn.data('module');
@@ -790,7 +609,7 @@
         /**
          * Close toolkit configuration modal
          */
-        closeToolkitModal: function(e) {
+        closeToolkitModal: function (e) {
             e.preventDefault();
             $('#toolkit-modal').hide();
         },
@@ -798,7 +617,7 @@
         /**
          * Load toolkit configuration for a module
          */
-        loadToolkitConfig: function(moduleSlug) {
+        loadToolkitConfig: function (moduleSlug) {
             $.ajax({
                 url: rawwire_ajax.ajax_url,
                 type: 'POST',
@@ -807,14 +626,14 @@
                     nonce: rawwire_ajax.nonce,
                     module_slug: moduleSlug
                 },
-                success: function(response) {
+                success: function (response) {
                     if (response.success) {
                         $('#toolkit-config-content').html(response.data.html);
                     } else {
                         $('#toolkit-config-content').html('<p class="error">Error loading configuration: ' + response.data.message + '</p>');
                     }
                 },
-                error: function() {
+                error: function () {
                     $('#toolkit-config-content').html('<p class="error">Error loading configuration.</p>');
                 }
             });
@@ -823,7 +642,7 @@
         /**
          * Load adapter form when selection changes
          */
-        loadAdapterForm: function(e) {
+        loadAdapterForm: function (e) {
             var $select = $(e.target);
             var category = $select.data('category');
             var adapter = $select.val();
@@ -844,14 +663,14 @@
                     category: category,
                     adapter: adapter
                 },
-                success: function(response) {
+                success: function (response) {
                     if (response.success) {
                         $formContainer.html(response.data.html);
                     } else {
                         $formContainer.html('<p class="error">Error loading form: ' + response.data.message + '</p>');
                     }
                 },
-                error: function() {
+                error: function () {
                     $formContainer.html('<p class="error">Error loading form.</p>');
                 }
             });
@@ -860,7 +679,7 @@
         /**
          * Save toolkit configuration
          */
-        saveToolkitConfig: function(e) {
+        saveToolkitConfig: function (e) {
             e.preventDefault();
             var $form = $(e.target);
             var moduleSlug = $form.data('module');
@@ -873,7 +692,7 @@
             var config = {};
 
             // Group form data by category
-            $.each(formData, function(i, field) {
+            $.each(formData, function (i, field) {
                 if (field.name !== 'module_slug') {
                     var parts = field.name.split('_');
                     var category = parts[0];
@@ -893,19 +712,220 @@
                     module_slug: moduleSlug,
                     config: JSON.stringify(config)
                 },
-                success: function(response) {
+                success: function (response) {
                     if (response.success) {
-                        alert('Configuration saved successfully!');
+                        RawWireAdmin.showToast('Configuration saved successfully!', 'success');
                         $('#toolkit-modal').hide();
                     } else {
-                        alert('Error saving configuration: ' + response.data.message);
+                        RawWireAdmin.showToast('Error saving configuration: ' + response.data.message, 'error');
                     }
                 },
-                error: function() {
-                    alert('Error saving configuration.');
+                error: function () {
+                    RawWireAdmin.showToast('Error saving configuration.', 'error');
                 },
-                complete: function() {
+                complete: function () {
                     $submitBtn.prop('disabled', false).val(originalText);
+                }
+            });
+        },
+
+        /**
+         * Toast notification helper
+         */
+        showToast: function (message, type) {
+            type = type || 'success';
+            var toastClass = 'rawwire-toast rawwire-toast-' + type;
+            var $toast = $('<div class="' + toastClass + '">' + RawWireAdmin.escapeHtml(message) + '</div>');
+
+            // Create container if needed
+            if (!$('#rawwire-toast-container').length) {
+                $('body').append('<div id="rawwire-toast-container"></div>');
+            }
+
+            $('#rawwire-toast-container').append($toast);
+
+            // Auto-dismiss after 3 seconds
+            setTimeout(function () {
+                $toast.fadeOut(300, function () { $(this).remove(); });
+            }, 3000);
+        },
+
+        /**
+         * Handle template panel toggle button click
+         * For buttons with data-action="toggle_scraper_source"
+         */
+        handleTemplateToggle: function (e) {
+            e.preventDefault();
+            var $btn = $(e.currentTarget);
+            var $row = $btn.closest('tr');
+            var sourceId = $row.data('item-id');
+            var sourceName = $row.find('td:first').text().trim();
+
+            // Determine current state from row or data attribute
+            var isCurrentlyEnabled = $row.hasClass('enabled') || $btn.data('enabled') === true;
+            var newState = !isCurrentlyEnabled;
+
+            var self = this;
+
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'rawwire_toggle_scraper_source',
+                    source_id: sourceId,
+                    enabled: newState,
+                    nonce: rawwire_ajax.nonce
+                },
+                success: function (response) {
+                    if (response.success) {
+                        // Update row state
+                        $row.toggleClass('enabled', newState).toggleClass('disabled', !newState);
+                        $btn.data('enabled', newState);
+
+                        // Update enabled column display if it exists
+                        var $enabledCell = $row.find('td').eq(2); // Third column (Enabled)
+                        if ($enabledCell.length) {
+                            $enabledCell.html(newState ? '<span class="dashicons dashicons-yes"></span>' : '<span class="dashicons dashicons-no-alt"></span>');
+                        }
+
+                        var status = newState ? 'enabled' : 'disabled';
+                        self.showToast('Source "' + sourceName + '" ' + status, 'success');
+                    } else {
+                        var errorMsg = response.data && response.data.message ? response.data.message : 'Failed to toggle source';
+                        self.showToast('Error: ' + errorMsg, 'error');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    self.showToast('Error toggling source: ' + error, 'error');
+                }
+            });
+        },
+
+        /**
+         * Handle template panel test button click
+         * For buttons with data-action="test_scraper_source"
+         */
+        handleTemplateTest: function (e) {
+            e.preventDefault();
+            var $btn = $(e.currentTarget);
+            var $row = $btn.closest('tr');
+            var sourceId = $row.data('item-id');
+            var sourceName = $row.find('td:first').text().trim();
+
+            // Check if source is enabled
+            var isEnabled = $row.hasClass('enabled') || !$row.hasClass('disabled');
+            if (!isEnabled) {
+                this.showToast('Cannot test disabled source. Please enable it first.', 'error');
+                return;
+            }
+
+            // Save original button state
+            var originalHtml = $btn.html();
+            $btn.prop('disabled', true).html('<span class="dashicons dashicons-update spin"></span> Testing...');
+
+            var self = this;
+
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'rawwire_test_scraper_source',
+                    source_id: sourceId,
+                    nonce: rawwire_ajax.nonce
+                },
+                success: function (response) {
+                    if (response.success) {
+                        var data = response.data || {};
+                        var count = data.count || 0;
+                        var message = 'Test successful for "' + sourceName + '": ' + count + ' items found';
+                        self.showToast(message, 'success');
+
+                        // Optionally refresh the dashboard data
+                        if (typeof self.loadDashboardData === 'function') {
+                            self.loadDashboardData();
+                        }
+                    } else {
+                        var errorMsg = response.data && response.data.message ? response.data.message : 'Test failed';
+                        self.showToast('Error testing "' + sourceName + '": ' + errorMsg, 'error');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    self.showToast('Error testing source: ' + error, 'error');
+                },
+                complete: function () {
+                    $btn.prop('disabled', false).html(originalHtml);
+                }
+            });
+        },
+
+        /**
+         * Toggle template source enable/disable
+         */
+        toggleTemplateSource: function (sourceId, enabled, $item) {
+            var sourceName = $item.find('.source-name').text();
+            var self = this;
+
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'rawwire_toggle_template_source',
+                    source_id: sourceId,
+                    enabled: enabled,
+                    nonce: rawwire_ajax.nonce
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $item.toggleClass('enabled', enabled).toggleClass('disabled', !enabled);
+                        var status = enabled ? 'enabled' : 'disabled';
+                        self.showToast('Source "' + sourceName + '" ' + status, 'success');
+                    } else {
+                        // Revert toggle on error
+                        $item.toggleClass('enabled', !enabled).toggleClass('disabled', enabled);
+                        var errorMsg = response.data && response.data.message ? response.data.message : 'Failed to toggle source';
+                        self.showToast('Error: ' + errorMsg, 'error');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Revert toggle on error
+                    $item.toggleClass('enabled', !enabled).toggleClass('disabled', enabled);
+                    self.showToast('Error toggling source: ' + error, 'error');
+                }
+            });
+        },
+
+        /**
+         * Toggle scraper toolkit source enable/disable
+         */
+        toggleScraperSource: function (sourceId, enabled, $item) {
+            var sourceName = $item.find('.source-name').text();
+            var self = this;
+
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'rawwire_toggle_scraper_source',
+                    source_id: sourceId,
+                    enabled: enabled,
+                    nonce: rawwire_ajax.nonce
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $item.toggleClass('enabled', enabled).toggleClass('disabled', !enabled);
+                        var status = enabled ? 'enabled' : 'disabled';
+                        self.showToast('Source "' + sourceName + '" ' + status, 'success');
+                    } else {
+                        // Revert toggle on error
+                        $item.toggleClass('enabled', !enabled).toggleClass('disabled', enabled);
+                        var errorMsg = response.data && response.data.message ? response.data.message : 'Failed to toggle source';
+                        self.showToast('Error: ' + errorMsg, 'error');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Revert toggle on error
+                    $item.toggleClass('enabled', !enabled).toggleClass('disabled', enabled);
+                    self.showToast('Error toggling source: ' + error, 'error');
                 }
             });
         },
@@ -913,7 +933,7 @@
         /**
          * Escape HTML
          */
-        escapeHtml: function(text) {
+        escapeHtml: function (text) {
             var map = {
                 '&': '&amp;',
                 '<': '&lt;',
@@ -921,13 +941,13 @@
                 '"': '&quot;',
                 "'": '&#039;'
             };
-            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+            return text.replace(/[&<>"']/g, function (m) { return map[m]; });
         },
 
         /**
          * Reset button to original state
          */
-        resetButton: function($btn, originalText) {
+        resetButton: function ($btn, originalText) {
             $btn.prop('disabled', false)
                 .html(originalText)
                 .removeClass('rawwire-loading');
@@ -935,7 +955,7 @@
     };
 
     // Initialize when document is ready
-    $(document).ready(function() {
+    $(document).ready(function () {
         RawWireAdmin.init();
     });
 

@@ -1,0 +1,563 @@
+{
+    "$schema": "./template.schema.json",
+    "meta": {
+        "id": "equalizer",
+        "name": "Raw Wire Equalizer",
+        "version": "1.0.0",
+        "description": "Lead generation and post generation dashboard with Crawlomatic integration",
+        "author": "Raw-Wire DAO LLC",
+        "icon": "dashicons-chart-area",
+        "variants": ["default", "dark"],
+        "_internal": true
+    },
+    "css": {
+        "global": {
+            "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "1.5",
+            "colors": {
+                "primary": "#3b82f6",
+                "primaryHover": "#2563eb",
+                "secondary": "#6b7280",
+                "success": "#22c55e",
+                "warning": "#f59e0b",
+                "danger": "#ef4444",
+                "background": "#f8fafc",
+                "surface": "#ffffff",
+                "card": "#ffffff",
+                "border": "#e5e7eb",
+                "text": "#1f2937",
+                "textMuted": "#6b7280",
+                "accent": "#0ea5e9",
+                "leadGen": "#3b82f6",
+                "leadGenLight": "#60a5fa",
+                "leadGenDark": "#1d4ed8",
+                "postGen": "#10b981",
+                "postGenLight": "#34d399",
+                "postGenDark": "#059669"
+            }
+        },
+        "variants": {
+            "dark": {
+                "colors": {
+                    "background": "#0b1724",
+                    "surface": "#0f1f33",
+                    "card": "#162a44",
+                    "border": "#1e3a5f",
+                    "text": "#e5e7eb",
+                    "textMuted": "#9ca3af"
+                }
+            }
+        }
+    },
+    "toolbox": {
+        "scraper": {
+            "id": "crawlomatic",
+            "label": "Crawlomatic Scraper",
+            "description": "Web scraping via Crawlomatic plugin",
+            "defaultAdapter": "crawlomatic",
+            "required": true
+        },
+        "generator": {
+            "id": "ai_generator",
+            "label": "AI Content Generator",
+            "description": "Generate posts using AI Engine",
+            "defaultAdapter": "ai_engine",
+            "required": true
+        },
+        "workflow": {
+            "id": "dual_pipeline",
+            "label": "Dual Pipeline Workflow",
+            "description": "Lead gen + Post gen pipelines",
+            "defaultAdapter": "equalizer_pipeline",
+            "required": true
+        }
+    },
+    "workflows": {
+        "post_generator": {
+            "id": "post_generator",
+            "name": "Post Generator Pipeline",
+            "description": "Crawl → Process → Review → Publish",
+            "color": "#10b981",
+            "icon": "dashicons-edit",
+            "stages": [
+                {
+                    "id": "crawl",
+                    "name": "Crawl",
+                    "description": "Crawlomatic pulls stories from industry publications",
+                    "table": "crdata",
+                    "statusField": "status",
+                    "inputStatus": null,
+                    "outputStatus": "new",
+                    "action": "crawlomatic_run",
+                    "manual": false,
+                    "icon": "dashicons-admin-site-alt3"
+                },
+                {
+                    "id": "process",
+                    "name": "Process",
+                    "description": "AI extracts facts, condenses into post-sized stories",
+                    "table": "eq_content",
+                    "statusField": "status",
+                    "inputStatus": "new",
+                    "outputStatus": "queued",
+                    "action": "equalizer_process_crdata",
+                    "manual": true,
+                    "icon": "dashicons-admin-generic",
+                    "prompt": "condensation"
+                },
+                {
+                    "id": "review",
+                    "name": "Review",
+                    "description": "Client reviews and approves stories",
+                    "table": "eq_content",
+                    "statusField": "status",
+                    "inputStatus": "queued",
+                    "outputStatus": "approved",
+                    "action": "equalizer_approve_content",
+                    "manual": true,
+                    "icon": "dashicons-visibility",
+                    "requiresApproval": true
+                },
+                {
+                    "id": "generate",
+                    "name": "Generate",
+                    "description": "AI generates full posts from approved content",
+                    "table": "pending",
+                    "statusField": "status",
+                    "inputStatus": "approved",
+                    "outputStatus": "pending_review",
+                    "action": "equalizer_generate_post",
+                    "manual": false,
+                    "icon": "dashicons-edit",
+                    "prompt": "post_generation"
+                },
+                {
+                    "id": "publish",
+                    "name": "Publish",
+                    "description": "Publish to WordPress and social media",
+                    "table": "posted",
+                    "statusField": "status",
+                    "inputStatus": "pending_review",
+                    "outputStatus": "published",
+                    "action": "equalizer_publish_post",
+                    "manual": true,
+                    "icon": "dashicons-share"
+                }
+            ],
+            "prompts": {
+                "condensation": "You are a news aggregator assistant. Analyze the article and create a condensed, social-media-ready summary. Extract key facts, maintain accuracy, use engaging professional tone. Output JSON with title, content (150-300 words), category, tags, relevance_score.",
+                "post_generation": "Write a {{word_count}}-word blog post in a {{tone}} tone. Include engaging intro, key points, conclusion, and source attribution."
+            }
+        },
+        "lead_generation": {
+            "id": "lead_generation",
+            "name": "Lead Generation Pipeline",
+            "description": "Scrape → Filter → Score → Qualify",
+            "color": "#3b82f6",
+            "icon": "dashicons-businessperson",
+            "stages": [
+                {
+                    "id": "scrape",
+                    "name": "Scrape",
+                    "description": "Scrape websites for lead data",
+                    "table": "raw",
+                    "action": "scrape_leads",
+                    "manual": false,
+                    "icon": "dashicons-download"
+                },
+                {
+                    "id": "filter",
+                    "name": "Filter",
+                    "description": "Filter out low-quality leads",
+                    "table": "prospects",
+                    "action": "filter_leads",
+                    "manual": false,
+                    "icon": "dashicons-filter"
+                },
+                {
+                    "id": "score",
+                    "name": "Score",
+                    "description": "Score leads by relevance",
+                    "table": "prospects",
+                    "action": "score_leads",
+                    "manual": false,
+                    "icon": "dashicons-chart-bar"
+                },
+                {
+                    "id": "qualify",
+                    "name": "Qualify",
+                    "description": "Qualify leads for outreach",
+                    "table": "leads",
+                    "action": "qualify_leads",
+                    "manual": true,
+                    "icon": "dashicons-yes"
+                }
+            ]
+        }
+    },
+    "sourceTypes": {
+        "lead_source": {
+            "label": "Lead Source",
+            "description": "Website for lead generation scraping",
+            "fields": ["url", "selector", "industry", "location"]
+        },
+        "content_source": {
+            "label": "Content Source",
+            "description": "Website for content/article scraping",
+            "fields": ["url", "selector", "category", "tags"]
+        }
+    },
+    "sources": [],
+    "pages": {
+        "dashboard": {
+            "id": "dashboard",
+            "title": "Equalizer Dashboard",
+            "description": "Lead Generation & Content Pipeline Management",
+            "slug": "raw-wire-dashboard",
+            "icon": "dashicons-chart-area",
+            "isMain": true,
+            "layout": "dashboard-fixed",
+            "panels": [
+                "equalizer_stats",
+                "dual_progress",
+                "config_row",
+                "activity_log"
+            ]
+        },
+        "settings": {
+            "id": "settings",
+            "title": "Settings",
+            "slug": "raw-wire-settings",
+            "icon": "dashicons-admin-settings",
+            "layout": "default",
+            "panels": [
+                "general_settings",
+                "crawlomatic_settings",
+                "api_keys"
+            ]
+        }
+    },
+    "panels": {
+        "equalizer_stats": {
+            "id": "equalizer_stats",
+            "type": "status",
+            "title": "Pipeline Statistics",
+            "icon": "dashicons-database",
+            "description": "Real-time counts across all workflow tables",
+            "layout": "horizontal",
+            "refreshInterval": 10,
+            "css": {
+                "gridColumn": "1 / -1",
+                "marginBottom": "var(--rw-space-4)"
+            },
+            "metrics": [
+                {
+                    "id": "raw_count",
+                    "label": "Raw",
+                    "source": "db:raw:count",
+                    "format": "number",
+                    "icon": "dashicons-download",
+                    "workflow": "lead_generation",
+                    "color": "#3b82f6"
+                },
+                {
+                    "id": "prospects_count",
+                    "label": "Prospects",
+                    "source": "db:prospects:count",
+                    "format": "number",
+                    "icon": "dashicons-filter",
+                    "workflow": "lead_generation",
+                    "color": "#3b82f6"
+                },
+                {
+                    "id": "leads_count",
+                    "label": "Leads",
+                    "source": "db:leads:count",
+                    "format": "number",
+                    "icon": "dashicons-businessperson",
+                    "workflow": "lead_generation",
+                    "color": "#3b82f6"
+                },
+                {
+                    "id": "crdata_count",
+                    "label": "CR Data",
+                    "source": "db:crdata:count",
+                    "format": "number",
+                    "icon": "dashicons-admin-site-alt3",
+                    "workflow": "post_generator",
+                    "color": "#10b981"
+                },
+                {
+                    "id": "content_count",
+                    "label": "Content",
+                    "source": "db:eq_content:count",
+                    "format": "number",
+                    "icon": "dashicons-edit",
+                    "workflow": "post_generator",
+                    "color": "#10b981"
+                },
+                {
+                    "id": "pending_count",
+                    "label": "Pending",
+                    "source": "db:pending:count",
+                    "format": "number",
+                    "icon": "dashicons-clock",
+                    "workflow": "post_generator",
+                    "color": "#10b981"
+                },
+                {
+                    "id": "posted_count",
+                    "label": "Posted",
+                    "source": "db:posted:count",
+                    "format": "number",
+                    "icon": "dashicons-yes-alt",
+                    "workflow": "post_generator",
+                    "color": "#10b981"
+                }
+            ],
+            "actions": [
+                {
+                    "id": "clear_lead_gen",
+                    "label": "Clear Lead Gen",
+                    "icon": "dashicons-trash",
+                    "action": "clear_lead_gen_tables",
+                    "style": "secondary",
+                    "confirm": "Clear all Lead Generation data (Raw, Prospects, Leads)?"
+                },
+                {
+                    "id": "clear_post_gen",
+                    "label": "Clear Post Gen",
+                    "icon": "dashicons-trash",
+                    "action": "clear_post_gen_tables",
+                    "style": "secondary",
+                    "confirm": "Clear all Post Generator data (CR Data, Content, Pending, Posted)?"
+                }
+            ]
+        },
+        "dual_progress": {
+            "id": "dual_progress",
+            "type": "progress",
+            "title": "Workflow Progress",
+            "icon": "dashicons-controls-repeat",
+            "description": "Current workflow execution status",
+            "css": {
+                "gridColumn": "1 / -1",
+                "marginBottom": "var(--rw-space-4)"
+            },
+            "refreshInterval": 5,
+            "config": {
+                "showSelector": true,
+                "showSteps": true,
+                "showETA": true
+            },
+            "automations": [
+                {
+                    "id": "lead_generation",
+                    "label": "Lead Generation",
+                    "description": "Scrape → Filter → Score → Qualify",
+                    "color": "#3b82f6",
+                    "steps": [
+                        {"id": "scrape", "label": "Scraping", "icon": "dashicons-download"},
+                        {"id": "filter", "label": "Filtering", "icon": "dashicons-filter"},
+                        {"id": "score", "label": "Scoring", "icon": "dashicons-chart-bar"},
+                        {"id": "qualify", "label": "Qualifying", "icon": "dashicons-yes"}
+                    ]
+                },
+                {
+                    "id": "post_generator",
+                    "label": "Post Generator",
+                    "description": "Crawl → Process → Generate → Post",
+                    "color": "#10b981",
+                    "steps": [
+                        {"id": "crawl", "label": "Crawling", "icon": "dashicons-admin-site-alt3"},
+                        {"id": "process", "label": "Processing", "icon": "dashicons-admin-generic"},
+                        {"id": "generate", "label": "Generating", "icon": "dashicons-edit"},
+                        {"id": "post", "label": "Posting", "icon": "dashicons-share"}
+                    ]
+                }
+            ]
+        },
+        "config_row": {
+            "id": "config_row",
+            "type": "row",
+            "css": {
+                "gridColumn": "1 / -1",
+                "display": "grid",
+                "gridTemplateColumns": "1fr 1fr",
+                "gap": "var(--rw-space-4)",
+                "marginBottom": "var(--rw-space-4)"
+            },
+            "panels": ["crawlomatic_config", "post_gen_settings"]
+        },
+        "crawlomatic_config": {
+            "id": "crawlomatic_config",
+            "type": "custom",
+            "title": "Scraper",
+            "icon": "dashicons-admin-site-alt3",
+            "refreshInterval": 60,
+            "compact": true,
+            "customRenderer": "crawlomatic_panel",
+            "config": {
+                "showRuleSelector": true,
+                "showQuickRun": true,
+                "compactMode": true,
+                "showFields": [
+                    "urls",
+                    "selector",
+                    "max_items"
+                ]
+            }
+        },
+        "post_gen_settings": {
+            "id": "post_gen_settings",
+            "type": "custom",
+            "title": "Post Generator",
+            "icon": "dashicons-edit",
+            "refreshInterval": 60,
+            "compact": true,
+            "customRenderer": "post_gen_panel",
+            "config": {
+                "showTemplateSelector": true,
+                "showQuickGenerate": true
+            }
+        },
+        "activity_log": {
+            "id": "activity_log",
+            "type": "log",
+            "title": "Activity & Error Log",
+            "icon": "dashicons-admin-tools",
+            "description": "System activity and error logs from workflow operations",
+            "css": {
+                "gridColumn": "1 / -1"
+            },
+            "maxEntries": 50,
+            "refreshInterval": 30,
+            "config": {
+                "showTabs": true,
+                "showFilters": true,
+                "tabs": [
+                    {"id": "all", "label": "All", "filter": null},
+                    {"id": "activity", "label": "Activity", "filter": "info"},
+                    {"id": "errors", "label": "Errors", "filter": "error"}
+                ],
+                "levels": ["debug", "info", "warning", "error"]
+            }
+        },
+        "general_settings": {
+            "id": "general_settings",
+            "type": "form",
+            "title": "General Settings",
+            "icon": "dashicons-admin-settings",
+            "controls": {
+                "auto_sync": {
+                    "type": "toggle",
+                    "label": "Auto Sync",
+                    "option": "rawwire_auto_sync"
+                },
+                "notifications": {
+                    "type": "toggle",
+                    "label": "Enable Notifications",
+                    "option": "rawwire_notifications"
+                }
+            }
+        },
+        "crawlomatic_settings": {
+            "id": "crawlomatic_settings",
+            "type": "form",
+            "title": "Crawlomatic Settings",
+            "icon": "dashicons-admin-site-alt3",
+            "controls": {
+                "default_max_items": {
+                    "type": "number",
+                    "label": "Default Max Items",
+                    "option": "rawwire_eq_max_items",
+                    "default": 50
+                },
+                "auto_run_enabled": {
+                    "type": "toggle",
+                    "label": "Enable Auto-Run",
+                    "option": "rawwire_eq_auto_run"
+                }
+            }
+        },
+        "api_keys": {
+            "id": "api_keys",
+            "type": "form",
+            "title": "API Configuration",
+            "description": "Configure AI providers and external services",
+            "icon": "dashicons-admin-network",
+            "controls": {
+                "manage_keys": {
+                    "type": "button",
+                    "label": "Manage API Keys",
+                    "icon": "dashicons-admin-network",
+                    "action": "manage_keys",
+                    "style": "primary"
+                }
+            }
+        }
+    },
+    "features": {
+        "equalizer_stats": {
+            "label": "Pipeline Statistics",
+            "description": "7-card stats bar for both workflows",
+            "enabled": true,
+            "default": true,
+            "hardwired": true
+        },
+        "dual_progress": {
+            "label": "Dual Progress Bar",
+            "description": "Progress for lead gen and post gen workflows",
+            "enabled": true,
+            "default": true,
+            "hardwired": true
+        },
+        "crawlomatic_integration": {
+            "label": "Crawlomatic Integration",
+            "description": "Direct control of Crawlomatic scraping rules",
+            "enabled": true,
+            "default": true,
+            "handler": "services/class-equalizer-tables.php"
+        },
+        "activity_logs": {
+            "label": "Activity & Error Logs",
+            "description": "Tabbed log viewer with level filters",
+            "enabled": true,
+            "default": true,
+            "hardwired": true
+        }
+    },
+    "tools": {
+        "scraper_settings": {
+            "id": "scraper_settings",
+            "label": "Scraper Settings",
+            "icon": "dashicons-admin-site",
+            "handler": "class-scraper-settings-panel"
+        },
+        "ai_settings": {
+            "id": "ai_settings",
+            "label": "AI Settings",
+            "icon": "dashicons-admin-generic",
+            "handler": "class-ai-settings-panel"
+        },
+        "workflow_db": {
+            "id": "workflow_db",
+            "label": "Workflow Database",
+            "icon": "dashicons-database",
+            "handler": "class-workflow-db-panel"
+        },
+        "chatbot": {
+            "id": "chatbot",
+            "label": "AI Chatbot",
+            "icon": "dashicons-format-chat",
+            "handler": "class-dashboard-chat-panel"
+        },
+        "ai_scraper": {
+            "id": "ai_scraper",
+            "label": "AI Scraper",
+            "icon": "dashicons-search",
+            "handler": "class-ai-scraper-panel"
+        }
+    }
+}

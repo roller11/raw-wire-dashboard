@@ -1,0 +1,70 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 25
+Party: Mccarthy Building Companies
+License: 411173-B
+Permit: 25010-10000-00953
+Generated: 2026-03-05 23:01:14
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+Here's the comprehensive report for **Mccarthy Building Companies**:
+
+## Contractor Overview
+- **Company Name:** Mccarthy Building Companies Inc
+- **Type:** Contractor (General Contractor)
+- **Location:** Not specified
+- **LA Permit #:** 25010-10000-00953
+- **Contractor License:** 411173-B
+- **Employee Ownership:** 100% employee-owned, fostering vested interests in client and community success.
+
+### Company Details
+- **Legal Name:** Mccarthy Building Companies Inc
+- **DBA:** McCarthy
+- **Specialties/Markets:** Construction with expertise in safety, quality, progressive delivery techniques, innovation, and technology.
+- **Employee Count:** Exact number not available; referenced as "one of the largest general contractors"
+- **Revenue Range:** Not specified publicly
+- **Delivery Methods:** Progressive delivery, self-performing aspects of contracts.
+- **Licensing:** Current permits and licensing specifics were not accessed.
+- **Ownership Structure:** 100% employee-owned.
+
+### Networking Opportunities
+- **Website:** [McCarthy Building Companies](https://www.mccarthy.com/)
+- **Upcoming Events:** No specific events were identified; checking the company's main site and construction industry calendars is recommended.
+- **LinkedIn:** [McCarthy Building Companies LinkedIn](https://www.linkedin.com/company/mccarthy-building-companies/) - Follow for updates.
+
+### Outreach Programs
+- **DVBE/MBE/WBE/SBE Goals:** Specific goals not detailed; inquire through the main company contact for inclusion on bid lists.
+- **Small Business Programs:** Opportunities likely exist given their community focus - check outreach sections on their website or contact directly.
+
+### Active/Upcoming Projects
+- **Current Projects:** Specific active projects not detailed; recent projects typically appear in company news or updates on their website.
+  
+### Related Entities
+- **Competitors:** Competitors include other large general contractors in construction.
+- **Partners/Subcontractors:** Specific names not retrieved; may be found in project announcements.
+
+### Entry Points to Decision Makers
+- **Decision Makers:** Direct outreach via construction industry events or networking through professional associations (e.g., AGC or local builder's associations) recommended.
+  
+## Decision Maker Drill-Down
+No specific decision makers were retrieved in this session due to the limits of accessible data and web restriction on detailed contact information.
+
+## Red Flags
+No specific red flags identified in the quick search, but continued diligence in monitoring the company's financial health and any legal filings is advised.
+
+## Evidence Log
+1. **URL Fetched:** [McCarthy Building Companies Website](https://www.mccarthy.com/)
+   - **Learned:** Company focuses on safety, quality, and community impact, emphasizing employee ownership.
+  
+2. **URL Fetched:** [About McCarthy](https://www.mccarthy.com/about/)
+   - **Learned:** Core values include a commitment to community, a mission to be the best builder, and 100% employee ownership.
+
+3. **URL Fetched:** [McCarthy LinkedIn](https://www.linkedin.com/company/mccarthy-building-companies/)
+   - **Learned:** General company presence information. Specific employee contacts not detailed in the fetch, but employees can be viewed through LinkedIn.
+
+### Next Steps
+- Conduct further searches for specific active projects and decision makers.
+- Engage with industry events where McCarthy might participate.
+- Explore prequalification platforms to understand how to get on their bid list and attach to relevant programs.
+
+For any follow-up targeted investigations, please specify areas of focus to retrieve more detailed contact information or specific projects.

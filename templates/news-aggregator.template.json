@@ -382,8 +382,70 @@
             "layout": "tabs",
             "panels": [
                 "scraper_settings",
+                "ai_settings_panel",
                 "publishing_config",
                 "features_config"
+            ]
+        },
+        "lead_gen": {
+            "id": "lead_gen",
+            "title": "Lead-Gen",
+            "slug": "raw-wire-lead-gen",
+            "icon": "dashicons-megaphone",
+            "layout": "list",
+            "panels": [
+                "wpai_imports",
+                "lead_sources"
+            ]
+        },
+        "workflows": {
+            "id": "workflows",
+            "title": "Workflows",
+            "slug": "raw-wire-workflows",
+            "icon": "dashicons-share-alt2",
+            "layout": "list",
+            "panels": [
+                "workflows_overview"
+            ]
+        },
+        "agents": {
+            "id": "agents",
+            "title": "Agents",
+            "slug": "raw-wire-agents",
+            "icon": "dashicons-networking",
+            "layout": "list",
+            "panels": [
+                "agents_overview"
+            ]
+        },
+        "campaign": {
+            "id": "campaign",
+            "title": "Campaign",
+            "slug": "raw-wire-campaign",
+            "icon": "dashicons-chart-area",
+            "layout": "list",
+            "panels": [
+                "campaign_overview"
+            ]
+        },
+        "email": {
+            "id": "email",
+            "title": "Email",
+            "slug": "raw-wire-email",
+            "icon": "dashicons-email",
+            "layout": "list",
+            "panels": [
+                "email_overview"
+            ]
+        },
+        "sms_text": {
+            "id": "sms_text",
+            "title": "SMS Text",
+            "slug": "raw-wire-sms-text",
+            "icon": "dashicons-format-chat",
+            "layout": "list",
+            "panels": [
+                "sms_text_overview"
             ]
         }
     },
@@ -471,11 +533,26 @@
                     "label": "Scraper Engine",
                     "binding": "workflow:scraper",
                     "options": [
-                        {"value": "ai", "label": "AI Scraper (Groq/OpenAI)"},
-                        {"value": "basic", "label": "Basic HTTP Scraper"},
-                        {"value": "toolkit", "label": "Toolkit Sources (Settings)"},
-                        {"value": "github", "label": "GitHub API"},
-                        {"value": "brightdata", "label": "Bright Data (Premium)"}
+                        {
+                            "value": "ai",
+                            "label": "AI Scraper (Groq/OpenAI)"
+                        },
+                        {
+                            "value": "basic",
+                            "label": "Basic HTTP Scraper"
+                        },
+                        {
+                            "value": "toolkit",
+                            "label": "Toolkit Sources (Settings)"
+                        },
+                        {
+                            "value": "github",
+                            "label": "GitHub API"
+                        },
+                        {
+                            "value": "brightdata",
+                            "label": "Bright Data (Premium)"
+                        }
                     ],
                     "default": "ai",
                     "help": "AI Scraper uses configured AI to intelligently extract content. Toolkit Sources uses sources from Settings → Scraper Toolkit."
@@ -486,9 +563,18 @@
                     "label": "Scorer",
                     "binding": "workflow:scorer",
                     "options": [
-                        {"value": "keyword", "label": "Keyword Match (Free)"},
-                        {"value": "ai_relevance", "label": "AI Relevance (Llama)"},
-                        {"value": "", "label": "None (Skip Scoring)"}
+                        {
+                            "value": "keyword",
+                            "label": "Keyword Match (Free)"
+                        },
+                        {
+                            "value": "ai_relevance",
+                            "label": "AI Relevance (Llama)"
+                        },
+                        {
+                            "value": "",
+                            "label": "None (Skip Scoring)"
+                        }
                     ],
                     "default": "keyword"
                 },
@@ -522,11 +608,26 @@
                     "label": "Target Table",
                     "binding": "workflow:target_table",
                     "options": [
-                        {"value": "candidates", "label": "1. Candidates"},
-                        {"value": "approvals", "label": "2. Approvals"},
-                        {"value": "content", "label": "3. Content"},
-                        {"value": "releases", "label": "4. Releases"},
-                        {"value": "published", "label": "5. Published"}
+                        {
+                            "value": "candidates",
+                            "label": "1. Candidates"
+                        },
+                        {
+                            "value": "approvals",
+                            "label": "2. Approvals"
+                        },
+                        {
+                            "value": "content",
+                            "label": "3. Content"
+                        },
+                        {
+                            "value": "releases",
+                            "label": "4. Releases"
+                        },
+                        {
+                            "value": "published",
+                            "label": "5. Published"
+                        }
                     ],
                     "default": "candidates"
                 },
@@ -871,6 +972,15 @@
             "description": "Configure data sources, collection parameters, and field selection for public domain content",
             "priority": 1
         },
+        "ai_settings_panel": {
+            "id": "ai_settings_panel",
+            "type": "custom",
+            "title": "AI Settings",
+            "icon": "dashicons-admin-generic",
+            "renderer": "RawWire_AI_Settings_Panel::render_template_panel",
+            "description": "Configure AI Engine environments, default models, and MCP tool access",
+            "priority": 2
+        },
         "sources_config": {
             "id": "sources_config",
             "type": "settings",
@@ -916,6 +1026,79 @@
                         "default": true
                     }
                 ]
+            }
+        },
+        "wpai_imports": {
+            "id": "wpai_imports",
+            "type": "custom",
+            "title": "Import Jobs",
+            "icon": "dashicons-update",
+            "renderer": "RawWire_Lead_Generator_Panels::render_wpai_imports_table",
+            "description": "WP All Import jobs targeting the Lead post type",
+            "priority": 1
+        },
+        "lead_sources": {
+            "id": "lead_sources",
+            "type": "custom",
+            "title": "Data Sources",
+            "icon": "dashicons-database",
+            "renderer": "RawWire_Lead_Generator_Panels::render_lead_sources_table",
+            "description": "Configure Socrata API endpoints for lead data",
+            "priority": 2
+        },
+        "workflows_overview": {
+            "id": "workflows_overview",
+            "type": "custom",
+            "title": "Workflows",
+            "icon": "dashicons-share-alt2",
+            "description": "Orchestrate multi-step automation and routing.",
+            "script": {
+                "type": "inline",
+                "code": "document.getElementById('custom-panel-workflows_overview').innerHTML = \"<div class='rawwire-card'><p>Workflows are modular and can be enabled per client tier.</p></div>\";"
+            }
+        },
+        "agents_overview": {
+            "id": "agents_overview",
+            "type": "custom",
+            "title": "Agents",
+            "icon": "dashicons-networking",
+            "description": "Agent runners and task orchestration.",
+            "script": {
+                "type": "inline",
+                "code": "document.getElementById('custom-panel-agents_overview').innerHTML = \"<div class='rawwire-card'><p>Enable Agents to configure task execution and automation roles.</p></div>\";"
+            }
+        },
+        "campaign_overview": {
+            "id": "campaign_overview",
+            "type": "custom",
+            "title": "Campaign",
+            "icon": "dashicons-chart-area",
+            "description": "Campaign planning, activation, and tracking.",
+            "script": {
+                "type": "inline",
+                "code": "document.getElementById('custom-panel-campaign_overview').innerHTML = \"<div class='rawwire-card'><p>Campaigns are coming online as modular OTA updates.</p></div>\";"
+            }
+        },
+        "email_overview": {
+            "id": "email_overview",
+            "type": "custom",
+            "title": "Email",
+            "icon": "dashicons-email",
+            "description": "Email delivery pipelines and templates.",
+            "script": {
+                "type": "inline",
+                "code": "document.getElementById('custom-panel-email_overview').innerHTML = \"<div class='rawwire-card'><p>Enable Email to activate delivery tools and templates.</p></div>\";"
+            }
+        },
+        "sms_text_overview": {
+            "id": "sms_text_overview",
+            "type": "custom",
+            "title": "SMS Text",
+            "icon": "dashicons-format-chat",
+            "description": "SMS delivery and compliance tooling.",
+            "script": {
+                "type": "inline",
+                "code": "document.getElementById('custom-panel-sms_text_overview').innerHTML = \"<div class='rawwire-card'><p>Enable SMS Text to unlock messaging workflows.</p></div>\";"
             }
         },
         "publishing_config": {
@@ -975,10 +1158,52 @@
                     "default": true
                 },
                 {
+                    "key": "features.collection_workflow",
+                    "label": "Collection Workflow (Aggregation)",
+                    "type": "checkbox",
+                    "default": true
+                },
+                {
                     "key": "features.approval_workflow",
                     "label": "Human Approval Workflow",
                     "type": "checkbox",
                     "default": true
+                },
+                {
+                    "key": "features.lead_gen",
+                    "label": "Lead-Gen",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "features.workflows",
+                    "label": "Workflows",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "features.agents",
+                    "label": "Agents",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "features.campaign",
+                    "label": "Campaign",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "features.email",
+                    "label": "Email",
+                    "type": "checkbox",
+                    "default": false
+                },
+                {
+                    "key": "features.sms_text",
+                    "label": "SMS Text",
+                    "type": "checkbox",
+                    "default": false
                 },
                 {
                     "key": "features.ai_generation",
@@ -1336,6 +1561,14 @@
             "handler": "template-engine/workflow-handlers.php::score_content",
             "enabled": true
         },
+        "collection_workflow": {
+            "label": "Collection Workflow (Aggregation)",
+            "description": "Enable the end-to-end collection workflow pages and tools",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": true
+        },
         "approval_workflow": {
             "label": "Human Approval Workflow",
             "description": "Manual review and approval of findings",
@@ -1343,6 +1576,54 @@
             "default": true,
             "handler": "template-engine/workflow-handlers.php::ajax_workflow_update",
             "enabled": true
+        },
+        "lead_gen": {
+            "label": "Lead-Gen",
+            "description": "Lead capture and pipeline workflows",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
+        },
+        "workflows": {
+            "label": "Workflows",
+            "description": "Workflow orchestration and automation",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
+        },
+        "agents": {
+            "label": "Agents",
+            "description": "Agent orchestration and task runners",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
+        },
+        "campaign": {
+            "label": "Campaign",
+            "description": "Campaign planning and execution",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
+        },
+        "email": {
+            "label": "Email",
+            "description": "Email delivery and template workflows",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
+        },
+        "sms_text": {
+            "label": "SMS Text",
+            "description": "SMS delivery workflows",
+            "type": "checkbox",
+            "default": true,
+            "handler": "template-engine/workflow-handlers.php",
+            "enabled": false
         },
         "ai_generation": {
             "label": "AI Content Generation",
@@ -1382,6 +1663,14 @@
             "type": "checkbox",
             "default": true,
             "handler": "ai-discovery/ai-discovery.php::generate_citation",
+            "enabled": true
+        },
+        "ai_settings": {
+            "label": "AI Settings",
+            "description": "Expose AI Engine configuration and model defaults",
+            "type": "checkbox",
+            "default": true,
+            "handler": "cores/toolbox-core/features/class-ai-settings-panel.php",
             "enabled": true
         },
         "public_domain_toggle": {
@@ -1476,6 +1765,7 @@
                 "approval_queue"
             ],
             "requiredFeatures": [
+                "collection_workflow",
                 "approval_workflow"
             ]
         },
@@ -1489,6 +1779,7 @@
                 "release_queue"
             ],
             "requiredFeatures": [
+                "collection_workflow",
                 "ai_generation",
                 "publishing"
             ]
@@ -1501,10 +1792,89 @@
             "description": "Configure scraper toolkit, publishing options, and feature toggles",
             "panels": [
                 "scraper_settings",
+                "ai_settings_panel",
                 "publishing_config",
                 "features_config"
             ],
             "requiredFeatures": []
+        },
+        "lead_gen": {
+            "label": "Lead-Gen",
+            "slug": "raw-wire-lead-gen",
+            "icon": "dashicons-megaphone",
+            "enabled": false,
+            "description": "Lead capture workflows and pipeline management",
+            "panels": [
+                "lead_gen_overview"
+            ],
+            "requiredFeatures": [
+                "lead_gen"
+            ]
+        },
+        "workflows": {
+            "label": "Workflows",
+            "slug": "raw-wire-workflows",
+            "icon": "dashicons-share-alt2",
+            "enabled": false,
+            "description": "Workflow orchestration and automation",
+            "panels": [
+                "workflows_overview"
+            ],
+            "requiredFeatures": [
+                "workflows"
+            ]
+        },
+        "agents": {
+            "label": "Agents",
+            "slug": "raw-wire-agents",
+            "icon": "dashicons-networking",
+            "enabled": false,
+            "description": "Agent orchestration and task runners",
+            "panels": [
+                "agents_overview"
+            ],
+            "requiredFeatures": [
+                "agents"
+            ]
+        },
+        "campaign": {
+            "label": "Campaign",
+            "slug": "raw-wire-campaign",
+            "icon": "dashicons-chart-area",
+            "enabled": false,
+            "description": "Campaign planning and execution",
+            "panels": [
+                "campaign_overview"
+            ],
+            "requiredFeatures": [
+                "campaign"
+            ]
+        },
+        "email": {
+            "label": "Email",
+            "slug": "raw-wire-email",
+            "icon": "dashicons-email",
+            "enabled": false,
+            "description": "Email delivery and template workflows",
+            "panels": [
+                "email_overview"
+            ],
+            "requiredFeatures": [
+                "email"
+            ]
+        },
+        "sms_text": {
+            "label": "SMS Text",
+            "slug": "raw-wire-sms-text",
+            "icon": "dashicons-format-chat",
+            "enabled": false,
+            "description": "SMS delivery workflows",
+            "panels": [
+                "sms_text_overview"
+            ],
+            "requiredFeatures": [
+                "sms_text"
+            ]
         },
         "analytics": {
             "label": "Analytics",

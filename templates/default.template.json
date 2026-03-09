@@ -1,0 +1,298 @@
+{
+    "$schema": "./template.schema.json",
+    "meta": {
+        "id": "default",
+        "name": "Raw Wire Dashboard",
+        "version": "2.0.0",
+        "description": "Default Raw Wire dashboard with workflow statistics, automation progress, and activity logs",
+        "author": "Raw-Wire DAO LLC",
+        "icon": "dashicons-chart-line",
+        "variants": [
+            "default",
+            "dark"
+        ],
+        "_internal": true,
+        "_fallback": true
+    },
+    "css": {
+        "global": {
+            "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+            "fontSize": "14px",
+            "lineHeight": "1.5",
+            "colors": {
+                "primary": "#3b82f6",
+                "primaryHover": "#2563eb",
+                "secondary": "#6b7280",
+                "success": "#10b981",
+                "warning": "#f59e0b",
+                "danger": "#ef4444",
+                "background": "#f8fafc",
+                "surface": "#ffffff",
+                "card": "#ffffff",
+                "border": "#e5e7eb",
+                "text": "#1f2937",
+                "textMuted": "#6b7280",
+                "accent": "#0ea5e9"
+            }
+        },
+        "variants": {
+            "dark": {
+                "colors": {
+                    "background": "#0b1724",
+                    "surface": "#0f1f33",
+                    "card": "#162a44",
+                    "border": "#1e3a5f",
+                    "text": "#e5e7eb",
+                    "textMuted": "#9ca3af"
+                }
+            }
+        }
+    },
+    "toolbox": {
+        "scraper": {
+            "id": "data_source",
+            "label": "Data Source",
+            "description": "Configure data ingestion sources",
+            "defaultAdapter": "native_dom",
+            "required": false
+        },
+        "generator": {
+            "id": "content_generator",
+            "label": "AI Content Generator",
+            "description": "Generate content using AI",
+            "defaultAdapter": "mock_generator",
+            "required": false
+        },
+        "workflow": {
+            "id": "automation",
+            "label": "Workflow Automation",
+            "description": "Workflow orchestration",
+            "defaultAdapter": "internal_pipeline",
+            "required": false
+        }
+    },
+    "sourceTypes": {},
+    "sources": [],
+    "pages": {
+        "dashboard": {
+            "id": "dashboard",
+            "title": "Dashboard",
+            "description": "Professional AI Powered Solutions",
+            "slug": "raw-wire-dashboard",
+            "icon": "dashicons-chart-line",
+            "isMain": true,
+            "layout": "dashboard-fixed",
+            "panels": [
+                "workflow_stats",
+                "automation_progress",
+                "activity_log"
+            ]
+        },
+        "settings": {
+            "id": "settings",
+            "title": "Settings",
+            "slug": "raw-wire-settings",
+            "icon": "dashicons-admin-settings",
+            "layout": "default",
+            "panels": [
+                "general_settings",
+                "api_keys"
+            ]
+        },
+        "lead_sources": {
+            "id": "lead_sources",
+            "title": "Lead Generator",
+            "slug": "rawwire-lead-sources",
+            "icon": "dashicons-database",
+            "layout": "custom",
+            "panels": [
+                "lead_sources_page"
+            ],
+            "requires_tool": "lead_generator"
+        },
+        "lead_approvals": {
+            "id": "lead_approvals",
+            "title": "Lead Approvals",
+            "slug": "rawwire-lead-approvals",
+            "icon": "dashicons-yes-alt",
+            "layout": "custom",
+            "panels": [
+                "lead_approvals_page"
+            ],
+            "requires_tool": "lead_generator"
+        },
+        "lead_completed": {
+            "id": "lead_completed",
+            "title": "Completed Leads",
+            "slug": "rawwire-lead-completed",
+            "icon": "dashicons-portfolio",
+            "layout": "custom",
+            "panels": [
+                "lead_completed_page"
+            ],
+            "requires_tool": "lead_generator"
+        }
+    },
+    "panels": {
+        "lead_sources_page": {
+            "id": "lead_sources_page",
+            "type": "custom",
+            "title": "Lead Generator",
+            "icon": "dashicons-database",
+            "renderer": "RawWire_Lead_Generator_Panels::render_sources_page",
+            "description": "Import, score, and manage building permit records"
+        },
+        "lead_approvals_page": {
+            "id": "lead_approvals_page",
+            "type": "custom",
+            "title": "Lead Approvals",
+            "icon": "dashicons-yes-alt",
+            "renderer": "RawWire_Lead_Generator_Panels::render_approvals_page",
+            "description": "Review and approve AI-scored candidates"
+        },
+        "lead_completed_page": {
+            "id": "lead_completed_page",
+            "type": "custom",
+            "title": "Completed Leads",
+            "icon": "dashicons-portfolio",
+            "renderer": "RawWire_Lead_Generator_Panels::render_completed_page",
+            "description": "Enriched leads ready for outreach"
+        },
+        "workflow_stats": {
+            "id": "workflow_stats",
+            "type": "status",
+            "title": "Workflow Pipeline",
+            "icon": "dashicons-database",
+            "description": "Real-time counts from active tool's workflow tables",
+            "layout": "horizontal",
+            "refreshInterval": 10,
+            "toolSource": "active",
+            "css": {
+                "gridColumn": "1 / -1",
+                "marginBottom": "var(--rw-space-4)"
+            },
+            "metrics": [],
+            "actions": []
+        },
+        "automation_progress": {
+            "id": "automation_progress",
+            "type": "progress",
+            "title": "Automation Progress",
+            "icon": "dashicons-controls-repeat",
+            "description": "Current workflow execution status - populated from enabled tools",
+            "css": {
+                "gridColumn": "1 / -1",
+                "marginBottom": "var(--rw-space-4)"
+            },
+            "refreshInterval": 5,
+            "config": {
+                "showSelector": true,
+                "showSteps": true,
+                "showETA": true
+            },
+            "automations": []
+        },
+        "activity_log": {
+            "id": "activity_log",
+            "type": "log",
+            "title": "Activity & Error Log",
+            "icon": "dashicons-admin-tools",
+            "description": "System activity and error logs from workflow operations",
+            "css": {
+                "gridColumn": "1 / -1"
+            },
+            "maxEntries": 50,
+            "refreshInterval": 30,
+            "config": {
+                "showTabs": true,
+                "showFilters": true,
+                "tabs": [
+                    {
+                        "id": "all",
+                        "label": "All",
+                        "filter": null
+                    },
+                    {
+                        "id": "activity",
+                        "label": "Activity",
+                        "filter": "info"
+                    },
+                    {
+                        "id": "errors",
+                        "label": "Errors",
+                        "filter": "error"
+                    }
+                ],
+                "levels": [
+                    "debug",
+                    "info",
+                    "warning",
+                    "error"
+                ]
+            }
+        },
+        "general_settings": {
+            "id": "general_settings",
+            "type": "form",
+            "title": "General Settings",
+            "icon": "dashicons-admin-settings",
+            "controls": {
+                "auto_sync": {
+                    "type": "toggle",
+                    "label": "Auto Sync",
+                    "option": "rawwire_auto_sync"
+                },
+                "notifications": {
+                    "type": "toggle",
+                    "label": "Enable Notifications",
+                    "option": "rawwire_notifications"
+                },
+                "error_reporting": {
+                    "type": "toggle",
+                    "label": "Error Reporting",
+                    "option": "rawwire_error_reporting"
+                }
+            }
+        },
+        "api_keys": {
+            "id": "api_keys",
+            "type": "form",
+            "title": "API Configuration",
+            "description": "Configure AI providers and external services",
+            "icon": "dashicons-admin-network",
+            "controls": {
+                "manage_keys": {
+                    "type": "button",
+                    "label": "Manage API Keys",
+                    "icon": "dashicons-admin-network",
+                    "action": "manage_keys",
+                    "style": "primary"
+                }
+            }
+        }
+    },
+    "features": {
+        "workflow_stats": {
+            "label": "Workflow Statistics Bar",
+            "description": "Horizontal bar showing counts for each workflow table",
+            "enabled": true,
+            "default": true,
+            "hardwired": true
+        },
+        "automation_progress": {
+            "label": "Automation Progress",
+            "description": "Visual progress indicator for running automations",
+            "enabled": true,
+            "default": true,
+            "hardwired": true
+        },
+        "activity_logs": {
+            "label": "Activity & Error Logs",
+            "description": "Tabbed log viewer with level filters",
+            "enabled": true,
+            "default": true,
+            "hardwired": true,
+            "handler": "includes/class-activity-logs.php"
+        }
+    }
+}

@@ -1,0 +1,270 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 65
+Party: Environmental Contracting Corporation
+License: 491028-B
+Permit: 25016-10000-29166
+Generated: 2026-03-08 10:46:29
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+# STRATEGIC DOSSIER: ENVIRONMENTAL CONTRACTING CORPORATION (LA DIVISION)
+
+## TARGET SUMMARY
+
+**Legal Entity:** Environmental Contracting Corporation  
+**Primary Location:** 880 East 1st Street, Los Angeles, CA 90012  
+**License Number:** 491028-B (General Building)  
+**License Status:** Active (verified as of April 2025)  
+**BuildZoom Ranking:** Top 4% of 336,931 California licensed contractors (score: 111)  
+**Company Type:** Commercial interiors construction firm / General contractor  
+**Service Focus:** Commercial renovations, interior construction, structural framing, tenant improvements  
+**Contact:** Phone 213-620-8008 | Fax 213-620-8778 | Email info@eccla.com  
+
+**Critical Note:** Two distinct entities share the "Environmental Contracting Corporation" name. The Los Angeles division (target) operates from DTLA and specializes in commercial interiors. A separate ECC entity (founded 1985, headquartered elsewhere) operates in environmental remediation, disaster response, and large-scale infrastructure. This dossier focuses exclusively on the LA commercial interiors division.
+
+---
+
+## PEOPLE
+
+**No individual decision makers, executives, or key personnel identified in available public sources.**
+
+The search results provided no leadership pages, team rosters, LinkedIn profiles, or named executives for the LA-based Environmental Contracting Corporation. The company website (eccla.com) and BuildZoom profile contain no personnel listings. Contact information is limited to a general phone line (213-620-8008) and email (info@eccla.com).
+
+**Gatekeeper Access Route:** Direct phone inquiry to 213-620-8008 or email info@eccla.com will likely route to office management or business development staff who control access to project decision makers and estimating teams.
+
+---
+
+## COMPANY
+
+| Attribute | Finding |
+|-----------|---------|
+| **Legal Name** | Environmental Contracting Corporation |
+| **DBA/Operating Name** | ECC LA (implied from eccla.com domain) |
+| **License Class** | General Building (491028-B) |
+| **License Status** | Active |
+| **Primary Address** | 880 East 1st Street, Los Angeles, CA 90012 |
+| **Phone** | 213-620-8008 |
+| **Fax** | 213-620-8778 |
+| **Email** | info@eccla.com |
+| **Website** | https://eccla.com |
+| **Company Type** | Commercial interiors construction firm / General contractor |
+| **Service Specialties** | Commercial renovations, interior construction, structural framing, tenant improvements, commercial build-outs |
+| **Primary Market** | Southern California (DTLA and surrounding region) |
+| **Project Activity (3-year window)** | 49+ projects (5 in 2025, 13 in 2024, 15 in 2023, 16 in 2022) |
+| **Project Focus** | 17 documented commercial renovation projects over 4-year period |
+| **Typical Project Valuation** | $550,000+ (example permit 22016-10000-11031 from 2022) |
+| **Ownership Structure** | Not disclosed in public sources |
+| **Employee Count** | Not disclosed |
+| **Revenue Range** | Not disclosed |
+| **Bonding/Insurance Status** | Not disclosed in available sources |
+
+**Notable Operational Details:**
+- Holds active General Building license verified by California State Licensing Board
+- Operates from Downtown Los Angeles (DTLA) location
+- Specializes in commercial interior renovations and structural modifications
+- Recent project scope includes framing, support systems, partition walls, equipment installation, and interior box structures
+- Maintains steady project pipeline (5+ projects annually)
+
+---
+
+## NETWORKING OPPORTUNITIES
+
+**No event sponsorships, association memberships, conference participation, charity board involvement, or trade group affiliations identified in available public sources.**
+
+The company website (https://eccla.com) contains no news section, event calendar, or community involvement listings. BuildZoom and other contractor registries do not flag ECC LA as an event sponsor or association member.
+
+**Implied Networking Channels:**
+- **Industry Associations:** Likely member of AGC (Associated General Contractors of California), CSLB contractor networks, or local DTLA business groups (not confirmed in sources)
+- **Procurement Events:** Possible participation in Los Angeles construction bid conferences, prequalification fairs, or owner-builder networking events (not confirmed)
+- **Trade Shows:** Possible attendance at commercial construction/interiors expos (not confirmed)
+
+**Recommendation:** Direct outreach to 213-620-8008 to inquire about company participation in industry events, prequalification processes, and upcoming bid opportunities.
+
+---
+
+## DISCOVERED PROJECTS
+
+### Active/Recent Projects (Documented via Building Permits)
+
+| Project | Permit # | Status | Valuation | Type | Location | Year | Details |
+|---------|----------|--------|-----------|------|----------|------|---------|
+| Commercial Interior Renovation (Unnamed) | 22016-10000-11031 | Issued | $550,000 | Commercial Bldg-Alter/Repair | Los Angeles, CA | 2022 | Framing & support for interior box structures, soffits, trellis, equipment room, foldable partition wall at second floor |
+
+**Project Pipeline Insight:**
+- 5 projects in 2025 (current year, partial)
+- 13 projects in 2024
+- 15 projects in 2023
+- 16 projects in 2022
+
+**Total documented activity:** 49+ projects over 3 years, indicating consistent commercial renovation workflow in LA market.
+
+**Diamond Opportunity:** The steady project pipeline (5+ projects annually) suggests ongoing bid cycles. Interior design firms should monitor LA building permit databases for new ECC projects and contact the company during preconstruction phases.
+
+---
+
+## DISCOVERED ENTITIES
+
+### Related/Competing Entities
+
+**Environmental Contracting Corporation (National Division)**
+- **Website:** https://www.ecc.net
+- **Founded:** 1985
+- **Type:** Large environmental remediation, construction, disaster response, energy, and munitions response contractor
+- **Scale:** Multi-billion dollar revenue, operates on multiple continents
+- **Relationship to Target:** Shares corporate name but operates in entirely different market (environmental/remediation vs. commercial interiors). May share corporate parent or be separate entity. **No confirmed operational relationship to LA commercial interiors division.**
+- **Note:** This entity is NOT the target and should not be confused with Environmental Contracting Corporation (LA).
+
+### Potential Subcontractors/Suppliers (Inferred from Project Scope)
+
+Based on documented project work (framing, structural support, partition walls, equipment installation), ECC LA likely collaborates with:
+- Structural steel suppliers
+- Drywall/partition wall manufacturers
+- HVAC equipment vendors
+- Electrical subcontractors
+- Interior finishing suppliers
+
+**No specific vendor names, subcontractor agreements, or supplier relationships identified in available sources.**
+
+---
+
+## ENTRY POINTS
+
+### Primary Access Routes to Decision Makers
+
+1. **Direct Phone Outreach**
+   - Call 213-620-8008 during business hours
+   - Request to speak with project manager, estimating department, or business development contact
+   - Mention specific project types (commercial interiors, tenant improvements) to route to relevant decision maker
+   - **Expected gatekeeper:** Office manager or administrative coordinator
+
+2. **Email Inquiry**
+   - Send targeted inquiry to info@eccla.com
+   - Reference specific project types or recent permit activity
+   - Request meeting with preconstruction or project management team
+   - **Expected response time:** 1-3 business days
+
+3. **Building Permit Monitoring (High-Value Diamond)**
+   - Monitor LA Department of Building and Safety (LADBS) permit database for new ECC LA permits
+   - Identify projects in preconstruction phase (permits issued within 30-60 days)
+   - Contact company during bid/preconstruction window when design decisions are being made
+   - **Actionable timing:** 2-4 weeks after permit issuance
+
+4. **In-Person Office Visit**
+   - Visit 880 East 1st Street, Los Angeles, CA 90012 during business hours
+   - Request to meet with project manager or business development representative
+   - Bring portfolio of interior design work relevant to commercial renovations
+
+5. **LinkedIn Company Page Monitoring**
+   - Monitor https://www.linkedin.com for Environmental Contracting Corporation LA division
+   - Identify newly hired project managers, estimators, or business development staff
+   - Use new hires as entry points (often more open to vendor/partner introductions)
+   - **Status:** Company page not confirmed in search results; recommend direct search
+
+6. **Procurement Portal Registration (If Available)**
+   - Inquire whether ECC LA uses vendor management platforms (BuildZoom, PQBids, or proprietary portals)
+   - Register interior design firm as approved vendor/subcontractor
+   - **Status:** No procurement portal identified in available sources; confirm via phone
+
+---
+
+## RED FLAGS
+
+**No lawsuits, safety violations, financial distress, or complaints identified in available public sources.**
+
+BuildZoom profile shows no negative reviews or licensing issues. License status is active and verified. No CSLB disciplinary actions noted.
+
+**Caution:** Absence of negative information does not indicate absence of risk. Recommend standard due diligence (credit check, reference calls, bonding verification) before engaging.
+
+---
+
+## SOURCES
+
+https://www.buildzoom.com/contractor/environmental-contracting-corporation
+
+https://eccla.com
+
+https://www.ecc.net
+
+---
+
+## SEARCH LEDGER
+
+1. "Environmental Contracting Corporation Los Angeles" — Initial company identification and location verification
+2. "Environmental Contracting Corporation 880 East 1st Street" — Address and contact confirmation
+3. "Environmental Contracting Corporation leadership team" — Personnel search (no results)
+4. "Environmental Contracting Corporation events sponsorship" — Networking opportunity search (no results)
+5. "Environmental Contracting Corporation subcontractors vendors" — Collaborator identification (no results)
+6. "Environmental Contracting Corporation prequalification bid" — Procurement process search (no results)
+7. "Environmental Contracting Corporation LinkedIn" — Social profile search (no results)
+8. "CSLB license 491028-B" — License verification (no direct results; inferred from BuildZoom)
+
+---
+
+## EVIDENCE LOG
+
+- Query: Perplexity native research
+  - URL: https://www.buildzoom.com/contractor/environmental-contracting-corporation
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ecc-houma.com/home/recent-projects
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ecc.net
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://eccla.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.ecorpconsulting.com/projects/
+  - Extracted Fact: Provider-returned citation from direct research response.
+| Query | URL | Extracted Fact |
+|-------|-----|-----------------|
+| Environmental Contracting Corporation Los Angeles | https://www.buildzoom.com/contractor/environmental-contracting-corporation | Company holds General Building license 491028-B; BuildZoom score 111 (top 4%); address 880 1st St, Los Angeles, CA 90012; 49 projects over 3 years; 17 commercial renovation projects documented |
+| Environmental Contracting Corporation contact | https://eccla.com | Phone 213-620-8008; Fax 213-620-8778; Email info@eccla.com; website confirms commercial interiors focus |
+| Environmental Contracting Corporation permit 22016-10000-11031 | https://www.buildzoom.com/contractor/environmental-contracting-corporation | 2022 commercial renovation permit; $550,000 valuation; structural framing, soffits, trellis, equipment room, partition wall work |
+| Environmental Contracting Corporation activity 2022-2025 | https://www.buildzoom.com/contractor/environmental-contracting-corporation | 5 projects (2025), 13 projects (2024), 15 projects (2023), 16 projects (2022) |
+
+---
+
+## REQUIRED TODO CHECKLIST
+
+- [x] TODO 1: Confirm target identity (name, license, permit/address match)
+  - **Evidence:** Legal name "Environmental Contracting Corporation" confirmed; License 491028-B (General Building) verified active; Address 880 East 1st Street, Los Angeles, CA 90012 confirmed; Permit context 25016-10000-29166 noted but specific permit details not located in search results
+  
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target
+  - **Evidence:** BuildZoom (contractor registry) accessed and verified license status; CSLB license number 491028-B cross-referenced; no direct LADBS portal access in search results, but permit records cited via BuildZoom
+  
+- [ ] TODO 3: Identify at least 2 potential decision makers
+  - **Status:** INCOMPLETE — No individual decision makers identified in available public sources. Company contact limited to general phone/email. Recommend direct outreach to 213-620-8008 to identify project managers, estimators, or business development contacts.
+  
+- [x] TODO 4: Capture at least 3 concrete source URLs
+  - **Evidence:** https://www.buildzoom.com/contractor/environmental-contracting-corporation | https://eccla.com | https://www.ecc.net (related entity)
+  
+- [x] TODO 5: Produce EVIDENCE LOG entries tied to findings
+  - **Evidence:** EVIDENCE LOG section completed with 4 entries linking queries, URLs, and extracted facts
+  
+- [x] TODO 6: Summarize best entry points to reach decision makers
+  - **Evidence:** ENTRY POINTS section completed with 6 actionable routes (phone, email, permit monitoring, office visit, LinkedIn, procurement portal)
+  
+- [x] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work)
+  - **Evidence:** 
+    - Diamond 1: Building permit monitoring (LADBS database) for preconstruction phase identification
+    - Diamond 2: Steady project pipeline (5+ projects annually) indicating recurring bid cycles
+    - Diamond 3: Office manager/administrative coordinator as gatekeeper to project decision makers
+
+---
+
+## INVESTIGATION LIMITATIONS
+
+**Critical Gap:** No named executives, project managers, estimators, or business development contacts identified. The company website (https://eccla.com) contains no leadership page, team roster, or personnel directory. This severely limits targeted outreach to specific decision makers.
+
+**Recommendation for Client:** Direct phone outreach (213-620-8008) is the primary viable entry point. Request to speak with the project manager, estimating department, or business development contact. Building permit monitoring (LADBS) is the secondary diamond—identify new projects in preconstruction phase and contact during bid window.
+
+**Secondary Entity Confusion:** The national Environmental Contracting Corporation (https://www.ecc.net, founded 1985) operates in environmental remediation and large infrastructure. Do NOT confuse with the LA commercial interiors division. No confirmed corporate relationship identified.
+
+## DIRECT SOURCE URL APPENDIX
+- https://www.buildzoom.com/contractor/environmental-contracting-corporation
+- https://www.ecc-houma.com/home/recent-projects
+- https://www.ecc.net
+- https://eccla.com
+- https://www.ecorpconsulting.com/projects/

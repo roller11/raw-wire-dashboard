@@ -1,0 +1,103 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 20
+Party: Williamson Construction Co
+License: 976074-B
+Permit: 25016-10000-27421
+Generated: 2026-03-09 15:29:10
+Method: perplexity_agent_second_pass
+Provider: Perplexity
+Model: perplexity/sonar
+==================================================
+
+Williamson Construction Co. Investigation Dossier
+
+SEARCH LEDGER
+[1] https://theorg.com/org/williams-construction/teams/leadership-team - Leadership team details for Williams Construction Co. (potential variant spelling match).
+[2] https://rocketreach.co/williamson-construction-management_b4b9c198fb02ec1c - Management team for Williamson Construction (23 employees).
+[3] https://rocketreach.co/williamson-construction-llc-management_b7b70150c53bb14e - Management team for WILLIAMSON CONSTRUCTION LLC (6 employees).
+[4] https://www.williamson-construction.com/about-us - About Us page for Williamson Construction (commercial focus on healthcare/education).
+[5] https://www.williamsoncivil.com - Williamson Construction, LLC site prep services (Whatcom County, team bios).
+[6] https://www.williamson-construction.com/contact - Contact page for Williamson Construction (Lawndale, CA).
+[7] https://www.thebluebook.com/iProView/1663909/williamson-development/subcontractors/locations-contacts/ - Williamson Development contacts (related entity).
+[8] https://www.zoominfo.com/pic/williamson-construction-co/449908705 - Williamson Construction Co. employee directory teaser.
+
+EVIDENCE LOG
+
+Key Decision Makers and Gatekeepers
+- Brian Williamson: CEO, Founder, primary license holder (commercial construction since 2012, expertise in networks/relationships).[4][6]
+- Brian Douglas: Partner (joined 2014, construction management, team assembly for client success).[4]
+- Jim (last name not specified): Partner/leadership (20+ years project management from automotive industry, focus on organizational structures).[4]
+- Jerry Williamson: Owner (management team).[2][3]
+- Ricky Ellis: Builder (management team).[2]
+- Curtis Williamson: Owner (WILLIAMSON CONSTRUCTION LLC).[3]
+- Dan Williamson: Partner, building contractor (30+ years experience, heavy equipment, general contracting for school districts/Alcoa Intalco).[5]
+- DJ Williamson: Partner, PE (licensed engineer, ex-Kiewit, UW grad 2011, project engineer on San Diego Airport Terminal 2).[5]
+- Tom Williamson: Partner, Licensed On-Site Sewer Installer (operator/foreman since 2008, septic systems).[5]
+- Charles Williams: CEO (leadership team, possible spelling variant).[1]
+- Mark Little: Vice President (leadership team).[1]
+- Michael Williams: CEO (leadership team).[1]
+- Mike McGehee: Leadership team member (no specific role).[1]
+- Ryan Hardy: Co-owner, project manager, field supervisor (15 years experience, Williamson Development).[7]
+
+Contact Information
+- Brian Williamson (CEO): info@williamson-construction.com, 14701 Hawthorne Blvd. Lawndale, CA 90260, Lic.# 976074. Call to set up meeting.[6]
+- No direct phones/emails for others in results; general inquiry via above for Lawndale entity.[6]
+
+Bidding Contacts and Processes
+- No specific bidding contacts or processes identified; leadership (e.g., Brian Williamson, partners) handles client meetings/project reviews.[4][6]
+- RocketReach/ZoomInfo tease management directories but no extracted details.[2][3][8]
+
+Upcoming Events, Current/Future Projects, Announcements
+- No upcoming events, groundbreakings, commitments, or specific projects listed (focus on general services: healthcare/education facilities, schools, site prep, custom homes, septic).[4][5]
+- No announcements or outreach programs detailed.[4][5]
+
+Partnerships, Sub-Contractors, Relationships
+- Brian Williamson expertise in cultivating networks/trade partners for collaboration.[4]
+- Dan Williamson relationships with local school districts, Alcoa Intalco.[5]
+- DJ Williamson ex-Kiewit Construction.[5]
+- Brian Douglas passion for schools/healthcare.[4]
+- Jim from automotive manufacturers (unspecified).[4]
+- Ryan Hardy at Williamson Development (potential affiliate).[7]
+- No named sub-contractors or formal partnerships.[4][5][7]
+
+Actionable Intelligence Summary
+- Primary leads: Lawndale, CA entity (Brian Williamson CEO, commercial/healthcare focus) at https://www.williamson-construction.com[4][6]; Whatcom County site prep (Dan/DJ/Tom Williamson partners) at https://www.williamsoncivil.com[5].
+- Approach gatekeepers via info@williamson-construction.com for meetings; track school district/Alcoa ties via Dan Williamson.[5][6]
+- Multiple entities (e.g., LLC variants) suggest network of Williamson-named firms; cross-reference RocketReach for directories.[2][3]
+- No procurement paths or events; pursue Blue Book ProView for subs/ITBs on Williamson Development.[7]
+
+## EVIDENCE LOG
+- Query: Perplexity native research
+  - URL: https://theorg.com/org/williams-construction/teams/leadership-team
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rocketreach.co/williamson-construction-management_b4b9c198fb02ec1c
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://rocketreach.co/williamson-construction-llc-management_b7b70150c53bb14e
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.williamson-construction.com/about-us
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.williamsoncivil.com
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.williamson-construction.com/contact
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.thebluebook.com/iProView/1663909/williamson-development/subcontractors/locations-contacts/
+  - Extracted Fact: Provider-returned citation from direct research response.
+- Query: Perplexity native research
+  - URL: https://www.zoominfo.com/pic/williamson-construction-co/449908705
+  - Extracted Fact: Provider-returned citation from direct research response.
+
+## DIRECT SOURCE URL APPENDIX
+- https://theorg.com/org/williams-construction/teams/leadership-team
+- https://rocketreach.co/williamson-construction-management_b4b9c198fb02ec1c
+- https://rocketreach.co/williamson-construction-llc-management_b7b70150c53bb14e
+- https://www.williamson-construction.com/about-us
+- https://www.williamsoncivil.com
+- https://www.williamson-construction.com/contact
+- https://www.thebluebook.com/iProView/1663909/williamson-development/subcontractors/locations-contacts/
+- https://www.zoominfo.com/pic/williamson-construction-co/449908705

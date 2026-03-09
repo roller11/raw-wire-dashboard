@@ -1,7 +1,36 @@
 <?php
+
 /**
  * Template Engine - Template loading, rendering, and management
  * Path: cores/template-engine/template-engine.php
+ * 
+ * ╔═══════════════════════════════════════════════════════════════════════════╗
+ * ║  STOP! READ BEFORE MODIFYING - SUBSYSTEM #4: TEMPLATE ENGINE              ║
+ * ╠═══════════════════════════════════════════════════════════════════════════╣
+ * ║                                                                           ║
+ * ║  📚 Full Documentation: docs/SUBSYSTEM_AUDIT.md (Section 4)              ║
+ * ║                                                                           ║
+ * ║  This file is the MAIN engine for dynamic panel/page rendering.          ║
+ * ║                                                                           ║
+ * ║  DATAFLOW:                                                                ║
+ * ║  WordPress Init → load_active_template() → JSON Template File            ║
+ * ║  → Schema Validation → Config Authority Check → Template Loaded          ║
+ * ║  → page-renderer.php → panel-renderer.php → data-facade.php              ║
+ * ║  → Control Registry → HTML Output                                        ║
+ * ║                                                                           ║
+ * ║  RELATED FILES (all in cores/template-engine/):                          ║
+ * ║  • loader.php              - Template file loading                        ║
+ * ║  • page-renderer.php       - Full page rendering                          ║
+ * ║  • panel-renderer.php      - Panel rendering                              ║
+ * ║  • workflow-handlers.php   - Workflow integration                         ║
+ * ║  • class-control-registry.php      - UI control types                     ║
+ * ║  • class-data-facade.php           - Data abstraction                     ║
+ * ║  • class-data-source-registry.php  - Data sources                         ║
+ * ║  • class-panel-type-registry.php   - Panel types                          ║
+ * ║                                                                           ║
+ * ║  CALLS: Config Authority, Data Source Registry, Workflow Orchestrator    ║
+ * ║  CALLED BY: Bootstrap, Admin Pages, REST API                             ║
+ * ╚═══════════════════════════════════════════════════════════════════════════╝
  *
  * Handles all template operations:
  * - Loading template JSON files
@@ -12,7 +41,8 @@
  */
 
 if (!class_exists('RawWire_Template_Engine')) {
-    class RawWire_Template_Engine {
+    class RawWire_Template_Engine
+    {
 
         /**
          * Loaded template configuration
@@ -41,7 +71,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * Initialize the Template Engine
          */
-        public static function init() {
+        public static function init()
+        {
             self::$template_dir = dirname(dirname(dirname(__FILE__))) . '/templates';
 
             // Initialize logger
@@ -58,6 +89,7 @@ if (!class_exists('RawWire_Template_Engine')) {
             add_action('wp_ajax_rawwire_template_export_data', array(__CLASS__, 'ajax_export_data'));
             add_action('wp_ajax_rawwire_template_variant', array(__CLASS__, 'ajax_switch_variant'));
             add_action('wp_ajax_rawwire_template_save_settings', array(__CLASS__, 'ajax_save_settings'));
+            add_action('wp_ajax_rawwire_clear_cache', array(__CLASS__, 'ajax_clear_cache'));
 
             // Register REST routes
             add_action('rest_api_init', array(__CLASS__, 'register_rest_routes'));
@@ -69,7 +101,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * Log a message safely
          */
-        protected static function log(string $message, string $level = 'info', array $context = array()) {
+        protected static function log(string $message, string $level = 'info', array $context = array())
+        {
             if (self::$logger) {
                 $context['component'] = 'template-engine';
                 if ($level === 'error') {
@@ -82,32 +115,38 @@ if (!class_exists('RawWire_Template_Engine')) {
 
         /**
          * Load the active template
+         * Falls back to default.template.json if no template configured
+         * Plugin remains fully functional even with no template
          */
-        public static function load_active_template() {
-            $template_id = get_option('rawwire_active_template', 'news-aggregator');
+        public static function load_active_template()
+        {
+            $template_id = get_option('rawwire_active_template', 'default');
             self::$current_variant = get_option('rawwire_template_variant', 'default');
 
             $template_path = self::$template_dir . '/' . $template_id . '.template.json';
 
             if (!file_exists($template_path)) {
-                self::log('Template file not found', 'warning', array('path' => $template_path));
-                // Try default template
-                $template_path = self::$template_dir . '/news-aggregator.template.json';
+                self::log('Template file not found, trying default', 'info', array('requested' => $template_id));
+                // Fall back to minimal default template (always ships with plugin)
+                $template_path = self::$template_dir . '/default.template.json';
             }
 
             if (!file_exists($template_path)) {
-                self::log('No template files found', 'error');
-                return false;
+                // No templates at all - plugin runs in "core only" mode
+                self::log('No template files found - running in core mode', 'warning');
+                self::$template = self::get_core_only_template();
+                return true;
             }
 
             $json = file_get_contents($template_path);
             $template = json_decode($json, true);
 
             if (json_last_error() !== JSON_ERROR_NONE) {
-                self::log('Failed to parse template JSON', 'error', array(
+                self::log('Failed to parse template JSON, using core template', 'error', array(
                     'error' => json_last_error_msg(),
                 ));
-                return false;
+                self::$template = self::get_core_only_template();
+                return true;
             }
 
             self::$template = $template;
@@ -120,10 +159,56 @@ if (!class_exists('RawWire_Template_Engine')) {
         }
 
         /**
+         * Get minimal in-memory template when no JSON files available
+         * This ensures the plugin ALWAYS functions
+         */
+        private static function get_core_only_template()
+        {
+            return array(
+                'meta' => array(
+                    'id' => 'core',
+                    'name' => 'Raw Wire Core',
+                    'version' => '1.0.0',
+                    'description' => 'Core functionality - no template loaded',
+                    'author' => 'Raw-Wire DAO LLC',
+                    'icon' => 'dashicons-admin-generic',
+                    'variants' => array('default'),
+                    '_core_only' => true,
+                ),
+                'css' => array(),
+                'toolbox' => array(),
+                'sourceTypes' => array(),
+                'sources' => array(),
+                'pages' => array(
+                    'dashboard' => array(
+                        'id' => 'dashboard',
+                        'title' => 'Dashboard',
+                        'description' => 'Professional Ai Powered Solutions',
+                        'slug' => 'raw-wire-dashboard',
+                        'icon' => 'dashicons-chart-line',
+                        'isMain' => true,
+                        'layout' => 'default',
+                        'panels' => array('system_status'),
+                    ),
+                ),
+                'panels' => array(
+                    'system_status' => array(
+                        'id' => 'system_status',
+                        'type' => 'status-monitor',
+                        'title' => 'System Status',
+                        'icon' => 'dashicons-heart',
+                        'data' => 'module:status',
+                    ),
+                ),
+            );
+        }
+
+        /**
          * Get the loaded template
          * @return array|null
          */
-        public static function get_template() {
+        public static function get_template()
+        {
             return self::$template;
         }
 
@@ -131,7 +216,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get the active template (alias for get_template)
          * @return array|null
          */
-        public static function get_active_template() {
+        public static function get_active_template()
+        {
             return self::$template;
         }
 
@@ -139,7 +225,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get current variant
          * @return string
          */
-        public static function get_variant() {
+        public static function get_variant()
+        {
             return self::$current_variant;
         }
 
@@ -147,7 +234,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get template meta
          * @return array
          */
-        public static function get_meta() {
+        public static function get_meta()
+        {
             return self::$template['meta'] ?? array();
         }
 
@@ -155,8 +243,18 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get all pages defined in template
          * @return array
          */
-        public static function get_pages() {
+        public static function get_pages()
+        {
             return self::$template['pages'] ?? array();
+        }
+
+        /**
+         * Get legacy page definitions (menu-oriented)
+         * @return array
+         */
+        public static function get_page_definitions()
+        {
+            return self::$template['pageDefinitions'] ?? array();
         }
 
         /**
@@ -164,7 +262,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * @param string $page_id
          * @return array|null
          */
-        public static function get_page($page_id) {
+        public static function get_page($page_id)
+        {
             return self::$template['pages'][$page_id] ?? null;
         }
 
@@ -172,8 +271,64 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get all panels defined in template
          * @return array
          */
-        public static function get_panels() {
+        public static function get_panels()
+        {
             return self::$template['panels'] ?? array();
+        }
+
+        /**
+         * Check if a feature is enabled in the active template
+         *
+         * @param string $feature_id
+         * @return bool
+         */
+        public static function is_feature_enabled($feature_id)
+        {
+            if (empty($feature_id) || !is_string($feature_id)) {
+                return true;
+            }
+
+            $features = self::$template['features'] ?? array();
+            if (!isset($features[$feature_id])) {
+                // Back-compat: undefined features default to enabled
+                return true;
+            }
+
+            $feature = $features[$feature_id];
+            if (isset($feature['enabled'])) {
+                return (bool) $feature['enabled'];
+            }
+
+            if (isset($feature['default'])) {
+                return (bool) $feature['default'];
+            }
+
+            return true;
+        }
+
+        /**
+         * Check if all features are enabled
+         *
+         * @param array $feature_ids
+         * @return bool
+         */
+        public static function are_features_enabled($feature_ids)
+        {
+            if (empty($feature_ids)) {
+                return true;
+            }
+
+            if (!is_array($feature_ids)) {
+                $feature_ids = array($feature_ids);
+            }
+
+            foreach ($feature_ids as $feature_id) {
+                if (!self::is_feature_enabled($feature_id)) {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         /**
@@ -181,7 +336,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * @param string $panel_id
          * @return array|null
          */
-        public static function get_panel($panel_id) {
+        public static function get_panel($panel_id)
+        {
             return self::$template['panels'][$panel_id] ?? null;
         }
 
@@ -189,7 +345,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get CSS configuration with variant applied
          * @return array
          */
-        public static function get_css() {
+        public static function get_css()
+        {
             $css = self::$template['css'] ?? array();
             $global = $css['global'] ?? array();
 
@@ -206,7 +363,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get toolbox configuration
          * @return array
          */
-        public static function get_toolbox() {
+        public static function get_toolbox()
+        {
             return self::$template['toolbox'] ?? array();
         }
 
@@ -214,7 +372,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get sources configuration
          * @return array
          */
-        public static function get_sources() {
+        public static function get_sources()
+        {
             return self::$template['sources'] ?? array();
         }
 
@@ -222,7 +381,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get workflow configuration
          * @return array
          */
-        public static function get_workflow() {
+        public static function get_workflow()
+        {
             return self::$template['workflow'] ?? array();
         }
 
@@ -230,7 +390,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Get data/table configuration
          * @return array
          */
-        public static function get_data_config() {
+        public static function get_data_config()
+        {
             return self::$template['data'] ?? array();
         }
 
@@ -238,7 +399,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Generate CSS string from template configuration
          * @return string
          */
-        public static function generate_css() {
+        public static function generate_css()
+        {
             $css_config = self::get_css();
             $css_rules = array();
 
@@ -628,7 +790,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * Enqueue template CSS
          */
-        public static function enqueue_template_css($hook) {
+        public static function enqueue_template_css($hook)
+        {
             if (strpos($hook, 'raw-wire') === false) {
                 return;
             }
@@ -645,7 +808,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * List available templates
          * @return array
          */
-        public static function list_templates() {
+        public static function list_templates()
+        {
             $templates = array();
 
             if (!is_dir(self::$template_dir)) {
@@ -680,7 +844,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * @param bool $backup_data Whether to backup current data before switching
          * @return bool|WP_Error
          */
-        public static function switch_template($template_id, $backup_data = true) {
+        public static function switch_template($template_id, $backup_data = true)
+        {
             $template_path = self::$template_dir . '/' . $template_id . '.template.json';
 
             if (!file_exists($template_path)) {
@@ -711,7 +876,8 @@ if (!class_exists('RawWire_Template_Engine')) {
          * Export template data to a downloadable format
          * @return array
          */
-        public static function export_template_data() {
+        public static function export_template_data()
+        {
             global $wpdb;
 
             $data_config = self::get_data_config();
@@ -741,7 +907,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * Ensure database tables exist
          */
-        public static function ensure_tables() {
+        public static function ensure_tables()
+        {
             global $wpdb;
 
             $data_config = self::get_data_config();
@@ -772,7 +939,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * Parse a column definition from template format to SQL
          */
-        protected static function parse_column_definition($name, $definition) {
+        protected static function parse_column_definition($name, $definition)
+        {
             $parts = explode(':', $definition);
             $type = $parts[0];
             $modifiers = array_slice($parts, 1);
@@ -821,7 +989,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * AJAX: Switch template
          */
-        public static function ajax_switch_template() {
+        public static function ajax_switch_template()
+        {
             check_ajax_referer('rawwire_admin_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -850,11 +1019,16 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * AJAX: List available templates
          */
-        public static function ajax_list_templates() {
+        public static function ajax_list_templates()
+        {
             check_ajax_referer('rawwire_admin_nonce', 'nonce');
 
+            if (!current_user_can('manage_options')) {
+                wp_send_json_error('Unauthorized');
+            }
+
             $templates = self::list_templates();
-            $active = get_option('rawwire_active_template', 'news-aggregator');
+            $active = get_option('rawwire_active_template', 'default');
 
             wp_send_json_success(array(
                 'templates' => $templates,
@@ -865,7 +1039,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * AJAX: Export template data
          */
-        public static function ajax_export_data() {
+        public static function ajax_export_data()
+        {
             check_ajax_referer('rawwire_admin_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -889,7 +1064,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * AJAX: Switch variant
          */
-        public static function ajax_switch_variant() {
+        public static function ajax_switch_variant()
+        {
             check_ajax_referer('rawwire_admin_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -916,7 +1092,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * AJAX: Save template settings
          */
-        public static function ajax_save_settings() {
+        public static function ajax_save_settings()
+        {
             check_ajax_referer('rawwire_admin_nonce', 'nonce');
 
             if (!current_user_can('manage_options')) {
@@ -924,7 +1101,14 @@ if (!class_exists('RawWire_Template_Engine')) {
             }
 
             $settings = isset($_POST['settings']) ? json_decode(stripslashes($_POST['settings']), true) : array();
-            $template_id = self::$template['meta']['id'] ?? 'unknown';
+
+            if (!is_array($settings)) {
+                wp_send_json_error('Invalid settings data');
+            }
+
+            // Sanitize all values recursively
+            $settings = map_deep($settings, 'sanitize_text_field');
+            $template_id = sanitize_key(self::$template['meta']['id'] ?? 'unknown');
 
             update_option('rawwire_template_settings_' . $template_id, $settings);
 
@@ -934,13 +1118,63 @@ if (!class_exists('RawWire_Template_Engine')) {
         }
 
         /**
+         * AJAX: Clear all RawWire transients and caches
+         */
+        public static function ajax_clear_cache()
+        {
+            // Verify nonce — reject on failure
+            if (
+                !wp_verify_nonce($_POST['nonce'] ?? '', 'rawwire_admin_nonce') &&
+                !wp_verify_nonce($_REQUEST['_wpnonce'] ?? '', 'rawwire_admin_nonce')
+            ) {
+                wp_send_json_error('Invalid nonce');
+            }
+
+            if (!current_user_can('manage_options')) {
+                wp_send_json_error('Unauthorized');
+            }
+
+            global $wpdb;
+            $cleared = 0;
+
+            // Clear all rawwire transients
+            $transients = $wpdb->get_col(
+                "SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE '_transient_rawwire%' OR option_name LIKE '_transient_timeout_rawwire%'"
+            );
+            foreach ($transients as $transient) {
+                delete_option($transient);
+                $cleared++;
+            }
+
+            // Clear automation-related transients
+            delete_transient('rawwire_current_automation');
+            delete_transient('rawwire_automation_step');
+            delete_transient('rawwire_automation_status');
+            delete_transient('rawwire_automation_total_steps');
+            $cleared += 4;
+
+            // Clear any object cache if available
+            if (function_exists('wp_cache_flush_group')) {
+                wp_cache_flush_group('rawwire');
+            } elseif (function_exists('wp_cache_flush')) {
+                wp_cache_flush();
+            }
+
+            wp_send_json_success(array(
+                'message' => 'Cache cleared',
+                'cleared' => $cleared,
+            ));
+        }
+
+        /**
          * Register REST routes
          */
-        public static function register_rest_routes() {
+        public static function register_rest_routes()
+        {
             register_rest_route('rawwire/v1', '/template', array(
                 'methods' => 'GET',
                 'callback' => array(__CLASS__, 'rest_get_template'),
-                'permission_callback' => function() {
+                'permission_callback' => function () {
                     return current_user_can('manage_options');
                 },
             ));
@@ -948,7 +1182,25 @@ if (!class_exists('RawWire_Template_Engine')) {
             register_rest_route('rawwire/v1', '/template/panels', array(
                 'methods' => 'GET',
                 'callback' => array(__CLASS__, 'rest_get_panels'),
-                'permission_callback' => function() {
+                'permission_callback' => function () {
+                    return current_user_can('manage_options');
+                },
+            ));
+
+            // Dashboard stats for a specific tool
+            register_rest_route('rawwire/v1', '/dashboard/stats/(?P<tool_id>[a-z0-9_-]+)', array(
+                'methods' => 'GET',
+                'callback' => array(__CLASS__, 'rest_get_tool_stats'),
+                'permission_callback' => function () {
+                    return current_user_can('manage_options');
+                },
+            ));
+
+            // Set active dashboard tool
+            register_rest_route('rawwire/v1', '/dashboard/set-active-tool', array(
+                'methods' => 'POST',
+                'callback' => array(__CLASS__, 'rest_set_active_tool'),
+                'permission_callback' => function () {
                     return current_user_can('manage_options');
                 },
             ));
@@ -957,7 +1209,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * REST: Get template configuration
          */
-        public static function rest_get_template(WP_REST_Request $request) {
+        public static function rest_get_template(WP_REST_Request $request)
+        {
             return rest_ensure_response(array(
                 'meta' => self::get_meta(),
                 'pages' => self::get_pages(),
@@ -970,7 +1223,8 @@ if (!class_exists('RawWire_Template_Engine')) {
         /**
          * REST: Get panels configuration
          */
-        public static function rest_get_panels(WP_REST_Request $request) {
+        public static function rest_get_panels(WP_REST_Request $request)
+        {
             $page_id = $request->get_param('page');
             $panels = self::get_panels();
 
@@ -991,16 +1245,97 @@ if (!class_exists('RawWire_Template_Engine')) {
         }
 
         /**
+         * REST: Get stats for a specific tool
+         */
+        public static function rest_get_tool_stats(WP_REST_Request $request)
+        {
+            $tool_id = $request->get_param('tool_id');
+
+            if (empty($tool_id)) {
+                return new WP_Error('missing_tool', 'Tool ID required', array('status' => 400));
+            }
+
+            // Get tool stats from toggle manager
+            if (!function_exists('rawwire_tools') || !rawwire_tools()) {
+                return new WP_Error('tools_unavailable', 'Tool system not available', array('status' => 500));
+            }
+
+            $stats = rawwire_tools()->get_tool_stats($tool_id);
+
+            if (empty($stats)) {
+                return rest_ensure_response(array(
+                    'success' => true,
+                    'data' => array(
+                        'tool_id' => $tool_id,
+                        'metrics' => array(),
+                    ),
+                ));
+            }
+
+            // Resolve the data bindings to get actual values
+            $metrics = array();
+            foreach ($stats as $metric) {
+                $value = RawWire_Panel_Renderer::resolve_data_binding($metric['source'] ?? '', array());
+                $metrics[] = array(
+                    'id'        => $metric['id'] ?? '',
+                    'label'     => $metric['label'] ?? '',
+                    'value'     => RawWire_Panel_Renderer::format_value($value, $metric['format'] ?? 'number'),
+                    'icon'      => $metric['icon'] ?? '',
+                    'highlight' => $metric['highlight'] ?? '',
+                );
+            }
+
+            return rest_ensure_response(array(
+                'success' => true,
+                'data' => array(
+                    'tool_id' => $tool_id,
+                    'metrics' => $metrics,
+                ),
+            ));
+        }
+
+        /**
+         * REST: Set active dashboard tool
+         */
+        public static function rest_set_active_tool(WP_REST_Request $request)
+        {
+            $body = $request->get_json_params();
+            $tool_id = sanitize_text_field($body['tool_id'] ?? '');
+            $automation_id = sanitize_text_field($body['automation_id'] ?? '');
+
+            if (empty($tool_id)) {
+                return new WP_Error('missing_tool', 'Tool ID required', array('status' => 400));
+            }
+
+            // Save as transient (persists across page loads)
+            set_transient('rawwire_active_dashboard_tool', $tool_id, DAY_IN_SECONDS);
+
+            if ($automation_id) {
+                set_transient('rawwire_current_automation', $automation_id, DAY_IN_SECONDS);
+            }
+
+            return rest_ensure_response(array(
+                'success' => true,
+                'data' => array(
+                    'tool_id' => $tool_id,
+                    'automation_id' => $automation_id,
+                ),
+            ));
+        }
+
+        /**
          * Helper: Convert camelCase to kebab-case
          */
-        protected static function camel_to_kebab($str) {
+        protected static function camel_to_kebab($str)
+        {
             return strtolower(preg_replace('/([a-z])([A-Z])/', '$1-$2', $str));
         }
 
         /**
          * Helper: Deep merge arrays (distinct)
          */
-        protected static function array_merge_recursive_distinct(array $array1, array $array2) {
+        protected static function array_merge_recursive_distinct(array $array1, array $array2)
+        {
             $merged = $array1;
 
             foreach ($array2 as $key => $value) {

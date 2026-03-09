@@ -78,8 +78,6 @@ class RawWire_Scorer_AI_Relevance extends RawWire_Scorer_Base {
             require_once $ai_adapter_file;
             if (class_exists('RawWire_AI_Adapter')) {
                 $this->ai_adapter = RawWire_AI_Adapter::get_instance();
-                // Directly set Groq environment ID (69uakao7 based on AI Engine config)
-                $this->ai_adapter->set_default_env('69uakao7');
             }
         }
     }

@@ -597,6 +597,21 @@
     background: var(--scraper-surface);
 }
 
+/* Disabled source row styling */
+.rawwire-sources-table tbody tr.source-disabled {
+    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.rawwire-sources-table tbody tr.source-disabled:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.rawwire-sources-table tbody tr.source-disabled .rawwire-icon-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 /* Column widths */
 .col-enabled { width: 50px; }
 .col-name { min-width: 140px; }

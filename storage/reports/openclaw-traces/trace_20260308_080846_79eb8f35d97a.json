@@ -1,0 +1,82 @@
+{
+    "started_at": "2026-03-08 08:08:35",
+    "agent": "main",
+    "json_mode": true,
+    "timeout_ms": 180000,
+    "message_chars": 95,
+    "message_sha1": "84a21f3ac1b07cdbee623f9d43ab51b661003d4b",
+    "message_preview": "Reply with exactly PERPLEXITY_WIRE_OK on the first line and MODEL_CONFIRMED on the second line.",
+    "openclaw_home": "/tmp/openclaw-home",
+    "session_candidates_before": [
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/27120b15-b508-4fb9-af14-0b09dbbca89d.jsonl",
+            "mtime": "2026-03-08T07:48:26+00:00",
+            "size": 721867
+        },
+        {
+            "path": "/tmp/openclaw-home/.openclaw/agents/main/sessions/bc6b76ee-4bf2-41c1-87fe-d75bcfa2edef.jsonl",
+            "mtime": "2026-03-08T03:18:23+00:00",
+            "size": 885676
+        },
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/0e0814c2-b521-43ce-b1e6-914709598e69.jsonl",
+            "mtime": "2026-03-07T10:30:40+00:00",
+            "size": 1271211
+        },
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/83082136-7818-4f19-805c-cf4495f8205d.jsonl",
+            "mtime": "2026-03-06T10:44:51+00:00",
+            "size": 834479
+        },
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/3e28f81e-9071-411d-ba94-6e1d6951c5a4.jsonl",
+            "mtime": "2026-03-05T10:38:30+00:00",
+            "size": 500394
+        }
+    ],
+    "command": "exec '/home/ractal1/.nvm/versions/node/v22.22.0/bin/openclaw' agent --agent 'main' --json --message 'Reply with exactly PERPLEXITY_WIRE_OK on the first line and MODEL_CONFIRMED on the second line.'",
+    "use_local": false,
+    "finished_at": "2026-03-08 08:08:46",
+    "duration_ms": 11564,
+    "exit_code": 0,
+    "stdout_tail": "{\n  \"runId\": \"d4ef01ed-7f1d-4fce-94c2-dc12863c0a45\",\n  \"status\": \"ok\",\n  \"summary\": \"completed\",\n  \"result\": {\n    \"payloads\": [\n      {\n        \"text\": \"HTTP 401: Invalid API key provided. You can find your API key at https://www.perplexity.ai/settings/api.\",\n        \"mediaUrl\": null\n      }\n    ],\n    \"meta\": {\n      \"durationMs\": 2157,\n      \"agentMeta\": {\n        \"sessionId\": \"bc6b76ee-4bf2-41c1-87fe-d75bcfa2edef\",\n        \"provider\": \"openai\",\n        \"model\": \"sonar\"\n      },\n      \"aborted\": false,\n      \"systemPromptReport\": {\n        \"source\": \"run\",\n        \"generatedAt\": 1772957324657,\n        \"sessionId\": \"bc6b76ee-4bf2-41c1-87fe-d75bcfa2edef\",\n        \"sessionKey\": \"agent:main:main\",\n        \"provider\": \"openai\",\n        \"model\": \"sonar\",\n        \"workspaceDir\": \"/tmp/openclaw-home/.openclaw/workspace\",\n        \"bootstrapMaxChars\": 20000,\n        \"sandbox\": {\n          \"mode\": \"off\",\n          \"sandboxed\": false\n        },\n        \"systemPrompt\": {\n          \"chars\": 21198,\n          \"projectContextChars\": 13365,\n          \"nonProjectContextChars\": 7833\n        },\n        \"injectedWorkspaceFiles\": [\n          {\n            \"name\": \"AGENTS.md\",\n            \"path\": \"/tmp/openclaw-home/.openclaw/workspace/AGENTS.md\",\n            \"missing\": false,\n            \"rawChars\": 7804,\n            \"injectedChars\": 7804,\n            \"truncated\": false\n          },\n          {\n            \"name\": \"SOUL.md\",\n            \"path\": \"/tmp/openclaw-home/.openclaw/workspace/SOUL.md\",\n            \"missing\": false,\n            \"rawChars\": 1664,\n            \"injectedChars\": 1664,\n            \"truncated\": false\n          },\n          {\n            \"name\": \"TOOLS.md\",\n            \"path\": \"/tmp/openclaw-home/.openclaw/workspace/TOOLS.md\",\n            \"missing\": false,\n            \"rawChars\": 850,\n            \"injectedChars\": 850,\n            \"truncated\": false\n          },\n          {\n            \"name\": \"IDENTITY.md\",\n            \"path\": \"/tmp/openclaw-home/.openclaw/workspace/IDENTITY.md\",\n            \"missing\": false,\n            \"rawChars\": 633,\n            \"injectedChars\": 633,\n            \"truncated\": false\n          },\n          {\n            \"name\": \"USER.md\",\n            \"path\": \"/tmp/openclaw-home/.openclaw/workspace/USER.md\",\n            \"missing\": false,\n            \"rawChars\": 474,\n            \"injectedChars\": 474,\n            \"truncated\": false\n          },\n          {\n            \"name\": \"HEARTBEAT.md\",\n            \"path\": \"/tmp/openclaw-home/.openclaw/workspace/HEARTBEAT.md\",\n            \"missing\": false,\n            \"rawChars\": 167,\n            \"injectedChars\": 167,\n            \"truncated\": false\n          },\n          {\n            \"name\": \"BOOTSTRAP.md\",\n            \"path\": \"/tmp/openclaw-home/.openclaw/workspace/BOOTSTRAP.md\",\n            \"missing\": false,\n            \"rawChars\": 1449,\n            \"injectedChars\": 1449,\n            \"truncated\": false\n          }\n        ],\n        \"skills\": {\n          \"promptChars\": 2664,\n          \"entries\": [\n            {\n              \"name\": \"github\",\n              \"blockChars\": 326\n            },\n            {\n              \"name\": \"healthcheck\",\n              \"blockChars\": 519\n            },\n            {\n              \"name\": \"openai-image-gen\",\n              \"blockChars\": 300\n            },\n            {\n              \"name\": \"openai-whisper-api\",\n              \"blockChars\": 277\n            },\n            {\n              \"name\": \"skill-creator\",\n              \"blockChars\": 324\n            },\n            {\n              \"name\": \"tmux\",\n              \"blockChars\": 283\n            },\n            {\n              \"name\": \"weather\",\n              \"blockChars\": 248\n            }\n          ]\n        },\n        \"tools\": {\n          \"listChars\": 157,\n          \"schemaChars\": 3354,\n          \"entries\": [\n            {\n              \"name\": \"read\",\n              \"summaryChars\": 298,\n              \"schemaChars\": 392,\n              \"propertiesCount\": 4\n            },\n            {\n              \"name\": \"browser\",\n              \"summaryChars\": 1251,\n              \"schemaChars\": 1869,\n              \"propertiesCount\": 28\n            },\n            {\n              \"name\": \"web_search\",\n              \"summaryChars\": 175,\n              \"schemaChars\": 733,\n              \"propertiesCount\": 6\n            },\n            {\n              \"name\": \"web_fetch\",\n              \"summaryChars\": 129,\n              \"schemaChars\": 360,\n              \"propertiesCount\": 3\n            }\n          ]\n        }\n      }\n    }\n  }\n}\n",
+    "stderr_tail": "",
+    "session_candidates_after": [
+        {
+            "path": "/tmp/openclaw-home/.openclaw/agents/main/sessions/bc6b76ee-4bf2-41c1-87fe-d75bcfa2edef.jsonl",
+            "mtime": "2026-03-08T08:08:46+00:00",
+            "size": 886725
+        },
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/27120b15-b508-4fb9-af14-0b09dbbca89d.jsonl",
+            "mtime": "2026-03-08T07:48:26+00:00",
+            "size": 721867
+        },
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/0e0814c2-b521-43ce-b1e6-914709598e69.jsonl",
+            "mtime": "2026-03-07T10:30:40+00:00",
+            "size": 1271211
+        },
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/83082136-7818-4f19-805c-cf4495f8205d.jsonl",
+            "mtime": "2026-03-06T10:44:51+00:00",
+            "size": 834479
+        },
+        {
+            "path": "/home/ractal1/.openclaw/agents/main/sessions/3e28f81e-9071-411d-ba94-6e1d6951c5a4.jsonl",
+            "mtime": "2026-03-05T10:38:30+00:00",
+            "size": 500394
+        }
+    ],
+    "raw_json_keys": [
+        "payloads",
+        "meta"
+    ],
+    "run_id": null,
+    "payload_count": 1,
+    "payload_preview": "HTTP 401: Invalid API key provided. You can find your API key at https://www.perplexity.ai/settings/api.",
+    "content_urls": [
+        "https://www.perplexity.ai/settings/api."
+    ],
+    "success": true
+}

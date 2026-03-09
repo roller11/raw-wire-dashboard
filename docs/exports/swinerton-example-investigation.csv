@@ -1,0 +1,62 @@
+Category,Title,Value,Confidence,Notes
+COMPANY_INFO,Company Name,Swinerton Builders,confirmed,
+COMPANY_INFO,Type,General Contractor,confirmed,
+COMPANY_INFO,Ownership,100% Employee-Owned (ESOP),confirmed,
+COMPANY_INFO,Founded,1888,confirmed,
+COMPANY_INFO,Size,4000+ employees,confirmed,
+COMPANY_INFO,Revenue,~$5 billion,confirmed,
+COMPANY_INFO,Headquarters,San Francisco CA,confirmed,
+COMPANY_INFO,License,CA #92,confirmed,CSLB
+
+COMPANY_INFO,Office 1,Los Angeles,confirmed,
+COMPANY_INFO,Office 2,San Diego,confirmed,
+COMPANY_INFO,Office 3,Portland,confirmed,
+COMPANY_INFO,Office 4,Seattle,confirmed,
+COMPANY_INFO,Office 5,Phoenix,confirmed,
+COMPANY_INFO,Office 6,Denver,confirmed,
+COMPANY_INFO,Office 7,Atlanta,confirmed,
+COMPANY_INFO,Office 8,Charlotte,confirmed,
+
+COMPANY_INFO,Sister Company 1,Swinerton Energy,confirmed,
+COMPANY_INFO,Sister Company 2,Timberlab,confirmed,
+COMPANY_INFO,Sister Company 3,SAK Builders,confirmed,
+COMPANY_INFO,Sister Company 4,Lindgren Development,confirmed,
+
+CONTACTS,Email Domain,@swinerton.com,confirmed,
+CONTACTS,Email Pattern,firstname.lastname@swinerton.com,confirmed,
+CONTACTS,Subcontractor Prequal,subcontractorprequal@swinerton.com,confirmed,
+CONTACTS,Payroll/VOE,payroll@swinerton.com,confirmed,
+CONTACTS,CEO,Dave Callis — dave.callis@swinerton.com,inferred,
+CONTACTS,CRO,Chris Chany — chris.chany@swinerton.com,inferred,
+CONTACTS,PR Manager,Danielle Ridgeway — danielle.ridgeway@swinerton.com,inferred,
+
+PROJECTS,Current - Fitness,Life Time Fitness Chula Vista CA — design-build for Life Time Property Dev,confirmed,
+PROJECTS,Current - Airport,San Diego Airport Terminal 1 Parking Plazas — infrastructure,confirmed,
+PROJECTS,Current - Library,Multnomah County Holgate Library — mass timber,confirmed,
+PROJECTS,Current - Mixed Use,Joinery Phase 2 Charlotte NC — mass timber residential,confirmed,
+PROJECTS,Market Focus,Strong in mass timber via Timberlab subsidiary,confirmed,
+
+RELATIONSHIPS,Architect,Shook Kelley Inc. — Joinery Phase 2 project,confirmed,
+RELATIONSHIPS,Project Platform,CMiC CollabCenter — subcontractors use this,confirmed,
+RELATIONSHIPS,BIM Tools,BIM 360 — they train subs on it,confirmed,
+RELATIONSHIPS,Sister - Timber,Timberlab — mass timber EPC manufacturing installation,confirmed,
+RELATIONSHIPS,Sister - Concrete,SAK Builders — Division 3 West Coast,confirmed,
+RELATIONSHIPS,Sister - Energy,Swinerton Energy — industrial/solar EPC,confirmed,
+
+GATHERINGS,Golf Tournament,AGC SoCal Golf Classic — April 10 2025,confirmed,
+GATHERINGS,Legislative Day,AGC Legislative Day Sacramento — May 5-6 2025,confirmed,
+GATHERINGS,Conference,NAIOP I.CON West — March 3-4 2025,inferred,
+
+AFFILIATIONS,Association,AGC California — active member event sponsor,confirmed,
+AFFILIATIONS,Structure,ESOP — 100% employee-owned since founding,confirmed,
+
+COMMUNITY,Foundation,Swinerton Foundation — corporate giving program,confirmed,
+COMMUNITY,Volunteer,Swinerton Cares — employee volunteer initiative,confirmed,
+
+EDGE_INTEL,Publication,Swinerton Quarterly magazine — thought leadership pitch target,confirmed,
+EDGE_INTEL,History,137 years in business (1888) — longevity talking point,confirmed,
+EDGE_INTEL,Ethics Line,reportissues@swinerton.com — public integrity line,confirmed,
+
+ENTRY_POINTS,Email subcontractor prequal,subcontractorprequal@swinerton.com,,"Design services that complement construction documentation"
+ENTRY_POINTS,Attend industry event,AGC SoCal Golf Classic,April 10 2025,"Casual networking with project teams"
+ENTRY_POINTS,LinkedIn + pitch,Danielle Ridgeway (PR Manager),,"Propose feature for Swinerton Quarterly magazine"

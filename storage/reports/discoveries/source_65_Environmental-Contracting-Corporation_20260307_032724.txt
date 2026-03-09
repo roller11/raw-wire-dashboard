@@ -1,0 +1,77 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 65
+Party: Environmental Contracting Corporation
+License: 491028-B
+Permit: 25016-10000-29166
+Generated: 2026-03-07 03:27:24
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+## TARGET SUMMARY
+- **Name:** Environmental Contracting Corporation
+- **Type:** Contractor
+- **Location:** Los Angeles, CA
+- **LA Permit #:** 25016-10000-29166
+- **Contractor License #:** 491028-B
+- **Licensing Status:** Active (Verified via the California State License Board)
+
+## PEOPLE
+- **No specific individuals have been identified at this stage due to access restrictions on LinkedIn and the failure to obtain data from Google searches.** Further research is needed to discover key personnel involved with the company.
+
+## COMPANY
+- **Legal Name:** Environmental Contracting Corporation
+- **Type:** Contractor
+- **Employee Count:** Not specified (requires further investigation).
+- **Revenue Range:** Not specified (requires further investigation).
+- **Delivery Methods:** Not specified (requires further investigation).
+  
+## NETWORKING OPPORTUNITIES
+- **Trade Associations:** Investigate potential memberships in local trade groups, chambers of commerce, and other associations that may facilitate networking opportunities.
+
+## DISCOVERED PROJECTS
+- **No ongoing or upcoming projects were identified due to lack of accessible information.** Research is needed to explore current or future contracts.
+
+## DISCOVERED ENTITIES
+- **Partners/Subcontractors:** No information on partners or regular subcontractors is currently available.
+
+## ENTRY POINTS
+- Continue reaching out for possible networking opportunities through relevant trade shows, seminars, and local contractor events. Establishing a presence at these functions may help interact with key decision-makers.
+
+## RED FLAGS
+- **Lack of accessible data raises concerns over visibility within the market.** No current or direct relationships are verifiable, which is critical for establishing connections.
+
+## SOURCES
+- License Lookup for Environmental Contracting Corporation: [CSLB License Lookup](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+
+---
+
+## SEARCH LEDGER
+1. "Environmental Contracting Corporation contractor license 491028-B"
+2. "Environmental Contracting Corporation Los Angeles construction"
+3. "Environmental Contracting Corporation company website"
+4. "Environmental Contracting Corporation leadership team"
+5. "Environmental Contracting Corporation LinkedIn profiles"
+6. "Environmental Contracting Corporation projects and collaborations"
+7. "Upcoming events for Environmental Contracting Corporation"
+
+## EVIDENCE LOG
+- **Search Query:** "Check Environmental Contracting contractor license 491028-B"
+  - **Visited URL:** [CSLB License Lookup](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+  - **Extracted Fact:** Confirmed licensing status.
+
+- **Search Query:** "Environmental Contracting Corporation Los Angeles construction"
+  - **Visited URL:** Blocked; unable to access.
+  - **Extracted Fact:** N/A due to access restrictions.
+
+- **Search Query:** "Environmental Contracting Corporation key personnel"
+  - **Visited URL:** [LinkedIn Search](https://www.linkedin.com/search/results/people/?keywords=Environmental+Contracting+Corporation&origin=GLOBAL_SEARCH_HEADER)
+  - **Extracted Fact:** Access to profiles is restricted; not available for extraction.
+
+## REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match).
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target.
+- [ ] TODO 3: Identify at least 2 potential decision-makers.
+- [ ] TODO 4: Capture at least 3 concrete source URLs.
+- [ ] TODO 5: Produce EVIDENCE LOG entries tied to findings.
+- [ ] TODO 6: Summarize best entry points to reach decision-makers.
+- [ ] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work).

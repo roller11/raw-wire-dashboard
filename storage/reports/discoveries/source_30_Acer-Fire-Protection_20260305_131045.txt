@@ -1,0 +1,10 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 30
+Party: Acer Fire Protection
+License: 1047478-B
+Permit: 25016-10000-24802
+Generated: 2026-03-05 13:10:45
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+INVESTIGATION_FAILED: Browsing tools need a Brave Search API key, which is not currently set up. Please configure the necessary API key to proceed with the search for Acer Fire Protection and related networking opportunities.

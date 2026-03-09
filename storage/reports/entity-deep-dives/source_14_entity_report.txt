@@ -1,0 +1,17 @@
+RAW-WIRE ENTITY DEEP DIVE REPORT
+source_id: 14
+permit_nbr: 25010-10000-01859
+address: 155 W 6TH ST 1-281
+generated_at: 2026-03-05 20:37:59
+
+---
+ENTITY: Westport Construction Inc
+TYPE: contractor
+RELATIONSHIP: source_record
+SEARCH_RESULTS: none
+
+---
+ENTITY: Westport Construction
+TYPE: contractor
+RELATIONSHIP: investigated_party
+SEARCH_RESULTS: none

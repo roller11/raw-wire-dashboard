@@ -1,0 +1,76 @@
+=== RAW WIRE DISCOVERY FILE ===
+Source ID: 65
+Party: Environmental Contracting Corporation
+License: 491028-B
+Permit: 25016-10000-29166
+Generated: 2026-03-07 04:03:48
+Method: agent_browser (GPT-4o-mini via OpenClaw)
+==================================================
+
+## FINAL EVIDENCE GATHERING FOR Environmental Contracting Corporation
+
+### SEARCH LEDGER
+1. "Environmental Contracting Corporation contractor license 491028-B"
+2. "Environmental Contracting Corporation Los Angeles construction"
+3. "Environmental Contracting Corporation company website"
+4. "Environmental Contracting Corporation leadership team"
+5. "Environmental Contracting Corporation LinkedIn profiles"
+6. "Environmental Contracting Corporation projects and collaborations"
+7. "Upcoming events for Environmental Contracting Corporation"
+8. "Environmental Contracting Corporation decision makers"
+9. "Environmental Contracting Corporation industry partnerships"
+10. "Environmental Contracting Corporation bidding opportunities"
+
+### EVIDENCE LOG
+- **Search Query:** "Check Environmental Contracting contractor license 491028-B"
+  - **Visited URL:** [CSLB License Lookup](https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx)
+  - **Extracted Fact:** Confirmed licensing status and permit details are active.
+
+- **Search Query:** "Environmental Contracting Corporation company website"
+  - **Visited URL:** Blocked; unable to gain access, specific details not available.
+  - **Extracted Fact:** N/A due to access issues.
+
+- **Search Query:** "Environmental Contracting Corporation leadership team"
+  - **Visited URL:** [LinkedIn Search](https://www.linkedin.com/search/results/people/?keywords=Environmental+Contracting+Corporation&origin=GLOBAL_SEARCH_HEADER)
+  - **Extracted Fact:** Access to profiles is restricted; not available for extraction.
+
+- **Search Query:** "Environmental Contracting Corporation key personnel announcements"
+  - **Visited URL:** [BuildZoom](https://www.buildzoom.com/)
+  - **Extracted Fact:** Provides insights into contractors and potential connections, but specific personnel details for Environmental Contracting Corporation remained elusive.
+
+- **Search Query:** "Environmental Contracting Corporation industry partnerships"
+  - **Visited URL:** Unable to access due to network restrictions.
+  - **Extracted Fact:** N/A due to access issues.
+
+### SOCIAL / PROFILE CHECK
+1. **CSLB License Lookup:** Successfully validated license as active.
+   - **Result:** License details confirmed.
+2. **LinkedIn:** Access to professional profiles restricted.
+   - **Result:** Blocked; login required for details.
+3. **BuildZoom:** Offers contractor overview services but lacked specific personnel insights.
+   - **Result:** General information on contractor services; no specific data.
+
+### INDIVIDUAL PROBE LEDGER
+- **No specific individuals or roles identified at this stage due to access restrictions on LinkedIn and inability to retrieve data. Further sourcing required.**
+
+### TARGET-SPECIFIC FACT PACK
+- **Company Name:** Environmental Contracting Corporation
+- **Type:** Contractor
+- **LA Permit #:** 25016-10000-29166
+- **Contractor License #:** 491028-B
+- **Licensing Status:** Active (confirmed via CSLB).
+
+### NEXT STEPS
+- Continue seeking access to LinkedIn for personnel insights.
+- Explore local events and webinars for networking opportunities in the construction sector.
+
+## REQUIRED TODO CHECKLIST
+- [x] TODO 1: Confirm target identity (name, license, permit/address match).
+- [x] TODO 2: Visit LADBS/CSLB/registry sources relevant to target.
+- [ ] TODO 3: Identify at least 2 potential decision-makers.
+- [ ] TODO 4: Capture at least 3 concrete source URLs.
+- [ ] TODO 5: Produce EVIDENCE LOG entries tied to findings.
+- [ ] TODO 6: Summarize best entry points to reach decision-makers.
+- [ ] TODO 7: Identify at least 2 edge-signal diamonds (events, gatekeepers, vendor portals, recurring collaborators, or upcoming work). 
+
+**Initiating further investigations to fill in gaps related to key personnel and networking opportunities.**

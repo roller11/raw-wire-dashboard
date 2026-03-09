@@ -1,0 +1,263 @@
+/**
+ * User Options Page Styles
+ *
+ * Extends the Soothsayer dark theme for the User Options page.
+ * Inherits: soothsayer-v2.css variables, hero, tabs, content container.
+ *
+ * @package RawWire_Dashboard
+ * @since 1.0.32
+ */
+
+/* ========================================
+   Option Cards
+   ======================================== */
+.user-options-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 0;
+}
+
+.user-options-card {
+    background: var(--ss-surface);
+    border: 1px solid var(--ss-border);
+    border-radius: var(--ss-radius);
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.user-options-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--ss-border);
+    background: var(--ss-surface-raised);
+}
+
+.user-options-card-header .dashicons {
+    color: var(--ss-gold);
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+}
+
+.user-options-card-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ss-text);
+    letter-spacing: 0.02em;
+}
+
+.user-options-card-body {
+    padding: 8px 0;
+}
+
+/* ========================================
+   Option Rows
+   ======================================== */
+.option-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+    transition: background 0.2s ease;
+}
+
+.option-row:last-child {
+    border-bottom: none;
+}
+
+.option-row:hover {
+    background: rgba(244, 180, 26, 0.03);
+}
+
+.option-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.option-info label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--ss-text);
+    margin-bottom: 4px;
+}
+
+.option-desc {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--ss-text-muted);
+    line-height: 1.4;
+}
+
+.option-control {
+    flex-shrink: 0;
+    margin-left: 24px;
+}
+
+.option-value {
+    color: var(--ss-text-muted);
+    font-size: 0.9rem;
+}
+
+.option-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--ss-gold-dim);
+    color: var(--ss-gold);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* ========================================
+   Form Controls
+   ======================================== */
+.user-option-input[type="text"],
+select.user-option-input {
+    background: var(--ss-bg);
+    border: 1px solid var(--ss-border);
+    color: var(--ss-text);
+    padding: 8px 12px;
+    border-radius: var(--ss-radius-sm);
+    font-size: 0.85rem;
+    min-width: 160px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-option-input:focus {
+    border-color: var(--ss-gold);
+    box-shadow: 0 0 0 2px var(--ss-gold-dim);
+}
+
+/* ========================================
+   Toggle Switch
+   ======================================== */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: var(--ss-border);
+    border-radius: 26px;
+    transition: background 0.3s ease;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+    background: var(--ss-text);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch input:checked+.toggle-slider {
+    background: var(--ss-gold);
+}
+
+.toggle-switch input:checked+.toggle-slider::before {
+    transform: translateX(22px);
+    background: var(--ss-bg);
+}
+
+/* ========================================
+   Save Button & Actions
+   ======================================== */
+.user-options-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 0;
+}
+
+.btn-save-options {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--ss-gold) 0%, var(--ss-primary-hover) 100%);
+    color: #000;
+    border: none;
+    border-radius: var(--ss-radius-sm);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-save-options:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(244, 180, 26, 0.4);
+}
+
+.btn-save-options:active {
+    transform: translateY(0);
+}
+
+.btn-save-options .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* ========================================
+   Toast Notification
+   ======================================== */
+.user-options-toast {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    background: var(--ss-surface-raised);
+    border: 1px solid var(--ss-success);
+    border-radius: var(--ss-radius-sm);
+    color: var(--ss-success);
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    animation: toastSlideIn 0.4s ease;
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-options-toast .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}

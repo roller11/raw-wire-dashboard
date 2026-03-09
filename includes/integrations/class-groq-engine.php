@@ -4,6 +4,8 @@
  * 
  * Adds Groq as a provider for AI Engine, enabling access to
  * Llama models with extremely fast inference (200-840 tokens/sec).
+ * 
+ * Configurable via AI Settings → Custom Engine Extensions
  *
  * @package RawWire\Dashboard\Integrations
  * @since 1.0.22
@@ -13,10 +15,19 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// TEMPORARILY DISABLED - causing AI Engine crash
+return;
+
 /**
  * Register Groq engine with AI Engine
  */
 add_action('plugins_loaded', function() {
+    // Check if extension is enabled in settings
+    $engine_settings = get_option('rawwire_engine_extensions', []);
+    if (isset($engine_settings['groq_enabled']) && !$engine_settings['groq_enabled']) {
+        return; // Extension disabled in settings
+    }
+
     // Only proceed if AI Engine is active
     if (!class_exists('Meow_MWAI_Engines_ChatML')) {
         return;
@@ -127,14 +138,21 @@ add_action('plugins_loaded', function() {
         }
     }
 
-    // Register Groq as an available engine
-    add_filter('mwai_engines_list', function($engines) {
-        $engines['groq'] = [
-            'name'        => 'Groq',
-            'type'        => 'groq',
-            'class'       => 'Meow_MWAI_Engines_Groq',
-            'description' => 'Ultra-fast Llama inference (200-840 tok/sec)',
-            'icon'        => 'dashicons-superhero',
+    // Register Groq as an available engine type in the admin UI
+    // This is the CRITICAL filter that makes the engine show up in dropdowns
+    add_filter('mwai_engines', function($engines) {
+        $engines[] = [
+            'name'     => 'Groq',
+            'type'     => 'groq',
+            'inputs'   => ['apikey'],
+            'internal' => false,
+            'models'   => [
+                ['model' => 'llama-3.3-70b-versatile', 'name' => 'Llama 3.3 70B Versatile'],
+                ['model' => 'llama-3.1-8b-instant', 'name' => 'Llama 3.1 8B Instant'],
+                ['model' => 'llama-3.2-11b-vision-preview', 'name' => 'Llama 3.2 11B Vision'],
+                ['model' => 'mixtral-8x7b-32768', 'name' => 'Mixtral 8x7B'],
+                ['model' => 'gemma2-9b-it', 'name' => 'Gemma 2 9B'],
+            ],
         ];
         return $engines;
     });
@@ -197,6 +215,21 @@ add_action('plugins_loaded', function() {
         ];
         return $types;
     });
+
+    // Hook into engine factory to create Groq engine instances
+    add_filter('mwai_init_engine', function($engine, $core, $env) {
+        if ($engine !== null) {
+            return $engine; // Already handled
+        }
+        
+        if (($env['type'] ?? '') === 'groq') {
+            if (class_exists('Meow_MWAI_Engines_Groq')) {
+                return new Meow_MWAI_Engines_Groq($core, $env);
+            }
+        }
+        
+        return $engine;
+    }, 10, 3);
 
 }, 15);
 

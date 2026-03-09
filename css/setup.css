@@ -1,0 +1,461 @@
+/**
+ * Setup Page Styles
+ * Configuration forms for Soothsayer integrations
+ *
+ * @package RawWire_Dashboard
+ * @since 1.0.30
+ */
+
+/* ==========================================================================
+   SETUP PAGE LAYOUT
+   ========================================================================== */
+
+.rawwire-setup-page {
+    max-width: 1200px;
+}
+
+.rawwire-hero--setup {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8a 50%, #1e3a5f 100%);
+}
+
+.rawwire-setup-form {
+    margin-top: var(--rw-space-5, 1.25rem);
+}
+
+/* ==========================================================================
+   SETUP SECTIONS
+   ========================================================================== */
+
+.rawwire-setup-section {
+    background: var(--rw-bg-surface, #fff);
+    border: 1px solid var(--rw-border-default, #e2e8f0);
+    border-radius: var(--rw-radius-lg, 14px);
+    margin-bottom: var(--rw-space-5, 1.25rem);
+    overflow: hidden;
+    box-shadow: var(--rw-shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1));
+}
+
+.rawwire-setup-header {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-4, 1rem);
+    padding: var(--rw-space-5, 1.25rem) var(--rw-space-6, 1.5rem);
+    background: var(--rw-bg-muted, #f1f5f9);
+    border-bottom: 1px solid var(--rw-border-default, #e2e8f0);
+}
+
+.rawwire-setup-header-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3a5f, #2d5a8a);
+    border-radius: var(--rw-radius-md, 10px);
+    color: #fff;
+}
+
+.rawwire-setup-header-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.rawwire-setup-header-text {
+    flex: 1;
+}
+
+.rawwire-setup-header-text h2 {
+    margin: 0 0 4px 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--rw-fg-default, #1e293b);
+}
+
+.rawwire-setup-header-text p {
+    margin: 0;
+    color: var(--rw-fg-muted, #64748b);
+    font-size: 0.875rem;
+}
+
+.rawwire-setup-header-toggle {
+    flex-shrink: 0;
+}
+
+.rawwire-setup-body {
+    padding: var(--rw-space-6, 1.5rem);
+}
+
+/* ==========================================================================
+   TOGGLE SWITCH
+   ========================================================================== */
+
+.rawwire-toggle {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.rawwire-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.rawwire-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e1;
+    transition: var(--rw-transition-base, 250ms ease);
+    border-radius: 28px;
+}
+
+.rawwire-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: var(--rw-transition-base, 250ms ease);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.rawwire-toggle input:checked+.rawwire-toggle-slider {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.rawwire-toggle input:checked+.rawwire-toggle-slider:before {
+    transform: translateX(24px);
+}
+
+.rawwire-toggle input:focus+.rawwire-toggle-slider {
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+}
+
+/* ==========================================================================
+   FORM ELEMENTS
+   ========================================================================== */
+
+.rawwire-form-group {
+    margin-bottom: var(--rw-space-5, 1.25rem);
+}
+
+.rawwire-form-group:last-child {
+    margin-bottom: 0;
+}
+
+.rawwire-form-group label {
+    display: block;
+    margin-bottom: var(--rw-space-2, 0.5rem);
+    font-weight: 500;
+    color: var(--rw-fg-default, #1e293b);
+    font-size: 0.875rem;
+}
+
+.rawwire-form-group .description {
+    margin-top: var(--rw-space-2, 0.5rem);
+    font-size: 0.8125rem;
+    color: var(--rw-fg-muted, #64748b);
+}
+
+.rawwire-form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--rw-space-4, 1rem);
+    margin-bottom: var(--rw-space-5, 1.25rem);
+}
+
+.rawwire-form-row:last-child {
+    margin-bottom: 0;
+}
+
+.rawwire-form-row .rawwire-form-group {
+    margin-bottom: 0;
+}
+
+/* Input Styles */
+.rawwire-input,
+.rawwire-select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--rw-fg-default, #1e293b);
+    background-color: var(--rw-bg-surface, #fff);
+    border: 1px solid var(--rw-border-default, #e2e8f0);
+    border-radius: var(--rw-radius-md, 10px);
+    transition: var(--rw-transition-fast, 150ms ease);
+    box-sizing: border-box;
+}
+
+.rawwire-input:focus,
+.rawwire-select:focus {
+    outline: none;
+    border-color: var(--rw-brand-blue, #1e3a5f);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.15);
+}
+
+.rawwire-input::placeholder {
+    color: var(--rw-fg-subtle, #94a3b8);
+}
+
+.rawwire-input--secret {
+    font-family: var(--rw-font-mono, monospace);
+    letter-spacing: 0.05em;
+}
+
+.rawwire-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath fill='%2364748b' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+/* Checkbox Styles */
+.rawwire-form-group--checkbox {
+    padding: var(--rw-space-4, 1rem);
+    background: var(--rw-bg-muted, #f1f5f9);
+    border-radius: var(--rw-radius-md, 10px);
+}
+
+.rawwire-checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-3, 0.75rem);
+    cursor: pointer;
+}
+
+.rawwire-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--rw-brand-blue, #1e3a5f);
+}
+
+.rawwire-checkbox-label {
+    font-weight: 500;
+    color: var(--rw-fg-default, #1e293b);
+}
+
+/* ==========================================================================
+   SETUP ACTIONS
+   ========================================================================== */
+
+.rawwire-setup-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--rw-space-4, 1rem);
+    margin-top: var(--rw-space-6, 1.5rem);
+    padding-top: var(--rw-space-5, 1.25rem);
+    border-top: 1px solid var(--rw-border-default, #e2e8f0);
+}
+
+.rawwire-setup-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rawwire-setup-actions .button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.connection-status {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+    border-radius: var(--rw-radius-sm, 6px);
+    display: none;
+}
+
+.connection-status.success {
+    display: inline-block;
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.connection-status.error {
+    display: inline-block;
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+}
+
+.connection-status.loading {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+}
+
+/* ==========================================================================
+   NOTICE STYLES
+   ========================================================================== */
+
+.rawwire-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--rw-space-3, 0.75rem);
+    padding: var(--rw-space-4, 1rem);
+    border-radius: var(--rw-radius-md, 10px);
+    margin-top: var(--rw-space-4, 1rem);
+}
+
+.rawwire-notice .dashicons {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.rawwire-notice p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.rawwire-notice--info {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: #1d4ed8;
+}
+
+.rawwire-notice--warning {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    color: #b45309;
+}
+
+.rawwire-notice--success {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: #059669;
+}
+
+/* ==========================================================================
+   HERO BUTTON
+   ========================================================================== */
+
+.button-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f4b41a, #c49000);
+    color: #1e293b;
+    border: none;
+    border-radius: var(--rw-radius-md, 10px);
+    cursor: pointer;
+    transition: var(--rw-transition-base, 250ms ease);
+    box-shadow: 0 4px 14px rgba(244, 180, 26, 0.4);
+}
+
+.button-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 180, 26, 0.5);
+}
+
+.button-hero:active {
+    transform: translateY(0);
+}
+
+.button-hero .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATION
+   ========================================================================== */
+
+.rawwire-toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 16px 24px;
+    border-radius: var(--rw-radius-md, 10px);
+    font-weight: 500;
+    z-index: var(--rw-z-toast, 600);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.rawwire-toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.rawwire-toast.success {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.rawwire-toast.error {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+/* ==========================================================================
+   DARK MODE
+   ========================================================================== */
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-setup-section {
+    background: var(--rw-bg-elevated, #1e293b);
+    border-color: var(--rw-border-default, #334155);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-setup-header {
+    background: var(--rw-bg-muted, #0f172a);
+    border-color: var(--rw-border-default, #334155);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-input,
+.rawwire-dashboard[data-theme="dark"] .rawwire-select {
+    background: var(--rw-bg-surface, #1e293b);
+    border-color: var(--rw-border-default, #334155);
+    color: var(--rw-fg-default, #f1f5f9);
+}
+
+.rawwire-dashboard[data-theme="dark"] .rawwire-form-group--checkbox {
+    background: var(--rw-bg-muted, #0f172a);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 782px) {
+    .rawwire-setup-header {
+        flex-wrap: wrap;
+    }
+
+    .rawwire-setup-header-toggle {
+        width: 100%;
+        margin-top: var(--rw-space-3, 0.75rem);
+    }
+
+    .rawwire-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .rawwire-hero-actions {
+        width: 100%;
+        margin-top: var(--rw-space-4, 1rem);
+    }
+
+    .button-hero {
+        width: 100%;
+        justify-content: center;
+    }
+}
